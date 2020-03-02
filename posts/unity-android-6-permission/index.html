@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Unity 在 Android 6.0 (Android M) 的權限問題 - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="2015 11/24 Update: Unity 4.6.9p3 開始修復了這個問題，可以在這邊下載： http://unity3d.com/unity/qa/patch-releases/4.6.9p3 Unity 論壇上的官方回應是說 5.2 的 Patch Release 還在製作中，而 5.1 會被放生。 http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134 最近發現公司的遊戲在 Android 6.0 上面會發生" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/unity-android-6-permission/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="Unity 在 Android 6.0 (Android M) 的權限問題" />
+<meta property="og:description" content="2015 11/24 Update: Unity 4.6.9p3 開始修復了這個問題，可以在這邊下載： http://unity3d.com/unity/qa/patch-releases/4.6.9p3 Unity 論壇上的官方回應是說 5.2 的 Patch Release 還在製作中，而 5.1 會被放生。 http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134 最近發現公司的遊戲在 Android 6.0 上面會發生" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/unity-android-6-permission/" />
+<meta property="article:published_time" content="2015-11-01T18:12:01+00:00" />
+<meta property="article:modified_time" content="2015-11-01T18:12:01+00:00" />
+<meta itemprop="name" content="Unity 在 Android 6.0 (Android M) 的權限問題">
+<meta itemprop="description" content="2015 11/24 Update: Unity 4.6.9p3 開始修復了這個問題，可以在這邊下載： http://unity3d.com/unity/qa/patch-releases/4.6.9p3 Unity 論壇上的官方回應是說 5.2 的 Patch Release 還在製作中，而 5.1 會被放生。 http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134 最近發現公司的遊戲在 Android 6.0 上面會發生">
+<meta itemprop="datePublished" content="2015-11-01T18:12:01&#43;00:00" />
+<meta itemprop="dateModified" content="2015-11-01T18:12:01&#43;00:00" />
+<meta itemprop="wordCount" content="587">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Unity 在 Android 6.0 (Android M) 的權限問題"/>
+<meta name="twitter:description" content="2015 11/24 Update: Unity 4.6.9p3 開始修復了這個問題，可以在這邊下載： http://unity3d.com/unity/qa/patch-releases/4.6.9p3 Unity 論壇上的官方回應是說 5.2 的 Patch Release 還在製作中，而 5.1 會被放生。 http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134 最近發現公司的遊戲在 Android 6.0 上面會發生"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>2015 11/24 Update:</p>
+<p>Unity 4.6.9p3 開始修復了這個問題，可以在這邊下載：</p>
+<p><a href="http://unity3d.com/unity/qa/patch-releases/4.6.9p3">http://unity3d.com/unity/qa/patch-releases/4.6.9p3</a></p>
+<p>Unity 論壇上的官方回應是說 5.2 的 Patch Release 還在製作中，而 5.1 會被放生。</p>
+<p><a href="http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134">http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134</a></p>
+<hr>
+<p>最近發現公司的遊戲在 Android 6.0 上面會發生過了開頭畫面就閃退的情況。Logcat 的結果像是這篇論壇文章寫的：</p>
+<p><a href="http://forum.unity3d.com/threads/android-m-bugs.358550/">http://forum.unity3d.com/threads/android-m-bugs.358550/</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">E Unity : Unable to find jni
+E linker : readlink(&amp;#8216;/proc/self/fd/61&amp;#8217;) failed: Permission denied [fd=61]
+</code></pre></td></tr></table>
+</div>
+</div><p>追過之後發現在手機的應用程式設定選單裡面，所有的權限，包含機器儲存空間的存取權限都是關閉的，因為這樣所以 Unity App 讀不到 library 或是讀不到 OBB 而閃退。</p>
+<p>起因是 Google 在 Android 6.0 跟 API Level 23 以上導入了新的權限系統：</p>
+<p><a href="https://developer.android.com/training/permissions/requesting.html">https://developer.android.com/training/permissions/requesting.html</a></p>
+<p>簡單來說在 Android 6.0 跟 Level 23 以上的組合，App 除了要把權限列在 AndroidManifest 之外，還要在啟動的時候跟使用者做再次確認，這樣才會拿到權限。（同時在新系統上使用者在安裝的時候不再會被問要不要給權限）</p>
+<p>正確的解決方法是照上面的的連結在 Activity 實作索取權限的 callback ，不過 Activity 這個部分是 Unity 產生的，要動還蠻困難的。</p>
+<p>Unity 原廠已經知會說處理中，在原廠處理好之前可以故意把 Android SDK 降到 Level 22 以下，逼出 Android 6.0 的舊版相容模式，相容模式的行為跟以前是一樣的。要注意如果有上過 Level 23 以上的 APK 到 Google Play Console ，從上週開始 Google 會阻止你上傳 Level 23 以下的 APK ，不給你補救的機會，所以最近有要出版本的朋友們要特別注意。如果已經上傳到 Level 23 的朋友，可能要考慮寫教學教玩家怎麼從設定選單中把權限開給你的 App 。</p>
+<p>目前有被 OTA 提示下載 Android 6.0 更新的機器只有 Google Nexus ，市佔率還沒有非常大，但是其他廠商做好 OS patch 並發送更新通知後預期災情會擴大。只能希望 Unity 早些修好這個問題了。</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

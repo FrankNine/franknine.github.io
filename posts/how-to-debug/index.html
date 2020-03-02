@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>所以 Bug 要怎麼 De - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="這次回到家發現好久不見的小表弟住到了我們家, 他今年是高二要升高三的學生, 因為學校要暑期輔導, 所以就近借住到我們家.
+看著他的樣子, 讓我覺得好像看到以前的自己. 安靜不多話, 非常客氣, 然後在吃飯時間之外從來沒有離開過書房一步.
+在吃飯時間有曾經嘗試著問他有沒有喜歡的科系, 經過一陣沉默之後, 他只回答說不太清楚, 沒有甚麼特別排斥的. 雖然很想跟他說應該要找找自己的興趣在哪裡, 但是我也知道發掘興趣不是一天兩天就會完成的工作, 現實的狀況是如果他把這個離學測前的半年拿去找自己的興趣, 就算讓他找到了自己真心喜歡的東西, 分數考不上去也會讓他被擋在大門之外.
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/how-to-debug/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="所以 Bug 要怎麼 De" />
+<meta property="og:description" content="這次回到家發現好久不見的小表弟住到了我們家,
+他今年是高二要升高三的學生, 因為學校要暑期輔導, 所以就近借住到我們家.
+看著他的樣子, 讓我覺得好像看到以前的自己.
+安靜不多話, 非常客氣, 然後在吃飯時間之外從來沒有離開過書房一步.
+在吃飯時間有曾經嘗試著問他有沒有喜歡的科系,
+經過一陣沉默之後, 他只回答說不太清楚, 沒有甚麼特別排斥的.
+雖然很想跟他說應該要找找自己的興趣在哪裡,
+但是我也知道發掘興趣不是一天兩天就會完成的工作,
+現實的狀況是如果他把這個離學測前的半年拿去找自己的興趣,
+就算讓他找到了自己真心喜歡的東西,
+分數考不上去也會讓他被擋在大門之外." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/how-to-debug/" />
+<meta property="article:published_time" content="2011-07-13T00:00:54+00:00" />
+<meta property="article:modified_time" content="2011-07-13T00:00:54+00:00" />
+<meta itemprop="name" content="所以 Bug 要怎麼 De">
+<meta itemprop="description" content="這次回到家發現好久不見的小表弟住到了我們家,
+他今年是高二要升高三的學生, 因為學校要暑期輔導, 所以就近借住到我們家.
+看著他的樣子, 讓我覺得好像看到以前的自己.
+安靜不多話, 非常客氣, 然後在吃飯時間之外從來沒有離開過書房一步.
+在吃飯時間有曾經嘗試著問他有沒有喜歡的科系,
+經過一陣沉默之後, 他只回答說不太清楚, 沒有甚麼特別排斥的.
+雖然很想跟他說應該要找找自己的興趣在哪裡,
+但是我也知道發掘興趣不是一天兩天就會完成的工作,
+現實的狀況是如果他把這個離學測前的半年拿去找自己的興趣,
+就算讓他找到了自己真心喜歡的東西,
+分數考不上去也會讓他被擋在大門之外.">
+<meta itemprop="datePublished" content="2011-07-13T00:00:54&#43;00:00" />
+<meta itemprop="dateModified" content="2011-07-13T00:00:54&#43;00:00" />
+<meta itemprop="wordCount" content="1231">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="所以 Bug 要怎麼 De"/>
+<meta name="twitter:description" content="這次回到家發現好久不見的小表弟住到了我們家,
+他今年是高二要升高三的學生, 因為學校要暑期輔導, 所以就近借住到我們家.
+看著他的樣子, 讓我覺得好像看到以前的自己.
+安靜不多話, 非常客氣, 然後在吃飯時間之外從來沒有離開過書房一步.
+在吃飯時間有曾經嘗試著問他有沒有喜歡的科系,
+經過一陣沉默之後, 他只回答說不太清楚, 沒有甚麼特別排斥的.
+雖然很想跟他說應該要找找自己的興趣在哪裡,
+但是我也知道發掘興趣不是一天兩天就會完成的工作,
+現實的狀況是如果他把這個離學測前的半年拿去找自己的興趣,
+就算讓他找到了自己真心喜歡的東西,
+分數考不上去也會讓他被擋在大門之外."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>這次回到家發現好久不見的小表弟住到了我們家,
+他今年是高二要升高三的學生, 因為學校要暑期輔導, 所以就近借住到我們家.</p>
+<p>看著他的樣子, 讓我覺得好像看到以前的自己.
+安靜不多話, 非常客氣, 然後在吃飯時間之外從來沒有離開過書房一步.</p>
+<p>在吃飯時間有曾經嘗試著問他有沒有喜歡的科系,
+經過一陣沉默之後, 他只回答說不太清楚, 沒有甚麼特別排斥的.
+雖然很想跟他說應該要找找自己的興趣在哪裡,
+但是我也知道發掘興趣不是一天兩天就會完成的工作,
+現實的狀況是如果他把這個離學測前的半年拿去找自己的興趣,
+就算讓他找到了自己真心喜歡的東西,
+分數考不上去也會讓他被擋在大門之外.</p>
+<p>雖然說台灣號稱有推甄制度, 但是 IOI 加上國際科展的名額也不會超過個位數.
+這扇門窄到大多數的學生可以忽略不計.
+並不是說這個制度有照顧到全台灣的一二三名就好,
+不管是哪個學科領域, 都不是靠少數幾個人 &ldquo;撐&rdquo; 起來的.
+他們一定還是需要不是那麼優秀的人支援, 協助, 不可能所有事情都一手包辦.
+環境該像是一片沃土, 讓優秀的. 沒那麼優秀的人都能生長, 長成一片森林.
+而不是一枝獨秀.</p>
+<p><img src="/images/how-to-debug/singular.jpg" alt="Singular"></p>
+<p>我記得我從小學的時候就嘗試著想學寫程式,
+但是苦苦找不到入門的發法, 第一次跟媽媽盧到的程式書籍,
+翻了翻到後面發現完全看不懂, 就失望的丟在一旁了.
+這次整理的時候發現了那本書, 才了解為什麼我那時候會碰壁.
+因為那是一本 MFC 的書.</p>
+<p>不過那時候從來沒有人告訴我錯很大, 倒是有很多人叫我念書不要摸電腦.
+我寫程式真正的入門是遲至高一參加一中電研社, 給 Jyou 學長教 C 才開始的.</p>
+<p>從小學到高中那種漫長的無助. 挫折的感覺至今我還是印象鮮明.
+對比上同學訴說著一路上受到誰的啟發, 誰的幫助, 跟某某大師通過信.
+感覺一方面是羨慕, 一方面是忌妒.
+就像剛才所提到的, 我們的環境不該是一枝獨秀,
+而該是像森林一樣茂盛, 雖然我同學小時候遇到的人, 他們可能最後在資訊業界的成就不高.
+但是他們的幫助, 匯集起來, 造就了一個在 Ivy League 學校裡念 Graphics 的學生.</p>
+<p><img src="/images/how-to-debug/kids.jpg" alt="Kids"></p>
+<p>在參加 GDC 的時候, 這樣的感覺更是強烈.
+當時身旁是一海票的小鬼. 七嘴八舌的在交換圖稿, 遊戲, 跟寫程式經驗.
+雖然很多東西都看起來很粗糙, 有的用了遊戲引擎還是有嚴重的 Memory Leak 問題所以要不斷的 restart .
+但我看到的不是還沒做好的遊戲, 是生生不息社群, 是一片廣袤的森林.
+太山不讓土壤, 故能成其大. 河海不擇細流, 故能就其深.
+這群其貌不揚的小鬼裡, 說不定就有著下一個 John Carmack 或是 Sid Meier .
+Who knows?</p>
+<p>對比起來, 現在台灣想做遊戲的小朋友, 還是活像住在沙漠裡一樣.
+有的時候不時會想這些小朋友, 最後有沒有學會寫程式,
+還是在長時間的無助中被磨耗殆盡, 走回制度讓 sorting 決定他們要去到哪裡.</p>
+<p>我衷心希望台灣能改變, 希望能在台灣看到像是當時在 GDC 看到的那群小鬼頭們.
+但是在 De 這個 Bug 的過程中, 我對於問題越來越了解,
+就越來越覺得面的對東西的巨大.
+從抓住碎片般的 Software engineering , Entrepreneurship , 教育方式 , 社群.
+最後 trace 到整個台灣人的文化和價值觀.
+不免懷疑自己到底能不能把這個 bug de 掉.</p>
+<p>我不知道這個 bug 是不是 unsolvable .
+只是在確定之前, 還是衷心期盼有人能想到答案.</p>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

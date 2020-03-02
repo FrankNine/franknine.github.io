@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Unity 2D 繪圖最佳化概論 - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/unity-2d-graphics-optimization/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="Unity 2D 繪圖最佳化概論" />
+<meta property="og:description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/unity-2d-graphics-optimization/" />
+<meta property="article:published_time" content="2016-07-14T17:49:15+00:00" />
+<meta property="article:modified_time" content="2016-07-14T17:49:15+00:00" />
+<meta itemprop="name" content="Unity 2D 繪圖最佳化概論">
+<meta itemprop="description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。">
+<meta itemprop="datePublished" content="2016-07-14T17:49:15&#43;00:00" />
+<meta itemprop="dateModified" content="2016-07-14T17:49:15&#43;00:00" />
+<meta itemprop="wordCount" content="5542">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Unity 2D 繪圖最佳化概論"/>
+<meta name="twitter:description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 <a href="https://docs.unity3d.com/Manual/LevelOfDetail.html">Level of detail</a>、<a href="http://unitytaiwan.blogspot.tw/2013/12/unity-43-occlusion-culling.html">Occlusion culling</a> 等還有待有 3D 實作經驗的人補充。</p>
+<h3 id="rendering-pipeline">Rendering Pipeline</h3>
+<p>GPU 的運算是一個 <a href="https://en.wikipedia.org/wiki/Pipeline_(computing)">Pipeline</a>，所以整體的速度會被最慢的一個步驟，也就是 Bottleneck 部分限制。所以最佳化最先要找到 Bottleneck 在 Pipeline 的哪裡。以一個簡化非常多的 GPU Pipeline 大概像這樣：</p>
+<p><img src="/images/unity-2d-graphics-optimization/rendering-pipeline.png" alt="Rendering Pipeline"></p>
+<p>這是省略很多的版本，沒有介紹到現在已經很普遍的 Geometry shader、Tessellation shader 跟 Computation shader。也省略掉了很多中間必要的步驟像是 Triangle setup 或是 Clipping 。如果要詳細的理解 Rendering pipeline ，建議參考 <a href="https://www.amazon.com/Real-Time-Rendering-Third-Tomas-Akenine-Moller/dp/1568814240/">Real-time rendering</a> 這本書。如果對 Rendering pipeline 有一定的了解了建議跳過這一部分。</p>
+<p>（另外 PowerVR 的 Tile-based deferred rendering 跟這個流程有所出入，不過目前就先不解釋 Tile-based deferred rendering ，有興趣的朋友可以參考 PowerVR 自己寫的<a href="https://imgtec.com/blog/a-look-at-the-powervr-graphics-architecture-tile-based-rendering/">比較</a>。）</p>
+<p>最開始 CPU 對 GPU Driver 下設定要怎麼著色的參數（Set pass call，包含 Shader 跟 Shader 的參數們），然後再下要畫哪些頂點（Batches）。如果下一組頂點著色的方式一樣的話，就不需要再多一次 Set pass call ，這個特性之後最佳化會利用到。</p>
+<p>再來是 Vertex shading 的階段，這階段主要負責頂點座標移動與投影的運算。有些在頂點上的其他屬性像是 Normal 、 UV 之類的也有可能在這邊計算。</p>
+<p>然後 Vertex shading 計算之後的頂點經過 Clipping 剪裁後走 Rasterization ，把三個頂點描述的三角形離散化成一個一個小方形區域。每個小方型區域會產生 Fragment shader 計算用的參數，這些參數是由 Vertex shading 計算過的數值內插而來的。 <a href="https://en.wikibooks.org/wiki/Cg_Programming/Rasterization">https://en.wikibooks.org/wiki/Cg_Programming/Rasterization</a></p>
+<p>這邊用的字是 Fragment 而不是大家聽到小方形會直接想到的像素（Pixel），Fragment 找不太到通用的中文翻譯。在繪圖過程中最後呈現在螢幕上的一個像素位置上面可能會產生出一個以上的 Fragment 。Fragment 們會輸出給最後一階段 Merger ，Merger 經過深度比較（Depth test）或是混色（Alpha Blending）或其他處理後才成為最後在螢幕上的像素顏色。舉例來說可能是一個深度 0.5 的紅色不透明 Fragment 跟一個深度 1.0 的綠色不透明 Fragment ，經過深度比較後產生一個紅色的像素。或是一個深度 0.5 的半透明綠色 Fragment 跟深度 1.0 的紅色不透明 Fragment 混色出一個咖啡色的像素。</p>
+<p>（上述是傳統的 Late Z test，新的 GPU 可以把 Z testing 提前到 Fragment shader 之前，也就是 <strong>Early Z</strong>。如果 Z test 不會過的 Fragment ，那就連 Fragment shading 都省掉。這邊就不深入講解 Early Z，因為基本上使用 Z buffer 的概念是相同的，有興趣可以參考：<a href="https://fgiesen.wordpress.com/2011/07/08/a-trip-through-the-graphics-pipeline-2011-part-7/">A trip through the Graphics Pipeline 2011, part 7</a>）</p>
+<p>Fragment shader 在計算顏色的時候除了使用 Rasterization 提供的參數之外，還有一個很常見也跟效能很有關的參數就是貼圖。因為貼圖資料量通常都比較大，所以很容易影響到效能。</p>
+<p>Merger 的運算都會對 GPU 上的一塊叫 <a href="https://www.opengl.org/wiki/Default_Framebuffer"><strong>Frame buffer</strong></a> 的記憶體做操作，所有操作結束之後 Frame buffer 上面的顏色資訊（Color buffer）就會是螢幕上會顯示的東西。除了 Color buffer 之外 Frame buffer 通常還包含保存深度的 <a href="https://en.wikipedia.org/wiki/Z-buffering"><strong>Depth buffer</strong></a> 跟通常用來裁切繪圖結果的 <a href="https://en.wikipedia.org/wiki/Stencil_buffer"><strong>Stencil buffer</strong></a>，這兩塊雖然使用者看不到，但是都會影響 Merger 的行為。</p>
+<h3 id="locating-bottleneck">Locating Bottleneck</h3>
+<p>當要最佳化的時候最先要確認 Bottleneck 所在，參考 Nvidia 的 <a href="http://http.developer.nvidia.com/GPUGems/gpugems_ch28.html">GPU Gems</a> 所提供的做法，就是改變部分繪圖的環境看看 FPS 有沒有顯著提升，如果有就是找到 Bottleneck 了。以下是參考 GPU Gems 的作業流程簡述：</p>
+<p>從 Pipeline 的後端開始，最先是試試降低 Merger 跟 Frame buffer 的資料傳輸量，最簡單的作法是降低 Frame buffer 的資料精確度（有 GPU Profiler 輔助的話可以關閉 Alpha blending），如果效能有明顯上升那就是卡在 Merger 。接下來是測試是否卡在貼圖，作法是把貼圖換成低解析度的。再來是改變解析度來測試 Fragment shading ，雖然說改變解析度也會影響到 Merger 跟 Frame buffer 的資料傳輸量，但是如果已經用了改變 Frame buffer depth 排除卡在 Merger 的可能性，那 FPS 因為解析度改變而變化就可以確定是 Fragment shading 的問題。Vertex shading 會有問題在 2D 遊戲裡比較少見，通常都是 3D 遊戲裡面做複雜的 Skinned mesh 形變計算才會出現（Unity 要在 Project settings 裡面開啟 GPU Skinning 才會在 Vertex shading 計算，如果沒有開啟就是 CPU 算），不過如果懷疑的話一樣是把 Vertex shader 改簡單去觀察 FPS 變化。最後如果都不是的話那就推斷是 CPU 下的 Draw call 或是 Set pass call 的問題。</p>
+<p>當然如果有工具協助的話會方便很多。以跟之前介紹的 <a href="../android-gpu-profilers">Frame Analyzer</a> 同一組的 <a href="https://software.intel.com/en-us/articles/system-analyzer-getting-started-guides">Intel GPA System Analyzer</a> 為範例，這是在監控執行中的遊戲的畫面。可以看到左下角有直接覆寫 GPU 運作參數的選項，像是動態將貼圖改成只有 2X2 大小或是直接關閉 Alpha blending 之類的。有這類工具可以大幅提升追蹤 Bottleneck 的效率。</p>
+<p><img src="/images/unity-2d-graphics-optimization/gpa-system-analyzer.png" alt="GPA System Analyzer"></p>
+<h3 id="optimization">Optimization</h3>
+<p>確定 Bottleneck 之後就要想辦法最佳化，在 Unity 開發 2D 遊戲繪圖最佳化會需要減少的通常有：</p>
+<ul>
+<li>Merger 問題
+<ul>
+<li>降低對 Frame buffer 的操作</li>
+</ul>
+</li>
+<li>貼圖問題
+<ul>
+<li>複製到 GPU 的貼圖大小 (Texture size)</li>
+</ul>
+</li>
+<li>Fragment shading 問題
+<ul>
+<li>總 Fragment 數量</li>
+<li>不必要的 Fragment (Overdraw)</li>
+<li>每個 Fragment 花多久時間畫 (Fragment shader processing time)</li>
+</ul>
+</li>
+<li>CPU 跟 GPU 溝通的問題
+<ul>
+<li>CPU 跟 GPU 溝通要畫哪些頂點的次數 (Batch)</li>
+<li>GPU 切換狀態的次數 (Set pass)</li>
+<li>頂點數量 (Vertex count)</li>
+</ul>
+</li>
+<li>Render texture / GrabPass</li>
+</ul>
+<p>頂點數量過多在 2D 遊戲裡算是少見的情況，不過在特定情況下還是有可能會發生。</p>
+<h4 id="merger--frame-buffer-"><strong>Merger 對 Frame buffer 操作</strong></h4>
+<p>如果在先前提到的 Bottleneck 測試中發現問題是在 Merger 跟 Frame buffer 的資料傳輸，最直接的就是 Frame buffer 的精確度。Unity 有提供 16-bit 跟 32-bit 的 Frame buffer 選擇。精確度較低的 Fragment 自然處理起來比較快，但是也可能會產生 <a href="https://en.wikipedia.org/wiki/Colour_banding">Color banding</a>，一般建議如果 Color banding 問題不明顯就開 16-bit 。不過之前也稍微提過，Tegra 系列的晶片在 16-bit 模式下特別容易出現 Banding ，建議準備 Tegra 系列的機器實機測試。</p>
+<p>另外帶有 alpha 的半透明 Fragment 因為 Merger 不能用比較簡單的 Depth test 排除，還要把現有在 Color buffer 上面的值讀回來做混色，所以會比不透明貴很多。所以大致上原則就是沒有必要不要用到透明的貼圖。</p>
+<h4 id="texture-size"><strong>Texture size</strong></h4>
+<p>貼圖的大小會影響到 GPU 需要的時候要花多少時間載入到繪圖記憶體，也會影響到繪圖記憶體的用量。目前 Android 手機上硬體支援最廣泛的壓縮格式是 <a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression">Ericsson Texture Compression 1</a>（ETC1），但是這個格式壓縮率不比後來開發的新壓縮格式，然後還有邊長必須是二的指數（Power of two，POT）跟無法處理 Alpha channel 等嚴苛限制。後來 ETC 格式有後繼原生支援 Alpha channel 的 ETC 2（需要 OpenGL ES3），Nvidia Tegra 的 DXT，PowerVR 的 PVRTC，Qualcomm Adreno 的 ATC 等等。但是如果機器硬體不支援的話，Unity 會在 CPU 這端解成 RGBA8888 無壓縮格式餵給 GPU <a href="http://forum.unity3d.com/threads/what-happens-when-we-use-etc2-on-open-gl-es-2-0-devices.302721/">來源</a>，通常就是因為 GPU 太老才沒有壓縮格式硬體支援，這樣一解通常記憶體就跟著爆了。</p>
+<p>切換成 ETC2 可以省很多工，但是就需要硬體支援 OpenGL ES3，比較尷尬的是到 2012 後半年才比較有使用 OpenGL ES3 支援的晶片的手機<a href="http://renderingpipeline.com/2012/08/which-gpus-support-opengl-es-3-0/">參考資料</a>。有些到現今還是有不小市佔率的手機，像是 Galaxy S3 是沒辦法用 ETC2 的。這就變成是端看你自己的商業考量，是要放棄支援還是要花工時整理貼圖。</p>
+<p>有個解決 ETC1 無法處理 Alpha 的 Workaround 叫做 Split alpha ，說穿了就是把 Alpha 拿出來變成另一張貼圖做 ETC1 壓縮。Unity 現在有部分內建支援，像是 UI Shader 有 Split alpha 專用的 UI-DefaultETC1，這也就是說如果你之前有自製 Shader ，要改用 Split alpha 就要重寫一個相應的版本。</p>
+<p><img src="/images/unity-2d-graphics-optimization/default-etc1.png" alt="Default ETC1"></p>
+<p>UI-DefaultETC1 一開始的宣告，可以看到有兩張貼圖</p>
+<p>iOS 上面只有 PVRTC 可以選擇，不只要求 POT 還要求要是方形。要整個程式的貼圖都是方形還蠻困難的，幸好我們還有 Texture atlas 這個技巧。</p>
+<p>除了壓縮之外另外一個有機會降低貼圖大小的方法是製作 Texture atlas ，即把多張貼圖合併成一張貼圖，如果合併的方法合宜可以省下很多空隙，同時有可能因此湊出貼圖壓縮需要的 POT 或是方形，然後 Draw call batching 也需要 Texture atlas ，是個多多益善。以前 ex2D 或是舊 NGUI 年代因為 Texture atlas 工具不夠好，常常會造成編輯上的困擾。不過現在 Unity 內建 <a href="https://docs.unity3d.com/Manual/SpritePacker.html">Sprite packer</a> 使用起來沒有那麼難過了，大家都應該去試看看。</p>
+<h4 id="-fragment-"><strong>總 Fragment 數量</strong></h4>
+<p>最直接降低 Fragment 數量的方法就是降低解析度，要產生的像素減少，連帶的要產生的 Fragment 也會減少。現代的 GPU 可以接受跟螢幕不一樣大的 Frame buffer ，然後由硬體來做縮放：</p>
+<p><a href="http://computergraphics.stackexchange.com/questions/3663/is-there-a-performance-implication-if-the-frame-buffer-resolution-and-the-physic">Is there a performance implication if the frame buffer resolution and the physical screen resolution are different?</a></p>
+<p>降低解析度是最簡單做到（<a href="https://docs.unity3d.com/ScriptReference/Screen-resolutions.html"><code>Screen.resolutions</code></a>，要注意 5.3 有幾個版本改過解析度之後 iOS 會白畫面或黑畫面，遇到的話請升級 Unity ）效果也還蠻明顯的，而且現在有些平板或是 Ultrabook 會出現 2K 到 3K 的橫向解析度，如果當初的素材貼圖沒有這麼高解析的話其實 Frame buffer 開這麼大也不會變得更漂亮。</p>
+<h4 id="overdraw"><strong>Overdraw</strong></h4>
+<p>當產生一個 Pixel 的時候用到了一個以上的 Fragment 就是所謂的 Overdraw 。很重要的觀念是就算最後 Fragment 沒有出現在螢幕上，有處理就是會花時間。就像你畫藍天白雲的時候塗藍天底色的時間不會因為你後來在上面蓋了白雲就還給你。還有一個比較不直覺的是畫「純透明」也是會花時間的。現實中好像沒有純透明的顏料，不過假設有的話想像一下幫你的畫塗純透明就跟聽起來的感覺一樣浪費時間。</p>
+<p>一般正常的程式都會有一定程度的 Overdraw ，壞的是如果有不必要的大面積 Overdraw 會直接影響到效能。要處理這個問題都需要使用 GPU Profiler 去檢測哪個東西確實畫了多大的範圍，目測還蠻不準確的，因為「純透明」是看不出來的。幾個大概的方向有：讓繪圖範圍儘量切齊有顏色的範圍、同一個範圍重複畫多層貼圖可以改成畫一次但是對多個貼圖取樣。這些之後都會介紹怎麼在 Unity 裡實作。</p>
+<p>雖然跟 Unity 無關，但是 Google 有一份介紹 Overdraw 的文件範例圖還蠻清楚的，可以看看： <a href="https://developer.android.com/studio/profile/dev-options-overdraw.html">https://developer.android.com/studio/profile/dev-options-overdraw.html</a></p>
+<h4 id="fragment-shader-processing-time"><strong>Fragment shader processing time</strong></h4>
+<p>如果 Fragment shader 計算複雜度越高當然產生 Fragment 的時間就會越久。Unity 跟其他的 Plugin 通常都會準備普通電腦用的 Shader 跟 Mobile shader ，一般來說 Mobile shader 會比較簡單不吃效能。</p>
+<p>另外的就是自己實作 Shader 有些容易踩到的地雷。一個是 Shader 很不適合條件判斷，因為在 GPU 上面複數的 Thread 會被集合成一個 Warp 一起執行，如果同一個 Warp 裡面有部分走 If statement 部分走 Else statement 整個 Warp 的執行時間會是 If 跟 Else 相加。詳細的解釋可以參考 Render Hell 的 Chapter 3.7：</p>
+<p><a href="https://simonschreibt.de/gat/renderhell-book2/">https://simonschreibt.de/gat/renderhell-book2/</a></p>
+<p>另外一個是在比較舊的機器上如果你在 Fragment shader 上面改變 Vertex shader 傳來的 Texture coordinate 會破壞 GPU 幫你做的貼圖資料預載，也就是所謂的 Dependent texture read 。所以要注意 Texture coordinate 的調整要在 Vertex shader 上面做。詳細可以參考 iOS 開發手冊的 Be Aware of Dynamic Texture Lookup 章節：</p>
+<p><a href="https://developer.apple.com/library/ios/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/BestPracticesforShaders/BestPracticesforShaders.html">https://developer.apple.com/library/ios/documentation/3DDrawing/Conceptual/OpenGLES_ProgrammingGuide/BestPracticesforShaders/BestPracticesforShaders.html</a></p>
+<h4 id="batch--set-pass"><strong>Batch &amp; Set pass</strong></h4>
+<p>在 Unity 4 的時候 Unity 選用了比較含糊的 Draw call 來描述 CPU 跟 GPU 溝通的次數。Unity 5 則改成 Batches 跟 Set pass calls 兩項。一般繪圖的時候都是先設定要怎麼畫（設定用什麼 Material ，Materia 描述多邊形表面怎麼繪畫，即 Shader + Shader 的參數、包含貼圖，改寫設定次數即 Set Pass calls 的數字），然後下命令在這個設定下畫哪些頂點（Unity 4 用 Draw call 稱呼，但實際上的數字是 Batch 處理過的，Unity 5 之後直接用 Batches 稱呼 Batched draw calls）。不同 Material 的物件自然沒有辦法 Batch 在一起，不過就算 Material 相同也可能因為 Vertex attribute 數量太多等原因沒有被 Unity Batch 。</p>
+<p>Draw call batching 粗略來說可以用畫圖解釋的，大概像是要畫以下這張圖：</p>
+<p><img src="/images/unity-2d-graphics-optimization/sample-whole-picture.png" alt="Sample Whole Picture"></p>
+<p>如果我們非常按部就班地畫，可能是像以下的步驟</p>
+<p><img src="/images/unity-2d-graphics-optimization/sample-step-by-step.gif" alt="Sample Step by Step"></p>
+<p>這樣是能畫出我們想要的圖，只是我們沾了綠色顏料畫了最左邊的草之後馬上就要把顏料洗掉換成紅色畫花朵的部分。這過程中我們沾了六次顏料，大家很快就會想到如果同一個顏色一起畫不就不用這麼麻煩，所以改進過的畫圖過程變成這樣：</p>
+<p><img src="/images/unity-2d-graphics-optimization/sample-batch-by-color.gif" alt="Sample Batch by Color"></p>
+<p>這其實就是常聽到的 Batching 的概念，把要畫的頂點整理起來，然後一個 Set pass 跟一個 Batched draw call 把所有相同 Material 的東西都畫出來。因為有紅花跟綠葉兩種 Material ，所以最後總共是兩個 Set pass 跟兩個 Batched draw call 。但是能不能更好呢？如果說我們能一枝筆左半邊沾上綠色右半邊沾上紅色，不就連換顏色都可以免了？</p>
+<p><img src="/images/unity-2d-graphics-optimization/sample-atlas.gif" alt="Sample Atlas"></p>
+<p>這其實就是做 Texture atlas 配合 Batching 。我們不只合併頂點，連貼圖也合併起來這樣就可以只用一個 Material 描述紅花跟綠葉，最後達到一個 Set pass 跟一個 Batched draw call 畫出所有東西。</p>
+<p>避免過高的 Draw call 跟 Set pass 都是因為這兩個動作可能會造成效能損失，不過損失的原因還蠻複雜的。大體上來說 Draw call 太多會是問題是因為 CPU 下繪圖指令的速度比 GPU 處理繪圖指令的速度還慢，如果 Draw call 太多會變成 GPU 一直在等 CPU，而 Set pass 觸發 GPU 狀態切換可能會造成運算能力浪費。不過因為每家 GPU 廠商針對這些問題各自做了各種不同的措施，所以前面用的字眼是「可能」造成效能損失。要深入追究的話就是超級大哉問了。簡單的原則就是儘量把可以整理在一起的物件整理在一起，然後交給 Unity 去 Batch 。雖然說自己去算 Batch 是有可能做到的，但是因為 Unity 底層的實作只有 Unity 自己知道，所以自己實作很難會有好結果，有可能多省到一些 GPU 的時間但是卻耗費更多的 CPU 時間。</p>
+<p>關於 Draw call 的討論可以參考這個 StackOverflow 問題：</p>
+<p><a href="http://stackoverflow.com/questions/4853856/why-are-draw-calls-expensive">why are draw calls expensive?</a></p>
+<p>跟這份 Nvidia 的投影片：</p>
+<p><a href="http://www.nvidia.com/docs/IO/8228/BatchBatchBatch.pdf">“Batch, Batch, Batch:” What Does It Really Mean?</a></p>
+<h4 id="vertex-count"><strong>Vertex count</strong></h4>
+<p>三角形頂點的資料量在 2D 遊戲通常都比其他資料小很多，Vertex shader 通常也不是瓶頸所在，所以一般來說是不會考慮這個問題。但是 Unity Texture import 如果是選用 Mesh type : Tight ，在一些有漸層的貼圖上會產生數以百計的頂點對效能造成影響。一個是考慮放棄 Tight mesh ，用一點 Overdraw 換 Vertex count 。或是用其他現成的 Sprite mesh generator 例如 <a href="https://www.assetstore.unity3d.com/en/#!/content/16641">TexturePacker</a> 或是 <a href="https://www.assetstore.unity3d.com/en/#!/content/37599">SpriteSharp</a> 。</p>
+<p><img src="/images/unity-2d-graphics-optimization/shaded-wireframe.png" alt="Shaded Wireframe"></p>
+<p>在 Scene view 上面使用 Shaded Wireframe 觀測 Tight mesh sprite 的 Vertex ，可以看出來不是很漂亮。</p>
+<p>另外一個是 Unity 內建的 Dynamic batching 一組最多只能合併 900 個 Vertex attributes （不是 Vertex ，如果除了位置還有 UV 那每個頂點是 2 attributes［<a href="http://answers.unity3d.com/questions/356198/dynamic-batching-vertex-limit.html">來源</a>］），所以如果有在用 Batching 也要注意一下 Vertex count 。</p>
+<h4 id="render-texture--grabpass"><strong>Render texture / GrabPass</strong></h4>
+<p>最後有個東西影響程度可能會比之前提到的都還要大（除了有做 Tiled-based deferred rendering 的 PowerVR 因為架構特性能抵銷不少開銷），前面所提到的都是在「一輪」GPU rendering pipeline 裡面的最佳化。但是有些 Unity 內建就有的模糊之類的 Image effect ，這個其實是用到 Render texture ，也就是把第一輪的 Color buffer 結果當成貼圖再跑「第二輪」，也會對效能造成一定影響。（我自己的經驗都是加上 Image effect 之後會變得非常慢，不過 Colin 和火星人在校閱的時候有指正是 Unity OnRenderImage 的實作導致有可能會觸發把 Color buffer 從 VRAM 拉回 RAM 的行為，實際上是有 Workaround 可以達到在合理的效能支出上做出 Image effect，這點我還要再研究才能跟大家報告）</p>
+<p>不過到 Unity 5 ，在 Android 上面 Unity 會幫你開一個沒有做任何效果的 Reander texture。官方只有給一個非常含糊的 <a href="http://forum.unity3d.com/threads/big-performance-issue-with-unity5-on-android.338847/#post-2196150">Workaround for bugs</a> 的理由，現在還是沒有修掉，也不知道什麼時候會修掉。所以建議開發者們多拿 Android 實機測試，對 Android GPU 可用的效能最好做下修。</p>
+<p>以上就是跟 2D 相關的最佳化的概論，更多細節會跟接下來介紹的之前的專案用到的最佳化小技巧一起解釋，如果有問題或是要指正都歡迎留言，謝謝。</p>
+<h3 id="heading">致謝</h3>
+<p>本文章感謝 <a href="https://www.facebook.com/c4cats">C4Cat</a> 的 Colin Leung 大力協助，因為我自己在寫作之前對 Rendering pipeline 不甚了解，有多處仰賴跟 Colin 的對談才能釐清寫法。另外感謝所有有提供意見的朋友們：Kelvin Lo（<a href="https://www.facebook.com/UnityTechTaiwan">Unity Taiwan</a>）、Hsi-Hung Shih （<a href="http://narwhale.io/">Narwhale.io</a>）、大鐘、小善、長老、火星人（<a href="http://www.rayark.com/">Rayark Inc.</a>）、歐維斯。還有各位親朋好友的期待與支持。謝謝。</p>
+<h3 id="heading-1">額外參考資料：</h3>
+<p>Real-time Rendering</p>
+<p><a href="https://www.amazon.com/Real-Time-Rendering-Third-Tomas-Akenine-Moller/dp/1568814240">https://www.amazon.com/Real-Time-Rendering-Third-Tomas-Akenine-Moller/dp/1568814240</a></p>
+<p>第二、第三章講 Rendering pipeline ，Amazon 的試閱有第二章的部分</p>
+<p>Interactive 3D Graphics Creating Virtual Worlds</p>
+<p><a href="https://www.udacity.com/course/interactive-3d-graphics&amp;#8211;cs291">https://www.udacity.com/course/interactive-3d-graphics&amp;#8211;cs291</a></p>
+<p>Real-time rendering 作者之一 Eric Haines 開設的免費網路課程</p>
+<p>Render Hell 2.0</p>
+<p><a href="https://simonschreibt.de/gat/renderhell/">https://simonschreibt.de/gat/renderhell/</a></p>
+<p>CG Programming</p>
+<p><a href="https://en.wikibooks.org/wiki/Cg_Programming">https://en.wikibooks.org/wiki/Cg_Programming</a></p>
+<p>A trip through the Graphics Pipeline 2011</p>
+<p><a href="https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/">https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/</a></p>
+<p>Life of a triangle</p>
+<p><a href="https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline%3E">https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline&gt;</a></p>
+<p>UWA Blog</p>
+<p><a href="http://blog.uwa4d.com/">http://blog.uwa4d.com/</a></p>
+<p>Unity 官方對 Render stat 的說明</p>
+<p><a href="http://docs.unity3d.com/Manual/RenderingStatistics.html">http://docs.unity3d.com/Manual/RenderingStatistics.html</a></p>
+<p>Unity 技術支援對 Draw call 的說明</p>
+<p><a href="https://support.unity3d.com/hc/en-us/articles/207061413-Why-are-my-batches-draw-calls-so-high-What-does-that-mean-">https://support.unity3d.com/hc/en-us/articles/207061413-Why-are-my-batches-draw-calls-so-high-What-does-that-mean-</a></p>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

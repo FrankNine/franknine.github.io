@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>AssetBundle 與 Resources 指南 - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="原文： https://unity3d.com/learn/tutorials/topics/best-practices/guide-ass" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/assets-resources-and-assetbundles/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="AssetBundle 與 Resources 指南" />
+<meta property="og:description" content="原文： https://unity3d.com/learn/tutorials/topics/best-practices/guide-ass" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/assets-resources-and-assetbundles/" />
+<meta property="article:published_time" content="2017-03-26T17:09:58+00:00" />
+<meta property="article:modified_time" content="2017-03-26T17:09:58+00:00" />
+<meta itemprop="name" content="AssetBundle 與 Resources 指南">
+<meta itemprop="description" content="原文： https://unity3d.com/learn/tutorials/topics/best-practices/guide-ass">
+<meta itemprop="datePublished" content="2017-03-26T17:09:58&#43;00:00" />
+<meta itemprop="dateModified" content="2017-03-26T17:09:58&#43;00:00" />
+<meta itemprop="wordCount" content="569">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AssetBundle 與 Resources 指南"/>
+<meta name="twitter:description" content="原文： https://unity3d.com/learn/tutorials/topics/best-practices/guide-ass"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>原文： <a href="https://unity3d.com/learn/tutorials/topics/best-practices/guide-assetbundles-and-resources">https://unity3d.com/learn/tutorials/topics/best-practices/guide-assetbundles-and-resources</a>，感謝 Unity Taiwan 同意翻譯。</p>
+<p>這一系列的文章會深入探討 Unity 引擎的 Asset 與資源管理。目標是提供專業開發者關於 Unity Asset 與序列化（Serialization）系統底層實作的知識。我們也會檢視 Unity 的 AssetBundle 系統的根基，然後告訴你目前的最佳實作方式。</p>
+<p>這份指南分成四個部分：</p>
+<ul>
+<li><a href="../assets-objects-and-serialization">Asset、Object 與序列化</a> 會探討 Unity 底層是如何序列化 Asset 還有處理 Asset 之間的參考（References）。強烈建議讀者先讀過這章，因為它同時也包含了之後章節用詞的定義。</li>
+<li>Resources 資料夾 討論內建的 Resources API。</li>
+<li>AssetBundle 基礎 根據第一章的資訊，在其之上繼續討論 AssetBundle 的載入還有 AssetBundle 內的 Asset 的載入。</li>
+<li>AssetBundle 使用模式 是一篇篇幅很長的 AssetBundle 用法說明。它包含了如何將 Assets 分類成 AssetBundle 為佳、如何管理已經載入的 Assets、和常見的陷阱。</li>
+</ul>
+<p>注意：這份指南裡的 Object 與 Asset 跟 Unity 的 API 命名規則並不相同。</p>
+<p>這份指南裡所謂的 Object 在大部分的 Unity API 會用 Asset 來指涉，例如 <a href="http://docs.unity3d.com/ScriptReference/AssetBundle.LoadAsset.html"><code>AssetBundle.LoadAsset</code></a> 跟 <a href="http://docs.unity3d.com/ScriptReference/Resources.UnloadUnusedAssets.html"><code>Resources.UnloadUnusedAssets</code></a>。這份指南裡面叫做 Asset 的<strong>檔案</strong>則幾乎不會曝露給公開的 API。少數的例外是跟建置相關的 API，像是 <a href="http://docs.unity3d.com/ScriptReference/AssetDatabase.html"><code>AssetDatabae</code></a> 跟 <a href="http://docs.unity3d.com/ScriptReference/BuildPipeline.html"><code>BuildPipeline</code></a>。在這裡我們所謂的 Asset 在一般 API 文件通常被叫做檔案（File）。</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

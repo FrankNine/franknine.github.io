@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ADB TCP Mode - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="這個跟最佳化算是有一點關係，有的時候接 Android 的 Profiler 或是 Script Debugger 會抓不到接在 USB 上面的 Android 裝置，這時候可以考慮改用 TCP 模式透過網路來連接，通常可以排除問題。
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/adb-tcp-mode/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="ADB TCP Mode" />
+<meta property="og:description" content="這個跟最佳化算是有一點關係，有的時候接 Android 的 Profiler 或是 Script Debugger 會抓不到接在 USB 上面的 Android 裝置，這時候可以考慮改用 TCP 模式透過網路來連接，通常可以排除問題。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/adb-tcp-mode/" />
+<meta property="article:published_time" content="2016-06-06T16:54:01+00:00" />
+<meta property="article:modified_time" content="2016-06-06T16:54:01+00:00" />
+<meta itemprop="name" content="ADB TCP Mode">
+<meta itemprop="description" content="這個跟最佳化算是有一點關係，有的時候接 Android 的 Profiler 或是 Script Debugger 會抓不到接在 USB 上面的 Android 裝置，這時候可以考慮改用 TCP 模式透過網路來連接，通常可以排除問題。">
+<meta itemprop="datePublished" content="2016-06-06T16:54:01&#43;00:00" />
+<meta itemprop="dateModified" content="2016-06-06T16:54:01&#43;00:00" />
+<meta itemprop="wordCount" content="346">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ADB TCP Mode"/>
+<meta name="twitter:description" content="這個跟最佳化算是有一點關係，有的時候接 Android 的 Profiler 或是 Script Debugger 會抓不到接在 USB 上面的 Android 裝置，這時候可以考慮改用 TCP 模式透過網路來連接，通常可以排除問題。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>這個跟最佳化算是有一點關係，有的時候接 Android 的 Profiler 或是 Script Debugger 會抓不到接在 USB 上面的 Android 裝置，這時候可以考慮改用 TCP 模式透過網路來連接，通常可以排除問題。</p>
+<p>在裝置接在電腦上能用 adb 的情況下輸入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">adb tcpip &lt;Port&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>如果成功的話就會出現以下的訊息</p>
+<p><img src="/images/adb-tcp-mode/adb-tcp-port.png" alt="ADB TCP Port"></p>
+<p>接下來讓電腦以 TCP 模式連接 Android 裝置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">adb connect &lt;Android IP&gt;:&lt;Port&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="/images/adb-tcp-mode/adb-tcp-connect.png" alt="ADB TCP Connect"></p>
+<p>機器的 IP 位置可以在 Wifi 設定頁面，通常是右上的選單裡面的進階可以找到。如果你的機器 UI 跟別人不一樣，可能要去 Google 一下哪裡找得到。還有一件應該是很明顯的事情要提醒一下，就是 Android 裝置接的網路要跟 PC 在同一個區域內，如果連的網路不一樣自然就沒有辦法連接。</p>
+<p><img src="/images/adb-tcp-mode/android-wifi-config.png" alt="Android Wifi Config"></p>
+<p>成功的話 adb devices 會出現用 IP 表示的項目</p>
+<p><img src="/images/adb-tcp-mode/adb-tcp-devices.png" alt="ADB TCP Devices"></p>
+<p>在裝置上執行 Unity 的 Development build App ，在 Profiler 裡面現在應該會出現新的TCP 選項可供連接：</p>
+<p><img src="/images/adb-tcp-mode/profiler.png" alt="Profiler"></p>
+<p>通常這樣能解決 Android 裝置不能 Profile 或是 Script Debug 的問題，Visual Studio 跟 MonoDevelop 也是類似的方法用 IP 連接執行 Unity Development build App 的 Android 機器。</p>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Unity on iOS9 - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/unity-on-ios9/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="Unity on iOS9" />
+<meta property="og:description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/unity-on-ios9/" />
+<meta property="article:published_time" content="2015-11-07T16:37:30+00:00" />
+<meta property="article:modified_time" content="2015-11-07T16:37:30+00:00" />
+<meta itemprop="name" content="Unity on iOS9">
+<meta itemprop="description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。">
+<meta itemprop="datePublished" content="2015-11-07T16:37:30&#43;00:00" />
+<meta itemprop="dateModified" content="2015-11-07T16:37:30&#43;00:00" />
+<meta itemprop="wordCount" content="859">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Unity on iOS9"/>
+<meta name="twitter:description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。</p>
+<h3 id="heading">效能問題</h3>
+<p><img src="/images/unity-on-ios9/spike.jpg" alt=""></p>
+<p>第一個最明顯的就是一樣的 build 在 iOS 9 上面效能變低很多，然後 profiler 開起來是這個非常誇張的鋸齒狀。</p>
+<p>這個問題在論壇上面有討論了一陣子：</p>
+<p><a href="http://forum.unity3d.com/threads/unity-5-2-ios-performance-issues.353646/">http://forum.unity3d.com/threads/unity-5-2-ios-performance-issues.353646/</a></p>
+<p>我自己亂試的結果是把 Graphics API 從 Automatic 改成 Force OpenGL ES2，就能避開。猜測是 Unity 跟 iOS 9 上面的 Metal 不合，開到 Metal 的時候效能就會崩潰。目前針對 5.2 的用戶官方建議把 5.1.2 的 shader 塞到 5.2 裡面跑，然後等 5.3 上市。至於 4.6.X 有沒有要解決好像就沒有提了，我是就設成 OpenGL ES2 當作 workaround 掉。</p>
+<h3 id="app-transport-security">App Transport Security</h3>
+<p>在 iOS 9 上面 Apple 實做了新的安全機制 App Transport Security 。主要的影響一個是要求 App 從網路上獲取資料的時候要走 HTTPS 或是加白名單，另一個是要跳轉到別的 App 的時候也要有加白名單。這個跟 Unity 關係最密切的就是 Facebook 整合會爆掉。Twitter 方面要看實作，Prime31 好像是走 iOS 內建的 twitter.framework ，升級  iOS 9 後還是正常運作。但是 Facebook 就是要依照官方的指示改 info.plist</p>
+<p><a href="https://developers.facebook.com/docs/ios/ios9">https://developers.facebook.com/docs/ios/ios9</a></p>
+<p>我本來以為 Prime31 的作者會在新版本裡面加入修改 info.plist 的選項，不過他老兄很霸氣的說應該是 Facebook 的責任要自己把連線修成 HTTPS ，所以現在還是得自己加：</p>
+<p><a href="http://support.prime31.com/22777/social-networking-plugin-on-ios-9?show=22777#q22777">http://support.prime31.com/22777/social-networking-plugin-on-ios-9?show=22777#q22777</a></p>
+<p>以我之前的 <a href="../configure-xcode-project-with-postprocessbuild">Xcode Postprocessing 教學</a> 的當作基底，可以用完全一樣的 PlistDocument 操作把這些設定加到 info.plist 。Code 大概像是：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="n">PlistDocument</span> <span class="n">plist</span> <span class="p">=</span> <span class="n">_GetInfoPlistDocument</span> <span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="p">;</span>
+<span class="n">PlistElementDict</span> <span class="n">root</span> <span class="p">=</span> <span class="n">plist</span><span class="p">.</span><span class="n">root</span><span class="p">;</span>
+<span class="n">PlistElementDict</span> <span class="n">atsDict</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;NSAppTransportSecurity&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">PlistElementDict</span> <span class="n">domainsDict</span> <span class="p">=</span> <span class="n">atsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;NSExceptionDomains&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">PlistElementDict</span> <span class="n">fbDict</span> <span class="p">=</span> <span class="n">domainsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;facebook.com&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">fbDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">)</span><span class="p">;</span>
+<span class="n">fbDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span><span class="p">;</span>
+<span class="n">PlistElementDict</span> <span class="n">fbcdnDict</span> <span class="p">=</span> <span class="n">domainsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;fbcdn.net&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">fbcdnDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">)</span><span class="p">;</span>
+<span class="n">fbcdnDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span><span class="p">;</span>
+<span class="n">PlistElementDict</span> <span class="n">akamaihdDict</span> <span class="p">=</span> <span class="n">domainsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;akamaihd.net&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">akamaihdDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">)</span><span class="p">;</span>
+<span class="n">akamaihdDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">)</span><span class="p">;</span>
+<span class="n">PlistElementArray</span> <span class="n">schemesArray</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="n">CreateArray</span> <span class="p">(</span><span class="s">&#34;LSApplicationQueriesSchemes&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="c1">// SDK v4.5 or older
+</span><span class="c1"></span><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20130214&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20130410&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20130702&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20131010&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20131219&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20140410&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20140116&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20150313&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20150629&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbauth&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbauth2&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-api20140430&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="c1">// v4.6 or older
+</span><span class="c1"></span><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-platform-20150128&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-platform-20150218&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-platform-20150305&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="c1">// v4.6.0
+</span><span class="c1"></span><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-api&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbauth2&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbshareextension&#34;</span><span class="p">)</span><span class="p">;</span>
+<span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">plist</span><span class="p">.</span><span class="n">WriteToString</span> <span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>如果你沒有辦法列舉所有網站的網域，例如說你接的廣告是走 HTTP 然後每次來的網域都不一樣。Apple 是有提供把 HTTPS 檢查整個關掉的選項，但是就是後果自負：</p>
+<p><a href="http://stackoverflow.com/questions/30739473/nsurlsession-nsurlconnection-http-load-failed-on-ios-9">http://stackoverflow.com/questions/30739473/nsurlsession-nsurlconnection-http-load-failed-on-ios-9</a></p>
+<p>選項的名稱是</p>
+<p><code>NSAllowsArbitraryLoads</code></p>
+<p>設定成 true 就會關掉要求 HTTPS 的防護。目前還沒有聽到有人開這個送審被 Apple 刁難的。不過未來還是沒有個準，如果主機是自己的，還是趕快找時間改走 HTTPS 吧。</p>
+<h3 id="bitcode">BITcode</h3>
+<p>如果有 plug-in 沒有用支援 Bitcode 的選項建置，那在 Xcode 7 裡面開啟 Bitcode 就會建置失敗。這個問題在之前的 Xcode 腳本教學就有提過了，因為 Bitcode 而建置不出來的人請參考 <a href="../configure-xcode-project-with-postprocessbuild">這篇</a>。</p>
+<p>以上</p>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

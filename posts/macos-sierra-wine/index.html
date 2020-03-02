@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲 - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/macos-sierra-wine/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲" />
+<meta property="og:description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/macos-sierra-wine/" />
+<meta property="article:published_time" content="2017-02-02T14:11:34+00:00" />
+<meta property="article:modified_time" content="2017-02-02T14:11:34+00:00" />
+<meta itemprop="name" content="在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲">
+<meta itemprop="description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。">
+<meta itemprop="datePublished" content="2017-02-02T14:11:34&#43;00:00" />
+<meta itemprop="dateModified" content="2017-02-02T14:11:34&#43;00:00" />
+<meta itemprop="wordCount" content="1011">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲"/>
+<meta name="twitter:description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。</p>
+<h4 id="-wine">安裝 Wine</h4>
+<p>首先是要安裝 Wine 這個在 Unix-like 系統下的 Windows emulator (?)，以下的教學我是照著 <a href="https://www.davidbaumgold.com/tutorials/wine-mac/">Installing Wine on Mac OS X</a> 這篇文章做的。</p>
+<p>最首先是要有 Xcode ，這個的取得方式就不贅述了。</p>
+<p>再來要安裝 OSX 跟 macOS 上面第三方套件管理工具 Homebrew：
+<a href="http://brew.sh/index_zh-tw.html">http://brew.sh/index_zh-tw.html</a></p>
+<p>如果像我一樣是在 macOS 之前就安裝Homebrew 然後升級成 macOS 之後壞掉的，homebrew 有提供自我診斷指令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">brew doctor
+</code></pre></td></tr></table>
+</div>
+</div><p>升級作業系統上來最常卡到的是原來Homebrew 安裝在 /usr/local 底下，升級到 macOS 之後蘋果改掉了 /usr/local 的 owner ，可以參照底下這個 issue 把 owner 改回來然後執行 brew update ：
+<a href="https://github.com/Homebrew/brew/issues/385">https://github.com/Homebrew/brew/issues/385</a></p>
+<p>brew update 之後，新的 Homebrew 會把自己搬到 /usr/local/Homebrew ，迴避這個權限問題，記得升級完後把 /usr/local 改回 root:wheel</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo chown -R root:wheel /usr/local
+</code></pre></td></tr></table>
+</div>
+</div><p>再來是安裝 <a href="https://caskroom.github.io/">Homebrew Cask</a> 這個擴充套件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">brew tap caskroom/cask
+</code></pre></td></tr></table>
+</div>
+</div><p>然後使用 Cask 安裝 Wine 依賴的 Java 跟 <a href="https://www.xquartz.org/">XQuartz</a>（Mac 上面的 X11）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">brew cask install java xquartz
+</code></pre></td></tr></table>
+</div>
+</div><p>最後安裝 Wine，這邊會跑很久</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">brew install wine
+</code></pre></td></tr></table>
+</div>
+</div><p>如果一切順利你的 macOS 上面就能跑 Wine 了！</p>
+<h4 id="-zip">解壓縮有日文檔名的 zip</h4>
+<p>因為 macOS 的 HFS+ 檔案系統的<a href="http://stackoverflow.com/a/6153713">檔名吃 UTF-8</a>，然後系統內建的解壓縮工具不會處理 Shift JIS 轉 UTF-8，所以跟 Windows 一樣會有解壓縮出來檔名爛掉的問題。我找到一個處理這個問題的 Python 腳本：</p>
+<p><a href="http://unknowngenius.com/blog/archives/2011/11/04/recovering-japanese-filenames-from-zip-archives-on-os-x/">http://unknowngenius.com/blog/archives/2011/11/04/recovering-japanese-filenames-from-zip-archives-on-os-x/</a></p>
+<p>不過他沒有處理目錄，所以我 clone 了一份然後用破爛 Python 技能加上了解壓縮目錄的功能：</p>
+<p><a href="https://github.com/FrankNine/FilenameEncodingUnzip">https://github.com/FrankNine/FilenameEncodingUnzip</a></p>
+<p>因為 macOS 有內建 Python interpreter，所以可以直接下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">./unzip.py &lt;壓縮檔路徑&gt; &lt;Encoding&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>Encoding 預設 sjis，可以不輸入。執行後如果沒有問題會解出 UTF-8 encoding 的日文檔案目錄名稱。</p>
+<h4 id="-wine-1">以日文語系執行 Wine</h4>
+<p>在 macOS 輸入 locale 會顯示目前的語系資料：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">LANG</span><span class="o">=</span>
+<span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">&#34;C&#34;</span>
+<span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span>
+<span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">&#34;C&#34;</span>
+<span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">&#34;C&#34;</span>
+<span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">&#34;C&#34;</span>
+<span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">&#34;C&#34;</span>
+<span class="nv">LC_ALL</span><span class="o">=</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>這是英文 macOS 的預設配置，每一個項目都是可以獨立設定語系的，如果要切日文最直接的方法還是直接去設定 LC_ALL 壓過所有語系設定。</p>
+<p>不過其實沒有必要去改系統的語系設定，可以只要在 Wine 執行前設定 Wine 的就好了，命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">LC_ALL</span><span class="o">=</span><span class="s2">&#34;ja_JP&#34;</span> wine &lt;執行檔路徑&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>如果沒出事的話遊戲應該會以 sjis 執行，NScripter 跟 RPG Maker 確定可以，吉里吉里確定會爆炸，然後如果遊戲的素材原本是用日文命名的話，在開檔的時候也會炸。我猜測是因為素材已經被解壓縮成 UTF-8 但是程式內還是用 Shift JIS 字串找檔案，理論上開檔的動作如果攔截下來把檔名也做 Shift JIS 轉 UTF-8 應該檔案就會找得到，但實際上我不知道怎麼做。就有待高手補完了。</p>
+<p>P.S. 如果執行的是安裝檔，你會看到 Wine 模擬的 Windows 檔案系統，就別客氣直接 C 槽或是 Program Files 直接裝下去。在 macOS 上 Wine 創的 Windows 檔案系統在：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">~/.wine/drive_c/
+</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Asset、Object 與序列化 - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。 這是 Unity 5 Asset、Resource 與資源管理系列的第二章。 這個章節會涵蓋 Unity 序列化系統（" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/assets-objects-and-serialization/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="Asset、Object 與序列化" />
+<meta property="og:description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。 這是 Unity 5 Asset、Resource 與資源管理系列的第二章。 這個章節會涵蓋 Unity 序列化系統（" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/assets-objects-and-serialization/" />
+<meta property="article:published_time" content="2017-03-26T17:17:45+00:00" />
+<meta property="article:modified_time" content="2017-03-26T17:17:45+00:00" />
+<meta itemprop="name" content="Asset、Object 與序列化">
+<meta itemprop="description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。 這是 Unity 5 Asset、Resource 與資源管理系列的第二章。 這個章節會涵蓋 Unity 序列化系統（">
+<meta itemprop="datePublished" content="2017-03-26T17:17:45&#43;00:00" />
+<meta itemprop="dateModified" content="2017-03-26T17:17:45&#43;00:00" />
+<meta itemprop="wordCount" content="5858">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Asset、Object 與序列化"/>
+<meta name="twitter:description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。 這是 Unity 5 Asset、Resource 與資源管理系列的第二章。 這個章節會涵蓋 Unity 序列化系統（"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>原文： <a href="https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization">https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization</a> ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。</p>
+<p>這是 Unity 5 Asset、Resource 與資源管理系列的第二章。</p>
+<p>這個章節會涵蓋 Unity 序列化系統（Serialization system）的內部構造，還有 Unity 如何在編輯時與執行期維繫 Object 之間可靠的參考關係。也會討論技術上 Object 與 Asset 的區別。要先理解本章的內容才有可能知道如何有效率地載入與卸載 Unity 的 Asset。適當的 Asset 管理是降低讀取時間還有壓低記憶體用量的必備條件。</p>
+<h3 id="11--asset--object">1.1 深入 Asset 與 Object</h3>
+<p>要了解如何在 Unity 裡管理資料，最重要的是要了解 Unity 如何識別與序列化資料。第一個重點是 <strong>Asset</strong> 與 <strong>UnityEngine.Object</strong> 的區別。</p>
+<p>一個 <strong>Asset</strong> 是一個存在於磁碟上，在 Unity 專案 <code>Assets/</code> 目錄下的檔案。舉例來說：貼圖（Texture）、材質（Material）還有 FBX 檔案都是 Asset。有些 Asset 的內容對 Unity 來說是原生（Native）的，像是材質檔案。有些則是要經過處理才會成為原生格式，像是 FBX。</p>
+<p>一個 <strong>UnityEngine.Object</strong> 或是簡稱為 <strong>Object</strong>（O 大寫）是一組序列化過的資料，用來描述特定資源（Resource）的實體（Instance）。Object 可以是任何 Unity 能使用的資源，像是網面（Mesh）、Sprite、AudioClip、或是 AnimationClip。所有的 Object 都是 <a href="http://docs.unity3d.com/ScriptReference/Object.html"><code>UnityEngine.Object</code></a>的子類別。</p>
+<p>雖然絕大部分的 Object 類是內建的，但有兩個特例：</p>
+<ul>
+<li><a href="http://docs.unity3d.com/ScriptReference/ScriptableObject.html">ScriptableObject</a> 用來提供開發者方便的管道來自定義資料類別。這些類別能被 Unity 原生地序列化與反序列化，也可以被 Unity 編輯器直接操作編輯。</li>
+<li><a href="http://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a> 用來包裝指向 <a href="http://docs.unity3d.com/ScriptReference/MonoScript.html">&lsquo;MonoScript&rsquo;</a> 的連結。MonoScript 是 Unity 引擎內部用來保存對特定 Assembly 下的特定命名空間（Namespace）裡的特定腳本類別的參考。MonoScript 本身「不」包含任何實際可執行的程式。</li>
+</ul>
+<p>Asset 對 Object 的關係是一對多，即任何 Asset 檔案內可以包含一到多個 Object。</p>
+<h3 id="12--object-reference">1.2 跨 Object 參考（Reference）</h3>
+<p>所有的 UnityEngine.Object 都能參考別的 UnityEngine.Object。別的 Object 可能在同一個 Asset 裡，也可能是從不同的 Asset 檔案匯入來的。舉例來說，材質類的 Object 可能會參考一個以上的貼圖 Object。這些貼圖 Object 通常是從多個貼圖 Asset 檔案匯入產生的（匯入 PNG 或是 JPG 檔案）。</p>
+<p>序列化發生時，這些參考會被序列化成兩份資料： <strong>檔案 GUID</strong> 和 <strong>Local ID</strong> 。檔案 GUID 用來識別資源在哪個 Asset 檔案裡。Local ID 則是在同一 Asset 內唯一的編號用來識別同檔案內不同的 Object，因為同一個 Asset 之內可能包含了多個 Object。</p>
+<p>檔案 GUID 保存在副檔名 .meta 檔案裡，Unity 在第一次匯入 Asset 時會生成 .meta 檔案，跟 Asset 放在同一目錄下。</p>
+<p>用文字編輯器可以觀察到上述的識別與參考系統的運作方式：你可以創造一個空專案然後把編輯器設定改成 Visible Meta File（不隱藏 .meta）還有 Serialze Assets as Text（將 Asset 序列化成純文字）。在這個專案創造一個材質、匯入一張貼圖，然後在場景上創造一個方塊，把這個材質指定到方塊上並儲存專案。</p>
+<p>用文字編輯器打開材質檔案的 .meta 檔案，在檔案上頭會有一行標記為 <code>guid</code> 的資料。這行定義了這個材質 Asset 檔案的 GUID。要看到 Local ID，用文編輯器直接開啟材質檔。材質 Object 的定義會看起來像：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">--- !u!21 &amp;2100000
+Material:
+ serializedVersion: 3
+ ... 以下資料省略 ...
+</code></pre></td></tr></table>
+</div>
+</div><p>在上面的範例，”&amp;”之後的數字就是材質的 Local ID。如果這個材質 Object 是在一個 GUID 為“abcdefg” 的 Asset 裡，那麼這個 Object 可以被 GUID “abcdefg” / Local ID “2100000” 的組合唯一識別。</p>
+<h3 id="13--guid--local-id">1.3 為什麼要有檔案 GUID 跟 Local ID？</h3>
+<p>為什麼 Unity 需要 GUID 跟 Local ID？答案是為了整個系統的穩定性還有提供跨平台又有彈性的工作流程。</p>
+<p>檔案 GUID 抽象化了「檔案位置」的概念。只要特定的檔案跟特定的檔案 GUID 維持聯繫，這個檔案在磁碟上的實際位置對 Unity 來說就不是那麼重要。開發者可以任意移動資源檔案而不需要更新其他 Object 對這個檔案內的 Object 的參考。</p>
+<p>然後因為一個 Asset 可能包含（或是在匯入過程中轉化產生）一個以上的 UnityEngine.Object 資源，所以需要 Local ID 來區分這些 Object。</p>
+<p>如果檔案 GUID 遺失，那麼所有對這個 Asset 裡的 Object 的參考都會遺失。這也是為什麼 .meta 檔案必須要跟聯繫的 Asset 檔案保持一樣的主檔名且存在於同一個資料夾這麼重要。注意，當 .meta 錯置或遺失時 Unity 會重新產生全新的 .meta。</p>
+<p>Unity 編輯器內有一個 GUID 跟檔案路徑的對照表，對照表裡的每一個項目會在 Asset 被載入或是匯入時加入。如果 Unity 編輯器開啟的情況下遺失 .meta 檔案，但跟遺失的 .meta 聯繫的 Asset 路徑沒變，則 Unity 編輯器可以保證重新產生的 .meta GUID 跟遺失前一樣。</p>
+<p>但如果 .meta 是在 Unity 編輯器關閉時弄丟的，或是在編輯器關閉的時候搬移檔案卻忘記一起搬 .meta，那麼所有對這個 Asset 裡的 Object 參考都會損毀。</p>
+<h3 id="14--asset--importer">1.4 複合 Asset 跟複合 Importer</h3>
+<p>在前面「1.1 深入 Asset 與 Object」提過的，非 Unity 原生的 Asset 需要經過匯入才能被 Unity 利用。完成這工作的是 Asset Importer。通常這些 Importer 是自動執行的，但它們也有對使用者開放的 <a href="http://docs.unity3d.com/ScriptReference/AssetImporter.html"><code>AssetImporter</code></a> API，還有其子類別。舉例來說，子類別 <a href="http://docs.unity3d.com/ScriptReference/TextureImporter.html"><code>TextureImporter</code></a> 提供了存取個別貼圖 Asset （PNG 或是 JPG）匯入設定的介面。</p>
+<p>匯入結果是一個或一個以上的 UnityEngine.Object。多的項目會以主 Asset 下的子 Asset 的形式顯示在 Unity 編輯器裡，像是把貼圖當 Sprite atlas 匯入時一個貼圖 Asset 底下可能會有多個 Sprite。這個貼圖 Asset 裡每一個 Object 都會共用同一個檔案 GUID，因為它們都存在同一個 Asset 檔案裡。要靠 Local ID 來區分參考的是誰。</p>
+<p>匯入的過程將原始 Asset 轉化成適合使用者在 Unity 編輯器裡選擇的目標平台的格式。匯入過程可能包含幾項非常花時間的操作，像是貼圖壓縮。如果每次開啟編輯器都要做一次匯入，這樣就太沒效率了。</p>
+<p>因此 Asset 匯入的結果會被暫存到專案 <code>Library/</code> 資料夾。更精確地說，匯入產生的所有 Object 們會被一起序列化成一個檔名跟 Asset GUID 一樣的二進位檔案，放在 <code>Library/metadata/[XX]/</code> 下，<code>[XX]</code> 即 GUID 首兩字元。</p>
+<p>上述暫存的規則對 Unity 原生資源也通用，但原生資源不需要長時間的轉化或再序列化操作。</p>
+<h3 id="15-instance">1.5 序列化與實體（Instance）</h3>
+<p>雖然檔案 GUID 跟 Local ID 是個穩定的識別系統，但 GUID 比對效率不高，在執行期我們需要更高效的識別系統。Unity 內部維持了一個將 GUID 跟 Local ID 組合翻譯成簡單整數編號的快取（在 Unity 內部這個快取叫做 PersistentManager，真正的翻譯發生在 Unity C++ 程式裡的 Remapper 類別裡，這個類別完全沒有 C# API），並保證這個整數編號在每一次執行 Unity 的過程中是獨一無二的。這些整數叫做 Instance ID，當有新 Object 向 Unity 的快取註冊時就會拿到簡單遞增產生的新編號。</p>
+<p>這個快取維護著特定 Instance ID、定義 Object 原始資料來源的檔案 GUID 與 Local ID 以及 Object 在記憶體中的實體 （如果有的話）三者之間的對應關係。這讓 UnityEngine.Object 間能可靠地維護彼此的參考。解析一個 Instance ID 的參考可以透過回傳該 Instance ID 所對應而已載入記憶體的 Object 來快速地完成。如果該 Object 還未載入，則可以透過解析檔案 GUID 與 Local ID 找到 Object 原始資料讓 Unity 及時地進行載入。</p>
+<p>在啟動時，Instance ID 的快取會被初始化，加入所有專案內建的 Object （即場景參考的 Object），還有所有在 <code>Resources/</code> 資料夾下的 Object。新的 Instance ID 快取項目會在執行期匯入新的 Asset （一個在執行期創造 Asset 的例子是用腳本創建 Texture2D Object，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="kt">var</span> <span class="n">myTexture</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Texture2D</span><span class="p">(</span><span class="m">1</span><span class="m">0</span><span class="m">2</span><span class="m">4</span><span class="p">,</span> <span class="m">7</span><span class="m">6</span><span class="m">8</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>或是有 Object 從 AssetBundle 載入時建立。Instance ID 快取項目只有在失效的時候才會移除。這會發生在提供特定的檔案 GUID 與 Local ID 的 AssetBundle 被卸載的時候發生。</p>
+<p>當卸載 AssetBundle 造成 Instance ID 失效時，Instance ID 與檔案 GUID 還有 Local ID 的對照會被刪除以節省記憶體。如果同一個 AssetBundle 再次被載入，AssetBundle 裡的 Object 會被指派到一個<strong>新的</strong> Instance ID。</p>
+<p>對於 AssetBundle 卸載更深的討論請參照：AssetBundle 使用模式下的管理載入的 Asset 章節。</p>
+<p>有一點要注意的是某些平台上的特定作業系統事件可能會造成 Object 被強制移出記憶體。舉例來說，在 iOS 上跟繪圖相關的資源有可能在 App 被系統暫停時被清出繪圖記憶體。如果這些 Object 是來自 AssetBundle 然後這個 AssetBundle 已經被卸載了，那麼 Unity 會無法讀取資料重建 Object。任何現有的對這些 Object 的參考也會失效。如果上述的事件發生，物件會變透明（代表網面的頂點資料消失）或是用洋紅色渲染（代表材質或貼圖遺失）。</p>
+<p><em>實作細節</em>：在 Unity 執行期的實作中，以上的描述不盡然跟實際執行的程式相同。在執行中比對 GUID 跟 Local ID 在大量載入時的效率並不理想。當建置 Unity 專案時，檔案 GUID 跟 Local ID 會依照固定的規則被建置成一個簡化的格式。雖然執行期底層實作不同，但是概念上還是照上述的 GUID 與 Local ID 運作。</p>
+<p>這也是為什麼 Asset 的檔案 GUID 在執行期無法取得。</p>
+<h3 id="16-monoscripts">1.6 MonoScripts</h3>
+<p>最重要的重點在於知道 MonoBehaviour 有個指向 MonoScript 的參考，而 MonoScript 只包含用來<strong>定位</strong>特定腳本類別的資訊。這兩種 Object 都**「不」**包含可執行的腳本程式碼。</p>
+<p>MonoScript 包含了三個字串：C# Assembly 名稱、類別名稱、還有命名空間。</p>
+<p>當建置專案時，Unity 搜集專案內 <code>Assets/</code> 資料夾下所有的腳本檔案然後編譯成 Mono assemblies。更精確地說，Unity 為 <code>Assets/</code> 資料夾下每種使用的語言建置一個 Assembly，如果 <code>Assets/Plugins</code> 下有腳本也會分開建置。Plugins 之外的腳本會被放在 <code>Assembly-CSharp.dll</code> 然後 Plugins 內的會被放到 <code>Assembly-CSharp-firstpass.dll</code>。</p>
+<p>這些 Assembly（加上預先編譯好的 DLL）會被引入 Unity 最後建置出來的程式裡。MonoScript 參考的就是這些 Assembly。跟其他資源不同，所有的 Assembly 都會在程式啟動時完成載入。</p>
+<p>MonoScript Object 的機制解釋了為什麼 AssetBundle（或是場景、Prefab）並不包含所使用的 MonoBehaviour Component 的可執行腳本內容。這樣不同的 MonoBehaviour 才能參考同一個共用的類別，即使兩個 MonoBehaviour 是來自不同的 AssetBundle。</p>
+<h3 id="17-">1.7 資源生命週期</h3>
+<p>UnityEngine.Object 載入記憶體跟從記憶體卸載發生在特定時間點。為了避免過長的讀取時間還有控制程式記憶體使用行為，開發者需要知道 UnityEngine.Object 的資源生命週期。</p>
+<p>有兩種方式載入 UnityEngine.Object ：自動隱含載入跟明確顯式（Explicit）載入。當 Instance ID 被提領（Dereference）、然後這個 Object 不在記憶體中、且 Object 的原始資料找得到時，對應的 Object 就會自動被載入。Object 也可以從腳本明確要求載入，可能是直接創造或是呼叫資源載入 API（即 <a href="http://docs.unity3d.com/ScriptReference/AssetBundle.LoadAsset.html"><code>AssetBundle.LoadAsset</code></a></p>
+<p>當 Object 被載入後，Unity 會試著透過將物件上每個參考（Reference）裡的檔案 GUID 跟 Local ID 翻譯成 Instance ID 來做參考解析。</p>
+<p>Object 會在其 Instance ID 第一次被提領且以下兩個條件滿足的情況下時被載入：</p>
+<ul>
+<li>Instance ID 參考的 Object 尚未被載入</li>
+<li>Instance ID 在快取內對應的檔案 GUID 與 Local ID 是有效的</li>
+</ul>
+<p>通常這會在參考被載入後且被解析後不久便發生。</p>
+<p>如果一對檔案 GUID 和 Local ID 沒有對應到 Instance ID，或者這個 Instance ID 對應到一個已經被卸載的 Object 其檔案 GUID 與 Local ID 已經失效。那麼這個參考會被保留，但是實際的 Object 不會被載入。這個情況在 Unity 編輯器裡會在參考欄位上顯示“(Missing)”。在執行中的遊戲或是在 Scene View 上，“(Missing)”的 Object 因類型不同會有不同的表現：丟失的網面會看不見、貼圖會變成洋紅色等等⋯⋯</p>
+<p>Object 會在三個特定情況下被卸載：</p>
+<ul>
+<li>Object 會在清理未使用的 Asset 時被自動卸載。這個流程會在場景進行破壞性地切換（即呼叫<a href="http://docs.unity3d.com/ScriptReference/Application.LoadLevel.html">非漸進式（Non-additive）場景載入 API</a>，或是腳本呼叫 <a href="http://docs.unity3d.com/ScriptReference/Resources.UnloadUnusedAssets.html"><code>Resources.UnloadUnusedAssets</code></a>。這個流程只會卸載沒有被參考的 Object：Object 只會在沒有任何 Mono 變數，也沒有任何還存活著的 Object 參考它時被卸載。</li>
+<li>從 <code>Resources/</code> 資料夾載入的 Object 可以使用 <a href="http://docs.unity3d.com/ScriptReference/Resources.UnloadAsset.html"><code>Resources.UnloadAsset</code></a> 明確卸載。這些被如此卸載的 Object 其 Instance ID 與對應的檔案 GUID 跟 Local ID 都還是有效。如果有任何 Mono 變數或是其他 Object 參考了一個被 <code>Resources.UnloadAsset</code> 卸載的 Object，那麼這個被卸載的 Object 會在其他任何人想要提領它時被重新載入</li>
+<li>從 Asset Bundles 載入的 Object 會在呼叫 <a href="http://docs.unity3d.com/ScriptReference/AssetBundle.Unload.html"><code>AssetBundle.Unload(true)</code></a> 時會立即跟著 Asset Bundles 一起被卸載。同時註銷 Object 的 Instance ID 對應到的 GUID 跟 Local ID，所有指向這個被卸載的 Object 的參考都會變成“(Missing)”參考。在 C# 腳本內試圖去存取被如此卸載的 Object 上的方法或屬性會導致 NullReferenceException。</li>
+</ul>
+<p>如果呼叫的是 <a href="http://docs.unity3d.com/ScriptReference/AssetBundle.Unload.html"><code>AssetBundle.Unload(false)</code></a>，來自 AssetBundle 的 Object 不會被摧毀，但是 Unity 還是會註銷它們 Instance ID 對應的檔案 GUID 跟 Local ID。結果是這些 Object 之後如果被移出記憶體，然後有人想要提領這個 Object，Unity 會無法自動重新載入。（沒有執行卸載但是 Object 被移出記憶體最常見的情況是 Unity 失去了對繪圖環境（Graphics context）的控制。舉例來說，在手機上就是 App 被暫停然後強制移到背景執行。在這情況下，手機的作業系統通常會把所有繪圖資源清出 GPU 記憶體。當 App 回到前景時，Unity 必須要重新把所有貼圖、Shader 跟網面傳給 GPU 才能繼續渲染畫面。）</p>
+<h3 id="18-hierarchy">1.8 載入大型階層結構（Hierarchy）</h3>
+<p>當序列化 GameObject 的階層結構時（像是序列化 Prefab），要記得整個階層結構會被完整地序列化。即階層結構內每一個 GameObject 和 Component 都會個別被序列化。這對後來載入跟實體化這個 GameObject 階層結構所需要的時間會造成影響。</p>
+<p>當建構任何 GameObject 階層結構時，CPU 必須要花時間在：</p>
+<ul>
+<li>讀取原始資料（從儲存空間或是另一個 GameObject 等等）</li>
+<li>建構新產生的 Transform 之間的上下階層關係</li>
+<li>實體化 GameObject 與 Component</li>
+<li>啟動新的 GameObject 與 Component</li>
+</ul>
+<p>後三項的成本一般來說跟階層結構是從已經存在的階層結構複製而來或是從儲存空間載入（例如從 AssetBundle 載入）無關。然而從儲存空間讀取原始資料需要的時間跟階層結構內有多少 GameObject 和 Component 呈線性成長關係，同時也跟空間存取速度有關。</p>
+<p>在所有 Unity 支援的平台上，從記憶體讀取資料會比從儲存裝置讀快上許多。然後儲存媒體的特性會隨著平台不同而有很大的差異——PC 從磁碟讀取資料會比行動裝置從快閃記憶體讀取還快。</p>
+<p>因此從緩慢的儲存裝置載入 Prefab 資料時，花在讀取序列化過的 Prefab 資料可能輕易超過實體化 Prefab 所花的時間。即載入的操作受限於儲存裝置的 IO 時間。</p>
+<p>如前述，當序列化有巨大階層結構的 Prefab 時，每一個 GameObject 和 Component 都會被獨立地序列化——即使資料有所重複。假設一個 UI 上面有 30 個完全相同的元件，那麼相同的元件就會被序列化 30 次，產生龐大的二進位資料。在讀取時，這 30 份序列化過的 GameObject、Component 資料必須要完整從磁碟上讀取出來後才能轉移到剛實體化的好的新 Object。檔案讀取往往會佔去載入大型 Prefab 大部分的時間。</p>
+<p>這個問題可能要等到未來的某天 Unity 真的支援巢狀 Prefab（Nested Prefab），屆時也許我們可以用多個 Prefab 組合來建構大型 GameObject 階層結構，所有重複的元件都從小的 Prefab 多次實體化而來，從而降低 Prefab 資料讀取時間。不是像現在把整個階層結構直接送給 Unity 的序列化與 Prefab 系統。</p>
+<p>當你已經讀取了 Prefab 或是已經建構了 GameObject 的階層結構，去複製已經存在的階層結構總是會比再從儲存裝置載入一次來得快。</p>
+<p>Unity 5.4 追記：Unity 5.4 改變了 Transform 在記憶體內的排列。5.4 之後所有根（Root） Transform 和其所有子 Transform 會被存放在一個緊密排列、連續的記憶體。當你要實體化一個 GameObject ，而它實體化後將立即成為別的 GameObject 的子節點，請使用新的可接受父節點作為參數的 <code>GameObject.Instantiate</code> API 多載。</p>
+<p>使用這個多載可以避免新 GameObject 剛實體化的時候成為場景的根節點而配置了上述的 Transform 容器，然後馬上因為成為別人的子節點而丟棄這個 Transform 容器。實際測試可以省下大約 5% 到 10% 的實體化時間。</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
