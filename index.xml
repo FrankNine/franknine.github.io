@@ -53,7 +53,7 @@
       <pubDate>Tue, 07 Feb 2017 16:53:42 +0000</pubDate>
       
       <guid>https://chunfuchao.com/posts/hype-driven-development/</guid>
-      <description>&lt;p&gt;原文：《&lt;a href=&#34;https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22#.setimjcqj&#34;&gt;Hype Driven Development&lt;/a&gt;》，感謝原作者 &lt;a href=&#34;https://blog.daftcode.pl/@marekkirejczyk&#34;&gt;Marek Kirejczyk&lt;/a&gt; 授權 &lt;a href=&#34;https://twitter.com/marekkirejczyk/status/827437538071674881&#34;&gt;翻譯&lt;/a&gt;，感謝 CH Huang、Yi Jeng Lin 協助勘誤。轉載請附上原文連結與出處。&lt;/p&gt;
+      <description>&lt;p&gt;原文：《&lt;a href=&#34;https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22#.setimjcqj&#34;&gt;Hype Driven Development&lt;/a&gt;》，感謝原作者 &lt;a href=&#34;https://blog.daftcode.pl/@marekkirejczyk&#34;&gt;Marek Kirejczyk&lt;/a&gt; 授權&lt;a href=&#34;https://twitter.com/marekkirejczyk/status/827437538071674881&#34;&gt;翻譯&lt;/a&gt;，感謝 CH Huang、Yi Jeng Lin 協助勘誤。轉載請附上原文連結與出處。&lt;/p&gt;
 &lt;p&gt;軟體開發團隊時常靠偏見、社群媒體上的消息、或者只是看什麼東西最「夯」來決定要用什麼架構或是技術。而非扎實地研究與衡量這些東西對專案會造成什麼樣的影響。我把這叫做「一窩蜂驅動開發」（Hype Driven Development），我認定這樣是有害的也建議開發者們改採更專業的「務實軟體開發」（Solid Software Engineering）。我會解釋這一切是怎麼發生的，還有怎麼避開這個問題。&lt;/p&gt;</description>
     </item>
     
