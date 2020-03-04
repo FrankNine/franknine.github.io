@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Unity 的 foreach - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="Update 8/10 2016 : Unity 5.3.5p8 導入了 Mono Compiler 的初步更新解決了這個問題，如果你的專案可以升級到 5.3.6 或是 5.4 之後的版本的話以下描述的問題就不會再發生了。
+官方公告：
+https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/
+因為最近有討論區的朋友提到 foreach 的 Garbage Collection 問題，所以想寫一篇為什麼 foreach 會有 Garbage Collection 的文章。這篇文章比較無趣一些，TD;LR 的話就是問題是 IDisposable 不是 IEnumerator&amp;lt;T&amp;gt;。
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/unity-foreach/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="Unity 的 foreach" />
+<meta property="og:description" content="Update 8/10 2016 : Unity 5.3.5p8 導入了 Mono Compiler 的初步更新解決了這個問題，如果你的專案可以升級到 5.3.6 或是 5.4 之後的版本的話以下描述的問題就不會再發生了。
+官方公告：
+https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/
+因為最近有討論區的朋友提到 foreach 的 Garbage Collection 問題，所以想寫一篇為什麼 foreach 會有 Garbage Collection 的文章。這篇文章比較無趣一些，TD;LR 的話就是問題是 IDisposable 不是 IEnumerator&lt;T&gt;。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/unity-foreach/" />
+<meta property="article:published_time" content="2016-01-05T11:38:43+00:00" />
+<meta property="article:modified_time" content="2016-01-05T11:38:43+00:00" />
+<meta itemprop="name" content="Unity 的 foreach">
+<meta itemprop="description" content="Update 8/10 2016 : Unity 5.3.5p8 導入了 Mono Compiler 的初步更新解決了這個問題，如果你的專案可以升級到 5.3.6 或是 5.4 之後的版本的話以下描述的問題就不會再發生了。
+官方公告：
+https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/
+因為最近有討論區的朋友提到 foreach 的 Garbage Collection 問題，所以想寫一篇為什麼 foreach 會有 Garbage Collection 的文章。這篇文章比較無趣一些，TD;LR 的話就是問題是 IDisposable 不是 IEnumerator&lt;T&gt;。">
+<meta itemprop="datePublished" content="2016-01-05T11:38:43&#43;00:00" />
+<meta itemprop="dateModified" content="2016-01-05T11:38:43&#43;00:00" />
+<meta itemprop="wordCount" content="1076">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Unity 的 foreach"/>
+<meta name="twitter:description" content="Update 8/10 2016 : Unity 5.3.5p8 導入了 Mono Compiler 的初步更新解決了這個問題，如果你的專案可以升級到 5.3.6 或是 5.4 之後的版本的話以下描述的問題就不會再發生了。
+官方公告：
+https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/
+因為最近有討論區的朋友提到 foreach 的 Garbage Collection 問題，所以想寫一篇為什麼 foreach 會有 Garbage Collection 的文章。這篇文章比較無趣一些，TD;LR 的話就是問題是 IDisposable 不是 IEnumerator&lt;T&gt;。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p><strong>Update 8/10 2016 : Unity 5.3.5p8 導入了 Mono Compiler 的初步更新解決了這個問題，如果你的專案可以升級到 5.3.6 或是 5.4 之後的版本的話以下描述的問題就不會再發生了。</strong></p>
+<p><strong>官方公告：</strong></p>
+<p><strong><a href="https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/">https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/</a></strong></p>
+<p>因為最近有討論區的朋友提到 foreach 的 Garbage Collection 問題，所以想寫一篇為什麼 foreach 會有 Garbage Collection 的文章。這篇文章比較無趣一些，TD;LR 的話就是問題是 <code>IDisposable</code> 不是 <code>IEnumerator&lt;T&gt;</code>。</p>
+<h1 id="garbage-collection">Garbage Collection</h1>
+<p>Unity 在使用 foreach 的時候會產生 24 bytes 的 GC 這個問題已經傳很久了。可以用個簡單的小程式去測試：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">class</span> <span class="nc">ForEachTest</span> <span class="p">:</span> <span class="n">MonoBehaviour</span>
+<span class="p">{</span>
+   <span class="k">private</span> <span class="k">readonly</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">list</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">}</span><span class="p">;</span>
+   <span class="k">void</span> <span class="n">Update</span><span class="p">(</span><span class="p">)</span>
+   <span class="p">{</span>
+       <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">element</span> <span class="k">in</span> <span class="n">list</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>隨便掛在一個 GameObject 下面的執行結果，在 Unity 4.7.0f1</p>
+<p><img src="/images/unity-foreach/unity-4.7.png" alt="Unity 4.7"></p>
+<p>現在最新的 Unity 5.3.1f1 上面的結果好像更糟了：</p>
+<p><img src="/images/unity-foreach/unity-5.png" alt="Unity 5"></p>
+<h1 id="heading">兇手是誰？</h1>
+<p>我一直以為是因為 <code>System.Collections.Generic</code> 底下所有的容器的 <code>Enumerator</code> 都被宣告成 struct ，然後 foreach 在操作的時候卻是對 <code>IEnumerator&lt;T&gt;</code> 操作 <code>IEnumerator&lt;T&gt;.Current</code> 跟 <code>IEnumerator&lt;T&gt;.MoveNext()</code> 造成了 boxing 。這周末心血來潮把 Unity 建置出來的 dll 放進 ILSpy 裡面看看，才發現以往的認知是錯的。</p>
+<blockquote>
+<p>System.Collections.Generic 底下所有的容器的 Enumerator 都被宣告成 struct 的原因可以看 Eric Lippert（C# Compiler Team 的成員的解釋） ：<br>
+<a href="http://stackoverflow.com/questions/3168311/why-do-bcl-collections-use-struct-enumerators-not-classes/3168435#3168435">http://stackoverflow.com/questions/3168311/why-do-bcl-collections-use-struct-enumerators-not-classes/3168435#3168435</a><br>
+基本上是效能考量</p>
+</blockquote>
+<p>以下是範例程式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">list</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="p">{</span> <span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span> <span class="p">}</span><span class="p">;</span>
+<span class="k">foreach</span><span class="p">(</span><span class="kt">var</span> <span class="n">item</span> <span class="k">in</span> <span class="n">list</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="n">item</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>ILSpy 反組譯的結果</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">list</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+<span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="m">1</span><span class="p">)</span><span class="p">;</span>
+<span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="m">2</span><span class="p">)</span><span class="p">;</span>
+<span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="m">3</span><span class="p">)</span><span class="p">;</span>
+<span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">list2</span> <span class="p">=</span> <span class="n">list</span><span class="p">;</span>
+<span class="k">using</span> <span class="p">(</span><span class="n">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span><span class="p">.</span><span class="n">Enumerator</span> <span class="n">enumerator</span> <span class="p">=</span> <span class="n">list2</span><span class="p">.</span><span class="n">GetEnumerator</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">enumerator</span><span class="p">.</span><span class="n">MoveNext</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">current</span> <span class="p">=</span> <span class="n">enumerator</span><span class="p">.</span><span class="n">get_Current</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="n">current</span><span class="p">)</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>可以看到實際上 Unity 其實正確地使用 <code>List&lt;int&gt;.Enumerator</code> 來承接 <code>list.GetEnumerator()</code> 的回傳值。所以那個 boxing 到底在哪裡呢？</p>
+<p>有了這條線索後，Google 了一下發現已經有人找到了真正的問題。</p>
+<p><a href="https://www.reddit.com/r/Unity3D/comments/34s0je/c_memory_and_performance_tips_for_unity/cqyf5yk/">https://www.reddit.com/r/Unity3D/comments/34s0je/c_memory_and_performance_tips_for_unity/cqyf5yk/</a></p>
+<p>要看到問題要把 ILSpy 的展示模式從 C# 換成 IL 模式。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">IL_001e: callvirt instance valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;!0&gt; class [mscorlib]System.Collections.Generic.List`1&lt;int32&gt;::GetEnumerator()
+IL_0023: stloc.2
+.try
+{
+    IL_0024: br IL_003c
+    // loop start (head: IL_003c)
+        IL_0029: ldloca.s 2
+        IL_002b: call instance !0 valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt;::get_Current()
+        IL_0030: stloc.1
+        IL_0031: ldloc.1
+        IL_0032: box [mscorlib]System.Int32
+        IL_0037: call void [UnityEngine]UnityEngine.Debug::Log(object)
+        IL_003c: ldloca.s 2
+        IL_003e: call instance bool valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt;::MoveNext()
+        IL_0043: brtrue IL_0029
+    // end loop
+    IL_0048: leave IL_0059
+} // end .try
+finally
+{
+    IL_004d: ldloc.2
+    IL_004e: box valuetype [mscorlib]System.Collections.Generic.List`1/Enumerator&lt;int32&gt;
+    IL_0053: callvirt instance void [mscorlib]System.IDisposable::Dispose()
+    IL_0058: endfinally
+} // end handler
+</code></pre></td></tr></table>
+</div>
+</div><p>可以看到 box 出現在 IL_004e 行 finally 區塊裡，結果是舊版的 Mono 對有實作 <code>IDisposable</code> 的 struct 呼叫 Dispose 的時候（using 關鍵字觸發的）用了 <code>IDisposable</code> 去 box ，這跟我之前以為的不一樣。</p>
+<p>然後更冤的可以看一下 <code>List&lt;T&gt;.Enumerator</code> 的 Dispose 實作：</p>
+<p><a href="http://referencesource.microsoft.com/#mscorlib/system/collections/generic/list.cs,d3661cf752ff3f44">http://referencesource.microsoft.com/#mscorlib/system/collections/generic/list.cs,d3661cf752ff3f44</a></p>
+<p>因為 <code>List&lt;T&gt;.Enumerator</code> 是 value type ，所以根本就不需要特別處理。這個 Dispose 是空函式，整個 boxing 是 100% 的浪費。</p>
+<p>Mono 對於這個 bug 的 issue 在這裡：</p>
+<p><a href="https://bugzilla.novell.com/show_bug.cgi?id=571010">https://bugzilla.novell.com/show_bug.cgi?id=571010</a></p>
+<p>可以看到  Mono 本家已經在 2010 6/1 修正了了這個問題，但是 Unity 還是沒有 merge 這個修正。考慮到 Unity 自己有 Mono 的 fork （https://github.com/Unity-Technologies/mono），很有可能 Unity 有對 Mono 做修改，改動到現在合併有困難。否則大家喊很久的 Mono 升級或是改用 Roslyn ，為什麼 Unity 一直無法從善如流。</p>
+<p>我自己對於 foreach 的態度就是雖然效能較差還有少量 GC 問題，但是做取捨我還是會選 foreach 取其可讀性。要小心的是如果 foreach 放在其他的 loop 裡面的情況，累積起來還是有可能會造成問題。</p>
+<p>參考資料：</p>
+<p>C# memory and performance tips for Unity</p>
+<p>原文：</p>
+<p><a href="http://www.somasim.com/blog/2015/04/csharp-memory-and-performance-tips-for-unity/">http://www.somasim.com/blog/2015/04/csharp-memory-and-performance-tips-for-unity/</a></p>
+<p>Reddit 討論：</p>
+<p><a href="https://www.reddit.com/r/Unity3D/comments/34s0je/c_memory_and_performance_tips_for_unity/">https://www.reddit.com/r/Unity3D/comments/34s0je/c_memory_and_performance_tips_for_unity/</a></p>
+<p>C# Memory Management for Unity Developers (part 1 of 3)</p>
+<p><a href="https://www.gamasutra.com/blogs/WendelinReich/20131109/203841/C_Memory_Management_for_Unity_Developers_part_1_of_3.php">https://www.gamasutra.com/blogs/WendelinReich/20131109/203841/C_Memory_Management_for_Unity_Developers_part_1_of_3.php</a></p>
+<p>Why do BCL Collections use struct enumerators, not classes?</p>
+<p><a href="http://stackoverflow.com/questions/3168311/why-do-bcl-collections-use-struct-enumerators-not-classes/3168435#3168435">http://stackoverflow.com/questions/3168311/why-do-bcl-collections-use-struct-enumerators-not-classes/3168435#3168435</a></p>
+<p>ILSpy</p>
+<p><a href="http://ilspy.net/">http://ilspy.net/</a></p>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

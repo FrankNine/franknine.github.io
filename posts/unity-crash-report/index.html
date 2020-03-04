@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Unity CrashReport - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="之前一直苦於收到客服信說遊戲閃退了，但是沒有什麼研究資料完全推斷不出到底發生什麼事情的窘況。雖然 Google Play 跟 iTunes Connect 後台會收集 Crash Dump，但是一個是收集 Java 一個是 il2cpp 看到也不知道對應到腳本的哪裡，沒有什麼實用價值。
+在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。
+注意事項：  之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：
+http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/ 目前不支援以 il2cpp 編譯的 iOS ，il2cpp 編譯的版本一遇到 unhandled exception 就會閃退讓 Crash Report 沒時間上傳。我自己有實驗過拿 Mono 編譯的可以上傳，但是 Mono 根本就不能上架 App Store。所以這篇文章先不會介紹 iOS 上面的設定，等到 Unity 官方解決問題後再說。相關討論在：
+http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ " />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.62.0 with theme even" />
+
+
+<link rel="canonical" href="https://chunfuchao.com/posts/unity-crash-report/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.a489c479.min.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="Unity CrashReport" />
+<meta property="og:description" content="之前一直苦於收到客服信說遊戲閃退了，但是沒有什麼研究資料完全推斷不出到底發生什麼事情的窘況。雖然 Google Play 跟 iTunes Connect 後台會收集 Crash Dump，但是一個是收集 Java 一個是 il2cpp 看到也不知道對應到腳本的哪裡，沒有什麼實用價值。
+在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。
+注意事項：
+
+之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：
+http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/
+目前不支援以 il2cpp 編譯的 iOS ，il2cpp 編譯的版本一遇到 unhandled exception 就會閃退讓 Crash Report 沒時間上傳。我自己有實驗過拿 Mono 編譯的可以上傳，但是 Mono 根本就不能上架 App Store。所以這篇文章先不會介紹 iOS 上面的設定，等到 Unity 官方解決問題後再說。相關討論在：
+http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chunfuchao.com/posts/unity-crash-report/" />
+<meta property="article:published_time" content="2015-12-09T15:37:12+00:00" />
+<meta property="article:modified_time" content="2015-12-09T15:37:12+00:00" />
+<meta itemprop="name" content="Unity CrashReport">
+<meta itemprop="description" content="之前一直苦於收到客服信說遊戲閃退了，但是沒有什麼研究資料完全推斷不出到底發生什麼事情的窘況。雖然 Google Play 跟 iTunes Connect 後台會收集 Crash Dump，但是一個是收集 Java 一個是 il2cpp 看到也不知道對應到腳本的哪裡，沒有什麼實用價值。
+在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。
+注意事項：
+
+之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：
+http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/
+目前不支援以 il2cpp 編譯的 iOS ，il2cpp 編譯的版本一遇到 unhandled exception 就會閃退讓 Crash Report 沒時間上傳。我自己有實驗過拿 Mono 編譯的可以上傳，但是 Mono 根本就不能上架 App Store。所以這篇文章先不會介紹 iOS 上面的設定，等到 Unity 官方解決問題後再說。相關討論在：
+http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/
+">
+<meta itemprop="datePublished" content="2015-12-09T15:37:12&#43;00:00" />
+<meta itemprop="dateModified" content="2015-12-09T15:37:12&#43;00:00" />
+<meta itemprop="wordCount" content="809">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Unity CrashReport"/>
+<meta name="twitter:description" content="之前一直苦於收到客服信說遊戲閃退了，但是沒有什麼研究資料完全推斷不出到底發生什麼事情的窘況。雖然 Google Play 跟 iTunes Connect 後台會收集 Crash Dump，但是一個是收集 Java 一個是 il2cpp 看到也不知道對應到腳本的哪裡，沒有什麼實用價值。
+在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。
+注意事項：
+
+之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：
+http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/
+目前不支援以 il2cpp 編譯的 iOS ，il2cpp 編譯的版本一遇到 unhandled exception 就會閃退讓 Crash Report 沒時間上傳。我自己有實驗過拿 Mono 編譯的可以上傳，但是 Mono 根本就不能上架 App Store。所以這篇文章先不會介紹 iOS 上面的設定，等到 Unity 官方解決問題後再說。相關討論在：
+http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/
+"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>之前一直苦於收到客服信說遊戲閃退了，但是沒有什麼研究資料完全推斷不出到底發生什麼事情的窘況。雖然 Google Play 跟 iTunes Connect 後台會收集 Crash Dump，但是一個是收集 Java 一個是 il2cpp 看到也不知道對應到腳本的哪裡，沒有什麼實用價值。</p>
+<p>在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。</p>
+<h1 id="heading">注意事項：</h1>
+<ol>
+<li>之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：<br>
+<a href="http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/">http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/</a></li>
+<li>目前不支援以 il2cpp 編譯的 iOS ，il2cpp 編譯的版本一遇到 unhandled exception 就會閃退讓 Crash Report 沒時間上傳。我自己有實驗過拿 Mono 編譯的可以上傳，但是 Mono 根本就不能上架 App Store。所以這篇文章先不會介紹 iOS 上面的設定，等到 Unity 官方解決問題後再說。相關討論在：<br>
+<a href="http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/">http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/</a></li>
+</ol>
+<h1 id="heading-1">需要元件</h1>
+<ol>
+<li>Unity 5 Pro License<br>
+雖然 Unity 4 也可以接 Crash Report ，但好像後台申請要 5 的 License</li>
+<li>對應手機平台的 Pro License</li>
+</ol>
+<p>首先先用你的 Unity 帳號登入：</p>
+<p><a href="https://perf.cloud.unity3d.com">https://perf.cloud.unity3d.com</a></p>
+<p>登入後會看到歡迎頁面，點 Create New Project 開始</p>
+<p><img src="/images/unity-crash-report/create-new-project.png" alt="Create New Project"></p>
+<p>創完 Project 之後點進去選擇 Activate Game Performance</p>
+<p><img src="/images/unity-crash-report/activate-game-performance.png" alt="Activate Game Performance"></p>
+<p>一開始沒有資料的狀態長這樣：</p>
+<p><img src="/images/unity-crash-report/getting-started.png" alt="Getting Started"></p>
+<p><strong>Update: Unity 5.4 之後 Crash Reporting 已經是 Unity Game Performance Reporting Service 的一部分，不需要再安裝這個 Package ，而是從 <a href="http://blogs.unity3d.com/2015/09/10/unity-services-are-just-a-few-clicks-away/">Unity Service Menu</a> 直接開啟即可。如果先前有安裝的要移除掉否則會發生衝突。Unity Game Performance Reporting Service 的說明請參考：</strong></p>
+<p><a href="http://unity3d.com/cn/services/performance-reporting">http://unity3d.com/cn/services/performance-reporting</a></p>
+<p>選擇 Getting Started 之後會有安裝教學。應該只有 Unity 4 需要安裝那個 Package ，Unity 5 的 UnityEngine namespace 已經有定義 CrashReport 。依照 Unity 寫的教學，在遊戲初始化的地方呼叫 CrashReporting.Init 填入 UPID 。版本號可以不填但是應該要填，不填的話所有版本的資料都會混在一起。</p>
+<p><img src="/images/unity-crash-report/install.png" alt="Install"></p>
+<p>然後就可以試著會爆炸的 code 推到 Android 機器上面實驗，可以故意弄出 NullReferenceException 或是直接 throw new Exception，實驗成功的話應該會看到像這樣：</p>
+<p><img src="/images/unity-crash-report/exception.png" alt="Exception"></p>
+<p>包含 Exception 內容，C# 的 Stack Trace ，我們設定的版本號，機器種類跟發生次數的資料都有，這樣子以後要 debug 就不會那麼鬼打牆了。</p>
+<p>可惜的是目前 iOS 還不能用，到 iOS 能用的時候我會再發 iOS 版的教學。如果想要追蹤這個功能的最新情報，官方的 FAQ thread 在這裡：</p>
+<p><a href="http://forum.unity3d.com/threads/game-performance-reporting-preview-faq.305997/#post-2156685">http://forum.unity3d.com/threads/game-performance-reporting-preview-faq.305997/#post-2156685</a></p>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Chun-Fu Chao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

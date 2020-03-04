@@ -150,6 +150,44 @@
     </item>
     
     <item>
+      <title>修復 Apple 開發憑證</title>
+      <link>https://chunfuchao.com/posts/apple-worldwide-developer-relations-certificate-fix/</link>
+      <pubDate>Mon, 15 Feb 2016 17:15:55 +0000</pubDate>
+      
+      <guid>https://chunfuchao.com/posts/apple-worldwide-developer-relations-certificate-fix/</guid>
+      <description>2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer</description>
+    </item>
+    
+    <item>
+      <title>Unity 的 foreach</title>
+      <link>https://chunfuchao.com/posts/unity-foreach/</link>
+      <pubDate>Tue, 05 Jan 2016 11:38:43 +0000</pubDate>
+      
+      <guid>https://chunfuchao.com/posts/unity-foreach/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Update 8/10 2016 : Unity 5.3.5p8 導入了 Mono Compiler 的初步更新解決了這個問題，如果你的專案可以升級到 5.3.6 或是 5.4 之後的版本的話以下描述的問題就不會再發生了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;官方公告：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/&#34;&gt;https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因為最近有討論區的朋友提到 foreach 的 Garbage Collection 問題，所以想寫一篇為什麼 foreach 會有 Garbage Collection 的文章。這篇文章比較無趣一些，TD;LR 的話就是問題是 &lt;code&gt;IDisposable&lt;/code&gt; 不是 &lt;code&gt;IEnumerator&amp;lt;T&amp;gt;&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Unity CrashReport</title>
+      <link>https://chunfuchao.com/posts/unity-crash-report/</link>
+      <pubDate>Wed, 09 Dec 2015 15:37:12 +0000</pubDate>
+      
+      <guid>https://chunfuchao.com/posts/unity-crash-report/</guid>
+      <description>&lt;p&gt;之前一直苦於收到客服信說遊戲閃退了，但是沒有什麼研究資料完全推斷不出到底發生什麼事情的窘況。雖然 Google Play 跟 iTunes Connect 後台會收集 Crash Dump，但是一個是收集 Java 一個是 il2cpp 看到也不知道對應到腳本的哪裡，沒有什麼實用價值。&lt;/p&gt;
+&lt;p&gt;在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。&lt;/p&gt;
+&lt;h1 id=&#34;heading&#34;&gt;注意事項：&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：&lt;br&gt;
+&lt;a href=&#34;http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/&#34;&gt;http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;目前不支援以 il2cpp 編譯的 iOS ，il2cpp 編譯的版本一遇到 unhandled exception 就會閃退讓 Crash Report 沒時間上傳。我自己有實驗過拿 Mono 編譯的可以上傳，但是 Mono 根本就不能上架 App Store。所以這篇文章先不會介紹 iOS 上面的設定，等到 Unity 官方解決問題後再說。相關討論在：&lt;br&gt;
+&lt;a href=&#34;http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/&#34;&gt;http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
       <title>Unity on iOS9</title>
       <link>https://chunfuchao.com/posts/unity-on-ios9/</link>
       <pubDate>Sat, 07 Nov 2015 16:37:30 +0000</pubDate>
