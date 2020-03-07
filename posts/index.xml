@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 29 Dec 2017 12:43:16 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2020 01:28:00 +0800</lastBuildDate>
     
 	<atom:link href="https://www.chunfuchao.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>沒有人會賠你的</title>
+      <link>https://www.chunfuchao.com/posts/there-is-no-compensation/</link>
+      <pubDate>Sun, 08 Mar 2020 01:28:00 +0800</pubDate>
+      
+      <guid>https://www.chunfuchao.com/posts/there-is-no-compensation/</guid>
+      <description>https://news.ycombinator.com/item?id=22496724 昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪</description>
+    </item>
     
     <item>
       <title>使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試</title>
