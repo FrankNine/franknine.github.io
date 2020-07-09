@@ -28,7 +28,7 @@
 <meta name="generator" content="Hugo 0.62.0 with theme even" />
 
 
-<link rel="canonical" href="https://www.chunfuchao.com/posts/unity-profiling-tools/" />
+<link rel="canonical" href="https://franknine.github.io/posts/unity-profiling-tools/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -44,7 +44,7 @@
 <meta property="og:description" content="這篇會介紹 Unity 內建的 Profiling 工具，Unity 的 Profiling 工具可以分析在 Unity 編輯器裡執行的遊戲，也可以分析裝在機器上的 Unity 遊戲，算是蠻方便的。一般的分析流程跟除錯流程一樣，都是先在編輯器環境排除大部分的問題，然後再安裝到手機上看看有沒有手機特有的問題。不過 Unity 在 GPU 分析上面仍有不足之處，所以之後會介紹手機 GPU 晶片原廠的 GPU Profiler。
 一個 Profiling 的基本概念是「測不準原理」，因為 Profiler 要在遊戲裡面不斷做紀錄然後回傳給在電腦上的工具，這樣你才有資料可以看，所以你看到的數字跟實際上玩家接觸的最終版本一定會有落差。你在 Profiler 裡面看到記憶體用了 50 MB ，並不代表實際上在玩家手機上就是會在同一時間點吃 50 MB。所以看 Profile 結果主要是看趨勢或者是比例的。比較新做法是比舊做法好還是差，好的話大概是多少百分比這樣。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.chunfuchao.com/posts/unity-profiling-tools/" />
+<meta property="og:url" content="https://franknine.github.io/posts/unity-profiling-tools/" />
 <meta property="article:published_time" content="2016-06-11T10:15:01+00:00" />
 <meta property="article:modified_time" content="2016-06-11T10:15:01+00:00" />
 <meta itemprop="name" content="Unity 手機遊戲最佳化雜談 – 內建 Profiling 工具">
@@ -240,7 +240,7 @@ adb forward tcp:54999 localabstract:Unity-&lt;你的遊戲 bundle ID&gt;
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://www.chunfuchao.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">

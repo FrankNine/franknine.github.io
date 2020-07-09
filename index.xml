@@ -2,195 +2,195 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Northern Wind</title>
-    <link>https://www.chunfuchao.com/</link>
+    <link>https://franknine.github.io/</link>
     <description>Recent content on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 10 May 2020 23:20:12 +0800</lastBuildDate>
     
-	<atom:link href="https://www.chunfuchao.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://franknine.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Unity 和 git</title>
-      <link>https://www.chunfuchao.com/posts/unity-git/</link>
+      <link>https://franknine.github.io/posts/unity-git/</link>
       <pubDate>Sun, 10 May 2020 23:20:12 +0800</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-git/</guid>
+      <guid>https://franknine.github.io/posts/unity-git/</guid>
       <description>用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 open source builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經</description>
     </item>
     
     <item>
       <title>Unity 和 Sign in with Apple</title>
-      <link>https://www.chunfuchao.com/posts/unity-sign-in-with-apple/</link>
+      <link>https://franknine.github.io/posts/unity-sign-in-with-apple/</link>
       <pubDate>Fri, 08 May 2020 19:45:00 +0800</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-sign-in-with-apple/</guid>
+      <guid>https://franknine.github.io/posts/unity-sign-in-with-apple/</guid>
       <description>因為審 Sign-in with Apple 被退了三次，所以來記錄一下發生什麼事。 因為四月初公司有遊戲先實裝 Sign-in with Apple 過審，所以我以為 Sign-in with Apple 已經結案了。沒想到這幾天另一支 App 竟然</description>
     </item>
     
     <item>
       <title>沒有人會賠你的</title>
-      <link>https://www.chunfuchao.com/posts/there-is-no-compensation/</link>
+      <link>https://franknine.github.io/posts/there-is-no-compensation/</link>
       <pubDate>Sun, 08 Mar 2020 01:28:00 +0800</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/there-is-no-compensation/</guid>
+      <guid>https://franknine.github.io/posts/there-is-no-compensation/</guid>
       <description>https://news.ycombinator.com/item?id=22496724 昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪</description>
     </item>
     
     <item>
       <title>使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試</title>
-      <link>https://www.chunfuchao.com/posts/unity-unit-testing-in-resharper-and-rider/</link>
+      <link>https://franknine.github.io/posts/unity-unit-testing-in-resharper-and-rider/</link>
       <pubDate>Fri, 29 Dec 2017 12:43:16 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-unit-testing-in-resharper-and-rider/</guid>
+      <guid>https://franknine.github.io/posts/unity-unit-testing-in-resharper-and-rider/</guid>
       <description>從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦</description>
     </item>
     
     <item>
       <title>Asset、Object 與序列化</title>
-      <link>https://www.chunfuchao.com/posts/assets-objects-and-serialization/</link>
+      <link>https://franknine.github.io/posts/assets-objects-and-serialization/</link>
       <pubDate>Sun, 26 Mar 2017 17:17:45 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/assets-objects-and-serialization/</guid>
+      <guid>https://franknine.github.io/posts/assets-objects-and-serialization/</guid>
       <description>原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。 這是 Unity 5 Asset、Resource 與資源管理系列的第二章。 這個章節會涵蓋 Unity 序列化系統（</description>
     </item>
     
     <item>
       <title>AssetBundle 與 Resources 指南</title>
-      <link>https://www.chunfuchao.com/posts/assets-resources-and-assetbundles/</link>
+      <link>https://franknine.github.io/posts/assets-resources-and-assetbundles/</link>
       <pubDate>Sun, 26 Mar 2017 17:09:58 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/assets-resources-and-assetbundles/</guid>
+      <guid>https://franknine.github.io/posts/assets-resources-and-assetbundles/</guid>
       <description>原文： https://unity3d.com/learn/tutorials/topics/best-practices/guide-ass</description>
     </item>
     
     <item>
       <title>Apple iOS 審查與動態更新</title>
-      <link>https://www.chunfuchao.com/posts/apple-ios-review-and-hot-update/</link>
+      <link>https://franknine.github.io/posts/apple-ios-review-and-hot-update/</link>
       <pubDate>Thu, 09 Mar 2017 18:33:19 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/apple-ios-review-and-hot-update/</guid>
+      <guid>https://franknine.github.io/posts/apple-ios-review-and-hot-update/</guid>
       <description>&lt;p&gt;昨天 App 開發的大新聞是知名的 iOS 熱更新工具 JSPatch 被蘋果盯上，很多包含 JSPatch 的 App 都被要求限期更新沒有 JSPatch 的版本，否則就會被下架。這件事情造成不小的騷動，也有不少人在傳所謂的「iOS 熱更新已死」一說，但實際上的情況有點複雜。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>一窩蜂驅動開發</title>
-      <link>https://www.chunfuchao.com/posts/hype-driven-development/</link>
+      <link>https://franknine.github.io/posts/hype-driven-development/</link>
       <pubDate>Tue, 07 Feb 2017 16:53:42 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/hype-driven-development/</guid>
+      <guid>https://franknine.github.io/posts/hype-driven-development/</guid>
       <description>&lt;p&gt;原文：《&lt;a href=&#34;https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22#.setimjcqj&#34;&gt;Hype Driven Development&lt;/a&gt;》，感謝原作者 &lt;a href=&#34;https://blog.daftcode.pl/@marekkirejczyk&#34;&gt;Marek Kirejczyk&lt;/a&gt; 授權&lt;a href=&#34;https://twitter.com/marekkirejczyk/status/827437538071674881&#34;&gt;翻譯&lt;/a&gt;，感謝 CH Huang、Yi Jeng Lin 協助勘誤。轉載請附上原文連結與出處。&lt;/p&gt;
 &lt;p&gt;軟體開發團隊時常靠偏見、社群媒體上的消息、或者只是看什麼東西最「夯」來決定要用什麼架構或是技術。而非扎實地研究與衡量這些東西對專案會造成什麼樣的影響。我把這叫做「一窩蜂驅動開發」（Hype Driven Development），我認定這樣是有害的也建議開發者們改採更專業的「務實軟體開發」（Solid Software Engineering）。我會解釋這一切是怎麼發生的，還有怎麼避開這個問題。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲</title>
-      <link>https://www.chunfuchao.com/posts/macos-sierra-wine/</link>
+      <link>https://franknine.github.io/posts/macos-sierra-wine/</link>
       <pubDate>Thu, 02 Feb 2017 14:11:34 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/macos-sierra-wine/</guid>
+      <guid>https://franknine.github.io/posts/macos-sierra-wine/</guid>
       <description>&lt;p&gt;最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Super Mario Run</title>
-      <link>https://www.chunfuchao.com/posts/super-mario-run/</link>
+      <link>https://franknine.github.io/posts/super-mario-run/</link>
       <pubDate>Wed, 18 Jan 2017 17:48:22 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/super-mario-run/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/super-mario-run/commercial.png&#34; alt=&#34;Commercial&#34;&gt;&lt;/p&gt;
+      <guid>https://franknine.github.io/posts/super-mario-run/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/super-mario-run/commercial.png&#34; alt=&#34;Commercial&#34;&gt;&lt;/p&gt;
 &lt;p&gt;好久沒有在手機遊戲上面花這麼多時間了，紀錄一下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>電玩開發者的浪漫求婚</title>
-      <link>https://www.chunfuchao.com/posts/video-game-propose/</link>
+      <link>https://franknine.github.io/posts/video-game-propose/</link>
       <pubDate>Sun, 23 Oct 2016 16:39:32 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/video-game-propose/</guid>
+      <guid>https://franknine.github.io/posts/video-game-propose/</guid>
       <description>&lt;p&gt;最近之前參加 GDC 認識的獨立遊戲開發大手有喜，整個 Twitter 同溫層上面一片喜洋洋，想說好像台灣沒有甚麼人在追這個消息，就隨手自己紀錄一下。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Unity 2D 繪圖最佳化概論</title>
-      <link>https://www.chunfuchao.com/posts/unity-2d-graphics-optimization/</link>
+      <link>https://franknine.github.io/posts/unity-2d-graphics-optimization/</link>
       <pubDate>Thu, 14 Jul 2016 17:49:15 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-2d-graphics-optimization/</guid>
+      <guid>https://franknine.github.io/posts/unity-2d-graphics-optimization/</guid>
       <description>&lt;p&gt;這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 &lt;a href=&#34;https://docs.unity3d.com/Manual/LevelOfDetail.html&#34;&gt;Level of detail&lt;/a&gt;、&lt;a href=&#34;http://unitytaiwan.blogspot.tw/2013/12/unity-43-occlusion-culling.html&#34;&gt;Occlusion culling&lt;/a&gt; 等還有待有 3D 實作經驗的人補充。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Android GPU Profiler</title>
-      <link>https://www.chunfuchao.com/posts/android-gpu-profilers/</link>
+      <link>https://franknine.github.io/posts/android-gpu-profilers/</link>
       <pubDate>Sat, 18 Jun 2016 18:34:16 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/android-gpu-profilers/</guid>
+      <guid>https://franknine.github.io/posts/android-gpu-profilers/</guid>
       <description>&lt;p&gt;上一篇有提到 Unity 內建的的 Profiler 在繪圖分析方面有所不足之處，但這個可以用 Android 各家 GPU 原廠的工具來補足。因為每一家的工具都只能拿來分析自家的晶片，所以最一開始要先了解自己的機器用的是哪家的 GPU 。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Unity 手機遊戲最佳化雜談 – 內建 Profiling 工具</title>
-      <link>https://www.chunfuchao.com/posts/unity-profiling-tools/</link>
+      <link>https://franknine.github.io/posts/unity-profiling-tools/</link>
       <pubDate>Sat, 11 Jun 2016 10:15:01 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-profiling-tools/</guid>
+      <guid>https://franknine.github.io/posts/unity-profiling-tools/</guid>
       <description>&lt;p&gt;這篇會介紹 Unity 內建的 Profiling 工具，Unity 的 Profiling 工具可以分析在 Unity 編輯器裡執行的遊戲，也可以分析裝在機器上的 Unity 遊戲，算是蠻方便的。一般的分析流程跟除錯流程一樣，都是先在編輯器環境排除大部分的問題，然後再安裝到手機上看看有沒有手機特有的問題。不過 Unity 在 GPU 分析上面仍有不足之處，所以之後會介紹手機 GPU 晶片原廠的 GPU Profiler。&lt;/p&gt;
 &lt;p&gt;一個 Profiling 的基本概念是「測不準原理」，因為 Profiler 要在遊戲裡面不斷做紀錄然後回傳給在電腦上的工具，這樣你才有資料可以看，所以你看到的數字跟實際上玩家接觸的最終版本一定會有落差。你在 Profiler 裡面看到記憶體用了 50 MB ，並不代表實際上在玩家手機上就是會在同一時間點吃 50 MB。所以看 Profile 結果主要是看趨勢或者是比例的。比較新做法是比舊做法好還是差，好的話大概是多少百分比這樣。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>ADB TCP Mode</title>
-      <link>https://www.chunfuchao.com/posts/adb-tcp-mode/</link>
+      <link>https://franknine.github.io/posts/adb-tcp-mode/</link>
       <pubDate>Mon, 06 Jun 2016 16:54:01 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/adb-tcp-mode/</guid>
+      <guid>https://franknine.github.io/posts/adb-tcp-mode/</guid>
       <description>&lt;p&gt;這個跟最佳化算是有一點關係，有的時候接 Android 的 Profiler 或是 Script Debugger 會抓不到接在 USB 上面的 Android 裝置，這時候可以考慮改用 TCP 模式透過網路來連接，通常可以排除問題。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Unity 手機遊戲最佳化雜談 – 概論</title>
-      <link>https://www.chunfuchao.com/posts/unity-mobile-optimization-prologue/</link>
+      <link>https://franknine.github.io/posts/unity-mobile-optimization-prologue/</link>
       <pubDate>Sun, 05 Jun 2016 17:55:23 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-mobile-optimization-prologue/</guid>
+      <guid>https://franknine.github.io/posts/unity-mobile-optimization-prologue/</guid>
       <description>&lt;p&gt;之前就一直多少有幫忙解決效能卡住的地方，最近的工作又累積了一些經驗，想說分享一下。不過因為在遊戲業工作也不算太久，也不完全是 Real-time rendering 出身，所以如果有錯誤還請指教。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>為什麼要參加 Game Developers Conference</title>
-      <link>https://www.chunfuchao.com/posts/why-attending-game-developers-conference/</link>
+      <link>https://franknine.github.io/posts/why-attending-game-developers-conference/</link>
       <pubDate>Sat, 23 Apr 2016 16:23:08 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/why-attending-game-developers-conference/</guid>
+      <guid>https://franknine.github.io/posts/why-attending-game-developers-conference/</guid>
       <description>&lt;p&gt;接續上一篇所提到的，接下來寫的就比較像是我自己的感想。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Game Developers Conference</title>
-      <link>https://www.chunfuchao.com/posts/game-developers-conference/</link>
+      <link>https://franknine.github.io/posts/game-developers-conference/</link>
       <pubDate>Sat, 19 Mar 2016 11:00:02 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/game-developers-conference/</guid>
+      <guid>https://franknine.github.io/posts/game-developers-conference/</guid>
       <description>&lt;p&gt;現在是美國西岸的 3/18 星期五的晚上，Game Developer Conference 16 應該是正式的告一段落了。自從回來台灣之後就再也沒回過美國了，自然最近幾屆 GDC 也都沒有參加。今天下午睡覺又被樓上鄰居吵起來之後，想趁這個時間寫寫我自己關於 GDC 的雜談。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>修復 Apple 開發憑證</title>
-      <link>https://www.chunfuchao.com/posts/apple-worldwide-developer-relations-certificate-fix/</link>
+      <link>https://franknine.github.io/posts/apple-worldwide-developer-relations-certificate-fix/</link>
       <pubDate>Mon, 15 Feb 2016 17:15:55 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/apple-worldwide-developer-relations-certificate-fix/</guid>
+      <guid>https://franknine.github.io/posts/apple-worldwide-developer-relations-certificate-fix/</guid>
       <description>2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer</description>
     </item>
     
     <item>
       <title>Unity 的 foreach</title>
-      <link>https://www.chunfuchao.com/posts/unity-foreach/</link>
+      <link>https://franknine.github.io/posts/unity-foreach/</link>
       <pubDate>Tue, 05 Jan 2016 11:38:43 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-foreach/</guid>
+      <guid>https://franknine.github.io/posts/unity-foreach/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Update 8/10 2016 : Unity 5.3.5p8 導入了 Mono Compiler 的初步更新解決了這個問題，如果你的專案可以升級到 5.3.6 或是 5.4 之後的版本的話以下描述的問題就不會再發生了。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;官方公告：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/&#34;&gt;https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -199,10 +199,10 @@
     
     <item>
       <title>Unity CrashReport</title>
-      <link>https://www.chunfuchao.com/posts/unity-crash-report/</link>
+      <link>https://franknine.github.io/posts/unity-crash-report/</link>
       <pubDate>Wed, 09 Dec 2015 15:37:12 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-crash-report/</guid>
+      <guid>https://franknine.github.io/posts/unity-crash-report/</guid>
       <description>&lt;p&gt;之前一直苦於收到客服信說遊戲閃退了，但是沒有什麼研究資料完全推斷不出到底發生什麼事情的窘況。雖然 Google Play 跟 iTunes Connect 後台會收集 Crash Dump，但是一個是收集 Java 一個是 il2cpp 看到也不知道對應到腳本的哪裡，沒有什麼實用價值。&lt;/p&gt;
 &lt;p&gt;在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。&lt;/p&gt;
 &lt;h1 id=&#34;heading&#34;&gt;注意事項：&lt;/h1&gt;
@@ -216,47 +216,47 @@
     
     <item>
       <title>Unity on iOS9</title>
-      <link>https://www.chunfuchao.com/posts/unity-on-ios9/</link>
+      <link>https://franknine.github.io/posts/unity-on-ios9/</link>
       <pubDate>Sat, 07 Nov 2015 16:37:30 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-on-ios9/</guid>
+      <guid>https://franknine.github.io/posts/unity-on-ios9/</guid>
       <description>&lt;p&gt;雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Unity 在 Android 6.0 (Android M) 的權限問題</title>
-      <link>https://www.chunfuchao.com/posts/unity-android-6-permission/</link>
+      <link>https://franknine.github.io/posts/unity-android-6-permission/</link>
       <pubDate>Sun, 01 Nov 2015 18:12:01 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/unity-android-6-permission/</guid>
+      <guid>https://franknine.github.io/posts/unity-android-6-permission/</guid>
       <description>2015 11/24 Update: Unity 4.6.9p3 開始修復了這個問題，可以在這邊下載： http://unity3d.com/unity/qa/patch-releases/4.6.9p3 Unity 論壇上的官方回應是說 5.2 的 Patch Release 還在製作中，而 5.1 會被放生。 http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134 最近發現公司的遊戲在 Android 6.0 上面會發生</description>
     </item>
     
     <item>
       <title>使用 PostProcessBuild 設定 Unity 產生的 Xcode Project</title>
-      <link>https://www.chunfuchao.com/posts/configure-xcode-project-with-postprocessbuild/</link>
+      <link>https://franknine.github.io/posts/configure-xcode-project-with-postprocessbuild/</link>
       <pubDate>Sat, 26 Sep 2015 12:30:50 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/configure-xcode-project-with-postprocessbuild/</guid>
+      <guid>https://franknine.github.io/posts/configure-xcode-project-with-postprocessbuild/</guid>
       <description>&lt;p&gt;最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>一個龜兔賽跑（？）的寓言</title>
-      <link>https://www.chunfuchao.com/posts/tortoise-and-hare/</link>
+      <link>https://franknine.github.io/posts/tortoise-and-hare/</link>
       <pubDate>Sun, 26 Jul 2015 06:55:27 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/tortoise-and-hare/</guid>
+      <guid>https://franknine.github.io/posts/tortoise-and-hare/</guid>
       <description>&lt;p&gt;最近跟朋友稍微聊到前公司的事情，想到有個一直想分享卻沒有寫下來的故事。&lt;/p&gt;
 &lt;p&gt;很久很久以前，有一間遊戲公司，姑且叫它做 E 社。那時候還在紅白機的年代， E 社想到說可以把職業運動做成電玩遊戲來賣，所以跟各式職業運動聯盟簽約，把他們的肖像做到遊戲裡去賣。結果大受歡迎，而且每年只要更新不用整個重做就都會有固定的銷量，簡直就是挖到金礦。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>第一步</title>
-      <link>https://www.chunfuchao.com/posts/first-step/</link>
+      <link>https://franknine.github.io/posts/first-step/</link>
       <pubDate>Sun, 05 Jul 2015 14:40:17 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/first-step/</guid>
+      <guid>https://franknine.github.io/posts/first-step/</guid>
       <description>&lt;p&gt;回過神來，這篇草稿已經在 WordPress 裡面躺了一年半了。想到當初看到序章的人，現在說不定都已經畢業了呢。感覺從美國回來之後想法有變不少，希望還是能概括到當時想講的，然後好好把這系列完成。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -265,10 +265,10 @@
     
     <item>
       <title>Extra Credits – 前期準備的問題</title>
-      <link>https://www.chunfuchao.com/posts/extra-credits-the-pre-production-problem/</link>
+      <link>https://franknine.github.io/posts/extra-credits-the-pre-production-problem/</link>
       <pubDate>Tue, 23 Jun 2015 09:44:20 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/extra-credits-the-pre-production-problem/</guid>
+      <guid>https://franknine.github.io/posts/extra-credits-the-pre-production-problem/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/ukADFPuscG8&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
@@ -278,10 +278,10 @@
     
     <item>
       <title>Extra Credits – 做出你的第一個遊戲: 最小可行產品</title>
-      <link>https://www.chunfuchao.com/posts/extra-credits-minimum-viable-product/</link>
+      <link>https://franknine.github.io/posts/extra-credits-minimum-viable-product/</link>
       <pubDate>Wed, 04 Feb 2015 18:24:16 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/extra-credits-minimum-viable-product/</guid>
+      <guid>https://franknine.github.io/posts/extra-credits-minimum-viable-product/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/UvCri1tqIxQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
@@ -292,10 +292,10 @@
     
     <item>
       <title>New Day, New Life</title>
-      <link>https://www.chunfuchao.com/posts/new-day-new-life/</link>
+      <link>https://franknine.github.io/posts/new-day-new-life/</link>
       <pubDate>Thu, 06 Nov 2014 17:06:29 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/new-day-new-life/</guid>
+      <guid>https://franknine.github.io/posts/new-day-new-life/</guid>
       <description>&lt;p&gt;看了一下上次 PO 文的時間點，是一年半前。&lt;/p&gt;
 &lt;p&gt;也差不多是那時候開始覺得在美國生活過得很沒有樂趣，&lt;/p&gt;
 &lt;p&gt;開始在找其他工作。在那之後又遇到身份的問題，整個亂糟糟的。&lt;/p&gt;
@@ -304,19 +304,19 @@
     
     <item>
       <title>搬家</title>
-      <link>https://www.chunfuchao.com/posts/move-to-linode/</link>
+      <link>https://franknine.github.io/posts/move-to-linode/</link>
       <pubDate>Tue, 28 Oct 2014 16:10:19 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/move-to-linode/</guid>
+      <guid>https://franknine.github.io/posts/move-to-linode/</guid>
       <description>昨天剛剛把站從 Media Temple 搬到 Linode ． 主要的原因是 Media Temple 每個月 $20 硬是 Linode 的兩倍，現在沒有在賺美金了要省著點用． 另一方面是 Linode 我拿到 Tokyo 的節點，在台灣讀取起來的速</description>
     </item>
     
     <item>
       <title>所以你想出國唸遊戲程式設計…</title>
-      <link>https://www.chunfuchao.com/posts/so-you-want-to-study-abroad/</link>
+      <link>https://franknine.github.io/posts/so-you-want-to-study-abroad/</link>
       <pubDate>Wed, 20 Feb 2013 09:42:43 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/so-you-want-to-study-abroad/</guid>
+      <guid>https://franknine.github.io/posts/so-you-want-to-study-abroad/</guid>
       <description>&lt;p&gt;最近安頓下來之後，一直想要寫寫這段時間出國的心得。&lt;/p&gt;
 &lt;p&gt;但是卻也因為工作不太順利，一直靜不下心來。&lt;/p&gt;
 &lt;p&gt;就今天適逢美國 President Day ，多得浮生半日閒，想說也是時候開始認真面對稿債了。&lt;/p&gt;
@@ -332,80 +332,80 @@
     
     <item>
       <title>Awkward silence</title>
-      <link>https://www.chunfuchao.com/posts/awkward-silence/</link>
+      <link>https://franknine.github.io/posts/awkward-silence/</link>
       <pubDate>Sat, 20 Oct 2012 01:53:28 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/awkward-silence/</guid>
+      <guid>https://franknine.github.io/posts/awkward-silence/</guid>
       <description>&lt;p&gt;這兩天公司停班，原因是我們的 Art Lead 在昨天凌晨因為心臟病辭世。&lt;/p&gt;
 &lt;p&gt;其實昨天大老闆就趕大家回家了，到辦公室的時候就覺得人少到有點奇怪，經同事提醒才知道發生這件事情。不過因為 Producer 那邊送了不少工具 UI 修改的要求 ，所以我昨天還是留到正常下班時間才走。&lt;/p&gt;
 &lt;p&gt;雖然說我根本就沒有見過他，但是在身邊發生這種事情還是不免會讓人想一些事情。&lt;/p&gt;
 &lt;p&gt;不知道像這樣人生突然結束在一個點上，如果我們有機會問他的話，他會不會說他對他的人生感到滿足呢?  不知道他對於他的作品感到驕傲，或者是覺得有所遺憾呢?&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/awkward-silence/img-78281.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/awkward-silence/img-78281.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hello world!</title>
-      <link>https://www.chunfuchao.com/posts/hello-world/</link>
+      <link>https://franknine.github.io/posts/hello-world/</link>
       <pubDate>Sun, 16 Sep 2012 09:19:21 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/hello-world/</guid>
+      <guid>https://franknine.github.io/posts/hello-world/</guid>
       <description>Welcome to WordPress. Hello 世界.</description>
     </item>
     
     <item>
       <title>荒野工程師求生秘笈(二)</title>
-      <link>https://www.chunfuchao.com/posts/visual-concepts-2/</link>
+      <link>https://franknine.github.io/posts/visual-concepts-2/</link>
       <pubDate>Wed, 22 Aug 2012 01:00:08 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/visual-concepts-2/</guid>
+      <guid>https://franknine.github.io/posts/visual-concepts-2/</guid>
       <description>&lt;p&gt;寫到第二集才發現我忘記解釋荒野指的是甚麼.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/visual-concepts-2/map.png&#34; alt=&#34;Map&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/visual-concepts-2/map.png&#34; alt=&#34;Map&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Visual Concepts 坐落在 San Francisco 北邊一個半小時車程一個叫 Hamilton Landing 的地方.
 雖然說 SFO 機場, San Mateo, Redwood City 也差不多是反方向開一樣遠的距離.
 但是因為 San Francisco 跟北邊的溝通就只有金門大橋還有渡輪, 地鐵沒有挖到這邊.
 交通很不方便, 所以會跑到這邊的人也就跟者變少很多.
 剛過橋的 Marine City 算是個小城而已, 再北邊到 San Rafael 是個不大的富人城.
 更往北到 Hamilton Landing 或是我住的 Novato 就是鄉村景色了.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/visual-concepts-2/hanger.jpg&#34; alt=&#34;Hanger&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/visual-concepts-2/hanger.jpg&#34; alt=&#34;Hanger&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>荒野中的工程師求生記錄(一)</title>
-      <link>https://www.chunfuchao.com/posts/visual-concepts-1/</link>
+      <link>https://franknine.github.io/posts/visual-concepts-1/</link>
       <pubDate>Wed, 22 Aug 2012 00:00:44 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/visual-concepts-1/</guid>
+      <guid>https://franknine.github.io/posts/visual-concepts-1/</guid>
       <description>&lt;p&gt;最近工作告一個段落, 想到該寫個 blog 紀錄一下發生甚麼事情.
 登入之後發現自己已經半年多沒有寫 blog 了&amp;hellip;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/visual-concepts-1/novato-hanger.jpg&#34; alt=&#34;Novato Hanger&#34;&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/visual-concepts-1/novato-hanger.jpg&#34; alt=&#34;Novato Hanger&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Bet on it</title>
-      <link>https://www.chunfuchao.com/posts/bet-on-it/</link>
+      <link>https://franknine.github.io/posts/bet-on-it/</link>
       <pubDate>Sun, 19 Feb 2012 00:00:54 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/bet-on-it/</guid>
+      <guid>https://franknine.github.io/posts/bet-on-it/</guid>
       <description>最近看到這個打賭, 是半路大對台灣遊戲設計師下的戰帖: 原文 : 演講分享：為什麼台灣做不出百萬銷量的 iOS 遊戲 不知道其他人的感想是什麼, 就我自己而言,</description>
     </item>
     
     <item>
       <title>One and half year passed. And you should never look back.</title>
-      <link>https://www.chunfuchao.com/posts/one-and-half-year-passed/</link>
+      <link>https://franknine.github.io/posts/one-and-half-year-passed/</link>
       <pubDate>Sat, 17 Dec 2011 00:00:04 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/one-and-half-year-passed/</guid>
+      <guid>https://franknine.github.io/posts/one-and-half-year-passed/</guid>
       <description>&lt;p&gt;今天晚上幫 Matthew 搬出宿舍後, 美國的同學都走得差不多了.
 除了要留下來過第四學期的大陸同學們之外, CGGT 2011&amp;rsquo; 在這一周都散得差不多了.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>求學經驗</title>
-      <link>https://www.chunfuchao.com/posts/study-abroad/</link>
+      <link>https://franknine.github.io/posts/study-abroad/</link>
       <pubDate>Fri, 16 Sep 2011 00:00:02 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/study-abroad/</guid>
+      <guid>https://franknine.github.io/posts/study-abroad/</guid>
       <description>&lt;p&gt;這篇原來是 PO 在 ptt GameDesign 板的.
 想說在這裡做個備份, 就轉過來了 ;)&lt;/p&gt;
 &lt;p&gt;在美國念了一年書, 整理整理自己的求學經驗,
@@ -415,10 +415,10 @@
     
     <item>
       <title>所以 Bug 要怎麼 De</title>
-      <link>https://www.chunfuchao.com/posts/how-to-debug/</link>
+      <link>https://franknine.github.io/posts/how-to-debug/</link>
       <pubDate>Wed, 13 Jul 2011 00:00:54 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/how-to-debug/</guid>
+      <guid>https://franknine.github.io/posts/how-to-debug/</guid>
       <description>&lt;p&gt;這次回到家發現好久不見的小表弟住到了我們家,
 他今年是高二要升高三的學生, 因為學校要暑期輔導, 所以就近借住到我們家.&lt;/p&gt;
 &lt;p&gt;看著他的樣子, 讓我覺得好像看到以前的自己.
@@ -434,23 +434,23 @@
     
     <item>
       <title>這個國家的學生都在做甚麼呢?</title>
-      <link>https://www.chunfuchao.com/posts/taiwanese-students/</link>
+      <link>https://franknine.github.io/posts/taiwanese-students/</link>
       <pubDate>Tue, 12 Jul 2011 00:00:53 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/taiwanese-students/</guid>
+      <guid>https://franknine.github.io/posts/taiwanese-students/</guid>
       <description>&lt;p&gt;這幾年跟家裡爸媽通電話的時候, 常常為為了一個問題起爭執.
 就是這堆東西:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/taiwanese-students/piled-high-and-deep.jpg&#34; alt=&#34;Piled high and deep&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/taiwanese-students/piled-high-and-deep.jpg&#34; alt=&#34;Piled high and deep&#34;&gt;&lt;/p&gt;
 &lt;p&gt;這是從國一到高三的”所有”課本, 考卷, 成績單, 跟補習班的講義.
 以回收紙一斤沒幾塊錢的價格, 這些堆東西還是輕易地賣到一張小朋友, 分量真的很夠.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>跟老師們的面談 July 2011</title>
-      <link>https://www.chunfuchao.com/posts/talk-to-ntu-teachers/</link>
+      <link>https://franknine.github.io/posts/talk-to-ntu-teachers/</link>
       <pubDate>Tue, 12 Jul 2011 00:00:29 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/talk-to-ntu-teachers/</guid>
+      <guid>https://franknine.github.io/posts/talk-to-ntu-teachers/</guid>
       <description>&lt;p&gt;這次上台北前匆匆忙忙的跟隨機客約了一次會面,
 在聊的過程中不免提到 C 老師加重 DSA 難度造成學生反彈的事件,
 還有自己在念 Master 的時候感受到的差異與感想.
@@ -465,12 +465,12 @@
     
     <item>
       <title>Pittsburgh 行</title>
-      <link>https://www.chunfuchao.com/posts/pittsburgh/</link>
+      <link>https://franknine.github.io/posts/pittsburgh/</link>
       <pubDate>Wed, 18 May 2011 00:00:46 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/pittsburgh/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/pittsburgh/diner-01.jpg&#34; alt=&#34;Diner_01.JPG&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/pittsburgh/diner-02.jpg&#34; alt=&#34;Diner_02.JPG&#34;&gt;&lt;/p&gt;
+      <guid>https://franknine.github.io/posts/pittsburgh/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/pittsburgh/diner-01.jpg&#34; alt=&#34;Diner_01.JPG&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/pittsburgh/diner-02.jpg&#34; alt=&#34;Diner_02.JPG&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Carnegie Mellon University 算是台大資工留學生的大本營吧, 光是同屆就有守壹. 正妹平. 唱秋.
 而且今年秋季班還會再增加兩個人. 上一屆的學長也有芭崎. 立衡. 大彼得. 跟 Jyou.
 本來在來美國之前就決定要去拜訪一下.
@@ -480,11 +480,11 @@
     
     <item>
       <title>Engineering Entrepreneurship</title>
-      <link>https://www.chunfuchao.com/posts/engineering-entrepreneurship/</link>
+      <link>https://franknine.github.io/posts/engineering-entrepreneurship/</link>
       <pubDate>Thu, 28 Apr 2011 00:00:32 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/engineering-entrepreneurship/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/engineering-entrepreneurship/final-report.jpg&#34; alt=&#34;Final Report&#34;&gt;&lt;/p&gt;
+      <guid>https://franknine.github.io/posts/engineering-entrepreneurship/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/engineering-entrepreneurship/final-report.jpg&#34; alt=&#34;Final Report&#34;&gt;&lt;/p&gt;
 &lt;p&gt;這學期總算有第一科結束了.
 就在剛剛, 整組五個人在長達 29 頁的虛擬創業計畫上簽名.
 互道恭喜, 祝福大家有個美好的暑假.
@@ -498,20 +498,20 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     
     <item>
       <title>GDC Follow Up</title>
-      <link>https://www.chunfuchao.com/posts/gdc-2011-follow-up/</link>
+      <link>https://franknine.github.io/posts/gdc-2011-follow-up/</link>
       <pubDate>Mon, 04 Apr 2011 00:00:51 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/gdc-2011-follow-up/</guid>
+      <guid>https://franknine.github.io/posts/gdc-2011-follow-up/</guid>
       <description>&lt;p&gt;又有一陣子沒有發文了, 感覺不知怎的一直會覺得很難悠閒下來.
 這樣繃著結果該做的事情效率好像不高&amp;hellip;..&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>台灣 Computer Science 教育界的討論</title>
-      <link>https://www.chunfuchao.com/posts/taiwan-computer-science/</link>
+      <link>https://franknine.github.io/posts/taiwan-computer-science/</link>
       <pubDate>Tue, 15 Mar 2011 00:00:29 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/taiwan-computer-science/</guid>
+      <guid>https://franknine.github.io/posts/taiwan-computer-science/</guid>
       <description>&lt;p&gt;陳鍾誠教授:&lt;/p&gt;
 &lt;p&gt;[&lt;a href=&#34;http://ccckmit.wikidot.com/po:bomb&#34;&gt;陳鍾誠給李家同的一封公開信]&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;[&lt;a href=&#34;http://ccckmit.wikidot.com/po:bomb2&#34;&gt;陳鍾誠給李家同的第二封公開信]&lt;/a&gt;&lt;/p&gt;
@@ -532,10 +532,10 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     
     <item>
       <title>GDC Day 3 : IGF / GDCA 頒獎典禮</title>
-      <link>https://www.chunfuchao.com/posts/gdc-2011-day-3-igf-gdca/</link>
+      <link>https://franknine.github.io/posts/gdc-2011-day-3-igf-gdca/</link>
       <pubDate>Sat, 12 Mar 2011 00:00:26 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/gdc-2011-day-3-igf-gdca/</guid>
+      <guid>https://franknine.github.io/posts/gdc-2011-day-3-igf-gdca/</guid>
       <description>&lt;p&gt;第一天緊湊的行程, 最後一項是獨立開發協會跟遊戲開發者協會今年的頒獎典禮.
 這活動辦得非常用心, 主持人的搞笑功力還有串場的 &lt;a href=&#34;http://www.youtube.com/user/roccob64&#34;&gt;Mega64&lt;/a&gt; 影片也都做得很好
 感覺遊戲開發者協會的頒獎就像是奧斯卡這樣, 然後遊戲我都沒有玩過, 所以也很難下甚麼評論.
@@ -544,11 +544,11 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     
     <item>
       <title>GDC Day 3</title>
-      <link>https://www.chunfuchao.com/posts/gdc-2011-day-3/</link>
+      <link>https://franknine.github.io/posts/gdc-2011-day-3/</link>
       <pubDate>Thu, 10 Mar 2011 01:00:32 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/gdc-2011-day-3/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/gdc-2011-day-3/satoru-iwata.jpg&#34; alt=&#34;Satoru Iwata&#34;&gt;&lt;/p&gt;
+      <guid>https://franknine.github.io/posts/gdc-2011-day-3/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/gdc-2011-day-3/satoru-iwata.jpg&#34; alt=&#34;Satoru Iwata&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Main Conference 正式開始的第三天, 首先是由 Nintendo 社長&lt;a href=&#34;http://zh.wikipedia.org/zh-hk/%E5%B2%A9%E7%94%B0%E8%81%AA&#34;&gt;岩田聰&lt;/a&gt;的 Keynote 做為開頭.
 老實說我聽他開口說英文的時候嚇了一跳, 不過就算他說英文還是很難懂,
 所以最後不斷的轉頭去看他的題詞幕&amp;hellip;0rz&lt;/p&gt;</description>
@@ -556,11 +556,11 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     
     <item>
       <title>GDC Day 1~2</title>
-      <link>https://www.chunfuchao.com/posts/gdc-2011-day-1-2/</link>
+      <link>https://franknine.github.io/posts/gdc-2011-day-1-2/</link>
       <pubDate>Thu, 10 Mar 2011 00:00:45 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/gdc-2011-day-1-2/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/gdc-2011-day-1-2/gdc-day-1.jpg&#34; alt=&#34;GDC day 1&#34;&gt;&lt;/p&gt;
+      <guid>https://franknine.github.io/posts/gdc-2011-day-1-2/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/gdc-2011-day-1-2/gdc-day-1.jpg&#34; alt=&#34;GDC day 1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;為什麼會兩天的活動擠在同一篇文章寫呢, 因為我耍蠢了.
 當初買的門票是 Main Conference , 這張門票只有包括五天活動的後三天.
 而我是到打電話給芭崎學長問好的時候, 芭崎學長問: &amp;ldquo;CH都沒有這麼早來, 你這麼早來做甚麼的?&amp;rdquo;
@@ -570,11 +570,11 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     
     <item>
       <title>GDC Prologue</title>
-      <link>https://www.chunfuchao.com/posts/gdc-2011-prologue/</link>
+      <link>https://franknine.github.io/posts/gdc-2011-prologue/</link>
       <pubDate>Wed, 09 Mar 2011 00:00:10 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/gdc-2011-prologue/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://www.chunfuchao.com/images/gdc-2011-prologue/gdc-2011-logo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+      <guid>https://franknine.github.io/posts/gdc-2011-prologue/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/gdc-2011-prologue/gdc-2011-logo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;最近消失了一週跑去 Game Develpoer&#39;s Conference .
 因為這學期比想像中的不輕鬆, 加上自己差勁的規畫能力.
 最後為了參加這個活動, 多了非常多不必要的支出, 也把自己累個半死.
@@ -583,10 +583,10 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     
     <item>
       <title>開學日</title>
-      <link>https://www.chunfuchao.com/posts/first-day-of-school/</link>
+      <link>https://franknine.github.io/posts/first-day-of-school/</link>
       <pubDate>Thu, 02 Sep 2010 01:00:47 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/first-day-of-school/</guid>
+      <guid>https://franknine.github.io/posts/first-day-of-school/</guid>
       <description>&lt;p&gt;從機場領完行李後, 旁邊就是交通中心.&lt;/p&gt;
 &lt;p&gt;用很破的英文跟 Lady Liberty Shuttle 工作人員通過電話, 車竟然真的來了, 沒有跑錯棚.&lt;/p&gt;
 &lt;p&gt;到這裡才有到美國&amp;quot;生活&amp;quot;的感覺, 就算你英文破, 你還是得講, 要不然就要餓死了.&lt;/p&gt;</description>
@@ -594,10 +594,10 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     
     <item>
       <title>遠征</title>
-      <link>https://www.chunfuchao.com/posts/expedition/</link>
+      <link>https://franknine.github.io/posts/expedition/</link>
       <pubDate>Thu, 02 Sep 2010 00:00:54 +0000</pubDate>
       
-      <guid>https://www.chunfuchao.com/posts/expedition/</guid>
+      <guid>https://franknine.github.io/posts/expedition/</guid>
       <description>&lt;p&gt;其實要去美國這件事情, 感覺到頭來還是有些不踏實.&lt;/p&gt;
 &lt;p&gt;我想我跟同學最大的差別, 在於大家都是很樂觀的要進取某些東西.&lt;/p&gt;
 &lt;p&gt;而我只是想要逃避台灣這個環境吧.&lt;/p&gt;
