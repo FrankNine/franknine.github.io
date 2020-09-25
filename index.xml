@@ -604,5 +604,95 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
 &lt;p&gt;有的時候也會懷疑這逃避是不是跑太遠了, 不過到這份上也就還是姑且看看能不能有別的心得.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>00 3D 互動式圖學課程概覽</title>
+      <link>https://franknine.github.io/cs291/lesson-01/00-interactive-3d-graphics-course-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/00-interactive-3d-graphics-course-overview/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/00 Interactive 3D Graphics Course Overview-Vl0hmKg1pVw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+    </item>
+    
+    <item>
+      <title>01 介紹</title>
+      <link>https://franknine.github.io/cs291/lesson-01/01-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/01-introduction/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/01 Introduction - Interactive 3D Graphics-8fe9RaEEGQU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+    </item>
+    
+    <item>
+      <title>02 互動式 3D 繪圖</title>
+      <link>https://franknine.github.io/cs291/lesson-01/02-interactive-3d-rendering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/02-interactive-3d-rendering/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/02 Interactive 3D Rendering - Interactive 3D Graphics-Q_tliEgAOn0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+    </item>
+    
+    <item>
+      <title>03 第一堂小考</title>
+      <link>https://franknine.github.io/cs291/lesson-01/03-first-quiz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/03-first-quiz/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/03 First Quiz - Interactive 3D Graphics-btYMDCoFjUU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+    </item>
+    
+    <item>
+      <title>03A 第一堂小考（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-01/03a-first-quiz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/03a-first-quiz/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/03A First Quiz - Interactive 3D Graphics-I_nMFLbYGFg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+    </item>
+    
+    <item>
+      <title>04 WebGL 設定</title>
+      <link>https://franknine.github.io/cs291/lesson-01/04-webgl-setup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/04-webgl-setup/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/04 WebGL Setup - Interactive 3D Graphics-hZrb2fWguaM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+    </item>
+    
+    <item>
+      <title>05 核心概念</title>
+      <link>https://franknine.github.io/cs291/lesson-01/05-core-ideas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/05-core-ideas/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/05 Core Ideas - Interactive 3D Graphics-AFG5QaqRiV8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+    </item>
+    
+    <item>
+      <title>06 互動性與 FPS</title>
+      <link>https://franknine.github.io/cs291/lesson-01/06-interactivity-and-fps/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/06-interactivity-and-fps/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/06 Interactivity and FPS - Interactive 3D Graphics-NV9MgI0u5Us.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+    </item>
+    
+    <item>
+      <title>07 FPS 展示</title>
+      <link>https://franknine.github.io/cs291/lesson-01/07-fps-demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/07-fps-demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FPS 與畫面更新率</title>
+      <link>https://franknine.github.io/cs291/lesson-01/08-fps-and-refresh-rate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/08-fps-and-refresh-rate/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/08 FPS and Refresh Rate - Interactive 3D Graphics-l7dTb7EZADE.srt&#39;, function(subtitles) { var</description>
+    </item>
+    
   </channel>
 </rss>
