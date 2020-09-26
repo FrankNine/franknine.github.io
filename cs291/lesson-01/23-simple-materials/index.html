@@ -1,0 +1,38 @@
+<main>
+  <div class="post-content">
+    <p><iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/2QSuK4D8OGQ?yt:cc=on" frameborder="0" allowfullscreen="true"></iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script>
+  var loadSRT = function(url, callback) {
+    var httpRequest = new XMLHttpRequest();
+
+    httpRequest.onreadystatechange = function() {
+      if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        var subtitles = parser.fromSrt(httpRequest.responseText, true);
+
+        for (var i in subtitles) {
+          subtitles[i] = {
+            start : subtitles[i].startTime / 1000,
+            end   : subtitles[i].endTime / 1000,
+            text  : subtitles[i].text
+          };
+        }
+
+        callback(subtitles);
+      }
+    };
+
+    httpRequest.open('GET', url, true);
+    httpRequest.send(null);
+  };
+
+  loadSRT('/cs291/srt/Lesson 01\/23 Simple Materials - Interactive 3D Graphics-2QSuK4D8OGQ.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+Photos from Wikimedia Commons: <a href="http://commons.wikimedia.org/wiki/File:Ball3_1_2.jpg">shiny ball</a>, <a href="http://commons.wikimedia.org/wiki/File:Caustics.jpg">glass ball</a> and <a href="http://commons.wikimedia.org/wiki/File:Incandescent_light_bulb_on_db.jpg">light bulb</a>.</p>
+<p>Try this demo out for spheres, <a href="http://mrdoob.github.com/three.js/examples/webgl_materials.html">http://mrdoob.github.com/three.js/examples/webgl_materials.html</a>. Notice how some of the spheres respond to the light moving through the world.</p>
+
+  </div>
+</main>

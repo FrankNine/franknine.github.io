@@ -303,15 +303,187 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/08-fps-and-refresh-rate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/09-math-refresher/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/09a-math-refresher/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/10-cpu-cycles/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/11-the-eye/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/12-the-pinhole-camera/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/13-seeing-is-believing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/13a-seeing-is-believing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/14-eye-vs.-camera/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/14a-eye-vs.-camera/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/15-view-frustum/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/16-screen-door/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/17-3d-scene/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/18-how-many-pixels/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/18a-how-many-pixels/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/19-light-and-rendering/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/20-how-many-computers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/20a-how-many-computers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/21-reversing-the-process/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/22-history-of-the-teapot/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/23-simple-materials/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/23a-simple-materials/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/24-a-jog-down-the-pipeline/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/25-pipeline-parallelism/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/26-advanced-box-factory/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/26a-advanced-box-factory/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/27-parallelism/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/28-bottleneck/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/28a-bottleneck/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/29-stalling-and-starving/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/30-painters-algorithm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/31-flawed-painting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/31a-flawed-painting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/32-z-buffer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/33-how-the-z-buffer-works/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/34-z-buffer-optimization/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/34a-z-buffer-optimization/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/36-tricky-question/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/37-demo-rendering-mode-0/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/38-demo-rendering-mode-1/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/39-demo-rendering-mode-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/40-different-rendering-options/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/40a-different-rendering-options/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/41-conclusion/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/categories/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/</loc>
-  </url>
-  
-  <url>
-    <loc>https://franknine.github.io/cs291/lesson-01/08-fps-and-refresh-rate/</loc>
   </url>
   
   <url>
