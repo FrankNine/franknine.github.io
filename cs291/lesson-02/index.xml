@@ -29,6 +29,24 @@
     </item>
     
     <item>
+      <title>02 哪個無法使用畫家演算法？</title>
+      <link>https://franknine.github.io/cs291/lesson-02/02-what-is-not-paintable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-02/02-what-is-not-paintable/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/02 What Is Not Paintable - Interactive 3D Graphics-BxMLDQYIbYk.srt&#39;, function(subtitles) { var</description>
+    </item>
+    
+    <item>
+      <title>02A 哪個無法使用畫家演算法？（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-02/02a-what-is-not-paintable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-02/02a-what-is-not-paintable/</guid>
+      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/02A What Is Not Paintable - Interactive 3D Graphics-qS-f9kmWCq0.srt&#39;, function(subtitles) { var</description>
+    </item>
+    
+    <item>
       <title>03 FPS vs. 毫秒</title>
       <link>https://franknine.github.io/cs291/lesson-02/03-fps-vs.-milliseconds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
