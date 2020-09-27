@@ -275,11 +275,27 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/01-frame-skipping/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/01a-frame-skipping/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/02-interactive-3d-rendering/</loc>
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/03-fps-vs.-milliseconds/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/03-first-quiz/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/03a-fps-vs.-milliseconds/</loc>
   </url>
   
   <url>
@@ -291,7 +307,23 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/04-rendering-costs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/05-core-ideas/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/05-firefly/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/05a-firefly/</loc>
   </url>
   
   <url>
@@ -299,7 +331,23 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/06-light-field-dimensions/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/06a-light-field-dimensions/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/07-fps-demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/07-first-programming-exercise/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/07a-first-programming-exercise/</loc>
   </url>
   
   <url>
@@ -488,6 +536,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-02/</loc>
   </url>
   
   <url>
