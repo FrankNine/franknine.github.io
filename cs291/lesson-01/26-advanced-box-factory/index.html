@@ -1,37 +1,15 @@
-<main>
-  <div class="post-content">
-    <p><iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/vjr-HsxiYvw?yt:cc=on" frameborder="0" allowfullscreen="true"></iframe>
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/vjr-HsxiYvw?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
 <script src="/js/youtube.external.subtitle.min.js"></script>
 <script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
 <script>
-  var loadSRT = function(url, callback) {
-    var httpRequest = new XMLHttpRequest();
-
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        var subtitles = parser.fromSrt(httpRequest.responseText, true);
-
-        for (var i in subtitles) {
-          subtitles[i] = {
-            start : subtitles[i].startTime / 1000,
-            end   : subtitles[i].endTime / 1000,
-            text  : subtitles[i].text
-          };
-        }
-
-        callback(subtitles);
-      }
-    };
-
-    httpRequest.open('GET', url, true);
-    httpRequest.send(null);
-  };
-
   loadSRT('/cs291/srt/Lesson 01\/26 Advanced Box Factory - Interactive 3D Graphics-vjr-HsxiYvw.srt', function(subtitles) {
     var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
   });
 </script>
-我應該將「生產線每幾秒能產出一個新箱子？」改成「當生產線滿載時每幾秒能產出一個新箱子？」，抱歉造成混淆。這是一個真正的管線。每五秒第一個切割的人會將紙箱遞給下一個切割的人，下一個切割的人五秒後將箱子交給第一個摺疊的人，同時第一個切割的人已經開始切新的箱子。</p>
+<p>我應該將「生產線每幾秒能產出一個新箱子？」改成「當生產線滿載時每幾秒能產出一個新箱子？」，抱歉造成混淆。這是一個真正的管線。每五秒第一個切割的人會將紙箱遞給下一個切割的人，下一個切割的人五秒後將箱子交給第一個摺疊的人，同時第一個切割的人已經開始切新的箱子。</p>
 
-  </div>
-</main>
+</div>

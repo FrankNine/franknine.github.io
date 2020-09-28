@@ -1,39 +1,17 @@
-<main>
-  <div class="post-content">
-    <p><iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/uMi70i-VU9w?yt:cc=on" frameborder="0" allowfullscreen="true"></iframe>
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/uMi70i-VU9w?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
 <script src="/js/youtube.external.subtitle.min.js"></script>
 <script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
 <script>
-  var loadSRT = function(url, callback) {
-    var httpRequest = new XMLHttpRequest();
-
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        var subtitles = parser.fromSrt(httpRequest.responseText, true);
-
-        for (var i in subtitles) {
-          subtitles[i] = {
-            start : subtitles[i].startTime / 1000,
-            end   : subtitles[i].endTime / 1000,
-            text  : subtitles[i].text
-          };
-        }
-
-        callback(subtitles);
-      }
-    };
-
-    httpRequest.open('GET', url, true);
-    httpRequest.send(null);
-  };
-
   loadSRT('/cs291/srt/Lesson 01\/13 Seeing Is Believing - Interactive 3D Graphics-uMi70i-VU9w.srt', function(subtitles) {
     var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
   });
 </script>
-你可以在 <a href="http://persci.mit.edu/gallery/checkershadow">http://persci.mit.edu/gallery/checkershadow</a> 找到原始圖片，還有原理解釋。</p>
+<p>你可以在 <a href="http://persci.mit.edu/gallery/checkershadow">http://persci.mit.edu/gallery/checkershadow</a> 找到原始圖片，還有原理解釋。</p>
 <p>這裡有這個錯覺得影片版本 <a href="http://www.youtube.com/watch?v=z9Sen1HTu5o">http://www.youtube.com/watch?v=z9Sen1HTu5o</a>。</p>
-<p>我喜歡視覺錯覺，我的蒐集了 Michael Bach 的收藏 <a href="http://www.michaelbach.de/ot/,">http://www.michaelbach.de/ot/,</a> Kitaoka 的作品 <a href="http://www.ritsumei.ac.jp/~akitaoka/saishin-e.html">http://www.ritsumei.ac.jp/~akitaoka/saishin-e.html</a>，還有這些桌布 <a href="http://www.flickr.com/photos/w00kie/sets/180637/show/">http://www.flickr.com/photos/w00kie/sets/180637/show/</a>。還可以閱讀 “Mighty Optical Illusions” 部落格 <a href="http://www.moillusions.com/">http://www.moillusions.com/</a>。</p>
+<p>我喜歡視覺錯覺，我的蒐集了 Michael Bach 的收藏 <a href="http://www.michaelbach.de/ot/">http://www.michaelbach.de/ot/</a>，Kitaoka 的作品 <a href="http://www.ritsumei.ac.jp/~akitaoka/saishin-e.html">http://www.ritsumei.ac.jp/~akitaoka/saishin-e.html</a>，還有這些桌布 <a href="http://www.flickr.com/photos/w00kie/sets/180637/show/">http://www.flickr.com/photos/w00kie/sets/180637/show/</a>。還可以閱讀 “Mighty Optical Illusions” 部落格 <a href="http://www.moillusions.com/">http://www.moillusions.com/</a>。</p>
 
-  </div>
-</main>
+</div>

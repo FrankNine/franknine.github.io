@@ -1,40 +1,18 @@
-<main>
-  <div class="post-content">
-    <p><iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/ucsWmvKKqaM?yt:cc=on" frameborder="0" allowfullscreen="true"></iframe>
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/ucsWmvKKqaM?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
 <script src="/js/youtube.external.subtitle.min.js"></script>
 <script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
 <script>
-  var loadSRT = function(url, callback) {
-    var httpRequest = new XMLHttpRequest();
-
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        var subtitles = parser.fromSrt(httpRequest.responseText, true);
-
-        for (var i in subtitles) {
-          subtitles[i] = {
-            start : subtitles[i].startTime / 1000,
-            end   : subtitles[i].endTime / 1000,
-            text  : subtitles[i].text
-          };
-        }
-
-        callback(subtitles);
-      }
-    };
-
-    httpRequest.open('GET', url, true);
-    httpRequest.send(null);
-  };
-
   loadSRT('/cs291/srt/Lesson 02\/06 Light Field Dimensions - Interactive 3D Graphics-ucsWmvKKqaM.srt', function(subtitles) {
     var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
   });
 </script>
-Another way to say it: how many dimensions are needed if you want to capture the radiance from any location and direction in the universe?</p>
+<p>Another way to say it: how many dimensions are needed if you want to capture the radiance from any location and direction in the universe?</p>
 <p>One last hint: say you're surrounded by monitors and you want to capture pixels (which store radiance) for all the directions from a point you're standing at. What's the minimum number of values needed to describe the pixel directions? Now, how many dimensions does it take to describe your location?</p>
 <p><a href="http://commons.wikimedia.org/wiki/File:USMC-070914-M-7696M-010.jpg">USMC</a> and <a href="http://commons.wikimedia.org/wiki/File:Tower_illusion_-_Tamil_Nadu,_India.jpg">lighthouse</a> from Wikimedia Commons.</p>
 <p>The Light Field is described <a href="http://en.wikipedia.org/wiki/Light_field">here</a>. This concept is of particular interest in the field of <a href="http://web.media.mit.edu/~raskar/photo/">computational photography</a>.</p>
 
-  </div>
-</main>
+</div>

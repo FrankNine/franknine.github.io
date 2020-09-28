@@ -1,38 +1,16 @@
-<main>
-  <div class="post-content">
-    <p><iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/Q_tliEgAOn0?yt:cc=on" frameborder="0" allowfullscreen="true"></iframe>
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/Q_tliEgAOn0?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
 <script src="/js/youtube.external.subtitle.min.js"></script>
 <script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
 <script>
-  var loadSRT = function(url, callback) {
-    var httpRequest = new XMLHttpRequest();
-
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        var subtitles = parser.fromSrt(httpRequest.responseText, true);
-
-        for (var i in subtitles) {
-          subtitles[i] = {
-            start : subtitles[i].startTime / 1000,
-            end   : subtitles[i].endTime / 1000,
-            text  : subtitles[i].text
-          };
-        }
-
-        callback(subtitles);
-      }
-    };
-
-    httpRequest.open('GET', url, true);
-    httpRequest.send(null);
-  };
-
   loadSRT('/cs291/srt/Lesson 01\/02 Interactive 3D Rendering - Interactive 3D Graphics-Q_tliEgAOn0.srt', function(subtitles) {
     var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
   });
 </script>
-本課程使用的圖像皆來自 <a href="http://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>，除非另外註明。<a href="http://commons.wikimedia.org/wiki/File:Boston_building_historic_drawing.jpg">建築</a>、<a href="http://commons.wikimedia.org/wiki/File:3D_coordinate_system.svg">XYZ 座標</a>、<a href="http://commons.wikimedia.org/wiki/File:Interactive_whiteboard1.jpg">互動式白板</a>。</p>
+<p>本課程使用的圖像皆來自 <a href="http://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a>，除非另外註明。<a href="http://commons.wikimedia.org/wiki/File:Boston_building_historic_drawing.jpg">建築</a>、<a href="http://commons.wikimedia.org/wiki/File:3D_coordinate_system.svg">XYZ 座標</a>、<a href="http://commons.wikimedia.org/wiki/File:Interactive_whiteboard1.jpg">互動式白板</a>。</p>
 <p>你可以自己嘗試 <a href="https://gallantlab.org/brainviewer/huthetal2012/">電腦斷層程式</a>。Chrome 是最適合的瀏覽器。如果不能動沒有關係，下一堂課會協助你處理 WebGL 問題。</p>
 
-  </div>
-</main>
+</div>

@@ -1,40 +1,18 @@
-<main>
-  <div class="post-content">
-    <p><iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/DxMfblPzFNc?yt:cc=on" frameborder="0" allowfullscreen="true"></iframe>
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/DxMfblPzFNc?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
 <script src="/js/youtube.external.subtitle.min.js"></script>
 <script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
 <script>
-  var loadSRT = function(url, callback) {
-    var httpRequest = new XMLHttpRequest();
-
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        var subtitles = parser.fromSrt(httpRequest.responseText, true);
-
-        for (var i in subtitles) {
-          subtitles[i] = {
-            start : subtitles[i].startTime / 1000,
-            end   : subtitles[i].endTime / 1000,
-            text  : subtitles[i].text
-          };
-        }
-
-        callback(subtitles);
-      }
-    };
-
-    httpRequest.open('GET', url, true);
-    httpRequest.send(null);
-  };
-
   loadSRT('/cs291/srt/Lesson 01\/22 History of the Teapot - Interactive 3D Graphics-DxMfblPzFNc.srt', function(subtitles) {
     var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
   });
 </script>
-我在 2015 年 8/11 向 Jim Blinnthat 確認了茶壺變扁是因為比較好看。<a href="https://www.flickr.com/photos/11998354@N07/20424362159/in/album-72157654978049134/">這裡</a> 有 Blinn 與 3D 列印的茶壺的合照，攝於 SIGGRAPH 2015。</p>
+<p>我在 2015 年 8/11 向 Jim Blinnthat 確認了茶壺變扁是因為比較好看。<a href="https://www.flickr.com/photos/11998354@N07/20424362159/in/album-72157654978049134/">這裡</a> 有 Blinn 與 3D 列印的茶壺的合照，攝於 SIGGRAPH 2015。</p>
 <p>關於茶壺的歷史有很多文章 <a href="http://www.computer.org/csdl/mags/cg/1987/01/mcg1987010008.pdf">Frank Crow</a>、<a href="http://www.sjbaker.org/wiki/index.php?title=The_History_of_The_Teapot">S.J. Baker</a>、還有 <a href="http://en.wikipedia.org/wiki/Utah_teapot">Wikipedia</a>。有許多 <a href="https://web.archive.org/web/20170703010029/http://excelsior.biosci.ohio-state.edu/~carlson/history/lesson20.html">電腦圖學象徵性的模型與圖片</a>。一些知名的模型可以在 <a href="http://casual-effects.com/data/">這裡</a> 跟 <a href="http://graphics.stanford.edu/data/3Dscanrep/">這裡</a> 找到。我寫的茶壺程式 <a href="http://www.realtimerendering.com/resources/SPD/">可以下載</a>。皮克斯茶壺有自己的 <a href="https://www.facebook.com/pages/Pixars-RenderMan-Walking-Teapot-Official-Fan-Club/114826081870108">粉絲社團</a> 跟 <a href="https://web.archive.org/web/20150122170015/https://renderman.pixar.com/view/teapots-around-the-world">環遊世界照片</a>。我拍攝了 <a href="https://plus.google.com/u/0/photos/101252446341510025731/albums/6054142152202550321">完整的收藏</a>。<a href="https://www.youtube.com/watch?v=iQaU9UP6dlg">皮克斯還做了短片</a>。</p>
 <p><a href="http://www.realtimerendering.com/udacity/?load=demo/unit1-teapot-demo.js">茶壺</a>、<a href="http://www.realtimerendering.com/udacity/?load=demo/unit1-teaspoon-demo.js">茶匙</a> 與 <a href="http://www.realtimerendering.com/udacity/?load=demo/unit1-teacup-demo.js">茶杯</a> 的 3D 展示。</p>
 <p><a href="http://www.computerhistory.org/revolution/computer-graphics-music-and-art/15/206">茶壺手稿</a> 來自 Martin Newell，他正在將這份手稿加入 Wikimedia Commons。茶壺的照片來自 Erin Shaw。<a href="http://commons.wikimedia.org/wiki/File:Melitta_teapot.png">這張</a> 與 <a href="http://commons.wikimedia.org/wiki/File:Original_Utah_Teapot.jpg">這張</a> 照片來自 Wikimedia Commons。</p>
 
-  </div>
-</main>
+</div>

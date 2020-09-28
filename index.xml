@@ -610,7 +610,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/00-interactive-3d-graphics-course-overview/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/00 Interactive 3D Graphics Course Overview-Vl0hmKg1pVw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/00 Interactive 3D Graphics Course Overview-Vl0hmKg1pVw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -619,7 +619,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/01-introduction/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/01 Introduction - Interactive 3D Graphics-8fe9RaEEGQU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/01 Introduction - Interactive 3D Graphics-8fe9RaEEGQU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 第一個展示 - three.js WebGL materials demo，貼圖來自 Humus 第二個展示 - three.js WebGL materials bumpmap skin demo 模型來源 Lee Perry-Smith head 如果無法看見展示，請參照 WebGL Troubleshooting pa</description>
     </item>
     
     <item>
@@ -628,7 +628,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/01-frame-skipping/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/01 Frame Skipping - Interactive 3D Graphics-tTbobBsxN1A.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/01 Frame Skipping - Interactive 3D Graphics-tTbobBsxN1A.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -637,7 +637,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/01a-frame-skipping/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/01A Frame Skipping - Interactive 3D Graphics-kuAfX0lP5Io.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/01A Frame Skipping - Interactive 3D Graphics-kuAfX0lP5Io.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -646,7 +646,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/02-interactive-3d-rendering/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/02 Interactive 3D Rendering - Interactive 3D Graphics-Q_tliEgAOn0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/02 Interactive 3D Rendering - Interactive 3D Graphics-Q_tliEgAOn0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 本課程使用的圖像皆來自 Wikimedia Commons，除非另外註明。建築、XYZ 座標、互動式白板。 你可以自己嘗試 電腦斷</description>
     </item>
     
     <item>
@@ -655,7 +655,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/02-what-is-not-paintable/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/02 What Is Not Paintable - Interactive 3D Graphics-BxMLDQYIbYk.srt&#39;, function(subtitles) { var</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/02 What Is Not Paintable - Interactive 3D Graphics-BxMLDQYIbYk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -664,7 +664,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/02a-what-is-not-paintable/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/02A What Is Not Paintable - Interactive 3D Graphics-qS-f9kmWCq0.srt&#39;, function(subtitles) { var</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/02A What Is Not Paintable - Interactive 3D Graphics-qS-f9kmWCq0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -673,7 +673,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/03-fps-vs.-milliseconds/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/03 FPS vs. MIlliseconds - Interactive 3D Graphics-GpYyjb5mz48.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/03 FPS vs. MIlliseconds - Interactive 3D Graphics-GpYyjb5mz48.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -682,7 +682,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/03-first-quiz/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/03 First Quiz - Interactive 3D Graphics-btYMDCoFjUU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/03 First Quiz - Interactive 3D Graphics-btYMDCoFjUU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Angry Birds 使用 2.5D 繪圖</description>
     </item>
     
     <item>
@@ -691,7 +691,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/03a-fps-vs.-milliseconds/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/03A FPS vs. MIlliseconds - Interactive 3D Graphics-El4teW4oP_I.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/03A FPS vs. MIlliseconds - Interactive 3D Graphics-El4teW4oP_I.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -700,7 +700,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/03a-first-quiz/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/03A First Quiz - Interactive 3D Graphics-I_nMFLbYGFg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/03A First Quiz - Interactive 3D Graphics-I_nMFLbYGFg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -709,7 +709,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/04-webgl-setup/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/04 WebGL Setup - Interactive 3D Graphics-hZrb2fWguaM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/04 WebGL Setup - Interactive 3D Graphics-hZrb2fWguaM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以用 這個網站 測試自己的機器。如果沒有顯示旋轉的立方體，請到 我們的說明頁 或是 這裡 看 “Implementa</description>
     </item>
     
     <item>
@@ -718,7 +718,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/04-rendering-costs/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/04 Rendering Costs - Interactive 3D Graphics-jOH6Vfjy13Q.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/04 Rendering Costs - Interactive 3D Graphics-jOH6Vfjy13Q.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -727,7 +727,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/04A Rendering Costs - Interactive 3D Graphics-fEdgtfum6_c.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/04A Rendering Costs - Interactive 3D Graphics-fEdgtfum6_c.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -736,7 +736,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/05-core-ideas/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/05 Core Ideas - Interactive 3D Graphics-AFG5QaqRiV8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/05 Core Ideas - Interactive 3D Graphics-AFG5QaqRiV8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 請參考 這些小提示 以獲得最佳學習效果。</description>
     </item>
     
     <item>
@@ -745,7 +745,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/05-firefly/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/05 Firefly - Interactive 3D Graphics-oWeox4HjQEM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/05 Firefly - Interactive 3D Graphics-oWeox4HjQEM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 螢火蟲圖片 來自 Wikimedia Commons。 我問的單純是眼睛跟光源在同一點會發生什麼事？</description>
     </item>
     
     <item>
@@ -754,7 +754,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/05a-firefly/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/05A Firefly - Interactive 3D Graphics-Om2itwxjRbU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/05A Firefly - Interactive 3D Graphics-Om2itwxjRbU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -763,7 +763,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/06-interactivity-and-fps/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/06 Interactivity and FPS - Interactive 3D Graphics-NV9MgI0u5Us.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/06 Interactivity and FPS - Interactive 3D Graphics-NV9MgI0u5Us.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -772,7 +772,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/06-light-field-dimensions/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/06 Light Field Dimensions - Interactive 3D Graphics-ucsWmvKKqaM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/06 Light Field Dimensions - Interactive 3D Graphics-ucsWmvKKqaM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Another way to say it: how many dimensions are needed if you want to capture the radiance from any location and direction in the universe? One last hint: say you&#39;re surrounded by monitors and you want to capture pixels (which store radiance) for all the directions from a point you&#39;re standing at.</description>
     </item>
     
     <item>
@@ -781,7 +781,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/06a-light-field-dimensions/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/06A Light Field Dimensions - Interactive 3D Graphics-yXocZa2BF0E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/06A Light Field Dimensions - Interactive 3D Graphics-yXocZa2BF0E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -799,7 +799,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/07-first-programming-exercise/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 02\/07 First Programming Exercise - Interactive 3D Graphics-FCedbqJFOxk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/07 First Programming Exercise - Interactive 3D Graphics-FCedbqJFOxk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 作業在 這裡 Problems with Programming Quizzes Many of the programming quizzes are no longer functional. All the exercises and demos can all be downloaded from https://github.com/udacity/cs291/archive/master.zip and the repo is here https://github.com/udacity/cs291. They can also be seen in action from this page, just select the exercise or demo from</description>
     </item>
     
     <item>
@@ -817,7 +817,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/08-fps-and-refresh-rate/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/08 FPS and Refresh Rate - Interactive 3D Graphics-l7dTb7EZADE.srt&#39;, function(subtitles) { var</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/08 FPS and Refresh Rate - Interactive 3D Graphics-l7dTb7EZADE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 維基動態模糊頁面 有基本的介紹。 你可以在 這個展示 看到動態模糊修正，使用 &amp;ldquo;b&amp;rdquo; 開關動態模糊，動態模糊開啟時地面</description>
     </item>
     
     <item>
@@ -826,7 +826,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/09-math-refresher/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/09 Math Refresher - Interactive 3D Graphics-_iBUpgW4mFQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/09 Math Refresher - Interactive 3D Graphics-_iBUpgW4mFQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我們簡化了問題。50 赫茲實際上是歐洲電視的隔行掃描頻率，真正的影格率其實是 25 赫茲。參考 這裡 以獲得更多電視系</description>
     </item>
     
     <item>
@@ -835,7 +835,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/09a-math-refresher/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/09A Math Refresher - Interactive 3D Graphics-HwFBFnwkh08.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/09A Math Refresher - Interactive 3D Graphics-HwFBFnwkh08.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -844,7 +844,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/10-cpu-cycles/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/10 CPU Cycles - Interactive 3D Graphics-V9jBzmrI9ow.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/10 CPU Cycles - Interactive 3D Graphics-V9jBzmrI9ow.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -853,7 +853,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/11-the-eye/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/11 The Eye - Interactive 3D Graphics-LSfZDaELuqk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/11 The Eye - Interactive 3D Graphics-LSfZDaELuqk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 維基介紹眼睛的頁面 以了解眼睛的神奇之處。 Incognito 是一本介紹大腦的好書。這本書的第一節講到大腦如何解讀眼睛所見</description>
     </item>
     
     <item>
@@ -862,7 +862,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/12-the-pinhole-camera/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/12 The Pinhole Camera - Interactive 3D Graphics-_TYwlDsdNcY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/12 The Pinhole Camera - Interactive 3D Graphics-_TYwlDsdNcY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -871,7 +871,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/13-seeing-is-believing/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/13 Seeing Is Believing - Interactive 3D Graphics-uMi70i-VU9w.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/13 Seeing Is Believing - Interactive 3D Graphics-uMi70i-VU9w.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以在 http://persci.mit.edu/gallery/checkershadow 找到原始圖片，還有原理解釋。 這裡有這個錯覺得影片版本 http://www.youtube.co</description>
     </item>
     
     <item>
@@ -880,7 +880,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/13a-seeing-is-believing/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/13A Seeing Is Believing - Interactive 3D Graphics-RoHZW3rMqhE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/13A Seeing Is Believing - Interactive 3D Graphics-RoHZW3rMqhE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -889,7 +889,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/14-eye-vs.-camera/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/14 Eye vs. Camera - Interactive 3D Graphics-y8_p_fNubEY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/14 Eye vs. Camera - Interactive 3D Graphics-y8_p_fNubEY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 這個問題請比較人類的視覺系統（眼和腦一起）與相機的鏡片系統。</description>
     </item>
     
     <item>
@@ -898,7 +898,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/14a-eye-vs.-camera/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/14A Eye vs. Camera - Interactive 3D Graphics-yu7zoGoccFM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/14A Eye vs. Camera - Interactive 3D Graphics-yu7zoGoccFM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -907,7 +907,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/15-view-frustum/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/15 View Frustum - Interactive 3D Graphics-GqEP79loyQE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/15 View Frustum - Interactive 3D Graphics-GqEP79loyQE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -916,7 +916,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/16-screen-door/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/16 Screen Door - Interactive 3D Graphics-f7C4ZaS5eR0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/16 Screen Door - Interactive 3D Graphics-f7C4ZaS5eR0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 圖片來自 Wikimedia Commons。 參考 我的文章 以獲得關於 “frustum” 拼法的資訊。</description>
     </item>
     
     <item>
@@ -925,7 +925,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/17-3d-scene/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/17 3D Scene - Interactive 3D Graphics-BXYpQ71ZEl4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/17 3D Scene - Interactive 3D Graphics-BXYpQ71ZEl4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以在 這裡 找到影片中的展示，讓它載入再按開始。 Three.js 物件系統介紹請參考 這裡。</description>
     </item>
     
     <item>
@@ -934,7 +934,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/18-how-many-pixels/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/18 How Many Pixels - Interactive 3D Graphics-I7NnvgM4hpk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/18 How Many Pixels - Interactive 3D Graphics-I7NnvgM4hpk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 答案要的是每秒多少像素，回答的時候請不要加上逗號或是小數點。</description>
     </item>
     
     <item>
@@ -943,7 +943,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/18a-how-many-pixels/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/18A How Many Pixels - Interactive 3D Graphics-wZbbRpNcY-Q.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/18A How Many Pixels - Interactive 3D Graphics-wZbbRpNcY-Q.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -952,7 +952,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/19-light-and-rendering/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/19 Light and Rendering - Interactive 3D Graphics-VMQTgOp5IAA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/19 Light and Rendering - Interactive 3D Graphics-VMQTgOp5IAA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 光子數量的估算</description>
     </item>
     
     <item>
@@ -961,7 +961,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/20-how-many-computers/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/20 How Many Computers - Interactive 3D Graphics-jpbLxR-BMz8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/20 How Many Computers - Interactive 3D Graphics-jpbLxR-BMz8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我要向那些懂科技的阿罵致歉。我是想到我小孩的阿罵的電腦，它慢到可怕。 總之不只你的阿罵的電腦不能即時運算，</description>
     </item>
     
     <item>
@@ -970,7 +970,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/20a-how-many-computers/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/20A How Many Computers - Interactive 3D Graphics-Sg-F52RCC8c.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/20A How Many Computers - Interactive 3D Graphics-Sg-F52RCC8c.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -979,7 +979,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/21-reversing-the-process/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/21 Reversing the Process - Interactive 3D Graphics-jCImXmI5QGM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/21 Reversing the Process - Interactive 3D Graphics-jCImXmI5QGM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -988,7 +988,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/22-history-of-the-teapot/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/22 History of the Teapot - Interactive 3D Graphics-DxMfblPzFNc.srt&#39;, function(subtitles) { var</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/22 History of the Teapot - Interactive 3D Graphics-DxMfblPzFNc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我在 2015 年 8/11 向 Jim Blinnthat 確認了茶壺變扁是因為比較好看。這裡 有 Blinn 與 3D 列印的茶壺的合照，攝於 SIGGRAPH 2015。 關於茶壺的</description>
     </item>
     
     <item>
@@ -997,7 +997,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/23-simple-materials/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/23 Simple Materials - Interactive 3D Graphics-2QSuK4D8OGQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/23 Simple Materials - Interactive 3D Graphics-2QSuK4D8OGQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 來自 Wikimedia Commons 的照片：拋光的金屬球體、玻璃球 與 燈泡。 試試這個球體的展示：http://mrdoob.github</description>
     </item>
     
     <item>
@@ -1006,7 +1006,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/23a-simple-materials/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/23A Simple Materials - Interactive 3D Graphics-nD3JX5Us1H4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/23A Simple Materials - Interactive 3D Graphics-nD3JX5Us1H4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1015,7 +1015,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/24-a-jog-down-the-pipeline/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/24 A Jog Down the Pipeline - Interactive 3D Graphics-kNrJTjKoYx4.srt&#39;, function(subtitles) {</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/24 A Jog Down the Pipeline - Interactive 3D Graphics-kNrJTjKoYx4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我參與的書有詳細介紹管線，這章網路上可以試讀。 更詳盡的介紹請參考 這些文章。</description>
     </item>
     
     <item>
@@ -1024,7 +1024,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/25-pipeline-parallelism/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/25 Pipeline Parallelism - Interactive 3D Graphics-NYqwPk-FaV0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/25 Pipeline Parallelism - Interactive 3D Graphics-NYqwPk-FaV0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 要注意我描述的是筆電桌電用的 GPU，行動裝置通常使用另外的 Tile-based 硬體結構。 Tile-based 演算法介紹 好消息是 WebGL 能驅動不同的硬</description>
     </item>
     
     <item>
@@ -1033,7 +1033,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/26-advanced-box-factory/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/26 Advanced Box Factory - Interactive 3D Graphics-vjr-HsxiYvw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/26 Advanced Box Factory - Interactive 3D Graphics-vjr-HsxiYvw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我應該將「生產線每幾秒能產出一個新箱子？」改成「當生產線滿載時每幾秒能產出一個新箱子？」，抱歉造成混淆。</description>
     </item>
     
     <item>
@@ -1042,7 +1042,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/26a-advanced-box-factory/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/26A Advanced Box Factory - Interactive 3D Graphics-ahpmUGfI_QI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/26A Advanced Box Factory - Interactive 3D Graphics-ahpmUGfI_QI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1051,7 +1051,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/27-parallelism/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/27 Parallelism - Interactive 3D Graphics-I5yMD8RcNMI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/27 Parallelism - Interactive 3D Graphics-I5yMD8RcNMI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1060,7 +1060,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/28-bottleneck/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/28 Bottleneck - Interactive 3D Graphics-pOwwhg6vpms.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/28 Bottleneck - Interactive 3D Graphics-pOwwhg6vpms.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1069,7 +1069,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/28a-bottleneck/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/28A Bottleneck - Interactive 3D Graphics-av5qMTHGUFs.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/28A Bottleneck - Interactive 3D Graphics-av5qMTHGUFs.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1078,7 +1078,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/29-stalling-and-starving/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/29 Stalling and Starving - Interactive 3D Graphics-dBD86IV2Tws.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/29 Stalling and Starving - Interactive 3D Graphics-dBD86IV2Tws.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1087,7 +1087,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/30-painters-algorithm/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/30 Painter\x27s Algorithm - Interactive 3D Graphics-oMgOR3PxmDU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/30 Painter\x27s Algorithm - Interactive 3D Graphics-oMgOR3PxmDU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1096,7 +1096,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/31-flawed-painting/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/31 Flawed Painting - Interactive 3D Graphics-1j3Bvz4tEmk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/31 Flawed Painting - Interactive 3D Graphics-1j3Bvz4tEmk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1105,7 +1105,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/31a-flawed-painting/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/31A Flawed Painting - Interactive 3D Graphics-TkuDcaH0HaQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/31A Flawed Painting - Interactive 3D Graphics-TkuDcaH0HaQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1114,7 +1114,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/32-z-buffer/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/32 Z-Buffer - Interactive 3D Graphics-L6U746cO-yQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/32 Z-Buffer - Interactive 3D Graphics-L6U746cO-yQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我讓 Z 深度在 0.0 到 1.0 區間以簡化描述，這也是 DirectX 的系統。在單元 7 我們會看到 WebGL 實際上是用 -1.0 到 1.0 區間。兩者只是值域不同</description>
     </item>
     
     <item>
@@ -1123,7 +1123,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/33-how-the-z-buffer-works/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/33 How the Z-Buffer Works - Interactive 3D Graphics-yhwg_O5HBwQ.srt&#39;, function(subtitles) { var</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/33 How the Z-Buffer Works - Interactive 3D Graphics-yhwg_O5HBwQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1132,7 +1132,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/34-z-buffer-optimization/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/34 Z-Buffer Optimization - Interactive 3D Graphics-neNtF8pCaTQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/34 Z-Buffer Optimization - Interactive 3D Graphics-neNtF8pCaTQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1141,7 +1141,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/34a-z-buffer-optimization/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/34A Z-Buffer Optimization - Interactive 3D Graphics-fGP9HxwnAO0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/34A Z-Buffer Optimization - Interactive 3D Graphics-fGP9HxwnAO0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1150,7 +1150,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/36-tricky-question/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/36 Tricky Question - Interactive 3D Graphics-J9R8IvHlc-8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle =</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/36 Tricky Question - Interactive 3D Graphics-J9R8IvHlc-8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1186,7 +1186,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/40-different-rendering-options/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/40 Different Rendering Options - Interactive 3D Graphics-A0dBZ81OArE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/40 Different Rendering Options - Interactive 3D Graphics-A0dBZ81OArE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 後兩個展示沒有使用 Z 緩衝區，所以發生了什麼事？</description>
     </item>
     
     <item>
@@ -1195,7 +1195,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/40a-different-rendering-options/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/40A Different Rendering Options - Interactive 3D Graphics-VGyU8pZ-Bc4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/40A Different Rendering Options - Interactive 3D Graphics-VGyU8pZ-Bc4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1204,7 +1204,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/41-conclusion/</guid>
-      <description>var loadSRT = function(url, callback) { var httpRequest = new XMLHttpRequest(); httpRequest.onreadystatechange = function() { if (httpRequest.readyState === XMLHttpRequest.DONE) { var subtitles = parser.fromSrt(httpRequest.responseText, true); for (var i in subtitles) { subtitles[i] = { start : subtitles[i].startTime / 1000, end : subtitles[i].endTime / 1000, text : subtitles[i].text }; } callback(subtitles); } }; httpRequest.open(&#39;GET&#39;, url, true); httpRequest.send(null); }; loadSRT(&#39;/cs291/srt/Lesson 01\/41 Conclusion - Interactive 3D Graphics-HQRFdkLvr1E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/41 Conclusion - Interactive 3D Graphics-HQRFdkLvr1E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
   </channel>

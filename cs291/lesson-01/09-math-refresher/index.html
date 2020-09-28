@@ -1,37 +1,15 @@
-<main>
-  <div class="post-content">
-    <p><iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/_iBUpgW4mFQ?yt:cc=on" frameborder="0" allowfullscreen="true"></iframe>
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/_iBUpgW4mFQ?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
 <script src="/js/youtube.external.subtitle.min.js"></script>
 <script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
 <script>
-  var loadSRT = function(url, callback) {
-    var httpRequest = new XMLHttpRequest();
-
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === XMLHttpRequest.DONE) {
-        var subtitles = parser.fromSrt(httpRequest.responseText, true);
-
-        for (var i in subtitles) {
-          subtitles[i] = {
-            start : subtitles[i].startTime / 1000,
-            end   : subtitles[i].endTime / 1000,
-            text  : subtitles[i].text
-          };
-        }
-
-        callback(subtitles);
-      }
-    };
-
-    httpRequest.open('GET', url, true);
-    httpRequest.send(null);
-  };
-
   loadSRT('/cs291/srt/Lesson 01\/09 Math Refresher - Interactive 3D Graphics-_iBUpgW4mFQ.srt', function(subtitles) {
     var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
   });
 </script>
-我們簡化了問題。50 赫茲實際上是歐洲電視的隔行掃描頻率，真正的影格率其實是 25 赫茲。參考 <a href="http://en.wikipedia.org/wiki/PAL">這裡</a> 以獲得更多電視系統的資訊。電腦沒有隔行掃描的機制，所以沒有掃描頻率跟影格率不同的情形。</p>
+<p>我們簡化了問題。50 赫茲實際上是歐洲電視的隔行掃描頻率，真正的影格率其實是 25 赫茲。參考 <a href="http://en.wikipedia.org/wiki/PAL">這裡</a> 以獲得更多電視系統的資訊。電腦沒有隔行掃描的機制，所以沒有掃描頻率跟影格率不同的情形。</p>
 
-  </div>
-</main>
+</div>
