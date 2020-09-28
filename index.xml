@@ -772,7 +772,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/06-light-field-dimensions/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/06 Light Field Dimensions - Interactive 3D Graphics-ucsWmvKKqaM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Another way to say it: how many dimensions are needed if you want to capture the radiance from any location and direction in the universe? One last hint: say you&#39;re surrounded by monitors and you want to capture pixels (which store radiance) for all the directions from a point you&#39;re standing at.</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/06 Light Field Dimensions - Interactive 3D Graphics-ucsWmvKKqaM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 換句話說：需要多少維度才能描述宇宙中任一點上的任一方向的輻射率？ 最後一個提示：假設你被螢幕包圍，你想要描</description>
     </item>
     
     <item>
@@ -799,7 +799,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/07-first-programming-exercise/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/07 First Programming Exercise - Interactive 3D Graphics-FCedbqJFOxk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 作業在 這裡 Problems with Programming Quizzes Many of the programming quizzes are no longer functional. All the exercises and demos can all be downloaded from https://github.com/udacity/cs291/archive/master.zip and the repo is here https://github.com/udacity/cs291. They can also be seen in action from this page, just select the exercise or demo from</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 02\/07 First Programming Exercise - Interactive 3D Graphics-FCedbqJFOxk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請點 這裡 移動到 JSFiddle 解題 底下原文翻譯是描述已經毀損的 Udacity 作業系統，僅供參考 程式作業相關問題 許多程式作業已</description>
     </item>
     
     <item>
@@ -808,7 +808,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/07a-first-programming-exercise/</guid>
-      <description>The following code fixes are needed: Line 30: 1 scene.add( cube ; to 1 scene.add( cube ); Line 65: 1 / draw the coordinate grid to 1 // draw the coordinate grid Line 67: 1 Coordinates.drawGrid(size:1000,scale:0.01, orientation:&amp;#34;y&amp;#34;}); to 1 Coordinates.drawGrid({size:1000,scale:0.01, orientation:&amp;#34;y&amp;#34;});</description>
+      <description>需要以下的修改： 31 行： 1 scene.add( cube ; 改成 1 scene.add( cube ); 67 行： 1 / draw the coordinate grid 改成 1 // draw the coordinate grid 69 行： 1 Coordinates.drawGrid(size:1000,scale:0.01, orientation:&amp;#34;y&amp;#34;}); 改成 1 Coordinates.drawGrid({size:1000,scale:0.01, orientation:&amp;#34;y&amp;#34;});</description>
     </item>
     
     <item>
