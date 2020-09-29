@@ -1,0 +1,17 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/x4RZRs3PD4Q?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 04\/14 Triangulation and Tessellation - Interactive 3D Graphics-x4RZRs3PD4Q.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>總結來說，三角剖分必須是連接既有的點，而鑲嵌可以任意位置切割。</p>
+<p>如果你能拚對 “frustum” 和 “tessellation”，你已經克服了電腦圖學 95% 的拼字錯誤，詳細請參考 <a href="http://www.realtimerendering.com/blog/do-you-spell-these-two-words-correctly/">這篇文章</a>。</p>
+<p><a href="http://commons.wikimedia.org/wiki/File:Nunnally_Victor_8.jpg">馬賽克</a> 與 <a href="http://commons.wikimedia.org/wiki/File:Biosph%C3%A8re_Montr%C3%A9al.jpg">Biosphere</a> 來自 Wikimedia Commons。</p>
+
+</div>

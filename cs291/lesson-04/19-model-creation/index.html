@@ -1,0 +1,17 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/b-FqTJ94Jdg?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 04\/19 Model Creation - Interactive 3D Graphics-b-FqTJ94Jdg.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>參考 Three.js 本身內建的 <a href="https://threejs.org/docs/#api/loaders/Loader">Loader 類別</a>。<a href="http://code.google.com/p/webgl-loader/">Webgl-loader</a> 可以將模型轉換成 WebGL 能讀取的格式。</p>
+<p>《<a href="http://www.amazon.com/WebGL-Beginners-Guide-Diego-Cantor/dp/184969172X?tag=realtimerenderin">WebGL Beginner’s Guide</a>》 的第二章與 《<a href="http://www.amazon.com/WebGL-Up-Running-Tony-Parisi/dp/144932357X?tag=realtimerenderin">WebGL: Up and Running</a>》的第七章討論到許多將模型載入 WebGL 的方法，我推薦購買 Kindle 格式 ，可以參考 <a href="http://www.realtimerendering.com/blog/books-the-good-the-bad-and-some-third-category/">我的書評</a>。</p>
+<p><a href="http://students.autodesk.com/?nd=register&amp;tagent=EDU-FY12_Launch_EC_Banner-JG-5-19-2011">註冊</a> 學生或是教師帳號 <a href="http://students.autodesk.com/?nd=download_center">可以免費使用 Autodesk 軟體</a>。Udacity 網站學生該註冊時填入 Sunnyvale, CA 地區。</p>
+
+</div>
