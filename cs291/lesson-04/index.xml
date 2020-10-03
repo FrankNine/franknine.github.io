@@ -151,7 +151,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/13-create-a-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13 Create a Square - Interactive 3D Graphics-IG--fsqnM_s.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗 以下是 Udacity 作業系統的介</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13 Create a Square - Interactive 3D Graphics-IG--fsqnM_s.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 以下是 Udacity 作業系統的</description>
     </item>
     
     <item>
@@ -160,7 +160,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/13a-create-a-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13A Create a Square - Interactive 3D Graphics-lD0Pya4GVbI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13A Create a Square - Interactive 3D Graphics-lD0Pya4GVbI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答：以下程式加入 drawSquare() 函式： 1 2 3 4 5 6 7 8 var square = new THREE.Geometry(); square.vertices.push( new THREE.Vector3( x1, y1, 0 ) ); square.vertices.push( new THREE.Vector3( x2, y1, 0 ) ); square.vertices.push( new THREE.Vector3( x2, y2, 0 ) ); square.vertices.push( new</description>
     </item>
     
     <item>
@@ -232,7 +232,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/18a-return-of-the-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/18A Return of the Square - Interactive 3D Graphics-qk4TmL-16FY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/18A Return of the Square - Interactive 3D Graphics-qk4TmL-16FY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答：改變 someObject() 的 faces.push： 1 2 3 geometry.faces.push( new THREE.Face3( 0, 1, 2 ) ); // the order of the face is flipped (was 2, 0, 3): geometry.faces.push( new THREE.Face3( 2, 3, 0 ) ); 另外</description>
     </item>
     
     <item>

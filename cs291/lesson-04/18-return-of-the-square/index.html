@@ -13,37 +13,5 @@
 <p>譯註：請移動到 <a href="https://jsfiddle.net/aaefiikmnnnr/kbanc705/">這裡</a> 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗</p>
 <p>剔除預設是<strong>開啟</strong>的，即 &ldquo;side&rdquo; 設定成 <code>THREE.FrontSide</code>。</p>
 <p>還有 <code>THREE.DoubleSide</code> 跟 <code>THREE.BackSide</code> 兩種設定。</p>
-<p><strong>解答</strong>：改變 someObject() 的 faces.push：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">geometry.faces.push( new THREE.Face3( 0, 1, 2 ) ); 
-// the order of the face is flipped (was 2, 0, 3): 
-geometry.faces.push( new THREE.Face3( 2, 3, 0 ) );
-</code></pre></td></tr></table>
-</div>
-</div><p>另外兩種解法：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">geometry.faces.push( new THREE.Face3( 3, 0, 2 ) ); 
-</code></pre></td></tr></table>
-</div>
-</div><p>跟</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">geometry.faces.push( new THREE.Face3( 0, 2, 3 ) );
-</code></pre></td></tr></table>
-</div>
-</div><p>面向關係到頂點的排列順序，第一個點從哪個頂點開始不重要。</p>
 
 </div>

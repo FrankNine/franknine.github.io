@@ -1,0 +1,16 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/CjckWVwd2ek?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 05\/06 Z-Fighting - Interactive 3D Graphics-CjckWVwd2ek.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>你可以 <a href="http://www.realtimerendering.com/udacity/?load=demo/unit2-z-fighting.js">執行展示</a> 親自觀察 Z-Fighting。</p>
+<p>修正版本在 <a href="http://www.realtimerendering.com/udacity/?load=demo/unit2-z-fighting_fixed.js">這裡</a>。</p>
+
+</div>

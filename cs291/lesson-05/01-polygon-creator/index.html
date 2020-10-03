@@ -1,0 +1,32 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/V67w9xDbD58?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 05\/01 Polygon Creator - Interactive 3D Graphics-V67w9xDbD58.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>譯註：請移動到 <a href="https://jsfiddle.net/aaefiikmnnnr/137ag0n4/">這裡</a> 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</p>
+<p>線上作業更深入的除錯方式可以參考 Mathieu Civel 的 <a href="https://web.archive.org/web/20150331004420/http://forums.udacity.com/questions/100111714/debugging-through-udacity">文章</a>，稍微修改一點程式就能設定中斷點與觀察變數。</p>
+<p>底下的程式碼可能有幫助，這樣你就不用回去前面找：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">vertices.push( new THREE.Vector3( x, y, z) );
+
+faces.push( new THREE.Face3( vertex1, vertex2, vertex3) );
+</code></pre></td></tr></table>
+</div>
+</div><p>如果你需要更多的 JavaScript 知識，請參考 <a href="https://www.udacity.com/wiki/cs291">課程維基</a> 的 <a href="https://www.udacity.com/wiki/cs291#supplementary-texts">相關章節</a>。</p>
+<p>如果你需要三角函數的資料，參考 <a href="http://wp.storminthecastle.com/2013/07/24/how-you-can-draw-regular-polygons-with-the-html5-canvas-api/">這篇文章</a>，如果需要三角函數的教學請參考 <a href="http://www.mathsisfun.com/algebra/trigonometry-index.html">這個網站</a> 或是 <a href="https://www.khanacademy.org/math/trigonometry">Khan Academy</a> 的教學。</p>
+<p>（感謝 <a href="https://web.archive.org/web/20150110213314/http://forums.udacity.com/questions/100157896/can-you-expand-a-little-on-the-geometry#cs291">Udacity 學生們</a> 提供參考資料)</p>
+
+</div>

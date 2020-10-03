@@ -632,6 +632,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>01 正多邊形產生器</title>
+      <link>https://franknine.github.io/cs291/lesson-05/01-polygon-creator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/01-polygon-creator/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/01 Polygon Creator - Interactive 3D Graphics-V67w9xDbD58.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 線上作業更深入的除錯</description>
+    </item>
+    
+    <item>
       <title>01 讓虛擬的事物成真</title>
       <link>https://franknine.github.io/cs291/lesson-03/01-making-virtual-things-real/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -647,6 +656,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-02/01-frame-skipping/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 02\/01 Frame Skipping - Interactive 3D Graphics-tTbobBsxN1A.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>01A 正多邊形產生器（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-05/01a-polygon-creator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/01a-polygon-creator/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/01A Polygon Creator - Interactive 3D Graphics-dISrAbxxJ00.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將以下的程式加入 PolygonGeometry() 1 2 3 4 5 6 7 8 // 儲存頂點位置 geo.vertices.push( new THREE.Vector3( x, y, 0.0 ) ); } // 產生面 for ( var face = 0 ; face &amp;lt; sides-2; face++ ) {</description>
     </item>
     
     <item>
@@ -686,6 +704,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>02 多邊形位置</title>
+      <link>https://franknine.github.io/cs291/lesson-05/02-polygon-location/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/02-polygon-location/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/02 Polygon Location - Interactive 3D Graphics-Yaz1IHypGO8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 如果你需要三角函數的</description>
+    </item>
+    
+    <item>
       <title>02 笛卡兒座標系統</title>
       <link>https://franknine.github.io/cs291/lesson-04/02-cartesian-coordinates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -704,6 +731,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>02A 多邊形位置（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-05/02a-polygon-location/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/02a-polygon-location/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/02A Polygon Location - Interactive 3D Graphics-fu4JkqM2lkA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 修改 PolygonGeometry() 的程式： 1 2 var x = Math.cos( angle ) + location.x; var y = Math.sin( angle ) + location.y;</description>
+    </item>
+    
+    <item>
       <title>03 3D 列印運作原理</title>
       <link>https://franknine.github.io/cs291/lesson-03/03-how-3d-printing-works/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -719,6 +755,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-02/03-fps-vs.-milliseconds/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 02\/03 FPS vs. MIlliseconds - Interactive 3D Graphics-GpYyjb5mz48.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>03 多邊形半徑</title>
+      <link>https://franknine.github.io/cs291/lesson-05/03-polygon-radius/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/03-polygon-radius/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/03 Polygon Radius - Interactive 3D Graphics-D6ehAny6YpI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 如果你需要三角函數的</description>
     </item>
     
     <item>
@@ -746,6 +791,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-02/03a-fps-vs.-milliseconds/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 02\/03A FPS vs. MIlliseconds - Interactive 3D Graphics-El4teW4oP_I.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>03A 多邊形半徑（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-05/03a-polygon-radius/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/03a-polygon-radius/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/03A Polygon Radius - Interactive 3D Graphics-7-_k1pcn1Ws.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 修改 PolygonGeometry()： 1 2 var x = radius * Math.cos(angle) + location.x; var y = radius * Math.sin(angle) + location.y;</description>
     </item>
     
     <item>
@@ -794,6 +848,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>04 搭建樓梯</title>
+      <link>https://franknine.github.io/cs291/lesson-05/04-build-a-stairway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/04-build-a-stairway/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/04 Build a Stairway - Interactive 3D Graphics-8B14upf_WxQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 我的 Sphere Flake 產生器還有</description>
+    </item>
+    
+    <item>
       <title>04 繪圖成本</title>
       <link>https://franknine.github.io/cs291/lesson-02/04-rendering-costs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -803,12 +866,30 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>04A 搭建樓梯（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-05/04a-build-a-stairway/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/04a-build-a-stairway/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/04A Build a Stairway - Interactive 3D Graphics-OjKXkg08xrY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 替換 createStairs() 內的程式： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 // 往上多少階 var stepPair; var riserHeight = verticalStepHeight + stepThickness; var riserDepth = horizontalStepDepth</description>
+    </item>
+    
+    <item>
       <title>04A 繪圖成本（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 02\/04A Rendering Costs - Interactive 3D Graphics-fEdgtfum6_c.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>05 喝水鳥</title>
+      <link>https://franknine.github.io/cs291/lesson-05/05-the-drinking-bird/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/05-the-drinking-bird/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/05 The Drinking Bird - Interactive 3D Graphics-k9_PV3FtFbo.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 喝水鳥的設計圖可以</description>
     </item>
     
     <item>
@@ -848,6 +929,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>05A 喝水鳥（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-05/05a-the-drinking-bird/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/05a-the-drinking-bird/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/05A The Drinking Bird - Interactive 3D Graphics-ocqfxPuk5q4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： createSupport() 加入以下程式： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 // 右腳底板 cube = new THREE.Mesh( new THREE.CubeGeometry( 20+64+110, 52, 6 ), cubeMaterial ); // (20+32) - 一半的</description>
+    </item>
+    
+    <item>
       <title>05A 左手系統還是右手系統？（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-04/05a-left-handed-or-right-handed/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -875,6 +965,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>06 Z-Fighting</title>
+      <link>https://franknine.github.io/cs291/lesson-05/06-z-fighting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/06-z-fighting/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/06 Z-Fighting - Interactive 3D Graphics-CjckWVwd2ek.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以 執行展示 親自觀察 Z-Fighting。 修正版本在 這裡。</description>
+    </item>
+    
+    <item>
       <title>06 互動性與 FPS</title>
       <link>https://franknine.github.io/cs291/lesson-01/06-interactivity-and-fps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -899,6 +998,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-04/06-the-sun-also-rises/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 04\/06 The Sun Also Rises - Interactive 3D Graphics-J9fhJSfqEzY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我的 3D 列印 《Minecraft》 模型專案</description>
+    </item>
+    
+    <item>
+      <title>06A Z-Fighting（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-05/06a-z-fighting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-05/06a-z-fighting/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/06A Z-Fighting - Interactive 3D Graphics-w1sZTGmi7zc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1060,7 +1168,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/11-the-eye/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/11 The Eye - Interactive 3D Graphics-LSfZDaELuqk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 維基介紹眼睛的頁面 以了解眼睛的神奇之處。 Incognito 是一本介紹大腦的好書。這本書的第一節講到大腦如何解讀眼睛所見</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/11 The Eye - Interactive 3D Graphics-LSfZDaELuqk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 維基介紹眼睛的頁面 以了解眼睛的神奇之處。 《Incognito》 是一本介紹大腦的好書。這本書的第一節講到</description>
     </item>
     
     <item>
@@ -1078,7 +1186,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/13-create-a-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13 Create a Square - Interactive 3D Graphics-IG--fsqnM_s.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗 以下是 Udacity 作業系統的介</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13 Create a Square - Interactive 3D Graphics-IG--fsqnM_s.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 以下是 Udacity 作業系統的</description>
     </item>
     
     <item>
@@ -1096,7 +1204,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/13a-create-a-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13A Create a Square - Interactive 3D Graphics-lD0Pya4GVbI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13A Create a Square - Interactive 3D Graphics-lD0Pya4GVbI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答：以下程式加入 drawSquare() 函式： 1 2 3 4 5 6 7 8 var square = new THREE.Geometry(); square.vertices.push( new THREE.Vector3( x1, y1, 0 ) ); square.vertices.push( new THREE.Vector3( x2, y1, 0 ) ); square.vertices.push( new THREE.Vector3( x2, y2, 0 ) ); square.vertices.push( new</description>
     </item>
     
     <item>
@@ -1231,7 +1339,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/18a-return-of-the-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/18A Return of the Square - Interactive 3D Graphics-qk4TmL-16FY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/18A Return of the Square - Interactive 3D Graphics-qk4TmL-16FY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答：改變 someObject() 的 faces.push： 1 2 3 geometry.faces.push( new THREE.Face3( 0, 1, 2 ) ); // the order of the face is flipped (was 2, 0, 3): geometry.faces.push( new THREE.Face3( 2, 3, 0 ) ); 另外</description>
     </item>
     
     <item>
@@ -1312,7 +1420,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/23-simple-materials/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/23 Simple Materials - Interactive 3D Graphics-2QSuK4D8OGQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 來自 Wikimedia Commons 的照片：拋光的金屬球體、玻璃球 與 燈泡。 試試這個球體的展示：http://mrdoob.github</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/23 Simple Materials - Interactive 3D Graphics-2QSuK4D8OGQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 來自 Wikimedia Commons 的照片：拋光的金屬球體、玻璃球 與 燈泡。 試試這個球體的 展示。仔細看有些球體會對光源位置改變有反應。</description>
     </item>
     
     <item>

@@ -279,11 +279,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/01-polygon-creator/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-03/01-making-virtual-things-real/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/01-frame-skipping/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/01a-polygon-creator/</loc>
   </url>
   
   <url>
@@ -303,6 +311,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/02-polygon-location/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/02-cartesian-coordinates/</loc>
   </url>
   
@@ -311,11 +323,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/02a-polygon-location/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-03/03-how-3d-printing-works/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/03-fps-vs.-milliseconds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/03-polygon-radius/</loc>
   </url>
   
   <url>
@@ -328,6 +348,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/03a-fps-vs.-milliseconds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/03a-polygon-radius/</loc>
   </url>
   
   <url>
@@ -351,11 +375,23 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/04-build-a-stairway/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-02/04-rendering-costs/</loc>
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/04a-build-a-stairway/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/05-the-drinking-bird/</loc>
   </url>
   
   <url>
@@ -375,6 +411,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/05a-the-drinking-bird/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/05a-left-handed-or-right-handed/</loc>
   </url>
   
@@ -387,6 +427,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/06-z-fighting/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/06-interactivity-and-fps/</loc>
   </url>
   
@@ -396,6 +440,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/06-the-sun-also-rises/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/06a-z-fighting/</loc>
   </url>
   
   <url>
@@ -696,6 +744,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-05/</loc>
   </url>
   
   <url>

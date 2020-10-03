@@ -1,0 +1,39 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/k9_PV3FtFbo?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 05\/05 The Drinking Bird - Interactive 3D Graphics-k9_PV3FtFbo.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>譯註：請移動到 <a href="https://jsfiddle.net/aaefiikmnnnr/huges30c/">這裡</a> 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</p>
+<p>喝水鳥的設計圖可以在 <a href="https://www.udacity.com/wiki/cs291/notes">課程筆記</a> 找到，還有原始喝水鳥的照片。</p>
+<p>如果你打開 &ldquo;Show axes&rdquo;，會出現 X 軸紅色、Y 軸綠色、Z 軸藍色的線條。</p>
+<p>Three.js 文件在 <a href="https://threejs.org/docs/">這個網頁</a>。立方體、球體、圓柱的文件列在左邊。</p>
+<p>要讓作業過關，也讓球與圓柱好看。所有 <code>SphereGeometry</code> 呼叫應該要像這樣：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">SphereGeometry( radius, 32, 16 );
+</code></pre></td></tr></table>
+</div>
+</div><p><code>CylinderGeometry</code> 呼叫要像這樣：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">CylinderGeometry( radiusTop, radiusBottom, height, 32 );  
+</code></pre></td></tr></table>
+</div>
+</div><p>Three.js 還支援很多形狀。參考 Stemkoski 的展示：<a href="http://stemkoski.github.io/Three.js/#shapes">形狀</a>、<a href="http://stemkoski.github.io/Three.js/#extrusion">拉伸（Extrusion）</a> 與 <a href="http://stemkoski.github.io/Three.js/#text3D">3D 文字</a>。還有 <a href="http://stemkoski.github.io/Three.js/#subdivision-Cube">細分曲面（Subdivision Surfaces）</a>，一種讓平面更圓滑的方法。跟 <a href="http://stemkoski.github.io/Three.js/#CSG">建構固體幾何（Constructive Solid Geometry）</a>，一種拿物體減去另一個物體方法。</p>
+<p><a href="http://en.wikipedia.org/wiki/Drinking_bird">維基</a> 和 <a href="http://chemistry.about.com/od/physicalchemistrythermo/a/How-The-Drinking-Bird-Science-Toy-Works.htm">這裡</a> 有更多喝水鳥的資料。</p>
+<p>有許多免費的建模軟體：<a href="http://www.sketchup.com/products/sketchup-make">SketchUp Make</a> 適合表面建模。像是 <a href="http://www.123dapp.com/design">123D Design</a> 與 <a href="https://tinkercad.com/">Tinkercad</a> 較為簡單適合設計 3D 列印作品。<a href="https://www.blender.org/">Blender</a> 也是免費又有許多功能。如果你想認真學習建模，Udacity 學生可以 <a href="http://students.autodesk.com/?nd=register&amp;tagent=EDU-FY12_Launch_EC_Banner-JG-5-19-2011">註冊</a> 申請 <a href="http://students.autodesk.com/?nd=download_center">免費使用 Autodesk 軟體</a>。當你註冊時記得 Udacity 被認定是位在 Sunnyvale, CA 的學校。Maya 與 3ds Max 是電影與遊戲專業人士使用的工具，學生可以免費使用。</p>
+
+</div>

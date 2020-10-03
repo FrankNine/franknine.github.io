@@ -133,7 +133,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/11-the-eye/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/11 The Eye - Interactive 3D Graphics-LSfZDaELuqk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 維基介紹眼睛的頁面 以了解眼睛的神奇之處。 Incognito 是一本介紹大腦的好書。這本書的第一節講到大腦如何解讀眼睛所見</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/11 The Eye - Interactive 3D Graphics-LSfZDaELuqk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 維基介紹眼睛的頁面 以了解眼睛的神奇之處。 《Incognito》 是一本介紹大腦的好書。這本書的第一節講到</description>
     </item>
     
     <item>
@@ -277,7 +277,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/23-simple-materials/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/23 Simple Materials - Interactive 3D Graphics-2QSuK4D8OGQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 來自 Wikimedia Commons 的照片：拋光的金屬球體、玻璃球 與 燈泡。 試試這個球體的展示：http://mrdoob.github</description>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/23 Simple Materials - Interactive 3D Graphics-2QSuK4D8OGQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 來自 Wikimedia Commons 的照片：拋光的金屬球體、玻璃球 與 燈泡。 試試這個球體的 展示。仔細看有些球體會對光源位置改變有反應。</description>
     </item>
     
     <item>

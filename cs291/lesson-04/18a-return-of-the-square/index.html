@@ -10,5 +10,37 @@
     var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
   });
 </script>
+<p><strong>解答</strong>：改變 someObject() 的 faces.push：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">geometry.faces.push( new THREE.Face3( 0, 1, 2 ) ); 
+// the order of the face is flipped (was 2, 0, 3): 
+geometry.faces.push( new THREE.Face3( 2, 3, 0 ) );
+</code></pre></td></tr></table>
+</div>
+</div><p>另外還有兩種解法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">geometry.faces.push( new THREE.Face3( 3, 0, 2 ) ); 
+</code></pre></td></tr></table>
+</div>
+</div><p>跟</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">geometry.faces.push( new THREE.Face3( 0, 2, 3 ) );
+</code></pre></td></tr></table>
+</div>
+</div><p>面向關係到頂點的排列順序，第一個點從哪個頂點開始不重要。</p>
 
 </div>

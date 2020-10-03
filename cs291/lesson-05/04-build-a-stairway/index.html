@@ -1,0 +1,17 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/8B14upf_WxQ?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 05\/04 Build a Stairway - Interactive 3D Graphics-8B14upf_WxQ.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>譯註：請移動到 <a href="https://jsfiddle.net/aaefiikmnnnr/6pd74ga1/">這裡</a> 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</p>
+<p>我的 Sphere Flake 產生器還有其他模型產生器 <a href="http://www.realtimerendering.com/resources/SPD/">可以在這裡下載</a>。<a href="http://en.wikipedia.org/wiki/L-system">L 系統</a> 是一種特別適合生物建模的程式建模。更多資料請參考 <a href="http://en.wikipedia.org/wiki/Procedural_modeling">程式建模維基頁面</a>。</p>
+<p>當作業越來越複雜，你應該考慮將作業下載到本機執行，而不是在瀏覽器裡執行。其中一個優點是 JavaScript 除錯工具比較好。直接 <a href="http://udacity.github.io/cs291/">下載程式</a>，然後開啟 <code>index.html</code> 尋找對應的展示或作業。 如果你會操作 GitHub 可以直接用 <a href="https://github.com/udacity/cs291/archive/master.zip">GitHub repository</a>。</p>
+
+</div>
