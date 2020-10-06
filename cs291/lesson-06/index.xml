@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lesson 06 訪談：替現實世界建模 on Northern Wind</title>
+    <link>https://franknine.github.io/cs291/lesson-06/</link>
+    <description>Recent content in Lesson 06 訪談：替現實世界建模 on Northern Wind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://franknine.github.io/cs291/lesson-06/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>01 介紹</title>
+      <link>https://franknine.github.io/cs291/lesson-06/01-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/01-introduction/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/01 Introduction - Interactive 3D Graphics-wZEQwRjz8OE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>02 Sam Black</title>
+      <link>https://franknine.github.io/cs291/lesson-06/02-sam-black/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/02-sam-black/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/02 Sam Black - Background - Interactive 3D Graphics-wouOtaO3YJI.srt&#39;, function(subtitles) {var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);}); </description>
+    </item>
+    
+    <item>
+      <title>03 什麼是 AutoCAD？</title>
+      <link>https://franknine.github.io/cs291/lesson-06/03-what-is-autocad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/03-what-is-autocad/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/03 What Is AutoCAD - Interactive 3D Graphics-3-EkJUreKyU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>04 不同的成品</title>
+      <link>https://franknine.github.io/cs291/lesson-06/04-types-of-work/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/04-types-of-work/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/04 Types of Work - Interactive 3D Graphics-6goiKhq8Jhs.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>05 變化性</title>
+      <link>https://franknine.github.io/cs291/lesson-06/05-variety/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/05-variety/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/05 Variety - Interactive 3D Graphics-ruXIb92Eohw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>06 材質的樣式</title>
+      <link>https://franknine.github.io/cs291/lesson-06/06-styles-of-materials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/06-styles-of-materials/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/06 Styles of Materials - Interactive 3D Graphics-e7b27bIlrU8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>07 最低要求</title>
+      <link>https://franknine.github.io/cs291/lesson-06/07-minimum-requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/07-minimum-requirements/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/07 Minimum Requirements - Interactive 3D Graphics-Mj5HE0n1S80.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>08 無限的多邊形</title>
+      <link>https://franknine.github.io/cs291/lesson-06/08-endless-polygons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/08-endless-polygons/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/08 Endless Polygons - Interactive 3D Graphics-rhLHk14f4Ac.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+  </channel>
+</rss>

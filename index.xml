@@ -623,6 +623,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>01 介紹</title>
+      <link>https://franknine.github.io/cs291/lesson-06/01-introduction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/01-introduction/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/01 Introduction - Interactive 3D Graphics-wZEQwRjz8OE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>01 座標系統</title>
       <link>https://franknine.github.io/cs291/lesson-04/01-coordinate-system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -683,6 +692,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-03/02-jesse-harrington-au-at-autodesk/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 03\/02 Jesse Harrington Au at Autodesk - Interactive 3D Graphics-AebJdRLtdxM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Autodesk 藝廊的 導覽影片，如果你造訪舊金山可以 免費參觀。</description>
+    </item>
+    
+    <item>
+      <title>02 Sam Black</title>
+      <link>https://franknine.github.io/cs291/lesson-06/02-sam-black/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/02-sam-black/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/02 Sam Black - Background - Interactive 3D Graphics-wouOtaO3YJI.srt&#39;, function(subtitles) {var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);}); </description>
     </item>
     
     <item>
@@ -758,6 +776,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>03 什麼是 AutoCAD？</title>
+      <link>https://franknine.github.io/cs291/lesson-06/03-what-is-autocad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/03-what-is-autocad/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/03 What Is AutoCAD - Interactive 3D Graphics-3-EkJUreKyU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>03 多邊形半徑</title>
       <link>https://franknine.github.io/cs291/lesson-05/03-polygon-radius/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -827,6 +854,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-01/04-webgl-setup/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 01\/04 WebGL Setup - Interactive 3D Graphics-hZrb2fWguaM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以用 這個網站 測試自己的機器。如果沒有顯示旋轉的立方體，請到 我們的說明頁 或是 這裡 看 “Implementa</description>
+    </item>
+    
+    <item>
+      <title>04 不同的成品</title>
+      <link>https://franknine.github.io/cs291/lesson-06/04-types-of-work/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/04-types-of-work/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/04 Types of Work - Interactive 3D Graphics-6goiKhq8Jhs.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -929,6 +965,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>05 變化性</title>
+      <link>https://franknine.github.io/cs291/lesson-06/05-variety/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/05-variety/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/05 Variety - Interactive 3D Graphics-ruXIb92Eohw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>05A 喝水鳥（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-05/05a-the-drinking-bird/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1001,6 +1046,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>06 材質的樣式</title>
+      <link>https://franknine.github.io/cs291/lesson-06/06-styles-of-materials/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/06-styles-of-materials/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/06 Styles of Materials - Interactive 3D Graphics-e7b27bIlrU8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>06A Z-Fighting（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-05/06a-z-fighting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1046,6 +1100,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>07 最低要求</title>
+      <link>https://franknine.github.io/cs291/lesson-06/07-minimum-requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/07-minimum-requirements/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/07 Minimum Requirements - Interactive 3D Graphics-Mj5HE0n1S80.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>07 第一個程式作業</title>
       <link>https://franknine.github.io/cs291/lesson-02/07-first-programming-exercise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1088,6 +1151,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-01/08-fps-and-refresh-rate/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 01\/08 FPS and Refresh Rate - Interactive 3D Graphics-l7dTb7EZADE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 維基動態模糊頁面 有基本的介紹。 你可以在 這個展示 看到動態模糊修正，使用 &amp;ldquo;b&amp;rdquo; 開關動態模糊，動態模糊開啟時地面</description>
+    </item>
+    
+    <item>
+      <title>08 無限的多邊形</title>
+      <link>https://franknine.github.io/cs291/lesson-06/08-endless-polygons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-06/08-endless-polygons/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 06\/08 Endless Polygons - Interactive 3D Graphics-rhLHk14f4Ac.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
