@@ -1,0 +1,17 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/bUOr5w8W-rU?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 07\/44 Future of Transparency - Interactive 3D Graphics-bUOr5w8W-rU.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Aleksandr Rodic 對水母的註記：</p>
+<p>透明是我做這個展示最大的挑戰。實際上這是我第一次遇到透明排序問題。我做的是骯髒的偷吃步，沿著 Z 軸預先排序所有三角形，然後扭轉骨架讓每個關節都正對攝影機。</p>
+<p>這個 <a href="https://vimeo.com/20234863">影片</a> 展示建模過程。整個展示是用在一個香港的 <a href="https://vimeo.com/20875622">戶外裝置藝術</a>。額外的挑戰在於同步四台電腦讓展示看起來無縫。我的作法是在 Node.js 裡進行模擬然後串流到各個瀏覽器，這是作法的 <a href="https://vimeo.com/20599736">展示</a>。</p>
+
+</div>

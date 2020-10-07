@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lesson 07 顏色與材質 on Northern Wind</title>
+    <link>https://franknine.github.io/cs291/lesson-07/</link>
+    <description>Recent content in Lesson 07 顏色與材質 on Northern Wind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://franknine.github.io/cs291/lesson-07/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>01 課程概覽</title>
+      <link>https://franknine.github.io/cs291/lesson-07/01-overview-of-the-lesson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/01-overview-of-the-lesson/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/01 Overview of the Lesson - Interactive 3D Graphics-oOzT63pxEP0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以在 這裡執行展示。</description>
+    </item>
+    
+    <item>
+      <title>02 可程式管線</title>
+      <link>https://franknine.github.io/cs291/lesson-07/02-the-programmable-pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/02-the-programmable-pipeline/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/02 The Programmable Pipeline - Interactive 3D Graphics-FeUr-S1f7Qk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：因為苦苦找不到 Fragment 適當的翻譯，所以先保留不翻。因為 Fragment 不翻，所以 Fragment Shader 也保持原狀。為了一致，另外 Vertex Shader 跟 Pixel</description>
+    </item>
+    
+    <item>
+      <title>03 RGB 顏色定義</title>
+      <link>https://franknine.github.io/cs291/lesson-07/03-rgb-color-definition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/03-rgb-color-definition/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/03 RGB Color Definition - Interactive 3D Graphics-OxiT2hLFA00.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>04 顏色定義</title>
+      <link>https://franknine.github.io/cs291/lesson-07/04-color-definition/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/04-color-definition/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/04 Color Definition - Interactive 3D Graphics-CdKSJpZ0lP0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 有關光的波長、可見光譜還有顏色的知識，請參考維基 這篇文章 跟 這篇文章。 維基有其他文章講 加色法 跟 減色法，還有 C</description>
+    </item>
+    
+    <item>
+      <title>05 RGB 混色展示</title>
+      <link>https://franknine.github.io/cs291/lesson-07/05-rgb-color-demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/05-rgb-color-demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>06 設定顏色</title>
+      <link>https://franknine.github.io/cs291/lesson-07/06-setting-the-color/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/06-setting-the-color/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/06 Setting the Color - Interactive 3D Graphics-NYVgc79HNwQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 Color 類別的 Three.js 文件 以獲得更多說明。如果你不懂十六進位 維基頁面 是個好的起點。網路上有許多十進位與十六進位的</description>
+    </item>
+    
+    <item>
+      <title>07 什麼顏色是洋紅？</title>
+      <link>https://franknine.github.io/cs291/lesson-07/07-what-color-is-magenta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/07-what-color-is-magenta/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/07 What Color Is Magenta - Interactive 3D Graphics-8LLPBcfIYnA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>07A 什麼顏色是洋紅？（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/07a-what-color-is-magenta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/07a-what-color-is-magenta/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/07A What Color Is Magenta - Interactive 3D Graphics-LzuAFRsyQao.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>08 查特酒是什麼顏色？</title>
+      <link>https://franknine.github.io/cs291/lesson-07/08-what-color-is-chartreuse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/08-what-color-is-chartreuse/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/08 What Color Is Chartreuse - Interactive 3D Graphics-WvWjqzPk-rM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 這題只是問好玩的！ 截至 2014 6/4 有 10,450 筆回答，結果如下：41% 回答黃綠、22% 回答橘紅、19% 回答不知道跟 18% 回</description>
+    </item>
+    
+    <item>
+      <title>08A 查特酒是什麼顏色？（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/08a-what-color-is-chartreuse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/08a-what-color-is-chartreuse/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/08A What Color Is Chartreuse - Interactive 3D Graphics-Pm8FkC11A6E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>09 顏色立方體</title>
+      <link>https://franknine.github.io/cs291/lesson-07/09-the-color-cube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/09-the-color-cube/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/09 The Color Cube - Interactive 3D Graphics-W2HHF0EiuY8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>10 頂點屬性</title>
+      <link>https://franknine.github.io/cs291/lesson-07/10-vertex-attributes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/10-vertex-attributes/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/10 Vertex Attributes - Interactive 3D Graphics-hHqWB-wjM-o.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 注意： 1 var color = new THREE.Color(0.6, 0.3,</description>
+    </item>
+    
+    <item>
+      <title>10A 頂點屬性（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/10a-vertex-attributes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/10a-vertex-attributes/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/10A Vertex Attributes - Interactive 3D Graphics-J8BrBDMtfb4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將以下程式填入 fillScene()： 1 2 3 4 5 6 7 8 9 10 11 12 13 // 解答 geometry = new THREE.Geometry(); geometry.vertices.push( new THREE.Vector3( 100, 0, 0 ) ); geometry.vertices.push( new THREE.Vector3(</description>
+    </item>
+    
+    <item>
+      <title>11 顏色內插</title>
+      <link>https://franknine.github.io/cs291/lesson-07/11-color-interpolation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/11-color-interpolation/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/11 Color Interpolation - Interactive 3D Graphics-_O0PmV2HUrY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>12 色域</title>
+      <link>https://franknine.github.io/cs291/lesson-07/12-the-color-gamut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/12-the-color-gamut/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/12 The Color Gamut - Interactive 3D Graphics-8y9yENEdtG4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>13 簡單光照模型</title>
+      <link>https://franknine.github.io/cs291/lesson-07/13-a-simple-lighting-model/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/13-a-simple-lighting-model/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/13 A Simple Lighting Model - Interactive 3D Graphics-EavLFfxDtqw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>14 死亡之吻</title>
+      <link>https://franknine.github.io/cs291/lesson-07/14-kiss-of-death/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/14-kiss-of-death/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/14 Kiss of Death - Interactive 3D Graphics-V5alMYaDWcQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>15 球正上方的光</title>
+      <link>https://franknine.github.io/cs291/lesson-07/15-light-on-a-diffuse-sphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/15-light-on-a-diffuse-sphere/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/15 Light on a Diffuse Sphere - Interactive 3D Graphics-Epj79U6GQPU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：關於漫射與觀察者方向無關的正式推導還蠻複雜的，可以參考這篇文章的 Radiance 章節，有互動式展示。</description>
+    </item>
+    
+    <item>
+      <title>16 正規化向量</title>
+      <link>https://franknine.github.io/cs291/lesson-07/16-normalizing-a-vector/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/16-normalizing-a-vector/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/16 Normalizing a Vector - Interactive 3D Graphics-ZTywc8v9uU8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>17 向量長度</title>
+      <link>https://franknine.github.io/cs291/lesson-07/17-vector-length/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/17-vector-length/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/17 Vector Length - Interactive 3D Graphics-8UxO9pI9DDY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>17A 向量長度（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/17a-vector-length/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/17a-vector-length/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/17A Vector Length - Interactive 3D Graphics-eqk7O06Hytc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>18 內積</title>
+      <link>https://franknine.github.io/cs291/lesson-07/18-the-dot-product/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/18-the-dot-product/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/18 The Dot Product - Interactive 3D Graphics-_WgRwRyssk0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>19 內積的細節</title>
+      <link>https://franknine.github.io/cs291/lesson-07/19-the-dot-product-in-detail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/19-the-dot-product-in-detail/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/19 The Dot Product in Detail - Interactive 3D Graphics-YyNnK0T0w9o.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>20 漫射材質</title>
+      <link>https://franknine.github.io/cs291/lesson-07/20-diffuse-material/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/20-diffuse-material/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/20 Diffuse Material - Interactive 3D Graphics-gkZwY0dt7pk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 總結來說你要： 將材質</description>
+    </item>
+    
+    <item>
+      <title>20A 漫射材質（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/20a-diffuse-material/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/20a-diffuse-material/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/20A Diffuse Material - Interactive 3D Graphics-gS3Hg3lYe6I.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 要讓表面變成受光影響的漫射材質，修改 createBall()： 1 2 3 var material = new THREE.MeshLambertMaterial( { color: 0x80FC66, shading: THREE.FlatShading } ); var ka = 0.4;</description>
+    </item>
+    
+    <item>
+      <title>21 著色法向量</title>
+      <link>https://franknine.github.io/cs291/lesson-07/21-shading-normal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/21-shading-normal/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/21 Shading Normal - Interactive 3D Graphics-CjVsEGafXuk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>22 啟用平滑著色</title>
+      <link>https://franknine.github.io/cs291/lesson-07/22-enable-smooth-shading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/22-enable-smooth-shading/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/22 Enable Smooth Shading - Interactive 3D Graphics-eFPKjvf7Si8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
+      <title>22 啟用平滑著色（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/22a-enable-smooth-shading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/22a-enable-smooth-shading/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/22A Enable Smooth Shading - Interactive 3D Graphics-9fxvAfmPlsw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 修改 createBall() 的材質創造程式： 1 var material = new THREE.MeshLambertMaterial( { color: 0x80FC66 } );</description>
+    </item>
+    
+    <item>
+      <title>23 Ka、Kd 與 HSL</title>
+      <link>https://franknine.github.io/cs291/lesson-07/23-ka-kd-and-hsl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/23-ka-kd-and-hsl/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/23 Ka, Kd, and HSL - Interactive 3D Graphics-xWGNrRH9g8s.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>24 Lambert 展示</title>
+      <link>https://franknine.github.io/cs291/lesson-07/24-demo-lambert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/24-demo-lambert/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>25 烘焙</title>
+      <link>https://franknine.github.io/cs291/lesson-07/25-baking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/25-baking/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/25 Baking - Interactive 3D Graphics-QFh9P0t4tbM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 請假設物件是純粹漫射材質，沒有鏡面反射。</description>
+    </item>
+    
+    <item>
+      <title>25A 烘焙（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/25a-baking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/25a-baking/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/25A Baking - Interactive 3D Graphics-WGL3KuC-4TQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>26 鏡面反射材質</title>
+      <link>https://franknine.github.io/cs291/lesson-07/26-specular-material/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/26-specular-material/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/26 Specular Material - Interactive 3D Graphics-2xWDoA8sbFk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：不是很確定講師提的 Blinn-Phong 反射模型的 Self-Shadowing 跟 Fresnel Coefficent 項是什麼，常見的 Blinn-Phong 公式就是簡單的版本。另外 Shininess 想不太到好的翻譯就</description>
+    </item>
+    
+    <item>
+      <title>27 材質展示</title>
+      <link>https://franknine.github.io/cs291/lesson-07/27-material-demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/27-material-demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>28 Gouraud 著色</title>
+      <link>https://franknine.github.io/cs291/lesson-07/28-gouraud-shading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/28-gouraud-shading/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/28 Gouraud Shading - Interactive 3D Graphics-T-GKzksIb-4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 雖然比較常聽到「Gouraud 著色」，但我覺得應該稱之為「Gouraud 內插」，因為這是描述在頂點間內插顏</description>
+    </item>
+    
+    <item>
+      <title>29 Phong 著色</title>
+      <link>https://franknine.github.io/cs291/lesson-07/29-phong-shading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/29-phong-shading/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/29 Phong Shading - Interactive 3D Graphics-jWaeoKI4cwY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我應該將這堂課稱之為「Phong 內插」而非著色。非常抱歉。「著色」是根據表面法向量、打光跟眼睛位置的計算。</description>
+    </item>
+    
+    <item>
+      <title>30 材質計算</title>
+      <link>https://franknine.github.io/cs291/lesson-07/30-material-calculations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/30-material-calculations/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/30 Material Calculations - Interactive 3D Graphics-W9UXhX4cQaA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>30A 材質計算（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/30a-material-calculations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/30a-material-calculations/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/30A Material Calculations - Interactive 3D Graphics-KYpv67oNILU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>31 透明簡介</title>
+      <link>https://franknine.github.io/cs291/lesson-07/31-introduction-to-transparency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/31-introduction-to-transparency/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/31 Introduction to Transparency - Interactive 3D Graphics-yCXEsHPj5Ms.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 試試 Aleksandr Rodic 的 水母展示。 另一個使用透明的 Zygote Body 展示，左邊有個垂直拉條慢慢地拉動它。 Wikimedia Commons 圖片使用：折射鉛筆、水晶</description>
+    </item>
+    
+    <item>
+      <title>32 混色</title>
+      <link>https://franknine.github.io/cs291/lesson-07/32-blending/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/32-blending/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/32 Blending - Interactive 3D Graphics-qcNYjvWwpKQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>33 Over 運算子</title>
+      <link>https://franknine.github.io/cs291/lesson-07/33-the-over-operator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/33-the-over-operator/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/33 The Over Operator - Interactive 3D Graphics-856FnBTwt8Q.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Three.js 有個 所有可能組合的展示 -看上去有點神祕，但你可以從左邊的控制去操作。 譯註：詳細混色資料可以參考這篇文章</description>
+    </item>
+    
+    <item>
+      <title>34 Over 運算子小考</title>
+      <link>https://franknine.github.io/cs291/lesson-07/34-the-over-operator-quiz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/34-the-over-operator-quiz/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/34 The Over Operator Quiz - Interactive 3D Graphics-JgnGQH09zGU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>34 簡單透明展示</title>
+      <link>https://franknine.github.io/cs291/lesson-07/34-simple-transparency-demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/34-simple-transparency-demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>35 Over 運算子小考</title>
+      <link>https://franknine.github.io/cs291/lesson-07/35-the-over-operator-quiz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/35-the-over-operator-quiz/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/35 The Over Operator Quiz - Interactive 3D Graphics-JgnGQH09zGU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>35A Over 運算子小考（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/35a-the-over-operator-quiz/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/35a-the-over-operator-quiz/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/35A The Over Operator Quiz - Interactive 3D Graphics-GOESnLv6kUo.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>36 Over 運算子展示</title>
+      <link>https://franknine.github.io/cs291/lesson-07/36-the-over-operator-demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/36-the-over-operator-demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>37 Z 緩衝區與透明</title>
+      <link>https://franknine.github.io/cs291/lesson-07/37-the-z-buffer-and-transparency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/37-the-z-buffer-and-transparency/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/37 The Z-Buffer and Transparency - Interactive 3D Graphics-UZ2ClQjk3rQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>38 解決透明和 Z 緩衝區</title>
+      <link>https://franknine.github.io/cs291/lesson-07/38-solving-transparent-z-buffering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/38-solving-transparent-z-buffering/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/38 Solving Transparent Z-Buffering-QjHOFVTBIbI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>38A 解決透明和 Z 緩衝區（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/38a-solving-transparent-z-buffering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/38a-solving-transparent-z-buffering/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/38A Solving Transparent Z-Buffering-VMloPK3DNxk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>39 解決透明和 Z 緩衝區 2</title>
+      <link>https://franknine.github.io/cs291/lesson-07/39-solving-transparent-z-buffering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/39-solving-transparent-z-buffering/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/39 Solving Transparent Z-Buffering-UnP9O-U5hkY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>39A 解決透明和 Z 緩衝區 2（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/39a-solving-transparent-z-buffering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/39a-solving-transparent-z-buffering/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/39A Solving Transparent Z-Buffering-Gsmm1XqqfOo.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>40 透明和 Three.js</title>
+      <link>https://franknine.github.io/cs291/lesson-07/40-transparency-and-three.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/40-transparency-and-three.js/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/40 Transparency and three.js - Interactive 3D Graphics-d5Zd37_dO-0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 Lee Stemkoski 的教學 以獲得更多透明材質的範例。</description>
+    </item>
+    
+    <item>
+      <title>41 另一個透明展示</title>
+      <link>https://franknine.github.io/cs291/lesson-07/41-another-transparency-demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/41-another-transparency-demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>42 什麼地方出錯了</title>
+      <link>https://franknine.github.io/cs291/lesson-07/42-what-went-wrong/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/42-what-went-wrong/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/42 What Went Wrong - Interactive 3D Graphics-THu9rDYhFuI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>42A 什麼地方出錯了（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-07/42a-what-went-wrong/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/42a-what-went-wrong/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/42A What Went Wrong - Interactive 3D Graphics-_thXUjexGdg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>43 進階透明作法</title>
+      <link>https://franknine.github.io/cs291/lesson-07/43-advanced-transparency-methods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/43-advanced-transparency-methods/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/43 Advanced Transparency Methods - Interactive 3D Graphics-XAEUr0x8IhI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 在 1:20 我說右邊的 Fragment 會不正確地進行混色。實際上因為有 Z 緩衝區，右邊的 Fragment 會被左邊的遮擋掉。當我在講的時候我想到</description>
+    </item>
+    
+    <item>
+      <title>44 未來的透明演算法</title>
+      <link>https://franknine.github.io/cs291/lesson-07/44-future-of-transparency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/44-future-of-transparency/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/44 Future of Transparency - Interactive 3D Graphics-bUOr5w8W-rU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Aleksandr Rodic 對水母的註記： 透明是我做這個展示最大的挑戰。實際上這是我第一次遇到透明排序問題。我做的是骯髒的偷吃步</description>
+    </item>
+    
+    <item>
+      <title>45 結語</title>
+      <link>https://franknine.github.io/cs291/lesson-07/45-conclusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-07/45-conclusion/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/45 Conclusion - Interactive 3D Graphics-ue7YKYz4VMQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+  </channel>
+</rss>

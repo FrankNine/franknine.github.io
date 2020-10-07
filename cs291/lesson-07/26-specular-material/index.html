@@ -1,0 +1,15 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/2xWDoA8sbFk?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 07\/26 Specular Material - Interactive 3D Graphics-2xWDoA8sbFk.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>譯註：不是很確定講師提的 Blinn-Phong 反射模型的 Self-Shadowing 跟 Fresnel Coefficent 項是什麼，常見的 Blinn-Phong 公式就是簡單的版本。另外 Shininess 想不太到好的翻譯就只能將就了。</p>
+
+</div>

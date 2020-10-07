@@ -1,0 +1,21 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/gkZwY0dt7pk?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 07\/20 Diffuse Material - Interactive 3D Graphics-gkZwY0dt7pk.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>譯註：請移動到 <a href="https://jsfiddle.net/aaefiikmnnnr/y8xdzfe1/">這裡</a> 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</p>
+<p>總結來說你要：</p>
+<ul>
+<li>將材質從 <code>MeshBasicMaterial</code> 換成 <code>MeshLambertMaterial</code></li>
+<li>將環境光色用 SetRGB() 設定成材質顏色 * 0.4。如果你的作業無法正常顯示或評分，請複製程式然後按下 Reset 按鈕。程式有經過修改以除錯，需要重新整理才能正常運作。
+附註：課程用的 Three.js 版本 <code>ambient</code> 是一個材質屬性，分開設定的顏色。在課程開始後 <a href="https://github.com/mrdoob/three.js/issues/6501">Three.js 修改了材質定義</a>。材質的環境光色現在跟漫射顏色相同，<code>THREE.AmbientLight</code> 變成調整環境光效果的唯一方法。這不會影響到作業，但是如果你要用新版 Three.js 就會有差別。</li>
+</ul>
+
+</div>

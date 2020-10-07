@@ -1,0 +1,16 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/856FnBTwt8Q?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 07\/33 The Over Operator - Interactive 3D Graphics-856FnBTwt8Q.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Three.js 有個 <a href="http://threejs.org/examples/#webgl_materials_blending_custom">所有可能組合的展示</a> -看上去有點神祕，但你可以從左邊的控制去操作。</p>
+<p>譯註：詳細混色資料可以參考<a href="https://ciechanow.ski/alpha-compositing/">這篇文章</a></p>
+
+</div>

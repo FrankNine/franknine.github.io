@@ -287,6 +287,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/01-overview-of-the-lesson/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-03/01-making-virtual-things-real/</loc>
   </url>
   
@@ -315,6 +319,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/02-the-programmable-pipeline/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-02/02-what-is-not-paintable/</loc>
   </url>
   
@@ -340,6 +348,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/03-fps-vs.-milliseconds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/03-rgb-color-definition/</loc>
   </url>
   
   <url>
@@ -399,11 +411,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/04-color-definition/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-05/04a-build-a-stairway/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/05-rgb-color-demo/</loc>
   </url>
   
   <url>
@@ -467,6 +487,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/06-setting-the-color/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-05/06a-z-fighting/</loc>
   </url>
   
@@ -480,6 +504,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/07-fps-demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/07-what-color-is-magenta/</loc>
   </url>
   
   <url>
@@ -499,6 +527,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/07a-what-color-is-magenta/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-02/07a-first-programming-exercise/</loc>
   </url>
   
@@ -511,6 +543,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/08-what-color-is-chartreuse/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-06/08-endless-polygons/</loc>
   </url>
   
@@ -519,11 +555,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/08a-what-color-is-chartreuse/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/09-coordinate-system-transform/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/09-math-refresher/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/09-the-color-cube/</loc>
   </url>
   
   <url>
@@ -539,7 +583,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/10-vertex-attributes/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/10-points-and-lines/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/10a-vertex-attributes/</loc>
   </url>
   
   <url>
@@ -548,6 +600,14 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/11-the-eye/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/11-color-interpolation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/12-the-color-gamut/</loc>
   </url>
   
   <url>
@@ -563,6 +623,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/13-a-simple-lighting-model/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/13a-create-a-square/</loc>
   </url>
   
@@ -572,6 +636,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/14-triangulation-and-tessellation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/14-kiss-of-death/</loc>
   </url>
   
   <url>
@@ -587,6 +655,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/15-light-on-a-diffuse-sphere/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/15-view-frustum/</loc>
   </url>
   
@@ -596,6 +668,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/16-how-many-triangulations/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/16-normalizing-a-vector/</loc>
   </url>
   
   <url>
@@ -611,7 +687,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/17-vector-length/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/17-vertex-ordering-and-culling/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/17a-vector-length/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/18-the-dot-product/</loc>
   </url>
   
   <url>
@@ -635,11 +723,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/19-the-dot-product-in-detail/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/19-model-creation/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/20-how-many-computers/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/20-diffuse-material/</loc>
   </url>
   
   <url>
@@ -651,11 +747,31 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/20a-diffuse-material/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/21-reversing-the-process/</loc>
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/21-shading-normal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/22-enable-smooth-shading/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/22a-enable-smooth-shading/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/22-history-of-the-teapot/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/23-ka-kd-and-hsl/</loc>
   </url>
   
   <url>
@@ -667,7 +783,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/24-demo-lambert/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/24-a-jog-down-the-pipeline/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/25-baking/</loc>
   </url>
   
   <url>
@@ -675,7 +799,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/25a-baking/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/26-advanced-box-factory/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/26-specular-material/</loc>
   </url>
   
   <url>
@@ -687,6 +819,14 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/27-material-demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/28-gouraud-shading/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/28-bottleneck/</loc>
   </url>
   
@@ -695,7 +835,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/29-phong-shading/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/29-stalling-and-starving/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/30-material-calculations/</loc>
   </url>
   
   <url>
@@ -703,7 +851,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/30a-material-calculations/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/31-flawed-painting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/31-introduction-to-transparency/</loc>
   </url>
   
   <url>
@@ -715,7 +871,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/32-blending/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/33-the-over-operator/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/33-how-the-z-buffer-works/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/34-the-over-operator-quiz/</loc>
   </url>
   
   <url>
@@ -723,11 +891,31 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/34-simple-transparency-demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/34a-z-buffer-optimization/</loc>
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/35-the-over-operator-quiz/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/35a-the-over-operator-quiz/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/36-the-over-operator-demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/36-tricky-question/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/37-the-z-buffer-and-transparency/</loc>
   </url>
   
   <url>
@@ -739,7 +927,23 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/38-solving-transparent-z-buffering/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/38a-solving-transparent-z-buffering/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/39-demo-rendering-mode-2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/39-solving-transparent-z-buffering/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/39a-solving-transparent-z-buffering/</loc>
   </url>
   
   <url>
@@ -747,11 +951,39 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/40-transparency-and-three.js/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/40a-different-rendering-options/</loc>
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/41-another-transparency-demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/41-conclusion/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/42-what-went-wrong/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/42a-what-went-wrong/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/43-advanced-transparency-methods/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/44-future-of-transparency/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/45-conclusion/</loc>
   </url>
   
   <url>
@@ -784,6 +1016,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-06/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-07/</loc>
   </url>
   
   <url>

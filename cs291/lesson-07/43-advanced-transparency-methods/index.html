@@ -1,0 +1,19 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/XAEUr0x8IhI?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 07\/43 Advanced Transparency Methods - Interactive 3D Graphics-XAEUr0x8IhI.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>在 1:20 我說右邊的 Fragment 會不正確地進行混色。實際上因為有 Z 緩衝區，右邊的 Fragment 會被左邊的遮擋掉。當我在講的時候我想到的是 Z 緩衝區只讀不寫的作法，這種作法讓所有面都有作用。這樣繪製會有混色錯誤，但通常比直接遮擋好看。</p>
+<p>遮擋第二近的面的問題在於有時你沒有遮擋到它們。有些像素上遠的三角形先畫，有些像素上近的先畫，結果會看到不連續。「只讀不寫」的作法無法消滅不連續的問題，但能稍微減緩不連續的效果。</p>
+<p>Dunn 和 Bavoil 寫了一篇 <a href="https://developer.nvidia.com/content/transparency-or-translucency-rendering">很棒的文章</a> 介紹近代透明的作法。你能在 <a href="http://developer.download.nvidia.com/SDK/10/opengl/src/dual_depth_peeling/doc/DualDepthPeeling.pdf">這裡</a> 讀到更多深度剝除的資料。<a href="https://research.nvidia.com/sites/default/files/pubs/2011-08_Stochastic-Transparency/StochTransp-slides.pdf">隨機式透明的文章</a> 介紹了這個技巧，裡面還有其他先前做法的介紹。排序網格上的三角形使其繪製順序在任何角度都正確的論文在 <a href="https://dl.acm.org/doi/10.1145/2366145.2366179">這裡</a>。</p>
+<p>這裡有個 WebGL 的 <a href="http://www.glowscript.org/#/user/GlowScriptDemos/folder/Examples/program/Transparency">深度剝除展示</a>，與 <a href="https://www.glowscript.org/docs/VPythonDocs/technical.html">實作細節</a>。</p>
+<p>還有一種作法是 <a href="https://developer.nvidia.com/gpugems/gpugems3/part-i-geometry/chapter-4-next-generation-speedtree-rendering">Alpha to Coverage</a>，即像素內（Sub-pixel）執行的紗門透明。它的優點在不需要排序，但當紗門的圖樣重疊時會產生假影。</p>
+
+</div>

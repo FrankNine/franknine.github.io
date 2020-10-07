@@ -1,0 +1,28 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/gS3Hg3lYe6I?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 07\/20A Diffuse Material - Interactive 3D Graphics-gS3Hg3lYe6I.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><strong>解答：</strong><br>
+要讓表面變成受光影響的漫射材質，修改 <code>createBall()</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var material = new THREE.MeshLambertMaterial( { color: 0x80FC66, shading: THREE.FlatShading } );
+var ka = 0.4;
+material.ambient.setRGB( material.color.r *ka, material.color.g* ka, material.color.b * ka );
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>

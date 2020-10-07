@@ -1,0 +1,15 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/d5Zd37_dO-0?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 07\/40 Transparency and three.js - Interactive 3D Graphics-d5Zd37_dO-0.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>參考 <a href="http://stemkoski.github.io/Three.js/#Translucence">Lee Stemkoski 的教學</a> 以獲得更多透明材質的範例。</p>
+
+</div>
