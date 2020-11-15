@@ -425,6 +425,15 @@
     </item>
     
     <item>
+      <title>35 WebGL 與 Three.js</title>
+      <link>https://franknine.github.io/cs291/lesson-01/35-webgl-and-three.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-01/35-webgl-and-three.js/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 01\/35 WebGL and three.js - Interactive 3D Graphics-3fU-TG6BK1s.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Three.js 首頁 值得一看。 如果你已經懂圖學只是想學 Three.js，這個互動式投影片 可以快速帶過。 我 訪問過 Three.js 作者 -</description>
+    </item>
+    
+    <item>
       <title>36 困難問題</title>
       <link>https://franknine.github.io/cs291/lesson-01/36-tricky-question/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

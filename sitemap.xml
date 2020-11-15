@@ -271,6 +271,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/01-rgb-representation/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/01-introduction/</loc>
   </url>
   
@@ -296,6 +300,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/01-frame-skipping/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/01a-rgb-representation/</loc>
   </url>
   
   <url>
@@ -335,11 +343,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/02-shiny-bird/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-02/02a-what-is-not-paintable/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-05/02a-polygon-location/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/02a-shiny-bird/</loc>
   </url>
   
   <url>
@@ -363,6 +379,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/03-building-a-better-bird/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/03-first-quiz/</loc>
   </url>
   
@@ -376,6 +396,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-05/03a-polygon-radius/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/03a-building-a-better-bird/</loc>
   </url>
   
   <url>
@@ -411,6 +435,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/04-drinking-bird-transparency/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/04-color-definition/</loc>
   </url>
   
@@ -420,6 +448,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/04a-drinking-bird-transparency/</loc>
   </url>
   
   <url>
@@ -436,6 +468,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/05-core-ideas/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/05-paper-lantern-shading/</loc>
   </url>
   
   <url>
@@ -456,6 +492,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/05a-left-handed-or-right-handed/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/05a-paper-lantern-shading/</loc>
   </url>
   
   <url>
@@ -487,6 +527,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/06-glass-cube/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/06-setting-the-color/</loc>
   </url>
   
@@ -500,6 +544,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/06a-the-sun-also-rises/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/06a-glass-cube/</loc>
   </url>
   
   <url>
@@ -523,6 +571,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/07-shading-and-illumination-costs/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-03/07-design-process/</loc>
   </url>
   
@@ -532,6 +584,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/07a-first-programming-exercise/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/07a-shading-and-illumination-costs/</loc>
   </url>
   
   <url>
@@ -604,6 +660,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/11-color-interpolation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-04/12-creating-geometry-in-three.js/</loc>
   </url>
   
   <url>
@@ -903,6 +963,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-01/35-webgl-and-three.js/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/35a-the-over-operator-quiz/</loc>
   </url>
   
@@ -1020,6 +1084,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-08/</loc>
   </url>
   
   <url>

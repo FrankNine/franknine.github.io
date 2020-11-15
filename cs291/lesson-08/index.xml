@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lesson 08 問題集 on Northern Wind</title>
+    <link>https://franknine.github.io/cs291/lesson-08/</link>
+    <description>Recent content in Lesson 08 問題集 on Northern Wind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://franknine.github.io/cs291/lesson-08/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>01 RGB 表示法</title>
+      <link>https://franknine.github.io/cs291/lesson-08/01-rgb-representation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/01-rgb-representation/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/01 RGB Representation - Interactive 3D Graphics-psG9mComHKQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 Three.js 文件裡的 Color 類 以獲得幫助。網路上有許多十六進位轉換器，像是這個。 浮點數範圍在 0.000 到 1.000，包括首尾。</description>
+    </item>
+    
+    <item>
+      <title>01A RGB 表示法（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-08/01a-rgb-representation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/01a-rgb-representation/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/01A RGB Representation - Interactive 3D Graphics-oWI3pRSCvWM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>02 閃亮鳥</title>
+      <link>https://franknine.github.io/cs291/lesson-08/02-shiny-bird/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/02-shiny-bird/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/02 Shiny Bird - Interactive 3D Graphics-GP3cqtHLZLk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 Three.js 的文件 在這裡，左邊</description>
+    </item>
+    
+    <item>
+      <title>02A 閃亮鳥（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-08/02a-shiny-bird/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/02a-shiny-bird/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/02A Shiny Bird - Interactive 3D Graphics-c0r0kqsLksI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 改寫 createDrinkingBird()： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 var hatMaterial = new THREE.MeshPhongMaterial( { shininess: 100 } ); hatMaterial.color.r</description>
+    </item>
+    
+    <item>
+      <title>03 建造更好的鳥</title>
+      <link>https://franknine.github.io/cs291/lesson-08/03-building-a-better-bird/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/03-building-a-better-bird/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/03 Building a Better Bird - Interactive 3D Graphics-08naahX8ylw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>03A 建造更好的鳥（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-08/03a-building-a-better-bird/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/03a-building-a-better-bird/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/03A Building a Better Bird - Interactive 3D Graphics-FFcR1mdHUNw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>04 透明喝水鳥</title>
+      <link>https://franknine.github.io/cs291/lesson-08/04-drinking-bird-transparency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/04-drinking-bird-transparency/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/04 Drinking Bird Transparency - Interactive 3D Graphics-kvP-9v4x7DE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
+      <title>04A 透明喝水鳥（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-08/04a-drinking-bird-transparency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/04a-drinking-bird-transparency/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/04A Drinking Bird Transparency - Interactive 3D Graphics-Jl0B4ZDB1aY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 修改 drawDrinkingBird() 的 glassMaterial： 1 2 var glassMaterial = new THREE.MeshPhongMaterial( { color: 0x0, specular: 0xFFFFFF, shininess: 100, opacity: 0.3, transparent: true } );</description>
+    </item>
+    
+    <item>
+      <title>05 紙燈籠著色</title>
+      <link>https://franknine.github.io/cs291/lesson-08/05-paper-lantern-shading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/05-paper-lantern-shading/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/05 Paper Lantern Shading - Interactive 3D Graphics-5IIMb1MpNss.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 紙燈籠 圖片 來自 Wikimedia Commons。</description>
+    </item>
+    
+    <item>
+      <title>05A 紙燈籠著色（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-08/05a-paper-lantern-shading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/05a-paper-lantern-shading/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/05A Paper Lantern Shading - Interactive 3D Graphics-5CKEbVn29g8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>06 玻璃立方體</title>
+      <link>https://franknine.github.io/cs291/lesson-08/06-glass-cube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/06-glass-cube/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/06 Glass Cube - Interactive 3D Graphics-JpGnz1Azh7A.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以在以下文章讀到這個透明問題的描述：“It’s Really Not a Rendering Bug, You See&amp;hellip;”。我從這篇文章得到問</description>
+    </item>
+    
+    <item>
+      <title>06A 玻璃立方體（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-08/06a-glass-cube/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/06a-glass-cube/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/06A Glass Cube - Interactive 3D Graphics-7mhyfz7PZy8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>07 著色與光照的成本</title>
+      <link>https://franknine.github.io/cs291/lesson-08/07-shading-and-illumination-costs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/07-shading-and-illumination-costs/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/07 Shading and Illumination Costs - Interactive 3D Graphics-fph9KqfmprA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>07A 著色與光照的成本（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-08/07a-shading-and-illumination-costs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-08/07a-shading-and-illumination-costs/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 08\/07A Shading and Illumination Costs - Interactive 3D Graphics-KsbwkXM7fGg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+  </channel>
+</rss>

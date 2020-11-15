@@ -1,0 +1,19 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/3fU-TG6BK1s?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 01\/35 WebGL and three.js - Interactive 3D Graphics-3fU-TG6BK1s.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><a href="http://mrdoob.github.com/three.js/">Three.js 首頁</a> 值得一看。 如果你已經懂圖學只是想學 Three.js，<a href="https://davidlyons.dev/threejs-intro/">這個互動式投影片</a> 可以快速帶過。</p>
+<p>我 <a href="http://www.realtimerendering.com/blog/interview-with-three-js-creator/">訪問過 Three.js 作者</a> - 我覺得他的背景很有意思。</p>
+<p>WebGL 首頁在 <a href="http://www.khronos.org/webgl/">這裡</a>。</p>
+<p>要找 WebGL 新聞跟酷炫展示，可以看 <a href="http://webgl.com/">這個</a> 跟 <a href="http://www.reddit.com/r/webgl">這個</a> 網站。Three.js 自己也有 <a href="http://www.reddit.com/r/threejs">subreddit</a>。</p>
+<p>Windows 上 Chrome <a href="http://code.google.com/p/angleproject/">將 WebGL 轉換成 DirectX</a>，更多資訊可以在 <a href="http://www.amazon.com/OpenGL-Insights-Patrick-Cozzi/dp/1439893764?tag=realtimerenderin">OpenGL Insights</a> 的 <a href="http://www.seas.upenn.edu/~pcozzi/OpenGLInsights/OpenGLInsights-ANGLE.pdf">免費章節</a> 找到。</p>
+
+</div>

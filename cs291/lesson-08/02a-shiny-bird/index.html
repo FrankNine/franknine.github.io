@@ -1,0 +1,53 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/c0r0kqsLksI?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 08\/02A Shiny Bird - Interactive 3D Graphics-c0r0kqsLksI.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><strong>解答：</strong> 改寫 <code>createDrinkingBird()</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var hatMaterial = new THREE.MeshPhongMaterial( { shininess: 100 } ); 
+hatMaterial.color.r = 24/255;
+hatMaterial.color.g = 38/255;
+hatMaterial.color.b = 77/255;
+hatMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+
+var bodyMaterial = new THREE.MeshPhongMaterial( { shininess: 100 } );
+bodyMaterial.color.setRGB( 31/255, 86/255, 169/255 );
+bodyMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+
+var legMaterial = new THREE.MeshPhongMaterial( { shininess: 4 } );
+legMaterial.color.setHex( 0xAdA79b );
+legMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+
+var footMaterial = new THREE.MeshPhongMaterial( { color: 0x960f0b, shininess: 30 } );
+footMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>

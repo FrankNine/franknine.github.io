@@ -146,6 +146,15 @@
     </item>
     
     <item>
+      <title>12 在 Three.js 中創造幾何</title>
+      <link>https://franknine.github.io/cs291/lesson-04/12-creating-geometry-in-three.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-04/12-creating-geometry-in-three.js/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/12 Creating Geometry in three.js - Interactive 3D Graphics-1v5YjfZFFCE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>13 創造方形</title>
       <link>https://franknine.github.io/cs291/lesson-04/13-create-a-square/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
