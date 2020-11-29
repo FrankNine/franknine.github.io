@@ -1,0 +1,26 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/BiZqcgBgXZg?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 09\/16A Build a Snowman - Interactive 3D Graphics-BiZqcgBgXZg.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><strong>解答：</strong> 替換 <code>fillScene()</code> 末端的 <code>cylinder.position</code> 呼叫成：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cylinder.rotation.x = 90 * Math.PI/180;
+cylinder.position.y = 50; 
+</code></pre></td></tr></table>
+</div>
+</div><p>記得你設定旋轉與位置的程式順序沒有關係，Three.js 總是先旋轉再平移到指定位置。參考下一堂課的額外資料以獲得更多資訊。</p>
+
+</div>

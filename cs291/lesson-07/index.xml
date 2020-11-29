@@ -380,15 +380,6 @@
     </item>
     
     <item>
-      <title>34 Over 運算子小考</title>
-      <link>https://franknine.github.io/cs291/lesson-07/34-the-over-operator-quiz/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/34-the-over-operator-quiz/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/34 The Over Operator Quiz - Interactive 3D Graphics-JgnGQH09zGU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
-    </item>
-    
-    <item>
       <title>34 簡單透明展示</title>
       <link>https://franknine.github.io/cs291/lesson-07/34-simple-transparency-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

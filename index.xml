@@ -650,6 +650,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>01 概覽</title>
+      <link>https://franknine.github.io/cs291/lesson-09/01-overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/01-overview/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/01 Overview - Interactive 3D Graphics-7cO4sEBFvDE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 影片中的展示可以在 這裡 找到。</description>
+    </item>
+    
+    <item>
       <title>01 正多邊形產生器</title>
       <link>https://franknine.github.io/cs291/lesson-05/01-polygon-creator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -785,6 +794,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>02 點與向量運算</title>
+      <link>https://franknine.github.io/cs291/lesson-09/02-point-and-vector-operations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/02-point-and-vector-operations/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/02 Point and Vector Operations - Interactive 3D Graphics-zGGoubCmrnM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以在 這裡 找到 Vector3 的文件。</description>
+    </item>
+    
+    <item>
       <title>02A 哪個無法使用畫家演算法？（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-02/02a-what-is-not-paintable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -854,6 +872,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-05/03-polygon-radius/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 05\/03 Polygon Radius - Interactive 3D Graphics-D6ehAny6YpI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 如果你需要三角函數的</description>
+    </item>
+    
+    <item>
+      <title>03 座標值</title>
+      <link>https://franknine.github.io/cs291/lesson-09/03-coordinate-values/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/03-coordinate-values/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/03 Coordinate Values - Interactive 3D Graphics-rbIs10bER14.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1001,6 +1028,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>04 點與向量和</title>
+      <link>https://franknine.github.io/cs291/lesson-09/04-point-and-vector-sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/04-point-and-vector-sum/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/04 Point and Vector Sum - Interactive 3D Graphics-jrEoJaFRyM4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>04A 搭建樓梯（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-05/04a-build-a-stairway/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1028,12 +1064,30 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>04A 點與向量和（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-09/04a-point-and-vector-sum/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/04a-point-and-vector-sum/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/04A Point and Vector Sum - Interactive 3D Graphics-YbllciHBYHg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>05 RGB 混色展示</title>
       <link>https://franknine.github.io/cs291/lesson-07/05-rgb-color-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-07/05-rgb-color-demo/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>05 向量運算</title>
+      <link>https://franknine.github.io/cs291/lesson-09/05-vector-operation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/05-vector-operation/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/05 Vector Operation - Interactive 3D Graphics-psd6oSdsI9I.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：你可以在 這裡 找到 Vector3 的文件。</description>
     </item>
     
     <item>
@@ -1097,6 +1151,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-06/05-variety/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 06\/05 Variety - Interactive 3D Graphics-ruXIb92Eohw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>05A 向量運算（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-09/05a-vector-operation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/05a-vector-operation/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/05A Vector Operation - Interactive 3D Graphics-nAc2dD3vbJ8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1178,6 +1241,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-04/06-the-sun-also-rises/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 04\/06 The Sun Also Rises - Interactive 3D Graphics-J9fhJSfqEzY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我的 3D 列印 《Minecraft》 模型專案</description>
+    </item>
+    
+    <item>
+      <title>06 平移</title>
+      <link>https://franknine.github.io/cs291/lesson-09/06-translation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/06-translation/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/06 Translation - Interactive 3D Graphics-uBERLzLBvdU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 唉呀，我寫了 160 + 390 = 540，應該是 550。</description>
     </item>
     
     <item>
@@ -1271,6 +1343,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>07 旋轉</title>
+      <link>https://franknine.github.io/cs291/lesson-09/07-rotation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/07-rotation/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/07 Rotation - Interactive 3D Graphics-RiuspJB-saw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>07 最低要求</title>
       <link>https://franknine.github.io/cs291/lesson-06/07-minimum-requirements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1352,6 +1433,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>08 旋轉方塊</title>
+      <link>https://franknine.github.io/cs291/lesson-09/08-rotate-a-block/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/08-rotate-a-block/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/08 Rotate a Block - Interactive 3D Graphics-Y3Txj4UKCb8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
       <title>08 查特酒是什麼顏色？</title>
       <link>https://franknine.github.io/cs291/lesson-07/08-what-color-is-chartreuse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1379,12 +1469,30 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>08A 旋轉方塊（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-09/08a-rotate-a-block/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/08a-rotate-a-block/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/08A Rotate a Block - Interactive 3D Graphics-R6VYBvRX30w.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將方塊旋轉加到 fillScene() 的結尾： 1 2 3 cube.rotation.y = -60 * Math.PI/180; scene.add( cube );</description>
+    </item>
+    
+    <item>
       <title>08A 查特酒是什麼顏色？（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-07/08a-what-color-is-chartreuse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-07/08a-what-color-is-chartreuse/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 07\/08A What Color Is Chartreuse - Interactive 3D Graphics-Pm8FkC11A6E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>09 命名物件</title>
+      <link>https://franknine.github.io/cs291/lesson-09/09-name-that-object/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/09-name-that-object/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/09 Name That Object - Interactive 3D Graphics-bSjx2J06Dnw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 補充一下，我指的是你沿著綠色 Y 軸旋轉的結果。</description>
     </item>
     
     <item>
@@ -1415,6 +1523,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>09A 命名物件（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-09/09a-name-that-object/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/09a-name-that-object/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/09A Name That Object - Interactive 3D Graphics-IJ8zZXsWtVc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>09A 座標系統轉換（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-04/09a-coordinate-system-transform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1439,6 +1556,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-01/10-cpu-cycles/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 01\/10 CPU Cycles - Interactive 3D Graphics-V9jBzmrI9ow.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>10 尤拉角</title>
+      <link>https://franknine.github.io/cs291/lesson-09/10-euler-angles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/10-euler-angles/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/10 Euler Angles - Interactive 3D Graphics-q0jgqeS_ACM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 維基上有更多 尤拉角的介紹。如果你想要更深入操作尤拉角了解它對不同物件的作用，可以試試 Three.js 互動式編輯器。尤拉的</description>
     </item>
     
     <item>
@@ -1478,6 +1604,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>11 展示：尤拉角</title>
+      <link>https://franknine.github.io/cs291/lesson-09/11-demo-euler-angles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/11-demo-euler-angles/</guid>
+      <description>在 Three.js 尤拉角預設以 Z, Y, X 順序作用在物件上。現在這個順序會顯示在使用者介面上。 João Sousa 好心地替飛機加上環，顯示了 X（紅）、Y（綠）和 Z（藍）的</description>
+    </item>
+    
+    <item>
       <title>11 眼睛</title>
       <link>https://franknine.github.io/cs291/lesson-01/11-the-eye/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1493,6 +1628,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-07/11-color-interpolation/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 07\/11 Color Interpolation - Interactive 3D Graphics-_O0PmV2HUrY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>12 剛體座標變換 vs 縮放</title>
+      <link>https://franknine.github.io/cs291/lesson-09/12-rigid-body-transforms-vs-scaling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/12-rigid-body-transforms-vs-scaling/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/12 Rigid Body Transforms vs Scaling - Interactive 3D Graphics-9MPstSYnLe4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1550,6 +1694,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>13 縮放球體</title>
+      <link>https://franknine.github.io/cs291/lesson-09/13-scale-a-sphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/13-scale-a-sphere/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/13 Scale a Sphere - Interactive 3D Graphics-Nathqf6hkeA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
       <title>13A 創造方形（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-04/13a-create-a-square/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1565,6 +1718,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-01/13a-seeing-is-believing/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 01\/13A Seeing Is Believing - Interactive 3D Graphics-RoHZW3rMqhE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>13A 縮放球體（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-09/13a-scale-a-sphere/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/13a-scale-a-sphere/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/13A Scale a Sphere - Interactive 3D Graphics-hkyfZJNnBDs.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 在 fillScene() 末端加入： 1 2 3 4 5 6 sphere.scale.x = 3.0; // 60 / (2 * 半徑 10 ) -&amp;gt; 3 sphere.scale.y = 0.2; // 4 / (2 * 半徑 10 ) -&amp;gt; 0.2 sphere.scale.z = 0.2; sphere.rotation.y = 30 * Math.PI/180;</description>
     </item>
     
     <item>
@@ -1595,12 +1757,30 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>14 縮放、旋轉、平移</title>
+      <link>https://franknine.github.io/cs291/lesson-09/14-scale-rotate-translate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/14-scale-rotate-translate/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/14 Scale Rotate Translate - Interactive 3D Graphics-p0NE5VhP-GY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 對 Three.js 的物件來說，給變數賦值的順序沒有關係。這些變數不是命令。你在旋轉之前或是之後設定平移，得到的都是相同</description>
+    </item>
+    
+    <item>
       <title>14A 眼 vs. 攝影機（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-01/14a-eye-vs.-camera/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-01/14a-eye-vs.-camera/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 01\/14A Eye vs. Camera - Interactive 3D Graphics-yu7zoGoccFM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>15 旋轉再縮放</title>
+      <link>https://franknine.github.io/cs291/lesson-09/15-rotate-then-scale/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/15-rotate-then-scale/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/15 Rotate, then Scale - Interactive 3D Graphics-a1cz6jAtd0Y.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Three.js 互動式場景編輯器 是個實驗的好地方。先定義一個定向光，然後加物件到場景裡，接著試著改變平移、旋轉、縮放。</description>
     </item>
     
     <item>
@@ -1640,6 +1820,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>16 堆雪人</title>
+      <link>https://franknine.github.io/cs291/lesson-09/16-build-a-snowman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/16-build-a-snowman/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/16 Build a Snowman - Interactive 3D Graphics-VxQmQ3o4fDA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。必要時請參考 14 縮放</description>
+    </item>
+    
+    <item>
       <title>16 幾種三角剖分？</title>
       <link>https://franknine.github.io/cs291/lesson-04/16-how-many-triangulations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1664,6 +1853,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-01/16-screen-door/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 01\/16 Screen Door - Interactive 3D Graphics-f7C4ZaS5eR0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 圖片來自 Wikimedia Commons。 參考 我的文章 以獲得關於 “frustum” 拼法的資訊。</description>
+    </item>
+    
+    <item>
+      <title>16A 堆雪人（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-09/16a-build-a-snowman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/16a-build-a-snowman/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/16A Build a Snowman - Interactive 3D Graphics-BiZqcgBgXZg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 替換 fillScene() 末端的 cylinder.position 呼叫成： 1 2 cylinder.rotation.x = 90 * Math.PI/180; cylinder.position.y = 50; 記得你設定旋轉與位置的程式順序沒有關係，Three.js</description>
     </item>
     
     <item>
@@ -1694,6 +1892,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>17 旋轉再平移</title>
+      <link>https://franknine.github.io/cs291/lesson-09/17-rotate-then-translate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/17-rotate-then-translate/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/17 Rotate, then Translate - Interactive 3D Graphics-CmgSye6-Ack.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我想要澄清常見的誤會，你在 Three.js 對 rotation 跟 translation 賦值的順序是無關的。當物件被繪製時座標變換的順序總是縮放、旋轉、平移</description>
+    </item>
+    
+    <item>
       <title>17 頂點與剔除</title>
       <link>https://franknine.github.io/cs291/lesson-04/17-vertex-ordering-and-culling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1709,6 +1916,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-07/17a-vector-length/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 07\/17A Vector Length - Interactive 3D Graphics-eqk7O06Hytc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>18 Object3D</title>
+      <link>https://franknine.github.io/cs291/lesson-09/18-object3d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/18-object3d/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/18 Object3D - Interactive 3D Graphics-RBemS5NCVyw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); TRS-80 的介紹可以在 維基上 跟 這裡 找到。</description>
     </item>
     
     <item>
@@ -1775,12 +1991,30 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>19 兩根指針</title>
+      <link>https://franknine.github.io/cs291/lesson-09/19-two-clock-hands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/19-two-clock-hands/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/19 Two Clock Hands - Interactive 3D Graphics-2m5wFlUdq-U.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
       <title>19 創造模型</title>
       <link>https://franknine.github.io/cs291/lesson-04/19-model-creation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/19-model-creation/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 04\/19 Model Creation - Interactive 3D Graphics-b-FqTJ94Jdg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 Three.js 本身內建的 Loader 類別。Webgl-loader 可以將模型轉換成 WebGL 能讀取的格式。 《WebGL Beginne</description>
+    </item>
+    
+    <item>
+      <title>19A 兩根指針（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-09/19a-two-clock-hands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/19a-two-clock-hands/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/19A Two Clock Hands - Interactive 3D Graphics--Q2yevxvUII.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將 fillScene() cube.rotation 以下替換成： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 var minuteHand = new THREE.Object3D(); minuteHand.add( cube ); minuteHand.rotation.y = -60 * Math.PI/180; scene.add( minuteHand ); var sphere = new THREE.Mesh(</description>
     </item>
     
     <item>
@@ -1799,6 +2033,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-07/20-diffuse-material/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 07\/20 Diffuse Material - Interactive 3D Graphics-gkZwY0dt7pk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 總結來說你要： 將材質</description>
+    </item>
+    
+    <item>
+      <title>20 物件的階層</title>
+      <link>https://franknine.github.io/cs291/lesson-09/20-hierarchy-of-objects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/20-hierarchy-of-objects/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/20 Hierarchy of Objects - Interactive 3D Graphics-rXoGR5pobG4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); &amp;ldquo;The Hunting of the Snark&amp;rdquo; 原文在 這裡。</description>
     </item>
     
     <item>
@@ -1838,12 +2081,30 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>21 實例化</title>
+      <link>https://franknine.github.io/cs291/lesson-09/21-instancing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/21-instancing/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/21 Instancing - Interactive 3D Graphics-gPwDB6o6u7E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 看 這個展示 在螢幕上顯示 5000 個實例化的模型。實例化更深入介紹可以在 這篇文章 找到。</description>
+    </item>
+    
+    <item>
       <title>21 著色法向量</title>
       <link>https://franknine.github.io/cs291/lesson-07/21-shading-normal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-07/21-shading-normal/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 07\/21 Shading Normal - Interactive 3D Graphics-CjVsEGafXuk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>21A 實例化（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-09/21a-reasons-for-instancing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/21a-reasons-for-instancing/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/21A Reasons for Instancing - Interactive 3D Graphics-B0JPoF9_MxQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -1865,6 +2126,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>22 機械手臂</title>
+      <link>https://franknine.github.io/cs291/lesson-09/22-robot-arm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/22-robot-arm/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/22 Robot Arm - Interactive 3D Graphics-ha8eVE_Znz0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 是的，上臂是在前臂下面。想像是我的 T-850 終結者 還在工廠生產中。</description>
+    </item>
+    
+    <item>
       <title>22 茶壺的歷史</title>
       <link>https://franknine.github.io/cs291/lesson-01/22-history-of-the-teapot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1880,6 +2150,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-07/23-ka-kd-and-hsl/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 07\/23 Ka, Kd, and HSL - Interactive 3D Graphics-xWGNrRH9g8s.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>23 機械手臂展示</title>
+      <link>https://franknine.github.io/cs291/lesson-09/23-demo-robot-arm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-09/23-demo-robot-arm/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -2123,15 +2402,6 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-01/33-how-the-z-buffer-works/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 01\/33 How the Z-Buffer Works - Interactive 3D Graphics-yhwg_O5HBwQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
-    </item>
-    
-    <item>
-      <title>34 Over 運算子小考</title>
-      <link>https://franknine.github.io/cs291/lesson-07/34-the-over-operator-quiz/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/34-the-over-operator-quiz/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 07\/34 The Over Operator Quiz - Interactive 3D Graphics-JgnGQH09zGU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>

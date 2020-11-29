@@ -1,0 +1,55 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/p0NE5VhP-GY?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 09\/14 Scale Rotate Translate - Interactive 3D Graphics-p0NE5VhP-GY.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>對 Three.js 的物件來說，給變數賦值的順序沒有關係。這些變數不是命令。你在旋轉之前或是之後設定平移，得到的都是相同結果。你設定的變數通常在繪製時以固定順序運算（縮放、旋轉、平移）。</p>
+<p>舉例來說，你旋轉平移一個物件如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">box.position.x = 3.0;
+box.rotation.y = 5.7;
+</code></pre></td></tr></table>
+</div>
+</div><p>這樣沒問題，而以下的程式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">box.rotation.y = 5.7;
+box.position.x = 3.0;
+</code></pre></td></tr></table>
+</div>
+</div><p>會做完全一樣的事。再一個例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">box.rotation.y = 122113.01;
+box.rotation.y = 5.7;
+box.position.x = 78893.02;
+box.position.x = 3.0;
+</code></pre></td></tr></table>
+</div>
+</div><p>結果也是一樣；只有最後一個賦值有效。你在設置場景時如何賦值都沒有關係，只有在繪圖時最後一個設定的值才會被取出使用。Three.js 在世界座標空間以固定順序運算： 縮放、旋轉、平移（位置）。</p>
+<p>這個行為隨不同的圖學程式庫會有不同，有些會把座標變換當成命令，直接依照你給的順序運算。這裡你是設定變數，不是發出命令，變數之後以固定順序施加在物件上。</p>
+<p>如果你想要不同的順序，需要使用 <code>Object3D</code>，我們不久後會提到。</p>
+
+</div>

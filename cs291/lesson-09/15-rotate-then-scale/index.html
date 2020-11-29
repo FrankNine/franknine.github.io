@@ -1,0 +1,15 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/a1cz6jAtd0Y?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 09\/15 Rotate, then Scale - Interactive 3D Graphics-a1cz6jAtd0Y.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Three.js <a href="https://threejs.org/editor/">互動式場景編輯器</a> 是個實驗的好地方。先定義一個定向光，然後加物件到場景裡，接著試著改變平移、旋轉、縮放。</p>
+
+</div>

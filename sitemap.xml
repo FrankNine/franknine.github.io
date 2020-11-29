@@ -287,6 +287,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/01-overview/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-05/01-polygon-creator/</loc>
   </url>
   
@@ -347,6 +351,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/02-point-and-vector-operations/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-02/02a-what-is-not-paintable/</loc>
   </url>
   
@@ -376,6 +384,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-05/03-polygon-radius/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/03-coordinate-values/</loc>
   </url>
   
   <url>
@@ -443,6 +455,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/04-point-and-vector-sum/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-05/04a-build-a-stairway/</loc>
   </url>
   
@@ -455,7 +471,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/04a-point-and-vector-sum/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/05-rgb-color-demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/05-vector-operation/</loc>
   </url>
   
   <url>
@@ -484,6 +508,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-06/05-variety/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/05a-vector-operation/</loc>
   </url>
   
   <url>
@@ -520,6 +548,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/06-the-sun-also-rises/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/06-translation/</loc>
   </url>
   
   <url>
@@ -563,6 +595,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/07-rotation/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-06/07-minimum-requirements/</loc>
   </url>
   
@@ -599,6 +635,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/08-rotate-a-block/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/08-what-color-is-chartreuse/</loc>
   </url>
   
@@ -611,7 +651,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/08a-rotate-a-block/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/08a-what-color-is-chartreuse/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/09-name-that-object/</loc>
   </url>
   
   <url>
@@ -627,6 +675,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/09a-name-that-object/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/09a-coordinate-system-transform/</loc>
   </url>
   
@@ -636,6 +688,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/10-cpu-cycles/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/10-euler-angles/</loc>
   </url>
   
   <url>
@@ -655,11 +711,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/11-demo-euler-angles/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/11-the-eye/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/11-color-interpolation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/12-rigid-body-transforms-vs-scaling/</loc>
   </url>
   
   <url>
@@ -687,11 +751,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/13-scale-a-sphere/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/13a-create-a-square/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/13a-seeing-is-believing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/13a-scale-a-sphere/</loc>
   </url>
   
   <url>
@@ -707,7 +779,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/14-scale-rotate-translate/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/14a-eye-vs.-camera/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/15-rotate-then-scale/</loc>
   </url>
   
   <url>
@@ -727,6 +807,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/16-build-a-snowman/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/16-how-many-triangulations/</loc>
   </url>
   
@@ -736,6 +820,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/16-screen-door/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/16a-build-a-snowman/</loc>
   </url>
   
   <url>
@@ -751,11 +839,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/17-rotate-then-translate/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/17-vertex-ordering-and-culling/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/17a-vector-length/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/18-object3d/</loc>
   </url>
   
   <url>
@@ -787,7 +883,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/19-two-clock-hands/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/19-model-creation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/19a-two-clock-hands/</loc>
   </url>
   
   <url>
@@ -796,6 +900,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/20-diffuse-material/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/20-hierarchy-of-objects/</loc>
   </url>
   
   <url>
@@ -815,7 +923,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/21-instancing/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/21-shading-normal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/21a-reasons-for-instancing/</loc>
   </url>
   
   <url>
@@ -827,11 +943,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/22-robot-arm/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/22-history-of-the-teapot/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/23-ka-kd-and-hsl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/23-demo-robot-arm/</loc>
   </url>
   
   <url>
@@ -940,10 +1064,6 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/33-how-the-z-buffer-works/</loc>
-  </url>
-  
-  <url>
-    <loc>https://franknine.github.io/cs291/lesson-07/34-the-over-operator-quiz/</loc>
   </url>
   
   <url>
@@ -1088,6 +1208,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-08/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-09/</loc>
   </url>
   
   <url>

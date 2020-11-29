@@ -1,0 +1,59 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/-Q2yevxvUII?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 09\/19A Two Clock Hands - Interactive 3D Graphics--Q2yevxvUII.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><strong>解答：</strong> 將 <code>fillScene()</code> <code>cube.rotation</code> 以下替換成：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var minuteHand = new THREE.Object3D();
+minuteHand.add( cube );
+
+minuteHand.rotation.y = -60 * Math.PI/180;
+scene.add( minuteHand );
+
+var sphere = new THREE.Mesh( new THREE.SphereGeometry( 0.5, 32, 16 ), hourHandMaterial );
+sphere.position.y = 18;    // move the hand above the other hand
+
+sphere.scale.x = 50;
+sphere.scale.y = 4;
+sphere.scale.z = 4;
+sphere.position.x = 50/2 - 10;
+
+var hourHand = new THREE.Object3D();
+hourHand.add( sphere );
+
+hourHand.rotation.y = 30 * Math.PI/180;
+scene.add( hourHand );
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
