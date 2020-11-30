@@ -287,6 +287,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/01-extended-robot-arm/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-09/01-overview/</loc>
   </url>
   
@@ -308,6 +312,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-08/01a-rgb-representation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/01a-extended-robot-arm/</loc>
   </url>
   
   <url>
@@ -343,6 +351,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/02-robot-hand/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/02-cartesian-coordinates/</loc>
   </url>
   
@@ -363,6 +375,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/02a-robot-hand/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-08/02a-shiny-bird/</loc>
   </url>
   
@@ -376,6 +392,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/03-rgb-color-definition/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/03-series-of-transforms/</loc>
   </url>
   
   <url>
@@ -404,6 +424,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/03a-fps-vs.-milliseconds/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/03a-series-of-transforms/</loc>
   </url>
   
   <url>
@@ -443,6 +467,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/04-scale-versus-translate/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-02/04-rendering-costs/</loc>
   </url>
   
@@ -463,6 +491,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/04a-scale-versus-translate/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</loc>
   </url>
   
@@ -476,6 +508,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/05-rgb-color-demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/05-make-a-flower/</loc>
   </url>
   
   <url>
@@ -508,6 +544,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-06/05-variety/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/05a-make-a-flower/</loc>
   </url>
   
   <url>
@@ -555,6 +595,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/06-improved-petals/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-06/06-styles-of-materials/</loc>
   </url>
   
@@ -576,6 +620,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/06a-the-sun-also-rises/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/06a-improved-petals/</loc>
   </url>
   
   <url>
@@ -1212,6 +1260,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-09/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-10/</loc>
   </url>
   
   <url>

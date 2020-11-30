@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lesson 10 問題集 on Northern Wind</title>
+    <link>https://franknine.github.io/cs291/lesson-10/</link>
+    <description>Recent content in Lesson 10 問題集 on Northern Wind</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    
+	<atom:link href="https://franknine.github.io/cs291/lesson-10/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>01 擴充機械手臂</title>
+      <link>https://franknine.github.io/cs291/lesson-10/01-extended-robot-arm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/01-extended-robot-arm/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/01 Extended Robot Arm - Interactive 3D Graphics-5MzKJVvuLfU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
+      <title>01A 擴充機械手臂（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-10/01a-extended-robot-arm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/01a-extended-robot-arm/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/01A Extended Robot Arm - Interactive 3D Graphics-K6Dj9ROAsxw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 刪除 fillScene() 裡的 scene.add( arm ) 並用以下取代： 1 2 3 4 5 6 7 8 9 10 body = new THREE.Object3D(); var bodyLength = 60; // 解答 createRobotBody( body, bodyLength, robotBodyMaterial ); // 將上臂移動到身</description>
+    </item>
+    
+    <item>
+      <title>02 機械手掌</title>
+      <link>https://franknine.github.io/cs291/lesson-10/02-robot-hand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/02-robot-hand/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/02 Robot Hand - Interactive 3D Graphics-RssY-aa2zZo.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
+      <title>02A 機械手掌（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-10/02a-robot-hand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/02a-robot-hand/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/02A Robot Hand - Interactive 3D Graphics-gbwFRjAeM2I.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將這段程式加到 fillScene() 末端： 1 2 3 4 5 6 // solution handRight = new THREE.Object3D(); createRobotGrabber( handRight, handLength, robotHandRightMaterial ); // 移動到前臂末端 handRight.position.y = faLength; forearm.add( handRight ); 在 render() 裡 handLeft 後面： 1</description>
+    </item>
+    
+    <item>
+      <title>03 一連串座標變換</title>
+      <link>https://franknine.github.io/cs291/lesson-10/03-series-of-transforms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/03-series-of-transforms/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/03 Series of Transforms - Interactive 3D Graphics-QGERQO-eOCE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>03A 一連串座標變換（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-10/03a-series-of-transforms/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/03a-series-of-transforms/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/03A Series of Transforms - Interactive 3D Graphics-H9nrKhpZvYE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>04 縮放 vs. 平移</title>
+      <link>https://franknine.github.io/cs291/lesson-10/04-scale-versus-translate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/04-scale-versus-translate/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/04 Scale versus Translate - Interactive 3D Graphics-Hrm7cDhsxhU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>04A 縮放 vs. 平移（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-10/04a-scale-versus-translate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/04a-scale-versus-translate/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/04A Scale versus Translate - Interactive 3D Graphics-V1GuIFDrxJY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>05 做一朵花</title>
+      <link>https://franknine.github.io/cs291/lesson-10/05-make-a-flower/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/05-make-a-flower/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/05 Make a Flower - Interactive 3D Graphics-eXgIJ9A7vcU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
+      <title>05A 做一朵花（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-10/05a-make-a-flower/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/05a-make-a-flower/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/05A Make a Flower - Interactive 3D Graphics-qj5s-_ex3j8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：這裡的圓柱指的是題目裡的圓錐 解答： 將以下程式加入 fillScene()： 1 2 3 4 5 6 7 8 9 10 11 12 13</description>
+    </item>
+    
+    <item>
+      <title>06 改良的花瓣</title>
+      <link>https://franknine.github.io/cs291/lesson-10/06-improved-petals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/06-improved-petals/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/06 Improved Petals - Interactive 3D Graphics-n0TeNrGJCs8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
+      <title>06A 改良的花瓣（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-10/06a-improved-petals/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-10/06a-improved-petals/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 10\/06A Improved Petals - Interactive 3D Graphics-riAACrA8fyU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將以下加入 fillScene()： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 for ( var i = 0; i &amp;lt; 24 ; i++ ) { var cylinder = new THREE.Mesh(</description>
+    </item>
+    
+  </channel>
+</rss>

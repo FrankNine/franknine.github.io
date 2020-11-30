@@ -1,0 +1,52 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/qj5s-_ex3j8?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 10\/05A Make a Flower - Interactive 3D Graphics-qj5s-_ex3j8.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>譯註：這裡的圓柱指的是題目裡的圓錐</p>
+<p><strong>解答：</strong> 將以下程式加入 <code>fillScene()</code>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var flower = new THREE.Object3D();
+
+for ( var i = 0; i &lt; 24 ; i++ )
+{
+    var cylinder = new THREE.Mesh( cylGeom, petalMaterial );
+    cylinder.position.y = petalLength / 2;
+
+    var petal = new THREE.Object3D();
+    petal.add( cylinder );
+    petal.rotation.z = 90 * Math.PI/180;
+    petal.rotation.y = 15*i * Math.PI/180;
+    petal.position.y = flowerHeight;
+
+    flower.add( petal );
+}
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>

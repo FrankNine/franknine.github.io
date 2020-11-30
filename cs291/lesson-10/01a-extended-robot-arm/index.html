@@ -1,0 +1,60 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/K6Dj9ROAsxw?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 10\/01A Extended Robot Arm - Interactive 3D Graphics-K6Dj9ROAsxw.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><strong>解答：</strong> 刪除 <code>fillScene()</code> 裡的 <code>scene.add( arm )</code> 並用以下取代：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">body = new THREE.Object3D();
+var bodyLength = 60;
+// 解答
+createRobotBody( body, bodyLength, robotBodyMaterial );
+
+// 將上臂移動到身體的頂端
+arm.position.y = bodyLength;
+body.add( arm );
+
+scene.add( body );
+</code></pre></td></tr></table>
+</div>
+</div><p>然後取消以下三行的註解：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">// UNCOMMENT FOLLOWING LINES TO ENABLE CONTROLS FOR BODY:
+// body.rotation.y = effectController.by * Math.PI/180;	// yaw
+
+// by: 0.0,
+
+// student, uncomment: h.add(effectController, &#34;by&#34;, -180.0, 180.0, 0.025).name(&#34;Body y&#34;);
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
