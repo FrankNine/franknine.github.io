@@ -1,0 +1,17 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/jhDRmmFiQhU?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 13\/15 Shadow Buffer Limitations - Interactive 3D Graphics-jhDRmmFiQhU.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>你可以試著操作課程使用的 <a href="http://threejs.org/examples/#webgl_shading_physical">展示</a>，非常值得。</p>
+<p>這只是在 GPU 上計算影子的最基本演算法，參考 <a href="https://web.archive.org/web/20180402132722/codeflow.org/entries/2013/feb/22/how-to-write-portable-webgl/">這頁</a> 以獲得更多演算法資訊，<a href="https://web.archive.org/web/20190326205647/http://codeflow.org/webgl/shadow-mapping/">這裡</a> 有各個演算法的展示動畫。但當中介紹的 <a href="http://lousodrome.net/blog/light/2012/01/23/variance-shadow-maps/">VSM</a> 有漏光問題。</p>
+<p>常見影子算法的彙整可以在 <a href="http://resources.mpi-inf.mpg.de/ShadowCourse/">這裡</a> 找到。</p>
+
+</div>

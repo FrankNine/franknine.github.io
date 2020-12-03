@@ -1,0 +1,16 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/0e01qWckKD4?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 13\/12 Shadow Mapping - Interactive 3D Graphics-0e01qWckKD4.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><a href="https://www.cabinetmagazine.org/issues/24/turner_stoichita.php">這篇文章</a> 介紹了影子的歷史、小孩何時認識到影子之類的有趣知識。</p>
+<p>Lance William 的演算法原始文章是 “<a href="http://artis.imag.fr/~Cyril.Soler/DEA/Ombres/Papers/William.Sig78.pdf">Casting Curved Shadows on Curved Surfaces</a>”。</p>
+
+</div>

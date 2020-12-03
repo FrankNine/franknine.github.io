@@ -283,6 +283,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/01-lights/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/01-coordinate-system/</loc>
   </url>
   
@@ -336,6 +340,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/02-interactive-3d-rendering/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/02-photons-as-particles/</loc>
   </url>
   
   <url>
@@ -407,6 +415,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/03-directional-lights/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-09/03-coordinate-values/</loc>
   </url>
   
@@ -444,6 +456,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/03a-point-or-vector/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/04-directional-light-in-three.js/</loc>
   </url>
   
   <url>
@@ -543,6 +559,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/05-set-a-directional-light/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-06/05-variety/</loc>
   </url>
   
@@ -568,6 +588,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-02/05a-firefly/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/05a-set-a-directional-light/</loc>
   </url>
   
   <url>
@@ -611,6 +635,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/06-a-point-light/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-05/06a-z-fighting/</loc>
   </url>
   
@@ -648,6 +676,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-06/07-minimum-requirements/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/07-ambient-lighting/</loc>
   </url>
   
   <url>
@@ -699,11 +731,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/08-head-light/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-09/08a-rotate-a-block/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/08a-what-color-is-chartreuse/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/08a-head-light/</loc>
   </url>
   
   <url>
@@ -716,6 +756,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/09-math-refresher/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/09-spot-light/</loc>
   </url>
   
   <url>
@@ -739,6 +783,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/10-spot-light-in-three.js/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-09/10-euler-angles/</loc>
   </url>
   
@@ -751,7 +799,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/10a-spot-light-in-three.js/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/10a-vertex-attributes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/11-deferred-rendering/</loc>
   </url>
   
   <url>
@@ -768,6 +824,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-07/11-color-interpolation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/12-shadow-mapping/</loc>
   </url>
   
   <url>
@@ -791,6 +851,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/13-shadow-buffer-characteristics/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/13-seeing-is-believing/</loc>
   </url>
   
@@ -807,11 +871,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/13a-shadow-buffer-characteristics/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/13a-seeing-is-believing/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-09/13a-scale-a-sphere/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/14-shadows-in-three.js/</loc>
   </url>
   
   <url>
@@ -831,7 +903,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/14a-shadows-in-three.js/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/14a-eye-vs.-camera/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/15-shadow-buffer-limitations/</loc>
   </url>
   
   <url>
@@ -852,6 +932,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/15a-minimum-triangulation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/16-ray-tracing/</loc>
   </url>
   
   <url>
@@ -880,6 +964,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/17-3d-scene/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/17-ray-tracing-history-and-future/</loc>
   </url>
   
   <url>
@@ -915,11 +1003,19 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/18-whats-missing/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/18a-return-of-the-square/</loc>
   </url>
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/18a-how-many-pixels/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/18a-whats-missing/</loc>
   </url>
   
   <url>
@@ -939,7 +1035,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/19-path-tracing/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-09/19a-two-clock-hands/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/20-umbra-and-penumbra/</loc>
   </url>
   
   <url>
@@ -967,6 +1071,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/21-glimpse-of-higher-end-techniques/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/21-reversing-the-process/</loc>
   </url>
   
@@ -980,6 +1088,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-09/21a-reasons-for-instancing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/22-david-larsson-introduction/</loc>
   </url>
   
   <url>
@@ -1003,6 +1115,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/23-shadow-summary/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-09/23-demo-robot-arm/</loc>
   </url>
   
@@ -1023,6 +1139,14 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/24-indirect-lighting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/25-which-are-global/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/25-baking/</loc>
   </url>
   
@@ -1031,7 +1155,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/25a-which-are-global/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/25a-baking/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/26-hemisphere-lights/</loc>
   </url>
   
   <url>
@@ -1044,6 +1176,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/26a-advanced-box-factory/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/27-skylighting/</loc>
   </url>
   
   <url>
@@ -1063,6 +1199,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/28-fog/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/28a-bottleneck/</loc>
   </url>
   
@@ -1072,6 +1212,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/29-stalling-and-starving/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/29-demo-three.js-fog/</loc>
   </url>
   
   <url>
@@ -1264,6 +1408,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-10/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-13/</loc>
   </url>
   
   <url>

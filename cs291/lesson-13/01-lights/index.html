@@ -1,0 +1,16 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/eyIWA6ehJMU?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 13\/01 Lights - Interactive 3D Graphics-eyIWA6ehJMU.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這個展示使用了延遲著色（Deferred shading）的技術，我們之後會談到。</p>
+<p>提醒一下課程的程式、參考資料都能在 <a href="https://www.udacity.com/wiki/cs291">課程維基</a> 上找到。所有 <a href="https://www.udacity.com/wiki/cs291/instructor-comments">講師註記</a> 都在同一個地方。</p>
+
+</div>

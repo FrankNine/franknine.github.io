@@ -1,0 +1,17 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/bN8AV_x4BXI?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 13\/16 Ray Tracing - Interactive 3D Graphics-bN8AV_x4BXI.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>有一些互動式的 WebGL 光線追蹤實作 <a href="http://hoxxep.github.io/webgl-ray-tracing-demo/">像是這個</a> 還有 <a href="http://frog.ivank.net/">這個</a>。</p>
+<p>目前我最喜歡的光線追蹤介紹書籍是 <a href="http://www.amazon.com/Ray-Tracing-Ground-Kevin-Suffern/dp/1568812728?tag=realtimerenderin">“Ray Tracing from the Ground Up.”</a> 我有一場比較光線追蹤跟柵格化的演講投影片在 <a href="http://erich.realtimerendering.com/RT08.pdf">這裡</a>。相關的連結在 <a href="http://erich.realtimerendering.com/">我的網站</a>。然後我編纂 <a href="http://www.realtimerendering.com/resources/RTNews/html/">非正式的光線追蹤期刊</a> 持續了約 20 年。</p>
+<p>譯註：關於光線追蹤有新的實作參考書籍問世，Peter Shirley 的 <a href="https://raytracing.github.io/">Ray Tracing in One Weekend 三部曲</a>。</p>
+
+</div>

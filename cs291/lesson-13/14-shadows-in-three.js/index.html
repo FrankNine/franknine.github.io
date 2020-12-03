@@ -1,0 +1,16 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/jd4bP1jATZA?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 13\/14 Shadows in three.js - Interactive 3D Graphics-jd4bP1jATZA.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>譯註：請移動到 <a href="https://jsfiddle.net/aaefiikmnnnr/5aem8tf2/">這裡</a> 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</p>
+<p>作業完成後試著調整 “Shadow Bias” 滑桿。我在下堂課會解釋，但現在可以自己嘗試感受一下。</p>
+
+</div>

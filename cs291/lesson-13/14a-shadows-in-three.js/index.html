@@ -1,0 +1,42 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/tMnivhkz96E?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 13\/14A Shadows in three.js - Interactive 3D Graphics-tMnivhkz96E.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><code>light.castShadow</code> 應該改成 <code>spotlight.castShadow</code>。</p>
+<p><strong>解答：</strong> 將以下程式加到 <code>init()</code> 創造 <code>renderer</code> 之後：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">renderer.shadowMapEnabled = true;
+</code></pre></td></tr></table>
+</div>
+</div><p>在 <code>fillScene()</code> 創造聚光燈後加入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">spotlight.castShadow = true;
+</code></pre></td></tr></table>
+</div>
+</div><p>在創造 <code>solidGround</code> 之後加入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">solidGround.receiveShadow = true;
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
