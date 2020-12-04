@@ -650,6 +650,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>01 全向光</title>
+      <link>https://franknine.github.io/cs291/lesson-14/01-omni-light/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/01-omni-light/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/01 Omni Light - Interactive 3D Graphics-NA0zhkkXacQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>01 座標系統</title>
       <link>https://franknine.github.io/cs291/lesson-04/01-coordinate-system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -719,6 +728,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-08/01a-rgb-representation/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 08\/01A RGB Representation - Interactive 3D Graphics-oWI3pRSCvWM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>01A 全向光（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-14/01a-omni-light/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/01a-omni-light/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/01A Omni Light - Interactive 3D Graphics-Ec86qBgKCTI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
@@ -812,6 +830,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>02 旋轉式燈控制</title>
+      <link>https://franknine.github.io/cs291/lesson-14/02-swivel-light-control/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/02-swivel-light-control/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/02 Swivel Light Control - Interactive 3D Graphics-wRN_PT6wXJI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+    </item>
+    
+    <item>
       <title>02 機械手掌</title>
       <link>https://franknine.github.io/cs291/lesson-10/02-robot-hand/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -863,6 +890,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-05/02a-polygon-location/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 05\/02A Polygon Location - Interactive 3D Graphics-fu4JkqM2lkA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 修改 PolygonGeometry() 的程式： 1 2 var x = Math.cos( angle ) + location.x; var y = Math.sin( angle ) + location.y;</description>
+    </item>
+    
+    <item>
+      <title>02A 旋轉式燈控制（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-14/02a-swivel-light-control/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/02a-swivel-light-control/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/02A Swivel Light Control - Interactive 3D Graphics-uEBmi2M-eBw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 在 render() 呼叫 renderer.render 之前加入： 1 2 light.position.x = Math.cos( effectController.angle * Math.PI/180.0 ); light.position.z = Math.sin( effectController.angle * Math.PI/180.0 );</description>
     </item>
     
     <item>
@@ -965,6 +1001,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>03 旋轉傾斜式燈控制</title>
+      <link>https://franknine.github.io/cs291/lesson-14/03-swivel-and-tilt-light-control/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/03-swivel-and-tilt-light-control/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/03 Swivel and Tilt Light Control - Interactive 3D Graphics-Bzz5352_oo8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 仰角–方位角圖</description>
+    </item>
+    
+    <item>
       <title>03 第一堂小考</title>
       <link>https://franknine.github.io/cs291/lesson-01/03-first-quiz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1019,6 +1064,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>03A 旋轉傾斜式燈控制（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-14/03a-swivel-and-tilt-light-control/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/03a-swivel-and-tilt-light-control/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/03A Swivel and Tilt Light Control - Interactive 3D Graphics-DBtFImUZYDA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將以下加到 render() renderer.render 之前： 1 2 3 4 5 6 // 仰角 light.position.y = Math.sin( effectController.altitude * Math.PI/180.0 ); // 方位角 var length = Math.sqrt(1 - light.position.y * light.position.y); light.position.x = length * Math.cos( effectController.azimuth * Math.PI/180.0 );</description>
+    </item>
+    
+    <item>
       <title>03A 第一堂小考（解答）</title>
       <link>https://franknine.github.io/cs291/lesson-01/03a-first-quiz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1070,6 +1124,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-03/04-any-shape-can-be-made/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 03\/04 Any Shape Can Be Made - Interactive 3D Graphics-bfbcCRSufIY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>04 光的屬性</title>
+      <link>https://franknine.github.io/cs291/lesson-14/04-light-characteristics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/04-light-characteristics/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/04 Light Characteristics - Interactive 3D Graphics-KQGkoKF7JCI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Three.js 函式庫的 AmbientLight API 在課程錄製後有了改變。請參考 舊版文件 以作答。</description>
     </item>
     
     <item>
@@ -1133,6 +1196,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-09/04-point-and-vector-sum/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 09\/04 Point and Vector Sum - Interactive 3D Graphics-jrEoJaFRyM4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>04A 光的屬性（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-14/04a-light-characteristics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/04a-light-characteristics/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/04A Light Characteristics - Interactive 3D Graphics-wj0HPXKnHZI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 這個課程使用的 Three.js 版本，AmbientLight 沒有強度，所以那格沒有勾。其他的答案應該一樣。</description>
     </item>
     
     <item>
@@ -1235,6 +1307,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>05 消失的聚光燈</title>
+      <link>https://franknine.github.io/cs291/lesson-14/05-the-disappearing-spotlight/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/05-the-disappearing-spotlight/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/05 The Disappearing Spotlight - Interactive 3D Graphics-kJs5AHruxTk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>05 紙燈籠著色</title>
       <link>https://franknine.github.io/cs291/lesson-08/05-paper-lantern-shading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -1313,6 +1394,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-04/05a-left-handed-or-right-handed/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 04\/05A Left-Handed or Right-Handed - Interactive 3D Graphics-OxZDg32bazU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>05A 消失的聚光燈（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-14/05a-the-disappearing-spotlight/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-14/05a-the-disappearing-spotlight/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 14\/05A The Disappearing Spotlight - Interactive 3D Graphics-Z6kiRugtnyA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
     </item>
     
     <item>
