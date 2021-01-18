@@ -1,0 +1,25 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/-jhYLJHp2_c?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 15\/16 Clipping - Interactive 3D Graphics--jhYLJHp2_c.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>(0, 5, 3.8, 5) 這個點的 NDC 座標是  (0, 1, 7.6)，在 NDC 視野容體的頂端（視埠（Viewport）的頂端，Y 等於 1）。</p>
+<p>多提一些裁切座標，在除 W 之前裁切感覺有點怪。有點難理解四維的「W 空間」，但在 XYZW 空間／裁切座標裡面進行裁切是必須的。一種看法是當視野容體除 W 之前範圍在 -W ~ +W 之間，類似除 W 後進到 NDC 在 -1 ~ 1 之間。任何點 X, Y 或 Z 值在 [-W, W] 之外就是視野容體外需要裁切。</p>
+<p>如果我們關心的是空間中獨立的點，在除 W 前後進行裁切結果相同。我們能除完之後再看點是否在螢幕上（嗯，有個例外，如果 W 是 0 要裁切掉以免除以 0，負 W 的點也要裁切因為代表在眼睛後面）。但如果處理的是線段或是三角形的邊，就必須在除 W 之前進行。因為在透視空間除以 W 會造成非線性的變化。想像在透視畫一個棋盤並靠近，越遠的格子越小越短。繼續接近，棋盤的底面就會被裁切。如果你在透視除法後裁切，則貼圖內插用的 UV 會是錯的。你想要線性地切除棋盤，但實際上你要的是在透視、雙曲的空間進行切除。</p>
+<p>如果我在影片裡的線段上等分放五個點，你會看到在投影後這幾個點不再等距，就像透視下的棋盤沿著邊看格子大小不一。XYZ 線性變化，但 W 也是，造成最終繪圖的透視感。在裁切空間裁切，我們才能妥善保持透視投影。</p>
+<p>譯註：如果只是要大致了解裁切的功用可以看過影片就好，註解的部分老實說我也沒有完全懂。可以確定的是裁切必須要在四維進行才會是對的，我找到的四維裁切範例實作在：<br>
+<a href="https://web.archive.org/web/20110528221654/http://wwwx.cs.unc.edu/~sud/courses/236/a5/softgl_homoclip_smooth.cpp">https://web.archive.org/web/20110528221654/http://wwwx.cs.unc.edu/~sud/courses/236/a5/softgl_homoclip_smooth.cpp</a></p>
+<p>關於齊次座標系的投影找到最直覺的解釋是祖師爺 Jim Blinn 的論文，可以參考：</p>
+<p><a href="https://www.microsoft.com/en-us/research/publication/clipping-using-homogeneous-coordinates/">Clipping Using Homogeneous Coordinates</a> 與 <a href="https://www.ece.uvic.ca/~bctill/20004/additional/homcoord/00210494.pdf">A Trip Down The Graphics Pipeline: The Homogeneous Perspective Transform</a></p>
+<p>關於 UV 在除 W 之後內插會錯，其實深度有一樣的問題，這裡有個關於 Z 深度為什麼不直接存 Z 值的 Stackoverflow 回答有很好的圖示：</p>
+<p><a href="https://stackoverflow.com/a/47802596/1294533">https://stackoverflow.com/a/47802596/1294533</a></p>
+<p>如果我真的弄懂了會再更新在這裡</p>
+
+</div>

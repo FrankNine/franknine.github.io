@@ -1,0 +1,21 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/54saXOGhB1E?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 15\/14 Perspective Coordinate Transform - Interactive 3D Graphics-54saXOGhB1E.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>提示：跟矩陣相乘時，將以上三個點用列而非行來表示。</p>
+<p>(0,0,-1) 實際上是：</p>
+<p>(0)<br>
+(0)<br>
+(-1)</p>
+<p>將它放在矩陣的右邊做矩陣乘法以取得結果。</p>
+<p>你知道你能將數學算式輸入 <a href="https://www.google.com/">Google 搜尋</a> 它會幫你算嗎？非常好用。</p>
+
+</div>

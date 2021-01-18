@@ -1,0 +1,44 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/q_m03EV4sck?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 15\/12A FOV Slider - Interactive 3D Graphics-q_m03EV4sck.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><strong>解答：</strong> 將 <code>setupGui</code> 改寫為：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">function setupGui() { 
+    effectController = { fov: 40 };
+    var gui = new dat.GUI();
+    var element = gui.add( effectController, &#34;fov&#34;, 1.0, 179.0 );
+    element.name(&#34;field of view&#34;);
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>然後在 <code>render()</code> 呼叫 <code>renderer.render</code> 之前加入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">camera.fov = effectController.fov;
+camera.updateProjectionMatrix();
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>

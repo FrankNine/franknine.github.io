@@ -299,6 +299,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/01-introduction-to-cameras/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-09/01-overview/</loc>
   </url>
   
@@ -375,6 +379,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/02-orthographic-camera/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/02-cartesian-coordinates/</loc>
   </url>
   
@@ -435,6 +443,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/03-demo-orthographic-projection/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-09/03-coordinate-values/</loc>
   </url>
   
@@ -480,6 +492,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-04/03a-point-or-vector/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/04-three.js-orthographic-camera/</loc>
   </url>
   
   <url>
@@ -583,6 +599,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/05-lookat/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-08/05-paper-lantern-shading/</loc>
   </url>
   
@@ -639,6 +659,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/06-three.js-lookat/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-05/06-z-fighting/</loc>
   </url>
   
@@ -676,6 +700,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-13/06-a-point-light/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/06a-three.js-lookat/</loc>
   </url>
   
   <url>
@@ -731,6 +759,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/07-view-transform/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-03/07-design-process/</loc>
   </url>
   
@@ -752,6 +784,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/08-fps-and-refresh-rate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/08-normalized-device-coordinates/</loc>
   </url>
   
   <url>
@@ -799,6 +835,14 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/09-orthographic-matrix-type/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/09a-orthographic-matrix-type/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-13/09-spot-light/</loc>
   </url>
   
@@ -831,6 +875,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/10-perspective-camera/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-07/10-vertex-attributes/</loc>
   </url>
   
@@ -848,6 +896,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-13/11-deferred-rendering/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/11-three.js-perspective-camera/</loc>
   </url>
   
   <url>
@@ -883,7 +935,15 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/12-fov-slider/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/12-the-pinhole-camera/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/12a-fov-slider/</loc>
   </url>
   
   <url>
@@ -904,6 +964,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-09/13-scale-a-sphere/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/13-perspective-matrix/</loc>
   </url>
   
   <url>
@@ -943,6 +1007,14 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/14-perspective-coordinate-transform/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/14a-perspective-coordinate-transform/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-13/14a-shadows-in-three.js/</loc>
   </url>
   
@@ -971,6 +1043,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/15-homogeneous-coordinate/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-04/15a-minimum-triangulation/</loc>
   </url>
   
@@ -992,6 +1068,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/16-screen-door/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/16-clipping/</loc>
   </url>
   
   <url>
@@ -1456,6 +1536,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-14/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/</loc>
   </url>
   
   <url>
