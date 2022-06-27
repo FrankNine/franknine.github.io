@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 open source builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經" />
 
 
 
@@ -40,22 +40,22 @@
 
 
 <meta property="og:title" content="Unity 和 git" />
-<meta property="og:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 open source builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經" />
+<meta property="og:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://franknine.github.io/posts/unity-git/" />
 <meta property="article:published_time" content="2020-05-10T23:20:12+08:00" />
 <meta property="article:modified_time" content="2020-05-10T23:20:12+08:00" />
 <meta itemprop="name" content="Unity 和 git">
-<meta itemprop="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 open source builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經">
+<meta itemprop="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經">
 <meta itemprop="datePublished" content="2020-05-10T23:20:12&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-10T23:20:12&#43;08:00" />
-<meta itemprop="wordCount" content="8637">
+<meta itemprop="wordCount" content="9040">
 
 
 
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity 和 git"/>
-<meta name="twitter:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 open source builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經"/>
+<meta name="twitter:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -119,19 +119,20 @@
         <div id="content" class="content">
           <article class="post">
   <div class="post-content">
-    <p>用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 open source builder <a href="https://gitlab.com/rayark/mimiron-lite">mimiron-lite</a> 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。</p>
-<p>TL;DR 的話可以直接參考已經編輯好的 git 設定檔：<br>
-<a href="https://github.com/FrankNine/RepoConfig">https://github.com/FrankNine/RepoConfig</a></p>
+    <p>用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity builder <a href="https://gitlab.com/rayark/mimiron-lite">mimiron-lite</a> 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。</p>
+<p>TL;DR 的話可以直接參考已經編輯好的 git 設定檔，現在最新的設定包含 Wwise 的 <code>.gitignore</code> 已經獨立更新到： <a href="https://github.com/FrankNine/RepoConfig">https://github.com/FrankNine/RepoConfig</a><br>
+這個 repo fork 自： <a href="https://github.com/rayark/repo-config">https://github.com/rayark/repo-config</a><br>
+公司將這個設定以 <a href="https://tldrlegal.com/license/mit-license">MIT 授權</a> 釋出</p>
 <p>如果對 git 操作不熟悉的話，目前中文教學最推薦的還是 <a href="https://gitbook.tw/">為你自己學 Git</a> by 高見龍。除了線上版教的基本操作外，付費版內很難得有 git 資料結構（commit, tree, blob）的介紹，對於更加熟悉 git 非常有幫助。</p>
 <h1 id="heading">用戶端</h1>
-<p>之前為了公司需要滿足技術人員與非技術背景人員操作的需求 survey 了很多 git 用戶端，目前選定的是需要付費的 <a href="https://git-fork.com/">Fork</a>。在這之前用的是最常見免費的 <a href="https://www.sourcetreeapp.com/">SourceTree</a>，不過登入上常常會出現問題需要排解，還有有的時候檔案多的時候會變很慢，對圖片與 LFS 檔案也沒有預覽支援。另外有些程式同事會選用 Windows git 附帶的 <a href="http://gitextensions.github.io/">Git Extensions</a> 但是這個對美術使用上有些不友善，習慣用戶端有一個視窗的也可能會不習慣 shell extension。還有一個免費的 shell extension 選擇是 <a href="https://tortoisegit.org/">TortoiseGit</a>，對美術素材支援到顯示 LFS 內的圖片，但是在 blame、rebase 之類比較複雜的操作比較不順手。<a href="https://desktop.github.com/">GitHub Desktop</a> 是功能太陽春，<a href="https://www.gitkraken.com/">GitKraken</a> 雖然有做很多美術相關的功能但是可能是因為 Electron 先天問題，在大 repo 上還蠻喘的。<a href="https://www.syntevo.com/smartgit/">SmartGit</a> 則是功能雖多但是對美術素材支援算是沒有，而且年費不便宜。</p>
+<p>之前為了公司需要滿足技術人員與非技術背景人員操作的需求 survey 了很多 git 用戶端，目前選定的是需要付費的 <a href="https://git-fork.com/">Fork</a>。在這之前用的是最常見免費的 <a href="https://www.sourcetreeapp.com/">SourceTree</a>，不過登入上常常會出現<a href="https://community.atlassian.com/t5/Sourcetree-questions/Git-Credential-Manager-for-Windows-Popups/qaq-p/579905">問題</a>需要排解，還有有的時候檔案多的時候會變很慢，對圖片與 LFS 檔案也沒有預覽支援。另外有些程式同事會選用 Windows git 附帶的 <a href="http://gitextensions.github.io/">Git Extensions</a> 但是這個對美術使用上有些不友善，習慣用戶端有一個視窗的也可能會不習慣 shell extension。還有一個免費的 shell extension 選擇是 <a href="https://tortoisegit.org/">TortoiseGit</a>，對美術素材支援到顯示 LFS 內的圖片，但是在 blame、rebase 之類比較複雜的操作比較不順手。<a href="https://desktop.github.com/">GitHub Desktop</a> 是功能太陽春，<a href="https://www.gitkraken.com/">GitKraken</a> 雖然有做很多美術相關的功能但是可能是因為 Electron 先天問題，在大 repo 上還蠻喘的。<a href="https://www.syntevo.com/smartgit/">SmartGit</a> 則是功能雖多但是對美術素材支援算是沒有，而且年費不便宜。</p>
 <figure class="center">
     <img src="/images/unity-git/fork.png"/> <figcaption>
             <h4>Fork</h4>
         </figcaption>
 </figure>
 
-<p>目前 Fork 提供 Windows 跟 Mac 的原生用戶端，平常速度上算是不錯。付費目前是一次性 <a href="https://git-fork.com/buy">50USD</a> 一個序號最多啟動三台電腦，也比需要訂閱的工具負擔低（雖然不知道以後會不會改）。介面上相當簡潔但可以滿足大部分的開發需求，內建的 rebase 跟 merge 介面難得做得算好用。對於遊戲開發算是 killer feature 是內建的圖片預覽跟 diff（diff Mac 版還只有 side-by-side 沒有 swipe 跟 onion skin），而且在 LFS 的配置下也能正常運作。</p>
+<p>目前 Fork 提供 Windows 跟 Mac 的原生用戶端，平常速度上算是不錯。付費目前是一次性 <a href="https://git-fork.com/buy">50 USD</a> 一個序號最多啟動三台電腦，也比需要訂閱的工具負擔低（雖然不知道以後會不會改）。介面上相當簡潔但可以滿足大部分的開發需求，內建的 rebase 跟 merge 介面難得做得算好用。對於遊戲開發算是 killer feature 是內建的圖片預覽跟 diff（diff Mac 版還只有 side-by-side 沒有 swipe 跟 onion skin），而且在 LFS 的配置下也能正常運作。</p>
 <figure class="center">
     <img src="/images/unity-git/swipe-image-diff.gif" width="400"/> <figcaption>
             <h4>https://git-fork.com/blog/posts/forkwin-1.38/</h4>
@@ -320,6 +321,10 @@ git add --renormalize .
 <p>至於文字編輯的原始碼檔案則應該啟用 autocrlf 壓過 <code>* -text</code> 設定，確保這些檔案在 repo 裡的行尾一致，以免像是 <code>git blame</code> 之類的工具受到整個原始碼的行尾跳動干擾難以閱讀。</p>
 <p><code>*.cs text=auto</code></p>
 <p>另外一種方向是把所有文字檔案都設定為 <code>eol=lf</code>，因為 Windows 上大部分的程式編輯器其實遇到 LF 結尾的原始碼還是能正常運作。這個選擇就比較屬於偏好。</p>
+<p>更新的版本我們統一使用 LF</p>
+<p><code>*.cs eol=lf</code></p>
+<p>因為我們試圖替 AssetBundle 計算自製的特徵 Hash，Hash 輸入除了 AssetBundle 的所有原始素材也包含所有程式原始碼檔案，因為程式可能有 <a href="https://docs.unity3d.com/ScriptReference/AssetImporter.html">AssetImporter</a> 影響 Import 結果。為了讓 Hash 計算結果在 Windows 與 Mac 相同，現在統一使用 LF 行尾使原始碼檔案 binary representation 在上雙平台相同。</p>
+<p>（asmdef 改動會影響 Assembly 名稱使 <a href="https://forum.unity.com/threads/asset-bundle-cannot-find-scripts-from-assembly-definition-files.531804/#post-3521699">AssetBundle 無法 dereference 附著在 GameObject 上的 MonoBehaviour</a>，如果想靠自製特徵 Hash 來控制要不要更新 AssetBundle 也要追蹤 asmdef 變化）</p>
 <p>整個設定可以參考</p>
 <p><a href="https://github.com/FrankNine/RepoConfig/blob/master/.gitattributes">https://github.com/FrankNine/RepoConfig/blob/master/.gitattributes</a></p>
 <h2 id="editorconfig">EditorConfig</h2>
@@ -349,7 +354,7 @@ indent_size  = 4
 trim_trailing_whitespace = true
 </code></pre></td></tr></table>
 </div>
-</div><p><code>.gitattributes</code> 可以控制行尾，但是程式碼還可能會有文字編碼或是 tab / space 不一致的問題。而編碼與 tab / space 可以靠在專案內放置 <code>.editorconfig</code> 提示程式編輯工具如何處理來完成。目前 Visual Studio、MonoDevelop 與 Rider 都會自動偵測 <code>.editorconfig</code> 的設定，而 Visual Studio Code 與 Notepad++ 則是需要安裝 plugin。</p>
+</div><p><code>.gitattributes</code> 可以控制行尾，但是程式碼還可能會有文字編碼、BOM、或是 tab / space 不一致的問題。而編碼與 tab / space 可以靠在專案內放置 <code>.editorconfig</code> 提示程式編輯工具如何處理來完成。目前 Visual Studio、MonoDevelop 與 Rider 都會自動偵測 <code>.editorconfig</code> 的設定，而 Visual Studio Code 與 Notepad++ 則是需要安裝 plugin。</p>
 <p>更進一步可以把 Visual Studio 或是 ReSharper 的設定也放進 repo，從使用工具讓行尾、tab / space 之類的統一提升到 naming 或是 coding convention 的統一。不過因為公司還沒有統一導入 JetBrains 的編輯器，所以沒有這方面的實務經驗。</p>
 <h1 id="worktree">Worktree</h1>
 <p>如果是開發多平台遊戲的人可能會習慣 clone 同一個專案一次以上，然後把平台設定成不同，例如一個 clone 平台設定成 Android 一個平台設定成 iOS。雖然 <a href="https://docs.unity3d.com/Manual/CacheServer.html">Cache server</a> / <a href="https://docs.unity3d.com/Manual/UnityAccelerator.html">Accelerator</a> 或是 <a href="https://forum.unity.com/threads/what-is-asset-database-v2.680170/">AssetDatabase V2</a>可以降低平台切換的成本，但是在硬碟上保留兩份專案還是最快最直觀的。缺點很直接是硬碟用量很大，但是其實可以 clone 一次然後開一個以上的 <a href="https://git-scm.com/docs/git-worktree">worktree</a>，這樣雖然還是有多個專案目錄，但是只會有一個 .git 資料夾，即電腦上只有一份 git 歷史。如果有容量的疑慮又電腦裝有容量大的傳統硬碟跟 SSD，可以考慮把 git 歷史放在傳統硬碟，專案 worktree 放在 SSD 上的安排。</p>
@@ -423,7 +428,7 @@ git config rebase.autoStash true
 </div><p>這樣在 pull 的時候會觸發 stash、rebase 和 apply stash，對於減少 merge 蠻有效的。但是麻煩的是如果有 conflict 會從 merge conflict 變成更難排除的 rebase conflict。我自己試過一陣子後因為要不斷幫忙處裡 rebase conflict 放棄這個做法，要是有方法可以偵測 conflict 來決定要不要觸發 rebase 的話會考慮嘗試。</p>
 <p>如果對 pull rebase 有興趣可以參考：</p>
 <ul>
-<li><a href="%5Bhttps://networm.me/2018/07/29/git-for-unity-project/#%E6%8B%89%E5%8F%96%E7%AD%96%E7%95%A5%5D(https://networm.me/2018/07/29/git-for-unity-project/#%E6%8B%89%E5%8F%96%E7%AD%96%E7%95%A5)">使用 Git 管理 Unity 项目</a> by 狂飙</li>
+<li><a href="https://networm.me/2018/07/29/git-for-unity-project/#%E6%8B%89%E5%8F%96%E7%AD%96%E7%95%A5">使用 Git 管理 Unity 项目</a> by 狂飙</li>
 </ul>
 <p>往前 rebase 同時有接受主要分支的改動的功能，另一種做法是主要分支往 feature branch merge。但這樣 merge 要交代所有成員小心發生衝突時的 resolve，如果更新時的 merge resolve 做錯，在 feature branch 結束反著合向主要分支時是不會有任何警告，因為前面已經 marked as resolved 了。非技術人員偶爾會做錯，但是發生就會污染主要分支造成嚴重後果。如果不用 rebase 要特別小心這點。</p>
 <h1 id="sparse-checkout--shallow-clone">Sparse checkout &amp; Shallow clone</h1>
@@ -497,7 +502,9 @@ git checkout
 git lfs unlock &lt;檔案路徑&gt;
 </code></pre></td></tr></table>
 </div>
-</div><p>雖然這個功能感覺可以實作類似 Perforce 的 checkout 同時鎖定檔案功能，但是目前還是需要靠手動檢查 lock 狀態，不是很方便。所以沒有推廣到專案上，但是覺得是一個有潛力的方向。希望之後的版本能改進，或是有方法靠 hook 兜出像是 Perforce 偵測到檔案編輯就自動上鎖的功能。</p>
+</div><p>雖然這個功能感覺可以實作類似 Perforce 的 checkout 同時鎖定檔案功能，但是目前還是需要靠手動檢查 lock 狀態，不是很方便。所以沒有推廣到專案上，但是覺得是一個有潛力的方向。<del>希望之後的版本能改進，或是有方法靠 hook 兜出像是 Perforce 偵測到檔案編輯就自動上鎖的功能。</del></p>
+<p>後來試了一下希望自動將檔案設定唯讀，然後在 LFS lock 時才解除檔案唯讀的模擬 Perforce 的工作流程的自動化。實作到一半發現 <a href="https://forum.unity.com/threads/why-does-unity-unlock-a-read-only-file.35462/#post-230437">Unity Editor 本身就不會尊重系統上的唯讀 Flag</a>，因為 Unity 會隨便解除 Assets 目錄下檔案的唯讀，無法區分是我解鎖的還是 Unity 解鎖的。（這樣 Perforce 要怎麼用在 Unity 上，還是無法？）</p>
+<p>另外 <a href="https://github.com/git-lfs/git-lfs/issues/3637">Per-branch lock</a> 跟 <a href="https://github.com/git-lfs/git-lfs/issues/2671#issuecomment-349458133">Auto unlock</a> 這兩個期望能實作的改進好像就放置了，感覺這幾個大問題解決前好像沒有繼續投資研究的必要。</p>
 <h1 id="vfs-for-git">VFS for Git</h1>
 <p><a href="https://vfsforgit.org/">VFS for Git</a> 是微軟為了使用 git 管理 Windows 這個歷史悠久又巨大的 repo 而提出的方案。底層是依賴 <a href="https://docs.microsoft.com/zh-tw/windows/win32/projfs/projected-file-system">ProjFS</a> 虛擬檔案系統，使用起來會看到 <code>gvfs clone</code> 時檔案存在在硬碟上但是沒有內容，一嘗試打開讀檔的 blocking 就會包含跟 server 下載這段。測試 <code>gvfs clone</code> 的時候真的如同微軟宣稱的非常高速，在一分鐘內結束。實際的內容在 Unity 專案開啟時才會自動下載 HEAD worktree 的內容，因為是檔案系統層的介入，Unity 2020 以後不用任何修改就能使用。但是因為 Unity 每次開啟都會掃描整個 <code>/Assets/</code> 資料夾建立 AssetDatabase，等於最後還是把整個 <code>/Assets/</code> 都摸過一遍抓下來。如果有引擎是只碰編輯有需要的檔案的系統，才能完整享受要用才抓的好處吧。</p>
 <figure class="center">
