@@ -49,7 +49,7 @@
 <meta itemprop="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity builder mimiron-lite 發布新版，同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經">
 <meta itemprop="datePublished" content="2020-05-10T23:20:12&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-10T23:20:12&#43;08:00" />
-<meta itemprop="wordCount" content="9040">
+<meta itemprop="wordCount" content="9042">
 
 
 
@@ -84,6 +84,8 @@
         <li class="mobile-menu-item">Home</li>
       </a><a href="/cs291/">
         <li class="mobile-menu-item">CS291</li>
+      </a><a href="https://github.com/FrankNine/franknine.github.io/wiki">
+        <li class="mobile-menu-item">Wiki</li>
       </a>
   </ul>
 
@@ -108,6 +110,8 @@
         <a class="menu-item-link" href="/">Home</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/cs291/">CS291</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/FrankNine/franknine.github.io/wiki">Wiki</a>
       </li>
   </ul>
 </nav>
@@ -316,13 +320,13 @@ git add --renormalize .
 </figure>
 
 <p>至於行尾常常亂跳的 <code>.meta</code> 因為實驗出來在任何平台 Unity Editor 都是存成以 LF 換行，所以寫死</p>
-<p><code>*.meta eol=lf</code></p>
+<p><code>*.meta text eol=lf</code></p>
 <p><code>.mat</code> 也應該是 LF 換行，不過它不常亂跳所以沒有像 meta 寫死。</p>
 <p>至於文字編輯的原始碼檔案則應該啟用 autocrlf 壓過 <code>* -text</code> 設定，確保這些檔案在 repo 裡的行尾一致，以免像是 <code>git blame</code> 之類的工具受到整個原始碼的行尾跳動干擾難以閱讀。</p>
 <p><code>*.cs text=auto</code></p>
 <p>另外一種方向是把所有文字檔案都設定為 <code>eol=lf</code>，因為 Windows 上大部分的程式編輯器其實遇到 LF 結尾的原始碼還是能正常運作。這個選擇就比較屬於偏好。</p>
 <p>更新的版本我們統一使用 LF</p>
-<p><code>*.cs eol=lf</code></p>
+<p><code>*.cs text eol=lf</code></p>
 <p>因為我們試圖替 AssetBundle 計算自製的特徵 Hash，Hash 輸入除了 AssetBundle 的所有原始素材也包含所有程式原始碼檔案，因為程式可能有 <a href="https://docs.unity3d.com/ScriptReference/AssetImporter.html">AssetImporter</a> 影響 Import 結果。為了讓 Hash 計算結果在 Windows 與 Mac 相同，現在統一使用 LF 行尾使原始碼檔案 binary representation 在上雙平台相同。</p>
 <p>（asmdef 改動會影響 Assembly 名稱使 <a href="https://forum.unity.com/threads/asset-bundle-cannot-find-scripts-from-assembly-definition-files.531804/#post-3521699">AssetBundle 無法 dereference 附著在 GameObject 上的 MonoBehaviour</a>，如果想靠自製特徵 Hash 來控制要不要更新 AssetBundle 也要追蹤 asmdef 變化）</p>
 <p>整個設定可以參考</p>
