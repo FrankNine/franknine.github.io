@@ -2477,6 +2477,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
     </item>
     
     <item>
+      <title>17 視野</title>
+      <link>https://franknine.github.io/cs291/lesson-15/17-field-of-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/17-field-of-view/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/17 Field of View - Interactive 3D Graphics-_sl0QByIvBI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
       <title>17 頂點與剔除</title>
       <link>https://franknine.github.io/cs291/lesson-04/17-vertex-ordering-and-culling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2537,6 +2546,15 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/cs291/lesson-13/18-whats-missing/</guid>
       <description>loadSRT(&#39;/cs291/srt/Lesson 13\/18 What\x27s Missing - Interactive 3D Graphics-6fzQVFe9d6g.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>18 展示：推軌（Dolly）與變焦（Zoom）</title>
+      <link>https://franknine.github.io/cs291/lesson-15/18-demo-dolly-and-zoom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/18-demo-dolly-and-zoom/</guid>
+      <description>這裡有 更多關於推軌變焦技巧 和有用這個特效的電影清單。 譯註： 關於不同攝影機運動英文名詞可以參考： https://twitter.com/Ryowaks/status/1493458516228521984 https://twitter.com/Sgtzima/status/1159498374808256513</description>
     </item>
     
     <item>
