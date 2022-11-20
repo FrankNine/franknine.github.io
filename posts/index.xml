@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 May 2020 23:20:12 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Nov 2022 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>你所嘗試的一切終究是徒勞</title>
+      <link>https://franknine.github.io/posts/everything-you-do-is-ultimately-pointless/</link>
+      <pubDate>Mon, 21 Nov 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://franknine.github.io/posts/everything-you-do-is-ultimately-pointless/</guid>
+      <description>最近跟一些比較年輕的朋友談到找工作、換工作、或是與工作相處本身，會想勸但是不知道怎麼勸。想勸工作、技能本身不要看得太重，但是我來說又很沒有說</description>
+    </item>
     
     <item>
       <title>Unity 和 git</title>
