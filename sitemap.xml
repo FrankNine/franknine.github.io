@@ -1168,6 +1168,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/19-true-field-of-view/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-13/19-path-tracing/</loc>
   </url>
   
@@ -1196,6 +1200,14 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/20-monitor-field-of-view/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/20a-monitor-field-of-view/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/20a-how-many-computers/</loc>
   </url>
   
@@ -1213,6 +1225,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-09/21-instancing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/21-target/</loc>
   </url>
   
   <url>
@@ -1236,6 +1252,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/22-dolly-pan-orbit/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-09/22-robot-arm/</loc>
   </url>
   
@@ -1249,6 +1269,14 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-13/23-shadow-summary/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/23-camera-changes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/23a-camera-changes/</loc>
   </url>
   
   <url>
@@ -1268,6 +1296,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/24-near-and-far-clipping/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/24-a-jog-down-the-pipeline/</loc>
   </url>
   
@@ -1277,6 +1309,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-13/25-which-are-global/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/25-depth-of-field/</loc>
   </url>
   
   <url>
@@ -1300,6 +1336,10 @@
   </url>
   
   <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/26-window-coordinates/</loc>
+  </url>
+  
+  <url>
     <loc>https://franknine.github.io/cs291/lesson-01/26-advanced-box-factory/</loc>
   </url>
   
@@ -1309,6 +1349,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/26a-advanced-box-factory/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/27-antialiasing/</loc>
   </url>
   
   <url>
@@ -1329,6 +1373,10 @@
   
   <url>
     <loc>https://franknine.github.io/cs291/lesson-01/28-bottleneck/</loc>
+  </url>
+  
+  <url>
+    <loc>https://franknine.github.io/cs291/lesson-15/28-conclusion/</loc>
   </url>
   
   <url>

@@ -1,0 +1,17 @@
+<base target="_blank">
+<div class="lesson-content">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/GvLEAHRmPl0?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 15\/27 Antialiasing - Interactive 3D Graphics-GvLEAHRmPl0.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>FXAA 有 <a href="https://threejs.org/examples/?q=fx#webgl_postprocessing_fxaa">這個 Three.js Demo</a>。</p>
+<p>我對 FXAA 的看法 <a href="http://www.realtimerendering.com/blog/fxaa-rules-ok/">在這裡</a>。有整個 <a href="http://iryoku.com/aacourse/">SIGGRAPH 課程</a> 在介紹反鋸齒過濾技法。許多遊戲已經改用 <a href="http://www.iryoku.com/smaa/">SMAA</a>，有更好的效果（但也更耗時）</p>
+<p>反鋸齒可能在 Mac 上不起作用 <a href="http://code.google.com/p/chromium/issues/detail?id=159275">因為有個 OpenGL driver bug 在 NVIDIA 晶片上</a>。當你讀到時應該已經修正了。</p>
+
+</div>

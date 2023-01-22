@@ -208,5 +208,113 @@
       <description>這裡有 更多關於推軌變焦技巧 和有用這個特效的電影清單。 譯註： 關於不同攝影機運動英文名詞可以參考： https://twitter.com/Ryowaks/status/1493458516228521984 https://twitter.com/Sgtzima/status/1159498374808256513</description>
     </item>
     
+    <item>
+      <title>19 真正的視野</title>
+      <link>https://franknine.github.io/cs291/lesson-15/19-true-field-of-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/19-true-field-of-view/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/19 True Field of View - Interactive 3D Graphics-1Wgz1BrI-Gk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>20 螢幕視野</title>
+      <link>https://franknine.github.io/cs291/lesson-15/20-monitor-field-of-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/20-monitor-field-of-view/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/20 Monitor Field of View - Interactive 3D Graphics-M53NROgx7lI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>20 螢幕視野（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-15/20a-monitor-field-of-view/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/20a-monitor-field-of-view/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/20A Monitor Field of View - Interactive 3D Graphics-cF9LGLHWmTU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>21 目標</title>
+      <link>https://franknine.github.io/cs291/lesson-15/21-target/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/21-target/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/21 Target - Interactive 3D Graphics-4Ahd1LLAihs.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>22 推軌、水平搖攝、環繞</title>
+      <link>https://franknine.github.io/cs291/lesson-15/22-dolly-pan-orbit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/22-dolly-pan-orbit/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/22 Dolly, Pan, Orbit - Interactive 3D Graphics-G0xo95O_NMY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 水平搖攝在電影攝影有不同意思，請參照 這個維基文章。 環繞掃射（Circle strafing）的解釋在 這裡。</description>
+    </item>
+    
+    <item>
+      <title>23 攝影機變化</title>
+      <link>https://franknine.github.io/cs291/lesson-15/23-camera-changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/23-camera-changes/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/23 Camera Changes - Interactive 3D Graphics-LkYMJ10gB3g.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>23 攝影機變化（解答）</title>
+      <link>https://franknine.github.io/cs291/lesson-15/23a-camera-changes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/23a-camera-changes/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/23A Camera Changes - Interactive 3D Graphics-GBNVQqzAW9w.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+    </item>
+    
+    <item>
+      <title>24 近裁切和遠裁切</title>
+      <link>https://franknine.github.io/cs291/lesson-15/24-near-and-far-clipping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/24-near-and-far-clipping/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/24 Near and Far Clipping - Interactive 3D Graphics-Sfy6pB0susM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 在 1:45 我說 &amp;ldquo;9.0&amp;rdquo; 是口誤應該是 &amp;ldquo;0.9&amp;rdquo;。 你能在 Z 深度計算器看到精確度的效果。在文章中</description>
+    </item>
+    
+    <item>
+      <title>25 景深（Depth of Field）</title>
+      <link>https://franknine.github.io/cs291/lesson-15/25-depth-of-field/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/25-depth-of-field/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/25 Depth of Field - Interactive 3D Graphics-NbfyLQWYXP8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Three.js 景深 Demo 在 這裡。AlteredQualia 的移軸攝影 Demo 在 這裡。</description>
+    </item>
+    
+    <item>
+      <title>26 視窗座標（Window Coordinates）</title>
+      <link>https://franknine.github.io/cs291/lesson-15/26-window-coordinates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/26-window-coordinates/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/26 Window Coordinates - Interactive 3D Graphics-tGsChJ7zmC4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Lee Stemkoski 提供了放置 兩個 跟 四個 視埠的 Three.js 程式。 Three.js 有個 有趣的 demo 展示藝術性的視埠效果。 OpenGL 座標變換介紹可以在 這頁。雖然有</description>
+    </item>
+    
+    <item>
+      <title>27 反鋸齒</title>
+      <link>https://franknine.github.io/cs291/lesson-15/27-antialiasing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/27-antialiasing/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/27 Antialiasing - Interactive 3D Graphics-GvLEAHRmPl0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); FXAA 有 這個 Three.js Demo。 我對 FXAA 的看法 在這裡。有整個 SIGGRAPH 課程 在介紹反鋸齒過濾技法。許多遊戲已經改用 SMAA，有更好的</description>
+    </item>
+    
+    <item>
+      <title>28 結語</title>
+      <link>https://franknine.github.io/cs291/lesson-15/28-conclusion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://franknine.github.io/cs291/lesson-15/28-conclusion/</guid>
+      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/28 Conclusion - Interactive 3D Graphics-zwKrALyfciw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 來自 Wikimedia Commons 的 &amp;ldquo;Man Drawing a Lute&amp;rdquo;。</description>
+    </item>
+    
   </channel>
 </rss>
