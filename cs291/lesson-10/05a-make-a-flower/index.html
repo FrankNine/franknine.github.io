@@ -14,7 +14,7 @@
 <p><strong>解答：</strong> 將以下程式加入 <code>fillScene()</code>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -31,22 +31,22 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">var flower = new THREE.Object3D();
-
-for ( var i = 0; i &lt; 24 ; i++ )
-{
-    var cylinder = new THREE.Mesh( cylGeom, petalMaterial );
-    cylinder.position.y = petalLength / 2;
-
-    var petal = new THREE.Object3D();
-    petal.add( cylinder );
-    petal.rotation.z = 90 * Math.PI/180;
-    petal.rotation.y = 15*i * Math.PI/180;
-    petal.position.y = flowerHeight;
-
-    flower.add( petal );
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">var flower = new THREE.Object3D();
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">for ( var i = 0; i &lt; 24 ; i++ )
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    var cylinder = new THREE.Mesh( cylGeom, petalMaterial );
+</span></span><span class="line"><span class="cl">    cylinder.position.y = petalLength / 2;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    var petal = new THREE.Object3D();
+</span></span><span class="line"><span class="cl">    petal.add( cylinder );
+</span></span><span class="line"><span class="cl">    petal.rotation.z = 90 * Math.PI/180;
+</span></span><span class="line"><span class="cl">    petal.rotation.y = 15*i * Math.PI/180;
+</span></span><span class="line"><span class="cl">    petal.position.y = flowerHeight;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    flower.add( petal );
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>

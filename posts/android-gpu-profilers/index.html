@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.0 with theme even" />
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
 
 
 <link rel="canonical" href="https://franknine.github.io/posts/android-gpu-profilers/" />
@@ -36,24 +36,20 @@
 
 
 
-<link href="/sass/main.min.4709ae1ffec4566bcfa0989fe5f61366a5d1eda6b70ff7a3592cd1d7b302d2ba.css" rel="stylesheet">
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
 
 
 
 <meta property="og:title" content="Android GPU Profiler" />
 <meta property="og:description" content="上一篇有提到 Unity 內建的的 Profiler 在繪圖分析方面有所不足之處，但這個可以用 Android 各家 GPU 原廠的工具來補足。因為每一家的工具都只能拿來分析自家的晶片，所以最一開始要先了解自己的機器用的是哪家的 GPU 。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/android-gpu-profilers/" />
+<meta property="og:url" content="https://franknine.github.io/posts/android-gpu-profilers/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2016-06-18T18:34:16+00:00" />
 <meta property="article:modified_time" content="2016-06-18T18:34:16+00:00" />
 <meta itemprop="name" content="Android GPU Profiler">
-<meta itemprop="description" content="上一篇有提到 Unity 內建的的 Profiler 在繪圖分析方面有所不足之處，但這個可以用 Android 各家 GPU 原廠的工具來補足。因為每一家的工具都只能拿來分析自家的晶片，所以最一開始要先了解自己的機器用的是哪家的 GPU 。">
-<meta itemprop="datePublished" content="2016-06-18T18:34:16&#43;00:00" />
-<meta itemprop="dateModified" content="2016-06-18T18:34:16&#43;00:00" />
+<meta itemprop="description" content="上一篇有提到 Unity 內建的的 Profiler 在繪圖分析方面有所不足之處，但這個可以用 Android 各家 GPU 原廠的工具來補足。因為每一家的工具都只能拿來分析自家的晶片，所以最一開始要先了解自己的機器用的是哪家的 GPU 。"><meta itemprop="datePublished" content="2016-06-18T18:34:16+00:00" />
+<meta itemprop="dateModified" content="2016-06-18T18:34:16+00:00" />
 <meta itemprop="wordCount" content="1870">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Android GPU Profiler"/>
 <meta name="twitter:description" content="上一篇有提到 Unity 內建的的 Profiler 在繪圖分析方面有所不足之處，但這個可以用 Android 各家 GPU 原廠的工具來補足。因為每一家的工具都只能拿來分析自家的晶片，所以最一開始要先了解自己的機器用的是哪家的 GPU 。"/>
@@ -148,21 +144,21 @@
 <p>安裝工具之後檢查遊戲有沒有在 AndroidManifest 加入網路權限</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.INTERNET&#34;</span><span class="nt">/&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.INTERNET&#34;</span><span class="nt">/&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然後 <strong>不</strong> 需要 Development Build，Release build 也可以直接 Profile。</p>
 <p>把遊戲裝到機器上，從 ADB 介面下啟動指令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">adb shell setprop debug.egl.profiler <span class="m">1</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">adb shell setprop debug.egl.profiler <span class="m">1</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在手機上把遊戲先開起來，如果成功的話進到工具然後點左上角的 Connect 會看到像是下圖有可連線目標的狀態：</p>
 <p><img src="/images/android-gpu-profilers/adreno-connect.png" alt="Adreno Connect"></p>
@@ -179,11 +175,11 @@
 <p>然後一樣也是需要網路的權限：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.INTERNET&#34;</span><span class="nt">/&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.INTERNET&#34;</span><span class="nt">/&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Intel Graphics Frame Analyzer 一樣是可以分析 Release build，不過需要有 <a href="https://developer.android.com/guide/topics/manifest/application-element.html">android:debuggable</a> flag。Unity 在建置 Release build 的時候會自動把 debuggable 拿掉，直接幫 Unity 專案裡的 AndroidManifest 加 flag 沒有用，所以變成要先匯出成 Android Studio 專案然後手動再編輯 AndroidManifest 然後 build。</p>
 <p>一開始分析對象會定在電腦模擬器上面，從最上面的選單切換到要做 Frame capture 的機器，然後按下 Add 新增 Frame capture。</p>
@@ -269,7 +265,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 <script type="application/javascript">

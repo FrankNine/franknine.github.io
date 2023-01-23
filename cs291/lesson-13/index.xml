@@ -5,18 +5,14 @@
     <link>https://franknine.github.io/cs291/lesson-13/</link>
     <description>Recent content in Lesson 13 光照 on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://franknine.github.io/cs291/lesson-13/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-13/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 光源</title>
       <link>https://franknine.github.io/cs291/lesson-13/01-lights/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/01-lights/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/01 Lights - Interactive 3D Graphics-eyIWA6ehJMU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 這個展示使用了延遲著色（Deferred shading）的技術，我們之後會談到。 提醒一下課程的程式、參考資料</description>
+      <description>這個展示使用了延遲著色（Deferred shading）的技術，我們之後會談到。 提醒一下課程的程式、參考資料都能在 課程維基 上找到。所有 講師註</description>
     </item>
     
     <item>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/02-photons-as-particles/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/02 Photons as Particles - Interactive 3D Graphics-vvwjjB7jThE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我之前提過，理察·費曼在 這個很棒的短片 談論電磁波，非常值得一看。 即使是鏡子也 不是全反射。</description>
+      <description>我之前提過，理察·費曼在 這個很棒的短片 談論電磁波，非常值得一看。 即使是鏡子也 不是全反射。</description>
     </item>
     
     <item>
@@ -34,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/03-directional-lights/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/03 Directional Lights - Interactive 3D Graphics-xWqObjT1SG0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你也可以自己試試這個影片展示的 Three.js 編輯器。我強烈推薦，你會從操作過程中學到很多。</description>
+      <description>你也可以自己試試這個影片展示的 Three.js 編輯器。我強烈推薦，你會從操作過程中學到很多。</description>
     </item>
     
     <item>
@@ -43,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/04-directional-light-in-three.js/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/04 Directional Light in three.js - Interactive 3D Graphics-KQN3QuIeb64.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -52,7 +48,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/05-set-a-directional-light/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/05 Set a Directional Light - Interactive 3D Graphics-Cg5z_p9dSYM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 訂正： 光的方向應</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 訂正： 光的方向應該是 (-200, 200, -400)，非 400。</description>
     </item>
     
     <item>
@@ -61,7 +57,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/05a-set-a-directional-light/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/05A Set a Directional Light - Interactive 3D Graphics-B6LzxLE0vuY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 在 fillScene() 創造場景後加入： 1 2 3 var light = new THREE.DirectionalLight( 0xFFFFFF, 1.5 ); light.position.set( -200, 200, -400 ); scene.add( light );</description>
+      <description>解答： 在 fillScene() 創造場景後加入： 1 2 3 var light = new THREE.DirectionalLight( 0xFFFFFF, 1.5 ); light.position.set( -200, 200, -400 ); scene.add( light );</description>
     </item>
     
     <item>
@@ -70,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/06-a-point-light/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/06 A Point Light - Interactive 3D Graphics-g396iPg0E60.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 這裡你也能練習操作 Three.js 編輯器。</description>
+      <description>這裡你也能練習操作 Three.js 編輯器。</description>
     </item>
     
     <item>
@@ -79,7 +75,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/07-ambient-lighting/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/07 Ambient Lighting - Interactive 3D Graphics-cj0NUlzqziw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -88,7 +84,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/08-head-light/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/08 Head Light - Interactive 3D Graphics-m6X53IKeyNo.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
     </item>
     
     <item>
@@ -97,7 +93,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/08a-head-light/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/08A Head Light - Interactive 3D Graphics-geaFlMObbp8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 取代 fillScene() 的 AmbientLight 成： 1 2 headlight = new THREE.PointLight( 0xFFFFFF, 1.0 ); scene.add( headlight ); 在 render() 加入： 1 headlight.position.copy( camera.position );</description>
+      <description>解答： 取代 fillScene() 的 AmbientLight 成： 1 2 headlight = new THREE.PointLight( 0xFFFFFF, 1.0 ); scene.add( headlight ); 在 render() 加入： 1 headlight.position.copy( camera.position );</description>
     </item>
     
     <item>
@@ -106,7 +102,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/09-spot-light/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/09 Spot Light - Interactive 3D Graphics-Dm3o2N4UQw4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 這裡你也能練習操作 Three.js 編輯器。 新版本的 Three.js 聚光燈的衰減指數（Exponent）參數被重新命名為 半影區（Penu</description>
+      <description>這裡你也能練習操作 Three.js 編輯器。 新版本的 Three.js 聚光燈的衰減指數（Exponent）參數被重新命名為 半影區（Penumbra）。</description>
     </item>
     
     <item>
@@ -115,7 +111,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/10-spot-light-in-three.js/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/10 Spot Light in three.js - Interactive 3D Graphics-CjPz9UH5Z7c.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 Three.js 場景編輯器在 這</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 Three.js 場景編輯器在 這裡。解答的程式光強度寫 1.0，應該是 1</description>
     </item>
     
     <item>
@@ -124,7 +120,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/10a-spot-light-in-three.js/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/10A Spot Light in three.js - Interactive 3D Graphics-ZpoT6jkOuj8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 提交貢獻給 Three.js 的文件在 這裡。 解答： 取代 fillScene() 裡 DirectionalLight 程式： 1 2 3 4 5 6 var light = new THREE.SpotLight( 0xFFFFFF, 1.5 ); light.position.set( -400, 1200, 300 ); light.angle = 20 * Math.PI / 180; light.exponent</description>
+      <description>提交貢獻給 Three.js 的文件在 這裡。 解答： 取代 fillScene() 裡 DirectionalLight 程式： 1 2 3 4 5 6 var light = new THREE.SpotLight( 0xFFFFFF, 1.5 ); light.position.set( -400, 1200, 300 ); light.angle = 20 * Math.PI / 180; light.exponent = 1; light.target.position.set( 0, 200, 0 ); scene.add( light );</description>
     </item>
     
     <item>
@@ -133,7 +129,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/11-deferred-rendering/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/11 Deferred Rendering - Interactive 3D Graphics-nSL8cOxtsz4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); AlteredQualia 的作品非常厲害，看 他的網站 以欣賞更多展示。</description>
+      <description>AlteredQualia 的作品非常厲害，看 他的網站 以欣賞更多展示。</description>
     </item>
     
     <item>
@@ -142,7 +138,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/12-shadow-mapping/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/12 Shadow Mapping - Interactive 3D Graphics-0e01qWckKD4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 這篇文章 介紹了影子的歷史、小孩何時認識到影子之類的有趣知識。 Lance William 的演算法原始文章是 “Casting Curved Shadows on Curved</description>
+      <description>這篇文章 介紹了影子的歷史、小孩何時認識到影子之類的有趣知識。 Lance William 的演算法原始文章是 “Casting Curved Shadows on Curved Surfaces”。</description>
     </item>
     
     <item>
@@ -151,7 +147,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/13-shadow-buffer-characteristics/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/13 Shadow Buffer Characteristics - Interactive 3D Graphics-6HIp6c8DMUk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -160,7 +156,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/13a-shadow-buffer-characteristics/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/13A Shadow Buffer Characteristics - Interactive 3D Graphics-j_BS7C8onoc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -169,7 +165,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/14-shadows-in-three.js/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/14 Shadows in three.js - Interactive 3D Graphics-jd4bP1jATZA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 作業完成後試著調整</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 作業完成後試著調整 “Shadow Bias” 滑桿。我在下</description>
     </item>
     
     <item>
@@ -178,7 +174,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/14a-shadows-in-three.js/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/14A Shadows in three.js - Interactive 3D Graphics-tMnivhkz96E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); light.castShadow 應該改成 spotlight.castShadow。 解答： 將以下程式加到 init() 創造 renderer 之後： 1 renderer.shadowMapEnabled = true; 在 fillScene() 創造聚</description>
+      <description>light.castShadow 應該改成 spotlight.castShadow。 解答： 將以下程式加到 init() 創造 renderer 之後： 1 renderer.shadowMapEnabled = true; 在 fillScene() 創造聚光燈後加入 1 spotlight.castShadow = true; 在創造 solidGround 之後加入：</description>
     </item>
     
     <item>
@@ -187,7 +183,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/15-shadow-buffer-limitations/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/15 Shadow Buffer Limitations - Interactive 3D Graphics-jhDRmmFiQhU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以試著操作課程使用的 展示，非常值得。 這只是在 GPU 上計算影子的最基本演算法，參考 這頁 以獲得更多演算法資訊</description>
+      <description>你可以試著操作課程使用的 展示，非常值得。 這只是在 GPU 上計算影子的最基本演算法，參考 這頁 以獲得更多演算法資訊，這裡 有各個演算法的展示動畫。但當中</description>
     </item>
     
     <item>
@@ -196,7 +192,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/16-ray-tracing/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/16 Ray Tracing - Interactive 3D Graphics-bN8AV_x4BXI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 有一些互動式的 WebGL 光線追蹤實作 像是這個 還有 這個。 目前我最喜歡的光線追蹤介紹書籍是 “Ray Tracing from the Ground Up.” 我有</description>
+      <description>有一些互動式的 WebGL 光線追蹤實作 像是這個 還有 這個。 目前我最喜歡的光線追蹤介紹書籍是 “Ray Tracing from the Ground Up.” 我有一場比較光線追蹤跟柵格化的演講投影</description>
     </item>
     
     <item>
@@ -205,7 +201,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/17-ray-tracing-history-and-future/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/17 Ray Tracing History and Future - Interactive 3D Graphics-usSLY0PIgcU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 影片裡 256 位元組的 BAZE 展示在 這裡 可以下載，在 這裡 觀賞。這個展示是 Demoscene 的一部分，Three.js 的作者也參與</description>
+      <description>影片裡 256 位元組的 BAZE 展示在 這裡 可以下載，在 這裡 觀賞。這個展示是 Demoscene 的一部分，Three.js 的作者也參與 Demoscene 且受到啟發。</description>
     </item>
     
     <item>
@@ -214,7 +210,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/18-whats-missing/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/18 What\x27s Missing - Interactive 3D Graphics-6fzQVFe9d6g.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -223,7 +219,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/18a-whats-missing/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/18A What\x27s Missing - Interactive 3D Graphics-sfCTQSu-Ctw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -232,7 +228,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/19-path-tracing/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/19 Path Tracing - Interactive 3D Graphics-0Q0CsPaGfVQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 試試 Evan Wallace 的 WebGL 路徑追蹤。 維基有文章介紹 路徑追蹤 和 Photon Mapping，雖然我這為這些文章有點太技術面。 Chunky 繪圖程式</description>
+      <description>試試 Evan Wallace 的 WebGL 路徑追蹤。 維基有文章介紹 路徑追蹤 和 Photon Mapping，雖然我這為這些文章有點太技術面。 Chunky 繪圖程式和一些繪製成果可以在 這裡 找到。如果</description>
     </item>
     
     <item>
@@ -241,7 +237,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/20-umbra-and-penumbra/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/20 Umbra and Penumbra - Interactive 3D Graphics-ArWv9FveNe0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -250,7 +246,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/21-glimpse-of-higher-end-techniques/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/21 Glimpse of Higher End Techniques - Interactive 3D Graphics-zZl0s8eBukM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -259,7 +255,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/22-david-larsson-introduction/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/22 David Larsson Introduction - Interactive 3D Graphics-i5WxuI9dU9k.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -268,7 +264,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/23-shadow-summary/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/23 Shadow Summary - Interactive 3D Graphics-Phvzd_Pt_H8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -277,7 +273,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/24-indirect-lighting/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/24 Indirect Lighting - Interactive 3D Graphics-0CWhIIhugu8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -286,7 +282,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/25-which-are-global/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/25 Which are Global - Interactive 3D Graphics-qbPSxH4OJPE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我從來沒聽過 Spectralon，這是有非常強烈漫射特性的材質。我在搜尋 Lambertian 材質時碰到的。</description>
+      <description>我從來沒聽過 Spectralon，這是有非常強烈漫射特性的材質。我在搜尋 Lambertian 材質時碰到的。</description>
     </item>
     
     <item>
@@ -295,7 +291,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/25a-which-are-global/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/25A Which are Global - Interactive 3D Graphics-PlWvpAqeyG0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -304,7 +300,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/26-hemisphere-lights/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/26 Hemisphere Lights - Interactive 3D Graphics-l7k32_BvkWA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你也可以試著操作影片裡的 Three.js 編輯器。</description>
+      <description>你也可以試著操作影片裡的 Three.js 編輯器。</description>
     </item>
     
     <item>
@@ -313,7 +309,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/27-skylighting/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/27 Skylighting - Interactive 3D Graphics-tc9af6KyVrk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -322,7 +318,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-13/28-fog/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 13\/28 Fog - Interactive 3D Graphics-lqgPu80vDOE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 試試課程一開始出現的 展示。 Three.js 有兩種霧，Fog 是線性衰減，而 FogExp2 是指數衰減。 雲隙光展示在 這裡，參考程式 註解說明</description>
+      <description>試試課程一開始出現的 展示。 Three.js 有兩種霧，Fog 是線性衰減，而 FogExp2 是指數衰減。 雲隙光展示在 這裡，參考程式 註解說明</description>
     </item>
     
     <item>

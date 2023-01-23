@@ -13,7 +13,7 @@
 <p><strong>解答：</strong> 將以下程式填入 <code>fillScene()</code>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -28,20 +28,20 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">// 解答
-geometry = new THREE.Geometry();
-geometry.vertices.push( new THREE.Vector3( 100, 0, 0 ) );
-geometry.vertices.push( new THREE.Vector3( 0, 100, 0 ) );
-geometry.vertices.push( new THREE.Vector3( 0, 0, 100 ) );
-
-geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
-// 這個實際上會乘上材質的顏色，預設是白色
-var color1 = new THREE.Color( 0xff0000 );
-var color2 = new THREE.Color( 0x00ff00 );
-var color3 = new THREE.Color( 0x0000ff );
-geometry.faces[0].vertexColors = [ color1, color2, color3 ];
-mesh = new THREE.Mesh( geometry, material );
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 解答
+</span></span><span class="line"><span class="cl">geometry = new THREE.Geometry();
+</span></span><span class="line"><span class="cl">geometry.vertices.push( new THREE.Vector3( 100, 0, 0 ) );
+</span></span><span class="line"><span class="cl">geometry.vertices.push( new THREE.Vector3( 0, 100, 0 ) );
+</span></span><span class="line"><span class="cl">geometry.vertices.push( new THREE.Vector3( 0, 0, 100 ) );
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
+</span></span><span class="line"><span class="cl">// 這個實際上會乘上材質的顏色，預設是白色
+</span></span><span class="line"><span class="cl">var color1 = new THREE.Color( 0xff0000 );
+</span></span><span class="line"><span class="cl">var color2 = new THREE.Color( 0x00ff00 );
+</span></span><span class="line"><span class="cl">var color3 = new THREE.Color( 0x0000ff );
+</span></span><span class="line"><span class="cl">geometry.faces[0].vertexColors = [ color1, color2, color3 ];
+</span></span><span class="line"><span class="cl">mesh = new THREE.Mesh( geometry, material );
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>

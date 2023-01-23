@@ -6,11 +6,7 @@
     <description>Recent content in Posts on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 21 Nov 2022 00:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 21 Nov 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>你所嘗試的一切終究是徒勞</title>
       <link>https://franknine.github.io/posts/everything-you-do-is-ultimately-pointless/</link>
@@ -214,7 +210,7 @@
       <guid>https://franknine.github.io/posts/unity-crash-report/</guid>
       <description>&lt;p&gt;之前一直苦於收到客服信說遊戲閃退了，但是沒有什麼研究資料完全推斷不出到底發生什麼事情的窘況。雖然 Google Play 跟 iTunes Connect 後台會收集 Crash Dump，但是一個是收集 Java 一個是 il2cpp 看到也不知道對應到腳本的哪裡，沒有什麼實用價值。&lt;/p&gt;
 &lt;p&gt;在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。&lt;/p&gt;
-&lt;h1 id=&#34;heading&#34;&gt;注意事項：&lt;/h1&gt;
+&lt;h1 id=&#34;注意事項&#34;&gt;注意事項：&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：&lt;br&gt;
 &lt;a href=&#34;http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/&#34;&gt;http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/&lt;/a&gt;&lt;/li&gt;
@@ -584,7 +580,7 @@ Engineering Entrepreneurship 這門課正式結束了.&lt;/p&gt;
       
       <guid>https://franknine.github.io/posts/gdc-2011-prologue/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://franknine.github.io/images/gdc-2011-prologue/gdc-2011-logo.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;最近消失了一週跑去 Game Develpoer&#39;s Conference .
+&lt;p&gt;最近消失了一週跑去 Game Develpoer&amp;rsquo;s Conference .
 因為這學期比想像中的不輕鬆, 加上自己差勁的規畫能力.
 最後為了參加這個活動, 多了非常多不必要的支出, 也把自己累個半死.
 但是做為見識遊戲業界最高的舞台, 我想這瘋狂的一週還是非常的值得.&lt;/p&gt;</description>

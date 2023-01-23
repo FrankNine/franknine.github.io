@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.0 with theme even" />
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
 
 
 <link rel="canonical" href="https://franknine.github.io/posts/unity-2d-graphics-optimization/" />
@@ -36,24 +36,20 @@
 
 
 
-<link href="/sass/main.min.4709ae1ffec4566bcfa0989fe5f61366a5d1eda6b70ff7a3592cd1d7b302d2ba.css" rel="stylesheet">
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
 
 
 
 <meta property="og:title" content="Unity 2D 繪圖最佳化概論" />
 <meta property="og:description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/unity-2d-graphics-optimization/" />
+<meta property="og:url" content="https://franknine.github.io/posts/unity-2d-graphics-optimization/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2016-07-14T17:49:15+00:00" />
 <meta property="article:modified_time" content="2016-07-14T17:49:15+00:00" />
 <meta itemprop="name" content="Unity 2D 繪圖最佳化概論">
-<meta itemprop="description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。">
-<meta itemprop="datePublished" content="2016-07-14T17:49:15&#43;00:00" />
-<meta itemprop="dateModified" content="2016-07-14T17:49:15&#43;00:00" />
+<meta itemprop="description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。"><meta itemprop="datePublished" content="2016-07-14T17:49:15+00:00" />
+<meta itemprop="dateModified" content="2016-07-14T17:49:15+00:00" />
 <meta itemprop="wordCount" content="5542">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity 2D 繪圖最佳化概論"/>
 <meta name="twitter:description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。"/>
@@ -172,7 +168,7 @@
 <li>Render texture / GrabPass</li>
 </ul>
 <p>頂點數量過多在 2D 遊戲裡算是少見的情況，不過在特定情況下還是有可能會發生。</p>
-<h4 id="merger--frame-buffer-"><strong>Merger 對 Frame buffer 操作</strong></h4>
+<h4 id="merger-對-frame-buffer-操作"><strong>Merger 對 Frame buffer 操作</strong></h4>
 <p>如果在先前提到的 Bottleneck 測試中發現問題是在 Merger 跟 Frame buffer 的資料傳輸，最直接的就是 Frame buffer 的精確度。Unity 有提供 16-bit 跟 32-bit 的 Frame buffer 選擇。精確度較低的 Fragment 自然處理起來比較快，但是也可能會產生 <a href="https://en.wikipedia.org/wiki/Colour_banding">Color banding</a>，一般建議如果 Color banding 問題不明顯就開 16-bit 。不過之前也稍微提過，Tegra 系列的晶片在 16-bit 模式下特別容易出現 Banding ，建議準備 Tegra 系列的機器實機測試。</p>
 <p>另外帶有 alpha 的半透明 Fragment 因為 Merger 不能用比較簡單的 Depth test 排除，還要把現有在 Color buffer 上面的值讀回來做混色，所以會比不透明貴很多。所以大致上原則就是沒有必要不要用到透明的貼圖。</p>
 <h4 id="texture-size"><strong>Texture size</strong></h4>
@@ -183,7 +179,7 @@
 <p>UI-DefaultETC1 一開始的宣告，可以看到有兩張貼圖</p>
 <p>iOS 上面只有 PVRTC 可以選擇，不只要求 POT 還要求要是方形。要整個程式的貼圖都是方形還蠻困難的，幸好我們還有 Texture atlas 這個技巧。</p>
 <p>除了壓縮之外另外一個有機會降低貼圖大小的方法是製作 Texture atlas ，即把多張貼圖合併成一張貼圖，如果合併的方法合宜可以省下很多空隙，同時有可能因此湊出貼圖壓縮需要的 POT 或是方形，然後 Draw call batching 也需要 Texture atlas ，是個多多益善。以前 ex2D 或是舊 NGUI 年代因為 Texture atlas 工具不夠好，常常會造成編輯上的困擾。不過現在 Unity 內建 <a href="https://docs.unity3d.com/Manual/SpritePacker.html">Sprite packer</a> 使用起來沒有那麼難過了，大家都應該去試看看。</p>
-<h4 id="-fragment-"><strong>總 Fragment 數量</strong></h4>
+<h4 id="總-fragment-數量"><strong>總 Fragment 數量</strong></h4>
 <p>最直接降低 Fragment 數量的方法就是降低解析度，要產生的像素減少，連帶的要產生的 Fragment 也會減少。現代的 GPU 可以接受跟螢幕不一樣大的 Frame buffer ，然後由硬體來做縮放：</p>
 <p><a href="http://computergraphics.stackexchange.com/questions/3663/is-there-a-performance-implication-if-the-frame-buffer-resolution-and-the-physic">Is there a performance implication if the frame buffer resolution and the physical screen resolution are different?</a></p>
 <p>降低解析度是最簡單做到（<a href="https://docs.unity3d.com/ScriptReference/Screen-resolutions.html"><code>Screen.resolutions</code></a>，要注意 5.3 有幾個版本改過解析度之後 iOS 會白畫面或黑畫面，遇到的話請升級 Unity ）效果也還蠻明顯的，而且現在有些平板或是 Ultrabook 會出現 2K 到 3K 的橫向解析度，如果當初的素材貼圖沒有這麼高解析的話其實 Frame buffer 開這麼大也不會變得更漂亮。</p>
@@ -222,9 +218,9 @@
 <p>最後有個東西影響程度可能會比之前提到的都還要大（除了有做 Tiled-based deferred rendering 的 PowerVR 因為架構特性能抵銷不少開銷），前面所提到的都是在「一輪」GPU rendering pipeline 裡面的最佳化。但是有些 Unity 內建就有的模糊之類的 Image effect ，這個其實是用到 Render texture ，也就是把第一輪的 Color buffer 結果當成貼圖再跑「第二輪」，也會對效能造成一定影響。（我自己的經驗都是加上 Image effect 之後會變得非常慢，不過 Colin 和火星人在校閱的時候有指正是 Unity OnRenderImage 的實作導致有可能會觸發把 Color buffer 從 VRAM 拉回 RAM 的行為，實際上是有 Workaround 可以達到在合理的效能支出上做出 Image effect，這點我還要再研究才能跟大家報告）</p>
 <p>不過到 Unity 5 ，在 Android 上面 Unity 會幫你開一個沒有做任何效果的 Reander texture。官方只有給一個非常含糊的 <a href="http://forum.unity3d.com/threads/big-performance-issue-with-unity5-on-android.338847/#post-2196150">Workaround for bugs</a> 的理由，現在還是沒有修掉，也不知道什麼時候會修掉。所以建議開發者們多拿 Android 實機測試，對 Android GPU 可用的效能最好做下修。</p>
 <p>以上就是跟 2D 相關的最佳化的概論，更多細節會跟接下來介紹的之前的專案用到的最佳化小技巧一起解釋，如果有問題或是要指正都歡迎留言，謝謝。</p>
-<h3 id="heading">致謝</h3>
+<h3 id="致謝">致謝</h3>
 <p>本文章感謝 <a href="https://www.facebook.com/c4cats">C4Cat</a> 的 Colin Leung 大力協助，因為我自己在寫作之前對 Rendering pipeline 不甚了解，有多處仰賴跟 Colin 的對談才能釐清寫法。另外感謝所有有提供意見的朋友們：Kelvin Lo（<a href="https://www.facebook.com/UnityTechTaiwan">Unity Taiwan</a>）、Hsi-Hung Shih （<a href="http://narwhale.io/">Narwhale.io</a>）、大鐘、小善、長老、火星人（<a href="http://www.rayark.com/">Rayark Inc.</a>）、歐維斯。還有各位親朋好友的期待與支持。謝謝。</p>
-<h3 id="heading-1">額外參考資料：</h3>
+<h3 id="額外參考資料">額外參考資料：</h3>
 <p>Real-time Rendering</p>
 <p><a href="https://www.amazon.com/Real-Time-Rendering-Third-Tomas-Akenine-Moller/dp/1568814240">https://www.amazon.com/Real-Time-Rendering-Third-Tomas-Akenine-Moller/dp/1568814240</a></p>
 <p>第二、第三章講 Rendering pipeline ，Amazon 的試閱有第二章的部分</p>
@@ -303,7 +299,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 <script type="application/javascript">

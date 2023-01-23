@@ -13,7 +13,7 @@
 <p><strong>解答：</strong> 替換 <code>createStairs()</code> 內的程式：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -38,30 +38,30 @@
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">// 往上多少階
-var stepPair;
-var riserHeight = verticalStepHeight + stepThickness;
-var riserDepth = horizontalStepDepth - stepThickness;
-for ( stepPair = 0; stepPair &lt; 6; stepPair++ ) {
-    // 創造與移動垂直部分
-    stepMesh = new THREE.Mesh( stepVertical, stepMaterialVertical );
-    // 盒子中心位置
-    // 你可以用 THREE.Vector3(x, y, z) 或是以下方式:
-    stepMesh.position.x = 0; 
-    stepMesh.position.y = verticalStepHeight / 2 + stepPair * riserHeight; 
-    stepMesh.position.z = stepPair * riserDepth; 
-    scene.add( stepMesh ); 
-
-    // 創造與移動水平部分
-    stepMesh = new THREE.Mesh( stepHorizontal, stepMaterialHorizontal );
-    stepMesh.position.x = 0;
-    // 往上推半個水平的厚度加上整個垂直的高度
-    stepMesh.position.y = stepThickness / 2 + verticalStepHeight + stepPair * riserHeight;
-    // 往前推半個水平的深度，再拉回半個垂直的厚度
-    stepMesh.position.z = horizontalStepDepth / 2 - stepHalfThickness + stepPair * riserDepth;
-    scene.add( stepMesh );
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 往上多少階
+</span></span><span class="line"><span class="cl">var stepPair;
+</span></span><span class="line"><span class="cl">var riserHeight = verticalStepHeight + stepThickness;
+</span></span><span class="line"><span class="cl">var riserDepth = horizontalStepDepth - stepThickness;
+</span></span><span class="line"><span class="cl">for ( stepPair = 0; stepPair &lt; 6; stepPair++ ) {
+</span></span><span class="line"><span class="cl">    // 創造與移動垂直部分
+</span></span><span class="line"><span class="cl">    stepMesh = new THREE.Mesh( stepVertical, stepMaterialVertical );
+</span></span><span class="line"><span class="cl">    // 盒子中心位置
+</span></span><span class="line"><span class="cl">    // 你可以用 THREE.Vector3(x, y, z) 或是以下方式:
+</span></span><span class="line"><span class="cl">    stepMesh.position.x = 0; 
+</span></span><span class="line"><span class="cl">    stepMesh.position.y = verticalStepHeight / 2 + stepPair * riserHeight; 
+</span></span><span class="line"><span class="cl">    stepMesh.position.z = stepPair * riserDepth; 
+</span></span><span class="line"><span class="cl">    scene.add( stepMesh ); 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    // 創造與移動水平部分
+</span></span><span class="line"><span class="cl">    stepMesh = new THREE.Mesh( stepHorizontal, stepMaterialHorizontal );
+</span></span><span class="line"><span class="cl">    stepMesh.position.x = 0;
+</span></span><span class="line"><span class="cl">    // 往上推半個水平的厚度加上整個垂直的高度
+</span></span><span class="line"><span class="cl">    stepMesh.position.y = stepThickness / 2 + verticalStepHeight + stepPair * riserHeight;
+</span></span><span class="line"><span class="cl">    // 往前推半個水平的深度，再拉回半個垂直的厚度
+</span></span><span class="line"><span class="cl">    stepMesh.position.z = horizontalStepDepth / 2 - stepHalfThickness + stepPair * riserDepth;
+</span></span><span class="line"><span class="cl">    scene.add( stepMesh );
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>

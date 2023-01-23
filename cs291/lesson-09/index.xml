@@ -5,18 +5,14 @@
     <link>https://franknine.github.io/cs291/lesson-09/</link>
     <description>Recent content in Lesson 09 座標變換 on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://franknine.github.io/cs291/lesson-09/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-09/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 概覽</title>
       <link>https://franknine.github.io/cs291/lesson-09/01-overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/01-overview/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/01 Overview - Interactive 3D Graphics-7cO4sEBFvDE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 影片中的展示可以在 這裡 找到。</description>
+      <description>影片中的展示可以在 這裡 找到。</description>
     </item>
     
     <item>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/02-point-and-vector-operations/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/02 Point and Vector Operations - Interactive 3D Graphics-zGGoubCmrnM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以在 這裡 找到 Vector3 的文件。</description>
+      <description>你可以在 這裡 找到 Vector3 的文件。</description>
     </item>
     
     <item>
@@ -34,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/03-coordinate-values/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/03 Coordinate Values - Interactive 3D Graphics-rbIs10bER14.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -43,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/04-point-and-vector-sum/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/04 Point and Vector Sum - Interactive 3D Graphics-jrEoJaFRyM4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -52,7 +48,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/04a-point-and-vector-sum/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/04A Point and Vector Sum - Interactive 3D Graphics-YbllciHBYHg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -61,7 +57,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/05-vector-operation/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/05 Vector Operation - Interactive 3D Graphics-psd6oSdsI9I.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：你可以在 這裡 找到 Vector3 的文件。</description>
+      <description>譯註：你可以在 這裡 找到 Vector3 的文件。</description>
     </item>
     
     <item>
@@ -70,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/05a-vector-operation/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/05A Vector Operation - Interactive 3D Graphics-nAc2dD3vbJ8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -79,7 +75,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/06-translation/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/06 Translation - Interactive 3D Graphics-uBERLzLBvdU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 唉呀，我寫了 160 + 390 = 540，應該是 550。</description>
+      <description>唉呀，我寫了 160 + 390 = 540，應該是 550。</description>
     </item>
     
     <item>
@@ -88,7 +84,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/07-rotation/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/07 Rotation - Interactive 3D Graphics-RiuspJB-saw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -97,7 +93,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/08-rotate-a-block/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/08 Rotate a Block - Interactive 3D Graphics-Y3Txj4UKCb8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
     </item>
     
     <item>
@@ -106,7 +102,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/08a-rotate-a-block/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/08A Rotate a Block - Interactive 3D Graphics-R6VYBvRX30w.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將方塊旋轉加到 fillScene() 的結尾： 1 2 3 cube.rotation.y = -60 * Math.PI/180; scene.add( cube );</description>
+      <description>解答： 將方塊旋轉加到 fillScene() 的結尾： 1 2 3 cube.rotation.y = -60 * Math.PI/180; scene.add( cube );</description>
     </item>
     
     <item>
@@ -115,7 +111,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/09-name-that-object/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/09 Name That Object - Interactive 3D Graphics-bSjx2J06Dnw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 補充一下，我指的是你沿著綠色 Y 軸旋轉的結果。</description>
+      <description>補充一下，我指的是你沿著綠色 Y 軸旋轉的結果。</description>
     </item>
     
     <item>
@@ -124,7 +120,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/09a-name-that-object/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/09A Name That Object - Interactive 3D Graphics-IJ8zZXsWtVc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -133,7 +129,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/10-euler-angles/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/10 Euler Angles - Interactive 3D Graphics-q0jgqeS_ACM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 維基上有更多 尤拉角的介紹。如果你想要更深入操作尤拉角了解它對不同物件的作用，可以試試 Three.js 互動式編輯器。尤拉的</description>
+      <description>維基上有更多 尤拉角的介紹。如果你想要更深入操作尤拉角了解它對不同物件的作用，可以試試 Three.js 互動式編輯器。尤拉的銘言引自 這裡。</description>
     </item>
     
     <item>
@@ -151,7 +147,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/12-rigid-body-transforms-vs-scaling/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/12 Rigid Body Transforms vs Scaling - Interactive 3D Graphics-9MPstSYnLe4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -160,7 +156,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/13-scale-a-sphere/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/13 Scale a Sphere - Interactive 3D Graphics-Nathqf6hkeA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
     </item>
     
     <item>
@@ -169,7 +165,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/13a-scale-a-sphere/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/13A Scale a Sphere - Interactive 3D Graphics-hkyfZJNnBDs.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 在 fillScene() 末端加入： 1 2 3 4 5 6 sphere.scale.x = 3.0; // 60 / (2 * 半徑 10 ) -&amp;gt; 3 sphere.scale.y = 0.2; // 4 / (2 * 半徑 10 ) -&amp;gt; 0.2 sphere.scale.z = 0.2; sphere.rotation.y = 30 * Math.PI/180;</description>
+      <description>解答： 在 fillScene() 末端加入： 1 2 3 4 5 6 sphere.scale.x = 3.0; // 60 / (2 * 半徑 10 ) -&amp;gt; 3 sphere.scale.y = 0.2; // 4 / (2 * 半徑 10 ) -&amp;gt; 0.2 sphere.scale.z = 0.2; sphere.rotation.y = 30 * Math.PI/180; scene.add( sphere );</description>
     </item>
     
     <item>
@@ -178,7 +174,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/14-scale-rotate-translate/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/14 Scale Rotate Translate - Interactive 3D Graphics-p0NE5VhP-GY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 對 Three.js 的物件來說，給變數賦值的順序沒有關係。這些變數不是命令。你在旋轉之前或是之後設定平移，得到的都是相同</description>
+      <description>對 Three.js 的物件來說，給變數賦值的順序沒有關係。這些變數不是命令。你在旋轉之前或是之後設定平移，得到的都是相同結果。你設定的變數通常在繪製時以固定</description>
     </item>
     
     <item>
@@ -187,7 +183,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/15-rotate-then-scale/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/15 Rotate, then Scale - Interactive 3D Graphics-a1cz6jAtd0Y.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Three.js 互動式場景編輯器 是個實驗的好地方。先定義一個定向光，然後加物件到場景裡，接著試著改變平移、旋轉、縮放。</description>
+      <description>Three.js 互動式場景編輯器 是個實驗的好地方。先定義一個定向光，然後加物件到場景裡，接著試著改變平移、旋轉、縮放。</description>
     </item>
     
     <item>
@@ -196,7 +192,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/16-build-a-snowman/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/16 Build a Snowman - Interactive 3D Graphics-VxQmQ3o4fDA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。必要時請參考 14 縮放</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。必要時請參考 14 縮放、旋轉、平移 的課程資料。</description>
     </item>
     
     <item>
@@ -205,7 +201,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/16a-build-a-snowman/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/16A Build a Snowman - Interactive 3D Graphics-BiZqcgBgXZg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 替換 fillScene() 末端的 cylinder.position 呼叫成： 1 2 cylinder.rotation.x = 90 * Math.PI/180; cylinder.position.y = 50; 記得你設定旋轉與位置的程式順序沒有關係，Three.js</description>
+      <description>解答： 替換 fillScene() 末端的 cylinder.position 呼叫成： 1 2 cylinder.rotation.x = 90 * Math.PI/180; cylinder.position.y = 50; 記得你設定旋轉與位置的程式順序沒有關係，Three.js 總是先旋轉再平移到指定位置。參考下一</description>
     </item>
     
     <item>
@@ -214,7 +210,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/17-rotate-then-translate/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/17 Rotate, then Translate - Interactive 3D Graphics-CmgSye6-Ack.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我想要澄清常見的誤會，你在 Three.js 對 rotation 跟 translation 賦值的順序是無關的。當物件被繪製時座標變換的順序總是縮放、旋轉、平移</description>
+      <description>我想要澄清常見的誤會，你在 Three.js 對 rotation 跟 translation 賦值的順序是無關的。當物件被繪製時座標變換的順序總是縮放、旋轉、平移。接下來的課程你會看到如何改變施加座</description>
     </item>
     
     <item>
@@ -223,7 +219,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/18-object3d/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/18 Object3D - Interactive 3D Graphics-RBemS5NCVyw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); TRS-80 的介紹可以在 維基上 跟 這裡 找到。</description>
+      <description>TRS-80 的介紹可以在 維基上 跟 這裡 找到。</description>
     </item>
     
     <item>
@@ -232,7 +228,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/19-two-clock-hands/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/19 Two Clock Hands - Interactive 3D Graphics-2m5wFlUdq-U.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
     </item>
     
     <item>
@@ -241,7 +237,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/19a-two-clock-hands/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/19A Two Clock Hands - Interactive 3D Graphics--Q2yevxvUII.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將 fillScene() cube.rotation 以下替換成： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 var minuteHand = new THREE.Object3D(); minuteHand.add( cube ); minuteHand.rotation.y = -60 * Math.PI/180; scene.add( minuteHand ); var sphere = new THREE.Mesh(</description>
+      <description>解答： 將 fillScene() cube.rotation 以下替換成： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 var minuteHand = new THREE.Object3D(); minuteHand.add( cube ); minuteHand.rotation.y = -60 * Math.PI/180; scene.add( minuteHand ); var sphere = new THREE.Mesh( new THREE.SphereGeometry( 0.5, 32, 16 ), hourHandMaterial ); sphere.position.y = 18; // move the hand above the other</description>
     </item>
     
     <item>
@@ -250,7 +246,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/20-hierarchy-of-objects/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/20 Hierarchy of Objects - Interactive 3D Graphics-rXoGR5pobG4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); &amp;ldquo;The Hunting of the Snark&amp;rdquo; 原文在 這裡。</description>
+      <description>&amp;ldquo;The Hunting of the Snark&amp;rdquo; 原文在 這裡。</description>
     </item>
     
     <item>
@@ -259,7 +255,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/21-instancing/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/21 Instancing - Interactive 3D Graphics-gPwDB6o6u7E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 看 這個展示 在螢幕上顯示 5000 個實例化的模型。實例化更深入介紹可以在 這篇文章 找到。</description>
+      <description>看 這個展示 在螢幕上顯示 5000 個實例化的模型。實例化更深入介紹可以在 這篇文章 找到。</description>
     </item>
     
     <item>
@@ -268,7 +264,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/21a-reasons-for-instancing/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/21A Reasons for Instancing - Interactive 3D Graphics-B0JPoF9_MxQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -277,7 +273,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-09/22-robot-arm/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 09\/22 Robot Arm - Interactive 3D Graphics-ha8eVE_Znz0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 是的，上臂是在前臂下面。想像是我的 T-850 終結者 還在工廠生產中。</description>
+      <description>是的，上臂是在前臂下面。想像是我的 T-850 終結者 還在工廠生產中。</description>
     </item>
     
     <item>

@@ -5,18 +5,14 @@
     <link>https://franknine.github.io/cs291/lesson-05/</link>
     <description>Recent content in Lesson 05 問題集 on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://franknine.github.io/cs291/lesson-05/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-05/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 正多邊形產生器</title>
       <link>https://franknine.github.io/cs291/lesson-05/01-polygon-creator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/01-polygon-creator/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/01 Polygon Creator - Interactive 3D Graphics-V67w9xDbD58.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 線上作業更深入的除錯</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 線上作業更深入的除錯方式可以參考 Mathieu Civel 的 文章，稍微修改一</description>
     </item>
     
     <item>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/01a-polygon-creator/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/01A Polygon Creator - Interactive 3D Graphics-dISrAbxxJ00.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將以下的程式加入 PolygonGeometry() 1 2 3 4 5 6 7 8 // 儲存頂點位置 geo.vertices.push( new THREE.Vector3( x, y, 0.0 ) ); } // 產生面 for ( var face = 0 ; face &amp;lt; sides-2; face++ ) {</description>
+      <description>解答： 將以下的程式加入 PolygonGeometry() 1 2 3 4 5 6 7 8 // 儲存頂點位置 geo.vertices.push( new THREE.Vector3( x, y, 0.0 ) ); } // 產生面 for ( var face = 0 ; face &amp;lt; sides-2; face++ ) { // 這會製造扇形排列的三角形 geo.faces.push( new THREE.Face3( 0,</description>
     </item>
     
     <item>
@@ -34,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/02-polygon-location/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/02 Polygon Location - Interactive 3D Graphics-Yaz1IHypGO8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 如果你需要三角函數的</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 如果你需要三角函數的資料，參考 這篇文章，如果需要三角函</description>
     </item>
     
     <item>
@@ -43,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/02a-polygon-location/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/02A Polygon Location - Interactive 3D Graphics-fu4JkqM2lkA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 修改 PolygonGeometry() 的程式： 1 2 var x = Math.cos( angle ) + location.x; var y = Math.sin( angle ) + location.y;</description>
+      <description>解答： 修改 PolygonGeometry() 的程式： 1 2 var x = Math.cos( angle ) + location.x; var y = Math.sin( angle ) + location.y;</description>
     </item>
     
     <item>
@@ -52,7 +48,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/03-polygon-radius/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/03 Polygon Radius - Interactive 3D Graphics-D6ehAny6YpI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 如果你需要三角函數的</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 如果你需要三角函數的資料，參考 這篇文章，如果需要三角函</description>
     </item>
     
     <item>
@@ -61,7 +57,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/03a-polygon-radius/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/03A Polygon Radius - Interactive 3D Graphics-7-_k1pcn1Ws.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 修改 PolygonGeometry()： 1 2 var x = radius * Math.cos(angle) + location.x; var y = radius * Math.sin(angle) + location.y;</description>
+      <description>解答： 修改 PolygonGeometry()： 1 2 var x = radius * Math.cos(angle) + location.x; var y = radius * Math.sin(angle) + location.y;</description>
     </item>
     
     <item>
@@ -70,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/04-build-a-stairway/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/04 Build a Stairway - Interactive 3D Graphics-8B14upf_WxQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 我的 Sphere Flake 產生器還有</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 我的 Sphere Flake 產生器還有其他模型產生器 可以在這裡下載。L 系統</description>
     </item>
     
     <item>
@@ -79,7 +75,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/04a-build-a-stairway/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/04A Build a Stairway - Interactive 3D Graphics-OjKXkg08xrY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 替換 createStairs() 內的程式： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 // 往上多少階 var stepPair; var riserHeight = verticalStepHeight + stepThickness; var riserDepth = horizontalStepDepth</description>
+      <description>解答： 替換 createStairs() 內的程式： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 // 往上多少階 var stepPair; var riserHeight = verticalStepHeight + stepThickness; var riserDepth = horizontalStepDepth - stepThickness; for ( stepPair = 0; stepPair &amp;lt; 6; stepPair++ ) { // 創造與移</description>
     </item>
     
     <item>
@@ -88,7 +84,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/05-the-drinking-bird/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/05 The Drinking Bird - Interactive 3D Graphics-k9_PV3FtFbo.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 喝水鳥的設計圖可以</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 喝水鳥的設計圖可以在 課程筆記 找到，還有原始喝水鳥的照片</description>
     </item>
     
     <item>
@@ -97,7 +93,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/05a-the-drinking-bird/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/05A The Drinking Bird - Interactive 3D Graphics-ocqfxPuk5q4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： createSupport() 加入以下程式： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 // 右腳底板 cube = new THREE.Mesh( new THREE.CubeGeometry( 20+64+110, 52, 6 ), cubeMaterial ); // (20+32) - 一半的</description>
+      <description>解答： createSupport() 加入以下程式： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 // 右腳底板 cube = new THREE.Mesh( new THREE.CubeGeometry( 20+64+110, 52, 6 ), cubeMaterial ); // (20+32) - 一半的寬度 (20+64+110)/2 cube.position.x = -45; // 一半的高度 cube.position.y = 52/2; // 反方</description>
     </item>
     
     <item>
@@ -106,7 +102,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/06-z-fighting/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/06 Z-Fighting - Interactive 3D Graphics-CjckWVwd2ek.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以 執行展示 親自觀察 Z-Fighting。 修正版本在 這裡。</description>
+      <description>你可以 執行展示 親自觀察 Z-Fighting。 修正版本在 這裡。</description>
     </item>
     
     <item>
@@ -115,7 +111,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-05/06a-z-fighting/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 05\/06A Z-Fighting - Interactive 3D Graphics-w1sZTGmi7zc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
   </channel>

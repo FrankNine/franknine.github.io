@@ -5,18 +5,14 @@
     <link>https://franknine.github.io/cs291/lesson-04/</link>
     <description>Recent content in Lesson 04 點、向量與網格 on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://franknine.github.io/cs291/lesson-04/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-04/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 座標系統</title>
       <link>https://franknine.github.io/cs291/lesson-04/01-coordinate-system/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/01-coordinate-system/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/01 Coordinate System - Interactive 3D Graphics-45OkL5MPAmY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/02-cartesian-coordinates/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/02 Cartesian Coordinates - Interactive 3D Graphics-N4o3s5t0n9g.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以 在維基上 找到更多有關笛卡兒座標的資料，更深入的數學介紹請參考 Gortler 的 《Foundations of 3D Computer Gra</description>
+      <description>你可以 在維基上 找到更多有關笛卡兒座標的資料，更深入的數學介紹請參考 Gortler 的 《Foundations of 3D Computer Graphics》 座標系統圖案 來自 Wikimedia Co</description>
     </item>
     
     <item>
@@ -34,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/03-point-or-vector/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/03 Point or Vector - Interactive 3D Graphics-n4t2HDfqrw0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -43,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/03a-point-or-vector/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/03A Point or Vector - Interactive 3D Graphics-wMDI-rTvA2o.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -52,7 +48,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/04-left-handed-vs.-right-handed/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/04 Left-Handed vs. Right-Handed - Interactive 3D Graphics-Ke3h7NRLi2M.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 何時使用左手系統、何時使用右手系統是個大家爭論不休的問題，這裡有些 古老的討論串。</description>
+      <description>何時使用左手系統、何時使用右手系統是個大家爭論不休的問題，這裡有些 古老的討論串。</description>
     </item>
     
     <item>
@@ -61,7 +57,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/05-left-handed-or-right-handed/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/05 Left-Handed or Right-Handed - Interactive 3D Graphics-U5PGs8BM3r0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我想如果你是兔子或是其他掘地動物，你會希望高度的值隨著往下挖而增加。但在這題你不是兔子，高度值應該隨著往</description>
+      <description>我想如果你是兔子或是其他掘地動物，你會希望高度的值隨著往下挖而增加。但在這題你不是兔子，高度值應該隨著往上增加。</description>
     </item>
     
     <item>
@@ -70,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/05a-left-handed-or-right-handed/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/05A Left-Handed or Right-Handed - Interactive 3D Graphics-OxZDg32bazU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -79,7 +75,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/06-the-sun-also-rises/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/06 The Sun Also Rises - Interactive 3D Graphics-J9fhJSfqEzY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 我的 3D 列印 《Minecraft》 模型專案</description>
+      <description>我的 3D 列印 《Minecraft》 模型專案</description>
     </item>
     
     <item>
@@ -88,7 +84,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/06a-the-sun-also-rises/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/06A The Sun Also Rises - Interactive 3D Graphics-S4ClxUPE9Nc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -97,7 +93,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/07-which-way-is-up/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/07 Which Way Is Up - Interactive 3D Graphics-W8hmWWoaUyU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -106,7 +102,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/08-interview-which-way-is-up/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/08 Interview - Which Way Is Up - Interactive 3D Graphics-IhscKemfrkA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -115,7 +111,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/09-coordinate-system-transform/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/09 Coordinate System Transform - Interactive 3D Graphics-J99hVu71tZ4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -124,7 +120,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/09a-coordinate-system-transform/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/09A Coordinate System Transform - Interactive 3D Graphics-674XK9rjYNI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -133,7 +129,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/10-points-and-lines/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/10 Points and Lines - Interactive 3D Graphics-WOv43lAn2ZM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 《戰地風雲 3》的截圖由 Dead End Thrills 的 Duncan Harris 所截取，展現了最尖端的互動式遊戲繪圖技術。</description>
+      <description>《戰地風雲 3》的截圖由 Dead End Thrills 的 Duncan Harris 所截取，展現了最尖端的互動式遊戲繪圖技術。</description>
     </item>
     
     <item>
@@ -142,7 +138,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/11-triangles/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/11 Triangles - Interactive 3D Graphics-o5eEFOdyBVM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -151,7 +147,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/12-creating-geometry-in-three.js/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/12 Creating Geometry in three.js - Interactive 3D Graphics-1v5YjfZFFCE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -160,7 +156,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/13-create-a-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13 Create a Square - Interactive 3D Graphics-IG--fsqnM_s.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 以下是 Udacity 作業系統的</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 以下是 Udacity 作業系統的介紹，僅供參考 如果你需要更多的 JavaScript 教學</description>
     </item>
     
     <item>
@@ -169,7 +165,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/13a-create-a-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/13A Create a Square - Interactive 3D Graphics-lD0Pya4GVbI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答：以下程式加入 drawSquare() 函式： 1 2 3 4 5 6 7 8 var square = new THREE.Geometry(); square.vertices.push( new THREE.Vector3( x1, y1, 0 ) ); square.vertices.push( new THREE.Vector3( x2, y1, 0 ) ); square.vertices.push( new THREE.Vector3( x2, y2, 0 ) ); square.vertices.push( new</description>
+      <description>解答：以下程式加入 drawSquare() 函式： 1 2 3 4 5 6 7 8 var square = new THREE.Geometry(); square.vertices.push( new THREE.Vector3( x1, y1, 0 ) ); square.vertices.push( new THREE.Vector3( x2, y1, 0 ) ); square.vertices.push( new THREE.Vector3( x2, y2, 0 ) ); square.vertices.push( new THREE.Vector3( x1, y2, 0 ) ); square.faces.push( new THREE.Face3( 0, 1, 2 ) ); square.faces.push( new THREE.Face3( 2,</description>
     </item>
     
     <item>
@@ -178,7 +174,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/14-triangulation-and-tessellation/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/14 Triangulation and Tessellation - Interactive 3D Graphics-x4RZRs3PD4Q.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 總結來說，三角剖分必須是連接既有的點，而鑲嵌可以任意位置切割。 如果你能拚對 “frustum” 和 “tess</description>
+      <description>總結來說，三角剖分必須是連接既有的點，而鑲嵌可以任意位置切割。 如果你能拚對 “frustum” 和 “tessellation”，你已經克服了電腦</description>
     </item>
     
     <item>
@@ -187,7 +183,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/15-minimum-triangulation/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/15 Minimum Triangulation - Interactive 3D Graphics-m_TjEzGg2qk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -196,7 +192,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/15a-minimum-triangulation/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/15A Minimum Triangulation - Interactive 3D Graphics-9AkeScuvcaQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -205,7 +201,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/16-how-many-triangulations/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/16 How Many Triangulations - Interactive 3D Graphics-63FmoxoZ8Pc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -214,7 +210,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/16a-how-many-triangulations/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/16A How Many Triangulations - Interactive 3D Graphics-VQkpG50w3kM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -223,7 +219,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/17-vertex-ordering-and-culling/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/17 Vertex Ordering and Culling - Interactive 3D Graphics-fCtD12nRbc0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -232,7 +228,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/18-return-of-the-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/18 Return of the Square - Interactive 3D Graphics-HwwREraLujU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗 剔除預設是開啟的，</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗 剔除預設是開啟的，即 &amp;ldquo;side&amp;rdquo; 設定成 THREE.FrontSid</description>
     </item>
     
     <item>
@@ -241,7 +237,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/18a-return-of-the-square/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/18A Return of the Square - Interactive 3D Graphics-qk4TmL-16FY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答：改變 someObject() 的 faces.push： 1 2 3 geometry.faces.push( new THREE.Face3( 0, 1, 2 ) ); // the order of the face is flipped (was 2, 0, 3): geometry.faces.push( new THREE.Face3( 2, 3, 0 ) ); 另外</description>
+      <description>解答：改變 someObject() 的 faces.push： 1 2 3 geometry.faces.push( new THREE.Face3( 0, 1, 2 ) ); // the order of the face is flipped (was 2, 0, 3): geometry.faces.push( new THREE.Face3( 2, 3, 0 ) ); 另外還有兩種解法： 1 geometry.faces.push( new THREE.Face3( 3, 0, 2 ) ); 跟 1 geometry.faces.push(</description>
     </item>
     
     <item>
@@ -250,7 +246,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/19-model-creation/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/19 Model Creation - Interactive 3D Graphics-b-FqTJ94Jdg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 Three.js 本身內建的 Loader 類別。Webgl-loader 可以將模型轉換成 WebGL 能讀取的格式。 《WebGL Beginne</description>
+      <description>參考 Three.js 本身內建的 Loader 類別。Webgl-loader 可以將模型轉換成 WebGL 能讀取的格式。 《WebGL Beginner’s Guide》 的第二章與 《We</description>
     </item>
     
     <item>
@@ -259,7 +255,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-04/20-conclusion/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 04\/20 Conclusion - Interactive 3D Graphics-gaEjWFjI9_c.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可以 執行這個展示。</description>
+      <description>你可以 執行這個展示。</description>
     </item>
     
   </channel>

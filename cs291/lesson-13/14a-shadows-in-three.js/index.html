@@ -14,29 +14,29 @@
 <p><strong>解答：</strong> 將以下程式加到 <code>init()</code> 創造 <code>renderer</code> 之後：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">renderer.shadowMapEnabled = true;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">renderer.shadowMapEnabled = true;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在 <code>fillScene()</code> 創造聚光燈後加入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">spotlight.castShadow = true;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">spotlight.castShadow = true;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在創造 <code>solidGround</code> 之後加入：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">solidGround.receiveShadow = true;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">solidGround.receiveShadow = true;
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>

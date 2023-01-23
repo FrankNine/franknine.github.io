@@ -14,7 +14,7 @@
 <p>將以下的程式加入 <code>PolygonGeometry()</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -24,20 +24,20 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">	// 儲存頂點位置
-	geo.vertices.push( new THREE.Vector3( x, y, 0.0 ) ); 
-} 
-// 產生面 
-for ( var face = 0 ; face &lt; sides-2; face++ ) { 
-	// 這會製造扇形排列的三角形
-	geo.faces.push( new THREE.Face3( 0, face+1, face+2 ) ); 
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">	// 儲存頂點位置
+</span></span><span class="line"><span class="cl">	geo.vertices.push( new THREE.Vector3( x, y, 0.0 ) ); 
+</span></span><span class="line"><span class="cl">} 
+</span></span><span class="line"><span class="cl">// 產生面 
+</span></span><span class="line"><span class="cl">for ( var face = 0 ; face &lt; sides-2; face++ ) { 
+</span></span><span class="line"><span class="cl">	// 這會製造扇形排列的三角形
+</span></span><span class="line"><span class="cl">	geo.faces.push( new THREE.Face3( 0, face+1, face+2 ) ); 
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果你不想要兩個 for 迴圈也可以這樣：（感謝 Misha-165711）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -45,13 +45,13 @@ for ( var face = 0 ; face &lt; sides-2; face++ ) {
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">	geo.vertices.push( new THREE.Vector3( x, y, 0.0 ) );
-	if(pt &gt;= 2)
-    {
-        geo.faces.push(new THREE.Face3( 0, pt-1, pt ));
-    }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">	geo.vertices.push( new THREE.Vector3( x, y, 0.0 ) );
+</span></span><span class="line"><span class="cl">	if(pt &gt;= 2)
+</span></span><span class="line"><span class="cl">    {
+</span></span><span class="line"><span class="cl">        geo.faces.push(new THREE.Face3( 0, pt-1, pt ));
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>

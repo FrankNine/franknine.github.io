@@ -5,18 +5,14 @@
     <link>https://franknine.github.io/cs291/lesson-03/</link>
     <description>Recent content in Lesson 03 訪談：3D 建模與列印 on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://franknine.github.io/cs291/lesson-03/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-03/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 讓虛擬的事物成真</title>
       <link>https://franknine.github.io/cs291/lesson-03/01-making-virtual-things-real/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-03/01-making-virtual-things-real/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 03\/01 Making Virtual Things Real - Interactive 3D Graphics-Mup6-xkLJ58.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 影片中茶壺的模型可以在 Sculpteo 網站 預覽。 3D 列印服務有： Shapeways、Sculpteo、i.materi</description>
+      <description>影片中茶壺的模型可以在 Sculpteo 網站 預覽。 3D 列印服務有： Shapeways、Sculpteo、i.materialise 與 Ponoko。</description>
     </item>
     
     <item>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-03/02-jesse-harrington-au-at-autodesk/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 03\/02 Jesse Harrington Au at Autodesk - Interactive 3D Graphics-AebJdRLtdxM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Autodesk 藝廊的 導覽影片，如果你造訪舊金山可以 免費參觀。</description>
+      <description>Autodesk 藝廊的 導覽影片，如果你造訪舊金山可以 免費參觀。</description>
     </item>
     
     <item>
@@ -34,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-03/03-how-3d-printing-works/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 03\/03 How 3D Printing Works - Interactive 3D Graphics-pn5YW2fWFdk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 維基有 不錯的介紹</description>
+      <description>維基有 不錯的介紹</description>
     </item>
     
     <item>
@@ -43,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-03/04-any-shape-can-be-made/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 03\/04 Any Shape Can Be Made - Interactive 3D Graphics-bfbcCRSufIY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -52,7 +48,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-03/05-complexity-is-free/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 03\/05 Complexity Is Free - Interactive 3D Graphics-IUH15IduE4Y.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -61,7 +57,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-03/06-3d-printing-materials/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 03\/06 3D Printing Materials - Interactive 3D Graphics-4TOPS_sngJg.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -70,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-03/07-design-process/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 03\/07 Design Process - Interactive 3D Graphics-ICw0UOSiETo.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：這裡可能有口誤，他描述的 3D 列印方式應該是 FDM（Fused Deposition Modeling）機器。</description>
+      <description>譯註：這裡可能有口誤，他描述的 3D 列印方式應該是 FDM（Fused Deposition Modeling）機器。</description>
     </item>
     
     <item>
@@ -79,7 +75,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-03/08-problems-and-future-of-3d-printing/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 03\/08 Problems and Future of 3D Printing - Interactive 3D Graphics-016wMyiBdtQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Fabricated 這本書是不錯的基礎參考資料，充滿啟發性的想法。</description>
+      <description>Fabricated 這本書是不錯的基礎參考資料，充滿啟發性的想法。</description>
     </item>
     
   </channel>

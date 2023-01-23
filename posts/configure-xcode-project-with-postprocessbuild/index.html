@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.0 with theme even" />
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
 
 
 <link rel="canonical" href="https://franknine.github.io/posts/configure-xcode-project-with-postprocessbuild/" />
@@ -36,24 +36,20 @@
 
 
 
-<link href="/sass/main.min.4709ae1ffec4566bcfa0989fe5f61366a5d1eda6b70ff7a3592cd1d7b302d2ba.css" rel="stylesheet">
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
 
 
 
 <meta property="og:title" content="使用 PostProcessBuild 設定 Unity 產生的 Xcode Project" />
 <meta property="og:description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/configure-xcode-project-with-postprocessbuild/" />
+<meta property="og:url" content="https://franknine.github.io/posts/configure-xcode-project-with-postprocessbuild/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2015-09-26T12:30:50+00:00" />
 <meta property="article:modified_time" content="2015-09-26T12:30:50+00:00" />
 <meta itemprop="name" content="使用 PostProcessBuild 設定 Unity 產生的 Xcode Project">
-<meta itemprop="description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。">
-<meta itemprop="datePublished" content="2015-09-26T12:30:50&#43;00:00" />
-<meta itemprop="dateModified" content="2015-09-26T12:30:50&#43;00:00" />
+<meta itemprop="description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。"><meta itemprop="datePublished" content="2015-09-26T12:30:50+00:00" />
+<meta itemprop="dateModified" content="2015-09-26T12:30:50+00:00" />
 <meta itemprop="wordCount" content="1945">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用 PostProcessBuild 設定 Unity 產生的 Xcode Project"/>
 <meta name="twitter:description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。"/>
@@ -139,9 +135,9 @@
 <p>文件在：</p>
 <p><a href="http://docs.unity3d.com/ScriptReference/iOS.Xcode.PBXProject.html">http://docs.unity3d.com/ScriptReference/iOS.Xcode.PBXProject.html</a></p>
 <p>使用 C# 應該是最方便我們使用的，不過可惜的是這個 API 功能並不完全，在處理 Entitlement 的時候我們還是要自己手動做一點字串取代。</p>
-<h3 id="xcode-manipulation-api">安裝 Xcode Manipulation API</h3>
+<h3 id="安裝xcode-manipulation-api">安裝 Xcode Manipulation API</h3>
 <p>如果你是 Unity 5 的使用者的話 Xcode Manipulation API 已經包含在 UnityEditor 裡面了，Unity 4 的使用者需要去上面的 Bitbucket 網址 clone 原始檔，放在自己 Unity 專案底下的某個 Editor 資料夾下。然後要注意 xcodeapi 底下 Utils.cs 的 class UnityEditor.iOS.Xcode.PBX.Utils 會跟 Unity 4 底下的 UnityEditor.Utils 衝突。要把 UnityEditor.iOS.Xcode.PBX.Utils 改成別的名字。</p>
-<h3 id="xcode-">Xcode 專案結構</h3>
+<h3 id="xcode-專案結構">Xcode 專案結構</h3>
 <p><img src="/images/configure-xcode-project-with-postprocessbuild/xcode-project.png" alt="Xcode Project"></p>
 <p>Build 完設定完的 Xcode Project 大概會長的像這樣，我們要操作的內容主要是 Info.plist、Unity-iPhone 底下的 .entitlements、還有 Unity-iPhone.xcodeproj。xcodeproj 是一個 package ，右鍵點選選 Show Package Content 可以看到 project.pbxproj。</p>
 <p><img src="/images/configure-xcode-project-with-postprocessbuild/pbxpoject.png" alt="PBXProject"></p>
@@ -151,7 +147,7 @@
 <p>一般的設定會像這樣：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -160,26 +156,26 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">_OnPostprocessBuild</span> <span class="p">(</span><span class="n">BuildTarget</span> <span class="n">target</span><span class="p">,</span> <span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="p">=</span><span class="p">=</span> <span class="n">BuildTarget</span><span class="p">.</span><span class="n">iPhone</span><span class="p">)</span>
-  <span class="p">{</span>
-    <span class="p">.</span><span class="p">.</span><span class="p">.</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">_OnPostprocessBuild</span> <span class="p">(</span><span class="n">BuildTarget</span> <span class="n">target</span><span class="p">,</span> <span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="p">==</span> <span class="n">BuildTarget</span><span class="p">.</span><span class="n">iPhone</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>PostProcessBuild 可以帶一個數字參數代表執行順序，但是詭異的是 Unity 沒有 PreProcessBuild 有時候會造成一些不便。</p>
 <p>PostProcessBuild 的參數在這裡：</p>
 <p><a href="http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html">http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html</a></p>
-<h3 id="-required-device-capability">增加 Required Device Capability</h3>
+<h3 id="增加-required-device-capability">增加 Required Device Capability</h3>
 <p>預設的 Unity Xcode 專案會開 Game Center 的 Entitlements 但是沒有把 gamekit 加到 Required device capability 裡面，所以開起來會跳 issue ，解決方法是把它加進 Info.plist。</p>
 <p><img src="/images/configure-xcode-project-with-postprocessbuild/entitlements.png" alt="Entitlements"></p>
 <p><img src="/images/configure-xcode-project-with-postprocessbuild/required-device-capability.png" alt="Required Device Capability"></p>
 <p>這邊用的是 Unity Manipulation API ，code 大概像是下面這樣：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -192,18 +188,18 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">static</span> <span class="k">void</span> <span class="n">_AddDeviceCapabilities</span><span class="p">(</span><span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="kt">string</span> <span class="n">infoPlistPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span> <span class="p">(</span><span class="n">pathToBuiltProject</span><span class="p">,</span> <span class="s">&#34;./Info.plist&#34;</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">PlistDocument</span> <span class="n">plist</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PlistDocument</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">plist</span><span class="p">.</span><span class="n">ReadFromString</span> <span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="n">infoPlistPath</span><span class="p">)</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">PlistElementDict</span> <span class="n">rootDict</span> <span class="p">=</span> <span class="n">plist</span><span class="p">.</span><span class="n">root</span><span class="p">;</span>
-	<span class="n">PlistElementArray</span> <span class="n">deviceCapabilityArray</span> <span class="p">=</span> <span class="n">rootDict</span><span class="p">.</span><span class="n">CreateArray</span><span class="p">(</span><span class="s">&#34;UIRequiredDeviceCapabilities&#34;</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">deviceCapabilityArray</span><span class="p">.</span><span class="n">AddString</span><span class="p">(</span><span class="s">&#34;armv7&#34;</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">deviceCapabilityArray</span><span class="p">.</span><span class="n">AddString</span><span class="p">(</span><span class="s">&#34;gamekit&#34;</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">infoPlistPath</span><span class="p">,</span><span class="n">plist</span><span class="p">.</span><span class="n">WriteToString</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">static</span> <span class="k">void</span> <span class="n">_AddDeviceCapabilities</span><span class="p">(</span><span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">string</span> <span class="n">infoPlistPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span> <span class="p">(</span><span class="n">pathToBuiltProject</span><span class="p">,</span> <span class="s">&#34;./Info.plist&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">PlistDocument</span> <span class="n">plist</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PlistDocument</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="n">plist</span><span class="p">.</span><span class="n">ReadFromString</span> <span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">(</span><span class="n">infoPlistPath</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="n">PlistElementDict</span> <span class="n">rootDict</span> <span class="p">=</span> <span class="n">plist</span><span class="p">.</span><span class="n">root</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">PlistElementArray</span> <span class="n">deviceCapabilityArray</span> <span class="p">=</span> <span class="n">rootDict</span><span class="p">.</span><span class="n">CreateArray</span><span class="p">(</span><span class="s">&#34;UIRequiredDeviceCapabilities&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">deviceCapabilityArray</span><span class="p">.</span><span class="n">AddString</span><span class="p">(</span><span class="s">&#34;armv7&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">deviceCapabilityArray</span><span class="p">.</span><span class="n">AddString</span><span class="p">(</span><span class="s">&#34;gamekit&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">infoPlistPath</span><span class="p">,</span><span class="n">plist</span><span class="p">.</span><span class="n">WriteToString</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>大致上就是用 PlistDocument 開啟 Info.plist ，加入 UIRequiredDeviceCapabilities 這個屬性，然後在上面加入 gamekit。因為實驗結果 Xcode Manipulation API 會做一個覆寫的動作，所以原本存在的 armv7 也要加回去。然後如果你的 app 有需要其他的 Required device capability 也都在這裡可以加。</p>
 <h3 id="xcode-7ios9-require-full-screen">[Xcode 7/iOS9] Require Full Screen</h3>
@@ -212,17 +208,17 @@
 <p>一般的遊戲應該都會設定成 yes ，這個設定也在 Info.plist ，key 值是 UIRequiresFullScreen</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="n">infoPlistRootDict</span><span class="p">.</span><span class="n">SetBoolean</span><span class="p">(</span><span class="s">&#34;UIRequiresFullScreen&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">)</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">infoPlistRootDict</span><span class="p">.</span><span class="n">SetBoolean</span><span class="p">(</span><span class="s">&#34;UIRequiresFullScreen&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="-framework">增加引入的 Framework</h3>
+</div><h3 id="增加引入的-framework">增加引入的 Framework</h3>
 <p>如果說你的 app 需要加入別的 .framework ，這個需要用 Xcode Manipulation API 的 PBXProject 開啟 project.pbxproj</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -234,17 +230,17 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">static</span> <span class="k">void</span> <span class="n">_AddFrameWork</span><span class="p">(</span><span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="kt">string</span> <span class="n">pbxProjectPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span> <span class="p">(</span><span class="n">pathToBuiltProject</span><span class="p">,</span> <span class="s">&#34;./Unity-iPhone.xcodeproj/project.pbxproj&#34;</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">PBXProject</span> <span class="n">pbxProject</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PBXProject</span> <span class="p">(</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">pbxProject</span><span class="p">.</span><span class="n">ReadFromFile</span> <span class="p">(</span><span class="n">pbxProjectPath</span><span class="p">)</span><span class="p">;</span>
-	<span class="kt">string</span> <span class="n">targetGUID</span> <span class="p">=</span> <span class="n">pbxProject</span><span class="p">.</span><span class="n">TargetGuidByName</span> <span class="p">(</span><span class="s">&#34;Unity-iPhone&#34;</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">pbxProject</span><span class="p">.</span><span class="n">AddFrameworkToProject</span> <span class="p">(</span><span class="n">targetGUID</span><span class="p">,</span> <span class="s">&#34;CoreData.framework&#34;</span><span class="p">,</span> <span class="n">weak</span><span class="p">:</span><span class="k">false</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">pbxProject</span><span class="p">.</span><span class="n">AddFrameworkToProject</span> <span class="p">(</span><span class="n">targetGUID</span><span class="p">,</span> <span class="s">&#34;Social.framework&#34;</span><span class="p">,</span> <span class="n">weak</span><span class="p">:</span><span class="k">false</span><span class="p">)</span><span class="p">;</span>
-	<span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">pbxProjectPath</span><span class="p">,</span><span class="n">pbxProject</span><span class="p">.</span><span class="n">WriteToString</span> <span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">static</span> <span class="k">void</span> <span class="n">_AddFrameWork</span><span class="p">(</span><span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">string</span> <span class="n">pbxProjectPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span> <span class="p">(</span><span class="n">pathToBuiltProject</span><span class="p">,</span> <span class="s">&#34;./Unity-iPhone.xcodeproj/project.pbxproj&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">PBXProject</span> <span class="n">pbxProject</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PBXProject</span> <span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pbxProject</span><span class="p">.</span><span class="n">ReadFromFile</span> <span class="p">(</span><span class="n">pbxProjectPath</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">string</span> <span class="n">targetGUID</span> <span class="p">=</span> <span class="n">pbxProject</span><span class="p">.</span><span class="n">TargetGuidByName</span> <span class="p">(</span><span class="s">&#34;Unity-iPhone&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pbxProject</span><span class="p">.</span><span class="n">AddFrameworkToProject</span> <span class="p">(</span><span class="n">targetGUID</span><span class="p">,</span> <span class="s">&#34;CoreData.framework&#34;</span><span class="p">,</span> <span class="n">weak</span><span class="p">:</span><span class="k">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pbxProject</span><span class="p">.</span><span class="n">AddFrameworkToProject</span> <span class="p">(</span><span class="n">targetGUID</span><span class="p">,</span> <span class="s">&#34;Social.framework&#34;</span><span class="p">,</span> <span class="n">weak</span><span class="p">:</span><span class="k">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">pbxProjectPath</span><span class="p">,</span><span class="n">pbxProject</span><span class="p">.</span><span class="n">WriteToString</span> <span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>weak 參數是設定這個 framework 是 required 還是 optional。</p>
 <h3 id="icloud">iCloud</h3>
@@ -256,65 +252,65 @@
 <p>搜尋目標是：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="s">@&#34;/* Begin PBXFileReference section */&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="s">@&#34;/* Begin PBXFileReference section */&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>取代成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="s">@&#34;/* Begin PBXFileReference section */
-</span><span class="s">FFFFFFFFFFFFFFFFFFFFFFFF /* test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = test.entitlements; path = &#34;&#34;Unity-iPhone/test.entitlements&#34;&#34;; sourceTree = &#34;&#34;&amp;lt;group&amp;gt;&#34;</span><span class="s">&#34;; };
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="s">@&#34;/* Begin PBXFileReference section */
+</span></span></span><span class="line"><span class="cl"><span class="s">FFFFFFFFFFFFFFFFFFFFFFFF /* test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = test.entitlements; path = &#34;&#34;Unity-iPhone/test.entitlements&#34;&#34;; sourceTree = &#34;&#34;&amp;lt;group&amp;gt;&#34;&#34;; };
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>你的 hex code 跟 .entitlements 檔案名稱不會一樣，要用你的專案裡面看到的為準。建議在字串前面加 @ 作為 verbatim string，這樣就可以直接從 pbxproj 裡面複製出來把 <code>&quot;</code> 跳脫成 <code>&quot;&quot;</code> 就可以拿來比對了。不用自己再把換行換成 <code>\n</code> tab 換成 <code>\t</code>。</p>
 <p>然後是 Custom template 要把：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="s">@&#34;/* CustomTemplate */ = {
-</span><span class="s">	isa = PBXGroup;
-</span><span class="s">	children = (&#34;</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="s">@&#34;/* CustomTemplate */ = {
+</span></span></span><span class="line"><span class="cl"><span class="s">	isa = PBXGroup;
+</span></span></span><span class="line"><span class="cl"><span class="s">	children = (&#34;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>取代成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="s">@&#34;/* CustomTemplate */ = {
-</span><span class="s">	isa = PBXGroup;
-</span><span class="s">	children = (&#34;</span><span class="p">;</span>
-		<span class="n">FFFFFFFFFFFFFFFFFFFFFFFF</span> <span class="cm">/* test.entitlements */</span><span class="p">,</span><span class="s">&#34;;
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="s">@&#34;/* CustomTemplate */ = {
+</span></span></span><span class="line"><span class="cl"><span class="s">	isa = PBXGroup;
+</span></span></span><span class="line"><span class="cl"><span class="s">	children = (&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">FFFFFFFFFFFFFFFFFFFFFFFF</span> <span class="cm">/* test.entitlements */</span><span class="p">,</span><span class="s">&#34;;
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>Target Attribute：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="s">@&#34;TargetAttributes = {&#34;</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="s">@&#34;TargetAttributes = {&#34;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>取代成</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -325,38 +321,38 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="s">@&#34;TargetAttributes = {
-</span><span class="s">	EEEEEEEEEEEEEEEEEEEEEEEE = {
-</span><span class="s">		DevelopmentTeam = EEEEEEEE;
-</span><span class="s">		SystemCapabilities = {
-</span><span class="s">			com.apple.iCloud = {
-</span><span class="s">				enabled = 1;
-</span><span class="s">			};
-</span><span class="s">		};
-</span><span class="s">	};&#34;</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="s">@&#34;TargetAttributes = {
+</span></span></span><span class="line"><span class="cl"><span class="s">	EEEEEEEEEEEEEEEEEEEEEEEE = {
+</span></span></span><span class="line"><span class="cl"><span class="s">		DevelopmentTeam = EEEEEEEE;
+</span></span></span><span class="line"><span class="cl"><span class="s">		SystemCapabilities = {
+</span></span></span><span class="line"><span class="cl"><span class="s">			com.apple.iCloud = {
+</span></span></span><span class="line"><span class="cl"><span class="s">				enabled = 1;
+</span></span></span><span class="line"><span class="cl"><span class="s">			};
+</span></span></span><span class="line"><span class="cl"><span class="s">		};
+</span></span></span><span class="line"><span class="cl"><span class="s">	};&#34;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>一樣那個 hex code 跟那個 DevelopmentTeam 還是以你在啟用過 iCloud 的 PBXProject 版本為準。</p>
 <p>最後是要在 XCBuildConfiguration section 底下的 buildSettings 加入 CODE_SIGN_ENTITLEMENTS。這個我是隨便找一個 build settings 然後直接黏在它後面。</p>
 <p>例如選擇用：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="s">@&#34;CLANG_CXX_LIBRARY = &#34;&#34;libstdc++&#34;&#34;;&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="s">@&#34;CLANG_CXX_LIBRARY = &#34;&#34;libstdc++&#34;&#34;;&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>取代成：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="s">@&#34;CLANG_CXX_LIBRARY = &#34;&#34;libstdc++&#34;&#34;;
-</span><span class="s">CODE_SIGN_ENTITLEMENTS = &#34;&#34;Unity-iPhone/test.entitlements&#34;&#34;;&#34;</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="s">@&#34;CLANG_CXX_LIBRARY = &#34;&#34;libstdc++&#34;&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="s">CODE_SIGN_ENTITLEMENTS = &#34;&#34;Unity-iPhone/test.entitlements&#34;&#34;;&#34;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>這樣就大功告成了。</p>
 <p>P.S. 原來在 Unity 論壇上面原作者還有手動加入 CloudKit.framework ，不過我照做反而 Link fail，不做就編過了。這邊不太確定是怎麼回事。如果在你的機器上會跳 CloudKit 的 Link fail 的話就試著加加看吧。</p>
@@ -366,15 +362,15 @@
 <p>關閉的方法是在 build settings 加入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="n">ENABLE_BITCODE</span> <span class="p">=</span> <span class="n">NO</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">ENABLE_BITCODE</span> <span class="p">=</span> <span class="n">NO</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>方法跟 CODE_SIGN_ENTITLEMENTS 一樣。</p>
 <p>希望大家也 Happy building 啦</p>
-<h4 id="heading">參考資料</h4>
+<h4 id="參考資料">參考資料</h4>
 <p>PBXProject 格式參考資料（非官方）：</p>
 <p><a href="http://www.monobjc.net/xcode-project-file-format.html">http://www.monobjc.net/xcode-project-file-format.html</a></p>
 <p>iCloud 的開啟方式是參考這篇論壇文章：</p>
@@ -439,7 +435,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 <script type="application/javascript">

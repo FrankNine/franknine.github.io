@@ -13,7 +13,7 @@
 <p><strong>解答：</strong> 刪除 <code>fillScene()</code> 裡的 <code>scene.add( arm )</code> 並用以下取代：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -25,22 +25,22 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">body = new THREE.Object3D();
-var bodyLength = 60;
-// 解答
-createRobotBody( body, bodyLength, robotBodyMaterial );
-
-// 將上臂移動到身體的頂端
-arm.position.y = bodyLength;
-body.add( arm );
-
-scene.add( body );
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">body = new THREE.Object3D();
+</span></span><span class="line"><span class="cl">var bodyLength = 60;
+</span></span><span class="line"><span class="cl">// 解答
+</span></span><span class="line"><span class="cl">createRobotBody( body, bodyLength, robotBodyMaterial );
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// 將上臂移動到身體的頂端
+</span></span><span class="line"><span class="cl">arm.position.y = bodyLength;
+</span></span><span class="line"><span class="cl">body.add( arm );
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">scene.add( body );
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然後取消以下三行的註解：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -48,13 +48,13 @@ scene.add( body );
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">// UNCOMMENT FOLLOWING LINES TO ENABLE CONTROLS FOR BODY:
-// body.rotation.y = effectController.by * Math.PI/180;	// yaw
-
-// by: 0.0,
-
-// student, uncomment: h.add(effectController, &#34;by&#34;, -180.0, 180.0, 0.025).name(&#34;Body y&#34;);
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// UNCOMMENT FOLLOWING LINES TO ENABLE CONTROLS FOR BODY:
+</span></span><span class="line"><span class="cl">// body.rotation.y = effectController.by * Math.PI/180;	// yaw
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// by: 0.0,
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// student, uncomment: h.add(effectController, &#34;by&#34;, -180.0, 180.0, 0.025).name(&#34;Body y&#34;);
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>

@@ -14,7 +14,7 @@
 <p><strong>解答：</strong> 取代 <code>fillScene()</code> 裡 <code>DirectionalLight</code> 程式：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -22,13 +22,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">var light = new THREE.SpotLight( 0xFFFFFF, 1.5 );
-light.position.set( -400, 1200, 300 );
-light.angle = 20 * Math.PI / 180;
-light.exponent = 1;
-light.target.position.set( 0, 200, 0 );
-scene.add( light );
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">var light = new THREE.SpotLight( 0xFFFFFF, 1.5 );
+</span></span><span class="line"><span class="cl">light.position.set( -400, 1200, 300 );
+</span></span><span class="line"><span class="cl">light.angle = 20 * Math.PI / 180;
+</span></span><span class="line"><span class="cl">light.exponent = 1;
+</span></span><span class="line"><span class="cl">light.target.position.set( 0, 200, 0 );
+</span></span><span class="line"><span class="cl">scene.add( light );
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>

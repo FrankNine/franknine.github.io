@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.62.0 with theme even" />
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
 
 
 <link rel="canonical" href="https://franknine.github.io/posts/unity-mobile-optimization-prologue/" />
@@ -36,24 +36,20 @@
 
 
 
-<link href="/sass/main.min.4709ae1ffec4566bcfa0989fe5f61366a5d1eda6b70ff7a3592cd1d7b302d2ba.css" rel="stylesheet">
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
 
 
 
 <meta property="og:title" content="Unity 手機遊戲最佳化雜談 – 概論" />
 <meta property="og:description" content="之前就一直多少有幫忙解決效能卡住的地方，最近的工作又累積了一些經驗，想說分享一下。不過因為在遊戲業工作也不算太久，也不完全是 Real-time rendering 出身，所以如果有錯誤還請指教。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/unity-mobile-optimization-prologue/" />
+<meta property="og:url" content="https://franknine.github.io/posts/unity-mobile-optimization-prologue/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2016-06-05T17:55:23+00:00" />
 <meta property="article:modified_time" content="2016-06-05T17:55:23+00:00" />
 <meta itemprop="name" content="Unity 手機遊戲最佳化雜談 – 概論">
-<meta itemprop="description" content="之前就一直多少有幫忙解決效能卡住的地方，最近的工作又累積了一些經驗，想說分享一下。不過因為在遊戲業工作也不算太久，也不完全是 Real-time rendering 出身，所以如果有錯誤還請指教。">
-<meta itemprop="datePublished" content="2016-06-05T17:55:23&#43;00:00" />
-<meta itemprop="dateModified" content="2016-06-05T17:55:23&#43;00:00" />
+<meta itemprop="description" content="之前就一直多少有幫忙解決效能卡住的地方，最近的工作又累積了一些經驗，想說分享一下。不過因為在遊戲業工作也不算太久，也不完全是 Real-time rendering 出身，所以如果有錯誤還請指教。"><meta itemprop="datePublished" content="2016-06-05T17:55:23+00:00" />
+<meta itemprop="dateModified" content="2016-06-05T17:55:23+00:00" />
 <meta itemprop="wordCount" content="1930">
-
-
-
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity 手機遊戲最佳化雜談 – 概論"/>
 <meta name="twitter:description" content="之前就一直多少有幫忙解決效能卡住的地方，最近的工作又累積了一些經驗，想說分享一下。不過因為在遊戲業工作也不算太久，也不完全是 Real-time rendering 出身，所以如果有錯誤還請指教。"/>
@@ -125,7 +121,7 @@
           <article class="post">
   <div class="post-content">
     <p>之前就一直多少有幫忙解決效能卡住的地方，最近的工作又累積了一些經驗，想說分享一下。不過因為在遊戲業工作也不算太久，也不完全是 Real-time rendering 出身，所以如果有錯誤還請指教。</p>
-<h3 id="heading">為什麼要最佳化、最佳化什麼？</h3>
+<h3 id="為什麼要最佳化最佳化什麼">為什麼要最佳化、最佳化什麼？</h3>
 <p>通常遊戲開發到後期要上市的時候都會遇到 QA 回報效能不佳或是閃退的狀況，或是安裝的檔案太大，超過了能用手機網路能下載的上限。所以最佳化的項目通常是：</p>
 <ol>
 <li>執行效率 (FPS、耗電)</li>
@@ -135,20 +131,20 @@
 <p>執行效率低落很直接的影響到遊玩體驗，另外一種情況是手機效能好到就算執行沒效率的程式也還是能維持住 FPS ，但在這個情況下可能就會變成 CPU 或是 GPU 的使用率太高造成耗電上升甚至到手機發熱。</p>
 <p>記憶體用量跟 <a href="https://en.wikipedia.org/wiki/Paging">paging</a> 的次數有一定的正相關，會多少影響到效能。但是最大的問題是是用太兇會直接被手機的作業系統打斷。 iOS 上面有個三振系統，當 iOS 覺得你記憶體用太多的時候就會警告你的 App (如果你機器接在 Xcode console 上面會看到)，兩次警告之後第三次就會直接砍 process 。因為這個機制完全沒有說明文件，不同的機器搭配不同版本的 iOS 被警告的點都不一樣，所以 Stack Overflow 上面有個<a href="http://stackoverflow.com/a/15200855">討論串</a>彙整了大家的測試結果(測試工具在<a href="https://github.com/Split82/iOSMemoryBudgetTest">這裡</a>，有興趣可以自己 build 到 iOS device 上面看看，不過你會發現 iOS 老大心情每次都不一樣)。Android 用太兇則是會吃 Out of Memory Exception ，一樣 Unity 是跑不下去的。</p>
 <p>檔案大小影響的則是受眾面，當玩家看到安裝容量很大下載很久，然後自己的手機又沒有空間了，很可能就直接放棄安裝遊戲。雖然這是行銷會比較在意的事情，但是為了能讓更多玩家玩到遊戲，該做的還是要做。</p>
-<h3 id="heading-1">最佳化原則</h3>
+<h3 id="最佳化原則">最佳化原則</h3>
 <p>我這篇還不會說到跟 Unity 相關的最佳化步驟，想先說一些自己最佳化起來的心得，整理如下：</p>
-<h4 id="heading-2">不要太早最佳化</h4>
+<h4 id="不要太早最佳化">不要太早最佳化</h4>
 <p>雖然說句子看起來很像，我是不太想 Quote 高先生說過的話，因為我不覺得我能理解到他的高度。這裡就只是很簡單地想說遊戲專案是很需要反覆實作與驗證的，而最佳化通常會讓改動變得非常困難。所以我覺得最適合最佳化的時候是 Spec 都確定不會再改的時候，如果因為最佳化已經做了而去妨礙到遊戲玩法或操作上的發展，我覺得是非常不划算的。唯一可能的例外是目前開發中的遊戲效能差到連執行起來看看都有問題，這時候可以做掉一些 C/P 值高 的部分加速開發過程。</p>
-<h4 id="--profiler">一分證據說一分話 (給我用 Profiler)</h4>
+<h4 id="一分證據說一分話-給我用-profiler">一分證據說一分話 (給我用 Profiler)</h4>
 <p>最佳化其實是一個蠻科學的過程，就是紀錄改動前的數據，跟改動後的數據做比較。不過可能是因為大家在學校裡面比較沒有接觸到 Profiler ，所以不知道要怎麼拿到程式執行起來花的時間或記憶體的數據，變成是用猜的或是感覺的，其實這樣是很難做最佳化的。</p>
 <p>打個比方，今天你覺得你錢花太兇了，決定要省一點錢。如果靠感覺的話可能會去省早餐，因為你很晚起，早餐跟午餐很近你覺得可以只吃午餐，但是這樣一個月下來你覺得不太健康也好像沒有省很多錢。而省錢正確的做法是去記帳，然後彙整資料看看錢到底花到哪去，可能你就會看到 PAD 一單一千三，攤下來比天天吃早餐還貴這樣的感覺。Profiler 實際上做的事情也就像是幫你的程式記記憶體或是 Clock Cycle 的帳，幫助你省東西。</p>
 <p>我之後會介紹 Unity 裡面可以用的 Profiling 工具，然後還要介紹 Unity 之外的工具來補足 Unity 的不足。</p>
-<h4 id="cp--go-after-the-low-hanging-fruit">C/P 值高的先做 (Go after the low-hanging fruit)</h4>
+<h4 id="cp-值高的先做-go-after-the-low-hanging-fruit">C/P 值高的先做 (Go after the low-hanging fruit)</h4>
 <p>絕大多數時候浪費的效能都是在很好解決的東西上面，當你想要繼續往上推就可能會越來越難做，效益也越來越差。當然要判斷哪邊 C/P 值高還是要靠 Profiler ，所以還是再說一次 Profiler 很重要。</p>
-<h4 id="heading-3">不一定要最佳化「所有」東西</h4>
+<h4 id="不一定要最佳化所有東西">不一定要最佳化「所有」東西</h4>
 <p>程式的執行效率只是程式品質眾多面向的其中一個，有的時候別的東西的價值可能會比效率重要。Unity 社群裡面常常在爭執的 <a href="../unity-foreach">foreach 問題</a>就是一個很好的例子，有些人會覺得那 24 bytes 的 GC Allocation 實在是不能忍，要除惡務盡把所有 foreach 都改成 for 。但是我覺得我會比較看重可讀性而不去把它改成 for ，這當然沒有一定標準，只是想提醒一下執行效率不是程式的一切、可讀性、可維護性等等也是很重要的。最佳化可能會犧牲它們，犧牲它們之前想想這個交易划不划算。</p>
 <p>除了哪種最佳化要不要做之外，也可以考慮哪邊要做哪邊不做。通常 Gameplay 是最需要效率的標準比較高，在時間不夠的情況下當然是先優化 Gameplay 。反過來選單之類的就不那麼需要效能，犧牲一點效率讓讓選單部分的程式保有更多的可讀、可維護性也許是比較好的策略。</p>
-<h4 id="heading-4">確定最佳化的目標</h4>
+<h4 id="確定最佳化的目標">確定最佳化的目標</h4>
 <p>在最佳化開始之前最好先確定你的目標，像是在哪種規格上要跑到多少 FPS 。達到目標之後的最佳化其實就沒有甚麼意義了，如果不會 Frame drop ，跑再快使用者的感受到的都差不多。可以定像是記憶體不能接近 256MB (實體記憶體 512 MB 的機器單一 App 能用的記憶體大概一半)，或是 OpenGL ES2 (放棄 ETC2 壓縮格式)。如果對規格沒有想法，可以想說自己的遊戲大概幾年前的主力手機應該要能玩，像如果抓四年前，那就是看 Galaxy S3 跟 iPhone 5 的規格。如果你曾經上架過遊戲，Google 跟 Apple 的後台都有使用者用的機器分布，參考這項資料照顧一下既有玩家也是很重要的。</p>
 <p>想到的心得就大概是這樣，下一篇會是工具介紹，敬請期待。</p>
   </div>
@@ -209,7 +205,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 <script type="application/javascript">

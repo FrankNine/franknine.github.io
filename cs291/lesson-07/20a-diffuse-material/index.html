@@ -14,15 +14,15 @@
 要讓表面變成受光影響的漫射材質，修改 <code>createBall()</code>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">var material = new THREE.MeshLambertMaterial( { color: 0x80FC66, shading: THREE.FlatShading } );
-var ka = 0.4;
-material.ambient.setRGB( material.color.r *ka, material.color.g* ka, material.color.b * ka );
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">var material = new THREE.MeshLambertMaterial( { color: 0x80FC66, shading: THREE.FlatShading } );
+</span></span><span class="line"><span class="cl">var ka = 0.4;
+</span></span><span class="line"><span class="cl">material.ambient.setRGB( material.color.r *ka, material.color.g* ka, material.color.b * ka );
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
 </div>

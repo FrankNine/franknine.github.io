@@ -5,18 +5,14 @@
     <link>https://franknine.github.io/cs291/lesson-15/</link>
     <description>Recent content in Lesson 15 攝影機 on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    
-	<atom:link href="https://franknine.github.io/cs291/lesson-15/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-15/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 攝影機簡介</title>
       <link>https://franknine.github.io/cs291/lesson-15/01-introduction-to-cameras/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/01-introduction-to-cameras/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/01 Introduction to Cameras - Interactive 3D Graphics-vW1xrR9A1Ic.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 魚眼鏡頭、透視圖 和 前視圖 都來自 Wikimedia Commons。</description>
+      <description>魚眼鏡頭、透視圖 和 前視圖 都來自 Wikimedia Commons。</description>
     </item>
     
     <item>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/02-orthographic-camera/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/02 Orthographic Camera - Interactive 3D Graphics-X_n7Adjoiwk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 參考 維基的投影文章 以獲得更多資訊，其中包含許多建築用投影方式。 以下圖像來自 Wikimedia Commons：Umbria Plantation</description>
+      <description>參考 維基的投影文章 以獲得更多資訊，其中包含許多建築用投影方式。 以下圖像來自 Wikimedia Commons：Umbria Plantation 和 hexayurt shelter。</description>
     </item>
     
     <item>
@@ -43,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/04-three.js-orthographic-camera/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/04 Three.js Orthographic Camera - Interactive 3D Graphics-k3adBAnDpos.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -52,7 +48,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/05-lookat/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/05 LookAt - Interactive 3D Graphics-G6skrOtJtbM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -61,7 +57,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/06-three.js-lookat/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/06 three.js Lookat - Interactive 3D Graphics-Dxqzn-rgQJ4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
     </item>
     
     <item>
@@ -70,7 +66,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/06a-three.js-lookat/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/06A three.js Lookat - Interactive 3D Graphics-FrczeCQr4pM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將以下加到 init() 末端： 1 cameraControls.target.set(-2800, 360, -1600);</description>
+      <description>解答： 將以下加到 init() 末端： 1 cameraControls.target.set(-2800, 360, -1600);</description>
     </item>
     
     <item>
@@ -79,7 +75,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/07-view-transform/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/07 View Transform - Interactive 3D Graphics-JvMDTsT1Ja4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -88,7 +84,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/08-normalized-device-coordinates/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/08 Normalized Device Coordinates - Interactive 3D Graphics-Ck1SH7oYRFM.srt&#39;, function(subtitles) {var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);}); </description>
+      <description></description>
     </item>
     
     <item>
@@ -97,7 +93,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/09-orthographic-matrix-type/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/09 Orthographic Matrix Type - Interactive 3D Graphics-sPjKqHSevzs.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 你可能會想回到矩陣課程，看矩陣各部位效果的解釋。</description>
+      <description>你可能會想回到矩陣課程，看矩陣各部位效果的解釋。</description>
     </item>
     
     <item>
@@ -106,7 +102,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/09a-orthographic-matrix-type/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/09A Orthographic Matrix Type - Interactive 3D Graphics-bubkDGflFSc.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -115,7 +111,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/10-perspective-camera/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/10 Perspective Camera - Interactive 3D Graphics-JKDVfKZfPTA.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 有種聰明的視覺錯覺叫做強迫透視（Forced Perspective），像是 這個影片。人們玩弄透視的效果已經</description>
+      <description>有種聰明的視覺錯覺叫做強迫透視（Forced Perspective），像是 這個影片。人們玩弄透視的效果已經有上百年的歷史，像是這張 18 世紀的畫</description>
     </item>
     
     <item>
@@ -124,7 +120,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/11-three.js-perspective-camera/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/11 Three.js Perspective Camera - Interactive 3D Graphics-KyTaxN2XUyQ.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 有個控制攝影機的有趣展示在 這裡。「有趣」的意思是對我來說有些合理，有些莫名。這是電腦視覺的角度，他們關心</description>
+      <description>有個控制攝影機的有趣展示在 這裡。「有趣」的意思是對我來說有些合理，有些莫名。這是電腦視覺的角度，他們關心不同的問題也有不同做法。</description>
     </item>
     
     <item>
@@ -133,7 +129,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/12-fov-slider/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/12 FOV Slider - Interactive 3D Graphics-sp8Jj63GG84.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 參考之前的作業或是 dat.GUI</description>
+      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 參考之前的作業或是 dat.GUI 文件 以獲得創造滑桿的資訊。</description>
     </item>
     
     <item>
@@ -142,7 +138,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/12a-fov-slider/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/12A FOV Slider - Interactive 3D Graphics-q_m03EV4sck.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 解答： 將 setupGui 改寫為： 1 2 3 4 5 6 function setupGui() { effectController = { fov: 40 }; var gui = new dat.GUI(); var element = gui.add( effectController, &amp;#34;fov&amp;#34;, 1.0, 179.0 ); element.name(&amp;#34;field of view&amp;#34;); } 然後在 render() 呼叫 renderer.render 之前加入</description>
+      <description>解答： 將 setupGui 改寫為： 1 2 3 4 5 6 function setupGui() { effectController = { fov: 40 }; var gui = new dat.GUI(); var element = gui.add( effectController, &amp;#34;fov&amp;#34;, 1.0, 179.0 ); element.name(&amp;#34;field of view&amp;#34;); } 然後在 render() 呼叫 renderer.render 之前加入： 1 2 camera.fov = effectController.fov; camera.updateProjectionMatrix();</description>
     </item>
     
     <item>
@@ -151,7 +147,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/13-perspective-matrix/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/13 Perspective Matrix - Interactive 3D Graphics-yrwCdD1dpvE.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -160,7 +156,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/14-perspective-coordinate-transform/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/14 Perspective Coordinate Transform - Interactive 3D Graphics-54saXOGhB1E.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 提示：跟矩陣相乘時，將以上三個點用列而非行來表示。 (0,0,-1) 實際上是： (0) (0) (-1) 將它放在矩陣的右邊做矩陣乘法以取得結</description>
+      <description>提示：跟矩陣相乘時，將以上三個點用列而非行來表示。 (0,0,-1) 實際上是： (0) (0) (-1) 將它放在矩陣的右邊做矩陣乘法以取得結果。 你知道你能將數學算式輸入 Google 搜尋 它</description>
     </item>
     
     <item>
@@ -169,7 +165,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/14a-perspective-coordinate-transform/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/14A Perspective Coordinate Transform - Interactive 3D Graphics-C1GGNYyMJT0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -178,7 +174,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/15-homogeneous-coordinate/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/15 Homogeneous Coordinate - Interactive 3D Graphics-DvXk3HcHh9g.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 更多齊次坐標資料請看 維基。</description>
+      <description>更多齊次坐標資料請看 維基。</description>
     </item>
     
     <item>
@@ -187,7 +183,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/16-clipping/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/16 Clipping - Interactive 3D Graphics--jhYLJHp2_c.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); (0, 5, 3.8, 5) 這個點的 NDC 座標是 (0, 1, 7.6)，在 NDC 視野容體的頂端（視埠（Viewport）的頂端，Y 等於 1）。 多提一</description>
+      <description>(0, 5, 3.8, 5) 這個點的 NDC 座標是 (0, 1, 7.6)，在 NDC 視野容體的頂端（視埠（Viewport）的頂端，Y 等於 1）。 多提一些裁切座標，在除 W 之前裁切感覺有</description>
     </item>
     
     <item>
@@ -196,7 +192,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/17-field-of-view/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/17 Field of View - Interactive 3D Graphics-_sl0QByIvBI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -214,7 +210,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/19-true-field-of-view/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/19 True Field of View - Interactive 3D Graphics-1Wgz1BrI-Gk.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -223,7 +219,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/20-monitor-field-of-view/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/20 Monitor Field of View - Interactive 3D Graphics-M53NROgx7lI.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -232,7 +228,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/20a-monitor-field-of-view/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/20A Monitor Field of View - Interactive 3D Graphics-cF9LGLHWmTU.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -241,7 +237,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/21-target/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/21 Target - Interactive 3D Graphics-4Ahd1LLAihs.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -250,7 +246,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/22-dolly-pan-orbit/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/22 Dolly, Pan, Orbit - Interactive 3D Graphics-G0xo95O_NMY.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 水平搖攝在電影攝影有不同意思，請參照 這個維基文章。 環繞掃射（Circle strafing）的解釋在 這裡。</description>
+      <description>水平搖攝在電影攝影有不同意思，請參照 這個維基文章。 環繞掃射（Circle strafing）的解釋在 這裡。維基什麼都有。 譯註： 關於不同攝影機運</description>
     </item>
     
     <item>
@@ -259,7 +255,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/23-camera-changes/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/23 Camera Changes - Interactive 3D Graphics-LkYMJ10gB3g.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -268,7 +264,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/23a-camera-changes/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/23A Camera Changes - Interactive 3D Graphics-GBNVQqzAW9w.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); });</description>
+      <description></description>
     </item>
     
     <item>
@@ -277,7 +273,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/24-near-and-far-clipping/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/24 Near and Far Clipping - Interactive 3D Graphics-Sfy6pB0susM.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 在 1:45 我說 &amp;ldquo;9.0&amp;rdquo; 是口誤應該是 &amp;ldquo;0.9&amp;rdquo;。 你能在 Z 深度計算器看到精確度的效果。在文章中</description>
+      <description>在 1:45 我說 &amp;ldquo;9.0&amp;rdquo; 是口誤應該是 &amp;ldquo;0.9&amp;rdquo;。 你能在 Z 深度計算器看到精確度的效果。在文章中有更多關於最佳化 Z 深度範圍的資訊。 關於</description>
     </item>
     
     <item>
@@ -286,7 +282,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/25-depth-of-field/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/25 Depth of Field - Interactive 3D Graphics-NbfyLQWYXP8.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Three.js 景深 Demo 在 這裡。AlteredQualia 的移軸攝影 Demo 在 這裡。</description>
+      <description>Three.js 景深 Demo 在 這裡。AlteredQualia 的移軸攝影 Demo 在 這裡。</description>
     </item>
     
     <item>
@@ -295,7 +291,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/26-window-coordinates/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/26 Window Coordinates - Interactive 3D Graphics-tGsChJ7zmC4.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); Lee Stemkoski 提供了放置 兩個 跟 四個 視埠的 Three.js 程式。 Three.js 有個 有趣的 demo 展示藝術性的視埠效果。 OpenGL 座標變換介紹可以在 這頁。雖然有</description>
+      <description>Lee Stemkoski 提供了放置 兩個 跟 四個 視埠的 Three.js 程式。 Three.js 有個 有趣的 demo 展示藝術性的視埠效果。 OpenGL 座標變換介紹可以在 這頁。雖然有點過時，這頁 提供了攝影機管線的介紹</description>
     </item>
     
     <item>
@@ -304,7 +300,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/27-antialiasing/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/27 Antialiasing - Interactive 3D Graphics-GvLEAHRmPl0.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); FXAA 有 這個 Three.js Demo。 我對 FXAA 的看法 在這裡。有整個 SIGGRAPH 課程 在介紹反鋸齒過濾技法。許多遊戲已經改用 SMAA，有更好的</description>
+      <description>FXAA 有 這個 Three.js Demo。 我對 FXAA 的看法 在這裡。有整個 SIGGRAPH 課程 在介紹反鋸齒過濾技法。許多遊戲已經改用 SMAA，有更好的效果（但也更耗時） 反鋸齒可能在 Mac</description>
     </item>
     
     <item>
@@ -313,7 +309,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://franknine.github.io/cs291/lesson-15/28-conclusion/</guid>
-      <description>loadSRT(&#39;/cs291/srt/Lesson 15\/28 Conclusion - Interactive 3D Graphics-zwKrALyfciw.srt&#39;, function(subtitles) { var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles); }); 來自 Wikimedia Commons 的 &amp;ldquo;Man Drawing a Lute&amp;rdquo;。</description>
+      <description>來自 Wikimedia Commons 的 &amp;ldquo;Man Drawing a Lute&amp;rdquo;。</description>
     </item>
     
   </channel>

@@ -13,7 +13,7 @@
 <p><strong>解答：</strong> 將以下加到 <code>render()</code> <code>renderer.render</code> 之前：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -21,13 +21,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">// 仰角
-light.position.y = Math.sin( effectController.altitude * Math.PI/180.0 );
-// 方位角
-var length = Math.sqrt(1 - light.position.y * light.position.y);
-light.position.x = length * Math.cos( effectController.azimuth * Math.PI/180.0 );
-light.position.z = length * Math.sin( effectController.azimuth * Math.PI/180.0 );
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 仰角
+</span></span><span class="line"><span class="cl">light.position.y = Math.sin( effectController.altitude * Math.PI/180.0 );
+</span></span><span class="line"><span class="cl">// 方位角
+</span></span><span class="line"><span class="cl">var length = Math.sqrt(1 - light.position.y * light.position.y);
+</span></span><span class="line"><span class="cl">light.position.x = length * Math.cos( effectController.azimuth * Math.PI/180.0 );
+</span></span><span class="line"><span class="cl">light.position.z = length * Math.sin( effectController.azimuth * Math.PI/180.0 );
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>影片中的解答有個 bug <code>var length</code> 一行少了 <code>Math.sqrt</code>，這裡的程式才是對的。<em>（感謝 Sven Mika 指正）</em></p>
 <p><code>length</code> 也能直接由 <code>Math.cos( effectController.altitude * Math.PI/180.0 )</code> 取得，因為 <code>cos^2 + sin^2 = 1</code>。我算出長度，因為方位角的部分可以視作「用盡」方向向量的剩餘長度。</p>
