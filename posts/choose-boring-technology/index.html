@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>選擇無聊的技術 - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考： 不該過分追求使用新技術。" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.110.0 with theme even" />
+
+
+<link rel="canonical" href="https://franknine.github.io/posts/choose-boring-technology/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+
+
+
+<meta property="og:title" content="選擇無聊的技術" />
+<meta property="og:description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考： 不該過分追求使用新技術。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://franknine.github.io/posts/choose-boring-technology/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-19T11:42:00+08:00" />
+<meta property="article:modified_time" content="2023-04-19T11:42:00+08:00" />
+<meta itemprop="name" content="選擇無聊的技術">
+<meta itemprop="description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考： 不該過分追求使用新技術。"><meta itemprop="datePublished" content="2023-04-19T11:42:00+08:00" />
+<meta itemprop="dateModified" content="2023-04-19T11:42:00+08:00" />
+<meta itemprop="wordCount" content="311">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="選擇無聊的技術"/>
+<meta name="twitter:description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考： 不該過分追求使用新技術。"/>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BP1PMVB7ZQ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BP1PMVB7ZQ', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/cs291/">
+        <li class="mobile-menu-item">CS291</li>
+      </a><a href="https://github.com/FrankNine/franknine.github.io/wiki">
+        <li class="mobile-menu-item">Wiki</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/cs291/">CS291</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/FrankNine/franknine.github.io/wiki">Wiki</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>感謝原作者 Dan McKinley 授權翻譯，這篇 <a href="https://boringtechnology.club/index_zh_TW.html">《選擇無聊的技術》中文版</a> 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考：</p>
+<ul>
+<li>不該過分追求使用新技術。</li>
+<li>人的專注力有限，該優先花在產品方向而非技術細節上。</li>
+<li>未知有分「已知的未知」跟「未知的未知」，使用新技術兩者都較多，而「未知的未知」會多很多。</li>
+<li>技術難以專精，難以掌握到 Production 水準，選擇技術的集合應該要盡量小。</li>
+<li>技術有全局的影響，不該由個人決策。應該條列不用新技術會有什麼不便，跟用新技術有什麼方便來做對比。</li>
+</ul>
+<p>等等，我覺得非常受用。</p>
+<p>年初開始精神狀態很不好，所以更難產出內容。如果有我很喜歡資料我會先保存在我的 <a href="https://github.com/FrankNine/franknine.github.io/wiki">GitHub Wiki</a>，這篇文章也是在 Wiki 書籤裡好幾年了。如果好奇有哪些其他我覺得很好的文章，歡迎瀏覽。</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Chun-Fu Chao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-BP1PMVB7ZQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

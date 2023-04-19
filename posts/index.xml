@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 21 Nov 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Apr 2023 11:42:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>選擇無聊的技術</title>
+      <link>https://franknine.github.io/posts/choose-boring-technology/</link>
+      <pubDate>Wed, 19 Apr 2023 11:42:00 +0800</pubDate>
+      
+      <guid>https://franknine.github.io/posts/choose-boring-technology/</guid>
+      <description>感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考： 不該過分追求使用新技術。</description>
+    </item>
+    
     <item>
       <title>你所嘗試的一切終究是徒勞</title>
       <link>https://franknine.github.io/posts/everything-you-do-is-ultimately-pointless/</link>
