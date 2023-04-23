@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Apr 2023 11:42:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Apr 2023 16:00:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity and Git</title>
+      <link>https://franknine.github.io/posts/unity-git-en/</link>
+      <pubDate>Sun, 23 Apr 2023 16:00:00 +0800</pubDate>
+      
+      <guid>https://franknine.github.io/posts/unity-git-en/</guid>
+      <description>This is the translated version of my 2020 Unity 和 git post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you. I&amp;rsquo;ve been using Git to version control Unity projects for a while now. Recently, my company open-sourced our Unity builder mimiron-lite, along with a new set of Git configuration</description>
+    </item>
+    
     <item>
       <title>選擇無聊的技術</title>
       <link>https://franknine.github.io/posts/choose-boring-technology/</link>
