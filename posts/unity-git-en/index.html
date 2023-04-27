@@ -48,7 +48,7 @@
 <meta itemprop="name" content="Unity and Git">
 <meta itemprop="description" content="This is the translated version of my 2020 Unity 和 git post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you. I&rsquo;ve been using Git to version control Unity projects for a while now. Recently, my company open-sourced our Unity builder mimiron-lite, along with a new set of Git configuration"><meta itemprop="datePublished" content="2023-04-23T16:00:00+08:00" />
 <meta itemprop="dateModified" content="2023-04-23T16:00:00+08:00" />
-<meta itemprop="wordCount" content="6135">
+<meta itemprop="wordCount" content="6126">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity and Git"/>
 <meta name="twitter:description" content="This is the translated version of my 2020 Unity 和 git post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you. I&rsquo;ve been using Git to version control Unity projects for a while now. Recently, my company open-sourced our Unity builder mimiron-lite, along with a new set of Git configuration"/>
@@ -435,7 +435,7 @@ The company has released this configuration under the <a href="https://tldrlegal
 <h1 id="rebase">Rebase</h1>
 <p>I am used to the process of forked repository, fetch Upstream, push Origin, and open Merge Request, as well as add other colleagues&rsquo; forks as other remotes. I am also used to using <a href="https://git-scm.com/docs/git-rebase">Rebase</a> or <a href="https://git-scm.com/docs/git-cherry-pick">Cherrypick</a> to modify Git branch history. If someone merges to the main branch before I do, I will Rebase my own branch to the HEAD of main branch and then open a new Merge Request with <code>--no-ff</code> (<a href="https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---no-ff">no fast-forward</a> to create a non-overlapping branch merge in the history, which makes it easy to trace in the future. Another situation is when a feature changes X to Y, but later it turns out that it was a mistake and it should be changed to Z instead. In such cases, I will try to modify the history to be X -&gt; Z before submitting the Merge Request, instead of X -&gt; Y -&gt; Z, to reduce the burden on reviewers. I feel that these operations could be included in the Code Review standards, but currently, I only do these operations myself due to time constraints and I don&rsquo;t have experience promoting to others.</p>
 <figure class="center"><img src="/images/unity-git/merge-rebase.png"/><figcaption>
-            <h4>The difference in history between using Merge and Rebase followed by a merge with the `--no-ff` flag. Rebase is more understandable shown on the right side (history shown is for demonstration purposes only, actual work situations may be more complex).）</h4>
+            <h4>The difference in history between using Merge and Rebase followed by a merge with the `--no-ff` flag. Rebase is more understandable shown on the right side (history shown is for demonstration purposes only, actual work situations may be more complex).</h4>
         </figcaption>
 </figure>
 

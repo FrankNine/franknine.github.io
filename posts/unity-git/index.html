@@ -48,7 +48,7 @@
 <meta itemprop="name" content="Unity 和 git">
 <meta itemprop="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經"><meta itemprop="datePublished" content="2020-05-10T23:20:12+08:00" />
 <meta itemprop="dateModified" content="2020-05-10T23:20:12+08:00" />
-<meta itemprop="wordCount" content="9343">
+<meta itemprop="wordCount" content="9351">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity 和 git"/>
 <meta name="twitter:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經"/>
@@ -557,7 +557,7 @@ if (!doNotTrack) {
         </figcaption>
 </figure>
 
-<p>雖然看起來很厲害但是現階段應該還是不會考量導入，最主要就是支援的 git Server 太少了。只有 Azure Repos 支援，然後 Repo 又有 <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/limits?view=azure-devops#repository-size">10GB 大小限制</a> 無法實用。<a href="https://github.com/microsoft/VFSForGit/issues/1640#issuecomment-590880312">GitHub</a> 跟 <a href="https://gitlab.com/gitlab-org/gitlab-foss/-/issues/27895">GitLab</a> 看起來沒有積極想要支援的感覺。</p>
+<p>雖然看起來很厲害但是現階段應該還是不會考量導入，最主要就是支援的 git Server 太少了。只有 Azure Repos 支援，然後 Repo 又有 <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/limits?view=azure-devops#repository-size">250GB 大小限制</a>。有限制在還是會有點擔心。<a href="https://github.com/microsoft/VFSForGit/issues/1640#issuecomment-590880312">GitHub</a> 跟 <a href="https://gitlab.com/gitlab-org/gitlab-foss/-/issues/27895">GitLab</a> 看起來沒有積極想要支援的感覺。</p>
 <p>如果還是有興趣的人想嘗試，導入時有幾個點要注意：</p>
 <ul>
 <li>只有 Azure Repos 支援。</li>
