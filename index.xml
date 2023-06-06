@@ -6,7 +6,16 @@
     <description>Recent content on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 23 Apr 2023 16:00:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jun 2023 23:00:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>手機營運類遊戲筆記</title>
+      <link>https://franknine.github.io/posts/gatcha-game-notes/</link>
+      <pubDate>Wed, 07 Jun 2023 23:00:00 +0800</pubDate>
+      
+      <guid>https://franknine.github.io/posts/gatcha-game-notes/</guid>
+      <description>因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。</description>
+    </item>
+    
     <item>
       <title>Unity and Git</title>
       <link>https://franknine.github.io/posts/unity-git-en/</link>
