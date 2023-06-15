@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Unity 和 git">
 <meta itemprop="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經"><meta itemprop="datePublished" content="2020-05-10T23:20:12+08:00" />
 <meta itemprop="dateModified" content="2020-05-10T23:20:12+08:00" />
-<meta itemprop="wordCount" content="9351">
+<meta itemprop="wordCount" content="9413">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Unity 和 git"/>
 <meta name="twitter:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經"/>
@@ -527,7 +527,7 @@ if (!doNotTrack) {
 <p>現在開始往 <a href="https://trunkbaseddevelopment.com/">Trunk-Based Development</a> 過渡，開短的 Feature Branch 快速往主要分支合併，或是長的 Feature Branch 但是用 <a href="https://martinfowler.com/bliki/BranchByAbstraction.html">Branch by Abstraction</a> 和 <a href="https://www.martinfowler.com/articles/feature-toggles.html">Feature Toggles</a> 讓未完成的功能還是能定期合併進主要分支又不影響其他人，由此把整合的成本分攤開來。如果有在跑 Scrum 有時會遇到功能在 Sprint 結束的時候還收不了尾，如果都放在很久沒合併過的 Feature Branch 上就這樣帶到下一個 Sprint 會非常困擾，所以變成在 Sprint 尾聲非得整合進去的壓力很大。如果功能是 Feature Toggles 控制的話就可以有一個小段落就合併，下個 Sprint 開始再重新評估規畫即可。然後 Feature 完成之後一般是清除掉 Toggle，但也有沿用 Toggle 的結構做成 A/B Test 或是 Remote Config 的可能。</p>
 <p>另外 Code Review 也是在頻繁合併發 Merge Request 的環境比較適合做，一般人一次能 Review 的程式長度其實有限。開發超過一週的改動份量 Review 起來就會非常吃力，更久就是折磨 Reviewer 了。</p>
 <h1 id="lfs-lock">LFS Lock</h1>
-<p>在 git LFS v2.0.0 新增了 <a href="https://github.com/git-lfs/git-lfs/wiki/File-Locking">鎖定</a> 特定檔案的功能，新版的 Fork 也支援從 UI 執行 LFS Lock。在 <code>.gitattributes</code> 加入 <code>lockable</code> 即宣告為可以鎖定的檔案：</p>
+<p>在 git LFS v2.0.0 新增了 <a href="https://github.com/git-lfs/git-lfs/wiki/File-Locking">鎖定</a> 特定檔案的功能，新版的 Fork 也支援從 UI 執行 LFS Lock。在 <code>.gitattributes</code> 加入 <code>lockable</code> 即宣告為可以鎖定的檔案：（實際上實驗起來好像沒有 lockable 屬性也能 <code>git lfs lock</code>，看得到的差別好像只在有宣告 <code>lockable</code> <a href="https://github.com/git-lfs/git-lfs/blob/94245ec834c7f938ec3a7808f73e9bd1d2b04f0a/docs/man/git-lfs-post-commit.1.ronn#description">commit</a> 檔案時 git LFS 會自動把沒有 <code>git lfs lock</code> 的檔案加上 read-only 屬性）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
