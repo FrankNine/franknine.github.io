@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>在 Colab 上執行 Whisper 產生字幕 - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
+
+
+<link rel="canonical" href="https://franknine.github.io/posts/whisper-colab/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/twitter_center.css">
+
+
+<meta property="og:title" content="在 Colab 上執行 Whisper 產生字幕" />
+<meta property="og:description" content="先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://franknine.github.io/posts/whisper-colab/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-15T22:00:00+08:00" />
+<meta property="article:modified_time" content="2023-06-15T22:00:00+08:00" />
+<meta itemprop="name" content="在 Colab 上執行 Whisper 產生字幕">
+<meta itemprop="description" content="先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個"><meta itemprop="datePublished" content="2023-06-15T22:00:00+08:00" />
+<meta itemprop="dateModified" content="2023-06-15T22:00:00+08:00" />
+<meta itemprop="wordCount" content="1149">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="在 Colab 上執行 Whisper 產生字幕"/>
+<meta name="twitter:description" content="先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個"/>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BP1PMVB7ZQ"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-BP1PMVB7ZQ', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/cs291/">
+        <li class="mobile-menu-item">CS291</li>
+      </a><a href="https://github.com/FrankNine/franknine.github.io/wiki">
+        <li class="mobile-menu-item">Wiki</li>
+      </a><a href="/index.xml">
+        <li class="mobile-menu-item">RSS</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/cs291/">CS291</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/FrankNine/franknine.github.io/wiki">Wiki</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/index.xml">RSS</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/kFtrvdriLU8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>先前經朋友介紹看了這部影片認識了 <a href="https://github.com/openai/whisper">Whisper</a>，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 <a href="https://colab.research.google.com/">Google Colab</a> 這個線上的執行環境，想寫一下如何合併兩者，在線上讓 Whisper AI 聽寫字幕或是逐字稿的方法。</p>
+<h1 id="whisper">Whisper</h1>
+<p>首先進入 <a href="https://colab.research.google.com/">Google Colab</a></p>
+<p><img src="/images/whisper-colab/colab_welcome.png" alt=""></p>
+<p>選擇 <code>檔案／新增筆記本</code></p>
+<p><img src="/images/whisper-colab/colab_create_new.png" alt=""></p>
+<p>在空白筆記本上 <code>＋程式碼</code> 加入要執行的命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip install -U openai-whisper
+</span></span><span class="line"><span class="cl">!whisper --language English --model large-v2 --device cuda &lt;&lt;檔案名稱&gt;&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>命令上就只有安裝 Whisper 跟使用 Commandline 執行而已，<code>!</code> 開頭在 Colab 代表執行 Shell 命令。因為官方的 Whisper 有 Commandline 介面，所以執行起來很方便。只是還有一些東西要設定：</p>
+<p><img src="/images/whisper-colab/colab_whisper.png" alt=""></p>
+<p>點選右上角的連線：</p>
+<p><img src="/images/whisper-colab/colab_connect.png" alt=""></p>
+<p>如果有看影片介紹或是實際測試過會知道有沒有用 GPU CUDA 速度會差非常多，所以我們加了 <code>--device cuda</code> 參數。但也同時要開啟 Colab 執行階段的 GPU。連線後點選顯示 RAM、磁碟的圖示：</p>
+<p><img src="/images/whisper-colab/colab_resources_icon.png" alt=""></p>
+<p>會進入到資源分頁：</p>
+<p><img src="/images/whisper-colab/colab_resources.png" alt=""></p>
+<p>選擇 <code>變更執行階段類型</code>，開啟 GPU，應該只要用到 <code>T4</code> 即可：</p>
+<p><img src="/images/whisper-colab/colab_gpu.png" alt=""></p>
+<p>如果沒有閒置 GPU 可以使用會需要付費，點選 <code>瞭解詳情</code>。Whisper 使用應該用 Pay As You Go 就好，我只有買 100 單位，依照經驗使用一小時大概耗費 2 ~ 4 單位上下，100 單位可以用很久。</p>
+<p><img src="/images/whisper-colab/colab_pay_as_you_go.png" alt=""></p>
+<p>設定後會要重新連線，選擇確定：</p>
+<p><img src="/images/whisper-colab/colab_reconnect.png" alt=""></p>
+<p>設定成功會看到資源分頁多了 GPU 資訊：</p>
+<p><img src="/images/whisper-colab/colab_with_gpu.png" alt=""></p>
+<p>準備就緒後執行 <code>PIP</code> 安裝 Whisper：</p>
+<p><img src="/images/whisper-colab/colab_pip.png" alt=""></p>
+<p>點選畫面左邊的資料夾圖示，拖曳上傳要製作字幕的聲音或是影片：</p>
+<p><img src="/images/whisper-colab/colab_upload.png" alt=""></p>
+<p>有的時候會覺得 Colab 的上傳很慢，其實也可以連結到 Google Drive。先上傳到 Google Drive 再搬到 Colab 根目錄，或是 Whisper 命令直接路徑輸入 Google Drive 路徑都可以。使用完畢後建議再按同一個按鈕撤銷 Google Drive 對這個 Colab 筆記的授權：</p>
+<p><img src="/images/whisper-colab/colab_google_drive.png" alt=""></p>
+<p>上傳完成後就可以輸入對應的檔名開始產生字幕了。參數方面 <code>--language</code> 是語言，支援的語言清單依照官方文件請參考 <a href="https://github.com/openai/whisper/blob/main/whisper/tokenizer.py#L10">這裡</a>。<code>--model</code> 是語言模型，理論上越大效果越好也越慢。模型的清單官方列在 <a href="https://github.com/openai/whisper#available-models-and-languages">這裡</a>，上面沒有 <code>large-v2</code> 但實際上是抓得到的，我也習慣直接用 <code>large-v2</code>。</p>
+<p><img src="/images/whisper-colab/colab_executing.png" alt=""></p>
+<p>算完字幕檔、逐字稿會放在根目錄，就可以下載下來校對使用了：</p>
+<p><img src="/images/whisper-colab/colab_result.png" alt=""></p>
+<p>最後記得終止連線避免浪費購買的點數：</p>
+<p><img src="/images/whisper-colab/colab_disconnect.png" alt=""></p>
+<h1 id="faster-whisper">faster-whisper</h1>
+<p><a href="https://github.com/guillaumekln/faster-whisper">Faster Whisper</a> 是 Whisper 的重新實作，號稱有四倍以上的加速。在 Colab 上使用因為沒有 Commandline 介面需要 Python Code 輸出 <code>.srt</code>，但已經有人寫好了。要使用的話命令是：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip install faster-whisper
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">faster_whisper</span> <span class="kn">import</span> <span class="n">WhisperModel</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">math</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">convert_seconds_to_hms</span><span class="p">(</span><span class="n">seconds</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">hours</span><span class="p">,</span> <span class="n">remainder</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">remainder</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">milliseconds</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">((</span><span class="n">seconds</span> <span class="o">%</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">output</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">hours</span><span class="p">)</span><span class="si">:</span><span class="s2">02</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">minutes</span><span class="p">)</span><span class="si">:</span><span class="s2">02</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span><span class="si">:</span><span class="s2">02</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">milliseconds</span><span class="si">:</span><span class="s2">03</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">output</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">model_path</span> <span class="o">=</span> <span class="s2">&#34;whisper-large-v2-ct2/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Run on GPU with FP16</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span> <span class="o">=</span> <span class="n">WhisperModel</span><span class="p">(</span><span class="n">model_path</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&#34;cuda&#34;</span><span class="p">,</span> <span class="n">compute_type</span><span class="o">=</span><span class="s2">&#34;float16&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># or run on GPU with INT8</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># model = WhisperModel(model_size, device=&#34;cuda&#34;, compute_type=&#34;int8_float16&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># or run on CPU with INT8</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#model = WhisperModel(model_size, device=&#34;cpu&#34;, compute_type=&#34;int8&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="n">segments</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">transcribe</span><span class="p">(</span><span class="s2">&#34;file.mp4&#34;</span><span class="p">,</span> <span class="n">beam_size</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Detected language &#39;</span><span class="si">%s</span><span class="s2">&#39; with probability </span><span class="si">%f</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">language</span><span class="p">,</span> <span class="n">info</span><span class="o">.</span><span class="n">language_probability</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.srt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>  <span class="c1"># Open file for writing</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">segment</span> <span class="ow">in</span> <span class="n">segments</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">count</span> <span class="o">+=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="n">duration</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">convert_seconds_to_hms</span><span class="p">(</span><span class="n">segment</span><span class="o">.</span><span class="n">start</span><span class="p">)</span><span class="si">}</span><span class="s2"> --&gt; </span><span class="si">{</span><span class="n">convert_seconds_to_hms</span><span class="p">(</span><span class="n">segment</span><span class="o">.</span><span class="n">end</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">text</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">segment</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span><span class="si">}</span><span class="se">\n\n</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="n">duration</span><span class="si">}{</span><span class="n">text</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>  <span class="c1"># Write formatted string to the file</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">duration</span><span class="si">}{</span><span class="n">text</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>From: <a href="https://github.com/guillaumekln/faster-whisper/discussions/93#discussion-5021241">https://github.com/guillaumekln/faster-whisper/discussions/93#discussion-5021241</a></p>
+<h1 id="whisperx">WhisperX</h1>
+<p><a href="https://github.com/m-bain/whisperX">WhisperX</a> 是號稱在 faster-whisper 上再加強字幕 timestamp 校正的版本。根據使用經驗好像英文的字幕時間軸有變好、但是中文反而變差。在猜測是聲音的 <a href="https://github.com/m-bain/whisperX/blob/da458863d7ee608385d1ac4de843d7755a6865a5/whisperx/alignment.py">Alignment Model</a>，如果不是 <code>WAV2VEC2</code> 或是 <code>VOXPOPULI</code> 效果可能就有限或是幫倒忙。</p>
+<p>如果想在 Colab 使用，命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pip install git+https://github.com/m-bain/whisperx.git
+</span></span><span class="line"><span class="cl">pip install light-the-torch
+</span></span><span class="line"><span class="cl">!ltt install torch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1  torchtext==0.14.1
+</span></span><span class="line"><span class="cl">!whisperx --language English --model large-v2 --device cuda &lt;&lt;檔案名稱&gt;&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>祝大家製作字幕順利。</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Chun-Fu Chao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-BP1PMVB7ZQ', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 07 Jun 2023 23:00:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jun 2023 22:00:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 Colab 上執行 Whisper 產生字幕</title>
+      <link>https://franknine.github.io/posts/whisper-colab/</link>
+      <pubDate>Thu, 15 Jun 2023 22:00:00 +0800</pubDate>
+      
+      <guid>https://franknine.github.io/posts/whisper-colab/</guid>
+      <description>先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個</description>
+    </item>
+    
     <item>
       <title>手機營運類遊戲筆記</title>
       <link>https://franknine.github.io/posts/gatcha-game-notes/</link>

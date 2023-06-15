@@ -49,7 +49,7 @@
 <meta itemprop="name" content="手機營運類遊戲筆記">
 <meta itemprop="description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。"><meta itemprop="datePublished" content="2023-06-07T23:00:00+08:00" />
 <meta itemprop="dateModified" content="2023-06-07T23:00:00+08:00" />
-<meta itemprop="wordCount" content="12516">
+<meta itemprop="wordCount" content="12515">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="手機營運類遊戲筆記"/>
 <meta name="twitter:description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。"/>
@@ -260,7 +260,7 @@ if (!doNotTrack) {
 <p>這個 API 設計還蠻微妙的，建議詳讀 <a href="https://developer.apple.com/app-store/ratings-and-reviews/">Ratings, reviews, and responses</a> 理解一下 Apple 的想法。還有 Stack Overflow 的 <a href="https://stackoverflow.com/a/45061556">討論</a>。</p>
 <h2 id="注意時間複雜度">注意時間複雜度</h2>
 <p>有學過演算法應該會熟悉 <a href="https://en.wikipedia.org/wiki/Big_O_notation">Big O Notation</a>。平常會覺得演算法理論跟遊戲製作有點遠，但是我看過、自己也被 Dawson&rsquo;s Law 咬過：</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">O(n^2) is the sweet spot of badly scaling algorithms: fast enough to make it into production, but slow enough to make things fall down once it gets there</p>&mdash; Bruce Dawson (@BruceDawson0xB) <a href="https://twitter.com/BruceDawson0xB/status/1120381406700429312?ref_src=twsrc%5Etfw">April 22, 2019</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">O(n^2) is the sweet spot of badly scaling algorithms: fast enough to make it into production, but slow enough to make things fall down once it gets there</p>&mdash; randomascii (@BruceDawson0xB) <a href="https://twitter.com/BruceDawson0xB/status/1120381406700429312?ref_src=twsrc%5Etfw">April 22, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <p>有的時候高時間複雜度的 Code 會混進遊戲裡，在遊戲剛上市時因為 Input 數量小發覺不出來，營運久了突然某個時間點效能開始大幅下降。我自己的經驗是在 Unity JSON 方案還不多時使用了 <a href="https://gist.github.com/darktable/1411710">MiniJSON.cs</a>，不太確定這個 Parser 的準確時間複雜度，但就自己的經驗應該是超過 O(N)，所以只是線性地加資料在某個時間點突然讀取變超久。同樣的情形、也是 JSON Parser 也發生在 <a href="https://nee.lv/2021/02/28/How-I-cut-GTA-Online-loading-times-by-70/">GTA 5 Online</a> 啟動上。（他們的問題會這麼久才發現一部分是因為 GTA 5 程式有混淆，外部的人要有解讀的知識才能分析）</p>
