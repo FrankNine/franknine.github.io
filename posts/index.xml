@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Northern Wind</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Jun 2023 22:00:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Aug 2023 11:00:00 +0800</lastBuildDate><atom:link href="https://franknine.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Indie Game: The Movie Special Edition 正體中文字幕</title>
+      <link>https://franknine.github.io/posts/igtm-se-zh-tw-srt/</link>
+      <pubDate>Wed, 09 Aug 2023 11:00:00 +0800</pubDate>
+      
+      <guid>https://franknine.github.io/posts/igtm-se-zh-tw-srt/</guid>
+      <description>十多年前還在美國念書的時候因為接觸到 Indie Game: The Movie 自告奮勇想做中文字幕，認識了台灣的 IGDSHARE 單位與一眾也是喜愛獨立遊戲的好友。十多年過去了，大家還是在各</description>
+    </item>
+    
     <item>
       <title>在 Colab 上執行 Whisper 產生字幕</title>
       <link>https://franknine.github.io/posts/whisper-colab/</link>
