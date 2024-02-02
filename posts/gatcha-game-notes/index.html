@@ -49,7 +49,7 @@
 <meta itemprop="name" content="手機營運類遊戲筆記">
 <meta itemprop="description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。"><meta itemprop="datePublished" content="2023-06-07T23:00:00+08:00" />
 <meta itemprop="dateModified" content="2023-06-07T23:00:00+08:00" />
-<meta itemprop="wordCount" content="12518">
+<meta itemprop="wordCount" content="12519">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="手機營運類遊戲筆記"/>
 <meta name="twitter:description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。"/>
@@ -154,6 +154,7 @@
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">That literally happened to us. Boss wants to change our iOS game icon. Changing icon requires a new build. A new build requires iPhone X support. iPhone X build target requires Xcode 9. Xcode 9 requires macOS 10.12. OS update breaks old Unity3D. Upgrading Unity breaks build.</p>&mdash; Frank Chao (@aaefiikmnnnr) <a href="https://twitter.com/aaefiikmnnnr/status/931222777301835782?ref_src=twsrc%5Etfw">November 16, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
 <p>以前的山崩經驗。換個 Icon 結果頂到 SDK 不支援 iPhone X、要新 SDK 要升級 Xcode、要升 Xcode 要新 macOS、升級 macOS 的時候沒注意直接跳過 macOS 10.12 升到 10.13 硬碟格式被改成 APFS、當時用的 Unity 不支援 APFS 需要升級 Unity、最後升級 Unity 又把專案搞爛需要手動修。理論上還可以更慘，因為 <a href="https://developer.apple.com/support/xcode/">Xcode 會有 macOS 需求</a>、<a href="https://macmost.com/macos-system-requirements-list.html">macOS 又有硬體需求</a>，如果當時運氣再好一點改個東西會滾雪球到要買整台新 Mac。</p>
 <p>如果以前做單機、沒有接觸過手機遊戲環境的可能要參考一下資料。因為這些都是不小的開銷，要預留人力。</p>
 <p>現在 Google 有提供一個各項政策期限的列表，可以在 <a href="https://developer.android.com/distribute/play-policies">修正期限將至的 Android 和 Google Play 事項</a> 或 <a href="https://support.google.com/googleplay/android-developer/table/12921780">Policy Deadlines</a> 找到。至於 Android SDK API Level 規定可以在 <a href="https://developer.android.com/google/play/requirements/target-sdk">符合 Google Play 的目標 API 級別規定</a> 找到。Apple 可能只能訂閱 <a href="https://developer.apple.com/news/">Developer News and Updates</a> 的 <a href="feed://developer.apple.com/news/rss/news.rss">RSS</a> 來被動接收通知。</p>
@@ -249,8 +250,9 @@
 <p>這個 API 設計還蠻微妙的，建議詳讀 <a href="https://developer.apple.com/app-store/ratings-and-reviews/">Ratings, reviews, and responses</a> 理解一下 Apple 的想法。還有 Stack Overflow 的 <a href="https://stackoverflow.com/a/45061556">討論</a>。</p>
 <h2 id="注意時間複雜度">注意時間複雜度</h2>
 <p>有學過演算法應該會熟悉 <a href="https://en.wikipedia.org/wiki/Big_O_notation">Big O Notation</a>。平常會覺得演算法理論跟遊戲製作有點遠，但是我看過、自己也被 Dawson&rsquo;s Law 咬過：</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">O(n^2) is the sweet spot of badly scaling algorithms: fast enough to make it into production, but slow enough to make things fall down once it gets there</p>&mdash; randomascii (@BruceDawson0xB) <a href="https://twitter.com/BruceDawson0xB/status/1120381406700429312?ref_src=twsrc%5Etfw">April 22, 2019</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">O(n^2) is the sweet spot of badly scaling algorithms: fast enough to make it into production, but slow enough to make things fall down once it gets there</p>&mdash; Bruce Dawson (@BruceDawson0xB) <a href="https://twitter.com/BruceDawson0xB/status/1120381406700429312?ref_src=twsrc%5Etfw">April 22, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 <p>有的時候高時間複雜度的 Code 會混進遊戲裡，在遊戲剛上市時因為 Input 數量小發覺不出來，營運久了突然某個時間點效能開始大幅下降。我自己的經驗是在 Unity JSON 方案還不多時使用了 <a href="https://gist.github.com/darktable/1411710">MiniJSON.cs</a>，不太確定這個 Parser 的準確時間複雜度，但就自己的經驗應該是超過 O(N)，所以只是線性地加資料在某個時間點突然讀取變超久。同樣的情形、也是 JSON Parser 也發生在 <a href="https://nee.lv/2021/02/28/How-I-cut-GTA-Online-loading-times-by-70/">GTA 5 Online</a> 啟動上。（他們的問題會這麼久才發現一部分是因為 GTA 5 程式有混淆，外部的人要有解讀的知識才能分析）</p>
 <p>關於這個問題好像現下除了不要用少人用的程式庫，跟 Code Review 緊一點之外沒有特別的想法，也許有時間能故意餵大測資看看。提出來希望大家如果未來有遇到營運到一半突然效能大幅下降，能想到可能是很久以前課本上的 Big O 又回來了。</p>
@@ -299,6 +301,7 @@
 <p>另外 Facebook 跟 Twitter 相反 <strong>不能不用</strong>  SDK 登入，自己接 OAuth 被 Facebook 發現會被退。</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Bad advice! It’s against Facebook’s policies to use OAuth for login. <br><br>“Platform Policy 8.2: Native iOS and Android apps that implement Facebook Login must use our official SDKs for Login.”<br><br>If you don’t want to use the SDK the only real option is to not offer Facebook for login.</p>&mdash; Hal Lee (@hal_lee) <a href="https://twitter.com/hal_lee/status/1259132680828043265?ref_src=twsrc%5Etfw">May 9, 2020</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 <h3 id="google">Google</h3>
 <p>Android 用的 <a href="https://developer.android.com/games/pgs/unity/unity-start">Google Play Games</a> 跟 iOS 用的 <a href="https://github.com/googlesamples/google-signin-unity">Google Sign-in</a> 是不同的 SDK，但是經實驗發現兩者拿到的使用者 ID Token 是相同的。如果要使用 Firebase 同時雙平台支援 Google 登入設定流程有點複雜，要安裝兩個 Unity Plugin 操作三個 Google 後台：</p>
@@ -378,6 +381,7 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 <p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">I am sorry 👀, WHAT THE F IS THIS FONT THEY USED FOR JAPANESE????<br><br>Why don&#39;t they use Noto Sans Japanese. (This looks like traditional Chinese font). <a href="https://t.co/o7kDI5AoIT">pic.twitter.com/o7kDI5AoIT</a></p>&mdash; Mariko Kosaka (@kosamari) <a href="https://twitter.com/kosamari/status/1656355931783852048?ref_src=twsrc%5Etfw">May 10, 2023</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
 日文使用者會對字體誤用特別敏感，這是 <a href="https://www.itmedia.co.jp/news/articles/2305/11/news178.html">Google IO 2023 介紹 Bard 時發生的誤用</a></p>
 <figure class="center"><img src="/images/gatcha-game-notes/noto_sans_cjk_jp_8a9e.png"/><figcaption>
             <h4>`NotoSansCJKjp` 預設的「語」 Glyph 注意上面言部是 橫 的</h4>
@@ -404,6 +408,7 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 <p>對這個議題有興趣研究，關鍵字是 <a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E6%97%A5%E9%9F%93%E7%B5%B1%E4%B8%80%E8%A1%A8%E6%84%8F%E6%96%87%E5%AD%97">中日韓統一表意文字</a>（<a href="https://en.wikipedia.org/wiki/Han_unification">Han unification</a>）
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">For instance, here are the Japanese, Simplified Chinese, and Traditional Chinese glyph variants of the character that represents knife edge: <a href="https://t.co/6A14YRm8S5">pic.twitter.com/6A14YRm8S5</a></p>&mdash; hardmaru (@hardmaru) <a href="https://twitter.com/hardmaru/status/1656827701184049152?ref_src=twsrc%5Etfw">May 12, 2023</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 </p>
 <ul>
 <li><a href="https://heistak.github.io/your-code-displays-japanese-wrong/">Your Code Displays Japanese Wrong</a></li>
@@ -594,6 +599,7 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">修正前、修正後<br>背景寂しくなちゃったね <a href="https://t.co/AJqICvObEs">pic.twitter.com/AJqICvObEs</a></p>&mdash; ぽめ (@pomegd) <a href="https://twitter.com/pomegd/status/1362202897409216512?ref_src=twsrc%5Etfw">February 18, 2021</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
 <h2 id="analytics">Analytics</h2>
 <p>資料分析對遊戲營運也是相當重要的一環，不過我做前端熟悉的只有幫忙埋點而已。埋點以後需要做測試，因為大部分的 Analytics Library 都會 Cache 事件，讓事件累積後再發出節約資源。所以要熟悉各個 Analytics Library 在測試環境強制 Flush 的方法，像是 Unity Analytics 的 <a href="https://docs.unity3d.com/ScriptReference/Analytics.Analytics.FlushEvents.html"><code>Analytics.FlushEvents</code></a>、Firebase 的 <a href="https://firebase.google.com/docs/analytics/debugview#enable_debug_mode">Debug Mode</a>、Adjust 的 <a href="https://help.adjust.com/en/article/get-started-unity-sdk#6-test-your-integration">Sandbox Mode</a>。</p>
 <h2 id="資料管理">資料管理</h2>
@@ -671,7 +677,7 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
   <span class="copyright-year">
     &copy; 
     2010 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Chun-Fu Chao</span>
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>Chun-Fu Chao</span>
   </span>
 </div>
 
