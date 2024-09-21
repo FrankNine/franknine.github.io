@@ -2,522 +2,409 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lesson 07 顏色與材質 on Northern Wind</title>
-    <link>https://franknine.github.io/cs291/lesson-07/</link>
+    <link>https://www.chunfuchao.com/cs291/lesson-07/</link>
     <description>Recent content in Lesson 07 顏色與材質 on Northern Wind</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-07/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <atom:link href="https://www.chunfuchao.com/cs291/lesson-07/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 課程概覽</title>
-      <link>https://franknine.github.io/cs291/lesson-07/01-overview-of-the-lesson/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/01-overview-of-the-lesson/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/01-overview-of-the-lesson/</guid>
-      <description>你可以在 這裡執行展示。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/01-overview-of-the-lesson/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/oOzT63pxEP0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/01 Overview of the Lesson - Interactive 3D Graphics-oOzT63pxEP0.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;你可以在 &lt;a href=&#34;http://threejs.org/examples/#webgl_marchingcubes&#34;&gt;這裡執行展示&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>02 可程式管線</title>
-      <link>https://franknine.github.io/cs291/lesson-07/02-the-programmable-pipeline/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/02-the-programmable-pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/02-the-programmable-pipeline/</guid>
-      <description>譯註：因為苦苦找不到 Fragment 適當的翻譯，所以先保留不翻。因為 Fragment 不翻，所以 Fragment Shader 也保持原狀。為了一致，另外 Vertex Shader 跟 Pixel Shader 兩種 Shader 也跟著保持原狀。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/02-the-programmable-pipeline/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/FeUr-S1f7Qk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/02 The Programmable Pipeline - Interactive 3D Graphics-FeUr-S1f7Qk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：因為苦苦找不到 Fragment 適當的翻譯，所以先保留不翻。因為 Fragment 不翻，所以 Fragment Shader 也保持原狀。為了一致，另外 Vertex Shader 跟 Pixel Shader 兩種 Shader 也跟著保持原狀。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>03 RGB 顏色定義</title>
-      <link>https://franknine.github.io/cs291/lesson-07/03-rgb-color-definition/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/03-rgb-color-definition/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/03-rgb-color-definition/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/03-rgb-color-definition/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/OxiT2hLFA00?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/03 RGB Color Definition - Interactive 3D Graphics-OxiT2hLFA00.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>04 顏色定義</title>
-      <link>https://franknine.github.io/cs291/lesson-07/04-color-definition/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/04-color-definition/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/04-color-definition/</guid>
-      <description>有關光的波長、可見光譜還有顏色的知識，請參考維基 這篇文章 跟 這篇文章。 維基有其他文章講 加色法 跟 減色法，還有 CMYK。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/04-color-definition/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/CdKSJpZ0lP0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/04 Color Definition - Interactive 3D Graphics-CdKSJpZ0lP0.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;有關光的波長、可見光譜還有顏色的知識，請參考維基 &lt;a href=&#34;http://en.wikipedia.org/wiki/Visible_spectrum&#34;&gt;這篇文章&lt;/a&gt; 跟 &lt;a href=&#34;http://en.wikipedia.org/wiki/Color&#34;&gt;這篇文章&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;維基有其他文章講 &lt;a href=&#34;http://en.wikipedia.org/wiki/Additive_color&#34;&gt;加色法&lt;/a&gt; 跟 &lt;a href=&#34;http://en.wikipedia.org/wiki/Subtractive_color&#34;&gt;減色法&lt;/a&gt;，還有 &lt;a href=&#34;http://en.wikipedia.org/wiki/CMYK&#34;&gt;CMYK&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>05 RGB 混色展示</title>
-      <link>https://franknine.github.io/cs291/lesson-07/05-rgb-color-demo/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/05-rgb-color-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/05-rgb-color-demo/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/05-rgb-color-demo/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/dat.gui.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit3-color-demo.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>06 設定顏色</title>
-      <link>https://franknine.github.io/cs291/lesson-07/06-setting-the-color/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/06-setting--the-color/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/06-setting-the-color/</guid>
-      <description>參考 Color 類別的 Three.js 文件 以獲得更多說明。如果你不懂十六進位 維基頁面 是個好的起點。網路上有許多十進位與十六進位的轉換器。像是這個。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/06-setting--the-color/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/NYVgc79HNwQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/06 Setting  the Color - Interactive 3D Graphics-NYVgc79HNwQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;參考 Color 類別的 &lt;a href=&#34;https://threejs.org/docs/#api/en/math/Color&#34;&gt;Three.js 文件&lt;/a&gt; 以獲得更多說明。如果你不懂十六進位 &lt;a href=&#34;http://en.wikipedia.org/wiki/Hexadecimal&#34;&gt;維基頁面&lt;/a&gt; 是個好的起點。網路上有許多十進位與十六進位的轉換器。&lt;a href=&#34;http://www.statman.info/conversions/hexadecimal.html&#34;&gt;像是這個&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>07 什麼顏色是洋紅？</title>
-      <link>https://franknine.github.io/cs291/lesson-07/07-what-color-is-magenta/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/07-what-color-is-magenta/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/07-what-color-is-magenta/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/07-what-color-is-magenta/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/8LLPBcfIYnA?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/07 What Color Is Magenta - Interactive 3D Graphics-8LLPBcfIYnA.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>07A 什麼顏色是洋紅？（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/07a-what-color-is-magenta/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/07a-what-color-is-magenta/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/07a-what-color-is-magenta/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/07a-what-color-is-magenta/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/LzuAFRsyQao?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/07A What Color Is Magenta - Interactive 3D Graphics-LzuAFRsyQao.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>08 查特酒是什麼顏色？</title>
-      <link>https://franknine.github.io/cs291/lesson-07/08-what-color-is-chartreuse/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/08-what-color-is-chartreuse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/08-what-color-is-chartreuse/</guid>
-      <description>這題只是問好玩的！ 截至 2014 6/4 有 10,450 筆回答，結果如下：41% 回答黃綠、22% 回答橘紅、19% 回答不知道跟 18% 回答深紫。感謝所有回答的人！至少我不是唯</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/08-what-color-is-chartreuse/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/WvWjqzPk-rM?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/08 What Color Is Chartreuse - Interactive 3D Graphics-WvWjqzPk-rM.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;這題只是問好玩的！&lt;/p&gt;&#xA;&lt;p&gt;截至 2014 6/4 有 10,450 筆回答，結果如下：41% 回答黃綠、22% 回答橘紅、19% 回答不知道跟 18% 回答深紫。感謝所有回答的人！至少我不是唯一弄錯的人。另一個我弄錯的是 &lt;a href=&#34;http://en.wikipedia.org/wiki/Puce&#34;&gt;Puce&lt;/a&gt;，它的起源有點噁心。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>08A 查特酒是什麼顏色？（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/08a-what-color-is-chartreuse/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/08a-what-color-is-chartreuse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/08a-what-color-is-chartreuse/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/08a-what-color-is-chartreuse/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Pm8FkC11A6E?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/08A What Color Is Chartreuse - Interactive 3D Graphics-Pm8FkC11A6E.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>09 顏色立方體</title>
-      <link>https://franknine.github.io/cs291/lesson-07/09-the-color-cube/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/09-the-color-cube/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/09-the-color-cube/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/09-the-color-cube/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/W2HHF0EiuY8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/09 The Color Cube - Interactive 3D Graphics-W2HHF0EiuY8.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>10 頂點屬性</title>
-      <link>https://franknine.github.io/cs291/lesson-07/10-vertex-attributes/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/10-vertex-attributes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/10-vertex-attributes/</guid>
-      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 注意： 1 var color = new THREE.Color(0.6, 0.3, 0,7); 是 設定顏色的一種方法 只存在新版 T</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/10-vertex-attributes/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/hHqWB-wjM-o?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/10 Vertex Attributes - Interactive 3D Graphics-hHqWB-wjM-o.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：請移動到 &lt;a href=&#34;https://jsfiddle.net/aaefiikmnnnr/spvr2oL7/&#34;&gt;這裡&lt;/a&gt; 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。&lt;/p&gt;&#xA;&lt;p&gt;注意：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;是 &lt;a href=&#34;https://threejs.org/docs/#api/en/math/Color&#34;&gt;設定顏色的一種方法&lt;/a&gt; 只存在新版 Three.js，課程使用的 r56 並沒有。所以解題時請避開這種設定方法。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>10A 頂點屬性（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/10a-vertex-attributes/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/10a-vertex-attributes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/10a-vertex-attributes/</guid>
-      <description>解答： 將以下程式填入 fillScene()： 1 2 3 4 5 6 7 8 9 10 11 12 13 // 解答 geometry = new THREE.Geometry(); geometry.vertices.push( new THREE.Vector3( 100, 0, 0 ) ); geometry.vertices.push( new THREE.Vector3( 0, 100, 0 ) ); geometry.vertices.push( new THREE.Vector3( 0, 0, 100 ) ); geometry.faces.push( new THREE.Face3( 0,</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/10a-vertex-attributes/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/J8BrBDMtfb4?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/10A Vertex Attributes - Interactive 3D Graphics-J8BrBDMtfb4.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;strong&gt;解答：&lt;/strong&gt; 將以下程式填入 &lt;code&gt;fillScene()&lt;/code&gt;：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;解答&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;geometry&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Geometry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;geometry&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vertices&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Vector3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;geometry&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vertices&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Vector3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;geometry&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vertices&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Vector3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;geometry&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;faces&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Face3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;這個實際上會乘上材質的顏色，預設是白色&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;0xff0000&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;0x00ff00&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;0x0000ff&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;geometry&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;faces&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vertexColors&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color3&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;];&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mesh&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Mesh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;geometry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;material&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>11 顏色內插</title>
-      <link>https://franknine.github.io/cs291/lesson-07/11-color-interpolation/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/11-color-interpolation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/11-color-interpolation/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/11-color-interpolation/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/_O0PmV2HUrY?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/11 Color Interpolation - Interactive 3D Graphics-_O0PmV2HUrY.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>12 色域</title>
-      <link>https://franknine.github.io/cs291/lesson-07/12-the-color-gamut/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/12-the-color-gamut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/12-the-color-gamut/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/12-the-color-gamut/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/8y9yENEdtG4?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/12 The Color Gamut - Interactive 3D Graphics-8y9yENEdtG4.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>13 簡單光照模型</title>
-      <link>https://franknine.github.io/cs291/lesson-07/13-a-simple-lighting-model/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/13-a-simple-lighting-model/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/13-a-simple-lighting-model/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/13-a-simple-lighting-model/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/EavLFfxDtqw?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/13 A Simple Lighting Model - Interactive 3D Graphics-EavLFfxDtqw.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>14 死亡之吻</title>
-      <link>https://franknine.github.io/cs291/lesson-07/14-kiss-of-death/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/14-kiss-of-death/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/14-kiss-of-death/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/14-kiss-of-death/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/V5alMYaDWcQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/14 Kiss of Death - Interactive 3D Graphics-V5alMYaDWcQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>15 球正上方的光</title>
-      <link>https://franknine.github.io/cs291/lesson-07/15-light-on-a-diffuse-sphere/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/15-light-on-a-diffuse-sphere/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/15-light-on-a-diffuse-sphere/</guid>
-      <description>譯註：關於漫射與觀察者方向無關的正式推導還蠻複雜的，可以參考這篇文章的 Radiance 章節，有互動式展示。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/15-light-on-a-diffuse-sphere/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Epj79U6GQPU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/15 Light on a Diffuse Sphere - Interactive 3D Graphics-Epj79U6GQPU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：關於漫射與觀察者方向無關的正式推導還蠻複雜的，可以參考&lt;a href=&#34;https://ciechanow.ski/lights-and-shadows/&#34;&gt;這篇文章&lt;/a&gt;的 Radiance 章節，有互動式展示。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>16 正規化向量</title>
-      <link>https://franknine.github.io/cs291/lesson-07/16-normalizing-a-vector/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/16-normalizing-a-vector/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/16-normalizing-a-vector/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/16-normalizing-a-vector/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/ZTywc8v9uU8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/16 Normalizing a Vector - Interactive 3D Graphics-ZTywc8v9uU8.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>17 向量長度</title>
-      <link>https://franknine.github.io/cs291/lesson-07/17-vector-length/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/17-vector-length/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/17-vector-length/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/17-vector-length/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/8UxO9pI9DDY?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/17 Vector Length - Interactive 3D Graphics-8UxO9pI9DDY.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>17A 向量長度（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/17a-vector-length/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/17a-vector-length/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/17a-vector-length/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/17a-vector-length/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/eqk7O06Hytc?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/17A Vector Length - Interactive 3D Graphics-eqk7O06Hytc.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>18 內積</title>
-      <link>https://franknine.github.io/cs291/lesson-07/18-the-dot-product/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/18-the-dot-product/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/18-the-dot-product/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/18-the-dot-product/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/_WgRwRyssk0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/18 The Dot Product - Interactive 3D Graphics-_WgRwRyssk0.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>19 內積的細節</title>
-      <link>https://franknine.github.io/cs291/lesson-07/19-the-dot-product-in-detail/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/19-the-dot-product-in-detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/19-the-dot-product-in-detail/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/19-the-dot-product-in-detail/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/YyNnK0T0w9o?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/19 The Dot Product in Detail - Interactive 3D Graphics-YyNnK0T0w9o.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>20 漫射材質</title>
-      <link>https://franknine.github.io/cs291/lesson-07/20-diffuse-material/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/20-diffuse-material/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/20-diffuse-material/</guid>
-      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 總結來說你要： 將材質從 MeshBasicMaterial 換成 MeshLambertMaterial 將環境光色用 SetRGB() 設定成材質</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/20-diffuse-material/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/gkZwY0dt7pk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/20 Diffuse Material - Interactive 3D Graphics-gkZwY0dt7pk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：請移動到 &lt;a href=&#34;https://jsfiddle.net/aaefiikmnnnr/y8xdzfe1/&#34;&gt;這裡&lt;/a&gt; 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。&lt;/p&gt;&#xA;&lt;p&gt;總結來說你要：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;將材質從 &lt;code&gt;MeshBasicMaterial&lt;/code&gt; 換成 &lt;code&gt;MeshLambertMaterial&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;將環境光色用 SetRGB() 設定成材質顏色 * 0.4。如果你的作業無法正常顯示或評分，請複製程式然後按下 Reset 按鈕。程式有經過修改以除錯，需要重新整理才能正常運作。&#xA;附註：課程用的 Three.js 版本 &lt;code&gt;ambient&lt;/code&gt; 是一個材質屬性，分開設定的顏色。在課程開始後 &lt;a href=&#34;https://github.com/mrdoob/three.js/issues/6501&#34;&gt;Three.js 修改了材質定義&lt;/a&gt;。材質的環境光色現在跟漫射顏色相同，&lt;code&gt;THREE.AmbientLight&lt;/code&gt; 變成調整環境光效果的唯一方法。這不會影響到作業，但是如果你要用新版 Three.js 就會有差別。&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>20A 漫射材質（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/20a-diffuse-material/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/20a-diffuse-material/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/20a-diffuse-material/</guid>
-      <description>解答： 要讓表面變成受光影響的漫射材質，修改 createBall()： 1 2 3 var material = new THREE.MeshLambertMaterial( { color: 0x80FC66, shading: THREE.FlatShading } ); var ka = 0.4; material.ambient.setRGB( material.color.r *ka, material.color.g* ka, material.color.b * ka );</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/20a-diffuse-material/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/gS3Hg3lYe6I?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/20A Diffuse Material - Interactive 3D Graphics-gS3Hg3lYe6I.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;strong&gt;解答：&lt;/strong&gt;&lt;br&gt;&#xA;要讓表面變成受光影響的漫射材質，修改 &lt;code&gt;createBall()&lt;/code&gt;：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;material&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MeshLambertMaterial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;0x80FC66&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;shading&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FlatShading&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ka&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;material&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ambient&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;setRGB&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;material&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ka&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;material&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ka&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;material&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ka&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>21 著色法向量</title>
-      <link>https://franknine.github.io/cs291/lesson-07/21-shading-normal/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/21-shading-normal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/21-shading-normal/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/21-shading-normal/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/CjVsEGafXuk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/21 Shading Normal - Interactive 3D Graphics-CjVsEGafXuk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>22 啟用平滑著色</title>
-      <link>https://franknine.github.io/cs291/lesson-07/22-enable-smooth-shading/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/22-enable-smooth-shading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/22-enable-smooth-shading/</guid>
-      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/22-enable-smooth-shading/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/eFPKjvf7Si8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/22 Enable Smooth Shading - Interactive 3D Graphics-eFPKjvf7Si8.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：請移動到 &lt;a href=&#34;https://jsfiddle.net/aaefiikmnnnr/h6j1na45/&#34;&gt;這裡&lt;/a&gt; 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>22 啟用平滑著色（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/22a-enable-smooth-shading/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/22a-enable-smooth-shading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/22a-enable-smooth-shading/</guid>
-      <description>解答： 修改 createBall() 的材質創造程式： 1 var material = new THREE.MeshLambertMaterial( { color: 0x80FC66 } );</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/22a-enable-smooth-shading/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/9fxvAfmPlsw?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/22A Enable Smooth Shading - Interactive 3D Graphics-9fxvAfmPlsw.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;strong&gt;解答：&lt;/strong&gt; 修改 &lt;code&gt;createBall()&lt;/code&gt; 的材質創造程式：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;material&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;THREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MeshLambertMaterial&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;0x80FC66&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>23 Ka、Kd 與 HSL</title>
-      <link>https://franknine.github.io/cs291/lesson-07/23-ka-kd-and-hsl/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/23-ka-kd-and-hsl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/23-ka-kd-and-hsl/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/23-ka-kd-and-hsl/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/xWGNrRH9g8s?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/23 Ka, Kd, and HSL - Interactive 3D Graphics-xWGNrRH9g8s.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>24 Lambert 展示</title>
-      <link>https://franknine.github.io/cs291/lesson-07/24-demo-lambert/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/24-demo-lambert/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/24-demo-lambert/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/24-demo-lambert/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/uclass_TeapotGeometry.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/dat.gui.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit3-lambert-demo.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>25 烘焙</title>
-      <link>https://franknine.github.io/cs291/lesson-07/25-baking/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/25-baking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/25-baking/</guid>
-      <description>請假設物件是純粹漫射材質，沒有鏡面反射。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/25-baking/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/QFh9P0t4tbM?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/25 Baking - Interactive 3D Graphics-QFh9P0t4tbM.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;請假設物件是純粹漫射材質，沒有鏡面反射。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>25A 烘焙（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/25a-baking/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/25a-baking/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/25a-baking/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/25a-baking/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/WGL3KuC-4TQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/25A Baking - Interactive 3D Graphics-WGL3KuC-4TQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>26 鏡面反射材質</title>
-      <link>https://franknine.github.io/cs291/lesson-07/26-specular-material/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/26-specular-material/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/26-specular-material/</guid>
-      <description>譯註：不是很確定講師提的 Blinn-Phong 反射模型的 Self-Shadowing 跟 Fresnel Coefficent 項是什麼，常見的 Blinn-Phong 公式就是簡單的版本。另外 Shininess 想不太到好的翻譯就只能將就了。 譯註：裴祥風（Bui Tuong</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/26-specular-material/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/2xWDoA8sbFk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/26 Specular Material - Interactive 3D Graphics-2xWDoA8sbFk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：不是很確定講師提的 Blinn-Phong 反射模型的 Self-Shadowing 跟 Fresnel Coefficent 項是什麼，常見的 Blinn-Phong 公式就是簡單的版本。另外 Shininess 想不太到好的翻譯就只能將就了。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>27 材質展示</title>
-      <link>https://franknine.github.io/cs291/lesson-07/27-material-demo/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/27-material-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/27-material-demo/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/27-material-demo/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/uclass_TeapotGeometry.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/uclass_shaders.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/dat.gui.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit3-teapot-demo.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>28 Gouraud 著色</title>
-      <link>https://franknine.github.io/cs291/lesson-07/28-gouraud-shading/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/28-gouraud-shading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/28-gouraud-shading/</guid>
-      <description>雖然比較常聽到「Gouraud 著色」，但我覺得應該稱之為「Gouraud 內插」，因為這是描述在頂點間內插顏色。差別會有關係是因為有對應的「P</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/28-gouraud-shading/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/T-GKzksIb-4?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/28 Gouraud Shading - Interactive 3D Graphics-T-GKzksIb-4.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;雖然比較常聽到「Gouraud 著色」，但我覺得應該稱之為「Gouraud 內插」，因為這是描述在頂點間內插顏色。差別會有關係是因為有對應的「Phong 著色」與「Phong 內插」（下一堂課），兩者指的是不同的東西。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>29 Phong 著色</title>
-      <link>https://franknine.github.io/cs291/lesson-07/29-phong-shading/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/29-phong-shading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/29-phong-shading/</guid>
-      <description>我應該將這堂課稱之為「Phong 內插」而非著色。非常抱歉。「著色」是根據表面法向量、打光跟眼睛位置的計算。這裡所描述的是「內插」，在內插頂點</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/29-phong-shading/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/jWaeoKI4cwY?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/29 Phong Shading - Interactive 3D Graphics-jWaeoKI4cwY.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;我應該將這堂課稱之為「Phong 內插」而非著色。非常抱歉。「著色」是根據表面法向量、打光跟眼睛位置的計算。這裡所描述的是「內插」，在內插頂點上的顏色跟內插法向量然後逐像素計算著色間選擇。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>30 材質計算</title>
-      <link>https://franknine.github.io/cs291/lesson-07/30-material-calculations/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/30-material-calculations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/30-material-calculations/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/30-material-calculations/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/W9UXhX4cQaA?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/30 Material Calculations - Interactive 3D Graphics-W9UXhX4cQaA.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>30A 材質計算（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/30a-material-calculations/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/30a-material-calculations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/30a-material-calculations/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/30a-material-calculations/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/KYpv67oNILU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/30A Material Calculations - Interactive 3D Graphics-KYpv67oNILU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>31 透明簡介</title>
-      <link>https://franknine.github.io/cs291/lesson-07/31-introduction-to-transparency/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/31-introduction-to-transparency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/31-introduction-to-transparency/</guid>
-      <description>試試 Aleksandr Rodic 的 水母展示。 另一個使用透明的 Zygote Body 展示，左邊有個垂直拉條慢慢地拉動它。 Wikimedia Commons 圖片使用：折射鉛筆、水晶球、菸灰缸 與 3D 眼鏡。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/31-introduction-to-transparency/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/yCXEsHPj5Ms?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/31 Introduction to Transparency - Interactive 3D Graphics-yCXEsHPj5Ms.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;試試 Aleksandr Rodic 的 &lt;a href=&#34;https://akirodic.com/p/jellyfish/&#34;&gt;水母展示&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;另一個使用透明的 &lt;a href=&#34;http://www.zygotebody.com/&#34;&gt;Zygote Body 展示&lt;/a&gt;，左邊有個垂直拉條慢慢地拉動它。&lt;/p&gt;&#xA;&lt;p&gt;Wikimedia Commons 圖片使用：&lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Red-Tornado_2007_Sylvain-Breton.jpg&#34;&gt;折射鉛筆&lt;/a&gt;、&lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Quartz_crystal.jpg&#34;&gt;水晶球&lt;/a&gt;、&lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Green_Glass_Ashtray.JPG&#34;&gt;菸灰缸&lt;/a&gt; 與 &lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Anachrome_Aviator%2B_3D_glasses.jpg&#34;&gt;3D 眼鏡&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>32 混色</title>
-      <link>https://franknine.github.io/cs291/lesson-07/32-blending/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/32-blending/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/32-blending/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/32-blending/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/qcNYjvWwpKQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/32 Blending - Interactive 3D Graphics-qcNYjvWwpKQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>33 Over 運算子</title>
-      <link>https://franknine.github.io/cs291/lesson-07/33-the-over-operator/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/33-the-over-operator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/33-the-over-operator/</guid>
-      <description>Three.js 有個 所有可能組合的展示 -看上去有點神祕，但你可以從左邊的控制去操作。 譯註：詳細混色資料可以參考這篇文章</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/33-the-over-operator/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/856FnBTwt8Q?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/33 The Over Operator - Interactive 3D Graphics-856FnBTwt8Q.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;Three.js 有個 &lt;a href=&#34;http://threejs.org/examples/#webgl_materials_blending_custom&#34;&gt;所有可能組合的展示&lt;/a&gt; -看上去有點神祕，但你可以從左邊的控制去操作。&lt;/p&gt;&#xA;&lt;p&gt;譯註：詳細混色資料可以參考&lt;a href=&#34;https://ciechanow.ski/alpha-compositing/&#34;&gt;這篇文章&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>34 簡單透明展示</title>
-      <link>https://franknine.github.io/cs291/lesson-07/34-simple-transparency-demo/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/34-simple-transparency-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/34-simple-transparency-demo/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/34-simple-transparency-demo/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/jquery-1.8.3.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/Coordinates.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/dat.gui.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit3-blending.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>35 Over 運算子小考</title>
-      <link>https://franknine.github.io/cs291/lesson-07/35-the-over-operator-quiz/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/35-the-over-operator-quiz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/35-the-over-operator-quiz/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/35-the-over-operator-quiz/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/JgnGQH09zGU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/35 The Over Operator Quiz - Interactive 3D Graphics-JgnGQH09zGU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>35A Over 運算子小考（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/35a-the-over-operator-quiz/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/35a-the-over-operator-quiz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/35a-the-over-operator-quiz/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/35a-the-over-operator-quiz/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/GOESnLv6kUo?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/35A The Over Operator Quiz - Interactive 3D Graphics-GOESnLv6kUo.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>36 Over 運算子展示</title>
-      <link>https://franknine.github.io/cs291/lesson-07/36-the-over-operator-demo/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/36-the-over-operator-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/36-the-over-operator-demo/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/36-the-over-operator-demo/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/jquery-1.8.3.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/dat.gui.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit3-over_operator.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>37 Z 緩衝區與透明</title>
-      <link>https://franknine.github.io/cs291/lesson-07/37-the-z-buffer-and-transparency/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/37-the-z-buffer-and-transparency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/37-the-z-buffer-and-transparency/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/37-the-z-buffer-and-transparency/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/UZ2ClQjk3rQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/37 The Z-Buffer and Transparency - Interactive 3D Graphics-UZ2ClQjk3rQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>38 解決透明和 Z 緩衝區</title>
-      <link>https://franknine.github.io/cs291/lesson-07/38-solving-transparent-z-buffering/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/38-solving-transparent-z-buffering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/38-solving-transparent-z-buffering/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/38-solving-transparent-z-buffering/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/QjHOFVTBIbI?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/38 Solving Transparent Z-Buffering-QjHOFVTBIbI.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>38A 解決透明和 Z 緩衝區（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/38a-solving-transparent-z-buffering/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/38a-solving-transparent-z-buffering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/38a-solving-transparent-z-buffering/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/38a-solving-transparent-z-buffering/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/VMloPK3DNxk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/38A Solving Transparent Z-Buffering-VMloPK3DNxk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>39 解決透明和 Z 緩衝區 2</title>
-      <link>https://franknine.github.io/cs291/lesson-07/39-solving-transparent-z-buffering/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/39-solving-transparent-z-buffering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/39-solving-transparent-z-buffering/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/39-solving-transparent-z-buffering/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/UnP9O-U5hkY?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/39 Solving Transparent Z-Buffering-UnP9O-U5hkY.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>39A 解決透明和 Z 緩衝區 2（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/39a-solving-transparent-z-buffering/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/39a-solving-transparent-z-buffering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/39a-solving-transparent-z-buffering/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/39a-solving-transparent-z-buffering/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Gsmm1XqqfOo?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/39A Solving Transparent Z-Buffering-Gsmm1XqqfOo.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>40 透明和 Three.js</title>
-      <link>https://franknine.github.io/cs291/lesson-07/40-transparency-and-three.js/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/40-transparency-and-three.js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/40-transparency-and-three.js/</guid>
-      <description>參考 Lee Stemkoski 的教學 以獲得更多透明材質的範例。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/40-transparency-and-three.js/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/d5Zd37_dO-0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/40 Transparency and three.js - Interactive 3D Graphics-d5Zd37_dO-0.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;參考 &lt;a href=&#34;http://stemkoski.github.io/Three.js/#Translucence&#34;&gt;Lee Stemkoski 的教學&lt;/a&gt; 以獲得更多透明材質的範例。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>41 另一個透明展示</title>
-      <link>https://franknine.github.io/cs291/lesson-07/41-another-transparency-demo/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/41-another-transparency-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/41-another-transparency-demo/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/41-another-transparency-demo/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/jquery-1.8.3.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/Coordinates.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/dat.gui.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit3-transparency.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>42 什麼地方出錯了</title>
-      <link>https://franknine.github.io/cs291/lesson-07/42-what-went-wrong/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/42-what-went-wrong/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/42-what-went-wrong/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/42-what-went-wrong/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/THu9rDYhFuI?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/42 What Went Wrong - Interactive 3D Graphics-THu9rDYhFuI.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>42A 什麼地方出錯了（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-07/42a-what-went-wrong/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/42a-what-went-wrong/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/42a-what-went-wrong/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/42a-what-went-wrong/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/_thXUjexGdg?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/42A What Went Wrong - Interactive 3D Graphics-_thXUjexGdg.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>43 進階透明作法</title>
-      <link>https://franknine.github.io/cs291/lesson-07/43-advanced-transparency-methods/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/43-advanced-transparency-methods/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/43-advanced-transparency-methods/</guid>
-      <description>在 1:20 我說右邊的 Fragment 會不正確地進行混色。實際上因為有 Z 緩衝區，右邊的 Fragment 會被左邊的遮擋掉。當我在講的時候我想到的是 Z 緩衝區只讀不寫的作法，這種作法</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/43-advanced-transparency-methods/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/XAEUr0x8IhI?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/43 Advanced Transparency Methods - Interactive 3D Graphics-XAEUr0x8IhI.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;在 1:20 我說右邊的 Fragment 會不正確地進行混色。實際上因為有 Z 緩衝區，右邊的 Fragment 會被左邊的遮擋掉。當我在講的時候我想到的是 Z 緩衝區只讀不寫的作法，這種作法讓所有面都有作用。這樣繪製會有混色錯誤，但通常比直接遮擋好看。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>44 未來的透明演算法</title>
-      <link>https://franknine.github.io/cs291/lesson-07/44-future-of-transparency/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/44-future-of-transparency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/44-future-of-transparency/</guid>
-      <description>Aleksandr Rodic 對水母的註記： 透明是我做這個展示最大的挑戰。實際上這是我第一次遇到透明排序問題。我做的是骯髒的偷吃步，沿著 Z 軸預先排序所有三角形，然後扭</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/44-future-of-transparency/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/bUOr5w8W-rU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/44 Future of Transparency - Interactive 3D Graphics-bUOr5w8W-rU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;Aleksandr Rodic 對水母的註記：&lt;/p&gt;&#xA;&lt;p&gt;透明是我做這個展示最大的挑戰。實際上這是我第一次遇到透明排序問題。我做的是骯髒的偷吃步，沿著 Z 軸預先排序所有三角形，然後扭轉骨架讓每個關節都正對攝影機。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>45 結語</title>
-      <link>https://franknine.github.io/cs291/lesson-07/45-conclusion/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-07/45-conclusion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-07/45-conclusion/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-07/45-conclusion/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/ue7YKYz4VMQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 07\/45 Conclusion - Interactive 3D Graphics-ue7YKYz4VMQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
   </channel>
 </rss>

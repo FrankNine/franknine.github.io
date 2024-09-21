@@ -25,12 +25,12 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">function setupGui() { 
-</span></span><span class="line"><span class="cl">    effectController = { fov: 40 };
-</span></span><span class="line"><span class="cl">    var gui = new dat.GUI();
-</span></span><span class="line"><span class="cl">    var element = gui.add( effectController, &#34;fov&#34;, 1.0, 179.0 );
-</span></span><span class="line"><span class="cl">    element.name(&#34;field of view&#34;);
-</span></span><span class="line"><span class="cl">}
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">function</span> <span class="n">setupGui</span><span class="p">()</span> <span class="p">{</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">effectController</span> <span class="o">=</span> <span class="p">{</span> <span class="n">fov</span><span class="p">:</span> <span class="mi">40</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">gui</span> <span class="o">=</span> <span class="n">new</span> <span class="n">dat</span><span class="o">.</span><span class="n">GUI</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">element</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">effectController</span><span class="p">,</span> <span class="s2">&#34;fov&#34;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">179.0</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">element</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&#34;field of view&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>然後在 <code>render()</code> 呼叫 <code>renderer.render</code> 之前加入：</p>

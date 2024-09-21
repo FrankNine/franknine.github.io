@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,17 +17,17 @@
 
 
 <meta name="author" content="Chun-Fu Chao" /><meta name="description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。
-" />
+" /><meta name="keywords" content="Unity, Xcode, iOS" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/configure-xcode-project-with-postprocessbuild/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/configure-xcode-project-with-postprocessbuild/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,19 +41,26 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="使用 PostProcessBuild 設定 Unity 產生的 Xcode Project" />
-<meta property="og:description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/configure-xcode-project-with-postprocessbuild/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2015-09-26T12:30:50+00:00" />
-<meta property="article:modified_time" content="2015-09-26T12:30:50+00:00" />
-<meta itemprop="name" content="使用 PostProcessBuild 設定 Unity 產生的 Xcode Project">
-<meta itemprop="description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。"><meta itemprop="datePublished" content="2015-09-26T12:30:50+00:00" />
-<meta itemprop="dateModified" content="2015-09-26T12:30:50+00:00" />
-<meta itemprop="wordCount" content="1945">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用 PostProcessBuild 設定 Unity 產生的 Xcode Project"/>
-<meta name="twitter:description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/configure-xcode-project-with-postprocessbuild/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="使用 PostProcessBuild 設定 Unity 產生的 Xcode Project">
+  <meta property="og:description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2015-09-26T12:30:50+00:00">
+    <meta property="article:modified_time" content="2015-09-26T12:30:50+00:00">
+
+  <meta itemprop="name" content="使用 PostProcessBuild 設定 Unity 產生的 Xcode Project">
+  <meta itemprop="description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。">
+  <meta itemprop="datePublished" content="2015-09-26T12:30:50+00:00">
+  <meta itemprop="dateModified" content="2015-09-26T12:30:50+00:00">
+  <meta itemprop="wordCount" content="1945">
+  <meta itemprop="keywords" content="Unity,Xcode,iOS">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="使用 PostProcessBuild 設定 Unity 產生的 Xcode Project">
+  <meta name="twitter:description" content="最近又重新回去做一些有關於 Unity 的 Continuous integration 有關的研究，之前卡住的點是在於 Unity 產生出來的 Xcode Project 可能會有一些設定沒有弄好，然後要手工去設定。當然這在 CI 裡面是不能接受的。不過當時一忙就沒有研究下去了，剛好最近 Unity Cloud Build 使用的人變多，也有很多人有同樣的需求，所以就把官方的討論整理一下貼上來。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -146,9 +153,9 @@
 <h3 id="安裝xcode-manipulation-api">安裝 Xcode Manipulation API</h3>
 <p>如果你是 Unity 5 的使用者的話 Xcode Manipulation API 已經包含在 UnityEditor 裡面了，Unity 4 的使用者需要去上面的 Bitbucket 網址 clone 原始檔，放在自己 Unity 專案底下的某個 Editor 資料夾下。然後要注意 xcodeapi 底下 Utils.cs 的 class UnityEditor.iOS.Xcode.PBX.Utils 會跟 Unity 4 底下的 UnityEditor.Utils 衝突。要把 UnityEditor.iOS.Xcode.PBX.Utils 改成別的名字。</p>
 <h3 id="xcode-專案結構">Xcode 專案結構</h3>
-<p><img src="/images/configure-xcode-project-with-postprocessbuild/xcode-project.png" alt="Xcode Project"></p>
+<p><img alt="Xcode Project" src="/images/configure-xcode-project-with-postprocessbuild/xcode-project.png"></p>
 <p>Build 完設定完的 Xcode Project 大概會長的像這樣，我們要操作的內容主要是 Info.plist、Unity-iPhone 底下的 .entitlements、還有 Unity-iPhone.xcodeproj。xcodeproj 是一個 package ，右鍵點選選 Show Package Content 可以看到 project.pbxproj。</p>
-<p><img src="/images/configure-xcode-project-with-postprocessbuild/pbxpoject.png" alt="PBXProject"></p>
+<p><img alt="PBXProject" src="/images/configure-xcode-project-with-postprocessbuild/pbxpoject.png"></p>
 <p>Info.plist、.entitlements、還有 project.pbxproj 這三個就是我們主要操作的對象。</p>
 <h3 id="postprocessbuild">PostProcessBuild</h3>
 <p>PostProcessBuild 這個 attribute 修飾的 static function 會在 Unity 建置完之後被呼叫。這個函式需要接受兩個參數，一個是 BuildTarget enum ，代表建置的目標平台。另一個是 string 是建置的目標目錄。</p>
@@ -164,7 +171,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="n">_OnPostprocessBuild</span> <span class="p">(</span><span class="n">BuildTarget</span> <span class="n">target</span><span class="p">,</span> <span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">static</span> <span class="k">void</span> <span class="n">_OnPostprocessBuild</span> <span class="p">(</span><span class="n">BuildTarget</span> <span class="n">target</span><span class="p">,</span> <span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="p">==</span> <span class="n">BuildTarget</span><span class="p">.</span><span class="n">iPhone</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">  <span class="p">{</span>
@@ -178,8 +185,8 @@
 <p><a href="http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html">http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html</a></p>
 <h3 id="增加-required-device-capability">增加 Required Device Capability</h3>
 <p>預設的 Unity Xcode 專案會開 Game Center 的 Entitlements 但是沒有把 gamekit 加到 Required device capability 裡面，所以開起來會跳 issue ，解決方法是把它加進 Info.plist。</p>
-<p><img src="/images/configure-xcode-project-with-postprocessbuild/entitlements.png" alt="Entitlements"></p>
-<p><img src="/images/configure-xcode-project-with-postprocessbuild/required-device-capability.png" alt="Required Device Capability"></p>
+<p><img alt="Entitlements" src="/images/configure-xcode-project-with-postprocessbuild/entitlements.png"></p>
+<p><img alt="Required Device Capability" src="/images/configure-xcode-project-with-postprocessbuild/required-device-capability.png"></p>
 <p>這邊用的是 Unity Manipulation API ，code 大概像是下面這樣：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -196,7 +203,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">static</span> <span class="k">void</span> <span class="n">_AddDeviceCapabilities</span><span class="p">(</span><span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">static</span> <span class="k">void</span> <span class="n">_AddDeviceCapabilities</span><span class="p">(</span><span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">string</span> <span class="n">infoPlistPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span> <span class="p">(</span><span class="n">pathToBuiltProject</span><span class="p">,</span> <span class="s">&#34;./Info.plist&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">PlistDocument</span> <span class="n">plist</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PlistDocument</span><span class="p">();</span>
@@ -212,14 +219,14 @@
 </div><p>大致上就是用 PlistDocument 開啟 Info.plist ，加入 UIRequiredDeviceCapabilities 這個屬性，然後在上面加入 gamekit。因為實驗結果 Xcode Manipulation API 會做一個覆寫的動作，所以原本存在的 armv7 也要加回去。然後如果你的 app 有需要其他的 Required device capability 也都在這裡可以加。</p>
 <h3 id="xcode-7ios9-require-full-screen">[Xcode 7/iOS9] Require Full Screen</h3>
 <p>在 Xcode 7 裡面有新增了一個 Require full screen 的選項，意思是宣告你的 app 不想讓使用者在 iOS 9 新的分割視窗裡面被開啟。</p>
-<p><img src="/images/configure-xcode-project-with-postprocessbuild/require-full-screen.png" alt="Require Full Screen"></p>
+<p><img alt="Require Full Screen" src="/images/configure-xcode-project-with-postprocessbuild/require-full-screen.png"></p>
 <p>一般的遊戲應該都會設定成 yes ，這個設定也在 Info.plist ，key 值是 UIRequiresFullScreen</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">infoPlistRootDict</span><span class="p">.</span><span class="n">SetBoolean</span><span class="p">(</span><span class="s">&#34;UIRequiresFullScreen&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">infoPlistRootDict</span><span class="p">.</span><span class="n">SetBoolean</span><span class="p">(</span><span class="s">&#34;UIRequiresFullScreen&#34;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="增加引入的-framework">增加引入的 Framework</h3>
@@ -238,14 +245,14 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">static</span> <span class="k">void</span> <span class="n">_AddFrameWork</span><span class="p">(</span><span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">static</span> <span class="k">void</span> <span class="n">_AddFrameWork</span><span class="p">(</span><span class="kt">string</span> <span class="n">pathToBuiltProject</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">string</span> <span class="n">pbxProjectPath</span> <span class="p">=</span> <span class="n">Path</span><span class="p">.</span><span class="n">Combine</span> <span class="p">(</span><span class="n">pathToBuiltProject</span><span class="p">,</span> <span class="s">&#34;./Unity-iPhone.xcodeproj/project.pbxproj&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">PBXProject</span> <span class="n">pbxProject</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PBXProject</span> <span class="p">();</span>
 </span></span><span class="line"><span class="cl">	<span class="n">pbxProject</span><span class="p">.</span><span class="n">ReadFromFile</span> <span class="p">(</span><span class="n">pbxProjectPath</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="kt">string</span> <span class="n">targetGUID</span> <span class="p">=</span> <span class="n">pbxProject</span><span class="p">.</span><span class="n">TargetGuidByName</span> <span class="p">(</span><span class="s">&#34;Unity-iPhone&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="n">pbxProject</span><span class="p">.</span><span class="n">AddFrameworkToProject</span> <span class="p">(</span><span class="n">targetGUID</span><span class="p">,</span> <span class="s">&#34;CoreData.framework&#34;</span><span class="p">,</span> <span class="n">weak</span><span class="p">:</span><span class="k">false</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">	<span class="n">pbxProject</span><span class="p">.</span><span class="n">AddFrameworkToProject</span> <span class="p">(</span><span class="n">targetGUID</span><span class="p">,</span> <span class="s">&#34;Social.framework&#34;</span><span class="p">,</span> <span class="n">weak</span><span class="p">:</span><span class="k">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pbxProject</span><span class="p">.</span><span class="n">AddFrameworkToProject</span> <span class="p">(</span><span class="n">targetGUID</span><span class="p">,</span> <span class="s">&#34;CoreData.framework&#34;</span><span class="p">,</span> <span class="n">weak</span><span class="p">:</span><span class="kc">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pbxProject</span><span class="p">.</span><span class="n">AddFrameworkToProject</span> <span class="p">(</span><span class="n">targetGUID</span><span class="p">,</span> <span class="s">&#34;Social.framework&#34;</span><span class="p">,</span> <span class="n">weak</span><span class="p">:</span><span class="kc">false</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">	<span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="n">pbxProjectPath</span><span class="p">,</span><span class="n">pbxProject</span><span class="p">.</span><span class="n">WriteToString</span> <span class="p">());</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -366,7 +373,7 @@
 <p>P.S. 原來在 Unity 論壇上面原作者還有手動加入 CloudKit.framework ，不過我照做反而 Link fail，不做就編過了。這邊不太確定是怎麼回事。如果在你的機器上會跳 CloudKit 的 Link fail 的話就試著加加看吧。</p>
 <h3 id="xcode-7-bitcode">[Xcode 7] Bitcode</h3>
 <p>Bitcode 是 Apple 新的 App thinning 機制所需的編譯方式，不過因為絕大多數既有的 Plugin 都還沒有改成使用 Bitcode 編譯，所以我們也沒辦法開啟。</p>
-<p><img src="/images/configure-xcode-project-with-postprocessbuild/bitcode.png" alt="Bitcode"></p>
+<p><img alt="Bitcode" src="/images/configure-xcode-project-with-postprocessbuild/bitcode.png"></p>
 <p>關閉的方法是在 build settings 加入</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -409,16 +416,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

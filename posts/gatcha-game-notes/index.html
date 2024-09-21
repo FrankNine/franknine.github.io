@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。
+製作 首先最直接的是該不該做「營運類遊戲」跟「手機遊戲」：
+" /><meta name="keywords" content="手機遊戲, 營運遊戲, Android, iOS, Unity" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/gatcha-game-notes/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/gatcha-game-notes/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +42,29 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="手機營運類遊戲筆記" />
-<meta property="og:description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/gatcha-game-notes/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-06-07T23:00:00+08:00" />
-<meta property="article:modified_time" content="2023-06-07T23:00:00+08:00" />
-<meta itemprop="name" content="手機營運類遊戲筆記">
-<meta itemprop="description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。"><meta itemprop="datePublished" content="2023-06-07T23:00:00+08:00" />
-<meta itemprop="dateModified" content="2023-06-07T23:00:00+08:00" />
-<meta itemprop="wordCount" content="12574">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="手機營運類遊戲筆記"/>
-<meta name="twitter:description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/gatcha-game-notes/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="手機營運類遊戲筆記">
+  <meta property="og:description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。
+製作 首先最直接的是該不該做「營運類遊戲」跟「手機遊戲」：">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-06-07T23:00:00+08:00">
+    <meta property="article:modified_time" content="2023-06-07T23:00:00+08:00">
+
+  <meta itemprop="name" content="手機營運類遊戲筆記">
+  <meta itemprop="description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。
+製作 首先最直接的是該不該做「營運類遊戲」跟「手機遊戲」：">
+  <meta itemprop="datePublished" content="2023-06-07T23:00:00+08:00">
+  <meta itemprop="dateModified" content="2023-06-07T23:00:00+08:00">
+  <meta itemprop="wordCount" content="12574">
+  <meta itemprop="keywords" content="手機遊戲,營運遊戲,Android,iOS,Unity">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="手機營運類遊戲筆記">
+  <meta name="twitter:description" content="因為之前接觸過手機營運類遊戲的開發跟維護，想分享一些心得。我自己工作算是 Unity 前端所以看得有限，希望如果有接觸過不同開發面向的朋友也能分享經驗。
+製作 首先最直接的是該不該做「營運類遊戲」跟「手機遊戲」：">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -141,13 +153,16 @@
 <h2 id="手機遊戲">手機遊戲</h2>
 <p>手機做為軟體平台最大的特性是要把軟體留在上面比其他平台難得多很多，兩個平台平均每半年都會有新要求。沒有滿足要求會有相應的懲罰，輕則降觸及、不給 Feature，重則下架。之前在 <a href="https://tgdf.tw">TGDF</a> 2019 演講時有特別提過這點，至今依然如此。所以遊戲在手機上要保持上架與觸及，會有不小的額外人力開銷，這在開案之前要考慮進去。也是為什麼現在比較難在手機上看到採用無廣告買斷的遊戲主要原因，可以參考 Simogo 寫的 <a href="https://simogo.com/2017/12/11/the-year-of-the-devil/">The Year of The Devil</a>。</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/kdnm_osNZ9s" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
 
-<figure class="center"><img src="/images/gatcha-game-notes/mobile_os_timeline.png"/><figcaption>
-            <h4>演講當年 2019 遇到 iPhone X 上市螢幕尺寸大改特別歡樂</h4>
-        </figcaption>
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kdnm_osNZ9s?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<figure class="center"><img src="/images/gatcha-game-notes/mobile_os_timeline.png"><figcaption>
+      <h4>演講當年 2019 遇到 iPhone X 上市螢幕尺寸大改特別歡樂</h4>
+    </figcaption>
 </figure>
 
 <p>因為現在大部份開發都是使用 Unity，要配合政策轉彎又會比寫 Native App 的難。有時候會牽動 Unity 要升版，有經驗的就會知道升級 Unity 有多可怕。</p>
@@ -178,12 +193,12 @@
 <h4 id="android">Android</h4>
 <ul>
 <li>Android OS 使用者比例可以在 Android Studio 開新專案時 Minimum SDK 下面有個 Help me choose 可以點開：
-<figure class="center"><img src="/images/gatcha-game-notes/help_me_choose.png"/>
+<figure class="center"><img src="/images/gatcha-game-notes/help_me_choose.png">
   </figure>
 
-<figure class="center"><img src="/images/gatcha-game-notes/api_version_distribution.png"/><figcaption>
-              <h4>為了這個畫面又要特地裝 Android Studio...</h4>
-          </figcaption>
+<figure class="center"><img src="/images/gatcha-game-notes/api_version_distribution.png"><figcaption>
+        <h4>為了這個畫面又要特地裝 Android Studio...</h4>
+      </figcaption>
   </figure>
 </li>
 <li>硬體 Graphics API 資訊： <a href="https://developer.android.com/about/dashboards">https://developer.android.com/about/dashboards</a></li>
@@ -224,7 +239,7 @@
 <h4 id="加入-google-play-games-第三方登入">加入 Google Play Games 第三方登入</h4>
 <p>如果要實作這項，實作完成後記得對一下這項 <a href="https://developers.google.com/games/services/checklist?hl=zh-tw#sign-in">Google Play 遊戲服務品質檢查清單</a>。如果使用者拒絕了登入 Google Play Games，那下次啟動應要求是不應該再幫使用者自動跑登入流程。</p>
 <h4 id="符合-material-design">符合 Material Design</h4>
-<p>Google 會要求即使是用 Unity 兜出 UI 的遊戲也要符合 <a href="(https://m3.material.io)">Material Design</a> 設計語言，實際上看到的要求好像只有 <strong>按鈕要有「按下」與「放開」兩段獨立動畫</strong>，按下去馬上伸縮一下的一段動畫不算。如果想要滿足這項要求的話，按鈕的 Prefab 要盡早準備好相應的 Animator，等到按鈕都鋪完才要加會有點痛苦。</p>
+<p>Google 會要求即使是用 Unity 兜出 UI 的遊戲也要符合 <a href="https://m3.material.io">Material Design</a> 設計語言，實際上看到的要求好像只有 <strong>按鈕要有「按下」與「放開」兩段獨立動畫</strong>，按下去馬上伸縮一下的一段動畫不算。如果想要滿足這項要求的話，按鈕的 Prefab 要盡早準備好相應的 Animator，等到按鈕都鋪完才要加會有點痛苦。</p>
 <h4 id="ui-支援-back-button">UI 支援 Back Button</h4>
 <p>遊戲內的 UI 也要對 Android 系統上的返回鍵有反應。</p>
 <h4 id="不能在遊戲啟動時就要求權限">不能在遊戲啟動時就要求權限</h4>
@@ -269,7 +284,7 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">public</span> <span class="n">WWW</span><span class="p">(</span><span class="kt">string</span> <span class="n">url</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="n">WWW</span><span class="p">(</span><span class="kt">string</span> <span class="n">url</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">_uwr</span> <span class="p">=</span> <span class="n">UnityWebRequest</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="n">_uwr</span><span class="p">.</span><span class="n">SendWebRequest</span><span class="p">();</span>
@@ -289,7 +304,7 @@
 <p>未上市的資料被有心玩家拆出來公布會對營運規劃造成不小困擾。AssetBundle 格式有很多工具可以解讀：<a href="https://github.com/Perfare/AssetStudio">AssetStudio</a>、<a href="https://github.com/mafaca/UtinyRipper">UtinyRipper</a> 等等。雖然有一些基於 <a href="https://docs.unity3d.com/ScriptReference/AssetBundle.LoadFromStream.html">AssetBundle.LoadFromStream</a> 加密 AssetBundle 的 <a href="https://tsubakit1.hateblo.jp/entry/2019/03/16/162138">方案</a>，但是無法防範玩家從遊戲本體裡找出加密鑰匙。（除非你想繼續加碼使用 App 加固服務之類的，但是加固也不是堅不可摧）</p>
 <p>比較治本就是公開的資料不要包含還不想給玩家看的資料。我們做過的作法是改寫 AssetStudio 成一個 Commandline 工具，在每次自動打包 AssetBundle 後自動拆自己然後 git commit push 到一個 Git Repository。再讓一位企劃大略看過這次拆包結果跟上次拆包結果的 Diff 來抓是否有洩漏。</p>
 <h2 id="無用首抽帳號處理">無用／首抽帳號處理</h2>
-<p>讓玩家刷首抽有增加下載量帳面數據的行銷好處，但也同時會產生許多無用帳號。當營運到帳號量接近一個 DB Instance 的上限時會對後端很麻煩，可能要計劃是照定型化契約刪除無動作帳號。但又怕有玩家想回鍋撲空，或是像暴雪公告會依法刪除卻炎上。（雖然行政院 <a href="https://www.ey.gov.tw/Page/DFB720D019CCCB0A/964028ea-f1f6-4383-9c78-f7d0606086f3">網路連線遊戲服務定型化契約應記載及不得記載事項</a> 十八項：<code>企業經營者得與消費者約定，若消費者逾___期間（不得少於一年）未登入使用本遊戲服務，企業經營者得定相當期限（不得少於十五日）通知消費者登入，如消費者屆期仍未登入使用，則企業經營者得終止本契約。</code>，暴雪只是照抄但是因為逆風太久還是 <a href="https://forum.gamer.com.tw/C.php?bsn=24044&amp;snA=66746">燒起來</a>）</p>
+<p>讓玩家刷首抽有增加下載量帳面數據的行銷好處，但也同時會產生許多無用帳號。當營運到帳號量接近一個 DB Instance 的上限時會對後端很麻煩，可能要計劃是照定型化契約刪除無動作帳號。但又怕有玩家想回鍋撲空，或是像暴雪公告會依法刪除卻炎上。（雖然行政院 <a href="https://www.ey.gov.tw/Page/DFB720D019CCCB0A/964028ea-f1f6-4383-9c78-f7d0606086f3">網路連線遊戲服務定型化契約應記載及不得記載事項</a> 十八項：<code>企業經營者得與消費者約定，若消費者逾___期間（不得少於一年）未登入使用本遊戲服務，企業經營者得定相當期限（不得少於十五日）通知消費者登入，如消費者屆期仍未登入使用，則企業經營者得終止本契約。</code>，暴雪只是照抄但是因為逆風太久還是 <a href="https://forum.gamer.com.tw/C.php?bsn=24044&snA=66746">燒起來</a>）</p>
 <p>可能要有一套判斷帳號價值的方法，像是有無課金過之類的避開刪除到有可能長時間後復活的帳號。（Google 想要 <a href="https://support.google.com/accounts/answer/12418290">刪除兩年未使用帳號</a>，後來可能是被抗議到受不了改成 <a href="https://blog.google/technology/safety-security/updating-our-inactive-account-policies/">有上傳過 YouTube 影片不刪</a>）我之前有提過一個想法是把無用帳號搬去冷儲存，如果有玩家真的想回鍋無法登入找客服，再從冷儲存還原。不過這個只是想法沒有實際跑過就是。</p>
 <h2 id="第三方登入">第三方登入</h2>
 <p>為了方便玩家，通常除了自己的帳號密碼系統會接入第三方登入，要確定遊戲帳號本身對登入方式是一對多，玩家有介面可以登記多種登入方式登入同一個遊戲帳號。要不然遇到像最近的 Twitter 不穩定與收費改動時無法引導去使用別的登入方式會很痛苦。</p>
@@ -320,7 +335,7 @@
 </ul>
 <p>Google Play Games 可以不需要使用者輸入直接跑登入流程，算是對營運上相當好的特性，因為任何額外需要互動的步驟都可能造成玩家流失，可惜只有 Android 能用。Android 登入 Google Play Games 流程的示範可以參考 Supercell 的產品，像是皇室戰爭第一次開啟是直接進入教學同時執行背景的 Google Play Games 登入，如果能從 Google Play Games 撈到玩家資料即中斷教學跑登入流程，整套將玩家輸入壓到最低，非常漂亮。</p>
 <h3 id="sign-in-with-apple">Sign-in with Apple</h3>
-<p>Apple 的規定是如果有其他第三方登入就要實做 Sign-in with Apple（自己實做的 E-mail 登入不算第三方），關於審查細節已經在之前的 <a href="posts/unity-sign-in-with-apple/">文章</a> 寫過了，這邊就不再重複。</p>
+<p>Apple 的規定是如果有其他第三方登入就要實做 Sign-in with Apple（自己實做的 E-mail 登入不算第三方），關於審查細節已經在之前的 <a href="/posts/unity-sign-in-with-apple/">文章</a> 寫過了，這邊就不再重複。</p>
 <p>先前是用 <a href="https://github.com/lupidan/apple-signin-unity">lupidan/apple-signin-unity</a> 實作的，現在 Unity 也有自己的 <a href="https://docs.unity.com/authentication/en-us/manual/platform-signin-apple">Unity Authentication 實作</a>。要注意如果實作完每次登入都彈出 Sign-in with Apple 登入視窗，那實作是錯的，雖然審查通常不會被退。正確的流程是要先檢查登入狀態，如果是 Authorized 要走 Quick Login 避免再次彈出 Sign-in with Apple 登入視窗。</p>
 <h2 id="最佳化">最佳化</h2>
 <p>遊戲最佳化是個大哉問，可能超過這篇文章該有的篇幅。之前有寫過一些關於最佳化的文章，現在算是過時了就不在這裡連結。覺得如果公司能接受，建議訂閱引入 <a href="https://www.uwa4d.com/">UWA</a> 的服務。他們提供持續性的效能測試與報告，對不管是否要持續營運的遊戲都很有幫助，理想上自動建置要加入一個有 UWA SDK 的分支定期與 UWA 檢討效能。</p>
@@ -383,25 +398,25 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 
 
 日文使用者會對字體誤用特別敏感，這是 <a href="https://www.itmedia.co.jp/news/articles/2305/11/news178.html">Google IO 2023 介紹 Bard 時發生的誤用</a></p>
-<figure class="center"><img src="/images/gatcha-game-notes/noto_sans_cjk_jp_8a9e.png"/><figcaption>
-            <h4>`NotoSansCJKjp` 預設的「語」 Glyph 注意上面言部是 橫 的</h4>
-        </figcaption>
+<figure class="center"><img src="/images/gatcha-game-notes/noto_sans_cjk_jp_8a9e.png"><figcaption>
+      <h4>`NotoSansCJKjp` 預設的「語」 Glyph 注意上面言部是 橫 的</h4>
+    </figcaption>
 </figure>
 
-<figure class="center"><img src="/images/gatcha-game-notes/noto_sans_cjk_tc_8a9e.png"/><figcaption>
-            <h4>`NotoSansCJKtc` 預設的「語」 Glyph 注意上面言部是 豎 的</h4>
-        </figcaption>
+<figure class="center"><img src="/images/gatcha-game-notes/noto_sans_cjk_tc_8a9e.png"><figcaption>
+      <h4>`NotoSansCJKtc` 預設的「語」 Glyph 注意上面言部是 豎 的</h4>
+    </figcaption>
 </figure>
 
-<figure class="center"><img src="/images/gatcha-game-notes/noto_sans_tc_8a9e.png"/><figcaption>
-            <h4>`NotoSansTC` 言部是豎的，但不包含橫的 Glyph</h4>
-        </figcaption>
+<figure class="center"><img src="/images/gatcha-game-notes/noto_sans_tc_8a9e.png"><figcaption>
+      <h4>`NotoSansTC` 言部是豎的，但不包含橫的 Glyph</h4>
+    </figcaption>
 </figure>
 
 <p>可以看到 <a href="https://fonts.google.com/noto/specimen/Noto+Sans+TC"><code>NotoSansTC</code></a> 不包含其他 CJK 的 Glyph，<a href="https://github.com/notofonts/noto-cjk/blob/main/Sans/Mono/NotoSansMonoCJKjp-Bold.otf"><code>NotoSansCJKjp</code></a> 跟 <a href="https://github.com/notofonts/noto-cjk/blob/main/Sans/Mono/NotoSansMonoCJKtc-Bold.otf"><code>NotoSansCJKtc</code></a> Glyph 量相同但是預設不同。</p>
-<figure class="center"><img src="/images/gatcha-game-notes/tmp_cjk.png"/><figcaption>
-            <h4>使用同一個 .ttf (OTC) 創造兩個 Font Face 不同的 TMP_Font Asset</h4>
-        </figcaption>
+<figure class="center"><img src="/images/gatcha-game-notes/tmp_cjk.png"><figcaption>
+      <h4>使用同一個 .ttf (OTC) 創造兩個 Font Face 不同的 TMP_Font Asset</h4>
+    </figcaption>
 </figure>
 
 <p>TextMesh Pro <code>3.2.0-pre.4</code> 之後對 <code>.ttf (OTC)</code> TMP_Font Asset 可以選擇 Font Face，用一套字體創造多個 Font Asset 應對不同語系該有的顯示。</p>
@@ -425,7 +440,7 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">NumberFormatInfo</span> <span class="n">format</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CultureInfo</span><span class="p">(</span> <span class="s">&#34;fr-FR&#34;</span><span class="p">,</span> <span class="k">false</span> <span class="p">).</span><span class="n">NumberFormat</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">NumberFormatInfo</span> <span class="n">format</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CultureInfo</span><span class="p">(</span> <span class="s">&#34;fr-FR&#34;</span><span class="p">,</span> <span class="kc">false</span> <span class="p">).</span><span class="n">NumberFormat</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">float</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&#34;3.14&#34;</span><span class="p">,</span> <span class="n">format</span><span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
@@ -442,7 +457,7 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 </span></span><span class="line"><span class="cl">   at System.Single.Parse(String s, IFormatProvider provider)
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>或是可以看神魔之塔的 <a href="https://forum.gamer.com.tw/C.php?bsn=23805&amp;snA=682461">案例</a>。</p>
+</div><p>或是可以看神魔之塔的 <a href="https://forum.gamer.com.tw/C.php?bsn=23805&snA=682461">案例</a>。</p>
 <p>可以設定 AppDomain 或是 Thread 的 <code>Culture</code> 或是 <code>NumberDecimalSeparator</code> 來繞過：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -526,7 +541,7 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">enum</span> <span class="n">UIType</span><span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">enum</span> <span class="n">UIType</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">CONFIG</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="p">...</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -593,9 +608,9 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 <h4 id="cjk-glyph-顯示">CJK Glyph 顯示</h4>
 <p>上面已經提過了日文使用者對於誤用字體會很反感，同時他們也對斷字、換行之類的要求偏高。如果有日文 Localization 的需求，建議還是找專業的人士校對。</p>
 <p>另外常見被抱怨的是日文與簡體中文的標點符號，也是 CJK 的問題。全形逗號 <a href="https://codepoints.net/U+3001">， U+3001 Ideographic Comma</a> 跟全形句號 <a href="https://codepoints.net/U+3002">。 U+3002 Ideographic Full Stop</a> 一樣有上面的 GSUB 問題要小心處理。</p>
-<figure class="center"><img src="/images/gatcha-game-notes/ideographic_full_stop.png"/><figcaption>
-            <h4>全形句號位置的差別</h4>
-        </figcaption>
+<figure class="center"><img src="/images/gatcha-game-notes/ideographic_full_stop.png"><figcaption>
+      <h4>全形句號位置的差別</h4>
+    </figcaption>
 </figure>
 
 <h4 id="旭日旗">旭日旗</h4>
@@ -663,16 +678,16 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="因為審 Sign-in with Apple 被退了三次，所以來記錄一下發生什麼事。 因為四月初公司有遊戲先實裝 Sign-in with Apple 過審，所以我以為 Sign-in with Apple 已經結案了。沒想到這幾天另一支 App 竟然" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="因為審 Sign-in with Apple 被退了三次，所以來記錄一下發生什麼事。
+因為四月初公司有遊戲先實裝 Sign-in with Apple 過審，所以我以為 Sign-in with Apple 已經結案了。沒想到這幾天另一支 App 竟然吃 4.0 - Design 的退審。一開始 Reviewer 就丟一個 Sign-in with Apple Human Interface Guidelines 叫我們自己看，可是我們也看不出個所以然，尤其是之前已經過審了很難推論是哪裡不對。網路上吃這種退審的也都是只收到 Guidelines 沒有任何解釋 (ex. https://github.com/firebase/FirebaseUI-iOS/issues/823)。在無數觀落陰跟鬼打牆，今天終於跟蘋果的人講到話。
+" /><meta name="keywords" content="Unity, Sign in with Apple" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/unity-sign-in-with-apple/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/unity-sign-in-with-apple/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +42,29 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="Unity 和 Sign in with Apple" />
-<meta property="og:description" content="因為審 Sign-in with Apple 被退了三次，所以來記錄一下發生什麼事。 因為四月初公司有遊戲先實裝 Sign-in with Apple 過審，所以我以為 Sign-in with Apple 已經結案了。沒想到這幾天另一支 App 竟然" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/unity-sign-in-with-apple/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-05-08T19:45:00+08:00" />
-<meta property="article:modified_time" content="2020-05-08T19:45:00+08:00" />
-<meta itemprop="name" content="Unity 和 Sign in with Apple">
-<meta itemprop="description" content="因為審 Sign-in with Apple 被退了三次，所以來記錄一下發生什麼事。 因為四月初公司有遊戲先實裝 Sign-in with Apple 過審，所以我以為 Sign-in with Apple 已經結案了。沒想到這幾天另一支 App 竟然"><meta itemprop="datePublished" content="2020-05-08T19:45:00+08:00" />
-<meta itemprop="dateModified" content="2020-05-08T19:45:00+08:00" />
-<meta itemprop="wordCount" content="834">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Unity 和 Sign in with Apple"/>
-<meta name="twitter:description" content="因為審 Sign-in with Apple 被退了三次，所以來記錄一下發生什麼事。 因為四月初公司有遊戲先實裝 Sign-in with Apple 過審，所以我以為 Sign-in with Apple 已經結案了。沒想到這幾天另一支 App 竟然"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/unity-sign-in-with-apple/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="Unity 和 Sign in with Apple">
+  <meta property="og:description" content="因為審 Sign-in with Apple 被退了三次，所以來記錄一下發生什麼事。
+因為四月初公司有遊戲先實裝 Sign-in with Apple 過審，所以我以為 Sign-in with Apple 已經結案了。沒想到這幾天另一支 App 竟然吃 4.0 - Design 的退審。一開始 Reviewer 就丟一個 Sign-in with Apple Human Interface Guidelines 叫我們自己看，可是我們也看不出個所以然，尤其是之前已經過審了很難推論是哪裡不對。網路上吃這種退審的也都是只收到 Guidelines 沒有任何解釋 (ex. https://github.com/firebase/FirebaseUI-iOS/issues/823)。在無數觀落陰跟鬼打牆，今天終於跟蘋果的人講到話。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-05-08T19:45:00+08:00">
+    <meta property="article:modified_time" content="2020-05-08T19:45:00+08:00">
+
+  <meta itemprop="name" content="Unity 和 Sign in with Apple">
+  <meta itemprop="description" content="因為審 Sign-in with Apple 被退了三次，所以來記錄一下發生什麼事。
+因為四月初公司有遊戲先實裝 Sign-in with Apple 過審，所以我以為 Sign-in with Apple 已經結案了。沒想到這幾天另一支 App 竟然吃 4.0 - Design 的退審。一開始 Reviewer 就丟一個 Sign-in with Apple Human Interface Guidelines 叫我們自己看，可是我們也看不出個所以然，尤其是之前已經過審了很難推論是哪裡不對。網路上吃這種退審的也都是只收到 Guidelines 沒有任何解釋 (ex. https://github.com/firebase/FirebaseUI-iOS/issues/823)。在無數觀落陰跟鬼打牆，今天終於跟蘋果的人講到話。">
+  <meta itemprop="datePublished" content="2020-05-08T19:45:00+08:00">
+  <meta itemprop="dateModified" content="2020-05-08T19:45:00+08:00">
+  <meta itemprop="wordCount" content="834">
+  <meta itemprop="keywords" content="Unity,Sign in with Apple">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unity 和 Sign in with Apple">
+  <meta name="twitter:description" content="因為審 Sign-in with Apple 被退了三次，所以來記錄一下發生什麼事。
+因為四月初公司有遊戲先實裝 Sign-in with Apple 過審，所以我以為 Sign-in with Apple 已經結案了。沒想到這幾天另一支 App 竟然吃 4.0 - Design 的退審。一開始 Reviewer 就丟一個 Sign-in with Apple Human Interface Guidelines 叫我們自己看，可是我們也看不出個所以然，尤其是之前已經過審了很難推論是哪裡不對。網路上吃這種退審的也都是只收到 Guidelines 沒有任何解釋 (ex. https://github.com/firebase/FirebaseUI-iOS/issues/823)。在無數觀落陰跟鬼打牆，今天終於跟蘋果的人講到話。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -143,9 +155,9 @@
 <p>最後想到的方法是去抓原生 UI 的截圖來做字圖。先去抓蘋果的 Sign-in with Apple 範例：</p>
 <p><a href="https://developer.apple.com/documentation/authenticationservices/implementing_user_authentication_with_sign_in_with_apple">https://developer.apple.com/documentation/authenticationservices/implementing_user_authentication_with_sign_in_with_apple</a></p>
 <p>改一下 Storyboard 找個好去背的顏色，調一下 Layout 改變 Sign-in with Apple 按鈕到適合大小，然後執行起來在 Simulator 裡面截圖 <code>File / Save Screen</code>。</p>
-<p><img src="/images/unity-sign-in-with-apple/screenshot.png" alt="Sreenshot"></p>
+<p><img alt="Sreenshot" src="/images/unity-sign-in-with-apple/screenshot.png"></p>
 <p>切換語言找了一下，最後發現是在 <code>Project / Info / Localization native development region</code> 這裡修改。</p>
-<p><img src="/images/unity-sign-in-with-apple/development-region.png" alt="Region"></p>
+<p><img alt="Region" src="/images/unity-sign-in-with-apple/development-region.png"></p>
 <p>然後這個 key 雖然叫 <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundledevelopmentregion?language=objc">CFBundleDevelopmentRegion</a> 但是要輸入的是 <a href="https://zh.wikipedia.org/wiki/ISO_639-1">ISO_639-1</a> language code 來改變在 Simulator 裡面的執行語言。</p>
 <p>看是要把字樣騰出來還是截圖來去背，希望這樣這次可以真的過審&hellip;</p>
 
@@ -173,16 +185,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

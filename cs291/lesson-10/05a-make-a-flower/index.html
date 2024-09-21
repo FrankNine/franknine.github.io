@@ -35,21 +35,21 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">var flower = new THREE.Object3D();
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">flower</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">for ( var i = 0; i &lt; 24 ; i++ )
-</span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">    var cylinder = new THREE.Mesh( cylGeom, petalMaterial );
-</span></span><span class="line"><span class="cl">    cylinder.position.y = petalLength / 2;
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span> <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">24</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">cylGeom</span><span class="p">,</span> <span class="n">petalMaterial</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">petalLength</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    var petal = new THREE.Object3D();
-</span></span><span class="line"><span class="cl">    petal.add( cylinder );
-</span></span><span class="line"><span class="cl">    petal.rotation.z = 90 * Math.PI/180;
-</span></span><span class="line"><span class="cl">    petal.rotation.y = 15*i * Math.PI/180;
-</span></span><span class="line"><span class="cl">    petal.position.y = flowerHeight;
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">petal</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">90</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">15</span><span class="o">*</span><span class="n">i</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">flowerHeight</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    flower.add( petal );
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">    <span class="n">flower</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">petal</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>

@@ -2,495 +2,388 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lesson 01 簡介 on Northern Wind</title>
-    <link>https://franknine.github.io/cs291/lesson-01/</link>
+    <link>https://www.chunfuchao.com/cs291/lesson-01/</link>
     <description>Recent content in Lesson 01 簡介 on Northern Wind</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-01/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <atom:link href="https://www.chunfuchao.com/cs291/lesson-01/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>00 3D 互動式圖學課程概覽</title>
-      <link>https://franknine.github.io/cs291/lesson-01/00-interactive-3d-graphics-course-overview/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/00-interactive-3d-graphics-course-overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/00-interactive-3d-graphics-course-overview/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/00-interactive-3d-graphics-course-overview/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Vl0hmKg1pVw?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/00 Interactive 3D Graphics Course Overview-Vl0hmKg1pVw.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>01 介紹</title>
-      <link>https://franknine.github.io/cs291/lesson-01/01-introduction/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/01-introduction/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/01-introduction/</guid>
-      <description>第一個展示 - three.js WebGL materials demo，貼圖來自 Humus 第二個展示 - three.js WebGL materials bumpmap skin demo 模型來源 Lee Perry-Smith head 如果無法看見展示，請參照 WebGL Troubleshooting page。還是有問題？之後我們會談 WebGL</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/01-introduction/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/8fe9RaEEGQU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/01 Introduction - Interactive 3D Graphics-8fe9RaEEGQU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;第一個展示 - &lt;a href=&#34;http://threejs.org/examples/#webgl_materials_shaders_fresnel&#34;&gt;three.js WebGL materials demo&lt;/a&gt;，貼圖來自 &lt;a href=&#34;http://www.humus.name/index.php?page=Textures&#34;&gt;Humus&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;第二個展示 - &lt;a href=&#34;https://threejs.org/examples/#webgl_materials_bumpmap&#34;&gt;three.js WebGL materials bumpmap skin demo&lt;/a&gt; 模型來源 &lt;a href=&#34;http://graphics.cs.williams.edu/data/meshes.xml#14&#34;&gt;Lee Perry-Smith head&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;如果無法看見展示，請參照 &lt;a href=&#34;https://www.udacity.com/wiki/cs291/enabling-webgl&#34;&gt;WebGL Troubleshooting page&lt;/a&gt;。還是有問題？之後我們會談 WebGL 的設定&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>02 互動式 3D 繪圖</title>
-      <link>https://franknine.github.io/cs291/lesson-01/02-interactive-3d-rendering/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/02-interactive-3d-rendering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/02-interactive-3d-rendering/</guid>
-      <description>本課程使用的圖像皆來自 Wikimedia Commons，除非另外註明。建築、XYZ 座標、互動式白板。 你可以自己嘗試 電腦斷層程式。Chrome 是最適合的瀏覽器</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/02-interactive-3d-rendering/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Q_tliEgAOn0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/02 Interactive 3D Rendering - Interactive 3D Graphics-Q_tliEgAOn0.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;本課程使用的圖像皆來自 &lt;a href=&#34;http://commons.wikimedia.org/wiki/Main_Page&#34;&gt;Wikimedia Commons&lt;/a&gt;，除非另外註明。&lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Boston_building_historic_drawing.jpg&#34;&gt;建築&lt;/a&gt;、&lt;a href=&#34;http://commons.wikimedia.org/wiki/File:3D_coordinate_system.svg&#34;&gt;XYZ 座標&lt;/a&gt;、&lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Interactive_whiteboard1.jpg&#34;&gt;互動式白板&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;你可以自己嘗試 &lt;a href=&#34;https://gallantlab.org/brainviewer/huthetal2012/&#34;&gt;電腦斷層程式&lt;/a&gt;。Chrome 是最適合的瀏覽器。如果不能動沒有關係，下一堂課會協助你處理 WebGL 問題。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>03 第一堂小考</title>
-      <link>https://franknine.github.io/cs291/lesson-01/03-first-quiz/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/03-first-quiz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/03-first-quiz/</guid>
-      <description>Angry Birds 使用 2.5D 繪圖</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/03-first-quiz/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/btYMDCoFjUU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/03 First Quiz - Interactive 3D Graphics-btYMDCoFjUU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;Angry Birds 使用 &lt;a href=&#34;http://en.wikipedia.org/wiki/2.5D&#34;&gt;2.5D 繪圖&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>03A 第一堂小考（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/03a-first-quiz/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/03a-first-quiz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/03a-first-quiz/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/03a-first-quiz/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/I_nMFLbYGFg?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/03A First Quiz - Interactive 3D Graphics-I_nMFLbYGFg.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>04 WebGL 設定</title>
-      <link>https://franknine.github.io/cs291/lesson-01/04-webgl-setup/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/04-webgl-setup/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/04-webgl-setup/</guid>
-      <description>你可以用 這個網站 測試自己的機器。如果沒有顯示旋轉的立方體，請到 我們的說明頁 或是 這裡 看 “Implementations” 項目。使用 Safari 請參考 這些</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/04-webgl-setup/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/hZrb2fWguaM?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/04 WebGL Setup - Interactive 3D Graphics-hZrb2fWguaM.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;你可以用 &lt;a href=&#34;http://get.webgl.org/&#34;&gt;這個網站&lt;/a&gt; 測試自己的機器。如果沒有顯示旋轉的立方體，請到 &lt;a href=&#34;https://www.udacity.com/wiki/CS291/Enabling_WebGL&#34;&gt;我們的說明頁&lt;/a&gt; 或是 &lt;a href=&#34;http://www.khronos.org/webgl/wiki/Main_Page&#34;&gt;這裡&lt;/a&gt; 看 “Implementations” 項目。使用 Safari 請參考 &lt;a href=&#34;http://www.khronos.org/webgl/wiki/Implementations/WebKit&#34;&gt;這些指示&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>05 核心概念</title>
-      <link>https://franknine.github.io/cs291/lesson-01/05-core-ideas/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/05-core-ideas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/05-core-ideas/</guid>
-      <description>請參考 這些小提示 以獲得最佳學習效果。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/05-core-ideas/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/AFG5QaqRiV8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/05 Core Ideas - Interactive 3D Graphics-AFG5QaqRiV8.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;請參考 &lt;a href=&#34;https://www.udacity.com/wiki/cs291#five-great-tips&#34;&gt;這些小提示&lt;/a&gt; 以獲得最佳學習效果。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>06 互動性與 FPS</title>
-      <link>https://franknine.github.io/cs291/lesson-01/06-interactivity-and-fps/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/06-interactivity-and-fps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/06-interactivity-and-fps/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/06-interactivity-and-fps/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/NV9MgI0u5Us?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/06 Interactivity and FPS - Interactive 3D Graphics-NV9MgI0u5Us.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>07 FPS 展示</title>
-      <link>https://franknine.github.io/cs291/lesson-01/07-fps-demo/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/07-fps-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/07-fps-demo/</guid>
-      <description>試試這個互動式展示！ 如果不能運作請到課程維基尋找除錯資料。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/07-fps-demo/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/uclass_TeapotGeometry.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/dat.gui.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit1-fps.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&#xA;&lt;p&gt;試試這個互動式展示！&lt;/p&gt;&#xA;&lt;p&gt;如果不能運作請到課程維基尋找除錯資料。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>08 FPS 與畫面更新率</title>
-      <link>https://franknine.github.io/cs291/lesson-01/08-fps-and-refresh-rate/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/08-fps-and-refresh-rate/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/08-fps-and-refresh-rate/</guid>
-      <description>維基動態模糊頁面 有基本的介紹。 你可以在 這個展示 看到動態模糊修正，使用 &amp;ldquo;b&amp;rdquo; 開關動態模糊，動態模糊開啟時地面應該會在移動時更加模糊。 有些應用程式會</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/08-fps-and-refresh-rate/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/l7dTb7EZADE?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/08 FPS and Refresh Rate - Interactive 3D Graphics-l7dTb7EZADE.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Motion_blur&#34;&gt;維基動態模糊頁面&lt;/a&gt; 有基本的介紹。 你可以在 &lt;a href=&#34;http://threejs.org/examples/#webgl_materials_cubemap_dynamic&#34;&gt;這個展示&lt;/a&gt; 看到動態模糊修正，使用 &amp;ldquo;b&amp;rdquo; 開關動態模糊，動態模糊開啟時地面應該會在移動時更加模糊。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>09 數學問題</title>
-      <link>https://franknine.github.io/cs291/lesson-01/09-math-refresher/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/09-math-refresher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/09-math-refresher/</guid>
-      <description>我們簡化了問題。50 赫茲實際上是歐洲電視的隔行掃描頻率，真正的影格率其實是 25 赫茲。參考 這裡 以獲得更多電視系統的資訊。電腦沒有隔行掃描的機制，</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/09-math-refresher/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/_iBUpgW4mFQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/09 Math Refresher - Interactive 3D Graphics-_iBUpgW4mFQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;我們簡化了問題。50 赫茲實際上是歐洲電視的隔行掃描頻率，真正的影格率其實是 25 赫茲。參考 &lt;a href=&#34;http://en.wikipedia.org/wiki/PAL&#34;&gt;這裡&lt;/a&gt; 以獲得更多電視系統的資訊。電腦沒有隔行掃描的機制，所以沒有掃描頻率跟影格率不同的情形。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>09A 數學問題（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/09a-math-refresher/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/09a-math-refresher/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/09a-math-refresher/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/09a-math-refresher/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/HwFBFnwkh08?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/09A Math Refresher - Interactive 3D Graphics-HwFBFnwkh08.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>10 CPU 週期</title>
-      <link>https://franknine.github.io/cs291/lesson-01/10-cpu-cycles/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/10-cpu-cycles/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/10-cpu-cycles/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/10-cpu-cycles/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/V9jBzmrI9ow?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/10 CPU Cycles - Interactive 3D Graphics-V9jBzmrI9ow.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>11 眼睛</title>
-      <link>https://franknine.github.io/cs291/lesson-01/11-the-eye/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/11-the-eye/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/11-the-eye/</guid>
-      <description>參考 維基介紹眼睛的頁面 以了解眼睛的神奇之處。 《Incognito》 是一本介紹大腦的好書。這本書的第一節講到大腦如何解讀眼睛所見的事物。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/11-the-eye/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/LSfZDaELuqk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/11 The Eye - Interactive 3D Graphics-LSfZDaELuqk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;參考 &lt;a href=&#34;http://en.wikipedia.org/wiki/Eye&#34;&gt;維基介紹眼睛的頁面&lt;/a&gt; 以了解眼睛的神奇之處。&lt;/p&gt;&#xA;&lt;p&gt;《&lt;a href=&#34;http://www.amazon.com/Incognito-Secret-Lives-David-Eagleman/dp/0307389928?tag=realtimerenderin&#34;&gt;Incognito&lt;/a&gt;》 是一本介紹大腦的好書。這本書的第一節講到大腦如何解讀眼睛所見的事物。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>12 針孔攝影機</title>
-      <link>https://franknine.github.io/cs291/lesson-01/12-the-pinhole-camera/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/12-the-pinhole-camera/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/12-the-pinhole-camera/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/12-the-pinhole-camera/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/_TYwlDsdNcY?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/12 The Pinhole Camera - Interactive 3D Graphics-_TYwlDsdNcY.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>13 眼見為憑</title>
-      <link>https://franknine.github.io/cs291/lesson-01/13-seeing-is-believing/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/13-seeing-is-believing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/13-seeing-is-believing/</guid>
-      <description>你可以在 http://persci.mit.edu/gallery/checkershadow 找到原始圖片，還有原理解釋。 這裡有這個錯覺得影片版本 http://www.youtube.com/watch?v=z9Sen1HT</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/13-seeing-is-believing/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/uMi70i-VU9w?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/13 Seeing Is Believing - Interactive 3D Graphics-uMi70i-VU9w.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;你可以在 &lt;a href=&#34;http://persci.mit.edu/gallery/checkershadow&#34;&gt;http://persci.mit.edu/gallery/checkershadow&lt;/a&gt; 找到原始圖片，還有原理解釋。&lt;/p&gt;&#xA;&lt;p&gt;這裡有這個錯覺得影片版本 &lt;a href=&#34;http://www.youtube.com/watch?v=z9Sen1HTu5o&#34;&gt;http://www.youtube.com/watch?v=z9Sen1HTu5o&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;我喜歡視覺錯覺，我的蒐集了 Michael Bach 的收藏 &lt;a href=&#34;http://www.michaelbach.de/ot/&#34;&gt;http://www.michaelbach.de/ot/&lt;/a&gt;，Kitaoka 的作品 &lt;a href=&#34;http://www.ritsumei.ac.jp/~akitaoka/saishin-e.html&#34;&gt;http://www.ritsumei.ac.jp/~akitaoka/saishin-e.html&lt;/a&gt;，還有這些桌布 &lt;a href=&#34;http://www.flickr.com/photos/w00kie/sets/180637/show/&#34;&gt;http://www.flickr.com/photos/w00kie/sets/180637/show/&lt;/a&gt;。還可以閱讀 “Mighty Optical Illusions” 部落格 &lt;a href=&#34;http://www.moillusions.com/&#34;&gt;http://www.moillusions.com/&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>13A 眼見為憑（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/13a-seeing-is-believing/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/13a-seeing-is-believing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/13a-seeing-is-believing/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/13a-seeing-is-believing/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/RoHZW3rMqhE?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/13A Seeing Is Believing - Interactive 3D Graphics-RoHZW3rMqhE.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>14 眼 vs. 攝影機</title>
-      <link>https://franknine.github.io/cs291/lesson-01/14-eye-vs.-camera/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/14-eye-vs.-camera/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/14-eye-vs.-camera/</guid>
-      <description>這個問題請比較人類的視覺系統（眼和腦一起）與相機的鏡片系統。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/14-eye-vs.-camera/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/y8_p_fNubEY?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/14 Eye vs. Camera - Interactive 3D Graphics-y8_p_fNubEY.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;這個問題請比較人類的視覺系統（眼和腦一起）與相機的鏡片系統。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>14A 眼 vs. 攝影機（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/14a-eye-vs.-camera/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/14a-eye-vs.-camera/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/14a-eye-vs.-camera/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/14a-eye-vs.-camera/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/yu7zoGoccFM?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/14A Eye vs. Camera - Interactive 3D Graphics-yu7zoGoccFM.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>15 視錐</title>
-      <link>https://franknine.github.io/cs291/lesson-01/15-view-frustum/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/15-view-frustum/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/15-view-frustum/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/15-view-frustum/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/GqEP79loyQE?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/15 View Frustum - Interactive 3D Graphics-GqEP79loyQE.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>16 紗門</title>
-      <link>https://franknine.github.io/cs291/lesson-01/16-screen-door/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/16-screen-door/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/16-screen-door/</guid>
-      <description>圖片來自 Wikimedia Commons。 參考 我的文章 以獲得關於 “frustum” 拼法的資訊。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/16-screen-door/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/f7C4ZaS5eR0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/16 Screen Door - Interactive 3D Graphics-f7C4ZaS5eR0.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;圖片來自 &lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Rosa_Red_Chateau01.jpg&#34;&gt;Wikimedia Commons&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;參考 &lt;a href=&#34;http://www.realtimerendering.com/blog/do-you-spell-these-two-words-correctly/&#34;&gt;我的文章&lt;/a&gt; 以獲得關於 “frustum” 拼法的資訊。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>17 3D 場景</title>
-      <link>https://franknine.github.io/cs291/lesson-01/17-3d-scene/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/17-3d-scene/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/17-3d-scene/</guid>
-      <description>你可以在 這裡 找到影片中的展示，讓它載入再按開始。 Three.js 物件系統介紹請參考 這裡。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/17-3d-scene/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/BXYpQ71ZEl4?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/17 3D Scene - Interactive 3D Graphics-BXYpQ71ZEl4.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;你可以在 &lt;a href=&#34;http://threejs.org/examples/#webgl_loader_scene&#34;&gt;這裡&lt;/a&gt; 找到影片中的展示，讓它載入再按開始。&lt;/p&gt;&#xA;&lt;p&gt;Three.js 物件系統介紹請參考 &lt;a href=&#34;http://ushiroad.com/3j/&#34;&gt;這裡&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>18 多少像素？</title>
-      <link>https://franknine.github.io/cs291/lesson-01/18-how-many-pixels/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/18-how-many-pixels/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/18-how-many-pixels/</guid>
-      <description>答案要的是每秒多少像素，回答的時候請不要加上逗號或是小數點。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/18-how-many-pixels/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/I7NnvgM4hpk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/18 How Many Pixels - Interactive 3D Graphics-I7NnvgM4hpk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;答案要的是每秒多少像素，回答的時候請不要加上逗號或是小數點。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>18A 多少像素？（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/18a-how-many-pixels/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/18a-how-many-pixels/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/18a-how-many-pixels/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/18a-how-many-pixels/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/wZbbRpNcY-Q?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/18A How Many Pixels - Interactive 3D Graphics-wZbbRpNcY-Q.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>19 光與繪圖</title>
-      <link>https://franknine.github.io/cs291/lesson-01/19-light-and-rendering/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/19-light-and-rendering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/19-light-and-rendering/</guid>
-      <description>光子數量的估算</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/19-light-and-rendering/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/VMQTgOp5IAA?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/19 Light and Rendering - Interactive 3D Graphics-VMQTgOp5IAA.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://boards.straightdope.com/sdmb/showthread.php?t=336101&#34;&gt;光子數量的估算&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>20 多少電腦？</title>
-      <link>https://franknine.github.io/cs291/lesson-01/20-how-many-computers/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/20-how-many-computers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/20-how-many-computers/</guid>
-      <description>我要向那些懂科技的阿罵致歉。我是想到我小孩的阿罵的電腦，它慢到可怕。 總之不只你的阿罵的電腦不能即時運算，你的電腦也不行。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/20-how-many-computers/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/jpbLxR-BMz8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/20 How Many Computers - Interactive 3D Graphics-jpbLxR-BMz8.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;我要向那些懂科技的阿罵致歉。我是想到我小孩的阿罵的電腦，它慢到可怕。&lt;/p&gt;&#xA;&lt;p&gt;總之不只你的阿罵的電腦不能即時運算，你的電腦也不行。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>20A 多少電腦？（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/20a-how-many-computers/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/20a-how-many-computers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/20a-how-many-computers/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/20a-how-many-computers/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Sg-F52RCC8c?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/20A How Many Computers - Interactive 3D Graphics-Sg-F52RCC8c.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>21 反轉流程</title>
-      <link>https://franknine.github.io/cs291/lesson-01/21-reversing-the-process/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/21-reversing-the-process/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/21-reversing-the-process/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/21-reversing-the-process/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/jCImXmI5QGM?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/21 Reversing the Process - Interactive 3D Graphics-jCImXmI5QGM.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>22 茶壺的歷史</title>
-      <link>https://franknine.github.io/cs291/lesson-01/22-history-of-the-teapot/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/22-history-of-the-teapot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/22-history-of-the-teapot/</guid>
-      <description>我在 2015 年 8/11 向 Jim Blinnthat 確認了茶壺變扁是因為比較好看。這裡 有 Blinn 與 3D 列印的茶壺的合照，攝於 SIGGRAPH 2015。 關於茶壺的歷史有很多文章 Frank Crow、S.J. Ba</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/22-history-of-the-teapot/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/DxMfblPzFNc?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/22 History of the Teapot - Interactive 3D Graphics-DxMfblPzFNc.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;我在 2015 年 8/11 向 Jim Blinnthat 確認了茶壺變扁是因為比較好看。&lt;a href=&#34;https://www.flickr.com/photos/11998354@N07/20424362159/in/album-72157654978049134/&#34;&gt;這裡&lt;/a&gt; 有 Blinn 與 3D 列印的茶壺的合照，攝於 SIGGRAPH 2015。&lt;/p&gt;&#xA;&lt;p&gt;關於茶壺的歷史有很多文章 &lt;a href=&#34;http://www.computer.org/csdl/mags/cg/1987/01/mcg1987010008.pdf&#34;&gt;Frank Crow&lt;/a&gt;、&lt;a href=&#34;http://www.sjbaker.org/wiki/index.php?title=The_History_of_The_Teapot&#34;&gt;S.J. Baker&lt;/a&gt;、還有 &lt;a href=&#34;http://en.wikipedia.org/wiki/Utah_teapot&#34;&gt;Wikipedia&lt;/a&gt;。有許多 &lt;a href=&#34;https://web.archive.org/web/20170703010029/http://excelsior.biosci.ohio-state.edu/~carlson/history/lesson20.html&#34;&gt;電腦圖學象徵性的模型與圖片&lt;/a&gt;。一些知名的模型可以在 &lt;a href=&#34;http://casual-effects.com/data/&#34;&gt;這裡&lt;/a&gt; 跟 &lt;a href=&#34;http://graphics.stanford.edu/data/3Dscanrep/&#34;&gt;這裡&lt;/a&gt; 找到。我寫的茶壺程式 &lt;a href=&#34;http://www.realtimerendering.com/resources/SPD/&#34;&gt;可以下載&lt;/a&gt;。皮克斯茶壺有自己的 &lt;a href=&#34;https://www.facebook.com/pages/Pixars-RenderMan-Walking-Teapot-Official-Fan-Club/114826081870108&#34;&gt;粉絲社團&lt;/a&gt; 跟 &lt;a href=&#34;https://web.archive.org/web/20150122170015/https://renderman.pixar.com/view/teapots-around-the-world&#34;&gt;環遊世界照片&lt;/a&gt;。我拍攝了 &lt;a href=&#34;https://plus.google.com/u/0/photos/101252446341510025731/albums/6054142152202550321&#34;&gt;完整的收藏&lt;/a&gt;。&lt;a href=&#34;https://www.youtube.com/watch?v=iQaU9UP6dlg&#34;&gt;皮克斯還做了短片&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>23 簡單材質</title>
-      <link>https://franknine.github.io/cs291/lesson-01/23-simple-materials/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/23-simple-materials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/23-simple-materials/</guid>
-      <description>來自 Wikimedia Commons 的照片：拋光的金屬球體、玻璃球 與 燈泡。 試試這個球體的 展示。仔細看有些球體會對光源位置改變有反應。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/23-simple-materials/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/2QSuK4D8OGQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/23 Simple Materials - Interactive 3D Graphics-2QSuK4D8OGQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;來自 Wikimedia Commons 的照片：&lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Ball3_1_2.jpg&#34;&gt;拋光的金屬球體&lt;/a&gt;、&lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Caustics.jpg&#34;&gt;玻璃球&lt;/a&gt; 與 &lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Incandescent_light_bulb_on_db.jpg&#34;&gt;燈泡&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;試試這個球體的 &lt;a href=&#34;https://threejs.org/examples/webgl_materials.html&#34;&gt;展示&lt;/a&gt;。仔細看有些球體會對光源位置改變有反應。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>23A 簡單材質（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/23a-simple-materials/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/23a-simple-materials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/23a-simple-materials/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/23a-simple-materials/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/nD3JX5Us1H4?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/23A Simple Materials - Interactive 3D Graphics-nD3JX5Us1H4.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>24 通過管線</title>
-      <link>https://franknine.github.io/cs291/lesson-01/24-a-jog-down-the-pipeline/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/24-a-jog-down-the-pipeline/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/24-a-jog-down-the-pipeline/</guid>
-      <description>我參與的書有詳細介紹管線，這章網路上可以試讀。 更詳盡的介紹請參考 這些文章。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/24-a-jog-down-the-pipeline/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/kNrJTjKoYx4?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/24 A Jog Down the Pipeline - Interactive 3D Graphics-kNrJTjKoYx4.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;我參與的書有詳細介紹管線，&lt;a href=&#34;https://play.google.com/books/reader?id=g_PRBQAAQBAJ&amp;printsec=frontcover&amp;pg=GBS.PA11&#34;&gt;這章網路上可以試讀&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;p&gt;更詳盡的介紹請參考 &lt;a href=&#34;http://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/&#34;&gt;這些文章&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>25 管線平行化</title>
-      <link>https://franknine.github.io/cs291/lesson-01/25-pipeline-parallelism/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/25-pipeline-parallelism/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/25-pipeline-parallelism/</guid>
-      <description>要注意我描述的是筆電桌電用的 GPU，行動裝置通常使用另外的 Tile-based 硬體結構。 Tile-based 演算法介紹 好消息是 WebGL 能驅動不同的硬體架構。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/25-pipeline-parallelism/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/NYqwPk-FaV0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/25 Pipeline Parallelism - Interactive 3D Graphics-NYqwPk-FaV0.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;要注意我描述的是筆電桌電用的 GPU，行動裝置通常使用另外的 Tile-based 硬體結構。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://web.archive.org/web/20171221201431/www.onepc.net/reviews/0026/page2.shtml&#34;&gt;Tile-based 演算法介紹&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;好消息是 WebGL 能驅動不同的硬體架構。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>26 進階紙箱工廠</title>
-      <link>https://franknine.github.io/cs291/lesson-01/26-advanced-box-factory/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/26-advanced-box-factory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/26-advanced-box-factory/</guid>
-      <description>我應該將「生產線每幾秒能產出一個新箱子？」改成「當生產線滿載時每幾秒能產出一個新箱子？」，抱歉造成混淆。這是一個真正的管線。每五秒第一個切割</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/26-advanced-box-factory/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/vjr-HsxiYvw?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/26 Advanced Box Factory - Interactive 3D Graphics-vjr-HsxiYvw.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;我應該將「生產線每幾秒能產出一個新箱子？」改成「當生產線滿載時每幾秒能產出一個新箱子？」，抱歉造成混淆。這是一個真正的管線。每五秒第一個切割的人會將紙箱遞給下一個切割的人，下一個切割的人五秒後將箱子交給第一個摺疊的人，同時第一個切割的人已經開始切新的箱子。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>26A 進階紙箱工廠（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/26a-advanced-box-factory/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/26a-advanced-box-factory/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/26a-advanced-box-factory/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/26a-advanced-box-factory/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/ahpmUGfI_QI?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/26A Advanced Box Factory - Interactive 3D Graphics-ahpmUGfI_QI.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>27 平行化</title>
-      <link>https://franknine.github.io/cs291/lesson-01/27-parallelism/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/27-parallelism/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/27-parallelism/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/27-parallelism/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/I5yMD8RcNMI?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/27 Parallelism - Interactive 3D Graphics-I5yMD8RcNMI.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>28 瓶頸</title>
-      <link>https://franknine.github.io/cs291/lesson-01/28-bottleneck/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/28-bottleneck/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/28-bottleneck/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/28-bottleneck/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/pOwwhg6vpms?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/28 Bottleneck - Interactive 3D Graphics-pOwwhg6vpms.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>28A 瓶頸（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/28a-bottleneck/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/28a-bottleneck/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/28a-bottleneck/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/28a-bottleneck/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/av5qMTHGUFs?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/28A Bottleneck - Interactive 3D Graphics-av5qMTHGUFs.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>29 停頓與飢餓</title>
-      <link>https://franknine.github.io/cs291/lesson-01/29-stalling-and-starving/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/29-stalling-and-starving/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/29-stalling-and-starving/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/29-stalling-and-starving/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/dBD86IV2Tws?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/29 Stalling and Starving - Interactive 3D Graphics-dBD86IV2Tws.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>30 畫家演算法</title>
-      <link>https://franknine.github.io/cs291/lesson-01/30-painters-algorithm/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/30-painters-algorithm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/30-painters-algorithm/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/30-painters-algorithm/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/oMgOR3PxmDU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/30 Painter\u0027s Algorithm - Interactive 3D Graphics-oMgOR3PxmDU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>31 有缺陷的畫家演算法</title>
-      <link>https://franknine.github.io/cs291/lesson-01/31-flawed-painting/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/31-flawed-painting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/31-flawed-painting/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/31-flawed-painting/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/1j3Bvz4tEmk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/31 Flawed Painting - Interactive 3D Graphics-1j3Bvz4tEmk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>31A 有缺陷的畫家演算法（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/31a-flawed-painting/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/31a-flawed-painting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/31a-flawed-painting/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/31a-flawed-painting/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/TkuDcaH0HaQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/31A Flawed Painting - Interactive 3D Graphics-TkuDcaH0HaQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>32 Z 緩衝區</title>
-      <link>https://franknine.github.io/cs291/lesson-01/32-z-buffer/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/32-z-buffer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/32-z-buffer/</guid>
-      <description>我讓 Z 深度在 0.0 到 1.0 區間以簡化描述，這也是 DirectX 的系統。在單元 7 我們會看到 WebGL 實際上是用 -1.0 到 1.0 區間。兩者只是值域不同，概念是相同的。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/32-z-buffer/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/L6U746cO-yQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/32 Z-Buffer - Interactive 3D Graphics-L6U746cO-yQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;我讓 Z 深度在 0.0 到 1.0 區間以簡化描述，這也是 DirectX 的系統。在單元 7 我們會看到 WebGL 實際上是用 -1.0 到 1.0 區間。兩者只是值域不同，概念是相同的。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>33 Z 緩衝區運作原理</title>
-      <link>https://franknine.github.io/cs291/lesson-01/33-how-the-z-buffer-works/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/33-how-the-z-buffer-works/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/33-how-the-z-buffer-works/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/33-how-the-z-buffer-works/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/yhwg_O5HBwQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/33 How the Z-Buffer Works - Interactive 3D Graphics-yhwg_O5HBwQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>34 Z 緩衝區最佳化</title>
-      <link>https://franknine.github.io/cs291/lesson-01/34-z-buffer-optimization/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/34-z-buffer-optimization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/34-z-buffer-optimization/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/34-z-buffer-optimization/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/neNtF8pCaTQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/34 Z-Buffer Optimization - Interactive 3D Graphics-neNtF8pCaTQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>34A Z 緩衝區最佳化（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/34a-z-buffer-optimization/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/34a-z-buffer-optimization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/34a-z-buffer-optimization/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/34a-z-buffer-optimization/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/fGP9HxwnAO0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/34A Z-Buffer Optimization - Interactive 3D Graphics-fGP9HxwnAO0.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>35 WebGL 與 Three.js</title>
-      <link>https://franknine.github.io/cs291/lesson-01/35-webgl-and-three.js/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/35-webgl-and-three.js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/35-webgl-and-three.js/</guid>
-      <description>Three.js 首頁 值得一看。 如果你已經懂圖學只是想學 Three.js，這個互動式投影片 可以快速帶過。 我 訪問過 Three.js 作者 - 我覺得他的背景很有意思。 WebGL 首頁在 這裡</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/35-webgl-and-three.js/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/3fU-TG6BK1s?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/35 WebGL and three.js - Interactive 3D Graphics-3fU-TG6BK1s.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://mrdoob.github.com/three.js/&#34;&gt;Three.js 首頁&lt;/a&gt; 值得一看。 如果你已經懂圖學只是想學 Three.js，&lt;a href=&#34;https://davidlyons.dev/threejs-intro/&#34;&gt;這個互動式投影片&lt;/a&gt; 可以快速帶過。&lt;/p&gt;&#xA;&lt;p&gt;我 &lt;a href=&#34;http://www.realtimerendering.com/blog/interview-with-three-js-creator/&#34;&gt;訪問過 Three.js 作者&lt;/a&gt; - 我覺得他的背景很有意思。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>36 困難問題</title>
-      <link>https://franknine.github.io/cs291/lesson-01/36-tricky-question/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/36-tricky-question/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/36-tricky-question/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/36-tricky-question/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/J9R8IvHlc-8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/36 Tricky Question - Interactive 3D Graphics-J9R8IvHlc-8.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>37 繪圖模式 0</title>
-      <link>https://franknine.github.io/cs291/lesson-01/37-demo-rendering-mode-0/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/37-demo-rendering-mode-0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/37-demo-rendering-mode-0/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/37-demo-rendering-mode-0/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit1-render-mode-0.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>38 繪圖模式 1</title>
-      <link>https://franknine.github.io/cs291/lesson-01/38-demo-rendering-mode-1/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/38-demo-rendering-mode-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/38-demo-rendering-mode-1/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/38-demo-rendering-mode-1/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit1-render-mode-1.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>39 繪圖模式 2</title>
-      <link>https://franknine.github.io/cs291/lesson-01/39-demo-rendering-mode-2/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/39-demo-rendering-mode-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/39-demo-rendering-mode-2/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/39-demo-rendering-mode-2/</guid>
+      <description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit1-render-mode-2.js&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>40 不同的繪圖方式</title>
-      <link>https://franknine.github.io/cs291/lesson-01/40-different-rendering-options/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/40-different-rendering-options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/40-different-rendering-options/</guid>
-      <description>後兩個展示沒有使用 Z 緩衝區，所以發生了什麼事？</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/40-different-rendering-options/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/A0dBZ81OArE?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/40 Different Rendering Options - Interactive 3D Graphics-A0dBZ81OArE.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;後兩個展示沒有使用 Z 緩衝區，所以發生了什麼事？&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>40A 不同的繪圖方式（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-01/40a-different-rendering-options/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/40a-different-rendering-options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/40a-different-rendering-options/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/40a-different-rendering-options/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/VGyU8pZ-Bc4?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/40A Different Rendering Options - Interactive 3D Graphics-VGyU8pZ-Bc4.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>41 結語</title>
-      <link>https://franknine.github.io/cs291/lesson-01/41-conclusion/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-01/41-conclusion/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-01/41-conclusion/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-01/41-conclusion/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/HQRFdkLvr1E?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/41 Conclusion - Interactive 3D Graphics-HQRFdkLvr1E.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -2,99 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lesson 14 問題集 on Northern Wind</title>
-    <link>https://franknine.github.io/cs291/lesson-14/</link>
+    <link>https://www.chunfuchao.com/cs291/lesson-14/</link>
     <description>Recent content in Lesson 14 問題集 on Northern Wind</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-14/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <atom:link href="https://www.chunfuchao.com/cs291/lesson-14/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 全向光</title>
-      <link>https://franknine.github.io/cs291/lesson-14/01-omni-light/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/01-omni-light/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/01-omni-light/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/01-omni-light/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/NA0zhkkXacQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/01 Omni Light - Interactive 3D Graphics-NA0zhkkXacQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>01A 全向光（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-14/01a-omni-light/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/01a-omni-light/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/01a-omni-light/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/01a-omni-light/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Ec86qBgKCTI?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/01A Omni Light - Interactive 3D Graphics-Ec86qBgKCTI.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>02 旋轉式燈控制</title>
-      <link>https://franknine.github.io/cs291/lesson-14/02-swivel-light-control/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/02-swivel-light-control/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/02-swivel-light-control/</guid>
-      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/02-swivel-light-control/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/wRN_PT6wXJI?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/02 Swivel Light Control - Interactive 3D Graphics-wRN_PT6wXJI.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：請移動到 &lt;a href=&#34;https://jsfiddle.net/aaefiikmnnnr/fbqad52c/&#34;&gt;這裡&lt;/a&gt; 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>02A 旋轉式燈控制（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-14/02a-swivel-light-control/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/02a-swivel-light-control/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/02a-swivel-light-control/</guid>
-      <description>解答： 在 render() 呼叫 renderer.render 之前加入： 1 2 light.position.x = Math.cos( effectController.angle * Math.PI/180.0 ); light.position.z = Math.sin( effectController.angle * Math.PI/180.0 );</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/02a-swivel-light-control/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/uEBmi2M-eBw?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/02A Swivel Light Control - Interactive 3D Graphics-uEBmi2M-eBw.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;strong&gt;解答：&lt;/strong&gt; 在 &lt;code&gt;render()&lt;/code&gt; 呼叫 &lt;code&gt;renderer.render&lt;/code&gt; 之前加入：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;light.position.x = Math.cos( effectController.angle * Math.PI/180.0 );&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;light.position.z = Math.sin( effectController.angle * Math.PI/180.0 );&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>03 旋轉傾斜式燈控制</title>
-      <link>https://franknine.github.io/cs291/lesson-14/03-swivel-and-tilt-light-control/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/03-swivel-and-tilt-light-control/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/03-swivel-and-tilt-light-control/</guid>
-      <description>譯註：請移動到 這裡 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。 仰角–方位角圖來自 維基。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/03-swivel-and-tilt-light-control/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Bzz5352_oo8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/03 Swivel and Tilt Light Control - Interactive 3D Graphics-Bzz5352_oo8.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：請移動到 &lt;a href=&#34;https://jsfiddle.net/aaefiikmnnnr/pd2mLj0o/&#34;&gt;這裡&lt;/a&gt; 開始解題，如果沒有畫面請再按一次 Run，因為有時 jQuery 第一次會載入失敗。&lt;/p&gt;&#xA;&lt;p&gt;仰角–方位角圖來自 &lt;a href=&#34;http://en.wikipedia.org/wiki/File:Azimuth-Altitude_schematic.svg&#34;&gt;維基&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>03A 旋轉傾斜式燈控制（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-14/03a-swivel-and-tilt-light-control/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/03a-swivel-and-tilt-light-control/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/03a-swivel-and-tilt-light-control/</guid>
-      <description>解答： 將以下加到 render() renderer.render 之前： 1 2 3 4 5 6 // 仰角 light.position.y = Math.sin( effectController.altitude * Math.PI/180.0 ); // 方位角 var length = Math.sqrt(1 - light.position.y * light.position.y); light.position.x = length * Math.cos( effectController.azimuth * Math.PI/180.0 ); light.position.z = length * Math.sin( effectController.azimuth * Math.PI/180.0 ); 影片中的解答有個 bug var length</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/03a-swivel-and-tilt-light-control/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/DBtFImUZYDA?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/03A Swivel and Tilt Light Control - Interactive 3D Graphics-DBtFImUZYDA.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;strong&gt;解答：&lt;/strong&gt; 將以下加到 &lt;code&gt;render()&lt;/code&gt; &lt;code&gt;renderer.render&lt;/code&gt; 之前：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;仰角&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;light&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;effectController&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;altitude&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;180.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;方位角&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sqrt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;light&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;light&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;light&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;effectController&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;azimuth&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;180.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;light&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;effectController&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;azimuth&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;PI&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;180.0&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;影片中的解答有個 bug &lt;code&gt;var length&lt;/code&gt; 一行少了 &lt;code&gt;Math.sqrt&lt;/code&gt;，這裡的程式才是對的。&lt;em&gt;（感謝 Sven Mika 指正）&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>04 光的屬性</title>
-      <link>https://franknine.github.io/cs291/lesson-14/04-light-characteristics/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/04-light-characteristics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/04-light-characteristics/</guid>
-      <description>Three.js 函式庫的 AmbientLight API 在課程錄製後有了改變。請參考 舊版文件 以作答。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/04-light-characteristics/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/KQGkoKF7JCI?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/04 Light Characteristics - Interactive 3D Graphics-KQGkoKF7JCI.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;Three.js 函式庫的 &lt;code&gt;AmbientLight&lt;/code&gt; API 在課程錄製後有了改變。請參考 &lt;a href=&#34;http://www.realtimerendering.com/three.js-r56/docs/index.html&#34;&gt;舊版文件&lt;/a&gt; 以作答。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>04A 光的屬性（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-14/04a-light-characteristics/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/04a-light-characteristics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/04a-light-characteristics/</guid>
-      <description>這個課程使用的 Three.js 版本，AmbientLight 沒有強度，所以那格沒有勾。其他的答案應該一樣。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/04a-light-characteristics/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/wj0HPXKnHZI?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/04A Light Characteristics - Interactive 3D Graphics-wj0HPXKnHZI.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;這個課程使用的 Three.js 版本，&lt;code&gt;AmbientLight&lt;/code&gt; 沒有強度，所以那格沒有勾。其他的答案應該一樣。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>05 消失的聚光燈</title>
-      <link>https://franknine.github.io/cs291/lesson-14/05-the-disappearing-spotlight/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/05-the-disappearing-spotlight/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/05-the-disappearing-spotlight/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/05-the-disappearing-spotlight/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/kJs5AHruxTk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/05 The Disappearing Spotlight - Interactive 3D Graphics-kJs5AHruxTk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>05A 消失的聚光燈（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-14/05a-the-disappearing-spotlight/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-14/05a-the-disappearing-spotlight/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-14/05a-the-disappearing-spotlight/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-14/05a-the-disappearing-spotlight/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Z6kiRugtnyA?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 14\/05A The Disappearing Spotlight - Interactive 3D Graphics-Z6kiRugtnyA.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
   </channel>
 </rss>

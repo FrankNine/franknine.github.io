@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="https://news.ycombinator.com/item?id=22496724 昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="https://news.ycombinator.com/item?id=22496724
+昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪裡。現在幾乎都沒有在開又大又長的 Feature branch，跟 HackerNews 底下的回應一樣，又回去用像是傳統版本控制的 Trunk based。當初在那邊規劃 branch 現在想起來感覺特別的空虛。
+" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/there-is-no-compensation/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/there-is-no-compensation/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +42,28 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="沒有人會賠你的" />
-<meta property="og:description" content="https://news.ycombinator.com/item?id=22496724 昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/there-is-no-compensation/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-03-08T01:28:00+08:00" />
-<meta property="article:modified_time" content="2020-03-08T01:28:00+08:00" />
-<meta itemprop="name" content="沒有人會賠你的">
-<meta itemprop="description" content="https://news.ycombinator.com/item?id=22496724 昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪"><meta itemprop="datePublished" content="2020-03-08T01:28:00+08:00" />
-<meta itemprop="dateModified" content="2020-03-08T01:28:00+08:00" />
-<meta itemprop="wordCount" content="1634">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="沒有人會賠你的"/>
-<meta name="twitter:description" content="https://news.ycombinator.com/item?id=22496724 昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/there-is-no-compensation/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="沒有人會賠你的">
+  <meta property="og:description" content="https://news.ycombinator.com/item?id=22496724
+昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪裡。現在幾乎都沒有在開又大又長的 Feature branch，跟 HackerNews 底下的回應一樣，又回去用像是傳統版本控制的 Trunk based。當初在那邊規劃 branch 現在想起來感覺特別的空虛。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-03-08T01:28:00+08:00">
+    <meta property="article:modified_time" content="2020-03-08T01:28:00+08:00">
+
+  <meta itemprop="name" content="沒有人會賠你的">
+  <meta itemprop="description" content="https://news.ycombinator.com/item?id=22496724
+昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪裡。現在幾乎都沒有在開又大又長的 Feature branch，跟 HackerNews 底下的回應一樣，又回去用像是傳統版本控制的 Trunk based。當初在那邊規劃 branch 現在想起來感覺特別的空虛。">
+  <meta itemprop="datePublished" content="2020-03-08T01:28:00+08:00">
+  <meta itemprop="dateModified" content="2020-03-08T01:28:00+08:00">
+  <meta itemprop="wordCount" content="1634">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="沒有人會賠你的">
+  <meta name="twitter:description" content="https://news.ycombinator.com/item?id=22496724
+昨天剛好翻 HackerNews 看到 GitFlow 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪裡。現在幾乎都沒有在開又大又長的 Feature branch，跟 HackerNews 底下的回應一樣，又回去用像是傳統版本控制的 Trunk based。當初在那邊規劃 branch 現在想起來感覺特別的空虛。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -130,18 +141,18 @@
     <p><a href="https://news.ycombinator.com/item?id=22496724">https://news.ycombinator.com/item?id=22496724</a></p>
 <p>昨天剛好翻 HackerNews 看到 <a href="https://nvie.com/posts/a-successful-git-branching-model/">GitFlow</a> 竟然也十年了，想當初還在跟同事激烈討論 branch 要怎麼規劃、Hotfix 要放在哪個 branch、給韓國代理商的特別版程式要放在哪裡。現在幾乎都沒有在開又大又長的 Feature branch，跟 HackerNews 底下的回應一樣，又回去用像是傳統版本控制的 Trunk based。當初在那邊規劃 branch 現在想起來感覺特別的空虛。</p>
 <p>也許這個故事教給我們的就是 <a href="https://developers.google.com/tech-writing">Technical Writing</a> 的重要？</p>
-<figure><img src="/images/there-is-no-compensation/trunk-based.png"/><figcaption>
-            <h4>你要無聊的一條線？</h4>
-        </figcaption>
+<figure><img src="/images/there-is-no-compensation/trunk-based.png"><figcaption>
+      <h4>你要無聊的一條線？</h4>
+    </figcaption>
 </figure>
 
-<figure><img src="/images/there-is-no-compensation/git-hero.png"/><figcaption>
-            <h4>還是 git hero!!!</h4>
-        </figcaption>
+<figure><img src="/images/there-is-no-compensation/git-hero.png"><figcaption>
+      <h4>還是 git hero!!!</h4>
+    </figcaption>
 </figure>
 
 <p>有的時候技術的傳播也真的不是取決於好壞，很多時候也是很看門面的。第一次接觸到 Technical Writing 是還在大學的時候讀的 Joel on Software，他寫的文章非常的吸引人，也從裡面學到了幾個至今很<a href="https://www.csie.ntu.edu.tw/~p92005/Joel/fog0000000069.html">受用的概念</a>。可惜他後來在 FogBugz 嘗試軟體工程界的<del>人體練成</del><a href="https://blog.codinghorror.com/has-joel-spolsky-jumped-the-shark/">自創語言</a>，結果不是很好的樣子&hellip; （曾<a href="../visual-concepts-1">在遊戲公司維護過自創語言</a>的人告訴你看過太多人 Compile 出東西就覺得完成了，其實 Compile 出東西才是剛開始，接下來還有編輯環境、Auto-complete、Debugger、Optimization 等等等&hellip;）</p>
-<p>有的時候概念就是這樣普及起來了，等到浪費了以年為單位的時間後大家才才慢慢發現不對勁，最早開始提出要檢討的人可能還會被人放火燒。<a href="https://youtu.be/gKZGWJDkhRA?t=3680">OOP</a> 也是、Design Pattern 也是、<a href="(https://martinfowler.com/articles/is-tdd-dead/)">TDD</a> 也是、UML 也是、Scrum 也是
+<p>有的時候概念就是這樣普及起來了，等到浪費了以年為單位的時間後大家才才慢慢發現不對勁，最早開始提出要檢討的人可能還會被人放火燒。<a href="https://youtu.be/gKZGWJDkhRA?t=3680">OOP</a> 也是、Design Pattern 也是、<a href="https://martinfowler.com/articles/is-tdd-dead/">TDD</a> 也是、UML 也是、Scrum 也是
 。記得大學學軟體工程教的是 UML 跟 Rational Rose，照課本說的所謂的軟體工程工程就是設計師在 <a href="https://www.ibm.com/support/knowledgecenter/zh-tw/SSCLKU_7.5.5/com.ibm.xtools.rsm.legal.doc/helpindex_rsm.html">Rational Rose</a> 裡面拉完圖之後其他人在 Code Gen 出來的 Class 玩填字遊戲。上課第一張投影片就寫到說希望軟體的產出可以<strong>無視由誰來實作</strong>，以現在的角度聽起來感覺像是在描述中古世紀的醫療，發燒就要放血之類的東西。但也才過十年多一點而已，難講現在很夯的東西，再過個三五年回頭看不會像是中世紀。</p>
 <p>像我跟 Scrum 相處到現在就完全不相信時程是可以預估的，也不相信什麼越估會越準的的說法。以前還會半信半疑，現在你送我兩套撲克牌我都不信。當你寫的程式只佔整套系統（Firmware、OS、遊戲引擎、加上你的 Gameplay code）不到萬分之一的 <a href="https://en.wikipedia.org/wiki/Source_lines_of_code">LoC</a>，怎麼可能會準。摸索到現在覺得只能靠 Feature Toggle 跟臨場應變來降低估錯的傷害。</p>
 <p>在大學第一次念到 Design Pattern 的時候覺得有如見到<a href="https://www.tenlong.com.tw/products/9789867794529">葵花寶典</a>，然後就拿 Pattern 亂揮，搞到差點自宮。到很久以後才知道 Pattern 是從既有的程式整理出來的，不是還沒開始寫程式就動手套的。要整理出 Pattern 需要重構，重構則需要測試來保證重構前後行為一致，是 Refactoring 不是 <a href="https://blog.codinghorror.com/new-programming-jargon/">Refuctoring</a>。所以正常的方向是測試 &gt; 重構 &gt; 設計模式，不過因為設計模式教起來感覺很有料、考試也好考，所以很多學校是不實做直接教 Pattern ，有如逆練九陰真經。</p>
@@ -178,16 +189,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

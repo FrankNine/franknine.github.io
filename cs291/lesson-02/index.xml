@@ -2,135 +2,108 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lesson 02 問題集 on Northern Wind</title>
-    <link>https://franknine.github.io/cs291/lesson-02/</link>
+    <link>https://www.chunfuchao.com/cs291/lesson-02/</link>
     <description>Recent content in Lesson 02 問題集 on Northern Wind</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-02/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <atom:link href="https://www.chunfuchao.com/cs291/lesson-02/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 跳格</title>
-      <link>https://franknine.github.io/cs291/lesson-02/01-frame-skipping/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/01-frame-skipping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/01-frame-skipping/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/01-frame-skipping/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/tTbobBsxN1A?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/01 Frame Skipping - Interactive 3D Graphics-tTbobBsxN1A.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>01A 跳格（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-02/01a-frame-skipping/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/01a-frame-skipping/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/01a-frame-skipping/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/01a-frame-skipping/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/kuAfX0lP5Io?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/01A Frame Skipping - Interactive 3D Graphics-kuAfX0lP5Io.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>02 哪個無法使用畫家演算法？</title>
-      <link>https://franknine.github.io/cs291/lesson-02/02-what-is-not-paintable/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/02-what-is-not-paintable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/02-what-is-not-paintable/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/02-what-is-not-paintable/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/BxMLDQYIbYk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/02 What Is Not Paintable - Interactive 3D Graphics-BxMLDQYIbYk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>02A 哪個無法使用畫家演算法？（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-02/02a-what-is-not-paintable/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/02a-what-is-not-paintable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/02a-what-is-not-paintable/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/02a-what-is-not-paintable/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/qS-f9kmWCq0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/02A What Is Not Paintable - Interactive 3D Graphics-qS-f9kmWCq0.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>03 FPS vs. 毫秒</title>
-      <link>https://franknine.github.io/cs291/lesson-02/03-fps-vs.-milliseconds/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/03-fps-vs.-milliseconds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/03-fps-vs.-milliseconds/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/03-fps-vs.-milliseconds/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/GpYyjb5mz48?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/03 FPS vs. MIlliseconds - Interactive 3D Graphics-GpYyjb5mz48.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>03A FPS vs. 毫秒（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-02/03a-fps-vs.-milliseconds/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/03a-fps-vs.-milliseconds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/03a-fps-vs.-milliseconds/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/03a-fps-vs.-milliseconds/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/El4teW4oP_I?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/03A FPS vs. MIlliseconds - Interactive 3D Graphics-El4teW4oP_I.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>04 繪圖成本</title>
-      <link>https://franknine.github.io/cs291/lesson-02/04-rendering-costs/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/04-rendering-costs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/04-rendering-costs/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/04-rendering-costs/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/jOH6Vfjy13Q?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/04 Rendering Costs - Interactive 3D Graphics-jOH6Vfjy13Q.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>04A 繪圖成本（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/04a-rendering-costs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/04a-rendering-costs/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/04a-rendering-costs/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/fEdgtfum6_c?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/04A Rendering Costs - Interactive 3D Graphics-fEdgtfum6_c.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>05 螢火蟲</title>
-      <link>https://franknine.github.io/cs291/lesson-02/05-firefly/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/05-firefly/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/05-firefly/</guid>
-      <description>螢火蟲圖片 來自 Wikimedia Commons。 我問的單純是眼睛跟光源在同一點會發生什麼事？</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/05-firefly/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/oWeox4HjQEM?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/05 Firefly - Interactive 3D Graphics-oWeox4HjQEM.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://commons.wikimedia.org/wiki/File:Photinus_pyralis_Firefly_3.jpg&#34;&gt;螢火蟲圖片&lt;/a&gt; 來自 Wikimedia Commons。&lt;/p&gt;&#xA;&lt;p&gt;我問的單純是眼睛跟光源在同一點會發生什麼事？&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>05A 螢火蟲（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-02/05a-firefly/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/05a-firefly/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/05a-firefly/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/05a-firefly/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Om2itwxjRbU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/05A Firefly - Interactive 3D Graphics-Om2itwxjRbU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>06 光場維度</title>
-      <link>https://franknine.github.io/cs291/lesson-02/06-light-field-dimensions/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/06-light-field-dimensions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/06-light-field-dimensions/</guid>
-      <description>換句話說：需要多少維度才能描述宇宙中任一點上的任一方向的輻射率？ 最後一個提示：假設你被螢幕包圍，你想要描述你的位置週遭其中一個像素（其中存有</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/06-light-field-dimensions/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/ucsWmvKKqaM?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/06 Light Field Dimensions - Interactive 3D Graphics-ucsWmvKKqaM.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;換句話說：需要多少維度才能描述宇宙中任一點上的任一方向的輻射率？&lt;/p&gt;&#xA;&lt;p&gt;最後一個提示：假設你被螢幕包圍，你想要描述你的位置週遭其中一個像素（其中存有輻射率）。需要多少維度描述那個像素相對於你的方向，還有多少維度描述你的位置？&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>06A 光場維度（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-02/06a-light-field-dimensions/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/06a-light-field-dimensions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/06a-light-field-dimensions/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/06a-light-field-dimensions/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/yXocZa2BF0E?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/06A Light Field Dimensions - Interactive 3D Graphics-yXocZa2BF0E.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>07 第一個程式作業</title>
-      <link>https://franknine.github.io/cs291/lesson-02/07-first-programming-exercise/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/07-first-programming-exercise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/07-first-programming-exercise/</guid>
-      <description>譯註：請點 這裡 移動到 JSFiddle 解題 底下原文翻譯是描述已經毀損的 Udacity 作業系統，僅供參考 程式作業相關問題 許多程式作業已經無法運作，所有習題與展示可以在：h</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/07-first-programming-exercise/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/FCedbqJFOxk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 02\/07 First Programming Exercise - Interactive 3D Graphics-FCedbqJFOxk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：請點 &lt;a href=&#34;https://jsfiddle.net/aaefiikmnnnr/exbfn985/&#34;&gt;這裡&lt;/a&gt; 移動到 JSFiddle 解題&lt;/p&gt;&#xA;&lt;p&gt;底下原文翻譯是描述已經毀損的 Udacity 作業系統，僅供參考&lt;/p&gt;&#xA;&lt;h1 id=&#34;程式作業相關問題&#34;&gt;程式作業相關問題&lt;/h1&gt;&#xA;&lt;p&gt;許多程式作業已經無法運作，所有習題與展示可以在：https://github.com/udacity/cs291/archive/master.zip 或是 &lt;a href=&#34;https://github.com/udacity/cs291&#34;&gt;https://github.com/udacity/cs291&lt;/a&gt; 下載。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>07A 第一個程式作業（解答）</title>
-      <link>https://franknine.github.io/cs291/lesson-02/07a-first-programming-exercise/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-02/07a-first-programming-exercise/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-02/07a-first-programming-exercise/</guid>
-      <description>需要以下的修改： 31 行： 1 scene.add( cube ; 改成 1 scene.add( cube ); 67 行： 1 / draw the coordinate grid 改成 1 // draw the coordinate grid 69 行： 1 Coordinates.drawGrid(size:1000,scale:0.01, orientation:&amp;#34;y&amp;#34;}); 改成 1 Coordinates.drawGrid({size:1000,scale:0.01, orientation:&amp;#34;y&amp;#34;});</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-02/07a-first-programming-exercise/</guid>
+      <description>&lt;p&gt;需要以下的修改：&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;31 行：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scene.add( cube ;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;改成&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;scene.add( cube );&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;p&gt;67 行：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/ draw the coordinate grid&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;改成&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;// draw the coordinate grid&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;p&gt;69 行：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Coordinates.drawGrid(size:1000,scale:0.01, orientation:&amp;#34;y&amp;#34;});&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;改成&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Coordinates.drawGrid({size:1000,scale:0.01, orientation:&amp;#34;y&amp;#34;});&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>

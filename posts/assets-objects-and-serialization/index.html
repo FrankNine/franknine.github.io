@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,17 +16,20 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。 這是 Unity 5 Asset、Resource 與資源管理系列的第二章。 這個章節會涵蓋 Unity 序列化系統（" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。
+這是 Unity 5 Asset、Resource 與資源管理系列的第二章。
+這個章節會涵蓋 Unity 序列化系統（Serialization system）的內部構造，還有 Unity 如何在編輯時與執行期維繫 Object 之間可靠的參考關係。也會討論技術上 Object 與 Asset 的區別。要先理解本章的內容才有可能知道如何有效率地載入與卸載 Unity 的 Asset。適當的 Asset 管理是降低讀取時間還有壓低記憶體用量的必備條件。
+" /><meta name="keywords" content="Unity, Asset, Serialization" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/assets-objects-and-serialization/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/assets-objects-and-serialization/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +43,32 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="Asset、Object 與序列化" />
-<meta property="og:description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。 這是 Unity 5 Asset、Resource 與資源管理系列的第二章。 這個章節會涵蓋 Unity 序列化系統（" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/assets-objects-and-serialization/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2017-03-26T17:17:45+00:00" />
-<meta property="article:modified_time" content="2017-03-26T17:17:45+00:00" />
-<meta itemprop="name" content="Asset、Object 與序列化">
-<meta itemprop="description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。 這是 Unity 5 Asset、Resource 與資源管理系列的第二章。 這個章節會涵蓋 Unity 序列化系統（"><meta itemprop="datePublished" content="2017-03-26T17:17:45+00:00" />
-<meta itemprop="dateModified" content="2017-03-26T17:17:45+00:00" />
-<meta itemprop="wordCount" content="5858">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Asset、Object 與序列化"/>
-<meta name="twitter:description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。 這是 Unity 5 Asset、Resource 與資源管理系列的第二章。 這個章節會涵蓋 Unity 序列化系統（"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/assets-objects-and-serialization/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="Asset、Object 與序列化">
+  <meta property="og:description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。
+這是 Unity 5 Asset、Resource 與資源管理系列的第二章。
+這個章節會涵蓋 Unity 序列化系統（Serialization system）的內部構造，還有 Unity 如何在編輯時與執行期維繫 Object 之間可靠的參考關係。也會討論技術上 Object 與 Asset 的區別。要先理解本章的內容才有可能知道如何有效率地載入與卸載 Unity 的 Asset。適當的 Asset 管理是降低讀取時間還有壓低記憶體用量的必備條件。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-03-26T17:17:45+00:00">
+    <meta property="article:modified_time" content="2017-03-26T17:17:45+00:00">
+
+  <meta itemprop="name" content="Asset、Object 與序列化">
+  <meta itemprop="description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。
+這是 Unity 5 Asset、Resource 與資源管理系列的第二章。
+這個章節會涵蓋 Unity 序列化系統（Serialization system）的內部構造，還有 Unity 如何在編輯時與執行期維繫 Object 之間可靠的參考關係。也會討論技術上 Object 與 Asset 的區別。要先理解本章的內容才有可能知道如何有效率地載入與卸載 Unity 的 Asset。適當的 Asset 管理是降低讀取時間還有壓低記憶體用量的必備條件。">
+  <meta itemprop="datePublished" content="2017-03-26T17:17:45+00:00">
+  <meta itemprop="dateModified" content="2017-03-26T17:17:45+00:00">
+  <meta itemprop="wordCount" content="5858">
+  <meta itemprop="keywords" content="Unity,Asset,Serialization">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Asset、Object 與序列化">
+  <meta name="twitter:description" content="原文： https://unity3d.com/learn/tutorials/temas/best-practices/assets-objects-and-serialization ，感謝 Unity Taiwan 同意翻譯，還有同事 Feis 與 yuxioz 大力協助。
+這是 Unity 5 Asset、Resource 與資源管理系列的第二章。
+這個章節會涵蓋 Unity 序列化系統（Serialization system）的內部構造，還有 Unity 如何在編輯時與執行期維繫 Object 之間可靠的參考關係。也會討論技術上 Object 與 Asset 的區別。要先理解本章的內容才有可能知道如何有效率地載入與卸載 Unity 的 Asset。適當的 Asset 管理是降低讀取時間還有壓低記憶體用量的必備條件。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -258,16 +274,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

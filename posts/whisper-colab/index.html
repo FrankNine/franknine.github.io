@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,17 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content=" 先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個線上的執行環境，想寫一下如何合併兩者，在線上讓 Whisper AI 聽寫字幕或是逐字稿的方法。
+" /><meta name="keywords" content="Colab, Colaboratory, Whisper" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/whisper-colab/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/whisper-colab/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +41,26 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="在 Colab 上執行 Whisper 產生字幕" />
-<meta property="og:description" content="先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/whisper-colab/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-06-15T22:00:00+08:00" />
-<meta property="article:modified_time" content="2023-06-15T22:00:00+08:00" />
-<meta itemprop="name" content="在 Colab 上執行 Whisper 產生字幕">
-<meta itemprop="description" content="先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個"><meta itemprop="datePublished" content="2023-06-15T22:00:00+08:00" />
-<meta itemprop="dateModified" content="2023-06-15T22:00:00+08:00" />
-<meta itemprop="wordCount" content="1173">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 Colab 上執行 Whisper 產生字幕"/>
-<meta name="twitter:description" content="先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/whisper-colab/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="在 Colab 上執行 Whisper 產生字幕">
+  <meta property="og:description" content=" 先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個線上的執行環境，想寫一下如何合併兩者，在線上讓 Whisper AI 聽寫字幕或是逐字稿的方法。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-06-15T22:00:00+08:00">
+    <meta property="article:modified_time" content="2023-06-15T22:00:00+08:00">
+
+  <meta itemprop="name" content="在 Colab 上執行 Whisper 產生字幕">
+  <meta itemprop="description" content=" 先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個線上的執行環境，想寫一下如何合併兩者，在線上讓 Whisper AI 聽寫字幕或是逐字稿的方法。">
+  <meta itemprop="datePublished" content="2023-06-15T22:00:00+08:00">
+  <meta itemprop="dateModified" content="2023-06-15T22:00:00+08:00">
+  <meta itemprop="wordCount" content="1173">
+  <meta itemprop="keywords" content="Colab,Colaboratory,Whisper">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在 Colab 上執行 Whisper 產生字幕">
+  <meta name="twitter:description" content=" 先前經朋友介紹看了這部影片認識了 Whisper，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 Google Colab 這個線上的執行環境，想寫一下如何合併兩者，在線上讓 Whisper AI 聽寫字幕或是逐字稿的方法。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -128,16 +136,19 @@
           <article class="post">
   <div class="post-content">
     
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/kFtrvdriLU8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kFtrvdriLU8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
 
 <p>先前經朋友介紹看了這部影片認識了 <a href="https://github.com/openai/whisper">Whisper</a>，覺得對自己做字幕會很有幫助。但苦於個人電腦太過老舊，沒有辦法本機執行。剛好又認識到了 <a href="https://colab.research.google.com/">Google Colab</a> 這個線上的執行環境，想寫一下如何合併兩者，在線上讓 Whisper AI 聽寫字幕或是逐字稿的方法。</p>
 <h1 id="whisper">Whisper</h1>
 <p>首先進入 <a href="https://colab.research.google.com/">Google Colab</a></p>
-<p><img src="/images/whisper-colab/colab_welcome.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_welcome.png"></p>
 <p>選擇 <code>檔案／新增筆記本</code></p>
-<p><img src="/images/whisper-colab/colab_create_new.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_create_new.png"></p>
 <p>在空白筆記本上 <code>＋程式碼</code> 加入要執行的命令</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -150,33 +161,33 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>命令上就只有安裝 Whisper 跟使用 Commandline 執行而已，<code>!</code> 開頭在 Colab 代表執行 Shell 命令。因為官方的 Whisper 有 Commandline 介面，所以執行起來很方便。只是還有一些東西要設定：</p>
-<p><img src="/images/whisper-colab/colab_whisper.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_whisper.png"></p>
 <p>點選右上角的連線：</p>
-<p><img src="/images/whisper-colab/colab_connect.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_connect.png"></p>
 <p>如果有看影片介紹或是實際測試過會知道有沒有用 GPU CUDA 速度會差非常多，所以我們加了 <code>--device cuda</code> 參數。但也同時要開啟 Colab 執行階段的 GPU。連線後點選顯示 RAM、磁碟的圖示：</p>
-<p><img src="/images/whisper-colab/colab_resources_icon.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_resources_icon.png"></p>
 <p>會進入到資源分頁：</p>
-<p><img src="/images/whisper-colab/colab_resources.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_resources.png"></p>
 <p>選擇 <code>變更執行階段類型</code>，開啟 GPU，應該只要用到 <code>T4</code> 即可：</p>
-<p><img src="/images/whisper-colab/colab_gpu.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_gpu.png"></p>
 <p>如果沒有閒置 GPU 可以使用會需要付費，點選 <code>瞭解詳情</code>。Whisper 使用應該用 Pay As You Go 就好，我只有買 100 單位，依照經驗使用一小時大概耗費 2 ~ 4 單位上下，100 單位可以用很久。（<strong>注意運算單元有使用期限 90 天，一次不要買太大量</strong>）</p>
-<p><img src="/images/whisper-colab/colab_pay_as_you_go.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_pay_as_you_go.png"></p>
 <p>設定後會要重新連線，選擇確定：</p>
-<p><img src="/images/whisper-colab/colab_reconnect.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_reconnect.png"></p>
 <p>設定成功會看到資源分頁多了 GPU 資訊：</p>
-<p><img src="/images/whisper-colab/colab_with_gpu.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_with_gpu.png"></p>
 <p>準備就緒後執行 <code>PIP</code> 安裝 Whisper：</p>
-<p><img src="/images/whisper-colab/colab_pip.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_pip.png"></p>
 <p>點選畫面左邊的資料夾圖示，拖曳上傳要製作字幕的聲音或是影片：</p>
-<p><img src="/images/whisper-colab/colab_upload.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_upload.png"></p>
 <p>有的時候會覺得 Colab 的上傳很慢，其實也可以連結到 Google Drive。先上傳到 Google Drive 再搬到 Colab 根目錄，或是 Whisper 命令直接路徑輸入 Google Drive 路徑都可以。使用完畢後建議再按同一個按鈕撤銷 Google Drive 對這個 Colab 筆記的授權：</p>
-<p><img src="/images/whisper-colab/colab_google_drive.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_google_drive.png"></p>
 <p>上傳完成後就可以輸入對應的檔名開始產生字幕了。參數方面 <code>--language</code> 是語言，支援的語言清單依照官方文件請參考 <a href="https://github.com/openai/whisper/blob/main/whisper/tokenizer.py#L10">這裡</a>。<code>--model</code> 是語言模型，理論上越大效果越好也越慢。模型的清單官方列在 <a href="https://github.com/openai/whisper#available-models-and-languages">這裡</a>，上面沒有 <code>large-v2</code> 但實際上是抓得到的，我也習慣直接用 <code>large-v2</code>。</p>
-<p><img src="/images/whisper-colab/colab_executing.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_executing.png"></p>
 <p>算完字幕檔、逐字稿會放在根目錄，就可以下載下來校對使用了：</p>
-<p><img src="/images/whisper-colab/colab_result.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_result.png"></p>
 <p>最後記得終止連線避免浪費購買的點數：</p>
-<p><img src="/images/whisper-colab/colab_disconnect.png" alt=""></p>
+<p><img src="/images/whisper-colab/colab_disconnect.png"></p>
 <h1 id="faster-whisper">faster-whisper</h1>
 <p><a href="https://github.com/guillaumekln/faster-whisper">Faster Whisper</a> 是 Whisper 的重新實作，號稱有四倍以上的加速。在 Colab 上使用因為沒有 Commandline 介面需要 Python Code 輸出 <code>.srt</code>，但已經有人寫好了。要使用的話命令是：</p>
 <div class="highlight"><div class="chroma">
@@ -293,16 +304,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

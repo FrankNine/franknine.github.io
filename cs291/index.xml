@@ -2,9 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CS291 on Northern Wind</title>
-    <link>https://franknine.github.io/cs291/</link>
+    <link>https://www.chunfuchao.com/cs291/</link>
     <description>Recent content in CS291 on Northern Wind</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://franknine.github.io/cs291/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <atom:link href="https://www.chunfuchao.com/cs291/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -35,22 +35,22 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">var hatMaterial = new THREE.MeshPhongMaterial( { shininess: 100 } ); 
-</span></span><span class="line"><span class="cl">hatMaterial.color.r = 24/255;
-</span></span><span class="line"><span class="cl">hatMaterial.color.g = 38/255;
-</span></span><span class="line"><span class="cl">hatMaterial.color.b = 77/255;
-</span></span><span class="line"><span class="cl">hatMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">hatMaterial</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">MeshPhongMaterial</span><span class="p">(</span> <span class="p">{</span> <span class="n">shininess</span><span class="p">:</span> <span class="mi">100</span> <span class="p">}</span> <span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">hatMaterial</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">r</span> <span class="o">=</span> <span class="mi">24</span><span class="o">/</span><span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">hatMaterial</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">g</span> <span class="o">=</span> <span class="mi">38</span><span class="o">/</span><span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">hatMaterial</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="mi">77</span><span class="o">/</span><span class="mi">255</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">hatMaterial</span><span class="o">.</span><span class="n">specular</span><span class="o">.</span><span class="n">setRGB</span><span class="p">(</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">var bodyMaterial = new THREE.MeshPhongMaterial( { shininess: 100 } );
-</span></span><span class="line"><span class="cl">bodyMaterial.color.setRGB( 31/255, 86/255, 169/255 );
-</span></span><span class="line"><span class="cl">bodyMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">bodyMaterial</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">MeshPhongMaterial</span><span class="p">(</span> <span class="p">{</span> <span class="n">shininess</span><span class="p">:</span> <span class="mi">100</span> <span class="p">}</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">bodyMaterial</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">setRGB</span><span class="p">(</span> <span class="mi">31</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mi">86</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="mi">169</span><span class="o">/</span><span class="mi">255</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">bodyMaterial</span><span class="o">.</span><span class="n">specular</span><span class="o">.</span><span class="n">setRGB</span><span class="p">(</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">var legMaterial = new THREE.MeshPhongMaterial( { shininess: 4 } );
-</span></span><span class="line"><span class="cl">legMaterial.color.setHex( 0xAdA79b );
-</span></span><span class="line"><span class="cl">legMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">legMaterial</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">MeshPhongMaterial</span><span class="p">(</span> <span class="p">{</span> <span class="n">shininess</span><span class="p">:</span> <span class="mi">4</span> <span class="p">}</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">legMaterial</span><span class="o">.</span><span class="n">color</span><span class="o">.</span><span class="n">setHex</span><span class="p">(</span> <span class="mh">0xAdA79b</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">legMaterial</span><span class="o">.</span><span class="n">specular</span><span class="o">.</span><span class="n">setRGB</span><span class="p">(</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">var footMaterial = new THREE.MeshPhongMaterial( { color: 0x960f0b, shininess: 30 } );
-</span></span><span class="line"><span class="cl">footMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">footMaterial</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">MeshPhongMaterial</span><span class="p">(</span> <span class="p">{</span> <span class="n">color</span><span class="p">:</span> <span class="mh">0x960f0b</span><span class="p">,</span> <span class="n">shininess</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">footMaterial</span><span class="o">.</span><span class="n">specular</span><span class="o">.</span><span class="n">setRGB</span><span class="p">(</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span> <span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>

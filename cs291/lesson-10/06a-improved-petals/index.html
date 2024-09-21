@@ -34,21 +34,21 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">for ( var i = 0; i &lt; 24 ; i++ )
-</span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">    var cylinder = new THREE.Mesh( cylGeom, petalMaterial );
-</span></span><span class="line"><span class="cl">    cylinder.scale.x = 0.25;
-</span></span><span class="line"><span class="cl">    cylinder.position.y = petalLength / 2;
-</span></span><span class="line"><span class="cl">    //cylinder.rotation.z = -20 * Math.PI/180;
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span> <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">24</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">cylGeom</span><span class="p">,</span> <span class="n">petalMaterial</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cylinder</span><span class="o">.</span><span class="n">scale</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">petalLength</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">//</span><span class="n">cylinder</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="mi">20</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    var petal = new THREE.Object3D();
-</span></span><span class="line"><span class="cl">    petal.add( cylinder );
-</span></span><span class="line"><span class="cl">    petal.rotation.y = 15*i * Math.PI/180;
-</span></span><span class="line"><span class="cl">    petal.rotation.z = (90-20) * Math.PI/180;
-</span></span><span class="line"><span class="cl">    petal.position.y = flowerHeight;
+</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">petal</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">15</span><span class="o">*</span><span class="n">i</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">flowerHeight</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    flower.add( petal );
-</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">    <span class="n">flower</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">petal</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>影片裡的解答還蠻短的，如果你作業寫對了可以跳過以下的說明。如果卡關了不要氣餒，這是最困難的作業之一。但不要跳過這個作業。如果你熟悉這個領域的基礎並了解為什麼答案是這樣，你會深刻理解如何在電腦圖學裡控制座標變換。</p>
@@ -87,8 +87,8 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">var petal = new THREE.Object3D();
-</span></span><span class="line"><span class="cl">petal.add( cylinder );
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">petal</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">petal</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>要克服這個問題，我創造了 <code>petal</code> 物件作為圓錐的父物件。這樣我能在平移<strong>之後</strong>繞原點旋轉。這是我創造 <code>petal</code> 物件的唯一理由。</p>

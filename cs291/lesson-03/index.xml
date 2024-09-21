@@ -2,81 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lesson 03 訪談：3D 建模與列印 on Northern Wind</title>
-    <link>https://franknine.github.io/cs291/lesson-03/</link>
+    <link>https://www.chunfuchao.com/cs291/lesson-03/</link>
     <description>Recent content in Lesson 03 訪談：3D 建模與列印 on Northern Wind</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://franknine.github.io/cs291/lesson-03/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    <atom:link href="https://www.chunfuchao.com/cs291/lesson-03/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01 讓虛擬的事物成真</title>
-      <link>https://franknine.github.io/cs291/lesson-03/01-making-virtual-things-real/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-03/01-making-virtual-things-real/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-03/01-making-virtual-things-real/</guid>
-      <description>影片中茶壺的模型可以在 Sculpteo 網站 預覽。 3D 列印服務有： Shapeways、Sculpteo、i.materialise 與 Ponoko。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-03/01-making-virtual-things-real/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/Mup6-xkLJ58?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 03\/01 Making Virtual Things Real - Interactive 3D Graphics-Mup6-xkLJ58.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;影片中茶壺的模型可以在 &lt;a href=&#34;http://www.sculpteo.com/en/design/wire-teapot-small/uLcxe5dp&#34;&gt;Sculpteo 網站&lt;/a&gt; 預覽。&lt;/p&gt;&#xA;&lt;p&gt;3D 列印服務有： &lt;a href=&#34;http://shapeways.com/&#34;&gt;Shapeways&lt;/a&gt;、&lt;a href=&#34;http://sculpteo.com/&#34;&gt;Sculpteo&lt;/a&gt;、&lt;a href=&#34;http://i.materialise.com/&#34;&gt;i.materialise&lt;/a&gt; 與 &lt;a href=&#34;https://www.ponoko.com/&#34;&gt;Ponoko&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>02 Autodesk 的 Jesse Harrington Au</title>
-      <link>https://franknine.github.io/cs291/lesson-03/02-jesse-harrington-au-at-autodesk/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-03/02-jesse-harrington-au-at-autodesk/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-03/02-jesse-harrington-au-at-autodesk/</guid>
-      <description>Autodesk 藝廊的 導覽影片，如果你造訪舊金山可以 免費參觀。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-03/02-jesse-harrington-au-at-autodesk/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/AebJdRLtdxM?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 03\/02 Jesse Harrington Au at Autodesk - Interactive 3D Graphics-AebJdRLtdxM.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;Autodesk 藝廊的 &lt;a href=&#34;https://www.youtube.com/watch?v=g4Igy2y7m1w&#34;&gt;導覽影片&lt;/a&gt;，如果你造訪舊金山可以 &lt;a href=&#34;https://www.autodesk.com/gallery/overview&#34;&gt;免費參觀&lt;/a&gt;。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>03 3D 列印運作原理</title>
-      <link>https://franknine.github.io/cs291/lesson-03/03-how-3d-printing-works/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-03/03-how-3d-printing-works/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-03/03-how-3d-printing-works/</guid>
-      <description>維基有 不錯的介紹</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-03/03-how-3d-printing-works/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/pn5YW2fWFdk?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 03\/03 How 3D Printing Works - Interactive 3D Graphics-pn5YW2fWFdk.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;維基有 &lt;a href=&#34;http://en.wikipedia.org/wiki/3D_printing&#34;&gt;不錯的介紹&lt;/a&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>04 任何形狀都可以</title>
-      <link>https://franknine.github.io/cs291/lesson-03/04-any-shape-can-be-made/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-03/04-any-shape-can-be-made/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-03/04-any-shape-can-be-made/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-03/04-any-shape-can-be-made/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/bfbcCRSufIY?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 03\/04 Any Shape Can Be Made - Interactive 3D Graphics-bfbcCRSufIY.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>05 複雜度是不用錢的</title>
-      <link>https://franknine.github.io/cs291/lesson-03/05-complexity-is-free/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-03/05-complexity-is-free/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-03/05-complexity-is-free/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-03/05-complexity-is-free/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/IUH15IduE4Y?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 03\/05 Complexity Is Free - Interactive 3D Graphics-IUH15IduE4Y.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>06 3D 列印材料</title>
-      <link>https://franknine.github.io/cs291/lesson-03/06-3d-printing-materials/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-03/06-3d-printing-materials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-03/06-3d-printing-materials/</guid>
-      <description></description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-03/06-3d-printing-materials/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/4TOPS_sngJg?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 03\/06 3D Printing Materials - Interactive 3D Graphics-4TOPS_sngJg.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>07 設計流程</title>
-      <link>https://franknine.github.io/cs291/lesson-03/07-design-process/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-03/07-design-process/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-03/07-design-process/</guid>
-      <description>譯註：這裡可能有口誤，他描述的 3D 列印方式應該是 FDM（Fused Deposition Modeling）機器。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-03/07-design-process/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/ICw0UOSiETo?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 03\/07 Design Process - Interactive 3D Graphics-ICw0UOSiETo.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;譯註：這裡可能有口誤，他描述的 3D 列印方式應該是 FDM（Fused Deposition Modeling）機器。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>08 3D 列印的困難與未來</title>
-      <link>https://franknine.github.io/cs291/lesson-03/08-problems-and-future-of-3d-printing/</link>
+      <link>https://www.chunfuchao.com/cs291/lesson-03/08-problems-and-future-of-3d-printing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://franknine.github.io/cs291/lesson-03/08-problems-and-future-of-3d-printing/</guid>
-      <description>Fabricated 這本書是不錯的基礎參考資料，充滿啟發性的想法。</description>
+      <guid>https://www.chunfuchao.com/cs291/lesson-03/08-problems-and-future-of-3d-printing/</guid>
+      <description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/016wMyiBdtQ?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 03\/08 Problems and Future of 3D Printing - Interactive 3D Graphics-016wMyiBdtQ.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/Fabricated-The-New-World-Printing/dp/1118350634?tag=realtimerenderin&#34;&gt;Fabricated&lt;/a&gt; 這本書是不錯的基礎參考資料，充滿啟發性的想法。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

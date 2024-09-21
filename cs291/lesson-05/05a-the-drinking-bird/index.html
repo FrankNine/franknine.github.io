@@ -75,19 +75,19 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 身體
-</span></span><span class="line"><span class="cl">var sphere = new THREE.Mesh( new THREE.SphereGeometry( 116/2, 32, 16 ), sphereMaterial ); 
-</span></span><span class="line"><span class="cl">sphere.position.x = 0; 
-</span></span><span class="line"><span class="cl">sphere.position.y = 160; 
-</span></span><span class="line"><span class="cl">sphere.position.z = 0; 
-</span></span><span class="line"><span class="cl">scene.add( sphere ); 
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="err">身體</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">sphere</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">SphereGeometry</span><span class="p">(</span> <span class="mi">116</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">16</span> <span class="p">),</span> <span class="n">sphereMaterial</span> <span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">sphere</span> <span class="p">);</span> 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// 頭／身體間圓柱 
-</span></span><span class="line"><span class="cl">var cylinder = new THREE.Mesh( new THREE.CylinderGeometry( 24/2, 24/2, 390, 32 ), cylinderMaterial ); 
-</span></span><span class="line"><span class="cl">cylinder.position.x = 0; 
-</span></span><span class="line"><span class="cl">cylinder.position.y = 160 + 390/2; 
-</span></span><span class="line"><span class="cl">cylinder.position.z = 0; 
-</span></span><span class="line"><span class="cl">scene.add( cylinder ); 
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">頭／身體間圓柱</span> 
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">CylinderGeometry</span><span class="p">(</span> <span class="mi">24</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">24</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">390</span><span class="p">,</span> <span class="mi">32</span> <span class="p">),</span> <span class="n">cylinderMaterial</span> <span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span> <span class="o">+</span> <span class="mi">390</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span> 
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>createHead()</code> 加入以下程式：</p>
@@ -114,25 +114,25 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 頭 
-</span></span><span class="line"><span class="cl">var sphere = new THREE.Mesh( new THREE.SphereGeometry( 104/2, 32, 16 ), sphereMaterial );
-</span></span><span class="line"><span class="cl">sphere.position.x = 0; 
-</span></span><span class="line"><span class="cl">sphere.position.y = 160 + 390; 
-</span></span><span class="line"><span class="cl">sphere.position.z = 0; 
-</span></span><span class="line"><span class="cl">scene.add( sphere ); 
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="err">頭</span> 
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">sphere</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">SphereGeometry</span><span class="p">(</span> <span class="mi">104</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">16</span> <span class="p">),</span> <span class="n">sphereMaterial</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span> <span class="o">+</span> <span class="mi">390</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">sphere</span> <span class="p">);</span> 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// 帽緣 
-</span></span><span class="line"><span class="cl">var cylinder = new THREE.Mesh( new THREE.CylinderGeometry( 142/2, 142/2, 10, 32 ), cylinderMaterial ); 
-</span></span><span class="line"><span class="cl">cylinder.position.x = 0; 
-</span></span><span class="line"><span class="cl">cylinder.position.y = 160 + 390 + 40 + 10/2; 
-</span></span><span class="line"><span class="cl">cylinder.position.z = 0; scene.add( cylinder ); 
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">帽緣</span> 
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">CylinderGeometry</span><span class="p">(</span> <span class="mi">142</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">142</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">32</span> <span class="p">),</span> <span class="n">cylinderMaterial</span> <span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span> <span class="o">+</span> <span class="mi">390</span> <span class="o">+</span> <span class="mi">40</span> <span class="o">+</span> <span class="mi">10</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span> 
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// 帽頂 
-</span></span><span class="line"><span class="cl">cylinder = new THREE.Mesh( new THREE.CylinderGeometry( 80/2, 80/2, 70, 32 ), cylinderMaterial ); 
-</span></span><span class="line"><span class="cl">cylinder.position.x = 0; 
-</span></span><span class="line"><span class="cl">cylinder.position.y = 160 + 390 + 40 + 10 + 70/2; 
-</span></span><span class="line"><span class="cl">cylinder.position.z = 0; 
-</span></span><span class="line"><span class="cl">scene.add( cylinder );
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">帽頂</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">CylinderGeometry</span><span class="p">(</span> <span class="mi">80</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">80</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">32</span> <span class="p">),</span> <span class="n">cylinderMaterial</span> <span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span> <span class="o">+</span> <span class="mi">390</span> <span class="o">+</span> <span class="mi">40</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">70</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>

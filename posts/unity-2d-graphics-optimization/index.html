@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,17 +17,17 @@
 
 
 <meta name="author" content="Chun-Fu Chao" /><meta name="description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。
-" />
+" /><meta name="keywords" content="Unity, Profiler, Optimization, 最佳化" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/unity-2d-graphics-optimization/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/unity-2d-graphics-optimization/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,19 +41,26 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="Unity 2D 繪圖最佳化概論" />
-<meta property="og:description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/unity-2d-graphics-optimization/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2016-07-14T17:49:15+00:00" />
-<meta property="article:modified_time" content="2016-07-14T17:49:15+00:00" />
-<meta itemprop="name" content="Unity 2D 繪圖最佳化概論">
-<meta itemprop="description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。"><meta itemprop="datePublished" content="2016-07-14T17:49:15+00:00" />
-<meta itemprop="dateModified" content="2016-07-14T17:49:15+00:00" />
-<meta itemprop="wordCount" content="5542">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Unity 2D 繪圖最佳化概論"/>
-<meta name="twitter:description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/unity-2d-graphics-optimization/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="Unity 2D 繪圖最佳化概論">
+  <meta property="og:description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-07-14T17:49:15+00:00">
+    <meta property="article:modified_time" content="2016-07-14T17:49:15+00:00">
+
+  <meta itemprop="name" content="Unity 2D 繪圖最佳化概論">
+  <meta itemprop="description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。">
+  <meta itemprop="datePublished" content="2016-07-14T17:49:15+00:00">
+  <meta itemprop="dateModified" content="2016-07-14T17:49:15+00:00">
+  <meta itemprop="wordCount" content="5542">
+  <meta itemprop="keywords" content="Unity,Profiler,Optimization,最佳化">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unity 2D 繪圖最佳化概論">
+  <meta name="twitter:description" content="這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 Level of detail、Occlusion culling 等還有待有 3D 實作經驗的人補充。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -131,7 +138,7 @@
     <p>這篇會專注在 Unity 2D 繪圖最佳化相關的部分。因為最近幾個完成的專案都是 2D 的遊戲， 3D 的最佳化自己沒有實作經驗。所以 3D 最佳化的特有的技術像是 <a href="https://docs.unity3d.com/Manual/LevelOfDetail.html">Level of detail</a>、<a href="http://unitytaiwan.blogspot.tw/2013/12/unity-43-occlusion-culling.html">Occlusion culling</a> 等還有待有 3D 實作經驗的人補充。</p>
 <h3 id="rendering-pipeline">Rendering Pipeline</h3>
 <p>GPU 的運算是一個 <a href="https://en.wikipedia.org/wiki/Pipeline_(computing)">Pipeline</a>，所以整體的速度會被最慢的一個步驟，也就是 Bottleneck 部分限制。所以最佳化最先要找到 Bottleneck 在 Pipeline 的哪裡。以一個簡化非常多的 GPU Pipeline 大概像這樣：</p>
-<p><img src="/images/unity-2d-graphics-optimization/rendering-pipeline.png" alt="Rendering Pipeline"></p>
+<p><img alt="Rendering Pipeline" src="/images/unity-2d-graphics-optimization/rendering-pipeline.png"></p>
 <p>這是省略很多的版本，沒有介紹到現在已經很普遍的 Geometry shader、Tessellation shader 跟 Computation shader。也省略掉了很多中間必要的步驟像是 Triangle setup 或是 Clipping 。如果要詳細的理解 Rendering pipeline ，建議參考 <a href="https://www.amazon.com/Real-Time-Rendering-Third-Tomas-Akenine-Moller/dp/1568814240/">Real-time rendering</a> 這本書。如果對 Rendering pipeline 有一定的了解了建議跳過這一部分。</p>
 <p>（另外 PowerVR 的 Tile-based deferred rendering 跟這個流程有所出入，不過目前就先不解釋 Tile-based deferred rendering ，有興趣的朋友可以參考 PowerVR 自己寫的<a href="https://imgtec.com/blog/a-look-at-the-powervr-graphics-architecture-tile-based-rendering/">比較</a>。）</p>
 <p>最開始 CPU 對 GPU Driver 下設定要怎麼著色的參數（Set pass call，包含 Shader 跟 Shader 的參數們），然後再下要畫哪些頂點（Batches）。如果下一組頂點著色的方式一樣的話，就不需要再多一次 Set pass call ，這個特性之後最佳化會利用到。</p>
@@ -145,7 +152,7 @@
 <p>當要最佳化的時候最先要確認 Bottleneck 所在，參考 Nvidia 的 <a href="http://http.developer.nvidia.com/GPUGems/gpugems_ch28.html">GPU Gems</a> 所提供的做法，就是改變部分繪圖的環境看看 FPS 有沒有顯著提升，如果有就是找到 Bottleneck 了。以下是參考 GPU Gems 的作業流程簡述：</p>
 <p>從 Pipeline 的後端開始，最先是試試降低 Merger 跟 Frame buffer 的資料傳輸量，最簡單的作法是降低 Frame buffer 的資料精確度（有 GPU Profiler 輔助的話可以關閉 Alpha blending），如果效能有明顯上升那就是卡在 Merger 。接下來是測試是否卡在貼圖，作法是把貼圖換成低解析度的。再來是改變解析度來測試 Fragment shading ，雖然說改變解析度也會影響到 Merger 跟 Frame buffer 的資料傳輸量，但是如果已經用了改變 Frame buffer depth 排除卡在 Merger 的可能性，那 FPS 因為解析度改變而變化就可以確定是 Fragment shading 的問題。Vertex shading 會有問題在 2D 遊戲裡比較少見，通常都是 3D 遊戲裡面做複雜的 Skinned mesh 形變計算才會出現（Unity 要在 Project settings 裡面開啟 GPU Skinning 才會在 Vertex shading 計算，如果沒有開啟就是 CPU 算），不過如果懷疑的話一樣是把 Vertex shader 改簡單去觀察 FPS 變化。最後如果都不是的話那就推斷是 CPU 下的 Draw call 或是 Set pass call 的問題。</p>
 <p>當然如果有工具協助的話會方便很多。以跟之前介紹的 <a href="../android-gpu-profilers">Frame Analyzer</a> 同一組的 <a href="https://software.intel.com/en-us/articles/system-analyzer-getting-started-guides">Intel GPA System Analyzer</a> 為範例，這是在監控執行中的遊戲的畫面。可以看到左下角有直接覆寫 GPU 運作參數的選項，像是動態將貼圖改成只有 2X2 大小或是直接關閉 Alpha blending 之類的。有這類工具可以大幅提升追蹤 Bottleneck 的效率。</p>
-<p><img src="/images/unity-2d-graphics-optimization/gpa-system-analyzer.png" alt="GPA System Analyzer"></p>
+<p><img alt="GPA System Analyzer" src="/images/unity-2d-graphics-optimization/gpa-system-analyzer.png"></p>
 <h3 id="optimization">Optimization</h3>
 <p>確定 Bottleneck 之後就要想辦法最佳化，在 Unity 開發 2D 遊戲繪圖最佳化會需要減少的通常有：</p>
 <ul>
@@ -183,7 +190,7 @@
 <p>貼圖的大小會影響到 GPU 需要的時候要花多少時間載入到繪圖記憶體，也會影響到繪圖記憶體的用量。目前 Android 手機上硬體支援最廣泛的壓縮格式是 <a href="https://en.wikipedia.org/wiki/Ericsson_Texture_Compression">Ericsson Texture Compression 1</a>（ETC1），但是這個格式壓縮率不比後來開發的新壓縮格式，然後還有邊長必須是二的指數（Power of two，POT）跟無法處理 Alpha channel 等嚴苛限制。後來 ETC 格式有後繼原生支援 Alpha channel 的 ETC 2（需要 OpenGL ES3），Nvidia Tegra 的 DXT，PowerVR 的 PVRTC，Qualcomm Adreno 的 ATC 等等。但是如果機器硬體不支援的話，Unity 會在 CPU 這端解成 RGBA8888 無壓縮格式餵給 GPU <a href="http://forum.unity3d.com/threads/what-happens-when-we-use-etc2-on-open-gl-es-2-0-devices.302721/">來源</a>，通常就是因為 GPU 太老才沒有壓縮格式硬體支援，這樣一解通常記憶體就跟著爆了。</p>
 <p>切換成 ETC2 可以省很多工，但是就需要硬體支援 OpenGL ES3，比較尷尬的是到 2012 後半年才比較有使用 OpenGL ES3 支援的晶片的手機<a href="http://renderingpipeline.com/2012/08/which-gpus-support-opengl-es-3-0/">參考資料</a>。有些到現今還是有不小市佔率的手機，像是 Galaxy S3 是沒辦法用 ETC2 的。這就變成是端看你自己的商業考量，是要放棄支援還是要花工時整理貼圖。</p>
 <p>有個解決 ETC1 無法處理 Alpha 的 Workaround 叫做 Split alpha ，說穿了就是把 Alpha 拿出來變成另一張貼圖做 ETC1 壓縮。Unity 現在有部分內建支援，像是 UI Shader 有 Split alpha 專用的 UI-DefaultETC1，這也就是說如果你之前有自製 Shader ，要改用 Split alpha 就要重寫一個相應的版本。</p>
-<p><img src="/images/unity-2d-graphics-optimization/default-etc1.png" alt="Default ETC1"></p>
+<p><img alt="Default ETC1" src="/images/unity-2d-graphics-optimization/default-etc1.png"></p>
 <p>UI-DefaultETC1 一開始的宣告，可以看到有兩張貼圖</p>
 <p>iOS 上面只有 PVRTC 可以選擇，不只要求 POT 還要求要是方形。要整個程式的貼圖都是方形還蠻困難的，幸好我們還有 Texture atlas 這個技巧。</p>
 <p>除了壓縮之外另外一個有機會降低貼圖大小的方法是製作 Texture atlas ，即把多張貼圖合併成一張貼圖，如果合併的方法合宜可以省下很多空隙，同時有可能因此湊出貼圖壓縮需要的 POT 或是方形，然後 Draw call batching 也需要 Texture atlas ，是個多多益善。以前 ex2D 或是舊 NGUI 年代因為 Texture atlas 工具不夠好，常常會造成編輯上的困擾。不過現在 Unity 內建 <a href="https://docs.unity3d.com/Manual/SpritePacker.html">Sprite packer</a> 使用起來沒有那麼難過了，大家都應該去試看看。</p>
@@ -204,13 +211,13 @@
 <h4 id="batch--set-pass"><strong>Batch &amp; Set pass</strong></h4>
 <p>在 Unity 4 的時候 Unity 選用了比較含糊的 Draw call 來描述 CPU 跟 GPU 溝通的次數。Unity 5 則改成 Batches 跟 Set pass calls 兩項。一般繪圖的時候都是先設定要怎麼畫（設定用什麼 Material ，Materia 描述多邊形表面怎麼繪畫，即 Shader + Shader 的參數、包含貼圖，改寫設定次數即 Set Pass calls 的數字），然後下命令在這個設定下畫哪些頂點（Unity 4 用 Draw call 稱呼，但實際上的數字是 Batch 處理過的，Unity 5 之後直接用 Batches 稱呼 Batched draw calls）。不同 Material 的物件自然沒有辦法 Batch 在一起，不過就算 Material 相同也可能因為 Vertex attribute 數量太多等原因沒有被 Unity Batch 。</p>
 <p>Draw call batching 粗略來說可以用畫圖解釋的，大概像是要畫以下這張圖：</p>
-<p><img src="/images/unity-2d-graphics-optimization/sample-whole-picture.png" alt="Sample Whole Picture"></p>
+<p><img alt="Sample Whole Picture" src="/images/unity-2d-graphics-optimization/sample-whole-picture.png"></p>
 <p>如果我們非常按部就班地畫，可能是像以下的步驟</p>
-<p><img src="/images/unity-2d-graphics-optimization/sample-step-by-step.gif" alt="Sample Step by Step"></p>
+<p><img alt="Sample Step by Step" src="/images/unity-2d-graphics-optimization/sample-step-by-step.gif"></p>
 <p>這樣是能畫出我們想要的圖，只是我們沾了綠色顏料畫了最左邊的草之後馬上就要把顏料洗掉換成紅色畫花朵的部分。這過程中我們沾了六次顏料，大家很快就會想到如果同一個顏色一起畫不就不用這麼麻煩，所以改進過的畫圖過程變成這樣：</p>
-<p><img src="/images/unity-2d-graphics-optimization/sample-batch-by-color.gif" alt="Sample Batch by Color"></p>
+<p><img alt="Sample Batch by Color" src="/images/unity-2d-graphics-optimization/sample-batch-by-color.gif"></p>
 <p>這其實就是常聽到的 Batching 的概念，把要畫的頂點整理起來，然後一個 Set pass 跟一個 Batched draw call 把所有相同 Material 的東西都畫出來。因為有紅花跟綠葉兩種 Material ，所以最後總共是兩個 Set pass 跟兩個 Batched draw call 。但是能不能更好呢？如果說我們能一枝筆左半邊沾上綠色右半邊沾上紅色，不就連換顏色都可以免了？</p>
-<p><img src="/images/unity-2d-graphics-optimization/sample-atlas.gif" alt="Sample Atlas"></p>
+<p><img alt="Sample Atlas" src="/images/unity-2d-graphics-optimization/sample-atlas.gif"></p>
 <p>這其實就是做 Texture atlas 配合 Batching 。我們不只合併頂點，連貼圖也合併起來這樣就可以只用一個 Material 描述紅花跟綠葉，最後達到一個 Set pass 跟一個 Batched draw call 畫出所有東西。</p>
 <p>避免過高的 Draw call 跟 Set pass 都是因為這兩個動作可能會造成效能損失，不過損失的原因還蠻複雜的。大體上來說 Draw call 太多會是問題是因為 CPU 下繪圖指令的速度比 GPU 處理繪圖指令的速度還慢，如果 Draw call 太多會變成 GPU 一直在等 CPU，而 Set pass 觸發 GPU 狀態切換可能會造成運算能力浪費。不過因為每家 GPU 廠商針對這些問題各自做了各種不同的措施，所以前面用的字眼是「可能」造成效能損失。要深入追究的話就是超級大哉問了。簡單的原則就是儘量把可以整理在一起的物件整理在一起，然後交給 Unity 去 Batch 。雖然說自己去算 Batch 是有可能做到的，但是因為 Unity 底層的實作只有 Unity 自己知道，所以自己實作很難會有好結果，有可能多省到一些 GPU 的時間但是卻耗費更多的 CPU 時間。</p>
 <p>關於 Draw call 的討論可以參考這個 StackOverflow 問題：</p>
@@ -219,7 +226,7 @@
 <p><a href="http://www.nvidia.com/docs/IO/8228/BatchBatchBatch.pdf">“Batch, Batch, Batch:” What Does It Really Mean?</a></p>
 <h4 id="vertex-count"><strong>Vertex count</strong></h4>
 <p>三角形頂點的資料量在 2D 遊戲通常都比其他資料小很多，Vertex shader 通常也不是瓶頸所在，所以一般來說是不會考慮這個問題。但是 Unity Texture import 如果是選用 Mesh type : Tight ，在一些有漸層的貼圖上會產生數以百計的頂點對效能造成影響。一個是考慮放棄 Tight mesh ，用一點 Overdraw 換 Vertex count 。或是用其他現成的 Sprite mesh generator 例如 <a href="https://www.assetstore.unity3d.com/en/#!/content/16641">TexturePacker</a> 或是 <a href="https://www.assetstore.unity3d.com/en/#!/content/37599">SpriteSharp</a> 。</p>
-<p><img src="/images/unity-2d-graphics-optimization/shaded-wireframe.png" alt="Shaded Wireframe"></p>
+<p><img alt="Shaded Wireframe" src="/images/unity-2d-graphics-optimization/shaded-wireframe.png"></p>
 <p>在 Scene view 上面使用 Shaded Wireframe 觀測 Tight mesh sprite 的 Vertex ，可以看出來不是很漂亮。</p>
 <p>另外一個是 Unity 內建的 Dynamic batching 一組最多只能合併 900 個 Vertex attributes （不是 Vertex ，如果除了位置還有 UV 那每個頂點是 2 attributes［<a href="http://answers.unity3d.com/questions/356198/dynamic-batching-vertex-limit.html">來源</a>］），所以如果有在用 Batching 也要注意一下 Vertex count 。</p>
 <h4 id="render-texture--grabpass"><strong>Render texture / GrabPass</strong></h4>
@@ -233,7 +240,7 @@
 <p><a href="https://www.amazon.com/Real-Time-Rendering-Third-Tomas-Akenine-Moller/dp/1568814240">https://www.amazon.com/Real-Time-Rendering-Third-Tomas-Akenine-Moller/dp/1568814240</a></p>
 <p>第二、第三章講 Rendering pipeline ，Amazon 的試閱有第二章的部分</p>
 <p>Interactive 3D Graphics Creating Virtual Worlds</p>
-<p><a href="https://www.udacity.com/course/interactive-3d-graphics&amp;#8211;cs291">https://www.udacity.com/course/interactive-3d-graphics&amp;#8211;cs291</a></p>
+<p><a href="https://www.udacity.com/course/interactive-3d-graphics&#8211;cs291">https://www.udacity.com/course/interactive-3d-graphics&#8211;cs291</a></p>
 <p>Real-time rendering 作者之一 Eric Haines 開設的免費網路課程</p>
 <p>Render Hell 2.0</p>
 <p><a href="https://simonschreibt.de/gat/renderhell/">https://simonschreibt.de/gat/renderhell/</a></p>
@@ -242,7 +249,7 @@
 <p>A trip through the Graphics Pipeline 2011</p>
 <p><a href="https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/">https://fgiesen.wordpress.com/2011/07/09/a-trip-through-the-graphics-pipeline-2011-index/</a></p>
 <p>Life of a triangle</p>
-<p><a href="https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline%3E">https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline&gt;</a></p>
+<p><a href="https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline%3E">https://developer.nvidia.com/content/life-triangle-nvidias-logical-pipeline></a></p>
 <p>UWA Blog</p>
 <p><a href="http://blog.uwa4d.com/">http://blog.uwa4d.com/</a></p>
 <p>Unity 官方對 Render stat 的說明</p>
@@ -273,16 +280,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

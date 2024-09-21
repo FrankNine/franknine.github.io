@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,17 +17,17 @@
 
 
 <meta name="author" content="Chun-Fu Chao" /><meta name="description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。
-" />
+" /><meta name="keywords" content="Unity, iOS, App Transport Security" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/unity-on-ios9/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/unity-on-ios9/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,19 +41,26 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="Unity on iOS9" />
-<meta property="og:description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/unity-on-ios9/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2015-11-07T16:37:30+00:00" />
-<meta property="article:modified_time" content="2015-11-07T16:37:30+00:00" />
-<meta itemprop="name" content="Unity on iOS9">
-<meta itemprop="description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。"><meta itemprop="datePublished" content="2015-11-07T16:37:30+00:00" />
-<meta itemprop="dateModified" content="2015-11-07T16:37:30+00:00" />
-<meta itemprop="wordCount" content="859">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Unity on iOS9"/>
-<meta name="twitter:description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/unity-on-ios9/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="Unity on iOS9">
+  <meta property="og:description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2015-11-07T16:37:30+00:00">
+    <meta property="article:modified_time" content="2015-11-07T16:37:30+00:00">
+
+  <meta itemprop="name" content="Unity on iOS9">
+  <meta itemprop="description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。">
+  <meta itemprop="datePublished" content="2015-11-07T16:37:30+00:00">
+  <meta itemprop="dateModified" content="2015-11-07T16:37:30+00:00">
+  <meta itemprop="wordCount" content="859">
+  <meta itemprop="keywords" content="Unity,iOS,App Transport Security">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unity on iOS9">
+  <meta name="twitter:description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -130,7 +137,7 @@
   <div class="post-content">
     <p>雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。</p>
 <h3 id="效能問題">效能問題</h3>
-<p><img src="/images/unity-on-ios9/spike.jpg" alt=""></p>
+<p><img src="/images/unity-on-ios9/spike.jpg"></p>
 <p>第一個最明顯的就是一樣的 build 在 iOS 9 上面效能變低很多，然後 profiler 開起來是這個非常誇張的鋸齒狀。</p>
 <p>這個問題在論壇上面有討論了一陣子：</p>
 <p><a href="http://forum.unity3d.com/threads/unity-5-2-ios-performance-issues.353646/">http://forum.unity3d.com/threads/unity-5-2-ios-performance-issues.353646/</a></p>
@@ -188,14 +195,14 @@
 </span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">atsDict</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;NSAppTransportSecurity&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">domainsDict</span> <span class="p">=</span> <span class="n">atsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;NSExceptionDomains&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">fbDict</span> <span class="p">=</span> <span class="n">domainsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;facebook.com&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">fbDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">fbDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">fbDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">fbDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">fbcdnDict</span> <span class="p">=</span> <span class="n">domainsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;fbcdn.net&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">fbcdnDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">fbcdnDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">fbcdnDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">fbcdnDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">akamaihdDict</span> <span class="p">=</span> <span class="n">domainsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;akamaihd.net&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">akamaihdDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">akamaihdDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">akamaihdDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">akamaihdDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="n">PlistElementArray</span> <span class="n">schemesArray</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="n">CreateArray</span> <span class="p">(</span><span class="s">&#34;LSApplicationQueriesSchemes&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// SDK v4.5 or older</span>
 </span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi&#34;</span><span class="p">);</span>
@@ -255,16 +262,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

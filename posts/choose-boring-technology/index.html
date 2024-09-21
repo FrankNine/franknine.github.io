@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考： 不該過分追求使用新技術。" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考：
+不該過分追求使用新技術。 人的專注力有限，該優先花在產品方向而非技術細節上。 未知有分「已知的未知」跟「未知的未知」，使用新技術兩者都較多，而「未知的未知」會多很多。 技術難以專精，難以掌握到 Production 水準，選擇技術的集合應該要盡量小。 技術有全局的影響，不該由個人決策。應該條列不用新技術會有什麼不便，跟用新技術有什麼方便來做對比。 等等，我覺得非常受用。
+" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/choose-boring-technology/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/choose-boring-technology/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +42,28 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="選擇無聊的技術" />
-<meta property="og:description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考： 不該過分追求使用新技術。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/choose-boring-technology/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-04-19T11:42:00+08:00" />
-<meta property="article:modified_time" content="2023-04-19T11:42:00+08:00" />
-<meta itemprop="name" content="選擇無聊的技術">
-<meta itemprop="description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考： 不該過分追求使用新技術。"><meta itemprop="datePublished" content="2023-04-19T11:42:00+08:00" />
-<meta itemprop="dateModified" content="2023-04-19T11:42:00+08:00" />
-<meta itemprop="wordCount" content="311">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="選擇無聊的技術"/>
-<meta name="twitter:description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考： 不該過分追求使用新技術。"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/choose-boring-technology/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="選擇無聊的技術">
+  <meta property="og:description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考：
+不該過分追求使用新技術。 人的專注力有限，該優先花在產品方向而非技術細節上。 未知有分「已知的未知」跟「未知的未知」，使用新技術兩者都較多，而「未知的未知」會多很多。 技術難以專精，難以掌握到 Production 水準，選擇技術的集合應該要盡量小。 技術有全局的影響，不該由個人決策。應該條列不用新技術會有什麼不便，跟用新技術有什麼方便來做對比。 等等，我覺得非常受用。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-04-19T11:42:00+08:00">
+    <meta property="article:modified_time" content="2023-04-19T11:42:00+08:00">
+
+  <meta itemprop="name" content="選擇無聊的技術">
+  <meta itemprop="description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考：
+不該過分追求使用新技術。 人的專注力有限，該優先花在產品方向而非技術細節上。 未知有分「已知的未知」跟「未知的未知」，使用新技術兩者都較多，而「未知的未知」會多很多。 技術難以專精，難以掌握到 Production 水準，選擇技術的集合應該要盡量小。 技術有全局的影響，不該由個人決策。應該條列不用新技術會有什麼不便，跟用新技術有什麼方便來做對比。 等等，我覺得非常受用。">
+  <meta itemprop="datePublished" content="2023-04-19T11:42:00+08:00">
+  <meta itemprop="dateModified" content="2023-04-19T11:42:00+08:00">
+  <meta itemprop="wordCount" content="311">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="選擇無聊的技術">
+  <meta name="twitter:description" content="感謝原作者 Dan McKinley 授權翻譯，這篇 《選擇無聊的技術》中文版 已經在原作者網站上線。講述他對選用技術的看法，蠻多論點值得思考：
+不該過分追求使用新技術。 人的專注力有限，該優先花在產品方向而非技術細節上。 未知有分「已知的未知」跟「未知的未知」，使用新技術兩者都較多，而「未知的未知」會多很多。 技術難以專精，難以掌握到 Production 水準，選擇技術的集合應該要盡量小。 技術有全局的影響，不該由個人決策。應該條列不用新技術會有什麼不便，跟用新技術有什麼方便來做對比。 等等，我覺得非常受用。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -162,16 +173,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

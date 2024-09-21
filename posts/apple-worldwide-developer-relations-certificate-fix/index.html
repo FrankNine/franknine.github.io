@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,17 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer）：
+" /><meta name="keywords" content="macOS, 憑證, WWDR" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/apple-worldwide-developer-relations-certificate-fix/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/apple-worldwide-developer-relations-certificate-fix/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +41,26 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="修復 Apple 開發憑證" />
-<meta property="og:description" content="2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/apple-worldwide-developer-relations-certificate-fix/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2016-02-15T17:15:55+00:00" />
-<meta property="article:modified_time" content="2016-02-15T17:15:55+00:00" />
-<meta itemprop="name" content="修復 Apple 開發憑證">
-<meta itemprop="description" content="2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer"><meta itemprop="datePublished" content="2016-02-15T17:15:55+00:00" />
-<meta itemprop="dateModified" content="2016-02-15T17:15:55+00:00" />
-<meta itemprop="wordCount" content="245">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="修復 Apple 開發憑證"/>
-<meta name="twitter:description" content="2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/apple-worldwide-developer-relations-certificate-fix/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="修復 Apple 開發憑證">
+  <meta property="og:description" content="2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer）：">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-02-15T17:15:55+00:00">
+    <meta property="article:modified_time" content="2016-02-15T17:15:55+00:00">
+
+  <meta itemprop="name" content="修復 Apple 開發憑證">
+  <meta itemprop="description" content="2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer）：">
+  <meta itemprop="datePublished" content="2016-02-15T17:15:55+00:00">
+  <meta itemprop="dateModified" content="2016-02-15T17:15:55+00:00">
+  <meta itemprop="wordCount" content="245">
+  <meta itemprop="keywords" content="macOS,憑證,WWDR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="修復 Apple 開發憑證">
+  <meta name="twitter:description" content="2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer）：">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -128,7 +136,7 @@
           <article class="post">
   <div class="post-content">
     <p>2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer）：</p>
-<p><img src="/images/apple-worldwide-developer-relations-certificate-fix/invalid-issuer.png" alt="Invalid Issuer"></p>
+<p><img alt="Invalid Issuer" src="/images/apple-worldwide-developer-relations-certificate-fix/invalid-issuer.png"></p>
 <p>修復方式是刪除舊的 WWDR 憑證，然後安裝新的 WWDR 憑證，新的憑證可以在這裡找到：<br>
 <a href="https://developer.apple.com/support/certificates/expiration/">https://developer.apple.com/support/certificates/expiration/</a></p>
 <p>所有人應該都會有這張舊的 WWDR 憑證，但是我在一些機器上找不到，後來發現原因有兩個：</p>
@@ -137,9 +145,9 @@
 <li>你的 Keychain Access 可能被設定成隱藏過期的憑證</li>
 </ol>
 <p>解除隱藏的選項在：View / Show Expired Certificates</p>
-<p><img src="/images/apple-worldwide-developer-relations-certificate-fix/show-expired-certificates.png" alt="Show Expired Certificates"></p>
+<p><img alt="Show Expired Certificates" src="/images/apple-worldwide-developer-relations-certificate-fix/show-expired-certificates.png"></p>
 <p>過期的 WWDR 現在看應該會長這樣，這台機器上是被放到 System keychain：</p>
-<p><img src="/images/apple-worldwide-developer-relations-certificate-fix/expired-certificate.png" alt="Expired Certificate"></p>
+<p><img alt="Expired Certificate" src="/images/apple-worldwide-developer-relations-certificate-fix/expired-certificate.png"></p>
 <p>刪除、安裝新的憑證即可解決問題。</p>
 <p>參考資料：</p>
 <p><a href="http://stackoverflow.com/questions/35390072/this-certificate-has-an-invalid-issuer-apple-push-services/35400712#35400712">http://stackoverflow.com/questions/35390072/this-certificate-has-an-invalid-issuer-apple-push-services/35400712#35400712</a></p>
@@ -168,16 +176,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

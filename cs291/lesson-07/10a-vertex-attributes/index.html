@@ -32,19 +32,19 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 解答
-</span></span><span class="line"><span class="cl">geometry = new THREE.Geometry();
-</span></span><span class="line"><span class="cl">geometry.vertices.push( new THREE.Vector3( 100, 0, 0 ) );
-</span></span><span class="line"><span class="cl">geometry.vertices.push( new THREE.Vector3( 0, 100, 0 ) );
-</span></span><span class="line"><span class="cl">geometry.vertices.push( new THREE.Vector3( 0, 0, 100 ) );
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="err">解答</span>
+</span></span><span class="line"><span class="cl"><span class="n">geometry</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Geometry</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span> <span class="p">)</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
-</span></span><span class="line"><span class="cl">// 這個實際上會乘上材質的顏色，預設是白色
-</span></span><span class="line"><span class="cl">var color1 = new THREE.Color( 0xff0000 );
-</span></span><span class="line"><span class="cl">var color2 = new THREE.Color( 0x00ff00 );
-</span></span><span class="line"><span class="cl">var color3 = new THREE.Color( 0x0000ff );
-</span></span><span class="line"><span class="cl">geometry.faces[0].vertexColors = [ color1, color2, color3 ];
-</span></span><span class="line"><span class="cl">mesh = new THREE.Mesh( geometry, material );
+</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">faces</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Face3</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">這個實際上會乘上材質的顏色，預設是白色</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">color1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="mh">0xff0000</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">color2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="mh">0x00ff00</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">color3</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="mh">0x0000ff</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">faces</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">vertexColors</span> <span class="o">=</span> <span class="p">[</span> <span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">,</span> <span class="n">color3</span> <span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">geometry</span><span class="p">,</span> <span class="n">material</span> <span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>

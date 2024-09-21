@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,17 +17,17 @@
 
 
 <meta name="author" content="Chun-Fu Chao" /><meta name="description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。
-" />
+" /><meta name="keywords" content="macOS, Wine" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/macos-sierra-wine/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/macos-sierra-wine/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,19 +41,26 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲" />
-<meta property="og:description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/macos-sierra-wine/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2017-02-02T14:11:34+00:00" />
-<meta property="article:modified_time" content="2017-02-02T14:11:34+00:00" />
-<meta itemprop="name" content="在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲">
-<meta itemprop="description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。"><meta itemprop="datePublished" content="2017-02-02T14:11:34+00:00" />
-<meta itemprop="dateModified" content="2017-02-02T14:11:34+00:00" />
-<meta itemprop="wordCount" content="1011">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲"/>
-<meta name="twitter:description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/macos-sierra-wine/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲">
+  <meta property="og:description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-02-02T14:11:34+00:00">
+    <meta property="article:modified_time" content="2017-02-02T14:11:34+00:00">
+
+  <meta itemprop="name" content="在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲">
+  <meta itemprop="description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。">
+  <meta itemprop="datePublished" content="2017-02-02T14:11:34+00:00">
+  <meta itemprop="dateModified" content="2017-02-02T14:11:34+00:00">
+  <meta itemprop="wordCount" content="1011">
+  <meta itemprop="keywords" content="macOS,Wine">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="在 macOS Sierra 透過 Wine 執行日文 Windows 遊戲">
+  <meta name="twitter:description" content="最近不知道被什麼雷打到，想在 macOS 上面跑日文遊戲。結果大概算是成功一半，如果遊戲原本的資料的路徑有日文會跑不動，除此之外能跑的比想像中的還多，順手寫個紀錄這樣。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -133,7 +140,7 @@
 <p>首先是要安裝 Wine 這個在 Unix-like 系統下的 Windows emulator (?)，以下的教學我是照著 <a href="https://www.davidbaumgold.com/tutorials/wine-mac/">Installing Wine on Mac OS X</a> 這篇文章做的。</p>
 <p>最首先是要有 Xcode ，這個的取得方式就不贅述了。</p>
 <p>再來要安裝 OSX 跟 macOS 上面第三方套件管理工具 Homebrew：
-<a href="http://brew.sh/index_zh-tw.html">http://brew.sh/index_zh-tw.html</a></p>
+<a href="https://brew.sh/zh-tw/">https://brew.sh/zh-tw/</a></p>
 <p>如果像我一樣是在 macOS 之前就安裝Homebrew 然後升級成 macOS 之後壞掉的，homebrew 有提供自我診斷指令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -154,7 +161,7 @@
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chown -R root:wheel /usr/local
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>再來是安裝 <a href="https://caskroom.github.io/">Homebrew Cask</a> 這個擴充套件</p>
+</div><p>再來是安裝 <a href="https://formulae.brew.sh/cask/">Homebrew Cask</a> 這個擴充套件</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -266,16 +273,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

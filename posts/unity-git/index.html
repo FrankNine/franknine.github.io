@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,17 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。
+" /><meta name="keywords" content="Unity, git" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/unity-git/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/unity-git/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +41,26 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="Unity 和 git" />
-<meta property="og:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/unity-git/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-05-10T23:20:12+08:00" />
-<meta property="article:modified_time" content="2020-05-10T23:20:12+08:00" />
-<meta itemprop="name" content="Unity 和 git">
-<meta itemprop="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經"><meta itemprop="datePublished" content="2020-05-10T23:20:12+08:00" />
-<meta itemprop="dateModified" content="2020-05-10T23:20:12+08:00" />
-<meta itemprop="wordCount" content="9413">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Unity 和 git"/>
-<meta name="twitter:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/unity-git/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="Unity 和 git">
+  <meta property="og:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-05-10T23:20:12+08:00">
+    <meta property="article:modified_time" content="2020-05-10T23:20:12+08:00">
+
+  <meta itemprop="name" content="Unity 和 git">
+  <meta itemprop="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
+  <meta itemprop="datePublished" content="2020-05-10T23:20:12+08:00">
+  <meta itemprop="dateModified" content="2020-05-10T23:20:12+08:00">
+  <meta itemprop="wordCount" content="9413">
+  <meta itemprop="keywords" content="Unity,git">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unity 和 git">
+  <meta name="twitter:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -134,34 +142,34 @@
 <p>如果對 git 操作不熟悉的話，目前中文教學最推薦的還是 <a href="https://gitbook.tw/">為你自己學 Git</a> by <a href="https://twitter.com/eddiekao">高見龍</a>。除了線上版教的基本操作外，付費版內很難得有 git 資料結構（Commit、Tree、Blob）的介紹，對於更加熟悉 git 非常有幫助。</p>
 <h1 id="用戶端">用戶端</h1>
 <p>之前為了公司需要同時滿足技術人員與非技術背景人員操作 git 的需求 Survey 了很多 git 用戶端，目前選定的是需要付費的 <a href="https://git-fork.com/">Fork</a>。在這之前用的是最常見免費的 <a href="https://www.sourcetreeapp.com/">SourceTree</a>，不過登入上常常會出現 <a href="https://community.atlassian.com/t5/Sourcetree-questions/Git-Credential-Manager-for-Windows-Popups/qaq-p/579905">問題</a> 需要排解，還有有的時候檔案多的時候會變很慢，對圖片與 LFS 檔案也沒有預覽支援。另外有些程式同事會選用 Git for Windows 附帶的 <a href="http://gitextensions.github.io/">Git Extensions</a> 但是這個對美術使用上有些不友善，習慣用戶端有一個視窗的也可能會不習慣 Shell Extension。另一個免費的 Shell Extension 選擇是 <a href="https://tortoisegit.org/">TortoiseGit</a>，對美術素材支援到顯示 LFS 內的圖片，但是在 Blame、Rebase 之類比較複雜的操作比較不順手。<a href="https://desktop.github.com/">GitHub Desktop</a> 是功能太陽春，<a href="https://www.gitkraken.com/">GitKraken</a> 雖然有做很多美術相關的功能但是可能是因為 Electron 先天問題，在大 Repo 上還蠻喘的。<a href="https://www.syntevo.com/smartgit/">SmartGit</a> 則是功能雖多但是對美術素材支援算是沒有，而且年費不便宜。</p>
-<figure class="center"><img src="/images/unity-git/fork.png"/><figcaption>
-            <h4>Fork</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/fork.png"><figcaption>
+      <h4>Fork</h4>
+    </figcaption>
 </figure>
 
 <p>目前 Fork 提供 Windows 跟 Mac 的原生用戶端，平常速度上算是不錯。付費目前是一次性 <a href="https://git-fork.com/buy">50 USD</a> 一個序號最多啟動三台電腦，也比需要訂閱的工具負擔低（雖然不知道以後會不會改）。介面上相當簡潔但可以滿足大部分的開發需求，內建的 Rebase 跟 Merge 介面難得做得算好用。對於遊戲開發算是 Killer Feature 是內建的圖片預覽跟 diff（diff Mac 版還只有 Side-by-side 沒有 Swipe 跟 Onion Skin），而且在 LFS 的配置下也能正常運作。</p>
-<figure class="center"><img src="/images/unity-git/swipe-image-diff.gif" width="400"/><figcaption>
-            <h4>https://git-fork.com/blog/posts/forkwin-1.38/</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/swipe-image-diff.gif" width="400"><figcaption>
+      <h4>https://git-fork.com/blog/posts/forkwin-1.38/</h4>
+    </figcaption>
 </figure>
 
 <h1 id="伺服器端">伺服器端</h1>
 <p>一般的 git Hosting 服務在 LFS 的容量與流量限制較多（<a href="https://help.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-git-large-file-storage">GitHub 的 LFS 條款</a>），對遊戲專案比較不友善。Riot 的《符文大地傳說》在 <a href="https://technology.riotgames.com/news/legends-runeterra-cicd-pipeline">分享文章</a> 中提到他們是使用 GitHub Enterprise，搭配使用 <a href="https://jfrog.com/artifactory/">Artifactory</a> 作為 LFS Server。使用 Hosting 服務代表 git 操作要走公司聯外網路，在素材大一些的專案以台灣網路狀態也不太實際。如果情況許可推薦用主機或是 NAS 架設 <a href="https://about.gitlab.com/install/">GitLab</a>。GitLab 可以滿足 git、<a href="https://docs.gitlab.com/ee/ci/introduction/">CI Runner</a>、<a href="https://about.gitlab.com/solutions/project-management/">專案管理</a> 與 <a href="https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html">Code Review</a> 等功能，雖然可能專案管理介面沒有像 Trello 或其他工具漂亮、順手。但是這幾個功能在 GitLab 裡可以相互 Reference，像是在 Issue 上面 Reference Merge Request 的進度或是特定 CI Pipeline 的建置結果，這種整合是難以取代的。只是走 Self-hosting IT 方面工就會比較多，備份方面也要注意。</p>
-<figure class="center"><img src="/images/unity-git/group-issue-board.png" width="700"/><figcaption>
-            <h4>https://about.gitlab.com/stages-devops-lifecycle/issueboard/</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/group-issue-board.png" width="700"><figcaption>
+      <h4>https://about.gitlab.com/stages-devops-lifecycle/issueboard/</h4>
+    </figcaption>
 </figure>
 
 <h1 id="external-merger">External Merger</h1>
 <p>合併工具大家一般可能用內建的 <a href="http://kdiff3.sourceforge.net/">KDiff3</a>，不過我自己從以前第一份工作用 Perforce 的經驗就非常喜歡 Perforce 的合併工具。幸好 Perforce 的合併工具 <a href="https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge">P4Merge</a> 可以單獨安裝使用且不收費。大部分的 git 用戶端都可以設定要用哪個外部合併工具，也大多可以識別 P4Merge。程式合併挑選改動跟編輯合併結果相當好用，diff 的判讀也比其他工具好。再加上有非常強大的圖片 diff，可以標出有差異的像素在哪裡。要說明顯的缺點就是非英文字符不太支援，會有亂碼跟 UI 錯亂現象。</p>
-<figure class="center"><img src="/images/unity-git/p4merge-pixel-diff.png"/><figcaption>
-            <h4>P4Merge image diff</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/p4merge-pixel-diff.png"><figcaption>
+      <h4>P4Merge image diff</h4>
+    </figcaption>
 </figure>
 
-<figure class="center"><img src="/images/unity-git/p4merge-three-way-merge.gif" width="500"/><figcaption>
-            <h4>P4Merge three way merge</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/p4merge-three-way-merge.gif" width="500"><figcaption>
+      <h4>P4Merge three way merge</h4>
+    </figcaption>
 </figure>
 
 <h1 id="設定">設定</h1>
@@ -339,14 +347,14 @@
 <p>沒有寫成</p>
 <p><code>* binary</code></p>
 <p>是因為 <a href="https://git-scm.com/docs/gitattributes#_using_macro_attributes">Binary</a> 代表 <code>-text -diff</code>，我們希望拔掉行尾轉換但是希望對 <code>.scene</code>、<code>.prefab</code> 與 <code>.meta</code> 留住文字 diff。看 diff 可以抓到 GameObject、Component 的變化，或是 <code>.meta</code> 的 GUID 跑掉的情況。</p>
-<figure class="center"><img src="/images/unity-git/prefab-diff.png"/><figcaption>
-            <h4>Prefab 在沒有加入 LFS 沒有 -diff 的情況下會在 git 用戶端裡顯示像這樣的 diff。可以看到我們把 RectTransform 大小改成 200 X 200，但同時不小心把 GameObject 關了。</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/prefab-diff.png"><figcaption>
+      <h4>Prefab 在沒有加入 LFS 沒有 -diff 的情況下會在 git 用戶端裡顯示像這樣的 diff。可以看到我們把 RectTransform 大小改成 200 X 200，但同時不小心把 GameObject 關了。</h4>
+    </figcaption>
 </figure>
 
-<figure class="center"><img src="/images/unity-git/meta-diff.png" width="600"/><figcaption>
-            <h4>看到歷史裡面有像這樣 `.meta` 裡的 GUID 變化是非常危險的，代表 Reference 會掉。</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/meta-diff.png" width="600"><figcaption>
+      <h4>看到歷史裡面有像這樣 `.meta` 裡的 GUID 變化是非常危險的，代表 Reference 會掉。</h4>
+    </figcaption>
 </figure>
 
 <p>至於行尾常常亂跳的 <code>.meta</code> 因為實驗出來在任何平台 Unity Editor 都是存成以 LF 換行，所以寫死</p>
@@ -436,9 +444,9 @@
 <p>如果有機會自己做的話會比較想用 Python 之類的語言實現，這樣邏輯會比較好懂。另外空目錄的 <code>.meta</code> 平常不會造成問題，因此我沒有特別急著要用 Hook 檢查（Commit 內缺少 <code>.meta</code> 則是宣導後蠻少發生的，不過當然如果有自動檢查總是好）。但是有個特別要注意的是 iOS 與 Mac 環境的 <code>.framework</code> 與 <code>.bundle</code> 資料夾，這些資料夾裡面裝的是 Plugin 而 Import Settings 放在目錄 <code>.meta</code> 裡，如果刪除時沒有正確清理目錄 <code>.meta</code> 則 Xcode 會試圖 Import 空的 Plugin 然後建置失敗。</p>
 <h1 id="rebase">Rebase</h1>
 <p>使用 git 到現在算是適應 Fork 後 Fetch Upstream、Push Origin、開 Merge Request 的流程（可以參考 <a href="https://gitbook.tw/chapters/github/syncing-a-fork.html">【狀況題】怎麼跟上當初 fork 專案的進度？</a>），甚至是加其他同事的 fork 當作 Remote。在我自己的 fork 上面還蠻習慣用 <a href="https://git-scm.com/docs/git-rebase">Rebase</a> （<a href="https://gitbook.tw/chapters/branch/merge-with-rebase.html">另一種合併方式（使用 rebase）</a>）或是 <a href="https://git-scm.com/docs/git-cherry-pick">Cherrypick</a> （<a href="https://gitbook.tw/chapters/faq/cherry-pick.html">【狀況題】如果你只想要某個分支的某幾個 Commit？</a>）改造歷史的，如果有人在我合併之前早一步合併到主要分支，我會把自己分支 Rebase 到別人的 Merge 後重開 Merge Request，然後開 <code>--no-ff</code> （<a href="https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---no-ff">no fast-forward</a>）弄出一串小耳多形狀的歷史（<a href="https://gitbook.tw/chapters/branch/merge-commit.html">[狀況題]為什麼我的分支都沒有「小耳朵」？</a>），方便以後回頭查找。另外有一種情況是可能某個 Feature 把 X 改成 Y，後來發現做錯了又從 Y 改成 Z。這樣的情況我會試著在發 Merge Request 之前把歷史改成 X -&gt; Z 而非 X -&gt; Y -&gt; Z 減少 Reviewer 的負擔。感覺這些操作可能可以加入 Code Review 標準，不過目前時程壓力狀況下還是只有我自己會要求自己，還沒有推廣的經驗。</p>
-<figure class="center"><img src="/images/unity-git/merge-rebase.png"/><figcaption>
-            <h4>Branch 直接使用 Merge 與 Rebase 後 merge --no-ff 的歷史差別，右邊 Rebase 的歷史比較好懂（歷史僅供示範用，工作的時候應該情況會更複雜）</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/merge-rebase.png"><figcaption>
+      <h4>Branch 直接使用 Merge 與 Rebase 後 merge --no-ff 的歷史差別，右邊 Rebase 的歷史比較好懂（歷史僅供示範用，工作的時候應該情況會更複雜）</h4>
+    </figcaption>
 </figure>
 
 <p>關於 Rebase 有很多很好的中文文章，可以參考：</p>
@@ -541,14 +549,14 @@
 <p>另外 <a href="https://github.com/git-lfs/git-lfs/issues/3637">Per-branch Lock</a> 跟 <a href="https://github.com/git-lfs/git-lfs/issues/2671#issuecomment-349458133">Auto Unlock</a> 這兩個使用者期望能實作的改進好像就放置了，感覺這幾個大問題解決前好像沒有繼續投資研究 LFS Lock 的必要。</p>
 <h1 id="vfs-for-git">VFS for Git</h1>
 <p><a href="https://vfsforgit.org/">VFS for Git</a> 是微軟為了使用 git 管理 Windows 這個歷史悠久又巨大的 Repo 而提出的方案。底層是依賴 <a href="https://docs.microsoft.com/zh-tw/windows/win32/projfs/projected-file-system">ProjFS</a> 虛擬檔案系統，使用起來會看到 <code>gvfs clone</code> 時檔案存在在硬碟上但是沒有內容，一嘗試打開讀檔的 Blocking 就會包含從 Server 下載這段。測試 <code>gvfs clone</code> 的時候真的如同微軟宣稱的非常高速，在一分鐘內結束。實際的內容在 Unity 專案開啟時才會自動下載 HEAD Worktree 的內容，因為是檔案系統層的介入，Unity 2020 以後不用任何修改就能使用。但是因為 Unity 每次開啟都會掃描整個 <code>/Assets/</code> 資料夾建立 AssetDatabase，等於最後還是把整個 <code>/Assets/</code> 都摸過一遍抓下來。如果有引擎是只碰編輯有需要的檔案的系統，才能完整享受要用才抓的好處吧。</p>
-<figure class="center"><img src="/images/unity-git/vfs-for-git-windows.png"/><figcaption>
-            <h4>即使微軟宣稱 Windows repo 很大</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/vfs-for-git-windows.png"><figcaption>
+      <h4>即使微軟宣稱 Windows repo 很大</h4>
+    </figcaption>
 </figure>
 
-<figure class="center"><img src="/images/unity-git/spider-man.png"/><figcaption>
-            <h4>老實說跟遊戲比起來還是感覺不大</h4>
-        </figcaption>
+<figure class="center"><img src="/images/unity-git/spider-man.png"><figcaption>
+      <h4>老實說跟遊戲比起來還是感覺不大</h4>
+    </figcaption>
 </figure>
 
 <p>雖然看起來很厲害但是現階段應該還是不會考量導入，最主要就是支援的 git Server 太少了。只有 Azure Repos 支援，然後 Repo 又有 <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/limits?view=azure-devops#repository-size">250GB 大小限制</a>。有限制在還是會有點擔心。<a href="https://github.com/microsoft/VFSForGit/issues/1640#issuecomment-590880312">GitHub</a> 跟 <a href="https://gitlab.com/gitlab-org/gitlab-foss/-/issues/27895">GitLab</a> 看起來沒有積極想要支援的感覺。</p>
@@ -599,16 +607,16 @@ JohnSu、Recca、Jonas 與各位朋友們。如果有想要補充討論的也歡
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

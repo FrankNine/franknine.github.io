@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -25,10 +25,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/hype-driven-development/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/hype-driven-development/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,22 +42,28 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="一窩蜂驅動開發" />
-<meta property="og:description" content="原文：《Hype Driven Development》，感謝原作者 Marek Kirejczyk 授權翻譯，感謝 CH Huang、Yi Jeng Lin 協助勘誤。轉載請附上原文連結與出處。
-軟體開發團隊時常靠偏見、社群媒體上的消息、或者只是看什麼東西最「夯」來決定要用什麼架構或是技術。而非扎實地研究與衡量這些東西對專案會造成什麼樣的影響。我把這叫做「一窩蜂驅動開發」（Hype Driven Development），我認定這樣是有害的也建議開發者們改採更專業的「務實軟體開發」（Solid Software Engineering）。我會解釋這一切是怎麼發生的，還有怎麼避開這個問題。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/hype-driven-development/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2017-02-07T16:53:42+00:00" />
-<meta property="article:modified_time" content="2017-02-07T16:53:42+00:00" />
-<meta itemprop="name" content="一窩蜂驅動開發">
-<meta itemprop="description" content="原文：《Hype Driven Development》，感謝原作者 Marek Kirejczyk 授權翻譯，感謝 CH Huang、Yi Jeng Lin 協助勘誤。轉載請附上原文連結與出處。
-軟體開發團隊時常靠偏見、社群媒體上的消息、或者只是看什麼東西最「夯」來決定要用什麼架構或是技術。而非扎實地研究與衡量這些東西對專案會造成什麼樣的影響。我把這叫做「一窩蜂驅動開發」（Hype Driven Development），我認定這樣是有害的也建議開發者們改採更專業的「務實軟體開發」（Solid Software Engineering）。我會解釋這一切是怎麼發生的，還有怎麼避開這個問題。"><meta itemprop="datePublished" content="2017-02-07T16:53:42+00:00" />
-<meta itemprop="dateModified" content="2017-02-07T16:53:42+00:00" />
-<meta itemprop="wordCount" content="3975">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="一窩蜂驅動開發"/>
-<meta name="twitter:description" content="原文：《Hype Driven Development》，感謝原作者 Marek Kirejczyk 授權翻譯，感謝 CH Huang、Yi Jeng Lin 協助勘誤。轉載請附上原文連結與出處。
-軟體開發團隊時常靠偏見、社群媒體上的消息、或者只是看什麼東西最「夯」來決定要用什麼架構或是技術。而非扎實地研究與衡量這些東西對專案會造成什麼樣的影響。我把這叫做「一窩蜂驅動開發」（Hype Driven Development），我認定這樣是有害的也建議開發者們改採更專業的「務實軟體開發」（Solid Software Engineering）。我會解釋這一切是怎麼發生的，還有怎麼避開這個問題。"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/hype-driven-development/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="一窩蜂驅動開發">
+  <meta property="og:description" content="原文：《Hype Driven Development》，感謝原作者 Marek Kirejczyk 授權翻譯，感謝 CH Huang、Yi Jeng Lin 協助勘誤。轉載請附上原文連結與出處。
+軟體開發團隊時常靠偏見、社群媒體上的消息、或者只是看什麼東西最「夯」來決定要用什麼架構或是技術。而非扎實地研究與衡量這些東西對專案會造成什麼樣的影響。我把這叫做「一窩蜂驅動開發」（Hype Driven Development），我認定這樣是有害的也建議開發者們改採更專業的「務實軟體開發」（Solid Software Engineering）。我會解釋這一切是怎麼發生的，還有怎麼避開這個問題。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-02-07T16:53:42+00:00">
+    <meta property="article:modified_time" content="2017-02-07T16:53:42+00:00">
+
+  <meta itemprop="name" content="一窩蜂驅動開發">
+  <meta itemprop="description" content="原文：《Hype Driven Development》，感謝原作者 Marek Kirejczyk 授權翻譯，感謝 CH Huang、Yi Jeng Lin 協助勘誤。轉載請附上原文連結與出處。
+軟體開發團隊時常靠偏見、社群媒體上的消息、或者只是看什麼東西最「夯」來決定要用什麼架構或是技術。而非扎實地研究與衡量這些東西對專案會造成什麼樣的影響。我把這叫做「一窩蜂驅動開發」（Hype Driven Development），我認定這樣是有害的也建議開發者們改採更專業的「務實軟體開發」（Solid Software Engineering）。我會解釋這一切是怎麼發生的，還有怎麼避開這個問題。">
+  <meta itemprop="datePublished" content="2017-02-07T16:53:42+00:00">
+  <meta itemprop="dateModified" content="2017-02-07T16:53:42+00:00">
+  <meta itemprop="wordCount" content="3975">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="一窩蜂驅動開發">
+  <meta name="twitter:description" content="原文：《Hype Driven Development》，感謝原作者 Marek Kirejczyk 授權翻譯，感謝 CH Huang、Yi Jeng Lin 協助勘誤。轉載請附上原文連結與出處。
+軟體開發團隊時常靠偏見、社群媒體上的消息、或者只是看什麼東西最「夯」來決定要用什麼架構或是技術。而非扎實地研究與衡量這些東西對專案會造成什麼樣的影響。我把這叫做「一窩蜂驅動開發」（Hype Driven Development），我認定這樣是有害的也建議開發者們改採更專業的「務實軟體開發」（Solid Software Engineering）。我會解釋這一切是怎麼發生的，還有怎麼避開這個問題。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -150,14 +156,14 @@
 <p>一切的<strong>罪惡根源似乎是社群媒體</strong>，太多的想法在實戰測試之前就傳出去了，跑得比大家分析利弊得失的速度還要快。</p>
 <h1 id="剖析一窩蜂">剖析一窩蜂</h1>
 <p>大多數的一窩蜂現象有著類似起伏：</p>
-<p><img src="/images/hype-driven-development/hype-anatomy.png" alt="Hype Anatomy"></p>
+<p><img alt="Hype Anatomy" src="/images/hype-driven-development/hype-anatomy.png"></p>
 <h2 id="第一階段真正的問題與解答">第一階段：真正的問題與解答</h2>
 <p>一開始是某個公司遇到某個問題。公司裡的某個團隊認定現有的技術、流程、或是架構設計無法解決他們的問題。這個公司自製了一個架構、函式庫、或是設計模式解決了他們遇到的問題。</p>
 <h2 id="第二階段曝光瘋傳關鍵字">第二階段：曝光、瘋傳、關鍵字</h2>
 <p>這個團隊迫不急待地想跟其他人分享他們的解法，過沒多久他們開始寫文章，去研討會演講。他們解決的問題通常有一定的複雜度，所以提供的解決方法也會有一定的複雜度。人們對新技術感到興奮，卻不一定對問題本質還有解答的實作細節有深刻了解。畢竟問題跟解答都不簡單，一個推文、一段閒聊、甚至一整篇部落格文章可能都沒有辦法解釋清楚。當我們用社群媒體、部落格、或是研討會上的快閃演講來傳達，訊息本身就失真了。</p>
 <h2 id="第三階段狂熱開始">第三階段：狂熱開始</h2>
 <p>各式一窩蜂的開發者讀到那些文章或是聽到演講。很快地世界各地的開發者都開始採用這個新技術。但因為他們接收到的訊息有一定程度的失真－有些人倉促地決定使用某個框架，即使這個東西並沒有解決到他們現在實際遇到的任何問題，但他們還是錯誤地期待這個新玩意兒是萬靈丹。</p>
-<p><img src="/images/hype-driven-development/hype-dev.png" alt="Hype Dev"></p>
+<p><img alt="Hype Dev" src="/images/hype-driven-development/hype-dev.png"></p>
 <h2 id="第四階段失望">第四階段：失望</h2>
 <p>過了幾個 Sprint 之後，這項新技術並沒有讓團隊過得更好，但他們要花的工夫變多了。團隊要花很多時間重寫程式還有學習新技術要怎麼用。整體進度慢下來了，管理階層覺得火大，大家都覺得被騙了。</p>
 <h2 id="第五階段多麼痛的領悟">第五階段：多麼痛的領悟</h2>
@@ -213,7 +219,7 @@
 <li>有<strong>扎實技術背景</strong>的人是你的好朋友－知道越多範式（Paradigms）、對程式理論（例如演算法、平行處理）越熟悉、或是有好的工程素養的人通常比較不會跟風。</li>
 <li><strong>經驗</strong>－通常越年輕的開發者越容易一窩蜂。見過不同技術來來去去甚至自己被一窩蜂咬過的人做決策會比較平衡。</li>
 </ul>
-<p><img src="/images/hype-driven-development/the-hype-is-strong.png" alt="TheHypeIsStrong"></p>
+<p><img alt="TheHypeIsStrong" src="/images/hype-driven-development/the-hype-is-strong.png"></p>
 <p>如果你喜歡這篇文章可以到<a href="https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22#.d7jdbvdn3">英文原文</a>按讚。也可以在 <a href="https://www.facebook.com/Daftcode/">Facebook</a>、<a href="https://www.linkedin.com/company/daftcode-sp-z-o-o-">LinkedIn</a>、<a href="https://twitter.com/Daftcode_pl">Twitter</a> 上追蹤作者。</p>
   </div>
 </article>
@@ -239,16 +245,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

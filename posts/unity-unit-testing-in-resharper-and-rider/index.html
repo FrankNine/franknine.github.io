@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,17 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦" />
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：
+" /><meta name="keywords" content="Unity, ReSharper, Rider, NUnit" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
 
 
-<link rel="canonical" href="https://franknine.github.io/posts/unity-unit-testing-in-resharper-and-rider/" />
+<link rel="canonical" href="https://www.chunfuchao.com/posts/unity-unit-testing-in-resharper-and-rider/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,19 +41,26 @@
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
-<meta property="og:title" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試" />
-<meta property="og:description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://franknine.github.io/posts/unity-unit-testing-in-resharper-and-rider/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2017-12-29T12:43:16+00:00" />
-<meta property="article:modified_time" content="2017-12-29T12:43:16+00:00" />
-<meta itemprop="name" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
-<meta itemprop="description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦"><meta itemprop="datePublished" content="2017-12-29T12:43:16+00:00" />
-<meta itemprop="dateModified" content="2017-12-29T12:43:16+00:00" />
-<meta itemprop="wordCount" content="2029">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試"/>
-<meta name="twitter:description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦"/>
+<meta property="og:url" content="https://www.chunfuchao.com/posts/unity-unit-testing-in-resharper-and-rider/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
+  <meta property="og:description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-12-29T12:43:16+00:00">
+    <meta property="article:modified_time" content="2017-12-29T12:43:16+00:00">
+
+  <meta itemprop="name" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
+  <meta itemprop="description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：">
+  <meta itemprop="datePublished" content="2017-12-29T12:43:16+00:00">
+  <meta itemprop="dateModified" content="2017-12-29T12:43:16+00:00">
+  <meta itemprop="wordCount" content="2025">
+  <meta itemprop="keywords" content="Unity,ReSharper,Rider,NUnit">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
+  <meta name="twitter:description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -160,14 +168,14 @@
 <p>雖然整個過程一次沒有很久，但是當你要頻繁地使用測試驗證或是 TDD 時就會累積起來嚴重破壞節奏。雖然試著硬著頭皮逼自己在這樣環境下 TDD，但是大量的細碎的等待時間造成注意力發散，最後因為產出降低到自己受不了而放棄。</p>
 <p>在嘗試失敗後有很長一陣子覺得 Unity 應該是不能做測試或是 TDD，而又走回原來的老路。只是後來在拉板凳看 DHH 跟 Kent Beck 還有 Martin Fowler 的「<a href="https://martinfowler.com/articles/is-tdd-dead/">Is TDD Dead?</a>」大戰時，碰巧看到別的影片在教用 Ruby TDD。看到他們用的跟 IDE 整合的 Test Runner 才發現原來別人都是這樣玩的，不是在那邊切來切去。</p>
 <p>經歷過一些嘗試與失敗，再被 Unity 搞之後，終於發現使用 ReSharper 或是 Rider 的 Test Runner 跳過 Unity Editor 執行 Unity 測試的方法。</p>
-<p>首先要確定你的 Unity 版本，Unity 5.5 與之前的版本使用的是 NUnit 2.6.4.0，這個版本是可以正常被 ReSharper 跟 Rider 識別的。從 5.6 開始 Unity 改用 NUnit 3.5，但是是用 .Net Standard 環境編譯（JetBrains issue：<a href="https://youtrack.jetbrains.com/issue/RIDER-6711#comment=27-2346418&amp;u=1499686359938">https://youtrack.jetbrains.com/issue/RIDER-6711#comment=27-2346418&amp;u=1499686359938</a>），所以 ReSharper 跟 Rider 無法對接。後來的解決方法是使用 Unity 的 <code>OnGeneratedCSProjectFiles</code>  callback，在 Unity 生成 C# 專案時覆寫 nunit.framework 的路徑。從 Unity 安裝目錄的版本改成 NUnit 官方發行版本。最近幾天把自己寫的這個 Post-processor 上傳到 GitHub：</p>
+<p>首先要確定你的 Unity 版本，Unity 5.5 與之前的版本使用的是 NUnit 2.6.4.0，這個版本是可以正常被 ReSharper 跟 Rider 識別的。從 5.6 開始 Unity 改用 NUnit 3.5，但是是用 .Net Standard 環境編譯（JetBrains issue：<a href="https://youtrack.jetbrains.com/issue/RIDER-6711#comment=27-2346418&u=1499686359938">https://youtrack.jetbrains.com/issue/RIDER-6711#comment=27-2346418&u=1499686359938</a>），所以 ReSharper 跟 Rider 無法對接。後來的解決方法是使用 Unity 的 <code>OnGeneratedCSProjectFiles</code>  callback，在 Unity 生成 C# 專案時覆寫 nunit.framework 的路徑。從 Unity 安裝目錄的版本改成 NUnit 官方發行版本。最近幾天把自己寫的這個 Post-processor 上傳到 GitHub：</p>
 <p><a href="https://github.com/FrankNine/UnityNUnitReferenceOverride">https://github.com/FrankNine/UnityNUnitReferenceOverride</a></p>
 <p>但是去跟 JetBrians 的人獻寶的時候才發現 Rider for Unity plugin 已經在上個月實作這個功能了。我自己測試過 Rider 2017.3 之後已經不需要另外裝這個 Post-processor，所以這個就只有舊版 Rider 跟 ReSharper 需要了。</p>
 <p>處理好 nunit.framework 的連結之後在 Rider 裡就可以直接編譯執行測試，如果有必要可以設定 Session 只執行一部分的測試：</p>
-<p><img src="/images/unity-unit-testing-in-resharper-and-rider/run-unit-tests.png" alt="Run unit tests"></p>
+<p><img alt="Run unit tests" src="/images/unity-unit-testing-in-resharper-and-rider/run-unit-tests.png"></p>
 <p>測試左邊的綠色勾勾代表測試通過。</p>
 <p>我自己的慣用環境是 ReSharper，Rider 因為是比較晚出的產品所以支援還沒有 ReSharper 那麼好。ReSharper 除了可以在 Visual Studio 環境內執行 Unit test 之外，還可以另外加裝 dotCover：</p>
-<p><img src="/images/unity-unit-testing-in-resharper-and-rider/dotcover.png" alt="dotCover"></p>
+<p><img alt="dotCover" src="/images/unity-unit-testing-in-resharper-and-rider/dotcover.png"></p>
 <p>亮綠色的部分代表測試有涵蓋（Coverage）到的程式，執行測試後可以用來觀察程式有哪些分支沒有被元件測試到。同時加裝 dotCover 後 Unit test 會多一項 Continuous Testing Session，可以把測試加到這裡然後選觸發條件 On ‘Save’ Build and Run Dirty Tests 這樣在儲存的時候 ReSharper 就會自動偵測兩次存檔間有影響到哪些測試，自動建置與執行測試，在執行測試的同時還可以繼續編輯不用停下來。最近在這樣的配置下用 TDD 開發一個遊戲內的功能，覺得還蠻順手的。如果有在開發 Unity 又對測試有興趣的可以試用看看。而給 Rider 用的 dotCover 還在開發中，預計 2018 上市，Mac 的使用者可能要再等等。</p>
 <h3 id="附記">附記</h3>
 <p>關於測試本身我覺得自己的經驗還不夠，所以就先只介紹自己發現好用的工具。測試的概念可以參考：</p>
@@ -184,7 +192,7 @@
 </ul>
 <p>如果覺得 ReSharper 執行速度太慢，可以參考官方文件：<br>
 <a href="https://rider-support.jetbrains.com/hc/en-us/articles/207803955-Where-are-the-ReSharper-cache-files-kept-">https://rider-support.jetbrains.com/hc/en-us/articles/207803955-Where-are-the-ReSharper-cache-files-kept-</a> 尋找 cache 資料夾並將它加到防毒軟體的例外，對速度會有幫助。</p>
-<p>最後重複在 UnityNUnitReferenceOverride Post-processor 裡面提過的，如果使用 Visual Studio 開啟專案時發生找不到 Target Framework：<img src="/images/unity-unit-testing-in-resharper-and-rider/project-target-not-installed.png" alt="Project target not installed"></p>
+<p>最後重複在 UnityNUnitReferenceOverride Post-processor 裡面提過的，如果使用 Visual Studio 開啟專案時發生找不到 Target Framework：<img alt="Project target not installed" src="/images/unity-unit-testing-in-resharper-and-rider/project-target-not-installed.png"></p>
 <p>請到微軟 <a href="https://www.microsoft.com/net/download/visual-studio-sdks">.Net SDK</a> 網站下載對應的 .Net Framework 安裝，改 Target Framework 硬開所有的路徑會全部丟失。一般 Unity 使用的 .Net 3.5 要安裝.NET Framework 3.5 Runtime，使用 Unity 2017 加入的 4.6 Experimental Scripting Runtime 則是需要安裝 .NET Framework 4.6 Developer Pack（雖然下載連結標記 Visual Studio 2017 有內建 4.6，但實際測試是沒有的，要另外安裝）</p>
 
   </div>
@@ -211,16 +219,16 @@
       <div class="social-links">
       <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
       <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
-  <a href="https://franknine.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    %!(EXTRA string=<a class="hexo-link" href="https://gohugo.io">Hugo</a>)
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+     - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 

@@ -25,12 +25,12 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 仰角
-</span></span><span class="line"><span class="cl">light.position.y = Math.sin( effectController.altitude * Math.PI/180.0 );
-</span></span><span class="line"><span class="cl">// 方位角
-</span></span><span class="line"><span class="cl">var length = Math.sqrt(1 - light.position.y * light.position.y);
-</span></span><span class="line"><span class="cl">light.position.x = length * Math.cos( effectController.azimuth * Math.PI/180.0 );
-</span></span><span class="line"><span class="cl">light.position.z = length * Math.sin( effectController.azimuth * Math.PI/180.0 );
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="err">仰角</span>
+</span></span><span class="line"><span class="cl"><span class="n">light</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="n">effectController</span><span class="o">.</span><span class="n">altitude</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.0</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">方位角</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">length</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">light</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">light</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">light</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span> <span class="n">effectController</span><span class="o">.</span><span class="n">azimuth</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.0</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">light</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="n">effectController</span><span class="o">.</span><span class="n">azimuth</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mf">180.0</span> <span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>影片中的解答有個 bug <code>var length</code> 一行少了 <code>Math.sqrt</code>，這裡的程式才是對的。<em>（感謝 Sven Mika 指正）</em></p>

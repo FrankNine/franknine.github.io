@@ -29,16 +29,16 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">body = new THREE.Object3D();
-</span></span><span class="line"><span class="cl">var bodyLength = 60;
-</span></span><span class="line"><span class="cl">// 解答
-</span></span><span class="line"><span class="cl">createRobotBody( body, bodyLength, robotBodyMaterial );
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">body</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">bodyLength</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">解答</span>
+</span></span><span class="line"><span class="cl"><span class="n">createRobotBody</span><span class="p">(</span> <span class="n">body</span><span class="p">,</span> <span class="n">bodyLength</span><span class="p">,</span> <span class="n">robotBodyMaterial</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// 將上臂移動到身體的頂端
-</span></span><span class="line"><span class="cl">arm.position.y = bodyLength;
-</span></span><span class="line"><span class="cl">body.add( arm );
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">將上臂移動到身體的頂端</span>
+</span></span><span class="line"><span class="cl"><span class="n">arm</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">bodyLength</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">body</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">arm</span> <span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">scene.add( body );
+</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">body</span> <span class="p">);</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>然後取消以下三行的註解：</p>
