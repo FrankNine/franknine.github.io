@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Steam Deck 重置 sudo 密碼 - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="之前裝 Decky Loader 設定了 deck 使用者的密碼，結果現在要用 sudo 的時候發現忘記了。參考 Reddit 的步驟成功重置了。步驟如下：
+將 Steam Deck 關機 接上鍵盤 按住主機右下三個點的按鈕後，按一下電源鍵 成功的話應該會進入 Recovery Menu 選擇 Current SteamOS &#43; Boot Menu（應該是第三選項） 接者會出現 GRUB Menu，停在 SteamOS 選項上（應該是第一選項）按下 E 執行 [E] Edit Selection 會出現許多命令，用方向鍵往下捲，直到停在 steamenv_boot 開頭的一行上 按下 End 鍵到 steamenv_boot 命令的最後，加上 - systemd.debug_shell 按下 Ctrl&#43;X 重開機 到主畫面按下 Ctrl&#43;Alt&#43;F9 開啟 Debug Shell 輸入 passwd deck 後輸入新密碼兩次 成功後 Ctrl&#43;Alt&#43;F1 關閉 Debug Shell 這樣應該就可以了。
+" /><meta name="keywords" content="Steam Deck, sudo" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.134.3 with theme even" />
+
+
+<link rel="canonical" href="https://www.chunfuchao.com/posts/steam-deck-reset-sudo-password/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/twitter_center.css">
+
+
+<meta property="og:url" content="https://www.chunfuchao.com/posts/steam-deck-reset-sudo-password/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="Steam Deck 重置 sudo 密碼">
+  <meta property="og:description" content="之前裝 Decky Loader 設定了 deck 使用者的密碼，結果現在要用 sudo 的時候發現忘記了。參考 Reddit 的步驟成功重置了。步驟如下：
+將 Steam Deck 關機 接上鍵盤 按住主機右下三個點的按鈕後，按一下電源鍵 成功的話應該會進入 Recovery Menu 選擇 Current SteamOS &#43; Boot Menu（應該是第三選項） 接者會出現 GRUB Menu，停在 SteamOS 選項上（應該是第一選項）按下 E 執行 [E] Edit Selection 會出現許多命令，用方向鍵往下捲，直到停在 steamenv_boot 開頭的一行上 按下 End 鍵到 steamenv_boot 命令的最後，加上 - systemd.debug_shell 按下 Ctrl&#43;X 重開機 到主畫面按下 Ctrl&#43;Alt&#43;F9 開啟 Debug Shell 輸入 passwd deck 後輸入新密碼兩次 成功後 Ctrl&#43;Alt&#43;F1 關閉 Debug Shell 這樣應該就可以了。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-11T21:00:00+08:00">
+    <meta property="article:modified_time" content="2024-11-11T21:00:00+08:00">
+
+  <meta itemprop="name" content="Steam Deck 重置 sudo 密碼">
+  <meta itemprop="description" content="之前裝 Decky Loader 設定了 deck 使用者的密碼，結果現在要用 sudo 的時候發現忘記了。參考 Reddit 的步驟成功重置了。步驟如下：
+將 Steam Deck 關機 接上鍵盤 按住主機右下三個點的按鈕後，按一下電源鍵 成功的話應該會進入 Recovery Menu 選擇 Current SteamOS &#43; Boot Menu（應該是第三選項） 接者會出現 GRUB Menu，停在 SteamOS 選項上（應該是第一選項）按下 E 執行 [E] Edit Selection 會出現許多命令，用方向鍵往下捲，直到停在 steamenv_boot 開頭的一行上 按下 End 鍵到 steamenv_boot 命令的最後，加上 - systemd.debug_shell 按下 Ctrl&#43;X 重開機 到主畫面按下 Ctrl&#43;Alt&#43;F9 開啟 Debug Shell 輸入 passwd deck 後輸入新密碼兩次 成功後 Ctrl&#43;Alt&#43;F1 關閉 Debug Shell 這樣應該就可以了。">
+  <meta itemprop="datePublished" content="2024-11-11T21:00:00+08:00">
+  <meta itemprop="dateModified" content="2024-11-11T21:00:00+08:00">
+  <meta itemprop="wordCount" content="231">
+  <meta itemprop="keywords" content="Steam Deck,sudo">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Steam Deck 重置 sudo 密碼">
+  <meta name="twitter:description" content="之前裝 Decky Loader 設定了 deck 使用者的密碼，結果現在要用 sudo 的時候發現忘記了。參考 Reddit 的步驟成功重置了。步驟如下：
+將 Steam Deck 關機 接上鍵盤 按住主機右下三個點的按鈕後，按一下電源鍵 成功的話應該會進入 Recovery Menu 選擇 Current SteamOS &#43; Boot Menu（應該是第三選項） 接者會出現 GRUB Menu，停在 SteamOS 選項上（應該是第一選項）按下 E 執行 [E] Edit Selection 會出現許多命令，用方向鍵往下捲，直到停在 steamenv_boot 開頭的一行上 按下 End 鍵到 steamenv_boot 命令的最後，加上 - systemd.debug_shell 按下 Ctrl&#43;X 重開機 到主畫面按下 Ctrl&#43;Alt&#43;F9 開啟 Debug Shell 輸入 passwd deck 後輸入新密碼兩次 成功後 Ctrl&#43;Alt&#43;F1 關閉 Debug Shell 這樣應該就可以了。">
+      <meta name="twitter:site" content="@aaefiikmnnnr">
+
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/cs291/">
+        <li class="mobile-menu-item">CS291</li>
+      </a><a href="https://github.com/FrankNine/franknine.github.io/wiki">
+        <li class="mobile-menu-item">Wiki</li>
+      </a><a href="/index.xml">
+        <li class="mobile-menu-item">RSS</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/cs291/">CS291</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/FrankNine/franknine.github.io/wiki">Wiki</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/index.xml">RSS</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>之前裝 <a href="https://decky.xyz/">Decky Loader</a> 設定了 <code>deck</code> 使用者的密碼，結果現在要用 sudo 的時候發現忘記了。參考 <a href="https://www.reddit.com/r/SteamDeck/comments/16akwrf/steam_deck_tutorial_updated_reset_forgotten_sudo/">Reddit</a> 的步驟成功重置了。步驟如下：</p>
+<ol>
+<li>將 Steam Deck 關機</li>
+<li>接上鍵盤</li>
+<li>按住主機右下三個點的按鈕後，按一下電源鍵</li>
+<li>成功的話應該會進入 Recovery Menu</li>
+<li>選擇 <code>Current SteamOS + Boot Menu</code>（應該是第三選項）</li>
+<li>接者會出現 GRUB Menu，停在 SteamOS 選項上（應該是第一選項）按下 E 執行 <code>[E] Edit Selection</code></li>
+<li>會出現許多命令，用方向鍵往下捲，直到停在 <code>steamenv_boot</code> 開頭的一行上</li>
+<li>按下 End 鍵到 <code>steamenv_boot</code> 命令的最後，加上 <code> - systemd.debug_shell</code></li>
+<li>按下 Ctrl+X 重開機</li>
+<li>到主畫面按下 Ctrl+Alt+F9 開啟 Debug Shell</li>
+<li>輸入 <code>passwd deck</code> 後輸入新密碼兩次</li>
+<li>成功後 Ctrl+Alt+F1 關閉 Debug Shell</li>
+</ol>
+<p>這樣應該就可以了。</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
+      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even"  rel="noopener noreferrer" target="_blank">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>Chun-Fu Chao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
