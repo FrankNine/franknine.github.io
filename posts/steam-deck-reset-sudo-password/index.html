@@ -64,7 +64,6 @@
   <meta name="twitter:title" content="Steam Deck 重置 sudo 密碼">
   <meta name="twitter:description" content="之前裝 Decky Loader 設定了 deck 使用者的密碼，結果現在要用 sudo 的時候發現忘記了。參考 Reddit 的步驟成功重置了。步驟如下：
 將 Steam Deck 關機 接上鍵盤 按住主機右下三個點的按鈕後，按一下電源鍵 成功的話應該會進入 Recovery Menu 選擇 Current SteamOS &#43; Boot Menu（應該是第三選項） 接者會出現 GRUB Menu，停在 SteamOS 選項上（應該是第一選項）按下 E 執行 [E] Edit Selection 會出現許多命令，用方向鍵往下捲，直到停在 steamenv_boot 開頭的一行上 按下 End 鍵到 steamenv_boot 命令的最後，加上 - systemd.debug_shell 按下 Ctrl&#43;X 重開機 到主畫面按下 Ctrl&#43;Alt&#43;F9 開啟 Debug Shell 輸入 passwd deck 後輸入新密碼兩次 成功後 Ctrl&#43;Alt&#43;F1 關閉 Debug Shell 這樣應該就可以了。">
-      <meta name="twitter:site" content="@aaefiikmnnnr">
 
 
 
@@ -178,8 +177,8 @@
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="FrankNine" class="iconfont icon-thub" title="thub"></a>
-      <a href="aaefiikmnnnr" class="iconfont icon-itter" title="itter"></a>
+      <a href="https://twitter.com/aaefiikmnnnr" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/FrankNine/" class="iconfont icon-github" title="github"></a>
   
 </div>
 
