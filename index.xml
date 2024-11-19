@@ -92,7 +92,7 @@
       <pubDate>Sun, 23 Apr 2023 16:00:00 +0800</pubDate>
       
       <guid>https://www.chunfuchao.com/posts/unity-git-en/</guid>
-      <description>&lt;p&gt;&lt;em&gt;This is the translated version of my 2020 &lt;a href=&#34;https://www.chunfuchao.com/posts/unity-git/&#34;&gt;Unity 和 git&lt;/a&gt; post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you.&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;This is the translated version of my 2020 &lt;a href=&#34;../unity-git/&#34;&gt;Unity 和 git&lt;/a&gt; post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ve been using Git to version control Unity projects for a while now. Recently, my company open-sourced our Unity builder &lt;a href=&#34;https://gitlab.com/rayark/mimiron-lite&#34;&gt;mimiron-lite&lt;/a&gt;, along with a new set of Git configuration files that are now being used as Git configuration standard of my company . I would like to share some insights regarding the thought process behind these configuration files and the experiences of using Git.&lt;/p&gt;</description>
     </item>
     

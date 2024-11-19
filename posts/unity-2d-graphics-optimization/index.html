@@ -150,7 +150,7 @@
 <h3 id="locating-bottleneck">Locating Bottleneck</h3>
 <p>當要最佳化的時候最先要確認 Bottleneck 所在，參考 Nvidia 的 <a href="http://http.developer.nvidia.com/GPUGems/gpugems_ch28.html">GPU Gems</a> 所提供的做法，就是改變部分繪圖的環境看看 FPS 有沒有顯著提升，如果有就是找到 Bottleneck 了。以下是參考 GPU Gems 的作業流程簡述：</p>
 <p>從 Pipeline 的後端開始，最先是試試降低 Merger 跟 Frame buffer 的資料傳輸量，最簡單的作法是降低 Frame buffer 的資料精確度（有 GPU Profiler 輔助的話可以關閉 Alpha blending），如果效能有明顯上升那就是卡在 Merger 。接下來是測試是否卡在貼圖，作法是把貼圖換成低解析度的。再來是改變解析度來測試 Fragment shading ，雖然說改變解析度也會影響到 Merger 跟 Frame buffer 的資料傳輸量，但是如果已經用了改變 Frame buffer depth 排除卡在 Merger 的可能性，那 FPS 因為解析度改變而變化就可以確定是 Fragment shading 的問題。Vertex shading 會有問題在 2D 遊戲裡比較少見，通常都是 3D 遊戲裡面做複雜的 Skinned mesh 形變計算才會出現（Unity 要在 Project settings 裡面開啟 GPU Skinning 才會在 Vertex shading 計算，如果沒有開啟就是 CPU 算），不過如果懷疑的話一樣是把 Vertex shader 改簡單去觀察 FPS 變化。最後如果都不是的話那就推斷是 CPU 下的 Draw call 或是 Set pass call 的問題。</p>
-<p>當然如果有工具協助的話會方便很多。以跟之前介紹的 <a href="../android-gpu-profilers">Frame Analyzer</a> 同一組的 <a href="https://software.intel.com/en-us/articles/system-analyzer-getting-started-guides">Intel GPA System Analyzer</a> 為範例，這是在監控執行中的遊戲的畫面。可以看到左下角有直接覆寫 GPU 運作參數的選項，像是動態將貼圖改成只有 2X2 大小或是直接關閉 Alpha blending 之類的。有這類工具可以大幅提升追蹤 Bottleneck 的效率。</p>
+<p>當然如果有工具協助的話會方便很多。以跟之前介紹的 <a href="../android-gpu-profilers/">Frame Analyzer</a> 同一組的 <a href="https://software.intel.com/en-us/articles/system-analyzer-getting-started-guides">Intel GPA System Analyzer</a> 為範例，這是在監控執行中的遊戲的畫面。可以看到左下角有直接覆寫 GPU 運作參數的選項，像是動態將貼圖改成只有 2X2 大小或是直接關閉 Alpha blending 之類的。有這類工具可以大幅提升追蹤 Bottleneck 的效率。</p>
 <p><img alt="GPA System Analyzer" src="/images/unity-2d-graphics-optimization/gpa-system-analyzer.png"></p>
 <h3 id="optimization">Optimization</h3>
 <p>確定 Bottleneck 之後就要想辦法最佳化，在 Unity 開發 2D 遊戲繪圖最佳化會需要減少的通常有：</p>
