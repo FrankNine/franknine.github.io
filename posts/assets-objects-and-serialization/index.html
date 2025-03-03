@@ -61,7 +61,7 @@
 這個章節會涵蓋 Unity 序列化系統（Serialization system）的內部構造，還有 Unity 如何在編輯時與執行期維繫 Object 之間可靠的參考關係。也會討論技術上 Object 與 Asset 的區別。要先理解本章的內容才有可能知道如何有效率地載入與卸載 Unity 的 Asset。適當的 Asset 管理是降低讀取時間還有壓低記憶體用量的必備條件。">
   <meta itemprop="datePublished" content="2017-03-26T17:17:45+00:00">
   <meta itemprop="dateModified" content="2017-03-26T17:17:45+00:00">
-  <meta itemprop="wordCount" content="5858">
+  <meta itemprop="wordCount" content="5895">
   <meta itemprop="keywords" content="Unity,Asset,Serialization">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Asset、Object 與序列化">
@@ -244,7 +244,7 @@
 <p>在所有 Unity 支援的平台上，從記憶體讀取資料會比從儲存裝置讀快上許多。然後儲存媒體的特性會隨著平台不同而有很大的差異——PC 從磁碟讀取資料會比行動裝置從快閃記憶體讀取還快。</p>
 <p>因此從緩慢的儲存裝置載入 Prefab 資料時，花在讀取序列化過的 Prefab 資料可能輕易超過實體化 Prefab 所花的時間。即載入的操作受限於儲存裝置的 IO 時間。</p>
 <p>如前述，當序列化有巨大階層結構的 Prefab 時，每一個 GameObject 和 Component 都會被獨立地序列化——即使資料有所重複。假設一個 UI 上面有 30 個完全相同的元件，那麼相同的元件就會被序列化 30 次，產生龐大的二進位資料。在讀取時，這 30 份序列化過的 GameObject、Component 資料必須要完整從磁碟上讀取出來後才能轉移到剛實體化的好的新 Object。檔案讀取往往會佔去載入大型 Prefab 大部分的時間。</p>
-<p>這個問題可能要等到未來的某天 Unity 真的支援巢狀 Prefab（Nested Prefab），屆時也許我們可以用多個 Prefab 組合來建構大型 GameObject 階層結構，所有重複的元件都從小的 Prefab 多次實體化而來，從而降低 Prefab 資料讀取時間。不是像現在把整個階層結構直接送給 Unity 的序列化與 Prefab 系統。</p>
+<p><del>這個問題可能要等到未來的某天 Unity 真的支援巢狀 Prefab（Nested Prefab），屆時也許我們可以用多個 Prefab 組合來建構大型 GameObject 階層結構，所有重複的元件都從小的 Prefab 多次實體化而來，從而降低 Prefab 資料讀取時間。不是像現在把整個階層結構直接送給 Unity 的序列化與 Prefab 系統。</del>（Unity 文件更新刪除了這段落，後來 Nested Prefab 系統的實作依然是展開所有 GameObject 階層）</p>
 <p>當你已經讀取了 Prefab 或是已經建構了 GameObject 的階層結構，去複製已經存在的階層結構總是會比再從儲存裝置載入一次來得快。</p>
 <p>Unity 5.4 追記：Unity 5.4 改變了 Transform 在記憶體內的排列。5.4 之後所有根（Root） Transform 和其所有子 Transform 會被存放在一個緊密排列、連續的記憶體。當你要實體化一個 GameObject ，而它實體化後將立即成為別的 GameObject 的子節點，請使用新的可接受父節點作為參數的 <code>GameObject.Instantiate</code> API 多載。</p>
 <p>使用這個多載可以避免新 GameObject 剛實體化的時候成為場景的根節點而配置了上述的 Transform 容器，然後馬上因為成為別人的子節點而丟棄這個 Transform 容器。實際測試可以省下大約 5% 到 10% 的實體化時間。</p>
