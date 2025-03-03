@@ -258,7 +258,7 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git lfs migrate import --everything --include<span class="o">=</span><span class="s2">&#34;.png,.psd&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git lfs migrate import --everything --include<span class="o">=</span><span class="s2">&#34;*.png,*.psd&#34;</span>
 </span></span><span class="line"><span class="cl">git reflog expire --expire<span class="o">=</span>now --all <span class="o">&amp;&amp;</span> git gc --prune<span class="o">=</span>now
 </span></span><span class="line"><span class="cl">git remote set-url origin &lt;新 repo 位置&gt;
 </span></span><span class="line"><span class="cl">git push --all origin --force
