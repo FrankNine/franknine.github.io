@@ -1,288 +1,224 @@
+<!DOCTYPE html>
+
 <head>
   <title>Lesson 15 攝影機</title>
+  <link rel=stylesheet type="text/css" href="/css/lesson.css">
 </head>
 
 <body>
-<h1>Lesson 15 攝影機</h1>
-<div id="wrapper">
-    <div style="float: left; width: 33%">
+  <div id="wrapper">
+    <h1 id="title">Lesson 15 攝影機</h1>
+    <div id="lesson">
+      <div id="lesson_list">
         <ul>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/01-introduction-to-cameras/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    01 攝影機簡介
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/02-orthographic-camera/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    02 正交攝影機
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/03-demo-orthographic-projection/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    03 展示：正交投影
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/04-three.js-orthographic-camera/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    04 Three.js 正交攝影機
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/05-lookat/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    05 看向
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/06-three.js-lookat/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    06 Three.js 看向
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/06a-three.js-lookat/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    06A Three.js 看向（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/07-view-transform/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    07 視角座標變換
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/08-normalized-device-coordinates/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    08 Normalized Device Coordinates
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/09-orthographic-matrix-type/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    09 正交投影矩陣是哪類？
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/09a-orthographic-matrix-type/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    09 正交投影矩陣是哪類？（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/10-perspective-camera/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    10 透視攝影機
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/11-three.js-perspective-camera/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    11 Three.js 透視攝影機
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/12-fov-slider/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    12 視野大小滑桿
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/12a-fov-slider/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    12A 視野大小滑桿（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/13-perspective-matrix/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    13 透視矩陣
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/14-perspective-coordinate-transform/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    14 透視座標變換
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/14a-perspective-coordinate-transform/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    14 透視座標變換（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/15-homogeneous-coordinate/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    15 齊次坐標
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/16-clipping/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    16 裁切
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/17-field-of-view/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    17 視野
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/18-demo-dolly-and-zoom/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    18 展示：推軌（Dolly）與變焦（Zoom）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/19-true-field-of-view/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    19 真正的視野
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/20-monitor-field-of-view/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    20 螢幕視野
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/20a-monitor-field-of-view/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    20 螢幕視野（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/21-target/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    21 目標
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/22-dolly-pan-orbit/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    22 推軌、水平搖攝、環繞
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/23-camera-changes/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    23 攝影機變化
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/23a-camera-changes/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    23 攝影機變化（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/24-near-and-far-clipping/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    24 近裁切和遠裁切
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/25-depth-of-field/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    25 景深（Depth of Field）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/26-window-coordinates/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    26 視窗座標（Window Coordinates）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/27-antialiasing/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    27 反鋸齒
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-15/28-conclusion/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    28 結語
-                </a>
-            </li>
-        
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/01-introduction-to-cameras/" class="archive-post-link" target="lesson_frame">
+              01 攝影機簡介
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/02-orthographic-camera/" class="archive-post-link" target="lesson_frame">
+              02 正交攝影機
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/03-demo-orthographic-projection/" class="archive-post-link" target="lesson_frame">
+              03 展示：正交投影
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/04-three.js-orthographic-camera/" class="archive-post-link" target="lesson_frame">
+              04 Three.js 正交攝影機
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/05-lookat/" class="archive-post-link" target="lesson_frame">
+              05 看向
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/06-three.js-lookat/" class="archive-post-link" target="lesson_frame">
+              06 Three.js 看向
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/06a-three.js-lookat/" class="archive-post-link" target="lesson_frame">
+              06A Three.js 看向（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/07-view-transform/" class="archive-post-link" target="lesson_frame">
+              07 視角座標變換
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/08-normalized-device-coordinates/" class="archive-post-link" target="lesson_frame">
+              08 Normalized Device Coordinates
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/09-orthographic-matrix-type/" class="archive-post-link" target="lesson_frame">
+              09 正交投影矩陣是哪類？
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/09a-orthographic-matrix-type/" class="archive-post-link" target="lesson_frame">
+              09 正交投影矩陣是哪類？（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/10-perspective-camera/" class="archive-post-link" target="lesson_frame">
+              10 透視攝影機
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/11-three.js-perspective-camera/" class="archive-post-link" target="lesson_frame">
+              11 Three.js 透視攝影機
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/12-fov-slider/" class="archive-post-link" target="lesson_frame">
+              12 視野大小滑桿
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/12a-fov-slider/" class="archive-post-link" target="lesson_frame">
+              12A 視野大小滑桿（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/13-perspective-matrix/" class="archive-post-link" target="lesson_frame">
+              13 透視矩陣
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/14-perspective-coordinate-transform/" class="archive-post-link" target="lesson_frame">
+              14 透視座標變換
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/14a-perspective-coordinate-transform/" class="archive-post-link" target="lesson_frame">
+              14 透視座標變換（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/15-homogeneous-coordinate/" class="archive-post-link" target="lesson_frame">
+              15 齊次坐標
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/16-clipping/" class="archive-post-link" target="lesson_frame">
+              16 裁切
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/17-field-of-view/" class="archive-post-link" target="lesson_frame">
+              17 視野
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/18-demo-dolly-and-zoom/" class="archive-post-link" target="lesson_frame">
+              18 展示：推軌（Dolly）與變焦（Zoom）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/19-true-field-of-view/" class="archive-post-link" target="lesson_frame">
+              19 真正的視野
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/20-monitor-field-of-view/" class="archive-post-link" target="lesson_frame">
+              20 螢幕視野
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/20a-monitor-field-of-view/" class="archive-post-link" target="lesson_frame">
+              20 螢幕視野（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/21-target/" class="archive-post-link" target="lesson_frame">
+              21 目標
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/22-dolly-pan-orbit/" class="archive-post-link" target="lesson_frame">
+              22 推軌、水平搖攝、環繞
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/23-camera-changes/" class="archive-post-link" target="lesson_frame">
+              23 攝影機變化
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/23a-camera-changes/" class="archive-post-link" target="lesson_frame">
+              23 攝影機變化（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/24-near-and-far-clipping/" class="archive-post-link" target="lesson_frame">
+              24 近裁切和遠裁切
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/25-depth-of-field/" class="archive-post-link" target="lesson_frame">
+              25 景深（Depth of Field）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/26-window-coordinates/" class="archive-post-link" target="lesson_frame">
+              26 視窗座標（Window Coordinates）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/27-antialiasing/" class="archive-post-link" target="lesson_frame">
+              27 反鋸齒
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-15/28-conclusion/" class="archive-post-link" target="lesson_frame">
+              28 結語
+            </a>
+          </li>
+          
         </ul>
+      </div>
+      <iframe id="lesson_content" name="lesson_frame"></iframe>
     </div>
-    <iframe name="lesson_frame" style="float: right; width: 65%; height: 80%">
-    </iframe>
-</div>
+  </div>
 </body>

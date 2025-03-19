@@ -1,472 +1,362 @@
+<!DOCTYPE html>
+
 <head>
   <title>Lesson 07 顏色與材質</title>
+  <link rel=stylesheet type="text/css" href="/css/lesson.css">
 </head>
 
 <body>
-<h1>Lesson 07 顏色與材質</h1>
-<div id="wrapper">
-    <div style="float: left; width: 33%">
+  <div id="wrapper">
+    <h1 id="title">Lesson 07 顏色與材質</h1>
+    <div id="lesson">
+      <div id="lesson_list">
         <ul>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/01-overview-of-the-lesson/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    01 課程概覽
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/02-the-programmable-pipeline/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    02 可程式管線
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/03-rgb-color-definition/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    03 RGB 顏色定義
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/04-color-definition/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    04 顏色定義
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/05-rgb-color-demo/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    05 RGB 混色展示
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/06-setting-the-color/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    06 設定顏色
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/07-what-color-is-magenta/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    07 什麼顏色是洋紅？
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/07a-what-color-is-magenta/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    07A 什麼顏色是洋紅？（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/08-what-color-is-chartreuse/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    08 查特酒是什麼顏色？
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/08a-what-color-is-chartreuse/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    08A 查特酒是什麼顏色？（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/09-the-color-cube/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    09 顏色立方體
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/10-vertex-attributes/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    10 頂點屬性
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/10a-vertex-attributes/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    10A 頂點屬性（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/11-color-interpolation/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    11 顏色內插
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/12-the-color-gamut/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    12 色域
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/13-a-simple-lighting-model/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    13 簡單光照模型
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/14-kiss-of-death/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    14 死亡之吻
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/15-light-on-a-diffuse-sphere/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    15 球正上方的光
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/16-normalizing-a-vector/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    16 正規化向量
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/17-vector-length/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    17 向量長度
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/17a-vector-length/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    17A 向量長度（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/18-the-dot-product/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    18 內積
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/19-the-dot-product-in-detail/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    19 內積的細節
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/20-diffuse-material/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    20 漫射材質
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/20a-diffuse-material/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    20A 漫射材質（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/21-shading-normal/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    21 著色法向量
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/22-enable-smooth-shading/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    22 啟用平滑著色
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/22a-enable-smooth-shading/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    22 啟用平滑著色（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/23-ka-kd-and-hsl/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    23 Ka、Kd 與 HSL
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/24-demo-lambert/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    24 Lambert 展示
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/25-baking/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    25 烘焙
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/25a-baking/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    25A 烘焙（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/26-specular-material/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    26 鏡面反射材質
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/27-material-demo/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    27 材質展示
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/28-gouraud-shading/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    28 Gouraud 著色
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/29-phong-shading/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    29 Phong 著色
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/30-material-calculations/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    30 材質計算
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/30a-material-calculations/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    30A 材質計算（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/31-introduction-to-transparency/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    31 透明簡介
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/32-blending/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    32 混色
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/33-the-over-operator/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    33 Over 運算子
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/34-simple-transparency-demo/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    34 簡單透明展示
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/35-the-over-operator-quiz/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    35 Over 運算子小考
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/35a-the-over-operator-quiz/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    35A Over 運算子小考（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/36-the-over-operator-demo/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    36 Over 運算子展示
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/37-the-z-buffer-and-transparency/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    37 Z 緩衝區與透明
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/38-solving-transparent-z-buffering/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    38 解決透明和 Z 緩衝區
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/38a-solving-transparent-z-buffering/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    38A 解決透明和 Z 緩衝區（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/39-solving-transparent-z-buffering/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    39 解決透明和 Z 緩衝區 2
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/39a-solving-transparent-z-buffering/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    39A 解決透明和 Z 緩衝區 2（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/40-transparency-and-three.js/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    40 透明和 Three.js
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/41-another-transparency-demo/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    41 另一個透明展示
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/42-what-went-wrong/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    42 什麼地方出錯了
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/42a-what-went-wrong/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    42A 什麼地方出錯了（解答）
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/43-advanced-transparency-methods/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    43 進階透明作法
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/44-future-of-transparency/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    44 未來的透明演算法
-                </a>
-            </li>
-        
-            <li>
-                <a href="https://www.chunfuchao.com/cs291/lesson-07/45-conclusion/"
-                   class="archive-post-link"
-                   target="lesson_frame">
-                    45 結語
-                </a>
-            </li>
-        
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/01-overview-of-the-lesson/" class="archive-post-link" target="lesson_frame">
+              01 課程概覽
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/02-the-programmable-pipeline/" class="archive-post-link" target="lesson_frame">
+              02 可程式管線
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/03-rgb-color-definition/" class="archive-post-link" target="lesson_frame">
+              03 RGB 顏色定義
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/04-color-definition/" class="archive-post-link" target="lesson_frame">
+              04 顏色定義
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/05-rgb-color-demo/" class="archive-post-link" target="lesson_frame">
+              05 RGB 混色展示
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/06-setting-the-color/" class="archive-post-link" target="lesson_frame">
+              06 設定顏色
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/07-what-color-is-magenta/" class="archive-post-link" target="lesson_frame">
+              07 什麼顏色是洋紅？
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/07a-what-color-is-magenta/" class="archive-post-link" target="lesson_frame">
+              07A 什麼顏色是洋紅？（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/08-what-color-is-chartreuse/" class="archive-post-link" target="lesson_frame">
+              08 查特酒是什麼顏色？
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/08a-what-color-is-chartreuse/" class="archive-post-link" target="lesson_frame">
+              08A 查特酒是什麼顏色？（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/09-the-color-cube/" class="archive-post-link" target="lesson_frame">
+              09 顏色立方體
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/10-vertex-attributes/" class="archive-post-link" target="lesson_frame">
+              10 頂點屬性
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/10a-vertex-attributes/" class="archive-post-link" target="lesson_frame">
+              10A 頂點屬性（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/11-color-interpolation/" class="archive-post-link" target="lesson_frame">
+              11 顏色內插
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/12-the-color-gamut/" class="archive-post-link" target="lesson_frame">
+              12 色域
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/13-a-simple-lighting-model/" class="archive-post-link" target="lesson_frame">
+              13 簡單光照模型
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/14-kiss-of-death/" class="archive-post-link" target="lesson_frame">
+              14 死亡之吻
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/15-light-on-a-diffuse-sphere/" class="archive-post-link" target="lesson_frame">
+              15 球正上方的光
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/16-normalizing-a-vector/" class="archive-post-link" target="lesson_frame">
+              16 正規化向量
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/17-vector-length/" class="archive-post-link" target="lesson_frame">
+              17 向量長度
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/17a-vector-length/" class="archive-post-link" target="lesson_frame">
+              17A 向量長度（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/18-the-dot-product/" class="archive-post-link" target="lesson_frame">
+              18 內積
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/19-the-dot-product-in-detail/" class="archive-post-link" target="lesson_frame">
+              19 內積的細節
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/20-diffuse-material/" class="archive-post-link" target="lesson_frame">
+              20 漫射材質
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/20a-diffuse-material/" class="archive-post-link" target="lesson_frame">
+              20A 漫射材質（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/21-shading-normal/" class="archive-post-link" target="lesson_frame">
+              21 著色法向量
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/22-enable-smooth-shading/" class="archive-post-link" target="lesson_frame">
+              22 啟用平滑著色
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/22a-enable-smooth-shading/" class="archive-post-link" target="lesson_frame">
+              22 啟用平滑著色（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/23-ka-kd-and-hsl/" class="archive-post-link" target="lesson_frame">
+              23 Ka、Kd 與 HSL
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/24-demo-lambert/" class="archive-post-link" target="lesson_frame">
+              24 Lambert 展示
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/25-baking/" class="archive-post-link" target="lesson_frame">
+              25 烘焙
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/25a-baking/" class="archive-post-link" target="lesson_frame">
+              25A 烘焙（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/26-specular-material/" class="archive-post-link" target="lesson_frame">
+              26 鏡面反射材質
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/27-material-demo/" class="archive-post-link" target="lesson_frame">
+              27 材質展示
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/28-gouraud-shading/" class="archive-post-link" target="lesson_frame">
+              28 Gouraud 著色
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/29-phong-shading/" class="archive-post-link" target="lesson_frame">
+              29 Phong 著色
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/30-material-calculations/" class="archive-post-link" target="lesson_frame">
+              30 材質計算
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/30a-material-calculations/" class="archive-post-link" target="lesson_frame">
+              30A 材質計算（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/31-introduction-to-transparency/" class="archive-post-link" target="lesson_frame">
+              31 透明簡介
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/32-blending/" class="archive-post-link" target="lesson_frame">
+              32 混色
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/33-the-over-operator/" class="archive-post-link" target="lesson_frame">
+              33 Over 運算子
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/34-simple-transparency-demo/" class="archive-post-link" target="lesson_frame">
+              34 簡單透明展示
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/35-the-over-operator-quiz/" class="archive-post-link" target="lesson_frame">
+              35 Over 運算子小考
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/35a-the-over-operator-quiz/" class="archive-post-link" target="lesson_frame">
+              35A Over 運算子小考（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/36-the-over-operator-demo/" class="archive-post-link" target="lesson_frame">
+              36 Over 運算子展示
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/37-the-z-buffer-and-transparency/" class="archive-post-link" target="lesson_frame">
+              37 Z 緩衝區與透明
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/38-solving-transparent-z-buffering/" class="archive-post-link" target="lesson_frame">
+              38 解決透明和 Z 緩衝區
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/38a-solving-transparent-z-buffering/" class="archive-post-link" target="lesson_frame">
+              38A 解決透明和 Z 緩衝區（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/39-solving-transparent-z-buffering/" class="archive-post-link" target="lesson_frame">
+              39 解決透明和 Z 緩衝區 2
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/39a-solving-transparent-z-buffering/" class="archive-post-link" target="lesson_frame">
+              39A 解決透明和 Z 緩衝區 2（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/40-transparency-and-three.js/" class="archive-post-link" target="lesson_frame">
+              40 透明和 Three.js
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/41-another-transparency-demo/" class="archive-post-link" target="lesson_frame">
+              41 另一個透明展示
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/42-what-went-wrong/" class="archive-post-link" target="lesson_frame">
+              42 什麼地方出錯了
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/42a-what-went-wrong/" class="archive-post-link" target="lesson_frame">
+              42A 什麼地方出錯了（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/43-advanced-transparency-methods/" class="archive-post-link" target="lesson_frame">
+              43 進階透明作法
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/44-future-of-transparency/" class="archive-post-link" target="lesson_frame">
+              44 未來的透明演算法
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-07/45-conclusion/" class="archive-post-link" target="lesson_frame">
+              45 結語
+            </a>
+          </li>
+          
         </ul>
+      </div>
+      <iframe id="lesson_content" name="lesson_frame"></iframe>
     </div>
-    <iframe name="lesson_frame" style="float: right; width: 65%; height: 80%">
-    </iframe>
-</div>
+  </div>
 </body>
