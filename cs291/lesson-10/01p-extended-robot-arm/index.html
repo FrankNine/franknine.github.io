@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/OrbitAndPanControls.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/dat.gui.min.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body>
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 擴充機械手臂作業：加入身體
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var cameraControls, effectController;
+var clock = new THREE.Clock();
+var gridX = true;
+var gridY = false;
+var gridZ = false;
+var axes = true;
+var ground = true;
+var arm, forearm, body;
+
+function fillScene() {
+	scene = new THREE.Scene();
+	scene.fog = new THREE.Fog( 0x808080, 2000, 4000 );
+
+	// 光源
+	var ambientLight = new THREE.AmbientLight( 0x222222 );
+	var light = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light.position.set( 200, 400, 500 );
+	var light2 = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light2.position.set( -500, 250, -200 );
+	scene.add(ambientLight);
+	scene.add(light);
+	scene.add(light2);
+
+	// 機器人的定義
+	var robotBaseMaterial = new THREE.MeshPhongMaterial( { color: 0x6E23BB, specular: 0x6E23BB, shininess: 20 } );
+	var robotForearmMaterial = new THREE.MeshPhongMaterial( { color: 0xF4C154, specular: 0xF4C154, shininess: 100 } );
+	var robotUpperArmMaterial = new THREE.MeshPhongMaterial( { color: 0x95E4FB, specular: 0x95E4FB, shininess: 100 } );
+	var robotBodyMaterial = new THREE.MeshPhongMaterial( { color: 0x279933, specular: 0x279933, shininess: 100 } );
+
+	var torus = new THREE.Mesh(
+		new THREE.TorusGeometry( 22, 15, 32, 32 ), robotBaseMaterial );
+	torus.rotation.x = 90 * Math.PI/180;
+	scene.add( torus );
+
+	forearm = new THREE.Object3D();
+	var faLength = 80;
+
+	createRobotExtender( forearm, faLength, robotForearmMaterial );
+
+	arm = new THREE.Object3D();
+	var uaLength = 120;
+
+	createRobotCrane( arm, uaLength, robotUpperArmMaterial );
+
+	// 移動前臂到上臂的終點
+	forearm.position.y = uaLength;
+	arm.add( forearm );
+	scene.add( arm );
+
+	// 你的程式寫在這裡
+	body = new THREE.Object3D();
+	var bodyLength = 60;
+	// 在這裡加入機器人的身體，把手臂放在頂端
+	// 身體變數 &#34;body&#34; 已經宣告在函式的最上面
+	// 底下是創造身體的函式呼叫：
+	// createRobotBody( body, bodyLength, robotBodyMaterial );
+	// 注意身體的操作介面
+	// 在 setupGUI() 和 render()
+	// 你要將身體加入場景才會顯示
+}
+
+function createRobotExtender( part, length, material )
+{
+	var cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 22, 22, 6, 32 ), material );
+	part.add( cylinder );
+
+	var i;
+	for ( i = 0; i &lt; 4; i&#43;&#43; )
+	{
+		var box = new THREE.Mesh(
+			new THREE.CubeGeometry( 4, length, 4 ), material );
+		box.position.x = (i &lt; 2) ? -8 : 8;
+		box.position.y = length/2;
+		box.position.z = (i%2) ? -8 : 8;
+		part.add( box );
+	}
+
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 15, 15, 40, 32 ), material );
+	cylinder.rotation.x = 90 * Math.PI/180;
+	cylinder.position.y = length;
+	part.add( cylinder );
+}
+
+function createRobotCrane( part, length, material )
+{
+	var box = new THREE.Mesh(
+		new THREE.CubeGeometry( 18, length, 18 ), material );
+	box.position.y = length/2;
+	part.add( box );
+
+	var sphere = new THREE.Mesh(
+		new THREE.SphereGeometry( 20, 32, 16 ), material );
+
+	// 把球體放在手臂末端
+	sphere.position.y = length;
+	part.add( sphere );
+}
+
+function createRobotBody( part, length, material )
+{
+	var cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 50, 12, length/2, 18 ), material );
+	cylinder.position.y = length/4;
+	part.add( cylinder );
+
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 12, 50, length/2, 18 ), material );
+	cylinder.position.y = 3*length/4;
+	part.add( cylinder );
+
+	var box = new THREE.Mesh(
+		new THREE.CubeGeometry( 12, length/4, 110 ), material );
+	box.position.y = length/2;
+	part.add( box );
+
+	var sphere = new THREE.Mesh(
+		new THREE.SphereGeometry( 20, 32, 16 ), material );
+
+	// 把球體放在手臂末端
+	sphere.position.y = length;
+	part.add( sphere );
+}
+
+function init() {
+	var canvasWidth = window.innerWidth;
+	var canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth / canvasHeight;
+
+	// RENDERER
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColorHex( 0xAAAAAA, 1.0 );
+
+	// 攝影機
+	camera = new THREE.PerspectiveCamera( 38, canvasRatio, 1, 10000 );
+	camera.position.set( -510, 240, 100 );
+
+	// 控制
+	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
+	cameraControls.target.set(0,120,0);
+	camera.position.set(-102, 177, 20);
+	cameraControls.target.set(-13, 60, 2);
+	fillScene();
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+function drawHelpers() {
+	if (ground) {
+		Coordinates.drawGround({size:10000});
+	}
+	if (gridX) {
+		Coordinates.drawGrid({size:10000,scale:0.01});
+	}
+	if (gridY) {
+		Coordinates.drawGrid({size:10000,scale:0.01, orientation:&#34;y&#34;});
+	}
+	if (gridZ) {
+		Coordinates.drawGrid({size:10000,scale:0.01, orientation:&#34;z&#34;});
+	}
+	if (axes) {
+		Coordinates.drawAllAxes({axisLength:200,axisRadius:1,axisTess:50});
+	}
+}
+
+function animate() {
+	window.requestAnimationFrame(animate);
+	render();
+}
+
+function render() {
+	var delta = clock.getDelta();
+	cameraControls.update(delta);
+
+	if ( effectController.newGridX !== gridX || effectController.newGridY !== gridY || effectController.newGridZ !== gridZ || effectController.newGround !== ground || effectController.newAxes !== axes)
+	{
+		gridX = effectController.newGridX;
+		gridY = effectController.newGridY;
+		gridZ = effectController.newGridZ;
+		ground = effectController.newGround;
+		axes = effectController.newAxes;
+
+		fillScene();
+		drawHelpers();
+	}
+
+	// 取消下面一行的註解以開啟身體的控制：
+	// body.rotation.y = effectController.by * Math.PI/180;	// 偏航角
+
+	arm.rotation.y = effectController.uy * Math.PI/180;	// 偏航角
+	arm.rotation.z = effectController.uz * Math.PI/180;	// 滾轉角
+
+	forearm.rotation.y = effectController.fy * Math.PI/180;	// 偏航角
+	forearm.rotation.z = effectController.fz * Math.PI/180;	// 滾轉角
+
+	renderer.render(scene, camera);
+}
+
+function setupGui() {
+	effectController = {
+		newGridX: gridX,
+		newGridY: gridY,
+		newGridZ: gridZ,
+		newGround: ground,
+		newAxes: axes,
+
+		// 取消下面一行的註解以設定身體的預設值：
+		// by: 0.0,
+
+		uy: 70.0,
+		uz: -15.0,
+
+		fy: 10.0,
+		fz: 60.0
+	};
+
+	var gui = new dat.GUI();
+	var h = gui.addFolder(&#34;格線顯示&#34;);
+	h.add( effectController, &#34;newGridX&#34;).name(&#34;顯示 XZ 格線&#34;);
+	h.add( effectController, &#34;newGridY&#34; ).name(&#34;顯示 YZ 格線&#34;);
+	h.add( effectController, &#34;newGridZ&#34; ).name(&#34;顯示 XY 格線&#34;);
+	h.add( effectController, &#34;newGround&#34; ).name(&#34;顯示地面&#34;);
+	h.add( effectController, &#34;newAxes&#34; ).name(&#34;顯示軸線&#34;);
+	h = gui.addFolder(&#34;手臂角度&#34;);
+	// 寫作業時取消這一行的註解： h.add(effectController, &#34;by&#34;, -180.0, 180.0, 0.025).name(&#34;身體 Y&#34;);
+	h.add(effectController, &#34;uy&#34;, -180.0, 180.0, 0.025).name(&#34;上臂 Y&#34;);
+	h.add(effectController, &#34;uz&#34;, -45.0, 45.0, 0.025).name(&#34;上臂 Z&#34;);
+	h.add(effectController, &#34;fy&#34;, -180.0, 180.0, 0.025).name(&#34;前臂 Y&#34;);
+	h.add(effectController, &#34;fz&#34;, -120.0, 120.0, 0.025).name(&#34;前臂 Z&#34;);
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		init();
+		fillScene();
+		drawHelpers();
+		addToDOM();
+		setupGui();
+		animate();
+	} catch(e) {
+		var errorReport = &#34;你的程式遇到不可復原的錯誤，無法繪製 Canvas。錯誤是：&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

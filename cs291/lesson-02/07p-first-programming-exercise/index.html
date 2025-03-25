@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/OrbitAndPanControls.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body>
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 修正錯誤 JavaScript 練習
+////////////////////////////////////////////////////////////////////////////////
+// 你的作業是修正 Javacript 文法錯誤
+// 直到畫面出現一個金色方形！
+// Internet Explorer 不支援 WebGL
+// 這裡有 3 個文法錯誤
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var windowScale;
+var cameraControls;
+var clock = new THREE.Clock();
+
+function drawGoldCube() {
+
+	var cube;
+	var cubeSizeLength = 100;
+	var goldColor = &#34;#FFDF00&#34;;
+	var showFrame = true;
+	var wireMaterial = new THREE.MeshBasicMaterial( { color: goldColor, wireframe: showFrame } ) ;
+
+	var cubeGeometry = new THREE.CubeGeometry(cubeSizeLength, cubeSizeLength, cubeSizeLength);
+
+	cube = new THREE.Mesh( cubeGeometry, wireMaterial );
+	cube.position.x = 0;	// 中心設於原點
+	cube.position.y = 0;	// 中心設於原點
+	cube.position.z = 0;	// 中心設於原點
+	scene.add( cube ;
+
+}
+
+function init() {
+	var canvasWidth = window.innerWidth;
+	var canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth / canvasHeight;
+
+	// 場景
+	scene = new THREE.Scene();
+	scene.fog = new THREE.Fog( 0x808080, 2000, 4000 );
+
+	// 光照
+	scene.add( new THREE.AmbientLight( 0x222222 ) );
+
+	// RENDERER
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColor( scene.fog.color, 1 );
+
+	var container = document.getElementById(&#39;container&#39;);
+	container.appendChild( renderer.domElement );
+
+
+	// 攝影機
+	camera = new THREE.PerspectiveCamera( 45, canvasRatio, 1, 4000 );
+	camera.position.set( -200, 200, -150 );
+
+	// 控制
+	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
+	cameraControls.target.set(0,0,0);
+
+	/ 繪製坐標系格線
+	Coordinates.drawGrid({size:1000,scale:0.01});
+	Coordinates.drawGrid(size:1000,scale:0.01, orientation:&#34;y&#34;});
+	Coordinates.drawGrid({size:1000,scale:0.01, orientation:&#34;z&#34;});
+}
+
+function animate() {
+	requestAnimationFrame(animate);
+	render();
+}
+
+function render() {
+	var delta = clock.getDelta();
+	cameraControls.update(delta);
+	renderer.render(scene, camera);
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	init();
+	drawGoldCube();
+	animate();
+})
+</textarea>
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

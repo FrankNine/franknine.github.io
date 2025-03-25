@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body>
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 多邊形位置作業
+// 你的作業是寫一個接收 2 個參數的函式：
+//   sides － 多邊形有多少邊
+//   location － 多邊形中心位置，類型是 THREE.Vector3
+// 回傳使用最少三角型繪製的多邊形網格
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var windowScale;
+
+function PolygonGeometry(sides, location) {
+	var geo = new THREE.Geometry();
+
+	// 產生頂點
+	for ( var pt = 0 ; pt &lt; sides; pt&#43;&#43; )
+	{
+		// 加 90 度使我們從 &#43;Y 軸開始，逆時針旋轉
+		var angle = (Math.PI/2) &#43; (pt / sides) * 2 * Math.PI;
+
+		var x = Math.cos( angle );
+		var y = Math.sin( angle );
+
+		// 儲存頂點位置
+		geo.vertices.push( new THREE.Vector3( x, y, 0.0 ) );
+	}
+
+	// 產生面
+	for ( var face = 0 ; face &lt; sides-2; face&#43;&#43; )
+	{
+		// 創造三角形扇形，從第一個 &#43;Y 點開始
+		geo.faces.push( new THREE.Face3( 0, face&#43;1, face&#43;2 ) );
+	}
+
+	// 完成：回傳
+	return geo;
+}
+
+function init() {
+	var canvasWidth = window.innerWidth;
+	var canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth / canvasHeight;
+
+	// 場景
+	scene = new THREE.Scene();
+
+	// 攝影機：Y 上，X 右，Z 前
+	windowScale = 8;
+	var windowWidth = windowScale * canvasRatio;
+	var windowHeight = windowScale;
+
+	camera = new THREE.OrthographicCamera( windowWidth / - 2, windowWidth / 2,
+		windowHeight / 2, windowHeight / - 2, 0, 40 );
+
+	var focus = new THREE.Vector3( 3,3,0 );
+	camera.position.x = focus.x;
+	camera.position.y = focus.y;
+	camera.position.z = 10;
+	camera.lookAt(focus);
+
+	renderer = new THREE.WebGLRenderer({ antialias: false, preserveDrawingBuffer: true});
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColorHex( 0xFFFFFF, 1.0 );
+}
+
+function showGrids() {
+	// 背景格線與座標軸，每格大小為 1，坐標軸交叉在 0, 0
+	Coordinates.drawGrid({size:100,scale:1,orientation:&#34;z&#34;});
+	Coordinates.drawAxes({axisLength:4,axisOrientation:&#34;x&#34;,axisRadius:0.02});
+	Coordinates.drawAxes({axisLength:3,axisOrientation:&#34;y&#34;,axisRadius:0.02});
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+function render() {
+	renderer.render( scene, camera );
+}
+
+// 腳本本體
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		init();
+		showGrids();
+		var geo = PolygonGeometry(6, new THREE.Vector3( 3, 4, 0 ));
+		var material = new THREE.MeshBasicMaterial( { color: 0xff0000, side: THREE.FrontSide } );
+		var mesh = new THREE.Mesh( geo, material );
+		scene.add( mesh );
+		addToDOM();
+		render();
+	} catch(e) {
+		var errorReport = &#34;Your program encountered an unrecoverable error, can not draw on canvas. Error was:&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

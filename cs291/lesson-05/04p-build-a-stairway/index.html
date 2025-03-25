@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/OrbitAndPanControls.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/dat.gui.min.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body>
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 搭建樓梯作業
+// 你的作業是完成簡單樓梯的模型
+// 使用既有的大小與顏色，完成一個到達金盃的階梯
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var cameraControls, effectController;
+var clock = new THREE.Clock();
+var gridX = false;
+var gridY = false;
+var gridZ = false;
+var axes = false;
+var ground = true;
+
+function createStairs() {
+	// 材質
+	var stepMaterialVertical = new THREE.MeshLambertMaterial( {
+		color: 0xA85F35
+	} );
+	var stepMaterialHorizontal = new THREE.MeshLambertMaterial( {
+		color: 0xBC7349
+	} );
+
+	var stepWidth = 500;
+	var stepSize = 200;
+	var stepThickness = 50;
+
+	// 從一階頂端到下一階底端的高度
+	var verticalStepHeight = stepSize;
+	var horizontalStepDepth = stepSize*2;
+
+	var stepHalfThickness = stepThickness/2;
+
+	// &#43;Y 方向是上
+	// 定義階梯的垂直與水平兩片
+	// THREE.CubeGeometry 使用參數 (width, height, depth)
+	var stepVertical = new THREE.CubeGeometry(stepWidth, verticalStepHeight, stepThickness);
+	var stepHorizontal = new THREE.CubeGeometry(stepWidth, stepThickness, horizontalStepDepth);
+	var stepMesh;
+
+	// 創造與位移階梯垂直部份
+	stepMesh = new THREE.Mesh( stepVertical, stepMaterialVertical );
+	// 位置是在方塊的中心
+	// 你可以用 THREE.Vector3(x, y, z) 定義位置，或是以下做法：
+	stepMesh.position.x = 0;	// 中心設於原點
+	stepMesh.position.y = verticalStepHeight/2;	// 高度的一半：置於地面之上
+	stepMesh.position.z = 0;	// 中心設於原點
+	scene.add( stepMesh );
+
+	// 創造與位移階梯水平部份
+	stepMesh = new THREE.Mesh( stepHorizontal, stepMaterialHorizontal );
+	stepMesh.position.x = 0;
+	// 上推垂直部份高度加上水平部份一半高度
+	stepMesh.position.y = stepThickness/2 &#43; verticalStepHeight;
+	// 前推一半的深度減去垂直部份一半的厚度
+	stepMesh.position.z = horizontalStepDepth/2 - stepHalfThickness;
+	scene.add( stepMesh );
+}
+
+function createCup() {
+	var cupMaterial = new THREE.MeshLambertMaterial( { color: 0xFDD017});
+	// THREE.CylinderGeometry 使用參數 (radiusTop, radiusBottom, height, segmentsRadius)
+	var cupGeo = new THREE.CylinderGeometry( 200, 50, 400, 32 );
+	var cup = new THREE.Mesh( cupGeo, cupMaterial );
+	cup.position.x = 0;
+	cup.position.y = 1725;
+	cup.position.z = 1925;
+	scene.add( cup );
+	cupGeo = new THREE.CylinderGeometry( 100, 100, 50, 32 );
+	cup = new THREE.Mesh( cupGeo, cupMaterial );
+	cup.position.x = 0;
+	cup.position.y = 1525;
+	cup.position.z = 1925;
+	scene.add( cup );
+}
+
+function init() {
+	var canvasWidth = window.innerWidth;
+	var canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth / canvasHeight;
+
+	// RENDERER
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColorHex( 0xAAAAAA, 1.0 );
+
+	// 攝影機
+	camera = new THREE.PerspectiveCamera( 45, canvasRatio, 1, 40000 );
+	camera.position.set( -700, 500, -1600 );
+
+	// 控制
+	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
+	cameraControls.target.set(0,600,0);
+
+	// 第二組攝影機值如下
+	// camera.position.set( 1225, 2113, 1814 );
+	// cameraControls.target.set(-1800,180,630);
+
+	fillScene();
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+function fillScene() {
+	// 場景
+	scene = new THREE.Scene();
+	scene.fog = new THREE.Fog( 0x808080, 3000, 6000 );
+
+	// 光源
+	var ambientLight = new THREE.AmbientLight( 0x222222 );
+	var light = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light.position.set( 200, 400, 500 );
+
+	var light2 = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light2.position.set( -400, 200, -300 );
+
+	scene.add(ambientLight);
+	scene.add(light);
+	scene.add(light2);
+
+	if (ground) {
+		Coordinates.drawGround({size:1000});
+	}
+	if (gridX) {
+		Coordinates.drawGrid({size:1000,scale:0.01});
+	}
+	if (gridY) {
+		Coordinates.drawGrid({size:1000,scale:0.01, orientation:&#34;y&#34;});
+	}
+	if (gridZ) {
+		Coordinates.drawGrid({size:1000,scale:0.01, orientation:&#34;z&#34;});
+	}
+	if (axes) {
+		Coordinates.drawAllAxes({axisLength:300,axisRadius:2,axisTess:50});
+	}
+	createCup();
+	var stairs = createStairs();
+	scene.add(stairs);
+}
+
+function animate() {
+	window.requestAnimationFrame(animate);
+	render();
+}
+
+function render() {
+	var delta = clock.getDelta();
+	cameraControls.update(delta);
+	if ( effectController.newGridX !== gridX || effectController.newGridY !== gridY || effectController.newGridZ !== gridZ || effectController.newGround !== ground || effectController.newAxes !== axes)
+	{
+		gridX = effectController.newGridX;
+		gridY = effectController.newGridY;
+		gridZ = effectController.newGridZ;
+		ground = effectController.newGround;
+		axes = effectController.newAxes;
+
+		fillScene();
+	}
+	renderer.render(scene, camera);
+}
+
+function setupGui() {
+	effectController = {
+		newGridX: gridX,
+		newGridY: gridY,
+		newGridZ: gridZ,
+		newGround: ground,
+		newAxes: axes
+	};
+
+	var gui = new dat.GUI();
+	gui.add(effectController, &#34;newGridX&#34;).name(&#34;顯示 XZ 格線&#34;);
+	gui.add( effectController, &#34;newGridY&#34; ).name(&#34;顯示 YZ 格線&#34;);
+	gui.add( effectController, &#34;newGridZ&#34; ).name(&#34;顯示 XY 格線&#34;);
+	gui.add( effectController, &#34;newGround&#34; ).name(&#34;顯示地面&#34;);
+	gui.add( effectController, &#34;newAxes&#34; ).name(&#34;顯示軸線&#34;);
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		init();
+		setupGui();
+		addToDOM();
+		animate();
+	} catch(e) {
+		var errorReport = &#34;你的程式遇到不可復原的錯誤，無法繪製 Canvas。錯誤是：&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

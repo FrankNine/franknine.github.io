@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body>
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 畫一個方形的練習
+// 你的作業是完成一個畫方形的函式（在 28 行）
+// 函式接收 4 個參數 － 座標 x1, y1, x2, y2
+// 作為方形頂點，回傳一個幾何物件 (THREE.Geometry())
+// 滿足 x1, y1, x2, y2 定義的方形
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var windowScale;
+
+function exampleTriangle() {
+	// 以下程式碼展示如何畫一個三角形
+	var triangle = new THREE.Geometry();
+	triangle.vertices.push( new THREE.Vector3( 1, 1, 0 ) );
+	triangle.vertices.push( new THREE.Vector3( 3, 1, 0 ) );
+	triangle.vertices.push( new THREE.Vector3( 3, 3, 0 ) );
+
+	triangle.faces.push( new THREE.Face3( 0, 1, 2 ) );
+
+	return triangle;
+}
+
+function drawSquare(x1, y1, x2, y2) {
+
+	var square = new THREE.Geometry();
+	// 你的程式要寫在這裡
+
+	// 不要忘記回傳幾何物件，下一行是必要的
+	return square;
+}
+
+function init() {
+	var canvasWidth = window.innerWidth;
+	var canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth / canvasHeight;
+
+	// 場景
+	scene = new THREE.Scene();
+
+	// 攝影機：Y 上，X 右，Z 前
+	windowScale = 12;
+	var windowWidth = windowScale * canvasRatio;
+	var windowHeight = windowScale;
+
+	camera = new THREE.OrthographicCamera(windowWidth/-2, windowWidth/2, windowHeight/2, windowHeight/-2, 0, 40);
+
+	var focus = new THREE.Vector3( 5,5,0 );
+	camera.position.x = focus.x;
+	camera.position.y = focus.y;
+	camera.position.z = 20;
+	camera.lookAt(focus);
+
+	renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true});
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize( canvasWidth, canvasHeight );
+	renderer.setClearColorHex( 0xFFFFFF, 1.0 );
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+function render() {
+	renderer.render( scene, camera );
+}
+
+function showGrids() {
+	// 背景格線與座標軸，每格大小為 1，坐標軸交叉在 0, 0
+	Coordinates.drawGrid({size:100,scale:1,orientation:&#34;z&#34;});
+	Coordinates.drawAxes({axisLength:11,axisOrientation:&#34;x&#34;,axisRadius:0.04});
+	Coordinates.drawAxes({axisLength:11,axisOrientation:&#34;y&#34;,axisRadius:0.04});
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		init();
+		showGrids();
+		// 創造三角形並加入場景
+		var triangleMaterial = new THREE.MeshBasicMaterial( { color: 0x2685AA, side: THREE.DoubleSide } );
+		var triangleGeometry = exampleTriangle();
+		var triangleMesh = new THREE.Mesh( triangleGeometry, triangleMaterial );
+		scene.add(triangleMesh);
+		// 創造你的方形並加入場景！
+		var square_material = new THREE.MeshBasicMaterial( { color: 0xF6831E, side: THREE.DoubleSide } );
+		var square_geometry = drawSquare(3,5,7,9);
+		var square_mesh = new THREE.Mesh(square_geometry, square_material);
+		scene.add(square_mesh);
+		addToDOM();
+		render();
+	} catch(e) {
+		var errorReport = &#34;Your program encountered an unrecoverable error, can not draw on canvas. Error was:&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

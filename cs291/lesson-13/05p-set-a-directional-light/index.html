@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/OrbitAndPanControls.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/dat.gui.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/uclass_BeveledBlockGeometry.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body>
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 加入一個方向光作業
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var cameraControls;
+
+var clock = new THREE.Clock();
+
+function fillScene() {
+	scene = new THREE.Scene();
+	scene.fog = new THREE.Fog( 0xAAAAAA, 2000, 4000 );
+
+	// 光源
+	scene.add( new THREE.AmbientLight( 0x222222 ) );
+
+	// 學生作業：在這裡加一個方向光
+	// 方向 -200, 200, -400
+	// 全白色光
+	// 亮度 1.5
+
+	// 材質
+	var headMaterial = new THREE.MeshLambertMaterial( );
+	headMaterial.color.r = 104/255;
+	headMaterial.color.g = 1/255;
+	headMaterial.color.b = 5/255;
+	headMaterial.ambient.copy( headMaterial.color );
+
+	var hatMaterial = new THREE.MeshPhongMaterial( { shininess: 100 } );
+	hatMaterial.color.r = 24/255;
+	hatMaterial.color.g = 38/255;
+	hatMaterial.color.b = 77/255;
+	hatMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+	hatMaterial.ambient.copy( hatMaterial.color );
+
+	var bodyMaterial = new THREE.MeshPhongMaterial( { shininess: 100 } );
+	bodyMaterial.color.setRGB( 31/255, 86/255, 169/255 );
+	bodyMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+	bodyMaterial.ambient.copy( bodyMaterial.color );
+
+	var glassMaterial = new THREE.MeshPhongMaterial( { color: 0x0, specular: 0xFFFFFF, shininess: 100, opacity: 0.3, transparent: true } );
+	glassMaterial.ambient.copy( glassMaterial.color );
+
+	var legMaterial = new THREE.MeshPhongMaterial( { shininess: 4 } );
+	legMaterial.color.setHex( 0xAdA79b );
+	legMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+	legMaterial.ambient.copy( legMaterial.color );
+
+	var footMaterial = new THREE.MeshPhongMaterial( { color: 0x960f0b, shininess: 30 } );
+	footMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+	footMaterial.ambient.copy( footMaterial.color );
+
+	var crossbarMaterial = new THREE.MeshPhongMaterial( { color: 0x808080, specular: 0xFFFFFF, shininess: 400 } );
+	crossbarMaterial.ambient.copy( crossbarMaterial.color );
+	var eyeMaterial = new THREE.MeshPhongMaterial( { color: 0x000000, specular: 0x303030, shininess: 4 } );
+	eyeMaterial.ambient.copy( eyeMaterial.color );
+
+	var sphere, cylinder, cube;
+
+	var bevelRadius = 1.9;	// TODO: 2.0 會造成幾何問題
+
+	// 建模
+	// 基底
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 20&#43;64&#43;110, 4, 2*77&#43;12, bevelRadius ), footMaterial );
+	cube.position.x = -45;	// (20&#43;32) - 寬度的一半 (20&#43;64&#43;110)/2
+	cube.position.y = 4/2;	// 高的的一半
+	cube.position.z = 0;	// 中心在原點
+	scene.add( cube );
+
+	// 腳掌
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 20&#43;64&#43;110, 52, 6, bevelRadius ), footMaterial );
+	cube.position.x = -45;	// (20&#43;32) - 寬度的一半 (20&#43;64&#43;110)/2
+	cube.position.y = 52/2;	// 高的的一半
+	cube.position.z = 77 &#43; 6/2;	// 偏移 77 &#43; 深度的一半 6/2
+	scene.add( cube );
+
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 20&#43;64&#43;110, 52, 6, bevelRadius ), footMaterial );
+	cube.position.x = -45;	// (20&#43;32) - 寬度的一半 (20&#43;64&#43;110)/2
+	cube.position.y = 52/2;	// 高的的一半
+	cube.position.z = -(77 &#43; 6/2);	// 負的偏移 77 &#43; 深度的一半 6/2
+	scene.add( cube );
+
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 64, 104, 6, bevelRadius ), footMaterial );
+	cube.position.x = 0;	// X 方向在原點
+	cube.position.y = 104/2;
+	cube.position.z = 77 &#43; 6/2;	// 負的偏移 77 &#43; 深度的一半 6/2
+	scene.add( cube );
+
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 64, 104, 6, bevelRadius ), footMaterial );
+	cube.position.x = 0;	// X 方向在原點
+	cube.position.y = 104/2;
+	cube.position.z = -(77 &#43; 6/2);	// 負的偏移 77 &#43; 深度的一半 6/2
+	scene.add( cube );
+
+	// 腳
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 60, 282&#43;4, 4, bevelRadius ), legMaterial );
+	cube.position.x = 0;	// X 方向在原點
+	cube.position.y = 104 &#43; 282/2 - 2;
+	cube.position.z = 77 &#43; 6/2;	// 負的偏移 77 &#43; 深度的一半 6/2
+	scene.add( cube );
+
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 60, 282&#43;4, 4, bevelRadius ), legMaterial );
+	cube.position.x = 0;	// X 方向在原點
+	cube.position.y = 104 &#43; 282/2 - 2;
+	cube.position.z = -(77 &#43; 6/2);	// 負的偏移 77 &#43; 深度的一半 6/2
+	scene.add( cube );
+
+	// 身體
+	sphere = new THREE.Mesh(
+		new THREE.SphereGeometry( 104/2, 32, 16, 0, Math.PI * 2, Math.PI/2, Math.PI ), bodyMaterial );
+	sphere.position.x = 0;
+	sphere.position.y = 160;
+	sphere.position.z = 0;
+	scene.add( sphere );
+
+	// 半球的上蓋
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 104/2, 104/2, 0, 32 ), bodyMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 12/2, 12/2, 390 - 100, 32 ), bodyMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160 &#43; 390/2 - 100;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	// 玻璃
+	sphere = new THREE.Mesh(
+		new THREE.SphereGeometry( 116/2, 32, 16 ), glassMaterial );
+	sphere.position.x = 0;
+	sphere.position.y = 160;
+	sphere.position.z = 0;
+	scene.add( sphere );
+
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 24/2, 24/2, 390, 32 ), glassMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160 &#43; 390/2;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	// 頭
+	sphere = new THREE.Mesh(
+		new THREE.SphereGeometry( 104/2, 32, 16 ), headMaterial );
+	sphere.position.x = 0;
+	sphere.position.y = 160 &#43; 390;
+	sphere.position.z = 0;
+	scene.add( sphere );
+
+	// 帽子
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 142/2, 142/2, 10, 32 ), hatMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160 &#43; 390 &#43; 40 &#43; 10/2;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 80/2, 80/2, 70, 32 ), hatMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160 &#43; 390 &#43; 40 &#43; 10 &#43; 70/2;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	// 橫桿
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 5, 5, 200, 32 ), crossbarMaterial );
+	cylinder.position.set( 0, 360, 0 );
+	cylinder.rotation.x = 90 * Math.PI / 180.0;
+	scene.add( cylinder );
+
+	// 鼻子
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 6, 14, 70, 32 ), headMaterial );
+	cylinder.position.set( -70, 530, 0 );
+	cylinder.rotation.z = 90 * Math.PI / 180.0;
+	scene.add( cylinder );
+
+	// 眼睛
+	var sphGeom = new THREE.SphereGeometry( 10, 32, 16 );
+
+	// 左眼
+	sphere = new THREE.Mesh( sphGeom, eyeMaterial );
+	sphere.position.set( -48, 560, 0 );
+	var eye = new THREE.Object3D();
+	eye.add( sphere );
+	eye.rotation.y = 20 * Math.PI / 180.0;
+	scene.add( eye );
+
+	// 右眼
+	sphere = new THREE.Mesh( sphGeom, eyeMaterial );
+	sphere.position.set( -48, 560, 0 );
+	eye = new THREE.Object3D();
+	eye.add( sphere );
+	eye.rotation.y = -20 * Math.PI / 180.0;
+	scene.add( eye );
+}
+
+function init() {
+	var canvasWidth = window.innerWidth;
+	var canvasHeight = window.innerHeight;
+
+	// RENDERER
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColorHex( 0xAAAAAA, 1.0 );
+
+	// 攝影機
+	camera = new THREE.PerspectiveCamera( 35, canvasWidth/ canvasHeight, 1, 4000 );
+	camera.position.set( -1160, 350, -600 );
+
+	// 控制
+	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
+	cameraControls.target.set(0,310,0);
+}
+
+function drawHelpers() {
+	Coordinates.drawGround({size:10000});
+	Coordinates.drawGrid({size:10000,scale:0.01});
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+function animate() {
+	window.requestAnimationFrame(animate);
+	render();
+}
+
+function render() {
+	var delta = clock.getDelta();
+	cameraControls.update(delta);
+
+	renderer.render(scene, camera);
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		init();
+		fillScene();
+		drawHelpers();
+		addToDOM();
+		animate();
+	} catch(e) {
+		var errorReport = &#34;你的程式遇到不可復原的錯誤，無法繪製 Canvas。錯誤是：&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>
