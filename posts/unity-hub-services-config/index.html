@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Unity Hub service-config.json - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="最近從 Unity Weekly 看到有趣的文章：
+services-config.json で使えるカラム情報のお話
+在 C:\ProgramData\Unity\config\ 下加入 services-config.json 可以稍微客製化 Unity Hub 的行為。 不過實際試過發現真的有作用的功能有限，只是單純紀錄一下。
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
+
+
+<link rel="canonical" href="https://www.chunfuchao.com/posts/unity-hub-services-config/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/twitter_center.css">
+
+
+<meta property="og:url" content="https://www.chunfuchao.com/posts/unity-hub-services-config/">
+  <meta property="og:site_name" content="Northern Wind">
+  <meta property="og:title" content="Unity Hub service-config.json">
+  <meta property="og:description" content="最近從 Unity Weekly 看到有趣的文章：
+services-config.json で使えるカラム情報のお話
+在 C:\ProgramData\Unity\config\ 下加入 services-config.json 可以稍微客製化 Unity Hub 的行為。 不過實際試過發現真的有作用的功能有限，只是單純紀錄一下。">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-15T19:00:00+08:00">
+    <meta property="article:modified_time" content="2025-08-15T19:00:00+08:00">
+
+  <meta itemprop="name" content="Unity Hub service-config.json">
+  <meta itemprop="description" content="最近從 Unity Weekly 看到有趣的文章：
+services-config.json で使えるカラム情報のお話
+在 C:\ProgramData\Unity\config\ 下加入 services-config.json 可以稍微客製化 Unity Hub 的行為。 不過實際試過發現真的有作用的功能有限，只是單純紀錄一下。">
+  <meta itemprop="datePublished" content="2025-08-15T19:00:00+08:00">
+  <meta itemprop="dateModified" content="2025-08-15T19:00:00+08:00">
+  <meta itemprop="wordCount" content="706">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unity Hub service-config.json">
+  <meta name="twitter:description" content="最近從 Unity Weekly 看到有趣的文章：
+services-config.json で使えるカラム情報のお話
+在 C:\ProgramData\Unity\config\ 下加入 services-config.json 可以稍微客製化 Unity Hub 的行為。 不過實際試過發現真的有作用的功能有限，只是單純紀錄一下。">
+
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/cs291/">
+        <li class="mobile-menu-item">CS291</li>
+      </a><a href="https://github.com/FrankNine/franknine.github.io/wiki">
+        <li class="mobile-menu-item">Wiki</li>
+      </a><a href="/index.xml">
+        <li class="mobile-menu-item">RSS</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/cs291/">CS291</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/FrankNine/franknine.github.io/wiki">Wiki</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/index.xml">RSS</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>最近從 <a href="https://blog.yucchiy.com/project/unity-weekly/">Unity Weekly</a> 看到有趣的文章：</p>
+<p><a href="https://zenn.dev/kazu0617/articles/be682e8c1a204c">services-config.json で使えるカラム情報のお話</a></p>
+<p>在 <code>C:\ProgramData\Unity\config\</code> 下加入 <code>services-config.json</code> 可以稍微客製化 Unity Hub 的行為。
+不過實際試過發現真的有作用的功能有限，只是單純紀錄一下。</p>
+<p>範例的 <code>C:\ProgramData\Unity\config\services-config.json</code> 內容：</p>
+<pre tabindex="0"><code>{
+  &#34;hubDisableSignInRequired&#34;: true,
+  &#34;hubDisableWelcomeScreen&#34;: true,
+  &#34;hubDisableAnalytics&#34;: true,
+  &#34;hubDisableCommunity&#34;: true,
+  &#34;hubDisableLearn&#34;: true,
+  &#34;hubDisableVisualStudioDownload&#34;: true
+}
+</code></pre><p>要適用新的 <code>services-config.json</code> 要整個 Unity Hub 關掉，不只要關閉視窗，還要從工作管理員關掉 Unity Hub Process。</p>
+<p>這些 flag 幾乎沒有 Unity 文件，猜測原文章作者是透過拆 Unity Hub 的 Electron 源碼找到的。
+原程式的內容在 <code>C:\Program Files\Unity Hub\resources\app.asar</code>
+Unity Hub 3.13.1 拆解的節錄內容：</p>
+<pre tabindex="0"><code>vi=(e=&gt;(e.DisableAnalytics=&#34;hubDisableAnalytics&#34;,e.DisableAutoUpdate=&#34;hubDisableAutoUpdate&#34;,e.DisableCloudProjects=&#34;hubDisableCloudProjects&#34;,e.DisableCommunity=&#34;hubDisableCommunity&#34;,e.DisableElevatePermissions=&#34;hubDisableElevate&#34;,e.DisableLearn=&#34;hubDisableLearn&#34;,e.DisablePersonalLicense=&#34;hubDisablePersonalLicense&#34;,e.DisableSignIn=&#34;hubDisableSignin&#34;,e.DisableSignInRequired=&#34;hubDisableSignInRequired&#34;,e.DisableVisualStudio=&#34;hubDisableVisualStudioDownload&#34;,e.DisableWelcomeScreen=&#34;hubDisableWelcomeScreen&#34;,e.EnableWorkOffline=&#34;hubEnableWorkOffline&#34;,e.AnalyticsHighlightUI=&#34;analyticsHighlightUI&#34;,e))(vi||{});
+</code></pre><p>可以看到有以下的 flag：</p>
+<ul>
+<li><code>hubDisableAnalytics</code></li>
+<li><code>hubDisableAutoUpdate</code></li>
+<li><code>hubDisableCloudProjects</code></li>
+<li><code>hubDisableCommunity</code></li>
+<li><code>hubDisableElevate</code></li>
+<li><code>hubDisableLearn</code></li>
+<li><code>hubDisablePersonalLicense</code></li>
+<li><code>hubDisableSignin</code></li>
+<li><code>hubDisableSignInRequired</code></li>
+<li><code>hubDisableVisualStudioDownload</code></li>
+<li><code>hubDisableWelcomeScreen</code></li>
+<li><code>hubEnableWorkOffline</code></li>
+<li><code>analyticsHighlightUI</code></li>
+</ul>
+<h2 id="關閉登入畫面">關閉登入畫面</h2>
+<p><img src="/images/unity-hub-services-config/signin.png" alt=""></p>
+<ul>
+<li><code>&quot;hubDisableSignInRequired&quot;: true</code></li>
+</ul>
+<p>加入這個 flag 可以在沒登入狀態跳過 Unity Hub 的登入畫面直接進到 Hub，
+不過要工作還是需要 License，License 還是需要登入，除非是匯入 License 否則用途不大。
+<code>&quot;hubDisableSignin&quot; : true</code> 與 <code>&quot;hubEnableWorkOffline&quot;: true</code> 測試目前沒有作用。</p>
+<h2 id="關閉歡迎畫面">關閉歡迎畫面</h2>
+<ul>
+<li><code>&quot;hubDisableWelcomeScreen&quot;: true</code></li>
+</ul>
+<p>不太確定歡迎畫面是什麼，沒有明確的作用。</p>
+<h2 id="避免安裝需要-windows-administrator">避免安裝需要 Windows Administrator</h2>
+<ul>
+<li><code>&quot;hubDisableElevate&quot;: true</code></li>
+<li><code>&quot;machineWideSecondaryInstallLocation&quot;: &quot;C:\\UnityEditors&quot;</code></li>
+</ul>
+<p>這兩個 flag 有出現在 Unity 的文件裡：<a href="https://docs.unity3d.com/6000.2/Documentation/Manual/ent-unpriv-install.html">Enable Unity installation by standard users (Windows)</a>
+理論上是加上 <code>hubDisableElevate</code> 然後 <code>machineWideSecondaryInstallLocation</code> 指向一個不需要 Administrator 權限的目錄（Unity Hub 預設裝向 <code>Program Files</code> 需要 Administrator）
+這樣就可以安裝時不需要 Elevate 成 Administrator，在控管電腦 Administrator 的公司環境會有幫助。
+不過實際上使用了還是有 Elevate 需求，不知道是不是 bug。</p>
+<h2 id="關閉-analytics">關閉 Analytics</h2>
+<ul>
+<li><code>&quot;hubDisableAnalytics&quot;: true</code></li>
+</ul>
+<p>理論上會關閉 Unity Hub 的 Analytics，實際上不確定有沒有作用。</p>
+<h2 id="關閉-cloud-projects">關閉 Cloud Projects</h2>
+<ul>
+<li><code>&quot;hubDisableCloudProjects&quot;: true</code></li>
+</ul>
+<p>理論上會關閉 Unity Hub 的強制 Unity Cloud Projects，但是實際測試沒有作用。</p>
+<h2 id="關閉-unity-learn-與-resources-ui">關閉 Unity Learn 與 Resources UI</h2>
+<p><img src="/images/unity-hub-services-config/tabs.png" alt=""></p>
+<ul>
+<li><code>&quot;hubDisableLearn&quot;: true</code></li>
+<li><code>&quot;hubDisableCommunity&quot;: true</code></li>
+</ul>
+<p>可以移除 Unity Hub 側面的 Learn 與 Resources tab。</p>
+<h2 id="關閉下載-unity-時安裝-visual-studio-選項">關閉下載 Unity 時安裝 Visual Studio 選項</h2>
+<p><img src="/images/unity-hub-services-config/no-vs.png" alt=""></p>
+<ul>
+<li><code>&quot;hubDisableVisualStudioDownload&quot;: true</code></li>
+</ul>
+<h2 id="禁用-personal-license">禁用 Personal License</h2>
+<ul>
+<li><code>&quot;hubDisablePersonalLicense&quot;: true</code></li>
+</ul>
+<p>這個會移除啟用 License 時，Personal License 的選項。
+可以用在公司內避免員工誤用 Personal License。</p>
+<h2 id="關閉自動更新">關閉自動更新</h2>
+<ul>
+<li><code>&quot;hubDisableAutoUpdate&quot; : true</code></li>
+</ul>
+<p>大抵上來說感覺想用的 flag 不作用的還蠻多的，希望之後的版本能修好。</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/aaefiikmnnnr" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/FrankNine/" class="iconfont icon-github" title="github"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even"  rel="noopener noreferrer" target="_blank">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>Chun-Fu Chao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
