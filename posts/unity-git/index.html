@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/unity-git/" />
@@ -36,7 +36,7 @@
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -55,7 +55,7 @@
   <meta itemprop="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
   <meta itemprop="datePublished" content="2020-05-10T23:20:12+08:00">
   <meta itemprop="dateModified" content="2020-05-10T23:20:12+08:00">
-  <meta itemprop="wordCount" content="9415">
+  <meta itemprop="wordCount" content="9370">
   <meta itemprop="keywords" content="Unity,git">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Unity 和 git">
@@ -177,32 +177,17 @@
 <h2 id="gitconfig">.gitconfig</h2>
 <h3 id="coreignorecase">core.ignorecase</h3>
 <p>最重要會要求團隊所有成員設定：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git config --global core.ignorecase true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>讓 git 把大小寫不同的檔案視為同一檔案。因為 Mac、Linux 等系統上有可能是 Case-sensitive 檔案系統，大小寫不同的檔案視為不同檔案，但是在 Windows 上卻視為相同檔案。如果沒有這樣設定則 Mac 的使用者可以推名稱只有大小寫不同的檔案進到 Repo，然後用 Windows 的成員會拉不下來，或是遇到檔案變動 Revert 後馬上恢復成 Modified 的狀態。如果有任何非得做檔名大小寫改變的動作，請使用 <a href="https://git-scm.com/docs/git-mv"><code>git mv</code></a> 不要自己刪除檔案 Commit 再改名 Commit，檔案歷史的認定上可能會錯亂。</p>
+<pre tabindex="0"><code>git config --global core.ignorecase true
+</code></pre><p>讓 git 把大小寫不同的檔案視為同一檔案。因為 Mac、Linux 等系統上有可能是 Case-sensitive 檔案系統，大小寫不同的檔案視為不同檔案，但是在 Windows 上卻視為相同檔案。如果沒有這樣設定則 Mac 的使用者可以推名稱只有大小寫不同的檔案進到 Repo，然後用 Windows 的成員會拉不下來，或是遇到檔案變動 Revert 後馬上恢復成 Modified 的狀態。如果有任何非得做檔名大小寫改變的動作，請使用 <a href="https://git-scm.com/docs/git-mv"><code>git mv</code></a> 不要自己刪除檔案 Commit 再改名 Commit，檔案歷史的認定上可能會錯亂。</p>
 <p>參考資料：</p>
 <ul>
 <li><a href="https://gitbook.tw/posts/2018-06-05-case-sensitive">關於檔名的大小寫</a></li>
 </ul>
 <p>因為我們設定了 <code>core.ignorecase true</code>，所以在設定 <a href="https://github.com/FrankNine/RepoConfig/blob/master/.gitignore"><code>.gitignore</code></a> 與 <a href="https://github.com/FrankNine/RepoConfig/blob/master/.gitattributes"><code>.gitattributes</code></a> 也就不會特別加入 Match 大小寫的 Pattern。</p>
 <h3 id="corefsmonitor--featuremanyfiles">core.fsmonitor / feature.manyFiles</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git config --global core.fsmonitor true
-</span></span><span class="line"><span class="cl">git config --global feature.manyFiles true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>以遊戲專案的大小，任何有助於 git 操作速度的設定都該使用。<a href="https://git-scm.com/docs/git-update-index#_file_system_monitor">File System Monitor</a> 可以利用作業系統功能加速檔案修改的偵測，<a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-featuremanyFiles">Many Files</a> 則可以加速 Untracked 檔案的偵測。</p>
+<pre tabindex="0"><code>git config --global core.fsmonitor true
+git config --global feature.manyFiles true
+</code></pre><p>以遊戲專案的大小，任何有助於 git 操作速度的設定都該使用。<a href="https://git-scm.com/docs/git-update-index#_file_system_monitor">File System Monitor</a> 可以利用作業系統功能加速檔案修改的偵測，<a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-featuremanyFiles">Many Files</a> 則可以加速 Untracked 檔案的偵測。</p>
 <p>參考資料：</p>
 <ul>
 <li><a href="https://canvatechblog.com/we-put-half-a-million-files-in-one-git-repository-heres-what-we-learned-ec734a764181">We Put Half a Million files in One git Repository, Here’s What We Learned</a></li>
@@ -215,32 +200,14 @@
 <h3 id="lfs-large-file-storage">LFS (Large File Storage)</h3>
 <p>先說 LFS，基本上是把特定副檔名的檔案搬出 git 移動到 LFS Server，而原來的 git 路徑只留下 <a href="https://github.com/git-lfs/git-lfs/blob/master/docs/spec.md#the-pointer">Pointer File</a>，Pointer File 裡有 oid。當有需要時 LFS 會用 Pointer File 裡的 oid 到 LFS Server 查找、下載檔案並取代（<a href="https://git-scm.com/book/zh-tw/v2/Customizing-Git-Git-Attributes#rfilters_a">Smudge</a>）掉 Pointer File。</p>
 <p>Pointer File 的內容範例如下，容量大約 130 bytes 左右。記得這個容量大小，如果看到檔案變成這個大小要想是不是 LFS 的替換沒有正常執行。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">version https://git-lfs.github.com/spec/v1
-</span></span><span class="line"><span class="cl">oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393
-</span></span><span class="line"><span class="cl">size 12345
-</span></span><span class="line"><span class="cl">(ending \n)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>現在 git 用戶端通常都會偵測 LFS 並在 Clone 的時候做好 LFS 的設定，不過如果 LFS 替換有問題可以手動執行：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git lfs install
-</span></span><span class="line"><span class="cl">git lfs pull
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>使用 LFS 可以降低 git 歷史的大小，因為 git 本身變成只儲存 Pointer File。這樣可以降低 Clone 在本機硬碟上的大小，並增進效率。降低 Clone 大小這件事對 Binary 檔案大的 3D 遊戲專案非常有感。但是缺點有：</p>
+<pre tabindex="0"><code>version https://git-lfs.github.com/spec/v1
+oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393
+size 12345
+(ending \n)
+</code></pre><p>現在 git 用戶端通常都會偵測 LFS 並在 Clone 的時候做好 LFS 的設定，不過如果 LFS 替換有問題可以手動執行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs install
+</span></span><span style="display:flex;"><span>git lfs pull
+</span></span></code></pre></div><p>使用 LFS 可以降低 git 歷史的大小，因為 git 本身變成只儲存 Pointer File。這樣可以降低 Clone 在本機硬碟上的大小，並增進效率。降低 Clone 大小這件事對 Binary 檔案大的 3D 遊戲專案非常有感。但是缺點有：</p>
 <ul>
 <li>git 操作變成要持續跟 LFS Server 溝通，喪失 git 完全分散式與可離線工作的優點。</li>
 <li>有時需要排除 LFS 製造的問題，最常見的是 Clone 或是 Fetch 的時候 LFS 沒有觸發替換 Pointer File 為真正的檔案內容。有些罕見有遇過的是 GitLab 的 LFS Server 弄丟檔案導致 Fetch 不下來。或是在開啟 LFS 又 Fork 的情況下，GitLab LFS Repo 可能需要 <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/271576">重新同步</a>。目前建議使用 GitLab LFS 跟 Fork 功能不要同時使用。</li>
@@ -250,64 +217,23 @@
 <p>要進行 Migration 首先要在本地 Track 所有的分支，因為 <code>lfs migrate</code> 只會作用在本地分支：<br>
 <a href="https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches">https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches</a></p>
 <p>然後執行（以改寫 <code>.png</code> 與 <code>.psd</code> 歷史成為 LFS 作示範）：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git lfs migrate import --everything --include<span class="o">=</span><span class="s2">&#34;*.png,*.psd&#34;</span>
-</span></span><span class="line"><span class="cl">git reflog expire --expire<span class="o">=</span>now --all <span class="o">&amp;&amp;</span> git gc --prune<span class="o">=</span>now
-</span></span><span class="line"><span class="cl">git remote set-url origin &lt;新 repo 位置&gt;
-</span></span><span class="line"><span class="cl">git push --all origin --force
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>另外一種常見的狀況是修改了 <code>.gitattributes</code> 把新的附檔名納入 LFS 範圍，但是已經存在的檔案沒有置換成 Pointer File，這時候在 Clone 或是 Reset 的時候都會收到警告：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Encountered 1 file(s) that should have been pointers, but weren&#39;t
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果沒有要往回整理歷史只是要把目前檔案換成 Pointer File，可以用：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># from https://stackoverflow.com/a/51626808</span>
-</span></span><span class="line"><span class="cl">git rm --cached -r .
-</span></span><span class="line"><span class="cl">git reset --hard
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>或是使用</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
-</span></span><span class="line"><span class="cl">git add --renormalize .
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然後把檔案變動 Commit / Push 即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs migrate import --everything --include<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*.png,*.psd&#34;</span>
+</span></span><span style="display:flex;"><span>git reflog expire --expire<span style="color:#f92672">=</span>now --all <span style="color:#f92672">&amp;&amp;</span> git gc --prune<span style="color:#f92672">=</span>now
+</span></span><span style="display:flex;"><span>git remote set-url origin &lt;新 repo 位置&gt;
+</span></span><span style="display:flex;"><span>git push --all origin --force
+</span></span></code></pre></div><p>另外一種常見的狀況是修改了 <code>.gitattributes</code> 把新的附檔名納入 LFS 範圍，但是已經存在的檔案沒有置換成 Pointer File，這時候在 Clone 或是 Reset 的時候都會收到警告：</p>
+<pre tabindex="0"><code>Encountered 1 file(s) that should have been pointers, but weren&#39;t
+</code></pre><p>如果沒有要往回整理歷史只是要把目前檔案換成 Pointer File，可以用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># from https://stackoverflow.com/a/51626808</span>
+</span></span><span style="display:flex;"><span>git rm --cached -r .
+</span></span><span style="display:flex;"><span>git reset --hard
+</span></span></code></pre></div><p>或是使用</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
+</span></span><span style="display:flex;"><span>git add --renormalize .
+</span></span></code></pre></div><p>然後把檔案變動 Commit / Push 即可。</p>
 <p>只要在 <code>.gitattributes</code> 加入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">*.png filter=lfs diff=lfs merge=lfs
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>像這樣就可以把 PNG 圖檔交給 LFS 管理（因為有設定 <code>core.ignorecase true</code> 所以我們不用寫成 <code>*.[pP][nN][gG]</code>）。基本上所有不能直接文字編輯的二進位檔案都該加入 LFS，但是 Unity Prefab (<code>.prefab</code>) 跟 Scene (<code>.unity</code>) 我會選擇不加入 LFS。在 AssetSerialization 設定為 Force Text 後 Unity 的 GameObject 結構 YAML 算是可以判讀與做文字 diff 的，很多時候可以這樣確認 Prefab 或是 Scene 的修改有沒有意外改到別的東西。</p>
+<pre tabindex="0"><code>*.png filter=lfs diff=lfs merge=lfs
+</code></pre><p>像這樣就可以把 PNG 圖檔交給 LFS 管理（因為有設定 <code>core.ignorecase true</code> 所以我們不用寫成 <code>*.[pP][nN][gG]</code>）。基本上所有不能直接文字編輯的二進位檔案都該加入 LFS，但是 Unity Prefab (<code>.prefab</code>) 跟 Scene (<code>.unity</code>) 我會選擇不加入 LFS。在 AssetSerialization 設定為 Force Text 後 Unity 的 GameObject 結構 YAML 算是可以判讀與做文字 diff 的，很多時候可以這樣確認 Prefab 或是 Scene 的修改有沒有意外改到別的東西。</p>
 <p>YAML 判讀方面可以參考官方的文章來入門：<a href="https://blog.unity.com/technology/understanding-unitys-serialization-language-yaml">Understanding Unity’s serialization language, YAML</a></p>
 <p>如果你也習慣這樣判讀 Scene 跟 Prefab 的改動，記得在升級 Unity 的時候要對所有 Scene 跟 Prefab 下 <a href="https://docs.unity3d.com/ScriptReference/AssetDatabase.ForceReserializeAssets.html">AssetDatabase.ForceReserializeAssets</a> 把 <code>.prefab</code> 或是 <code>.unity</code> 升級到新的 Unity 的格式。因為 Unity 預設行為會 Lazy 升級後要等到有改動才用新格式儲存（這是 Unity 編輯器的設計理念，Material 檔案儲存也有類似的 Lazy 行為），但這樣會變成你的改動跟升級的改動混在一起難以判讀 diff，所以需要在剛升級 Unity 還沒有修改的時候強制檔案升級。</p>
 <p>Unity 有提供自己的 <a href="https://docs.unity3d.com/Manual/SmartMerge.html">YAML merger</a>，不過試用之後覺得結果偶而怪怪的。目前還是只有判讀 diff，沒有在對 Scene 跟 Prefab 使用自動合併。</p>
@@ -373,64 +299,28 @@
 <h2 id="editorconfig">EditorConfig</h2>
 <p><a href="https://editorconfig.org/">https://editorconfig.org/</a></p>
 <p>這個跟 git 本身無關，不過也是可以放在 Repo 裡的設定檔就順便提一下。目前我們使用的設定很陽春：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root = true
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">[*]
-</span></span><span class="line"><span class="cl">charset = utf-8
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">indent_style = space
-</span></span><span class="line"><span class="cl">indent_size  = 4
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">trim_trailing_whitespace = true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>.gitattributes</code> 可以控制行尾，但是程式碼還可能會有文字編碼、BOM、或是 Tab / Space 不一致的問題。而編碼與 Tab / Space 可以靠在專案內放置 <code>.editorconfig</code> 提示程式編輯工具如何處理來完成。目前 Visual Studio、MonoDevelop 與 Rider 都會自動偵測 <code>.editorconfig</code> 的設定，而 Visual Studio Code 與 Notepad++ 則是需要安裝 Plugin。</p>
+<pre tabindex="0"><code>root = true
+
+[*]
+charset = utf-8
+
+indent_style = space
+indent_size  = 4
+
+trim_trailing_whitespace = true
+</code></pre><p><code>.gitattributes</code> 可以控制行尾，但是程式碼還可能會有文字編碼、BOM、或是 Tab / Space 不一致的問題。而編碼與 Tab / Space 可以靠在專案內放置 <code>.editorconfig</code> 提示程式編輯工具如何處理來完成。目前 Visual Studio、MonoDevelop 與 Rider 都會自動偵測 <code>.editorconfig</code> 的設定，而 Visual Studio Code 與 Notepad++ 則是需要安裝 Plugin。</p>
 <p>更進一步可以把 Visual Studio 或是 ReSharper 的設定也放進 Repo，從使用工具讓行尾、Tab / Space 之類的統一提升到 Naming 或是 Coding Convention 的統一。不過因為公司還沒有統一導入 JetBrains 的編輯器，所以沒有這方面的實務經驗。</p>
 <h1 id="worktree">Worktree</h1>
 <p>如果是開發多平台遊戲的人可能會習慣 clone 同一個專案一次以上，然後把平台設定成不同，例如一個 Clone 平台設定成 Android 一個平台設定成 iOS。雖然 <a href="https://docs.unity3d.com/Manual/CacheServer.html">Cache Server</a> / <a href="https://docs.unity3d.com/Manual/UnityAccelerator.html">Accelerator</a> 或是 <a href="https://forum.unity.com/threads/what-is-asset-database-v2.680170/">AssetDatabase V2</a> 可以降低平台切換的成本，但是在硬碟上保留兩份專案還是最快最直觀的。缺點很直接是硬碟用量很大，其實可以 Clone 一次然後開一個以上的 <a href="https://git-scm.com/docs/git-worktree">Worktree</a>，這樣雖然還是有多個專案目錄，但是只會有一個 <code>.git</code> 資料夾，即電腦上只有一份 git 歷史。如果有容量的疑慮又電腦裝有容量大的傳統硬碟跟有限的 SSD，可以考慮把 git 歷史放在傳統硬碟，專案 Worktree 放在 SSD 上的安排。</p>
 <p>在 git 根目錄輸入：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git worktree add ../project-ios
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>即在上層目錄再開一個叫 <code>project-ios</code> 的 Worktree</p>
+<pre tabindex="0"><code>git worktree add ../project-ios
+</code></pre><p>即在上層目錄再開一個叫 <code>project-ios</code> 的 Worktree</p>
 <p>額外的 Worktree 一般的 git 用戶端都可以識別，操作起來跟操作普通的 Clone 沒有太大差別。</p>
 <p>列舉 Worktree</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git worktree list
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>當不需要使用時只要把 Worktree 刪除然後執行</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git worktree prune
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>可以參考：</p>
+<pre tabindex="0"><code>git worktree list
+</code></pre><p>當不需要使用時只要把 Worktree 刪除然後執行</p>
+<pre tabindex="0"><code>git worktree prune
+</code></pre><p>可以參考：</p>
 <ul>
 <li><a href="https://ihower.tw/blog/archives/8740">Git worktree: 同時開多個工作目錄</a> by ihower</li>
 </ul>
@@ -457,17 +347,9 @@
 <li><a href="https://www.bitsnbites.eu/a-tidy-linear-git-history/">A tidy, linear Git history</a></li>
 </ul>
 <p>對非技術人員的話操作 Rebase 可能會比較困難，但是如果非程式都用 Pull 的話會產生大量的 Merge Commit。有一派的作法是替非技術人員設定 <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-pullrebase">pull.rebase</a> 和 <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-rebaseautoStash">rebase.autoStash</a>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git config pull.rebase true
-</span></span><span class="line"><span class="cl">git config rebase.autoStash true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>這樣在 Pull 的時候會觸發 Stash、Rebase 和 Apply Stash，對於減少 Merge Commit 蠻有效的。但是麻煩的是如果有衝突會從 Merge Conflict 變成更難排除的 Rebase Conflict。公司有些專案是要求這樣運作的，這可能要看各團隊非技術人員的接受度。</p>
+<pre tabindex="0"><code>git config pull.rebase true
+git config rebase.autoStash true
+</code></pre><p>這樣在 Pull 的時候會觸發 Stash、Rebase 和 Apply Stash，對於減少 Merge Commit 蠻有效的。但是麻煩的是如果有衝突會從 Merge Conflict 變成更難排除的 Rebase Conflict。公司有些專案是要求這樣運作的，這可能要看各團隊非技術人員的接受度。</p>
 <p>如果對 Pull Rebase 有興趣可以參考：</p>
 <ul>
 <li><a href="https://networm.me/2018/07/29/git-for-unity-project/#%E6%8B%89%E5%8F%96%E7%AD%96%E7%95%A5">使用 Git 管理 Unity 项目</a> by 狂飙</li>
@@ -475,44 +357,18 @@
 <p>往前 Rebase 同時有接受主要分支的改動的功能，另一種做法是主要分支往 Feature Branch 做 Merge。但這樣 Merge 要交代所有成員小心發生衝突時的 Resolve，如果更新時的 Merge Resolve 做錯，在 Feature Branch 結束反著合向主要分支時是不會有任何警告，因為前面已經 Marked as Resolved 了。非技術人員偶爾會做錯，但是發生就會污染主要分支造成嚴重後果。如果不用 Rebase 要特別小心這點。</p>
 <h1 id="sparse-checkout--shallow-clone">Sparse checkout &amp; Shallow clone</h1>
 <p>在 Checkout 的時候其實不一定要 Checkout 出整個專案，可以將路徑 Pattern 寫入 <code>.git/info/sparse-checkout</code> 只 Checkout 特定的檔案或資料夾。以下是只 Clone 之後只 Checkout <code>/Assets/</code> 和 <code>/ProjectSettings/</code> 的示範。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone --no-checkout &lt;Repo URI&gt;
-</span></span><span class="line"><span class="cl">cd &lt;Repo 路徑&gt;
-</span></span><span class="line"><span class="cl">git config core.sparseCheckout true
-</span></span><span class="line"><span class="cl">(echo /Assets/) &gt; .git/info/sparse-checkout
-</span></span><span class="line"><span class="cl">(echo /ProjectSettings/) &gt;&gt; .git/info/sparse-checkout # &gt;&gt; 是 Append
-</span></span><span class="line"><span class="cl">git checkout
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>（<a href="https://github.blog/2020-01-13-highlights-from-git-2-25/">Git 2.25.0</a> 加入了 <a href="https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/"><code>git sparse-checkout</code></a>，可以用 <code>git sparse-checkout init</code> 取代 <code>git config core.sparseCheckout true</code> <a href="https://git-scm.com/docs/git-sparse-checkout#Documentation/git-sparse-checkout.txt-emsetem"><code>git sparse-checkout set/add</code></a> 取代直接編輯 <code>.git/info/sparse-checkout</code> ）</p>
+<pre tabindex="0"><code>git clone --no-checkout &lt;Repo URI&gt;
+cd &lt;Repo 路徑&gt;
+git config core.sparseCheckout true
+(echo /Assets/) &gt; .git/info/sparse-checkout
+(echo /ProjectSettings/) &gt;&gt; .git/info/sparse-checkout # &gt;&gt; 是 Append
+git checkout
+</code></pre><p>（<a href="https://github.blog/2020-01-13-highlights-from-git-2-25/">Git 2.25.0</a> 加入了 <a href="https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/"><code>git sparse-checkout</code></a>，可以用 <code>git sparse-checkout init</code> 取代 <code>git config core.sparseCheckout true</code> <a href="https://git-scm.com/docs/git-sparse-checkout#Documentation/git-sparse-checkout.txt-emsetem"><code>git sparse-checkout set/add</code></a> 取代直接編輯 <code>.git/info/sparse-checkout</code> ）</p>
 <p>另外 <code>git clone</code> 可以加入 <a href="https://git-scm.com/docs/git-clone#Documentation/git-clone.txt---depthltdepthgt"><code>--depth</code></a> 參數限制 Clone 下來的歷史深度</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone --depth 5 -b &lt;Branch&gt; &lt;Repo URI&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果要還原的話執行：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git fetch --unshallow
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Sparse Checkout 與 Shallow Clone 都可以加快 git 操作的速度與減少空間用量，不過平常直接用在要編輯的 Clone 機會不多。最實用的應用是在設定 Build Pipeline 的 git，控制 Build Server Clone 跟 Checkout 的行為達到加速建置的效果。</p>
+<pre tabindex="0"><code>git clone --depth 5 -b &lt;Branch&gt; &lt;Repo URI&gt;
+</code></pre><p>如果要還原的話執行：</p>
+<pre tabindex="0"><code>git fetch --unshallow
+</code></pre><p>Sparse Checkout 與 Shallow Clone 都可以加快 git 操作的速度與減少空間用量，不過平常直接用在要編輯的 Clone 機會不多。最實用的應用是在設定 Build Pipeline 的 git，控制 Build Server Clone 跟 Checkout 的行為達到加速建置的效果。</p>
 <p>可以參考：</p>
 <ul>
 <li><a href="https://www.peterdavehello.org/2015/05/use-git-sparse-checkout-and-shallow-clone-pull-to-increase-work-efficient/">善用 Git 的 sparse checkout 跟 shallow clone/pull 來提高工作效率</a> by Peter Dave</li>
@@ -525,26 +381,11 @@
 <p>另外 Code Review 也是在頻繁合併發 Merge Request 的環境比較適合做，一般人一次能 Review 的程式長度其實有限。開發超過一週的改動份量 Review 起來就會非常吃力，更久就是折磨 Reviewer 了。</p>
 <h1 id="lfs-lock">LFS Lock</h1>
 <p>在 git LFS v2.0.0 新增了 <a href="https://github.com/git-lfs/git-lfs/wiki/File-Locking">鎖定</a> 特定檔案的功能，新版的 Fork 也支援從 UI 執行 LFS Lock。在 <code>.gitattributes</code> 加入 <code>lockable</code> 即宣告為可以鎖定的檔案：（實際上實驗起來好像沒有 lockable 屬性也能 <code>git lfs lock</code>，看得到的差別好像只在有宣告 <code>lockable</code> <a href="https://github.com/git-lfs/git-lfs/blob/94245ec834c7f938ec3a7808f73e9bd1d2b04f0a/docs/man/git-lfs-post-commit.1.ronn#description">commit</a> 檔案時 git LFS 會自動把沒有 <code>git lfs lock</code> 的檔案加上 read-only 屬性）</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">*.jpg filter=lfs diff=lfs merge=lfs -text lockable
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>之後便可以用 lock 與 unlock</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git lfs lock &lt;檔案路徑&gt;
-</span></span><span class="line"><span class="cl">git lfs unlock &lt;檔案路徑&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>雖然這個功能感覺可以實作類似 Perforce 的 Checkout 同時鎖定檔案功能，但是目前還是需要靠手動檢查 Lock 狀態，不是很方便。所以沒有推廣到專案上，但是覺得是一個有潛力的方向。<del>希望之後的版本能改進，或是有方法靠 Hook 兜出像是 Perforce 偵測到檔案編輯就自動上鎖的功能。</del></p>
+<pre tabindex="0"><code>*.jpg filter=lfs diff=lfs merge=lfs -text lockable
+</code></pre><p>之後便可以用 lock 與 unlock</p>
+<pre tabindex="0"><code>git lfs lock &lt;檔案路徑&gt;
+git lfs unlock &lt;檔案路徑&gt;
+</code></pre><p>雖然這個功能感覺可以實作類似 Perforce 的 Checkout 同時鎖定檔案功能，但是目前還是需要靠手動檢查 Lock 狀態，不是很方便。所以沒有推廣到專案上，但是覺得是一個有潛力的方向。<del>希望之後的版本能改進，或是有方法靠 Hook 兜出像是 Perforce 偵測到檔案編輯就自動上鎖的功能。</del></p>
 <p>後來試了一下希望自動將檔案設定唯讀，然後在 LFS Lock 時才解除檔案唯讀的仿效 Perforce 的工作流程的自動化。實作到一半發現 <a href="https://forum.unity.com/threads/why-does-unity-unlock-a-read-only-file.35462/#post-230437">Unity Editor 本身就不會尊重系統上的唯讀 Flag</a>，因為 Unity 會隨便解除 Assets 目錄下檔案的唯讀，無法區分是我解鎖的還是 Unity 解鎖的。這樣只能放棄這個想法，也會讓我好奇 Perforce 要怎麼用在 Unity 上，還是無法做好整合？</p>
 <p>另外 <a href="https://github.com/git-lfs/git-lfs/issues/3637">Per-branch Lock</a> 跟 <a href="https://github.com/git-lfs/git-lfs/issues/2671#issuecomment-349458133">Auto Unlock</a> 這兩個使用者期望能實作的改進好像就放置了，感覺這幾個大問題解決前好像沒有繼續投資研究 LFS Lock 的必要。</p>
 <h1 id="vfs-for-git">VFS for Git</h1>

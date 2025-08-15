@@ -17,38 +17,16 @@
   });
 </script>
 <p><strong>解答：</strong> 將這段程式加到 <code>fillScene()</code> 末端：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// solution
-</span></span><span class="line"><span class="cl">handRight = new THREE.Object3D();
-</span></span><span class="line"><span class="cl">createRobotGrabber( handRight, handLength, robotHandRightMaterial );
-</span></span><span class="line"><span class="cl">// 移動到前臂末端
-</span></span><span class="line"><span class="cl">handRight.position.y = faLength;
-</span></span><span class="line"><span class="cl">forearm.add( handRight );
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在 <code>render()</code> 裡 <code>handLeft</code> 後面：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// solution
-</span></span><span class="line"><span class="cl">handRight.rotation.z = effectController.hz * Math.PI/180;    // yaw
-</span></span><span class="line"><span class="cl">// 取負號往反方向走
-</span></span><span class="line"><span class="cl">handRight.position.z = -effectController.htz;    // translate
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>// solution
+handRight = new THREE.Object3D();
+createRobotGrabber( handRight, handLength, robotHandRightMaterial );
+// 移動到前臂末端
+handRight.position.y = faLength;
+forearm.add( handRight );
+</code></pre><p>在 <code>render()</code> 裡 <code>handLeft</code> 後面：</p>
+<pre tabindex="0"><code>// solution
+handRight.rotation.z = effectController.hz * Math.PI/180;    // yaw
+// 取負號往反方向走
+handRight.position.z = -effectController.htz;    // translate
+</code></pre>
 </div>

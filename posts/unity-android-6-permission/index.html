@@ -29,7 +29,7 @@ http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/unity-android-6-permission/" />
@@ -41,7 +41,7 @@ http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -70,7 +70,7 @@ http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134
 最近發現公司的遊戲在 Android 6.0 上面會發生過了開頭畫面就閃退的情況。Logcat 的結果像是這篇論壇文章寫的：">
   <meta itemprop="datePublished" content="2015-11-01T18:12:01+00:00">
   <meta itemprop="dateModified" content="2015-11-01T18:12:01+00:00">
-  <meta itemprop="wordCount" content="587">
+  <meta itemprop="wordCount" content="585">
   <meta itemprop="keywords" content="Unity,Android,Permission,權限">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Unity 在 Android 6.0 (Android M) 的權限問題">
@@ -162,17 +162,9 @@ http://forum.unity3d.com/threads/android-m-bugs.358550/#post-2393134
 <hr>
 <p>最近發現公司的遊戲在 Android 6.0 上面會發生過了開頭畫面就閃退的情況。Logcat 的結果像是這篇論壇文章寫的：</p>
 <p><a href="http://forum.unity3d.com/threads/android-m-bugs.358550/">http://forum.unity3d.com/threads/android-m-bugs.358550/</a></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">E Unity : Unable to find jni
-</span></span><span class="line"><span class="cl">E linker : readlink(&amp;#8216;/proc/self/fd/61&amp;#8217;) failed: Permission denied [fd=61]
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>追過之後發現在手機的應用程式設定選單裡面，所有的權限，包含機器儲存空間的存取權限都是關閉的，因為這樣所以 Unity App 讀不到 library 或是讀不到 OBB 而閃退。</p>
+<pre tabindex="0"><code>E Unity : Unable to find jni
+E linker : readlink(&amp;#8216;/proc/self/fd/61&amp;#8217;) failed: Permission denied [fd=61]
+</code></pre><p>追過之後發現在手機的應用程式設定選單裡面，所有的權限，包含機器儲存空間的存取權限都是關閉的，因為這樣所以 Unity App 讀不到 library 或是讀不到 OBB 而閃退。</p>
 <p>起因是 Google 在 Android 6.0 跟 API Level 23 以上導入了新的權限系統：</p>
 <p><a href="https://developer.android.com/training/permissions/requesting.html">https://developer.android.com/training/permissions/requesting.html</a></p>
 <p>簡單來說在 Android 6.0 跟 Level 23 以上的組合，App 除了要把權限列在 AndroidManifest 之外，還要在啟動的時候跟使用者做再次確認，這樣才會拿到權限。（同時在新系統上使用者在安裝的時候不再會被問要不要給權限）</p>

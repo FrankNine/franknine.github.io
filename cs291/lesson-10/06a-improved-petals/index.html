@@ -17,109 +17,38 @@
   });
 </script>
 <p><strong>解答：</strong> 將以下加入 <code>fillScene()</code>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span> <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">24</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">cylGeom</span><span class="p">,</span> <span class="n">petalMaterial</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cylinder</span><span class="o">.</span><span class="n">scale</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">petalLength</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">//</span><span class="n">cylinder</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="mi">20</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">petal</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">15</span><span class="o">*</span><span class="n">i</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="mi">90</span><span class="o">-</span><span class="mi">20</span><span class="p">)</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">flowerHeight</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">flower</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">petal</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>影片裡的解答還蠻短的，如果你作業寫對了可以跳過以下的說明。如果卡關了不要氣餒，這是最困難的作業之一。但不要跳過這個作業。如果你熟悉這個領域的基礎並了解為什麼答案是這樣，你會深刻理解如何在電腦圖學裡控制座標變換。</p>
+<pre tabindex="0"><code>for ( var i = 0; i &lt; 24 ; i++ )
+{
+    var cylinder = new THREE.Mesh( cylGeom, petalMaterial );
+    cylinder.scale.x = 0.25;
+    cylinder.position.y = petalLength / 2;
+    //cylinder.rotation.z = -20 * Math.PI/180;
+
+    var petal = new THREE.Object3D();
+    petal.add( cylinder );
+    petal.rotation.y = 15*i * Math.PI/180;
+    petal.rotation.z = (90-20) * Math.PI/180;
+    petal.position.y = flowerHeight;
+
+    flower.add( petal );
+}
+</code></pre><p>影片裡的解答還蠻短的，如果你作業寫對了可以跳過以下的說明。如果卡關了不要氣餒，這是最困難的作業之一。但不要跳過這個作業。如果你熟悉這個領域的基礎並了解為什麼答案是這樣，你會深刻理解如何在電腦圖學裡控制座標變換。</p>
 <p>如果你不懂我的答案，我的建議是把解答貼進去然後註解掉不同行看看結果。註解掉莖可以看到花瓣的全貌。底下是我的思考過程。</p>
 <p>目標是要把一個垂直的圓錐壓扁成花瓣的形狀，旋轉它使其接近水平，然後側面旋轉使其散開像花朵，最後平移到整朵花的頂端。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cylinder.scale.x = 0.25;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>圓錐形狀的花瓣一開始是沿 Y 軸垂直站立，沿 X 軸壓扁讓它更像花瓣。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cylinder.position.y = petalLength / 2;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>圓錐預設中心在原點，這個平移讓圓錐的頂端到原點。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">//cylinder.rotation.z = -20 * Math.PI/180;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>我忘記旋轉發生在平移之前，在這裡旋轉花瓣會進入對的角度，但是是繞圓錐的中心轉。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">petal</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="n">petal</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>要克服這個問題，我創造了 <code>petal</code> 物件作為圓錐的父物件。這樣我能在平移<strong>之後</strong>繞原點旋轉。這是我創造 <code>petal</code> 物件的唯一理由。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">petal.rotation.y = 15*i * Math.PI/180;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>繞 Y 軸旋轉讓花瓣沿中心散開。這個旋轉其實是發生在 Z 軸旋轉之後。你設定旋轉值的順序<strong>不等於</strong>旋轉實際發生順序。你能用 <code>reorder()</code> 改變 Three.js 的旋轉順序，但在這裡我是想先轉 Z 再轉 Y 沒錯。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">petal.rotation.z = (90-20) * Math.PI/180;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>現在花瓣繞頂端旋轉，是我想要的效果。我再轉 70 度到定位。注意到我沿 Z 軸轉，因為先前我是沿 X 軸壓扁。我希望扁的一面朝上。試試看用 <code>cylinder.scale.z = 0.25;</code> 會有甚麼不同，你也可以試 <code>petal.rotation.x</code> 取代 Z 軸旋轉看看明顯的差別。因為 Y 軸旋轉先發生，你會轉到還是垂直的花瓣，接著所有花瓣沿同一個軸轉 70 度。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">petal.position.y = flowerHeight;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>最後將花瓣上移到花朵的中心。</p>
+<pre tabindex="0"><code>cylinder.scale.x = 0.25;
+</code></pre><p>圓錐形狀的花瓣一開始是沿 Y 軸垂直站立，沿 X 軸壓扁讓它更像花瓣。</p>
+<pre tabindex="0"><code>cylinder.position.y = petalLength / 2;
+</code></pre><p>圓錐預設中心在原點，這個平移讓圓錐的頂端到原點。</p>
+<pre tabindex="0"><code>//cylinder.rotation.z = -20 * Math.PI/180;
+</code></pre><p>我忘記旋轉發生在平移之前，在這裡旋轉花瓣會進入對的角度，但是是繞圓錐的中心轉。</p>
+<pre tabindex="0"><code>var petal = new THREE.Object3D();
+petal.add( cylinder );
+</code></pre><p>要克服這個問題，我創造了 <code>petal</code> 物件作為圓錐的父物件。這樣我能在平移<strong>之後</strong>繞原點旋轉。這是我創造 <code>petal</code> 物件的唯一理由。</p>
+<pre tabindex="0"><code>petal.rotation.y = 15*i * Math.PI/180;
+</code></pre><p>繞 Y 軸旋轉讓花瓣沿中心散開。這個旋轉其實是發生在 Z 軸旋轉之後。你設定旋轉值的順序<strong>不等於</strong>旋轉實際發生順序。你能用 <code>reorder()</code> 改變 Three.js 的旋轉順序，但在這裡我是想先轉 Z 再轉 Y 沒錯。</p>
+<pre tabindex="0"><code>petal.rotation.z = (90-20) * Math.PI/180;
+</code></pre><p>現在花瓣繞頂端旋轉，是我想要的效果。我再轉 70 度到定位。注意到我沿 Z 軸轉，因為先前我是沿 X 軸壓扁。我希望扁的一面朝上。試試看用 <code>cylinder.scale.z = 0.25;</code> 會有甚麼不同，你也可以試 <code>petal.rotation.x</code> 取代 Z 軸旋轉看看明顯的差別。因為 Y 軸旋轉先發生，你會轉到還是垂直的花瓣，接著所有花瓣沿同一個軸轉 70 度。</p>
+<pre tabindex="0"><code>petal.position.y = flowerHeight;
+</code></pre><p>最後將花瓣上移到花朵的中心。</p>
 
 </div>

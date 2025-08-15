@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/adb-tcp-mode/" />
@@ -36,7 +36,7 @@
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -55,7 +55,7 @@
   <meta itemprop="description" content="這個跟最佳化算是有一點關係，有的時候接 Android 的 Profiler 或是 Script Debugger 會抓不到接在 USB 上面的 Android 裝置，這時候可以考慮改用 TCP 模式透過網路來連接，通常可以排除問題。">
   <meta itemprop="datePublished" content="2016-06-06T16:54:01+00:00">
   <meta itemprop="dateModified" content="2016-06-06T16:54:01+00:00">
-  <meta itemprop="wordCount" content="346">
+  <meta itemprop="wordCount" content="344">
   <meta itemprop="keywords" content="Android,ADB">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="ADB TCP Mode">
@@ -136,32 +136,18 @@
   <div class="post-content">
     <p>這個跟最佳化算是有一點關係，有的時候接 Android 的 Profiler 或是 Script Debugger 會抓不到接在 USB 上面的 Android 裝置，這時候可以考慮改用 TCP 模式透過網路來連接，通常可以排除問題。</p>
 <p>在裝置接在電腦上能用 adb 的情況下輸入</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">adb tcpip &lt;Port&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果成功的話就會出現以下的訊息</p>
-<p><img alt="ADB TCP Port" src="/images/adb-tcp-mode/adb-tcp-port.png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>adb tcpip &lt;Port&gt;
+</span></span></code></pre></div><p>如果成功的話就會出現以下的訊息</p>
+<p><img src="/images/adb-tcp-mode/adb-tcp-port.png" alt="ADB TCP Port"></p>
 <p>接下來讓電腦以 TCP 模式連接 Android 裝置</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">adb connect &lt;Android IP&gt;:&lt;Port&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><img alt="ADB TCP Connect" src="/images/adb-tcp-mode/adb-tcp-connect.png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>adb connect &lt;Android IP&gt;:&lt;Port&gt;
+</span></span></code></pre></div><p><img src="/images/adb-tcp-mode/adb-tcp-connect.png" alt="ADB TCP Connect"></p>
 <p>機器的 IP 位置可以在 Wifi 設定頁面，通常是右上的選單裡面的進階可以找到。如果你的機器 UI 跟別人不一樣，可能要去 Google 一下哪裡找得到。還有一件應該是很明顯的事情要提醒一下，就是 Android 裝置接的網路要跟 PC 在同一個區域內，如果連的網路不一樣自然就沒有辦法連接。</p>
-<p><img alt="Android Wifi Config" src="/images/adb-tcp-mode/android-wifi-config.png"></p>
+<p><img src="/images/adb-tcp-mode/android-wifi-config.png" alt="Android Wifi Config"></p>
 <p>成功的話 adb devices 會出現用 IP 表示的項目</p>
-<p><img alt="ADB TCP Devices" src="/images/adb-tcp-mode/adb-tcp-devices.png"></p>
+<p><img src="/images/adb-tcp-mode/adb-tcp-devices.png" alt="ADB TCP Devices"></p>
 <p>在裝置上執行 Unity 的 Development build App ，在 Profiler 裡面現在應該會出現新的TCP 選項可供連接：</p>
-<p><img alt="Profiler" src="/images/adb-tcp-mode/profiler.png"></p>
+<p><img src="/images/adb-tcp-mode/profiler.png" alt="Profiler"></p>
 <p>通常這樣能解決 Android 裝置不能 Profile 或是 Script Debug 的問題，Visual Studio 跟 MonoDevelop 也是類似的方法用 IP 連接執行 Unity Development build App 的 Android 機器。</p>
   </div>
 </article>

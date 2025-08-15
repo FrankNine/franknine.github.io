@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/apple-worldwide-developer-relations-certificate-fix/" />
@@ -36,7 +36,7 @@
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -135,7 +135,7 @@
           <article class="post">
   <div class="post-content">
     <p>2/14 過後，舊有的 WWDR (Worldwide Developer Relations) 憑證就失效了。因為所有開發用的憑證使用的 issuer 都是這張憑證，所以現在你的開發憑證應該會長這樣（This certificate has an invalid issuer）：</p>
-<p><img alt="Invalid Issuer" src="/images/apple-worldwide-developer-relations-certificate-fix/invalid-issuer.png"></p>
+<p><img src="/images/apple-worldwide-developer-relations-certificate-fix/invalid-issuer.png" alt="Invalid Issuer"></p>
 <p>修復方式是刪除舊的 WWDR 憑證，然後安裝新的 WWDR 憑證，新的憑證可以在這裡找到：<br>
 <a href="https://developer.apple.com/support/certificates/expiration/">https://developer.apple.com/support/certificates/expiration/</a></p>
 <p>所有人應該都會有這張舊的 WWDR 憑證，但是我在一些機器上找不到，後來發現原因有兩個：</p>
@@ -144,9 +144,9 @@
 <li>你的 Keychain Access 可能被設定成隱藏過期的憑證</li>
 </ol>
 <p>解除隱藏的選項在：View / Show Expired Certificates</p>
-<p><img alt="Show Expired Certificates" src="/images/apple-worldwide-developer-relations-certificate-fix/show-expired-certificates.png"></p>
+<p><img src="/images/apple-worldwide-developer-relations-certificate-fix/show-expired-certificates.png" alt="Show Expired Certificates"></p>
 <p>過期的 WWDR 現在看應該會長這樣，這台機器上是被放到 System keychain：</p>
-<p><img alt="Expired Certificate" src="/images/apple-worldwide-developer-relations-certificate-fix/expired-certificate.png"></p>
+<p><img src="/images/apple-worldwide-developer-relations-certificate-fix/expired-certificate.png" alt="Expired Certificate"></p>
 <p>刪除、安裝新的憑證即可解決問題。</p>
 <p>參考資料：</p>
 <p><a href="http://stackoverflow.com/questions/35390072/this-certificate-has-an-invalid-issuer-apple-push-services/35400712#35400712">http://stackoverflow.com/questions/35390072/this-certificate-has-an-invalid-issuer-apple-push-services/35400712#35400712</a></p>

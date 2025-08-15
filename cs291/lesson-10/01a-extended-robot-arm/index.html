@@ -17,50 +17,22 @@
   });
 </script>
 <p><strong>解答：</strong> 刪除 <code>fillScene()</code> 裡的 <code>scene.add( arm )</code> 並用以下取代：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">body</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">bodyLength</span> <span class="o">=</span> <span class="mi">60</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">解答</span>
-</span></span><span class="line"><span class="cl"><span class="n">createRobotBody</span><span class="p">(</span> <span class="n">body</span><span class="p">,</span> <span class="n">bodyLength</span><span class="p">,</span> <span class="n">robotBodyMaterial</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">將上臂移動到身體的頂端</span>
-</span></span><span class="line"><span class="cl"><span class="n">arm</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">bodyLength</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">body</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">arm</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">body</span> <span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然後取消以下三行的註解：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// UNCOMMENT FOLLOWING LINES TO ENABLE CONTROLS FOR BODY:
-</span></span><span class="line"><span class="cl">// body.rotation.y = effectController.by * Math.PI/180;	// yaw
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// by: 0.0,
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// student, uncomment: h.add(effectController, &#34;by&#34;, -180.0, 180.0, 0.025).name(&#34;Body y&#34;);
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>body = new THREE.Object3D();
+var bodyLength = 60;
+// 解答
+createRobotBody( body, bodyLength, robotBodyMaterial );
+
+// 將上臂移動到身體的頂端
+arm.position.y = bodyLength;
+body.add( arm );
+
+scene.add( body );
+</code></pre><p>然後取消以下三行的註解：</p>
+<pre tabindex="0"><code>// UNCOMMENT FOLLOWING LINES TO ENABLE CONTROLS FOR BODY:
+// body.rotation.y = effectController.by * Math.PI/180;	// yaw
+
+// by: 0.0,
+
+// student, uncomment: h.add(effectController, &#34;by&#34;, -180.0, 180.0, 0.025).name(&#34;Body y&#34;);
+</code></pre>
 </div>

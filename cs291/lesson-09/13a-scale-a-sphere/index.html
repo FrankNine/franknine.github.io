@@ -17,23 +17,11 @@
   });
 </script>
 <p><strong>解答：</strong> 在 <code>fillScene()</code> 末端加入：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sphere.scale.x = 3.0;    // 60 / (2 * 半徑 10 ) -&gt; 3
-</span></span><span class="line"><span class="cl">sphere.scale.y = 0.2;    //  4 / (2 * 半徑 10 ) -&gt; 0.2
-</span></span><span class="line"><span class="cl">sphere.scale.z = 0.2;
-</span></span><span class="line"><span class="cl">sphere.rotation.y = 30 * Math.PI/180;
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">scene.add( sphere );
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>sphere.scale.x = 3.0;    // 60 / (2 * 半徑 10 ) -&gt; 3
+sphere.scale.y = 0.2;    //  4 / (2 * 半徑 10 ) -&gt; 0.2
+sphere.scale.z = 0.2;
+sphere.rotation.y = 30 * Math.PI/180;
+
+scene.add( sphere );
+</code></pre>
 </div>

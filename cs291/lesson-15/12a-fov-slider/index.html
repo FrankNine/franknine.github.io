@@ -17,34 +17,14 @@
   });
 </script>
 <p><strong>解答：</strong> 將 <code>setupGui</code> 改寫為：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">function</span> <span class="n">setupGui</span><span class="p">()</span> <span class="p">{</span> 
-</span></span><span class="line"><span class="cl">    <span class="n">effectController</span> <span class="o">=</span> <span class="p">{</span> <span class="n">fov</span><span class="p">:</span> <span class="mi">40</span> <span class="p">};</span>
-</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">gui</span> <span class="o">=</span> <span class="n">new</span> <span class="n">dat</span><span class="o">.</span><span class="n">GUI</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">element</span> <span class="o">=</span> <span class="n">gui</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">effectController</span><span class="p">,</span> <span class="s2">&#34;fov&#34;</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">179.0</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">element</span><span class="o">.</span><span class="n">name</span><span class="p">(</span><span class="s2">&#34;field of view&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然後在 <code>render()</code> 呼叫 <code>renderer.render</code> 之前加入：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">camera.fov = effectController.fov;
-</span></span><span class="line"><span class="cl">camera.updateProjectionMatrix();
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>function setupGui() { 
+    effectController = { fov: 40 };
+    var gui = new dat.GUI();
+    var element = gui.add( effectController, &#34;fov&#34;, 1.0, 179.0 );
+    element.name(&#34;field of view&#34;);
+}
+</code></pre><p>然後在 <code>render()</code> 呼叫 <code>renderer.render</code> 之前加入：</p>
+<pre tabindex="0"><code>camera.fov = effectController.fov;
+camera.updateProjectionMatrix();
+</code></pre>
 </div>

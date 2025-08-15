@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/gatcha-game-notes/" />
@@ -37,7 +37,7 @@
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -58,7 +58,7 @@
 製作 首先最直接的是該不該做「營運類遊戲」跟「手機遊戲」：">
   <meta itemprop="datePublished" content="2023-06-07T23:00:00+08:00">
   <meta itemprop="dateModified" content="2023-06-07T23:00:00+08:00">
-  <meta itemprop="wordCount" content="12574">
+  <meta itemprop="wordCount" content="12490">
   <meta itemprop="keywords" content="手機遊戲,營運遊戲,Android,iOS,Unity">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="手機營運類遊戲筆記">
@@ -151,12 +151,8 @@
 <p>另外常見的問題是上市前沒有抓好製作新內容的速度。感覺看過太多案例了，上市前可以屯內容，但是屯的內容耗盡就是考驗內容製作工業化產出是否穩定的開始。遊戲上市後玩家人數留存就像是中了 DOT 會一直往下掉，需要新內容、新活動甚至是新機制來補血拉血量。出新機制又有可能出 Bug 要修，增加更新間的工作量。當內容青黃不接玩家開始流失時，看起來會真的很恐怖。營運類遊戲上市後就像一台飛機離地起飛，要一邊飛、一邊加油、一邊維修不能落地。所以開案前期就要弄清楚像是角色規格（立繪張數、角色要二頭身 Spline、全身 Spline、還是 3D 等）、場景規格、活動規格、劇本規格等等等，這些東西 Production 生產步調能不能滿足營運需求。這點可能是最容易被第一次嘗試的團隊忽略的大重點。</p>
 <h2 id="手機遊戲">手機遊戲</h2>
 <p>手機做為軟體平台最大的特性是要把軟體留在上面比其他平台難得多很多，兩個平台平均每半年都會有新要求。沒有滿足要求會有相應的懲罰，輕則降觸及、不給 Feature，重則下架。之前在 <a href="https://tgdf.tw">TGDF</a> 2019 演講時有特別提過這點，至今依然如此。所以遊戲在手機上要保持上架與觸及，會有不小的額外人力開銷，這在開案之前要考慮進去。也是為什麼現在比較難在手機上看到採用無廣告買斷的遊戲主要原因，可以參考 Simogo 寫的 <a href="https://simogo.com/2017/12/11/the-year-of-the-devil/">The Year of The Devil</a>。</p>
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kdnm_osNZ9s?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/kdnm_osNZ9s?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 <figure class="center"><img src="/images/gatcha-game-notes/mobile_os_timeline.png"><figcaption>
@@ -171,7 +167,7 @@
 
 <p>以前的山崩經驗。換個 Icon 結果頂到 SDK 不支援 iPhone X、要新 SDK 要升級 Xcode、要升 Xcode 要新 macOS、升級 macOS 的時候沒注意直接跳過 macOS 10.12 升到 10.13 硬碟格式被改成 APFS、當時用的 Unity 不支援 APFS 需要升級 Unity、最後升級 Unity 又把專案搞爛需要手動修。理論上還可以更慘，因為 <a href="https://developer.apple.com/support/xcode/">Xcode 會有 macOS 需求</a>、<a href="https://macmost.com/macos-system-requirements-list.html">macOS 又有硬體需求</a>，如果當時運氣再好一點改個東西會滾雪球到要買整台新 Mac。</p>
 <p>如果以前做單機、沒有接觸過手機遊戲環境的可能要參考一下資料。因為這些都是不小的開銷，要預留人力。</p>
-<p>現在 Google 有提供一個各項政策期限的列表，可以在 <a href="https://developer.android.com/distribute/play-policies">修正期限將至的 Android 和 Google Play 事項</a> 或 <a href="https://support.google.com/googleplay/android-developer/table/12921780">Policy Deadlines</a> 找到。至於 Android SDK API Level 規定可以在 <a href="https://developer.android.com/google/play/requirements/target-sdk">符合 Google Play 的目標 API 級別規定</a> 找到。Apple 可能只能訂閱 <a href="https://developer.apple.com/news/">Developer News and Updates</a> 的 <a href="feed://developer.apple.com/news/rss/news.rss">RSS</a> 來被動接收通知。</p>
+<p>現在 Google 有提供一個各項政策期限的列表，可以在 <a href="https://developer.android.com/distribute/play-policies">修正期限將至的 Android 和 Google Play 事項</a> 或 <a href="https://support.google.com/googleplay/android-developer/table/12921780">Policy Deadlines</a> 找到。至於 Android SDK API Level 規定可以在 <a href="https://developer.android.com/google/play/requirements/target-sdk">符合 Google Play 的目標 API 級別規定</a> 找到。Apple 可能只能訂閱 <a href="https://developer.apple.com/news/">Developer News and Updates</a> 的 <a href="#ZgotmplZ">RSS</a> 來被動接收通知。</p>
 <h1 id="旁觀企劃方面的想法">旁觀企劃方面的想法</h1>
 <h2 id="屬性相剋">屬性相剋</h2>
 <p>屬性相剋感覺非常老套，水火相剋、劍職克槍職克弓職之類的。我有碰過設計上沒有屬性相剋的案子，覺得拿掉缺點比較明顯。最直接的就是雜魚、關卡屬性量產直接少了一個維度。再來也是策略上會失去一些可以做操作的深度。這些都會影響到上面提的內容量產速度。</p>
@@ -264,33 +260,18 @@
 <p>這個 API 設計還蠻微妙的，建議詳讀 <a href="https://developer.apple.com/app-store/ratings-and-reviews/">Ratings, reviews, and responses</a> 理解一下 Apple 的想法。還有 Stack Overflow 的 <a href="https://stackoverflow.com/a/45061556">討論</a>。</p>
 <h2 id="注意時間複雜度">注意時間複雜度</h2>
 <p>有學過演算法應該會熟悉 <a href="https://en.wikipedia.org/wiki/Big_O_notation">Big O Notation</a>。平常會覺得演算法理論跟遊戲製作有點遠，但是我看過、自己也被 Dawson&rsquo;s Law 咬過：</p>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">O(n^2) is the sweet spot of badly scaling algorithms: fast enough to make it into production, but slow enough to make things fall down once it gets there</p>&mdash; Bruce Dawson (@BruceDawson0xB) <a href="https://twitter.com/BruceDawson0xB/status/1120381406700429312?ref_src=twsrc%5Etfw">April 22, 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
 <p>有的時候高時間複雜度的 Code 會混進遊戲裡，在遊戲剛上市時因為 Input 數量小發覺不出來，營運久了突然某個時間點效能開始大幅下降。我自己的經驗是在 Unity JSON 方案還不多時使用了 <a href="https://gist.github.com/darktable/1411710">MiniJSON.cs</a>，不太確定這個 Parser 的準確時間複雜度，但就自己的經驗應該是超過 O(N)，所以只是線性地加資料在某個時間點突然讀取變超久。同樣的情形、也是 JSON Parser 也發生在 <a href="https://nee.lv/2021/02/28/How-I-cut-GTA-Online-loading-times-by-70/">GTA 5 Online</a> 啟動上。（他們的問題會這麼久才發現一部分是因為 GTA 5 程式有混淆，外部的人要有解讀的知識才能分析）</p>
 <p>關於這個問題好像現下除了不要用少人用的程式庫，跟 Code Review 緊一點之外沒有特別的想法，也許有時間能故意餵大測資看看。提出來希望大家如果未來有遇到營運到一半突然效能大幅下降，能想到可能是很久以前課本上的 Big O 又回來了。</p>
 <h2 id="資料盡量不要使用文字格式儲存">資料盡量不要使用文字格式儲存</h2>
 <p>JSON 使用、閱讀、編輯都方便，但是在手機上要 Parse 純文字 JSON 時間跟 GC 的消耗都不小。另外 Parse 純文字成別的資料型別在多國語系下有許多坑，會在後面多國語言詳述。如果團隊沒時間鑽研建議使用 <a href="https://docs.unity3d.com/Packages/com.unity.nuget.newtonsoft-json@3.0/manual/index.html">Json.NET</a> 處理 JSON，在開發編輯時使用 JSON，Production 時改用 Json.NET 的 <a href="https://www.newtonsoft.com/json/help/html/SerializeToBson.htm">BSON</a> 格式在小幅度修改 Serialization API 的前提下節約一些時間與 GC。如果真的有餘裕應該研究看看 <a href="https://github.com/neuecc/MessagePack-CSharp">MessagePack</a>、<a href="https://github.com/protocolbuffers/protobuf">protobuf</a> 之類的格式。</p>
-<h2 id="避免使用-wwwhttpsdocsunity3dcom20232documentationscriptreferencewwwhtml-或是-unitywebrequesthttpsdocsunity3dcom20232documentationscriptreferencenetworkingunitywebrequesthtml-跟-server-溝通">避免使用 <a href="https://docs.unity3d.com/2023.2/Documentation/ScriptReference/WWW.html"><code>WWW</code></a> 或是 <a href="https://docs.unity3d.com/2023.2/Documentation/ScriptReference/Networking.UnityWebRequest.html"><code>UnityWebRequest</code></a> 跟 Server 溝通</h2>
+<h2 id="避免使用-www-或是-unitywebrequest-跟-server-溝通">避免使用 <a href="https://docs.unity3d.com/2023.2/Documentation/ScriptReference/WWW.html"><code>WWW</code></a> 或是 <a href="https://docs.unity3d.com/2023.2/Documentation/ScriptReference/Networking.UnityWebRequest.html"><code>UnityWebRequest</code></a> 跟 Server 溝通</h2>
 <p>現在用 <code>WWW</code> 跟 <code>UnityWebRequest</code> 基本上是同一件事。<code>WWW</code> decompile 出來也只是：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="n">WWW</span><span class="p">(</span><span class="kt">string</span> <span class="n">url</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">_uwr</span> <span class="p">=</span> <span class="n">UnityWebRequest</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">_uwr</span><span class="p">.</span><span class="n">SendWebRequest</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>UnityWebRequest</code> 有很多奇怪的行為像是：<a href="https://forum.unity.com/threads/json-error-on-return-from-web-request-post.984187/#post-6394463">Post JSON String 會被自動 Escape</a>（<a href="https://forum.unity.com/threads/why-unitywebrequest-post-results-with-json-parse-error-missing-a-name-for-object-member.1251951/#post-8026349">需要手動 Escape 回來</a>）或是 <a href="https://answers.unity.com/questions/1700338/how-to-create-a-rest-authentication-header-in-unit.html">Authentication Header 消失</a>。面對這些清況建議是跟 Server 溝通直接改用 <a href="https://assetstore.unity.com/packages/tools/network/best-http-2-155981">Best HTTP/2</a>，如果有問提可以到 <a href="https://discord.com/invite/yD9tXwQ">Best HTTP/2 作者的 Discord</a> 發問，作者回覆蠻快的，確認有問題時也會願意提供 Hotfix 版本。<code>UnityWebRequest</code> 只用在從 CDN 下載 Binary 還有開 Android 的 <code>StreamingAssets</code> 就好。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> WWW(<span style="color:#66d9ef">string</span> url)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    _uwr = UnityWebRequest.Get(url);
+</span></span><span style="display:flex;"><span>    _uwr.SendWebRequest();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>UnityWebRequest</code> 有很多奇怪的行為像是：<a href="https://forum.unity.com/threads/json-error-on-return-from-web-request-post.984187/#post-6394463">Post JSON String 會被自動 Escape</a>（<a href="https://forum.unity.com/threads/why-unitywebrequest-post-results-with-json-parse-error-missing-a-name-for-object-member.1251951/#post-8026349">需要手動 Escape 回來</a>）或是 <a href="https://answers.unity.com/questions/1700338/how-to-create-a-rest-authentication-header-in-unit.html">Authentication Header 消失</a>。面對這些清況建議是跟 Server 溝通直接改用 <a href="https://assetstore.unity.com/packages/tools/network/best-http-2-155981">Best HTTP/2</a>，如果有問提可以到 <a href="https://discord.com/invite/yD9tXwQ">Best HTTP/2 作者的 Discord</a> 發問，作者回覆蠻快的，確認有問題時也會願意提供 Hotfix 版本。<code>UnityWebRequest</code> 只用在從 CDN 下載 Binary 還有開 Android 的 <code>StreamingAssets</code> 就好。</p>
 <h2 id="防作弊">防作弊</h2>
 <p>遊戲上線後肯定會有人想要編輯或重送封包來作弊（或是亂送資料到 Endpoint 看能不能混水摸魚），比較消極的做法可能只能手寫一些規則剔除明顯玩遊戲不可能出現的情境，或是提供玩家檢舉的機制。最治本的方法當然是 Server 端有相同的遊戲邏輯做輸入驗算，但是 Client 與 Server 通常不同語言，要用不同語言實作相同邏輯然後保持每個版本都同步是一件很困難的事。目前大多能做的可能就只是請資料分析的人撈太扯的資料，加入嫌疑人名單或是 Ban 帳號，如果是對戰類可以考慮做成嫌疑人只能 Match Making 到其他嫌疑人。</p>
 <p>比較天馬行空的做法有像 Cygame 的公主自走棋使用 CySharp 的 <a href="https://github.com/Cysharp/MagicOnion">MagicOnion</a> Library。概念大致上是 Client 與 Server 都用 C# 寫放在同一個 Project 下，平常開發時 Client/Server 是 Function call，部屬後由 Library 引導至 RPC。這樣就能實現 Client 與 Server 共用同一套遊戲邏輯，也就能簡單地做玩家行為的驗算。不過一方面是 C# 作為 Server 的效能有疑慮，另一方面是去年 MagicOnion 底層用的 gRPC.Core 進入 <a href="https://grpc.io/blog/grpc-csharp-future/">維護模式</a> 且提早移除 Unity support（最後一個有 Unity 的 Daily Build 停在 <a href="https://packages.grpc.io/archive/2022/04/67538122780f8a081c774b66884289335c290cbe-f15a2c1c-582b-4c51-acf2-ab6d711d2c59/index.xml">2022-04-19</a>）。自己試過單純導入 gRPC.Core，在 Android 跟 iOS 上有蠻多未預期行為，不知道 Cygames 是怎麼處理到能上架的。現在 gRPC 官方開發主力在 <a href="https://github.com/grpc/grpc-dotnet">gRPC for .NET</a>，Unity support 還是 <a href="https://github.com/grpc/grpc-dotnet/issues/1309">Open Issue</a> 但是卡在 Grpc.Net.Client 要 HTTP/2 而 Unity 本身沒有支援。有些人嘗試使用 Best HTTP/2 串接（<a href="https://github.com/doctorseus/grpc-dotnet-unity">grpc-dotnet via HTTP2 for Unity</a>）不過我實驗就沒有到這麼遠了。</p>
@@ -303,7 +284,7 @@
 <p>未上市的資料被有心玩家拆出來公布會對營運規劃造成不小困擾。AssetBundle 格式有很多工具可以解讀：<a href="https://github.com/Perfare/AssetStudio">AssetStudio</a>、<a href="https://github.com/mafaca/UtinyRipper">UtinyRipper</a> 等等。雖然有一些基於 <a href="https://docs.unity3d.com/ScriptReference/AssetBundle.LoadFromStream.html">AssetBundle.LoadFromStream</a> 加密 AssetBundle 的 <a href="https://tsubakit1.hateblo.jp/entry/2019/03/16/162138">方案</a>，但是無法防範玩家從遊戲本體裡找出加密鑰匙。（除非你想繼續加碼使用 App 加固服務之類的，但是加固也不是堅不可摧）</p>
 <p>比較治本就是公開的資料不要包含還不想給玩家看的資料。我們做過的作法是改寫 AssetStudio 成一個 Commandline 工具，在每次自動打包 AssetBundle 後自動拆自己然後 git commit push 到一個 Git Repository。再讓一位企劃大略看過這次拆包結果跟上次拆包結果的 Diff 來抓是否有洩漏。</p>
 <h2 id="無用首抽帳號處理">無用／首抽帳號處理</h2>
-<p>讓玩家刷首抽有增加下載量帳面數據的行銷好處，但也同時會產生許多無用帳號。當營運到帳號量接近一個 DB Instance 的上限時會對後端很麻煩，可能要計劃是照定型化契約刪除無動作帳號。但又怕有玩家想回鍋撲空，或是像暴雪公告會依法刪除卻炎上。（雖然行政院 <a href="https://www.ey.gov.tw/Page/DFB720D019CCCB0A/964028ea-f1f6-4383-9c78-f7d0606086f3">網路連線遊戲服務定型化契約應記載及不得記載事項</a> 十八項：<code>企業經營者得與消費者約定，若消費者逾___期間（不得少於一年）未登入使用本遊戲服務，企業經營者得定相當期限（不得少於十五日）通知消費者登入，如消費者屆期仍未登入使用，則企業經營者得終止本契約。</code>，暴雪只是照抄但是因為逆風太久還是 <a href="https://forum.gamer.com.tw/C.php?bsn=24044&snA=66746">燒起來</a>）</p>
+<p>讓玩家刷首抽有增加下載量帳面數據的行銷好處，但也同時會產生許多無用帳號。當營運到帳號量接近一個 DB Instance 的上限時會對後端很麻煩，可能要計劃是照定型化契約刪除無動作帳號。但又怕有玩家想回鍋撲空，或是像暴雪公告會依法刪除卻炎上。（雖然行政院 <a href="https://www.ey.gov.tw/Page/DFB720D019CCCB0A/964028ea-f1f6-4383-9c78-f7d0606086f3">網路連線遊戲服務定型化契約應記載及不得記載事項</a> 十八項：<code>企業經營者得與消費者約定，若消費者逾___期間（不得少於一年）未登入使用本遊戲服務，企業經營者得定相當期限（不得少於十五日）通知消費者登入，如消費者屆期仍未登入使用，則企業經營者得終止本契約。</code>，暴雪只是照抄但是因為逆風太久還是 <a href="https://forum.gamer.com.tw/C.php?bsn=24044&amp;snA=66746">燒起來</a>）</p>
 <p>可能要有一套判斷帳號價值的方法，像是有無課金過之類的避開刪除到有可能長時間後復活的帳號。（Google 想要 <a href="https://support.google.com/accounts/answer/12418290">刪除兩年未使用帳號</a>，後來可能是被抗議到受不了改成 <a href="https://blog.google/technology/safety-security/updating-our-inactive-account-policies/">有上傳過 YouTube 影片不刪</a>）我之前有提過一個想法是把無用帳號搬去冷儲存，如果有玩家真的想回鍋無法登入找客服，再從冷儲存還原。不過這個只是想法沒有實際跑過就是。</p>
 <h2 id="第三方登入">第三方登入</h2>
 <p>為了方便玩家，通常除了自己的帳號密碼系統會接入第三方登入，要確定遊戲帳號本身對登入方式是一對多，玩家有介面可以登記多種登入方式登入同一個遊戲帳號。要不然遇到像最近的 Twitter 不穩定與收費改動時無法引導去使用別的登入方式會很痛苦。</p>
@@ -348,9 +329,9 @@
 <h3 id="android-2">Android</h3>
 <p>如果在測試 Android IAP 時無法刷過，可以參考這個 Stack Overflow <a href="https://stackoverflow.com/questions/11068686/this-version-of-the-application-is-not-configured-for-billing-through-google-pla">問題</a>。</p>
 <h4 id="acknowledge">Acknowledge</h4>
-<p>在 Unity IAP <a href="https://docs.unity3d.com/Packages/com.unity.purchasing@4.8/api/UnityEngine.Purchasing.IStoreListener.html#UnityEngine_Purchasing_IStoreListener_ProcessPurchase_UnityEngine_Purchasing_PurchaseEventArgs_"><code>IStoreListener.ProcessPurchase</code></a> 回傳<a href="https://docs.unity3d.com/Packages/com.unity.purchasing@4.8/api/UnityEngine.Purchasing.PurchaseProcessingResult.html"><code>PurchaseProcessingResult.Complete</code></a> Unity 稱之為 <a href="https://docs.unity3d.com/Packages/com.unity.purchasing@4.8/manual/UnityIAPProcessingPurchases.html#completing-purchases-immediately">Finish Transaction</a>，底層 Google API 是發動叫做 <a href="https://developer.android.com/google/play/billing/release-notes?hl=zh-tw#2_0_acknowledge">Acknowledge</a> 的行為，等於是跟 Google 說我跟玩家銀貨兩訖了。所以應該在發出虛擬商品後馬上呼叫，如果沒有的話依照 Google 的規則是三天後會無條件退款。上面提的 Unity IAP 大 Bug 其中之一就是 2.2.0 ~ <a href="https://forum.unity.com/threads/unity-iap-package-4-8-0-is-now-available.415517/page-2#post-6745459">2.2.6</a> 間有約五成的機率不會呼叫 <a href="https://developer.android.com/reference/com/android/billingclient/api/BillingClient#acknowledgePurchase(com.android.billingclient.api.AcknowledgePurchaseParams,%20com.android.billingclient.api.AcknowledgePurchaseResponseListener)"><code>acknowledgePurchase</code></a>，當時的更新就損失了差不多五成的營收。自己在實作的時候要特別注意 Acknowledge，另外測試帳號沒有呼叫 Acknowledge 自動退款的時間是<a href="https://developer.android.com/google/play/billing/test?hl=zh-tw#renewals">五分鐘</a>。QA 時不用傻傻地等上三天。</p>
+<p>在 Unity IAP <a href="https://docs.unity3d.com/Packages/com.unity.purchasing@4.8/api/UnityEngine.Purchasing.IStoreListener.html#UnityEngine_Purchasing_IStoreListener_ProcessPurchase_UnityEngine_Purchasing_PurchaseEventArgs_"><code>IStoreListener.ProcessPurchase</code></a> 回傳<a href="https://docs.unity3d.com/Packages/com.unity.purchasing@4.8/api/UnityEngine.Purchasing.PurchaseProcessingResult.html"><code>PurchaseProcessingResult.Complete</code></a> Unity 稱之為 <a href="https://docs.unity3d.com/Packages/com.unity.purchasing@4.8/manual/UnityIAPProcessingPurchases.html#completing-purchases-immediately">Finish Transaction</a>，底層 Google API 是發動叫做 <a href="https://developer.android.com/google/play/billing/release-notes?hl=zh-tw#2_0_acknowledge">Acknowledge</a> 的行為，等於是跟 Google 說我跟玩家銀貨兩訖了。所以應該在發出虛擬商品後馬上呼叫，如果沒有的話依照 Google 的規則是三天後會無條件退款。上面提的 Unity IAP 大 Bug 其中之一就是 2.2.0 ~ <a href="https://forum.unity.com/threads/unity-iap-package-4-8-0-is-now-available.415517/page-2#post-6745459">2.2.6</a> 間有約五成的機率不會呼叫 <a href="https://developer.android.com/reference/com/android/billingclient/api/BillingClient#acknowledgePurchase%28com.android.billingclient.api.AcknowledgePurchaseParams,%20com.android.billingclient.api.AcknowledgePurchaseResponseListener%29"><code>acknowledgePurchase</code></a>，當時的更新就損失了差不多五成的營收。自己在實作的時候要特別注意 Acknowledge，另外測試帳號沒有呼叫 Acknowledge 自動退款的時間是<a href="https://developer.android.com/google/play/billing/test?hl=zh-tw#renewals">五分鐘</a>。QA 時不用傻傻地等上三天。</p>
 <h4 id="pending-與超商付款">Pending 與超商付款</h4>
-<p>Google Play Billing 2.0 加入了超商附款選項，連帶加入了 <a href="https://developer.android.com/google/play/billing/release-notes?hl=zh-tw#2_0_pending">Pending 交易</a> 的概念（Unity IAP 是在 <a href="https://forum.unity.com/threads/unity-iap-package-4-8-0-is-now-available.415517/page-2#post-6506532">2.2.0</a> 從 <a href="https://developer.android.com/guide/components/aidl">AIDL</a> 換成 Billing v3 時引入了 Pending 交易）。直接地說是看到收據不代表玩家有付款，有可能交易還處在 Pending 狀態。這時候還不能給虛擬商品，要等玩家到超商付款完才能給獎。連帶的代表說交易完成需要 Finish / Acknowledge 的時間點可能在遊戲不在交易流程甚至遊戲沒有開啟的狀態下，所以要多設檢查點檢查有沒有付好錢的交易進來。這算是比較大的改動，如果沒有做 Pending 檢查會被下單但是沒有去超商付款的玩家吃霸王餐。這項功能沒有全球開放且 <a href="https://developer.android.com/reference/com/android/billingclient/api/BillingClient.Builder#enablePendingPurchases()">無法關閉</a>（<code>If this method is not called, BillingClient instance creation fails.</code>），測試上會比較麻煩，可以參考 Android 文件在測試環境 <a href="https://developer.android.com/google/play/billing/test?hl=zh-tw#pending-purchases">蓄意製造 Pending 狀態</a>。</p>
+<p>Google Play Billing 2.0 加入了超商附款選項，連帶加入了 <a href="https://developer.android.com/google/play/billing/release-notes?hl=zh-tw#2_0_pending">Pending 交易</a> 的概念（Unity IAP 是在 <a href="https://forum.unity.com/threads/unity-iap-package-4-8-0-is-now-available.415517/page-2#post-6506532">2.2.0</a> 從 <a href="https://developer.android.com/guide/components/aidl">AIDL</a> 換成 Billing v3 時引入了 Pending 交易）。直接地說是看到收據不代表玩家有付款，有可能交易還處在 Pending 狀態。這時候還不能給虛擬商品，要等玩家到超商付款完才能給獎。連帶的代表說交易完成需要 Finish / Acknowledge 的時間點可能在遊戲不在交易流程甚至遊戲沒有開啟的狀態下，所以要多設檢查點檢查有沒有付好錢的交易進來。這算是比較大的改動，如果沒有做 Pending 檢查會被下單但是沒有去超商付款的玩家吃霸王餐。這項功能沒有全球開放且 <a href="https://developer.android.com/reference/com/android/billingclient/api/BillingClient.Builder#enablePendingPurchases%28%29">無法關閉</a>（<code>If this method is not called, BillingClient instance creation fails.</code>），測試上會比較麻煩，可以參考 Android 文件在測試環境 <a href="https://developer.android.com/google/play/billing/test?hl=zh-tw#pending-purchases">蓄意製造 Pending 狀態</a>。</p>
 <p>建議團隊要找人熟讀 Google Billing Library 文件，了解 Acknowledge、Pending 之類的概念以備不時之需。</p>
 <h4 id="roadmap">Roadmap</h4>
 <p>目前 Google 宣告 Billing Library <a href="https://android-developers.googleblog.com/2020/06/meet-google-play-billing-library.html">一年一更新</a>、<a href="https://developer.android.com/google/play/billing/deprecation-faq">兩年後淘汰</a>，現在的 4.0 加入了 <a href="https://developer.android.com/google/play/billing/integrate#mq">Multi-quantity purchases</a>，因為不強制啟用。除了升級 AAR Library 之外就沒有做特別處理了。</p>
@@ -412,7 +393,7 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
     </figcaption>
 </figure>
 
-<p>可以看到 <a href="https://fonts.google.com/noto/specimen/Noto+Sans+TC"><code>NotoSansTC</code></a> 不包含其他 CJK 的 Glyph，<a href="https://github.com/notofonts/noto-cjk/blob/main/Sans/Mono/NotoSansMonoCJKjp-Bold.otf"><code>NotoSansCJKjp</code></a> 跟 <a href="https://github.com/notofonts/noto-cjk/blob/main/Sans/Mono/NotoSansMonoCJKtc-Bold.otf"><code>NotoSansCJKtc</code></a> Glyph 量相同但是預設不同。</p>
+<p>可以看到 <a href="https://fonts.google.com/noto/specimen/Noto&#43;Sans&#43;TC"><code>NotoSansTC</code></a> 不包含其他 CJK 的 Glyph，<a href="https://github.com/notofonts/noto-cjk/blob/main/Sans/Mono/NotoSansMonoCJKjp-Bold.otf"><code>NotoSansCJKjp</code></a> 跟 <a href="https://github.com/notofonts/noto-cjk/blob/main/Sans/Mono/NotoSansMonoCJKtc-Bold.otf"><code>NotoSansCJKtc</code></a> Glyph 量相同但是預設不同。</p>
 <figure class="center"><img src="/images/gatcha-game-notes/tmp_cjk.png"><figcaption>
       <h4>使用同一個 .ttf (OTC) 創造兩個 Font Face 不同的 TMP_Font Asset</h4>
     </figcaption>
@@ -433,65 +414,26 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 <p>先前有提到資料數值盡量不要用文字儲存再 Parse，如果真的非做不可在多國語言下會有坑要注意。</p>
 <h4 id="浮點數的點不一定是-">浮點數的點不一定是 .</h4>
 <p>有些語言像是法文、德文、印尼文，浮點數的點是 <code>,</code> 不是 <code>.</code>，如果資料儲存成像是 <code>&quot;3.14&quot;</code> 在預設為這類語系下會 Parse 失敗，可以做以下實驗：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">NumberFormatInfo</span> <span class="n">format</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CultureInfo</span><span class="p">(</span> <span class="s">&#34;fr-FR&#34;</span><span class="p">,</span> <span class="kc">false</span> <span class="p">).</span><span class="n">NumberFormat</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="kt">float</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&#34;3.14&#34;</span><span class="p">,</span> <span class="n">format</span><span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>結果會是</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[System.FormatException: Input string was not in a correct format.]
-</span></span><span class="line"><span class="cl">   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
-</span></span><span class="line"><span class="cl">   at System.Single.Parse(String s, IFormatProvider provider)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>或是可以看神魔之塔的 <a href="https://forum.gamer.com.tw/C.php?bsn=23805&snA=682461">案例</a>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>NumberFormatInfo format = <span style="color:#66d9ef">new</span> CultureInfo( <span style="color:#e6db74">&#34;fr-FR&#34;</span>, <span style="color:#66d9ef">false</span> ).NumberFormat;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span>.Parse(<span style="color:#e6db74">&#34;3.14&#34;</span>, format);
+</span></span></code></pre></div><p>結果會是</p>
+<pre tabindex="0"><code>[System.FormatException: Input string was not in a correct format.]
+   at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Single.Parse(String s, IFormatProvider provider)
+</code></pre><p>或是可以看神魔之塔的 <a href="https://forum.gamer.com.tw/C.php?bsn=23805&amp;snA=682461">案例</a>。</p>
 <p>可以設定 AppDomain 或是 Thread 的 <code>Culture</code> 或是 <code>NumberDecimalSeparator</code> 來繞過：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="c1">// AppDomain</span>
-</span></span><span class="line"><span class="cl"><span class="n">CultureInfo</span><span class="p">.</span><span class="n">DefaultThreadCurrentCulture</span> <span class="p">=</span> <span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">CultureInfo</span><span class="p">.</span><span class="n">DefaultThreadCurrentUICulture</span> <span class="p">=</span> <span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Thread</span>
-</span></span><span class="line"><span class="cl"><span class="n">Thread</span><span class="p">.</span><span class="n">CurrentThread</span><span class="p">.</span><span class="n">CurrentCulture</span> <span class="p">=</span> <span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// 設定小數點</span>
-</span></span><span class="line"><span class="cl"><span class="n">Thread</span><span class="p">.</span><span class="n">CurrentThread</span><span class="p">.</span><span class="n">CurrentCulture</span><span class="p">.</span><span class="n">NumberFormat</span><span class="p">.</span><span class="n">NumberDecimalSeparator</span> <span class="p">=</span> <span class="s">&#34;.&#34;</span><span class="p">;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>不過這些改動範圍都蠻廣的，或是浮點數轉換都要記得加 <code>System.Globalization.CultureInfo.InvariantCulture</code> 參數：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">float</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&#34;3.14&#34;</span><span class="p">,</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">System</span><span class="p">.</span><span class="n">Convert</span><span class="p">.</span><span class="n">ToSingle</span><span class="p">(</span><span class="m">3.14</span><span class="p">,</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">CultureInfo</span><span class="p">.</span><span class="n">InvariantCulture</span><span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>建議還是治本不要從字串 Parse 出浮點數的設定。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// AppDomain</span>
+</span></span><span style="display:flex;"><span>CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
+</span></span><span style="display:flex;"><span>CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Thread</span>
+</span></span><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 設定小數點</span>
+</span></span><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator = <span style="color:#e6db74">&#34;.&#34;</span>;
+</span></span></code></pre></div><p>不過這些改動範圍都蠻廣的，或是浮點數轉換都要記得加 <code>System.Globalization.CultureInfo.InvariantCulture</code> 參數：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">float</span>.Parse(<span style="color:#e6db74">&#34;3.14&#34;</span>, System.Globalization.CultureInfo.InvariantCulture)
+</span></span><span style="display:flex;"><span>System.Convert.ToSingle(<span style="color:#ae81ff">3.14</span>, System.Globalization.CultureInfo.InvariantCulture);
+</span></span></code></pre></div><p>建議還是治本不要從字串 Parse 出浮點數的設定。</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">REMINDER<br><br>When you parse a float, it takes into account the language on the computer you&#39;re using. <br><br>Some cultures use a period for decimal points, while some use commas. <br><br>More than once have I gotten game breaking bugs due to forgetting about this. <a href="https://t.co/hTvzcQvcpW">pic.twitter.com/hTvzcQvcpW</a></p>&mdash; Fear the Phantom (game in bio) (@Phantom_TheGame) <a href="https://twitter.com/Phantom_TheGame/status/1810984722698326304?ref_src=twsrc%5Etfw">July 10, 2024</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -502,63 +444,25 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 <li><a href="https://github.com/mtschoen/JSONObject/issues/43">https://github.com/mtschoen/JSONObject/issues/43</a></li>
 </ul>
 <h4 id="itolower-不一定是-i">&ldquo;I&rdquo;.ToLower() 不一定是 &ldquo;i&rdquo;</h4>
-<p>土耳其文有兩個小寫 i，當在做 <code>ToLower()</code> 時會是大家比較不熟悉、上面沒有點的 <a href="https://www.compart.com/en/unicode/U+0131">ı (U+0131)</a></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">Thread</span><span class="p">.</span><span class="n">CurrentThread</span><span class="p">.</span><span class="n">CurrentCulture</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CultureInfo</span><span class="p">(</span><span class="s">&#34;tr-TR&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;I&#34;</span><span class="p">.</span><span class="n">ToLower</span><span class="p">());</span>
-</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&#34;I&#34;</span><span class="p">.</span><span class="n">ToLowerInvariant</span><span class="p">());</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>結果</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ı
-</span></span><span class="line"><span class="cl">i
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>這問題可能會在拿 enum <code>ToString().ToLower()</code> 之後跟字串做比對踩中。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">enum</span> <span class="n">UIType</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">CONFIG</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">...</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">Thread</span><span class="p">.</span><span class="n">CurrentThread</span><span class="p">.</span><span class="n">CurrentCulture</span> <span class="p">=</span> <span class="k">new</span> <span class="n">CultureInfo</span><span class="p">(</span><span class="s">&#34;tr-TR&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">UIType</span><span class="p">.</span><span class="n">CONFIG</span><span class="p">.</span><span class="n">ToString</span><span class="p">().</span><span class="n">ToLower</span><span class="p">()</span> <span class="p">==</span> <span class="s">&#34;config&#34;</span><span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>結果</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">False
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>也是不建議做類似操作，或者也只能記得使用 <a href="https://learn.microsoft.com/zh-tw/dotnet/api/system.string.tolowerinvariant"><code>ToLowerInvariant()</code></a>。</p>
+<p>土耳其文有兩個小寫 i，當在做 <code>ToLower()</code> 時會是大家比較不熟悉、上面沒有點的 <a href="https://www.compart.com/en/unicode/U&#43;0131">ı (U+0131)</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture = <span style="color:#66d9ef">new</span> CultureInfo(<span style="color:#e6db74">&#34;tr-TR&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;I&#34;</span>.ToLower());
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;I&#34;</span>.ToLowerInvariant());
+</span></span></code></pre></div><p>結果</p>
+<pre tabindex="0"><code>ı
+i
+</code></pre><p>這問題可能會在拿 enum <code>ToString().ToLower()</code> 之後跟字串做比對踩中。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> UIType{
+</span></span><span style="display:flex;"><span>    CONFIG,
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture = <span style="color:#66d9ef">new</span> CultureInfo(<span style="color:#e6db74">&#34;tr-TR&#34;</span>);
+</span></span><span style="display:flex;"><span>Console.WriteLine(UIType.CONFIG.ToString().ToLower() == <span style="color:#e6db74">&#34;config&#34;</span>);
+</span></span></code></pre></div><p>結果</p>
+<pre tabindex="0"><code>False
+</code></pre><p>也是不建議做類似操作，或者也只能記得使用 <a href="https://learn.microsoft.com/zh-tw/dotnet/api/system.string.tolowerinvariant"><code>ToLowerInvariant()</code></a>。</p>
 <p>參考資料：</p>
 <ul>
 <li><a href="http://haacked.com/archive/2012/07/05/turkish-i-problem-and-why-you-should-care.aspx/">http://haacked.com/archive/2012/07/05/turkish-i-problem-and-why-you-should-care.aspx/</a></li>
@@ -567,46 +471,25 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 <h4 id="datetimetostring-crash"><code>DateTime.ToString()</code> Crash</h4>
 <p>在預設 Unity 環境下 <code>DateTime.ToString()</code> 有可能會 Crash，因為 <code>DateTime.ToString()</code> 需要當下語系的日曆類別，但是通常沒有明確使用的日曆類別會被建置過程 Strip 掉。這問題容易在泰文區遇到，因為泰文預設日曆是佛曆 <code>System.Globalization.ThaiBuddhistCalendar</code>。解決方法是參考 Xamarin
 的 <a href="https://github.com/xamarin/Xamarin.Forms/issues/4037">討論</a>，在不會被呼叫到的地方加入：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">CurrentDirectory</span> <span class="p">==</span> <span class="s">&#34;_never_POSSIBLE_&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">ChineseLunisolarCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">HebrewCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">HijriCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">JapaneseCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">JapaneseLunisolarCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">KoreanCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">KoreanLunisolarCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">PersianCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">TaiwanCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">TaiwanLunisolarCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">ThaiBuddhistCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">Globalization</span><span class="p">.</span><span class="n">UmAlQuraCalendar</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="文化忌諱">文化忌諱</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (Environment.CurrentDirectory == <span style="color:#e6db74">&#34;_never_POSSIBLE_&#34;</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.ChineseLunisolarCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.HebrewCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.HijriCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.JapaneseCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.JapaneseLunisolarCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.KoreanCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.KoreanLunisolarCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.PersianCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.TaiwanCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.TaiwanLunisolarCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.ThaiBuddhistCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.UmAlQuraCalendar();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="文化忌諱">文化忌諱</h3>
 <h4 id="cjk-glyph-顯示">CJK Glyph 顯示</h4>
 <p>上面已經提過了日文使用者對於誤用字體會很反感，同時他們也對斷字、換行之類的要求偏高。如果有日文 Localization 的需求，建議還是找專業的人士校對。</p>
-<p>另外常見被抱怨的是日文與簡體中文的標點符號，也是 CJK 的問題。全形逗號 <a href="https://codepoints.net/U+3001">， U+3001 Ideographic Comma</a> 跟全形句號 <a href="https://codepoints.net/U+3002">。 U+3002 Ideographic Full Stop</a> 一樣有上面的 GSUB 問題要小心處理。</p>
+<p>另外常見被抱怨的是日文與簡體中文的標點符號，也是 CJK 的問題。全形逗號 <a href="https://codepoints.net/U&#43;3001">， U+3001 Ideographic Comma</a> 跟全形句號 <a href="https://codepoints.net/U&#43;3002">。 U+3002 Ideographic Full Stop</a> 一樣有上面的 GSUB 問題要小心處理。</p>
 <figure class="center"><img src="/images/gatcha-game-notes/ideographic_full_stop.png"><figcaption>
       <h4>全形句號位置的差別</h4>
     </figcaption>

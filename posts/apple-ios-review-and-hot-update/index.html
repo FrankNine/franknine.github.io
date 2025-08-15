@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/apple-ios-review-and-hot-update/" />
@@ -36,7 +36,7 @@
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -136,18 +136,16 @@
   <div class="post-content">
     <p>昨天 App 開發的大新聞是知名的 iOS 熱更新工具 JSPatch 被蘋果盯上，很多包含 JSPatch 的 App 都被要求限期更新沒有 JSPatch 的版本，否則就會被下架。這件事情造成不小的騷動，也有不少人在傳所謂的「iOS 熱更新已死」一說，但實際上的情況有點複雜。</p>
 <p>事件最開始是有人在 JSPatch 的 GitHub 上開了一個 issue 說他的 App 送審的時候被 Apple 警告：<a href="https://github.com/bang590/JSPatch/issues/746#issue-212594196">Apple警告邮件</a>。其中 Apple 警告信原文如下：</p>
-<p><img src="/images/apple-ios-review-and-hot-update/warn.png"></p>
+<p><img src="/images/apple-ios-review-and-hot-update/warn.png" alt=""></p>
 <p>因為有很大量的開發者收到這個警告，所以這個 issue 很快就爆開了。同時有人在謠傳也有熱更新能力的 React Native 也會被下架，但是後來被證實是誤會一場，很多在 React Native 上面的開發者是因為用到另一個工具 Rollout.io 被警告，而不是因為 React Native。<a href="https://github.com/facebook/react-native/issues/12778">A warning from Apple [resolved, not about React Native]</a></p>
 <p>所以差別到底在哪裡呢？</p>
 <p>如果仔細看 Apple 給 JSPatch 跟 Rollout.io 的信：</p>
 <blockquote>
-<p>This includes any code which passes arbitrary parameters to dynamic methods such as <strong>dlopen()</strong>, <strong>dlsym()</strong>, <strong>respondsToSelector:</strong>, <strong>performSelector:</strong>, <strong>method_exchangeImplementations()</strong>, and running remote scripts in order to change app behavior or call SPI, based on the contents of the downloaded script.</p>
-</blockquote>
+<p>This includes any code which passes arbitrary parameters to dynamic methods such as <strong>dlopen()</strong>, <strong>dlsym()</strong>, <strong>respondsToSelector:</strong>, <strong>performSelector:</strong>, <strong>method_exchangeImplementations()</strong>, and running remote scripts in order to change app behavior or call SPI, based on the contents of the downloaded script.</p></blockquote>
 <p>這幾個函式其實是用來動態載入 iOS 原生程式，還有改寫 iOS App 本體呼叫的函式。雖然一般開發者可能都是拿來修 bug ，但是也是可以送審的時候只放 JSPatch，然後上架後熱更新其原生程式碼去呼叫一些 Apple 審查的時候會擋的 Private API（<a href="https://www.inside.com.tw/2010/04/08/unfair-war-iphones-private-api">不公平的競爭？淺談 iPhone 平台的 Private API</a>）而 React Native 熱更新沒有動原生這塊的能力，這次審查規則修改也沒有找它麻煩。</p>
 <p>後來 JSPatch 的作者寫了一篇公告：<a href="http://blog.cnbang.net/internet/3374/">关于苹果警告</a>，勸大家先不要用避個風頭。也表達希望如果可以 Apple 官方是否能自己提供熱更新服務。這個說法其實是有道理的，很多人說 Apple 不給熱更新是寫在開發者協議的 3.3.2 條，但是現在最新版的內文節錄如下：</p>
 <blockquote>
-<p>3.3.2 Except as set forth in the next paragraph, an Application may not download or install executable code. Interpreted code may only be used in an Application if all scripts, code and interpreters are packaged in the Application and not downloaded. <strong>The only exceptions to the foregoing are scripts and code downloaded and run by Apple’s built-in WebKit framework or JavascriptCore, provided that such scripts and code do not change the primary purpose of the Application</strong> by providing features or functionality that are inconsistent with the intended and advertised purpose of the Application as submitted to the App Store.</p>
-</blockquote>
+<p>3.3.2 Except as set forth in the next paragraph, an Application may not download or install executable code. Interpreted code may only be used in an Application if all scripts, code and interpreters are packaged in the Application and not downloaded. <strong>The only exceptions to the foregoing are scripts and code downloaded and run by Apple’s built-in WebKit framework or JavascriptCore, provided that such scripts and code do not change the primary purpose of the Application</strong> by providing features or functionality that are inconsistent with the intended and advertised purpose of the Application as submitted to the App Store.</p></blockquote>
 <p>在沒有大幅修改 App 功能表現且在 Apple 提供的腳本環境下 Apple 是 <strong>「明文允許熱更新」</strong> 的，而 React Native 就是在使用 JavascriptCore。這個其實跟大家在傳的 <strong>「Apple 不准熱更新」</strong> 說法有點差別。</p>
 <p>過了兩天現在好像 JSPatch 的社群開始在討論怎麼混淆 JSPatch 躲過 Apple 的靜態分析，不過依照上面分析的 Apple 的態度，應該是抓一個死一個。因為我不做 iOS 原生開發，也沒有用 JSPatch 所以也不是很關心。但是推測起來 Unity 或其他任何遊戲引擎接 Lua 熱更新，應該是跟 React Native 的案例比較像，照理來說應該是沒踩到 Apple 的紅線。但不是明文允許，心裡多少會在意，真的跟 JSPatch 的作者一樣好想跟 Apple 的人問個明白呀&hellip;</p>
   </div>

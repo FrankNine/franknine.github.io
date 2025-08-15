@@ -17,57 +17,28 @@
   });
 </script>
 <p><strong>解答：</strong> 替換 <code>createStairs()</code> 內的程式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="err">往上多少階</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">stepPair</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">riserHeight</span> <span class="o">=</span> <span class="n">verticalStepHeight</span> <span class="o">+</span> <span class="n">stepThickness</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">riserDepth</span> <span class="o">=</span> <span class="n">horizontalStepDepth</span> <span class="o">-</span> <span class="n">stepThickness</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span> <span class="n">stepPair</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">stepPair</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">stepPair</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">創造與移動垂直部分</span>
-</span></span><span class="line"><span class="cl">    <span class="n">stepMesh</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">stepVertical</span><span class="p">,</span> <span class="n">stepMaterialVertical</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">盒子中心位置</span>
-</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">你可以用</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="err">或是以下方式</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">stepMesh</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
-</span></span><span class="line"><span class="cl">    <span class="n">stepMesh</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">verticalStepHeight</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">stepPair</span> <span class="o">*</span> <span class="n">riserHeight</span><span class="p">;</span> 
-</span></span><span class="line"><span class="cl">    <span class="n">stepMesh</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">stepPair</span> <span class="o">*</span> <span class="n">riserDepth</span><span class="p">;</span> 
-</span></span><span class="line"><span class="cl">    <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">stepMesh</span> <span class="p">);</span> 
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">創造與移動水平部分</span>
-</span></span><span class="line"><span class="cl">    <span class="n">stepMesh</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">stepHorizontal</span><span class="p">,</span> <span class="n">stepMaterialHorizontal</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">stepMesh</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">往上推半個水平的厚度加上整個垂直的高度</span>
-</span></span><span class="line"><span class="cl">    <span class="n">stepMesh</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">stepThickness</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">verticalStepHeight</span> <span class="o">+</span> <span class="n">stepPair</span> <span class="o">*</span> <span class="n">riserHeight</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">//</span> <span class="err">往前推半個水平的深度，再拉回半個垂直的厚度</span>
-</span></span><span class="line"><span class="cl">    <span class="n">stepMesh</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">horizontalStepDepth</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">stepHalfThickness</span> <span class="o">+</span> <span class="n">stepPair</span> <span class="o">*</span> <span class="n">riserDepth</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">stepMesh</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>// 往上多少階
+var stepPair;
+var riserHeight = verticalStepHeight + stepThickness;
+var riserDepth = horizontalStepDepth - stepThickness;
+for ( stepPair = 0; stepPair &lt; 6; stepPair++ ) {
+    // 創造與移動垂直部分
+    stepMesh = new THREE.Mesh( stepVertical, stepMaterialVertical );
+    // 盒子中心位置
+    // 你可以用 THREE.Vector3(x, y, z) 或是以下方式:
+    stepMesh.position.x = 0; 
+    stepMesh.position.y = verticalStepHeight / 2 + stepPair * riserHeight; 
+    stepMesh.position.z = stepPair * riserDepth; 
+    scene.add( stepMesh ); 
+
+    // 創造與移動水平部分
+    stepMesh = new THREE.Mesh( stepHorizontal, stepMaterialHorizontal );
+    stepMesh.position.x = 0;
+    // 往上推半個水平的厚度加上整個垂直的高度
+    stepMesh.position.y = stepThickness / 2 + verticalStepHeight + stepPair * riserHeight;
+    // 往前推半個水平的深度，再拉回半個垂直的厚度
+    stepMesh.position.z = horizontalStepDepth / 2 - stepHalfThickness + stepPair * riserDepth;
+    scene.add( stepMesh );
+}
+</code></pre>
 </div>

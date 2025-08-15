@@ -17,125 +17,57 @@
   });
 </script>
 <p><strong>解答：</strong> <code>createSupport()</code> 加入以下程式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// 右腳底板 
-</span></span><span class="line"><span class="cl">cube = new THREE.Mesh( new THREE.CubeGeometry( 20+64+110, 52, 6 ), cubeMaterial );
-</span></span><span class="line"><span class="cl">// (20+32) - 一半的寬度 (20+64+110)/2
-</span></span><span class="line"><span class="cl">cube.position.x = -45;
-</span></span><span class="line"><span class="cl">// 一半的高度
-</span></span><span class="line"><span class="cl">cube.position.y = 52/2;
-</span></span><span class="line"><span class="cl">// 反方向偏移 77 + 一半的深度 6/2
-</span></span><span class="line"><span class="cl">cube.position.z = -(77 + 6/2);
-</span></span><span class="line"><span class="cl">scene.add( cube );
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// 右腳 
-</span></span><span class="line"><span class="cl">cube = new THREE.Mesh( new THREE.CubeGeometry( 64, 334+52, 6 ), cubeMaterial );
-</span></span><span class="line"><span class="cl">// X 對齊原點
-</span></span><span class="line"><span class="cl">cube.position.x = 0;
-</span></span><span class="line"><span class="cl">cube.position.y = (334+52)/2;
-</span></span><span class="line"><span class="cl">// 反方向偏移 77 + 一半的深度 6/2
-</span></span><span class="line"><span class="cl">cube.position.z = -(77 + 6/2);
-</span></span><span class="line"><span class="cl">scene.add( cube );
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>createBody()</code> 加入以下程式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="err">身體</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">sphere</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">SphereGeometry</span><span class="p">(</span> <span class="mi">116</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">16</span> <span class="p">),</span> <span class="n">sphereMaterial</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">sphere</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">頭／身體間圓柱</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">CylinderGeometry</span><span class="p">(</span> <span class="mi">24</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">24</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">390</span><span class="p">,</span> <span class="mi">32</span> <span class="p">),</span> <span class="n">cylinderMaterial</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span> <span class="o">+</span> <span class="mi">390</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>createHead()</code> 加入以下程式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="err">頭</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">sphere</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">SphereGeometry</span><span class="p">(</span> <span class="mi">104</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">16</span> <span class="p">),</span> <span class="n">sphereMaterial</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span> <span class="o">+</span> <span class="mi">390</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">sphere</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">sphere</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">帽緣</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">CylinderGeometry</span><span class="p">(</span> <span class="mi">142</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">142</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">32</span> <span class="p">),</span> <span class="n">cylinderMaterial</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span> <span class="o">+</span> <span class="mi">390</span> <span class="o">+</span> <span class="mi">40</span> <span class="o">+</span> <span class="mi">10</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">帽頂</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">CylinderGeometry</span><span class="p">(</span> <span class="mi">80</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">80</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">32</span> <span class="p">),</span> <span class="n">cylinderMaterial</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">160</span> <span class="o">+</span> <span class="mi">390</span> <span class="o">+</span> <span class="mi">40</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">70</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>// 右腳底板 
+cube = new THREE.Mesh( new THREE.CubeGeometry( 20+64+110, 52, 6 ), cubeMaterial );
+// (20+32) - 一半的寬度 (20+64+110)/2
+cube.position.x = -45;
+// 一半的高度
+cube.position.y = 52/2;
+// 反方向偏移 77 + 一半的深度 6/2
+cube.position.z = -(77 + 6/2);
+scene.add( cube );
+
+// 右腳 
+cube = new THREE.Mesh( new THREE.CubeGeometry( 64, 334+52, 6 ), cubeMaterial );
+// X 對齊原點
+cube.position.x = 0;
+cube.position.y = (334+52)/2;
+// 反方向偏移 77 + 一半的深度 6/2
+cube.position.z = -(77 + 6/2);
+scene.add( cube );
+</code></pre><p><code>createBody()</code> 加入以下程式：</p>
+<pre tabindex="0"><code>// 身體
+var sphere = new THREE.Mesh( new THREE.SphereGeometry( 116/2, 32, 16 ), sphereMaterial );
+sphere.position.x = 0;
+sphere.position.y = 160;
+sphere.position.z = 0;
+scene.add( sphere );
+
+// 頭／身體間圓柱
+var cylinder = new THREE.Mesh( new THREE.CylinderGeometry( 24/2, 24/2, 390, 32 ), cylinderMaterial );
+cylinder.position.x = 0;
+cylinder.position.y = 160 + 390/2;
+cylinder.position.z = 0;
+scene.add( cylinder );
+</code></pre><p><code>createHead()</code> 加入以下程式：</p>
+<pre tabindex="0"><code>// 頭
+var sphere = new THREE.Mesh( new THREE.SphereGeometry( 104/2, 32, 16 ), sphereMaterial );
+sphere.position.x = 0;
+sphere.position.y = 160 + 390;
+sphere.position.z = 0;
+scene.add( sphere );
+
+// 帽緣
+var cylinder = new THREE.Mesh( new THREE.CylinderGeometry( 142/2, 142/2, 10, 32 ), cylinderMaterial );
+cylinder.position.x = 0;
+cylinder.position.y = 160 + 390 + 40 + 10/2;
+cylinder.position.z = 0; scene.add( cylinder );
+
+// 帽頂
+cylinder = new THREE.Mesh( new THREE.CylinderGeometry( 80/2, 80/2, 70, 32 ), cylinderMaterial );
+cylinder.position.x = 0;
+cylinder.position.y = 160 + 390 + 40 + 10 + 70/2;
+cylinder.position.z = 0;
+scene.add( cylinder );
+</code></pre>
 </div>

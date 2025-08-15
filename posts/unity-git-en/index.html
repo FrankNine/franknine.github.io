@@ -25,7 +25,7 @@ I&rsquo;ve been using Git to version control Unity projects for a while now. Rec
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/unity-git-en/" />
@@ -37,7 +37,7 @@ I&rsquo;ve been using Git to version control Unity projects for a while now. Rec
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -58,7 +58,7 @@ I’ve been using Git to version control Unity projects for a while now. Recentl
 I’ve been using Git to version control Unity projects for a while now. Recently, my company open-sourced our Unity builder mimiron-lite, along with a new set of Git configuration files that are now being used as Git configuration standard of my company . I would like to share some insights regarding the thought process behind these configuration files and the experiences of using Git.">
   <meta itemprop="datePublished" content="2023-04-23T16:00:00+08:00">
   <meta itemprop="dateModified" content="2023-04-23T16:00:00+08:00">
-  <meta itemprop="wordCount" content="6142">
+  <meta itemprop="wordCount" content="6097">
   <meta itemprop="keywords" content="Unity,git">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Unity and Git">
@@ -181,28 +181,13 @@ The company has released this configuration under the <a href="https://tldrlegal
 <h2 id="gitconfig">.gitconfig</h2>
 <h3 id="coreignorecase">core.ignorecase</h3>
 <p>The most important Git config that all the team members has to set is:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git config --global core.ignorecase true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>It&rsquo;s to make Git treat files with different capitalization as the same file. On systems such as Mac and Linux, which have case-sensitive file systems, files with different capitalization are treated as different files, whereas on Windows, they are considered the same file. If this setting is not configured, Mac users may push files with only different capitalization into the repository, which Windows users will be unable to pull, or encounter situations where files go back to &ldquo;Modified&rdquo; state immediately after being reverted. If you need to perform any actions that involve changing just the capitalization of a filename, please use <a href="https://git-scm.com/docs/git-mv"><code>git mv</code></a> instead of deleting the file, committing, and then renaming the file and committing again, as that may break the history of the file.</p>
+<pre tabindex="0"><code>git config --global core.ignorecase true
+</code></pre><p>It&rsquo;s to make Git treat files with different capitalization as the same file. On systems such as Mac and Linux, which have case-sensitive file systems, files with different capitalization are treated as different files, whereas on Windows, they are considered the same file. If this setting is not configured, Mac users may push files with only different capitalization into the repository, which Windows users will be unable to pull, or encounter situations where files go back to &ldquo;Modified&rdquo; state immediately after being reverted. If you need to perform any actions that involve changing just the capitalization of a filename, please use <a href="https://git-scm.com/docs/git-mv"><code>git mv</code></a> instead of deleting the file, committing, and then renaming the file and committing again, as that may break the history of the file.</p>
 <p>As we have set <code>core.ignorecase true</code>, we do not need to specifically include patterns that match different capitalizations in our configuration of <a href="https://github.com/FrankNine/RepoConfig/blob/master/.gitignore"><code>.gitignore</code></a> and <a href="https://github.com/FrankNine/RepoConfig/blob/master/.gitattributes"><code>.gitattributes</code></a>.</p>
 <h3 id="corefsmonitor--featuremanyfiles">core.fsmonitor / feature.manyFiles</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git config --global core.fsmonitor true
-</span></span><span class="line"><span class="cl">git config --global feature.manyFiles true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>For the sheer size of game projects, it is recommended to use any settings that can improve the speed of Git operations. The <a href="https://git-scm.com/docs/git-update-index#_file_system_monitor">File System Monitor</a> can utilize operating system features to accelerate detection of file modifications, while <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-featuremanyFiles">Many Files</a> can speed up detection of untracked files.</p>
+<pre tabindex="0"><code>git config --global core.fsmonitor true
+git config --global feature.manyFiles true
+</code></pre><p>For the sheer size of game projects, it is recommended to use any settings that can improve the speed of Git operations. The <a href="https://git-scm.com/docs/git-update-index#_file_system_monitor">File System Monitor</a> can utilize operating system features to accelerate detection of file modifications, while <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-featuremanyFiles">Many Files</a> can speed up detection of untracked files.</p>
 <p>Reference:</p>
 <ul>
 <li><a href="https://canvatechblog.com/we-put-half-a-million-files-in-one-git-repository-heres-what-we-learned-ec734a764181">We Put Half a Million files in One git Repository, Here’s What We Learned</a></li>
@@ -215,32 +200,14 @@ The company has released this configuration under the <a href="https://tldrlegal
 <h3 id="lfs-large-file-storage">LFS (Large File Storage)</h3>
 <p>Let&rsquo;s talk about LFS first. Basically, LFS (Large File Storage) moves files with specific file extensions out of Git and stores them on an LFS server, leaving only a <a href="https://github.com/git-lfs/git-lfs/blob/master/docs/spec.md#the-pointer">Pointer File</a> in the original Git repository. The Pointer File contains an oid (Object ID). When needed, LFS uses the oid in the Pointer File to lookup and download the actual file from the LFS server, replacing (<a href="https://git-scm.com/book/zh-tw/v2/Customizing-Git-Git-Attributes#rfilters_a">Smudge</a> is the actual name of this process) the Pointer File with real content.</p>
 <p>Here is an example of the contents of a Pointer File, which is typically around 130 bytes. Keep in mind this file size, if you see a file of this size, you may need to check if the LFS replacement process was executed correctly.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">version https://git-lfs.github.com/spec/v1
-</span></span><span class="line"><span class="cl">oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393
-</span></span><span class="line"><span class="cl">size 12345
-</span></span><span class="line"><span class="cl">(ending \n)
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Nowadays, most Git clients are capable of detecting LFS and automatically setting up LFS configuration during cloning. However, if there are issues with LFS initialization, you can manually execute the following commands:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git lfs install
-</span></span><span class="line"><span class="cl">git lfs pull
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Using LFS can reduce the size of Git history, as Git only stores Pointer Files. This can decrease the local disk space usage during cloning and improve efficiency, especially for large binary files in 3D game projects. However, there are some drawbacks:</p>
+<pre tabindex="0"><code>version https://git-lfs.github.com/spec/v1
+oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393
+size 12345
+(ending \n)
+</code></pre><p>Nowadays, most Git clients are capable of detecting LFS and automatically setting up LFS configuration during cloning. However, if there are issues with LFS initialization, you can manually execute the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs install
+</span></span><span style="display:flex;"><span>git lfs pull
+</span></span></code></pre></div><p>Using LFS can reduce the size of Git history, as Git only stores Pointer Files. This can decrease the local disk space usage during cloning and improve efficiency, especially for large binary files in 3D game projects. However, there are some drawbacks:</p>
 <ul>
 <li>Git operations now require continuous communication to the LFS server, which results in the loss of Git&rsquo;s fully distributed and offline capability.</li>
 <li>Occasionally, issues may arise with LFS replacement, such as Pointer Files not being replaced with the actual file contents during cloning or fetching. Rarely, there may be cases where files are lost in GitLab&rsquo;s LFS server, resulting in failed fetches. In situations where LFS and Fork functionality are used simultaneously in GitLab, <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/271576">re-synchronization</a> may be needed for the LFS repository. It is currently recommended to avoid using LFS and Fork functionality together on GitLab.</li>
@@ -250,64 +217,23 @@ The company has released this configuration under the <a href="https://tldrlegal
 <p>To perform migration to LFS on existing repository, first, track all branches locally, as <code>lfs migrate</code> only applies to local branches:<br>
 <a href="https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches">https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches</a></p>
 <p>Then execute following commands (This is an example of rewriting history for <code>.png</code> and <code>.psd</code> files from binary blobs to LFS pointers)</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git lfs migrate import --everything --include<span class="o">=</span><span class="s2">&#34;*.png,*.psd&#34;</span>
-</span></span><span class="line"><span class="cl">git reflog expire --expire<span class="o">=</span>now --all <span class="o">&amp;&amp;</span> git gc --prune<span class="o">=</span>now
-</span></span><span class="line"><span class="cl">git remote set-url origin &lt;New repository location&gt;
-</span></span><span class="line"><span class="cl">git push --all origin --force
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Another common situation is that you modify the <code>.gitattributes</code> file to include new file extensions into the LFS scope, but the existing files are not replaced with Pointer Files. In this case, you will receive a following warning during Clone or Reset:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Encountered 1 file(s) that should have been pointers, but weren&#39;t
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>If you don&rsquo;t want to rewrite whole history but just want to replace current files with Pointer Files, you can use:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># from https://stackoverflow.com/a/51626808</span>
-</span></span><span class="line"><span class="cl">git rm --cached -r .
-</span></span><span class="line"><span class="cl">git reset --hard
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Or</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
-</span></span><span class="line"><span class="cl">git add --renormalize .
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Then commit/push the changes to the repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs migrate import --everything --include<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*.png,*.psd&#34;</span>
+</span></span><span style="display:flex;"><span>git reflog expire --expire<span style="color:#f92672">=</span>now --all <span style="color:#f92672">&amp;&amp;</span> git gc --prune<span style="color:#f92672">=</span>now
+</span></span><span style="display:flex;"><span>git remote set-url origin &lt;New repository location&gt;
+</span></span><span style="display:flex;"><span>git push --all origin --force
+</span></span></code></pre></div><p>Another common situation is that you modify the <code>.gitattributes</code> file to include new file extensions into the LFS scope, but the existing files are not replaced with Pointer Files. In this case, you will receive a following warning during Clone or Reset:</p>
+<pre tabindex="0"><code>Encountered 1 file(s) that should have been pointers, but weren&#39;t
+</code></pre><p>If you don&rsquo;t want to rewrite whole history but just want to replace current files with Pointer Files, you can use:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># from https://stackoverflow.com/a/51626808</span>
+</span></span><span style="display:flex;"><span>git rm --cached -r .
+</span></span><span style="display:flex;"><span>git reset --hard
+</span></span></code></pre></div><p>Or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
+</span></span><span style="display:flex;"><span>git add --renormalize .
+</span></span></code></pre></div><p>Then commit/push the changes to the repository.</p>
 <p>Just add the following to <code>.gitattributes</code>:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">*.png filter=lfs diff=lfs merge=lfs
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>You can manage PNG image files with LFS like this (since <code>core.ignorecase true</code> is set, we don&rsquo;t need to write <code>*.png</code> as <code>*.[pP][nN][gG]</code>). Basically, all binary files that cannot be directly edited as text should be added to LFS, but for Unity Prefab (<code>.prefab</code>), Assets (<code>.Assets</code> but not <code>LightingData.asset</code>) and Scene (<code>.unity</code>) files, I would choose not to add them to LFS. After setting AssetSerialization to Force Text, the YAML structure of Unity GameObjects can be read and compared as text diff, which can be very helpful to verify if intended changes to Prefabs or Scenes accidentally affect other <a href="https://docs.unity3d.com/ScriptReference/SerializeField.html">SerializedFields</a>.</p>
+<pre tabindex="0"><code>*.png filter=lfs diff=lfs merge=lfs
+</code></pre><p>You can manage PNG image files with LFS like this (since <code>core.ignorecase true</code> is set, we don&rsquo;t need to write <code>*.png</code> as <code>*.[pP][nN][gG]</code>). Basically, all binary files that cannot be directly edited as text should be added to LFS, but for Unity Prefab (<code>.prefab</code>), Assets (<code>.Assets</code> but not <code>LightingData.asset</code>) and Scene (<code>.unity</code>) files, I would choose not to add them to LFS. After setting AssetSerialization to Force Text, the YAML structure of Unity GameObjects can be read and compared as text diff, which can be very helpful to verify if intended changes to Prefabs or Scenes accidentally affect other <a href="https://docs.unity3d.com/ScriptReference/SerializeField.html">SerializedFields</a>.</p>
 <p>To understand how to read YAML, you can refer to the official documentation:<br>
 <a href="https://blog.unity.com/technology/understanding-unitys-serialization-language-yaml">Understanding Unity’s serialization language, YAML</a></p>
 <p>If you would like to read changes in Scenes and Prefabs this way, remember to use <a href="https://docs.unity3d.com/ScriptReference/AssetDatabase.ForceReserializeAssets.html">AssetDatabase.ForceReserializeAssets</a> on all Prefab and Scene files when upgrading Unity to the newer version. By default, Unity only upgrades YAML file format to new version when changes are made (this is a design philosophy of Unity Editor, Material files are also exhibiting this kind of lazily upgrade behavior), but this can result in editing changes and upgrade changes getting mixed together that makes it difficult to read in diff. Therefore, it is necessary to force the file upgrade via <code>AssetDatabase.ForceReserializeAssets</code> when Unity is upgraded but the project is not yet modified.</p>
@@ -374,64 +300,28 @@ The company has released this configuration under the <a href="https://tldrlegal
 <h2 id="editorconfig">EditorConfig</h2>
 <p><a href="https://editorconfig.org/">https://editorconfig.org/</a></p>
 <p>This is not directly related to Git itself, but it&rsquo;s a configuration file that can be included in the repository, so I&rsquo;ll mention it here as well. Currently, we are using a very barebone configuration:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">root = true
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">[*]
-</span></span><span class="line"><span class="cl">charset = utf-8
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">indent_style = space
-</span></span><span class="line"><span class="cl">indent_size  = 4
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">trim_trailing_whitespace = true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>.gitattributes</code> controls line endings, but source files may still have issues with text encoding, BOM, or inconsistent Tab/Space. Encoding and Tab/Space can be managed using a <code>.editorconfig</code> file placed within the project to provide guidance to the source editors on how to handle them. Currently, Visual Studio, MonoDevelop, and Rider automatically detect settings from <code>.editorconfig</code>, while Visual Studio Code and Notepad++ require plugins to be installed.</p>
+<pre tabindex="0"><code>root = true
+
+[*]
+charset = utf-8
+
+indent_style = space
+indent_size  = 4
+
+trim_trailing_whitespace = true
+</code></pre><p><code>.gitattributes</code> controls line endings, but source files may still have issues with text encoding, BOM, or inconsistent Tab/Space. Encoding and Tab/Space can be managed using a <code>.editorconfig</code> file placed within the project to provide guidance to the source editors on how to handle them. Currently, Visual Studio, MonoDevelop, and Rider automatically detect settings from <code>.editorconfig</code>, while Visual Studio Code and Notepad++ require plugins to be installed.</p>
 <p>Furthermore, Visual Studio or ReSharper settings can also be committed to the repository to achieve consistency in naming or coding conventions among the entire team. However, our company does not have practical experience in this practice as there is no unified adoption of JetBrains editors yet.</p>
 <h1 id="worktree">Worktree</h1>
 <p>If you&rsquo;re developing multi-platform games, you may find it convenient to clone the same project multiple times and configure each clone to a different platform, such as one clone for Android and another for iOS. Although <a href="https://docs.unity3d.com/Manual/CacheServer.html">Cache Server</a> / <a href="https://docs.unity3d.com/Manual/UnityAccelerator.html">Accelerator</a> or <a href="https://forum.unity.com/threads/what-is-asset-database-v2.680170/">AssetDatabase V2</a> can reduce the cost of switching platforms, keeping multiple copies of the project on your hard drive is still the fastest and most intuitive way. The downside is that it consumes a lot of disk space. However, you can actually clone the project <code>.git</code> folder once and then use multiple <a href="https://git-scm.com/docs/git-worktree">Worktree</a>, which means you&rsquo;ll still have multiple project directories, but only one <code>.git</code> folder, resulting in only one Git history on your computer. Also if you have concerns about disk space and your computer has a large traditional hard drive but limited SSD space, you can consider storing the Git history on the traditional hard drive and placing the project Worktrees on the SSD.</p>
 <p>To do this in the Git root directory:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git worktree add ../project-ios
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>It will create an additional Worktree named <code>project-ios</code> in the parent directory:</p>
+<pre tabindex="0"><code>git worktree add ../project-ios
+</code></pre><p>It will create an additional Worktree named <code>project-ios</code> in the parent directory:</p>
 <p>Extra Worktrees can be recognized by most regular Git clients, and the operations are similar to a regular clone.</p>
 <p>To list the existing Worktrees, use the following command:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git worktree list
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>When you no longer need a Worktree, you can simply delete it and then run:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git worktree prune
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h1 id="hooks">Hooks</h1>
+<pre tabindex="0"><code>git worktree list
+</code></pre><p>When you no longer need a Worktree, you can simply delete it and then run:</p>
+<pre tabindex="0"><code>git worktree prune
+</code></pre><h1 id="hooks">Hooks</h1>
 <p>Git allows you to add automatic triggering Shell Scripts in the settings for auto integrity checking or cleaning, it&rsquo;s commonly used for clearing empty directories and their <code>.meta</code> files, as well as checking if corresponding <code>.meta</code> files are added when committing new files. However, I haven&rsquo;t personally promoted this practice to the entire team, so I don&rsquo;t have much personal experience to share. You can refer to the following resources:</p>
 <ul>
 <li><a href="https://pre-commit.com/">pre-commit</a></li>
@@ -450,58 +340,24 @@ The company has released this configuration under the <a href="https://tldrlegal
 <li><a href="https://www.bitsnbites.eu/a-tidy-linear-git-history/">A tidy, linear Git history</a></li>
 </ul>
 <p>For non-technical users, performing a rebase instead of a merge may be more challenging, but if everyone uses default pull, it may result in a large number of overlapping merge commits. One approach is to set up <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-pullrebase">pull.rebase</a> and <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-rebaseautoStash">rebase.autoStash</a> for non-technical users.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git config pull.rebase true
-</span></span><span class="line"><span class="cl">git config rebase.autoStash true
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>This approach triggers stash, rebase, and apply stash during pull, replacing merge operation during pull, which can be effective in reducing overlaps. However, the downside is that if conflicts arise, rebase conflicts are harder to deal with than merge conflicts. Whether to apply this approach or not depends on the level of acceptance among non-technical team members.</p>
+<pre tabindex="0"><code>git config pull.rebase true
+git config rebase.autoStash true
+</code></pre><p>This approach triggers stash, rebase, and apply stash during pull, replacing merge operation during pull, which can be effective in reducing overlaps. However, the downside is that if conflicts arise, rebase conflicts are harder to deal with than merge conflicts. Whether to apply this approach or not depends on the level of acceptance among non-technical team members.</p>
 <p>Rebasing forward will let feature branches get the new commits on main branches. While another approach is to merge the main branch into the feature branch. However, with this approach, it is important to communicate to all team members to be careful with resolving conflicts during merging. If merge conflict resolutions are done incorrectly during merging main branch to feature branch, there will be no warning when merging feature branches back to the main branch, as conflicts have already been marked as resolved in earlier merges. Non-technical team members may occasionally make this mistake, but such mistake can have serious consequences as it can pollute the main branch. Extra caution is needed if you choose not to use rebase to get new changes.</p>
 <h1 id="sparse-checkout--shallow-clone">Sparse checkout &amp; Shallow clone</h1>
 <p>During checkout, it is not necessary to checkout the entire repository. Instead, you can specify file or folder patterns in <code>.git/info/sparse-checkout</code> to only checkout specific files or folders. The following is an example of cloning and checking out only <code>/Assets/</code> and <code>/ProjectSettings/</code> folders.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone --no-checkout &lt;Repo URI&gt;
-</span></span><span class="line"><span class="cl">cd &lt;Repo path&gt;
-</span></span><span class="line"><span class="cl">git config core.sparseCheckout true
-</span></span><span class="line"><span class="cl">(echo /Assets/) &gt; .git/info/sparse-checkout
-</span></span><span class="line"><span class="cl">(echo /ProjectSettings/) &gt;&gt; .git/info/sparse-checkout # &gt;&gt; means append
-</span></span><span class="line"><span class="cl">git checkout
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><a href="https://github.blog/2020-01-13-highlights-from-git-2-25/">Git 2.25.0</a> introduced <a href="https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/"><code>git sparse-checkout</code></a>, which allows you to use <code>git sparse-checkout init</code> instead of <code>git config core.sparseCheckout true</code> <a href="https://git-scm.com/docs/git-sparse-checkout#Documentation/git-sparse-checkout.txt-emsetem"><code>git sparse-checkout set/add</code></a> replacing directly editing <code>.git/info/sparse-checkout</code>.</p>
+<pre tabindex="0"><code>git clone --no-checkout &lt;Repo URI&gt;
+cd &lt;Repo path&gt;
+git config core.sparseCheckout true
+(echo /Assets/) &gt; .git/info/sparse-checkout
+(echo /ProjectSettings/) &gt;&gt; .git/info/sparse-checkout # &gt;&gt; means append
+git checkout
+</code></pre><p><a href="https://github.blog/2020-01-13-highlights-from-git-2-25/">Git 2.25.0</a> introduced <a href="https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/"><code>git sparse-checkout</code></a>, which allows you to use <code>git sparse-checkout init</code> instead of <code>git config core.sparseCheckout true</code> <a href="https://git-scm.com/docs/git-sparse-checkout#Documentation/git-sparse-checkout.txt-emsetem"><code>git sparse-checkout set/add</code></a> replacing directly editing <code>.git/info/sparse-checkout</code>.</p>
 <p>Additionally, <code>git clone</code> can be used with the <a href="https://git-scm.com/docs/git-clone#Documentation/git-clone.txt---depthltdepthgt"><code>--depth</code></a> parameter to limit the depth of the cloned history.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone --depth 5 -b &lt;Branch&gt; &lt;Repo URI&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>If you want to restore, execute:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git fetch --unshallow
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Sparse Checkout and Shallow Clone can both speed up Git operations and reduce disk space usage, but they are not commonly used on clones for authoring. The more practical application is to use them on Build Pipelines, where you can control the behavior of Clone and Checkout on the Build Server to achieve faster build times as you only need HEAD to build the project.</p>
+<pre tabindex="0"><code>git clone --depth 5 -b &lt;Branch&gt; &lt;Repo URI&gt;
+</code></pre><p>If you want to restore, execute:</p>
+<pre tabindex="0"><code>git fetch --unshallow
+</code></pre><p>Sparse Checkout and Shallow Clone can both speed up Git operations and reduce disk space usage, but they are not commonly used on clones for authoring. The more practical application is to use them on Build Pipelines, where you can control the behavior of Clone and Checkout on the Build Server to achieve faster build times as you only need HEAD to build the project.</p>
 <p>Git 2.34 introduced a more aggressive  <a href="https://github.blog/2021-11-10-make-your-monorepo-feel-small-with-gits-sparse-index/">Sparse Index</a> feature, which allows you to even sparse checkout the Git index. It&rsquo;s mainly for a Monorepo-style project. However, we are not currently using Monorepo, and I personally have some doubts about the workflow of removing things to return to a non-Monorepo state after using Monorepo. Let&rsquo;s not delve into this discussion for now.</p>
 <h1 id="branching-model">Branching Model</h1>
 <p>After using it for a long time, the once popular <a href="https://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a> has been abandoned by us, as the benefits it brings are not outweighing the difficulties caused by its complexity (<a href="https://news.ycombinator.com/item?id=22496724">Hacker News discussion</a>). This is especially challenging to implement in game development teams where not everyone has a technical background to be able to jump back and forth between branches.</p>
@@ -510,26 +366,11 @@ The company has released this configuration under the <a href="https://tldrlegal
 <p>In addition, Code Review is more suitable for environments where frequent merging via Merge Requests is practiced. In general, the amount of code that one can effectively review at a time is limited. Reviewing changes that have been in development for more than a week can be very challenging, and beyond that, it becomes a torture for the reviewer.</p>
 <h1 id="lfs-lock">LFS Lock</h1>
 <p>In git LFS v2.0.0, a new feature was added to <a href="https://github.com/git-lfs/git-lfs/wiki/File-Locking">lock</a> specific files, and the Fork client also supports LFS Lock from the GUI. To declare a file as lockable, add <code>lockable</code> in the <code>.gitattributes</code> file.(In fact, it seems that you can <code>git lfs lock</code> on files without the <code>lockable</code> attribute. The only difference seems that if a file is marked <code>lockable</code> on <a href="https://github.com/git-lfs/git-lfs/blob/94245ec834c7f938ec3a7808f73e9bd1d2b04f0a/docs/man/git-lfs-post-commit.1.ronn#description">commit</a>, git LFS will automatically add the read-only attribute to files if it hasn&rsquo;t been <code>git lfs lock</code> yet.)</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">*.jpg filter=lfs diff=lfs merge=lfs -text lockable
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>After that, you can use <code>lock</code> and <code>unlock</code> commands.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git lfs lock &lt;file path&gt;
-</span></span><span class="line"><span class="cl">git lfs unlock &lt;file path&gt;
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Although this feature feels like it could implement a file locking mechanism similar to checkout in Perforce, currently it still requires manual checking of lock status, which is not very convenient. Therefore, it has not been widely adopted in projects, but I believe it has the potential to be a promising direction. <del>Hopefully, future versions will improve or provide methods, such as hooks, to automatically lock files when detecting file edits, just like Perforce.</del></p>
+<pre tabindex="0"><code>*.jpg filter=lfs diff=lfs merge=lfs -text lockable
+</code></pre><p>After that, you can use <code>lock</code> and <code>unlock</code> commands.</p>
+<pre tabindex="0"><code>git lfs lock &lt;file path&gt;
+git lfs unlock &lt;file path&gt;
+</code></pre><p>Although this feature feels like it could implement a file locking mechanism similar to checkout in Perforce, currently it still requires manual checking of lock status, which is not very convenient. Therefore, it has not been widely adopted in projects, but I believe it has the potential to be a promising direction. <del>Hopefully, future versions will improve or provide methods, such as hooks, to automatically lock files when detecting file edits, just like Perforce.</del></p>
 <p>Later, I tried automating the process of setting files as read-only and then releasing the read-only flag only after LFS Lock, mimicking Perforce&rsquo;s behavior. However, I realized that <a href="https://forum.unity.com/threads/why-does-unity-unlock-a-read-only-file.35462/#post-230437">Unity Editor itself does not respect the system&rsquo;s read-only flag</a>, as Unity just removes read-only flags on files in Assets directory. Unable to distinguish whether the read-only flag was removed by the hook or by Unity. This forced me to abandon the idea and left me curious about how Perforce could be working with Unity, given Unity does not respect the read-only flag.</p>
 <p>In addition, it seems that the improvements users expected, such as <a href="https://github.com/git-lfs/git-lfs/issues/3637">Per-branch Lock</a> and <a href="https://github.com/git-lfs/git-lfs/issues/2671#issuecomment-349458133">Auto Unlock</a>, have been shelved for a long time. It seems unnecessary to invest further in researching LFS Lock until these major issues are resolved.</p>
 <h1 id="vfs-for-git">VFS for Git</h1>

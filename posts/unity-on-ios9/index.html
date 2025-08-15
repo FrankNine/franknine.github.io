@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/unity-on-ios9/" />
@@ -36,7 +36,7 @@
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -55,7 +55,7 @@
   <meta itemprop="description" content="雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。">
   <meta itemprop="datePublished" content="2015-11-07T16:37:30+00:00">
   <meta itemprop="dateModified" content="2015-11-07T16:37:30+00:00">
-  <meta itemprop="wordCount" content="859">
+  <meta itemprop="wordCount" content="821">
   <meta itemprop="keywords" content="Unity,iOS,App Transport Security">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Unity on iOS9">
@@ -136,7 +136,7 @@
   <div class="post-content">
     <p>雖然 iOS 9 上了一陣子了，可能 Unity 在 iOS 9 上面的問題大家都遇過或是解過了，但是就還是在這裡整理一下我遇過的問題。</p>
 <h3 id="效能問題">效能問題</h3>
-<p><img src="/images/unity-on-ios9/spike.jpg"></p>
+<p><img src="/images/unity-on-ios9/spike.jpg" alt=""></p>
 <p>第一個最明顯的就是一樣的 build 在 iOS 9 上面效能變低很多，然後 profiler 開起來是這個非常誇張的鋸齒狀。</p>
 <p>這個問題在論壇上面有討論了一陣子：</p>
 <p><a href="http://forum.unity3d.com/threads/unity-5-2-ios-performance-issues.353646/">http://forum.unity3d.com/threads/unity-5-2-ios-performance-issues.353646/</a></p>
@@ -147,89 +147,45 @@
 <p>我本來以為 Prime31 的作者會在新版本裡面加入修改 info.plist 的選項，不過他老兄很霸氣的說應該是 Facebook 的責任要自己把連線修成 HTTPS ，所以現在還是得自己加：</p>
 <p><a href="http://support.prime31.com/22777/social-networking-plugin-on-ios-9?show=22777#q22777">http://support.prime31.com/22777/social-networking-plugin-on-ios-9?show=22777#q22777</a></p>
 <p>以我之前的 <a href="../configure-xcode-project-with-postprocessbuild/">Xcode Postprocessing 教學</a> 的當作基底，可以用完全一樣的 PlistDocument 操作把這些設定加到 info.plist 。Code 大概像是：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">PlistDocument</span> <span class="n">plist</span> <span class="p">=</span> <span class="n">_GetInfoPlistDocument</span> <span class="p">(</span><span class="n">path</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">root</span> <span class="p">=</span> <span class="n">plist</span><span class="p">.</span><span class="n">root</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">atsDict</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;NSAppTransportSecurity&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">domainsDict</span> <span class="p">=</span> <span class="n">atsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;NSExceptionDomains&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">fbDict</span> <span class="p">=</span> <span class="n">domainsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;facebook.com&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">fbDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">fbDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">fbcdnDict</span> <span class="p">=</span> <span class="n">domainsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;fbcdn.net&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">fbcdnDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">fbcdnDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">PlistElementDict</span> <span class="n">akamaihdDict</span> <span class="p">=</span> <span class="n">domainsDict</span><span class="p">.</span><span class="n">CreateDict</span> <span class="p">(</span><span class="s">&#34;akamaihd.net&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">akamaihdDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSIncludesSubdomains&#34;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">akamaihdDict</span><span class="p">.</span><span class="n">SetBoolean</span> <span class="p">(</span><span class="s">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">PlistElementArray</span> <span class="n">schemesArray</span> <span class="p">=</span> <span class="n">root</span><span class="p">.</span><span class="n">CreateArray</span> <span class="p">(</span><span class="s">&#34;LSApplicationQueriesSchemes&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// SDK v4.5 or older</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20130214&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20130410&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20130702&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20131010&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20131219&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20140410&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20140116&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20150313&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi20150629&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbauth&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbauth2&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-api20140430&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// v4.6 or older</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-platform-20150128&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-platform-20150218&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-platform-20150305&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="c1">// v4.6.0</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbapi&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fb-messenger-api&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbauth2&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">schemesArray</span><span class="p">.</span><span class="n">AddString</span> <span class="p">(</span><span class="s">&#34;fbshareextension&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">File</span><span class="p">.</span><span class="n">WriteAllText</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">plist</span><span class="p">.</span><span class="n">WriteToString</span> <span class="p">());</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果你沒有辦法列舉所有網站的網域，例如說你接的廣告是走 HTTP 然後每次來的網域都不一樣。Apple 是有提供把 HTTPS 檢查整個關掉的選項，但是就是後果自負：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>PlistDocument plist = _GetInfoPlistDocument (path);
+</span></span><span style="display:flex;"><span>PlistElementDict root = plist.root;
+</span></span><span style="display:flex;"><span>PlistElementDict atsDict = root.CreateDict (<span style="color:#e6db74">&#34;NSAppTransportSecurity&#34;</span>);
+</span></span><span style="display:flex;"><span>PlistElementDict domainsDict = atsDict.CreateDict (<span style="color:#e6db74">&#34;NSExceptionDomains&#34;</span>);
+</span></span><span style="display:flex;"><span>PlistElementDict fbDict = domainsDict.CreateDict (<span style="color:#e6db74">&#34;facebook.com&#34;</span>);
+</span></span><span style="display:flex;"><span>fbDict.SetBoolean (<span style="color:#e6db74">&#34;NSIncludesSubdomains&#34;</span>, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>fbDict.SetBoolean (<span style="color:#e6db74">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span>, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>PlistElementDict fbcdnDict = domainsDict.CreateDict (<span style="color:#e6db74">&#34;fbcdn.net&#34;</span>);
+</span></span><span style="display:flex;"><span>fbcdnDict.SetBoolean (<span style="color:#e6db74">&#34;NSIncludesSubdomains&#34;</span>, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>fbcdnDict.SetBoolean (<span style="color:#e6db74">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span>, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>PlistElementDict akamaihdDict = domainsDict.CreateDict (<span style="color:#e6db74">&#34;akamaihd.net&#34;</span>);
+</span></span><span style="display:flex;"><span>akamaihdDict.SetBoolean (<span style="color:#e6db74">&#34;NSIncludesSubdomains&#34;</span>, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>akamaihdDict.SetBoolean (<span style="color:#e6db74">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span>, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>PlistElementArray schemesArray = root.CreateArray (<span style="color:#e6db74">&#34;LSApplicationQueriesSchemes&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// SDK v4.5 or older</span>
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20130214&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20130410&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20130702&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20131010&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20131219&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20140410&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20140116&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20150313&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20150629&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbauth&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbauth2&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-api20140430&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// v4.6 or older</span>
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-platform-20150128&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-platform-20150218&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-platform-20150305&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// v4.6.0</span>
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-api&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbauth2&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbshareextension&#34;</span>);
+</span></span><span style="display:flex;"><span>File.WriteAllText (path, plist.WriteToString ());
+</span></span></code></pre></div><p>如果你沒有辦法列舉所有網站的網域，例如說你接的廣告是走 HTTP 然後每次來的網域都不一樣。Apple 是有提供把 HTTPS 檢查整個關掉的選項，但是就是後果自負：</p>
 <p><a href="http://stackoverflow.com/questions/30739473/nsurlsession-nsurlconnection-http-load-failed-on-ios-9">http://stackoverflow.com/questions/30739473/nsurlsession-nsurlconnection-http-load-failed-on-ios-9</a></p>
 <p>選項的名稱是</p>
 <p><code>NSAllowsArbitraryLoads</code></p>

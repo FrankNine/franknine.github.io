@@ -17,36 +17,13 @@
   });
 </script>
 <p><strong>解答</strong>：改變 someObject() 的 faces.push：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">geometry.faces.push( new THREE.Face3( 0, 1, 2 ) ); 
-</span></span><span class="line"><span class="cl">// the order of the face is flipped (was 2, 0, 3): 
-</span></span><span class="line"><span class="cl">geometry.faces.push( new THREE.Face3( 2, 3, 0 ) );
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>另外還有兩種解法：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">geometry.faces.push( new THREE.Face3( 3, 0, 2 ) ); 
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>跟</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">geometry.faces.push( new THREE.Face3( 0, 2, 3 ) );
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>面向關係到頂點的排列順序，第一個點從哪個頂點開始不重要。</p>
+<pre tabindex="0"><code>geometry.faces.push( new THREE.Face3( 0, 1, 2 ) ); 
+// the order of the face is flipped (was 2, 0, 3): 
+geometry.faces.push( new THREE.Face3( 2, 3, 0 ) );
+</code></pre><p>另外還有兩種解法：</p>
+<pre tabindex="0"><code>geometry.faces.push( new THREE.Face3( 3, 0, 2 ) ); 
+</code></pre><p>跟</p>
+<pre tabindex="0"><code>geometry.faces.push( new THREE.Face3( 0, 2, 3 ) );
+</code></pre><p>面向關係到頂點的排列順序，第一個點從哪個頂點開始不重要。</p>
 
 </div>

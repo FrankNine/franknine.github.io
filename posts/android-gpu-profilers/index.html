@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/android-gpu-profilers/" />
@@ -36,7 +36,7 @@
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -55,7 +55,7 @@
   <meta itemprop="description" content="上一篇有提到 Unity 內建的的 Profiler 在繪圖分析方面有所不足之處，但這個可以用 Android 各家 GPU 原廠的工具來補足。因為每一家的工具都只能拿來分析自家的晶片，所以最一開始要先了解自己的機器用的是哪家的 GPU 。">
   <meta itemprop="datePublished" content="2016-06-18T18:34:16+00:00">
   <meta itemprop="dateModified" content="2016-06-18T18:34:16+00:00">
-  <meta itemprop="wordCount" content="1870">
+  <meta itemprop="wordCount" content="1867">
   <meta itemprop="keywords" content="Android,GPU,Profiler,Optimization,最佳化">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Android GPU Profiler">
@@ -147,7 +147,7 @@
 <p>知道這些 GPU 的名稱也有助於 Android 上面的除錯，因為有些問題是特定的晶片才會有的。像是老一點的 Adreno 用 Unity 的 Stencil 會有裁切不完全的問題，然後 Tegra 在 16-bit back buffer 開啟的狀態下 <a href="https://en.wikipedia.org/wiki/Colour_banding">Color banding</a> 的問題比其他家都還嚴重。知道 GPU 晶片有助於除錯，讀 Unity Release Note 的時候也比較方便知道是不是同一個問題、有沒有被修掉這樣。</p>
 <h3 id="opengl-extension-viewer">OpenGL Extension Viewer</h3>
 <p>機器用的 GPU 晶片通常可以從 Wiki 上面找到，但是不時還是會有像是 Galaxy S3 那種不同區域或是不同批次使用不同 GPU 的情況。我通常會裝 <a href="https://play.google.com/store/apps/details?id=com.realtechvr.glview">OpenGL Extension Viewer</a> 這個 App 來看，這樣就連晶片版本都一目了然了。</p>
-<p><img alt="OpenGL Extensions Viewer" src="/images/android-gpu-profilers/opengl-extensions-viewer.png"></p>
+<p><img src="/images/android-gpu-profilers/opengl-extensions-viewer.png" alt="OpenGL Extensions Viewer"></p>
 <h3 id="adreno-profiler">Adreno Profiler</h3>
 <p>這個我是能讓它執行繪圖分析的工作，但是因為不是我慣用的工具所以就大略介紹到能看到最重要的 GPU clock 這樣，其實這些 GPU 分析工具能做到的功能大多相同，所以概念知道了應該都能應用。</p>
 <p>P.S. 有個我還沒有弄很清楚的點是高通官方說要有 libq3dtools_adreno200.so 這個檔案在 <code>/system/lib/egl/</code> 下面的機器才支援 Profiler ，但是我手邊的 Nexus 7 下了：</p>
@@ -156,63 +156,42 @@
 <p>如果要試著分析的話首先是到高通的網站申請免費帳號然後下載 Adreno GPU Profiler</p>
 <p><a href="https://developer.qualcomm.com/software/adreno-gpu-profiler">https://developer.qualcomm.com/software/adreno-gpu-profiler</a></p>
 <p>安裝工具之後檢查遊戲有沒有在 AndroidManifest 加入網路權限</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.INTERNET&#34;</span><span class="nt">/&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然後 <strong>不</strong> 需要 Development Build，Release build 也可以直接 Profile。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;uses-permission</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.permission.INTERNET&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span></code></pre></div><p>然後 <strong>不</strong> 需要 Development Build，Release build 也可以直接 Profile。</p>
 <p>把遊戲裝到機器上，從 ADB 介面下啟動指令：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">adb shell setprop debug.egl.profiler <span class="m">1</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在手機上把遊戲先開起來，如果成功的話進到工具然後點左上角的 Connect 會看到像是下圖有可連線目標的狀態：</p>
-<p><img alt="Adreno Connect" src="/images/android-gpu-profilers/adreno-connect.png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>adb shell setprop debug.egl.profiler <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><p>在手機上把遊戲先開起來，如果成功的話進到工具然後點左上角的 Connect 會看到像是下圖有可連線目標的狀態：</p>
+<p><img src="/images/android-gpu-profilers/adreno-connect.png" alt="Adreno Connect"></p>
 <p>如果連線成功的話按一下 Scrubber GL 會看到以下的介面</p>
-<p><img alt="Adreno Scrubber" src="/images/android-gpu-profilers/adreno-scrubber.png"></p>
+<p><img src="/images/android-gpu-profilers/adreno-scrubber.png" alt="Adreno Scrubber"></p>
 <p>不過在 Capture 之前要先把最重要的指標 GPU clocks 開出來，Capture 之後才開是不會有資料的，選單如下圖：</p>
-<p><img alt="Adreno GPU Clock" src="/images/android-gpu-profilers/adreno-gpu-clock.png"></p>
+<p><img src="/images/android-gpu-profilers/adreno-gpu-clock.png" alt="Adreno GPU Clock"></p>
 <p>開好之後就可以按下 Capture frame ，會看到每一個 OpenGL draw call 跟相應的 GPU 使用量，然後我們就可以接下來的繪圖最佳化討論了。</p>
-<p><img alt="Adreno Capture" src="/images/android-gpu-profilers/adreno-capture.png"></p>
+<p><img src="/images/android-gpu-profilers/adreno-capture.png" alt="Adreno Capture"></p>
 <h3 id="intel-graphics-frame-analyer">Intel Graphics Frame Analyer</h3>
 <p>這個是我目前慣用的 GPU profiler，不過尷尬的點是因為是 Intel 的工具，所以很自然地只支援 Atom CPU 的 Android 機器。然後要看到 GPU clocks 需要連 GPU 都是 Intel 的，使用 Intel GPU 的 Android 機器非常少見，目前我用的是  Lenovo Yoga Tablet 2，不過我手上這台不知道什麼問題不能 Frame capture ，所以有另一台 Dell Venue 8 作為 Capture 之用。</p>
 <p>首先也是到官方網站下載工具</p>
 <p><a href="https://software.intel.com/en-us/gpa">https://software.intel.com/en-us/gpa</a></p>
 <p>然後一樣也是需要網路的權限：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;uses-permission</span> <span class="na">android:name=</span><span class="s">&#34;android.permission.INTERNET&#34;</span><span class="nt">/&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Intel Graphics Frame Analyzer 一樣是可以分析 Release build，不過需要有 <a href="https://developer.android.com/guide/topics/manifest/application-element.html">android:debuggable</a> flag。Unity 在建置 Release build 的時候會自動把 debuggable 拿掉，直接幫 Unity 專案裡的 AndroidManifest 加 flag 沒有用，所以變成要先匯出成 Android Studio 專案然後手動再編輯 AndroidManifest 然後 build。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;uses-permission</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.permission.INTERNET&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span></code></pre></div><p>Intel Graphics Frame Analyzer 一樣是可以分析 Release build，不過需要有 <a href="https://developer.android.com/guide/topics/manifest/application-element.html">android:debuggable</a> flag。Unity 在建置 Release build 的時候會自動把 debuggable 拿掉，直接幫 Unity 專案裡的 AndroidManifest 加 flag 沒有用，所以變成要先匯出成 Android Studio 專案然後手動再編輯 AndroidManifest 然後 build。</p>
 <p>一開始分析對象會定在電腦模擬器上面，從最上面的選單切換到要做 Frame capture 的機器，然後按下 Add 新增 Frame capture。</p>
-<p><img alt="Intel Add Frame" src="/images/android-gpu-profilers/intel-add-frame.png"></p>
+<p><img src="/images/android-gpu-profilers/intel-add-frame.png" alt="Intel Add Frame"></p>
 <p>跟 Adreno 相反，Intel GFA 是要先把 App 關掉，然後從電腦上下指令啟動 Analyzable app。沒有 <code>android:debuggable</code> 的 App 會被放到 Non-analyzable 的區域裡。</p>
-<p><img alt="Intel Analyzable List" src="/images/android-gpu-profilers/intel-analyzable-list.png"></p>
+<p><img src="/images/android-gpu-profilers/intel-analyzable-list.png" alt="Intel Analyzable List"></p>
 <p>執行起來後看 Android 機器上的畫面，適合的時候就按下 Capture 按鈕抓取。</p>
-<p><img alt="Intel Capture" src="/images/android-gpu-profilers/intel-capture.png"></p>
+<p><img src="/images/android-gpu-profilers/intel-capture.png" alt="Intel Capture"></p>
 <p>抓取之後的 Frame 資料會一直保留在電腦上，隨時都可以再拿出來分析，同時可以轉移到任何別的 Intel Atom CPU 的機器上重現，如果有注意看的話可以發現下圖接的機器已經從 Dell Venue 8 換成 Lenovo Yoga 了。</p>
 <p>直接在 Frame 上面連點就會開始分析。</p>
-<p><img alt="Intel Captured Frame" src="/images/android-gpu-profilers/intel-captured-frame.png"></p>
+<p><img src="/images/android-gpu-profilers/intel-captured-frame.png" alt="Intel Captured Frame"></p>
 <p>分析之後的結果會像是這樣：</p>
 <p>（如果不是 Intel 的 GPU 的話 Draw Call 還是能分析，但是最重要的 GPU 使用時間會沒有辦法顯示，上面的長條圖會都一樣長。）</p>
-<p><img alt="Intel Profiler" src="/images/android-gpu-profilers/intel-profiler.png"></p>
+<p><img src="/images/android-gpu-profilers/intel-profiler.png" alt="Intel Profiler"></p>
 <p>點選每個步驟都能看到所有的參數跟所有的輸出，包含 Render target、Depth、Stencil（小抱怨一下，Intel GFA 的 Stencil 還是當 0 ~ 255 的灰階圖顯示，所以 Stencil 值是 0 跟 1 的時候很不明顯，要用滑鼠去指在圖上然後從狀態列看灰階值）</p>
-<p><img alt="Intel Draw Calls" src="/images/android-gpu-profilers/intel-draw-calls.png"></p>
+<p><img src="/images/android-gpu-profilers/intel-draw-calls.png" alt="Intel Draw Calls"></p>
 <p>然後點下上一張圖框起來的箭頭可以進到更詳細的分析：</p>
 <p>從模型到 Vertex Shader 到 Rasterization 到 Fragment Shader 再到輸出都可以觀察，這邊停在 Fragment Shader 階段，可以看到右邊有反組譯的 Shader code。</p>
-<p><img alt="Intel Decompile" src="/images/android-gpu-profilers/intel-decompile.png"></p>
+<p><img src="/images/android-gpu-profilers/intel-decompile.png" alt="Intel Decompile"></p>
 <p>有了這些資料終於可以做繪圖的最佳化了。以上是非常粗略的設定介紹，然後感覺知道這些工具好用之處的人不多，所以大概展示了一下功能。接下來會講解一下繪圖的原理，然後就是各種所謂的 Hack 了。</p>
 <p>工具設定很多是參考這篇上面有提過的 GPU profiler 教學：</p>
 <p><a href="http://blog.toonormal.com/2013/11/14/gpu-debugging-on-android-devices/">http://blog.toonormal.com/2013/11/14/gpu-debugging-on-android-devices/</a></p>

@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/unity-sign-in-with-apple/" />
@@ -37,7 +37,7 @@
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -154,9 +154,9 @@
 <p>最後想到的方法是去抓原生 UI 的截圖來做字圖。先去抓蘋果的 Sign-in with Apple 範例：</p>
 <p><a href="https://developer.apple.com/documentation/authenticationservices/implementing_user_authentication_with_sign_in_with_apple">https://developer.apple.com/documentation/authenticationservices/implementing_user_authentication_with_sign_in_with_apple</a></p>
 <p>改一下 Storyboard 找個好去背的顏色，調一下 Layout 改變 Sign-in with Apple 按鈕到適合大小，然後執行起來在 Simulator 裡面截圖 <code>File / Save Screen</code>。</p>
-<p><img alt="Sreenshot" src="/images/unity-sign-in-with-apple/screenshot.png"></p>
+<p><img src="/images/unity-sign-in-with-apple/screenshot.png" alt="Sreenshot"></p>
 <p>切換語言找了一下，最後發現是在 <code>Project / Info / Localization native development region</code> 這裡修改。</p>
-<p><img alt="Region" src="/images/unity-sign-in-with-apple/development-region.png"></p>
+<p><img src="/images/unity-sign-in-with-apple/development-region.png" alt="Region"></p>
 <p>然後這個 key 雖然叫 <a href="https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundledevelopmentregion?language=objc">CFBundleDevelopmentRegion</a> 但是要輸入的是 <a href="https://zh.wikipedia.org/wiki/ISO_639-1">ISO_639-1</a> language code 來改變在 Simulator 裡面的執行語言。</p>
 <p>看是要把字樣騰出來還是截圖來去背，希望這樣這次可以真的過審&hellip;</p>
 

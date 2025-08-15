@@ -17,28 +17,14 @@
   });
 </script>
 <p><strong>解答</strong>：以下程式加入 drawSquare() 函式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">square</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Geometry</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">square</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">square</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">square</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">square</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">square</span><span class="o">.</span><span class="n">faces</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Face3</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">square</span><span class="o">.</span><span class="n">faces</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Face3</span><span class="p">(</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">square</span><span class="p">;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>更新：Three.js r60 之後 Face4 被移除不應該再繼續使用：https://github.com/mrdoob/three.js/wiki/Migration#r59&ndash;r60</p>
+<pre tabindex="0"><code>    var square = new THREE.Geometry();
+    square.vertices.push( new THREE.Vector3( x1, y1, 0 ) );
+    square.vertices.push( new THREE.Vector3( x2, y1, 0 ) );
+    square.vertices.push( new THREE.Vector3( x2, y2, 0 ) );
+    square.vertices.push( new THREE.Vector3( x1, y2, 0 ) );
+    square.faces.push( new THREE.Face3( 0, 1, 2 ) );
+    square.faces.push( new THREE.Face3( 2, 0, 3 ) );
+    return square;
+</code></pre><p>更新：Three.js r60 之後 Face4 被移除不應該再繼續使用：https://github.com/mrdoob/three.js/wiki/Migration#r59&ndash;r60</p>
 
 </div>

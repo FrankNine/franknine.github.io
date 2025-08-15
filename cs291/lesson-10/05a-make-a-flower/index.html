@@ -18,41 +18,20 @@
 </script>
 <p>譯註：這裡的圓柱指的是題目裡的圓錐</p>
 <p><strong>解答：</strong> 將以下程式加入 <code>fillScene()</code>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">flower</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span> <span class="k">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">24</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">cylinder</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">cylGeom</span><span class="p">,</span> <span class="n">petalMaterial</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cylinder</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">petalLength</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">var</span> <span class="n">petal</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Object3D</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">cylinder</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="mi">90</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">rotation</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="mi">15</span><span class="o">*</span><span class="n">i</span> <span class="o">*</span> <span class="n">Math</span><span class="o">.</span><span class="n">PI</span><span class="o">/</span><span class="mi">180</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">petal</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">flowerHeight</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">flower</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">petal</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>var flower = new THREE.Object3D();
+
+for ( var i = 0; i &lt; 24 ; i++ )
+{
+    var cylinder = new THREE.Mesh( cylGeom, petalMaterial );
+    cylinder.position.y = petalLength / 2;
+
+    var petal = new THREE.Object3D();
+    petal.add( cylinder );
+    petal.rotation.z = 90 * Math.PI/180;
+    petal.rotation.y = 15*i * Math.PI/180;
+    petal.position.y = flowerHeight;
+
+    flower.add( petal );
+}
+</code></pre>
 </div>

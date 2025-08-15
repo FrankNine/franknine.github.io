@@ -26,7 +26,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/assets-objects-and-serialization/" />
@@ -38,7 +38,7 @@
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -61,7 +61,7 @@
 這個章節會涵蓋 Unity 序列化系統（Serialization system）的內部構造，還有 Unity 如何在編輯時與執行期維繫 Object 之間可靠的參考關係。也會討論技術上 Object 與 Asset 的區別。要先理解本章的內容才有可能知道如何有效率地載入與卸載 Unity 的 Asset。適當的 Asset 管理是降低讀取時間還有壓低記憶體用量的必備條件。">
   <meta itemprop="datePublished" content="2017-03-26T17:17:45+00:00">
   <meta itemprop="dateModified" content="2017-03-26T17:17:45+00:00">
-  <meta itemprop="wordCount" content="5895">
+  <meta itemprop="wordCount" content="5890">
   <meta itemprop="keywords" content="Unity,Asset,Serialization">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Asset、Object 與序列化">
@@ -161,21 +161,11 @@
 <p>檔案 GUID 保存在副檔名 .meta 檔案裡，Unity 在第一次匯入 Asset 時會生成 .meta 檔案，跟 Asset 放在同一目錄下。</p>
 <p>用文字編輯器可以觀察到上述的識別與參考系統的運作方式：你可以創造一個空專案然後把編輯器設定改成 Visible Meta File（不隱藏 .meta）還有 Serialze Assets as Text（將 Asset 序列化成純文字）。在這個專案創造一個材質、匯入一張貼圖，然後在場景上創造一個方塊，把這個材質指定到方塊上並儲存專案。</p>
 <p>用文字編輯器打開材質檔案的 .meta 檔案，在檔案上頭會有一行標記為 <code>guid</code> 的資料。這行定義了這個材質 Asset 檔案的 GUID。要看到 Local ID，用文編輯器直接開啟材質檔。材質 Object 的定義會看起來像：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--- !u!21 &amp;2100000
-</span></span><span class="line"><span class="cl">Material:
-</span></span><span class="line"><span class="cl"> serializedVersion: 3
-</span></span><span class="line"><span class="cl"> ... 以下資料省略 ...
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>在上面的範例，”&amp;”之後的數字就是材質的 Local ID。如果這個材質 Object 是在一個 GUID 為“abcdefg” 的 Asset 裡，那麼這個 Object 可以被 GUID “abcdefg” / Local ID “2100000” 的組合唯一識別。</p>
+<pre tabindex="0"><code>--- !u!21 &amp;2100000
+Material:
+ serializedVersion: 3
+ ... 以下資料省略 ...
+</code></pre><p>在上面的範例，”&amp;”之後的數字就是材質的 Local ID。如果這個材質 Object 是在一個 GUID 為“abcdefg” 的 Asset 裡，那麼這個 Object 可以被 GUID “abcdefg” / Local ID “2100000” 的組合唯一識別。</p>
 <h3 id="13-為什麼要有檔案-guid-跟-local-id">1.3 為什麼要有檔案 GUID 跟 Local ID？</h3>
 <p>為什麼 Unity 需要 GUID 跟 Local ID？答案是為了整個系統的穩定性還有提供跨平台又有彈性的工作流程。</p>
 <p>檔案 GUID 抽象化了「檔案位置」的概念。只要特定的檔案跟特定的檔案 GUID 維持聯繫，這個檔案在磁碟上的實際位置對 Unity 來說就不是那麼重要。開發者可以任意移動資源檔案而不需要更新其他 Object 對這個檔案內的 Object 的參考。</p>
@@ -193,15 +183,8 @@
 <p>雖然檔案 GUID 跟 Local ID 是個穩定的識別系統，但 GUID 比對效率不高，在執行期我們需要更高效的識別系統。Unity 內部維持了一個將 GUID 跟 Local ID 組合翻譯成簡單整數編號的快取（在 Unity 內部這個快取叫做 PersistentManager，真正的翻譯發生在 Unity C++ 程式裡的 Remapper 類別裡，這個類別完全沒有 C# API），並保證這個整數編號在每一次執行 Unity 的過程中是獨一無二的。這些整數叫做 Instance ID，當有新 Object 向 Unity 的快取註冊時就會拿到簡單遞增產生的新編號。</p>
 <p>這個快取維護著特定 Instance ID、定義 Object 原始資料來源的檔案 GUID 與 Local ID 以及 Object 在記憶體中的實體 （如果有的話）三者之間的對應關係。這讓 UnityEngine.Object 間能可靠地維護彼此的參考。解析一個 Instance ID 的參考可以透過回傳該 Instance ID 所對應而已載入記憶體的 Object 來快速地完成。如果該 Object 還未載入，則可以透過解析檔案 GUID 與 Local ID 找到 Object 原始資料讓 Unity 及時地進行載入。</p>
 <p>在啟動時，Instance ID 的快取會被初始化，加入所有專案內建的 Object （即場景參考的 Object），還有所有在 <code>Resources/</code> 資料夾下的 Object。新的 Instance ID 快取項目會在執行期匯入新的 Asset （一個在執行期創造 Asset 的例子是用腳本創建 Texture2D Object，如：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">myTexture</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Texture2D</span><span class="p">(</span><span class="m">1024</span><span class="p">,</span> <span class="m">768</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>或是有 Object 從 AssetBundle 載入時建立。Instance ID 快取項目只有在失效的時候才會移除。這會發生在提供特定的檔案 GUID 與 Local ID 的 AssetBundle 被卸載的時候發生。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> myTexture = <span style="color:#66d9ef">new</span> Texture2D(<span style="color:#ae81ff">1024</span>, <span style="color:#ae81ff">768</span>)
+</span></span></code></pre></div><p>或是有 Object 從 AssetBundle 載入時建立。Instance ID 快取項目只有在失效的時候才會移除。這會發生在提供特定的檔案 GUID 與 Local ID 的 AssetBundle 被卸載的時候發生。</p>
 <p>當卸載 AssetBundle 造成 Instance ID 失效時，Instance ID 與檔案 GUID 還有 Local ID 的對照會被刪除以節省記憶體。如果同一個 AssetBundle 再次被載入，AssetBundle 裡的 Object 會被指派到一個<strong>新的</strong> Instance ID。</p>
 <p>對於 AssetBundle 卸載更深的討論請參照：AssetBundle 使用模式下的管理載入的 Asset 章節。</p>
 <p>有一點要注意的是某些平台上的特定作業系統事件可能會造成 Object 被強制移出記憶體。舉例來說，在 iOS 上跟繪圖相關的資源有可能在 App 被系統暫停時被清出繪圖記憶體。如果這些 Object 是來自 AssetBundle 然後這個 AssetBundle 已經被卸載了，那麼 Unity 會無法讀取資料重建 Object。任何現有的對這些 Object 的參考也會失效。如果上述的事件發生，物件會變透明（代表網面的頂點資料消失）或是用洋紅色渲染（代表材質或貼圖遺失）。</p>

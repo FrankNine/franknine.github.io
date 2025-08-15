@@ -17,17 +17,8 @@
   });
 </script>
 <p><strong>解答：</strong> 在 <code>fillScene()</code> 創造場景後加入：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">light</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">DirectionalLight</span><span class="p">(</span> <span class="mh">0xFFFFFF</span><span class="p">,</span> <span class="mf">1.5</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">light</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">set</span><span class="p">(</span> <span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">400</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">scene</span><span class="o">.</span><span class="n">add</span><span class="p">(</span> <span class="n">light</span> <span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>var light = new THREE.DirectionalLight( 0xFFFFFF, 1.5 );
+light.position.set( -200, 200, -400 );
+scene.add( light );
+</code></pre>
 </div>

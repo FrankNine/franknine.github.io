@@ -17,37 +17,18 @@
   });
 </script>
 <p><strong>解答：</strong> 將以下程式填入 <code>fillScene()</code>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="err">解答</span>
-</span></span><span class="line"><span class="cl"><span class="n">geometry</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Geometry</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">vertices</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Vector3</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">faces</span><span class="o">.</span><span class="n">push</span><span class="p">(</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Face3</span><span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">)</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="err">這個實際上會乘上材質的顏色，預設是白色</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">color1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="mh">0xff0000</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">color2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="mh">0x00ff00</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">color3</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span> <span class="mh">0x0000ff</span> <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="n">geometry</span><span class="o">.</span><span class="n">faces</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">vertexColors</span> <span class="o">=</span> <span class="p">[</span> <span class="n">color1</span><span class="p">,</span> <span class="n">color2</span><span class="p">,</span> <span class="n">color3</span> <span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="n">mesh</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">Mesh</span><span class="p">(</span> <span class="n">geometry</span><span class="p">,</span> <span class="n">material</span> <span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>// 解答
+geometry = new THREE.Geometry();
+geometry.vertices.push( new THREE.Vector3( 100, 0, 0 ) );
+geometry.vertices.push( new THREE.Vector3( 0, 100, 0 ) );
+geometry.vertices.push( new THREE.Vector3( 0, 0, 100 ) );
+
+geometry.faces.push( new THREE.Face3( 0, 1, 2 ) );
+// 這個實際上會乘上材質的顏色，預設是白色
+var color1 = new THREE.Color( 0xff0000 );
+var color2 = new THREE.Color( 0x00ff00 );
+var color3 = new THREE.Color( 0x0000ff );
+geometry.faces[0].vertexColors = [ color1, color2, color3 ];
+mesh = new THREE.Mesh( geometry, material );
+</code></pre>
 </div>

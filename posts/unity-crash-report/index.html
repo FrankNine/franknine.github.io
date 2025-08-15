@@ -27,7 +27,7 @@ http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ 
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.148.2 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/unity-crash-report/" />
@@ -39,7 +39,7 @@ http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ 
 
 
 
-<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -51,7 +51,7 @@ http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ 
 在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。
 注意事項： 之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：
 http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/ 目前不支援以 il2cpp 編譯的 iOS ，il2cpp 編譯的版本一遇到 unhandled exception 就會閃退讓 Crash Report 沒時間上傳。我自己有實驗過拿 Mono 編譯的可以上傳，但是 Mono 根本就不能上架 App Store。所以這篇文章先不會介紹 iOS 上面的設定，等到 Unity 官方解決問題後再說。相關討論在：
-http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ ">
+http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -63,7 +63,7 @@ http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ 
 在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。
 注意事項： 之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：
 http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/ 目前不支援以 il2cpp 編譯的 iOS ，il2cpp 編譯的版本一遇到 unhandled exception 就會閃退讓 Crash Report 沒時間上傳。我自己有實驗過拿 Mono 編譯的可以上傳，但是 Mono 根本就不能上架 App Store。所以這篇文章先不會介紹 iOS 上面的設定，等到 Unity 官方解決問題後再說。相關討論在：
-http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ ">
+http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/">
   <meta itemprop="datePublished" content="2015-12-09T15:37:12+00:00">
   <meta itemprop="dateModified" content="2015-12-09T15:37:12+00:00">
   <meta itemprop="wordCount" content="809">
@@ -74,7 +74,7 @@ http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ 
 在 Google 的時候看到很多做 App 的人在推 Crashlytics ，不過 Crashlytics for Unity 還在 beta 然後我的測試資格一直沒下來。這禮拜不經意看到有人提到 Unity CrashReport API，試用了一下覺得不難整合，在這裡分享一下心得。
 注意事項： 之前有人回報安裝 CrashReport 後遊戲會在初始時閃退，官方在論壇上說已經修正。但是最近被人在 5.2.3 上面重開 issue ，如果不放心的話可能要再觀察一下。相關討論在：
 http://forum.unity3d.com/threads/crash-initializing-the-reporting-system-on-android.311618/ 目前不支援以 il2cpp 編譯的 iOS ，il2cpp 編譯的版本一遇到 unhandled exception 就會閃退讓 Crash Report 沒時間上傳。我自己有實驗過拿 Mono 編譯的可以上傳，但是 Mono 根本就不能上架 App Store。所以這篇文章先不會介紹 iOS 上面的設定，等到 Unity 官方解決問題後再說。相關討論在：
-http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ ">
+http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/">
 
 
 
@@ -167,17 +167,17 @@ http://forum.unity3d.com/threads/getting-reports-on-android-but-not-ios.368421/ 
 <p>首先先用你的 Unity 帳號登入：</p>
 <p><a href="https://perf.cloud.unity3d.com">https://perf.cloud.unity3d.com</a></p>
 <p>登入後會看到歡迎頁面，點 Create New Project 開始</p>
-<p><img alt="Create New Project" src="/images/unity-crash-report/create-new-project.png"></p>
+<p><img src="/images/unity-crash-report/create-new-project.png" alt="Create New Project"></p>
 <p>創完 Project 之後點進去選擇 Activate Game Performance</p>
-<p><img alt="Activate Game Performance" src="/images/unity-crash-report/activate-game-performance.png"></p>
+<p><img src="/images/unity-crash-report/activate-game-performance.png" alt="Activate Game Performance"></p>
 <p>一開始沒有資料的狀態長這樣：</p>
-<p><img alt="Getting Started" src="/images/unity-crash-report/getting-started.png"></p>
+<p><img src="/images/unity-crash-report/getting-started.png" alt="Getting Started"></p>
 <p><strong>Update: Unity 5.4 之後 Crash Reporting 已經是 Unity Game Performance Reporting Service 的一部分，不需要再安裝這個 Package ，而是從 <a href="http://blogs.unity3d.com/2015/09/10/unity-services-are-just-a-few-clicks-away/">Unity Service Menu</a> 直接開啟即可。如果先前有安裝的要移除掉否則會發生衝突。Unity Game Performance Reporting Service 的說明請參考：</strong></p>
 <p><a href="http://unity3d.com/cn/services/performance-reporting">http://unity3d.com/cn/services/performance-reporting</a></p>
 <p>選擇 Getting Started 之後會有安裝教學。應該只有 Unity 4 需要安裝那個 Package ，Unity 5 的 UnityEngine namespace 已經有定義 CrashReport 。依照 Unity 寫的教學，在遊戲初始化的地方呼叫 CrashReporting.Init 填入 UPID 。版本號可以不填但是應該要填，不填的話所有版本的資料都會混在一起。</p>
-<p><img alt="Install" src="/images/unity-crash-report/install.png"></p>
+<p><img src="/images/unity-crash-report/install.png" alt="Install"></p>
 <p>然後就可以試著會爆炸的 code 推到 Android 機器上面實驗，可以故意弄出 NullReferenceException 或是直接 throw new Exception，實驗成功的話應該會看到像這樣：</p>
-<p><img alt="Exception" src="/images/unity-crash-report/exception.png"></p>
+<p><img src="/images/unity-crash-report/exception.png" alt="Exception"></p>
 <p>包含 Exception 內容，C# 的 Stack Trace ，我們設定的版本號，機器種類跟發生次數的資料都有，這樣子以後要 debug 就不會那麼鬼打牆了。</p>
 <p>可惜的是目前 iOS 還不能用，到 iOS 能用的時候我會再發 iOS 版的教學。如果想要追蹤這個功能的最新情報，官方的 FAQ thread 在這裡：</p>
 <p><a href="http://forum.unity3d.com/threads/game-performance-reporting-preview-faq.305997/#post-2156685">http://forum.unity3d.com/threads/game-performance-reporting-preview-faq.305997/#post-2156685</a></p>

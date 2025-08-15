@@ -17,15 +17,7 @@
   });
 </script>
 <p><strong>解答：</strong> 修改 <code>drawDrinkingBird()</code> 的 <code>glassMaterial</code>：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">var</span> <span class="n">glassMaterial</span> <span class="o">=</span> <span class="n">new</span> <span class="n">THREE</span><span class="o">.</span><span class="n">MeshPhongMaterial</span><span class="p">(</span> <span class="p">{</span> <span class="n">color</span><span class="p">:</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">specular</span><span class="p">:</span> <span class="mh">0xFFFFFF</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">shininess</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="n">opacity</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">transparent</span><span class="p">:</span> <span class="bp">true</span> <span class="p">}</span> <span class="p">);</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+<pre tabindex="0"><code>var glassMaterial = new THREE.MeshPhongMaterial( { color: 0x0, specular: 0xFFFFFF,
+    shininess: 100, opacity: 0.3, transparent: true } );
+</code></pre>
 </div>
