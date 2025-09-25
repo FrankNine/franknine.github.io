@@ -326,6 +326,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/01-near-plane-of-zero/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/01-overview-of-the-lesson/</loc>
   </url>
   
@@ -363,6 +367,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-08/01a-rgb-representation/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/01a-near-plane-of-zero/</loc>
   </url>
   
   <url>
@@ -414,6 +422,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/02-graphics-pipeline-coordinates/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-10/02-robot-hand/</loc>
   </url>
   
@@ -455,6 +467,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-05/02a-polygon-location/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/02a-graphics-pipeline-coordinates/</loc>
   </url>
   
   <url>
@@ -514,6 +530,14 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/03-four-viewports/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/03p-four-viewports/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-14/03-swivel-and-tilt-light-control/</loc>
   </url>
   
@@ -551,6 +575,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-08/03a-building-a-better-bird/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/03a-four-viewports/</loc>
   </url>
   
   <url>
@@ -594,6 +622,14 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/04-rear-view-camera/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/04p-rear-view-camera/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-02/04-rendering-costs/</loc>
   </url>
   
@@ -630,6 +666,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/04a-rear-view-camera/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-02/04a-rendering-costs/</loc>
   </url>
   
@@ -651,6 +691,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-06/05-variety/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/05-division-by-zero/</loc>
   </url>
   
   <url>
@@ -703,6 +747,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-10/05p-make-a-flower/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/05a-division-by-zero/</loc>
   </url>
   
   <url>
@@ -790,6 +838,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/06-camera-matrices-matching/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-04/06-the-sun-also-rises/</loc>
   </url>
   
@@ -815,6 +867,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-02/06a-light-field-dimensions/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/06a-camera-matrices-matching/</loc>
   </url>
   
   <url>
@@ -1743,6 +1799,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-16/</loc>
   </url>
   
 </urlset>

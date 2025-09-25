@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+  <title>03A 四個視埠（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/i7SDse8wxzI?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 16\/03A Four Viewports - Interactive 3D Graphics-i7SDse8wxzI.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>解答：在 init() 的 topCam 後加入：</p>
+<pre tabindex="0"><code>frontCam = new THREE.OrthographicCamera(
+	-aspectRatio*viewSize / 2, aspectRatio*viewSize / 2,
+	viewSize / 2, -viewSize / 2,
+	-1000, 1000 );
+frontCam.up.set( 0, 1, 0 );
+sideCam = new THREE.OrthographicCamera(
+	-aspectRatio*viewSize / 2, aspectRatio*viewSize / 2,
+	viewSize / 2, -viewSize / 2,
+	-1000, 1000 );
+sideCam.up.set( 0, 1, 0 );
+</code></pre><p>在 render() 最後加入：</p>
+<pre tabindex="0"><code>// 前視角
+frontCam.position.copy( cameraControls.target );
+// 沿著 X 軸移動 1 單位，使其從前面看向鳥
+frontCam.position.x -=1 ;
+frontCam.lookAt( cameraControls.target );
+renderer.setViewport( 0, 0.5*canvasHeight, 0.5*canvasWidth, 0.5*canvasHeight );
+renderer.render( scene, frontCam );
+
+// 側面視角
+sideCam.position.copy( cameraControls.target );
+// 沿著 Z 軸移動 1 單位，使其從側面看向鳥
+sideCam.position.z +=1 ;
+sideCam.lookAt( cameraControls.target );
+renderer.setViewport( 0.5*canvasWidth, 0, 0.5*canvasWidth, 0.5*canvasHeight );
+renderer.render( scene, sideCam );
+</code></pre>
+</div>
