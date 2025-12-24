@@ -169,11 +169,11 @@
 <li>
 <p>Active Profiler<br>
 這個就是讓你切換你要分析編輯器裡跑的遊戲還是手機上跑的遊戲的地方，如果要分析手機上跑的遊戲遊戲要是 Development build 還要先執行起來再從 Profiler 對接。如果連結手機上的遊戲有問題，一個排除方法是關掉所有 Unity 編輯器視窗然後手動重建 adb tunnel：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>adb kill-server
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>adb kill-server
 </span></span><span style="display:flex;"><span>adb start-server
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 重建 Tunnel，舊版本是 54999，新的都是 port 34999</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 參考：https://docs.unity3d.com/Manual/profiler-profiling-applications.html</span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># 重建 Tunnel，舊版本是 54999，新的都是 port 34999</span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f"># 參考：https://docs.unity3d.com/Manual/profiler-profiling-applications.html</span>
 </span></span><span style="display:flex;"><span>adb forward tcp:34999 localabstract:Unity-&lt;你的遊戲 bundle ID&gt;
 </span></span></code></pre></div><p>另一個方法是上一篇有提到的改用 <a href="../adb-tcp-mode/">TCPIP 模式</a>。</p>
 <p>剩下的是控制 Frame 的 UI</p>
@@ -186,8 +186,8 @@
 <p><img src="/images/unity-profiling-tools/cpu.png" alt="CPU"></p>
 <p>底下幾個大項都看名字可以知道它代表的東西 ，Total 是這個函式跟他呼叫的所有函式(列在這個樹狀結構的子項目裡) 花的時間占總時間的百分比，Self 就是自己但不包含自己呼叫的函式的百分比。Time ms / Self ms 是以絕對時間計算的版本。這些數字應該有取某種近似值，所以自己跟子項目的 Self 加總起來跟 Total 數字不一樣不要太在意。Calls 是被呼叫次數，然後非常重要的是 GC Alloc ，這代表了這個函式呼叫產生了多少需要 <a href="https://zh.wikipedia.org/wiki/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6_%28%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8%29">GC</a> 的記憶體，GC Allocation 越多，Garbage Collector 需要出來清記憶體的頻率就會越高，會影響到遊戲的流暢度。</p>
 <p>一般自己寫的腳本都會歸類在 BehaviourUpdate 項目下，如果沒有開 Deep Profile 的話只會出現大項，除非你自己有使用 <a href="https://docs.unity3d.com/ScriptReference/Profiler.BeginSample.html"><code>Profiler.BeginSample</code></a> 跟 <a href="https://docs.unity3d.com/ScriptReference/Profiler.EndSample.html"><code>Profiler.EndSample</code></a> 來標記你想要分析的範圍，使用方法如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Profiler.BeginSample(<span style="color:#e6db74">&#34;How long does it take?&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// 這裡有你想要知道跑多久、製造多少 GC 的程式</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Profiler.BeginSample(<span style="color:#0ff;font-weight:bold">&#34;How long does it take?&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#007f7f">// 這裡有你想要知道跑多久、製造多少 GC 的程式</span>
 </span></span><span style="display:flex;"><span>Profiler.EndSample();
 </span></span></code></pre></div><p>BeginSample 的第一個參數可以自己命名，之後用自己取的名字找資料。試著在 Unity 給的範例裡隨便一段 Update 用 BeginSample 跟 EndSample 框起來，結果看起來會像這樣：</p>
 <p><img src="/images/unity-profiling-tools/cpu-custom-sample.png" alt="CPU Custom Sample"></p>
@@ -282,7 +282,7 @@
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   
 

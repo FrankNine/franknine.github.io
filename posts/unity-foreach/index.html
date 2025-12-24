@@ -152,12 +152,12 @@ https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/
 <p>因為最近有討論區的朋友提到 foreach 的 Garbage Collection 問題，所以想寫一篇為什麼 foreach 會有 Garbage Collection 的文章。這篇文章比較無趣一些，TD;LR 的話就是問題是 <code>IDisposable</code> 不是 <code>IEnumerator&lt;T&gt;</code>。</p>
 <h1 id="garbage-collection">Garbage Collection</h1>
 <p>Unity 在使用 foreach 的時候會產生 24 bytes 的 GC 這個問題已經傳很久了。可以用個簡單的小程式去測試：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ForEachTest</span> : MonoBehaviour
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">class</span> ForEachTest : MonoBehaviour
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> List&lt;<span style="color:#66d9ef">int</span>&gt; list = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">int</span>&gt; { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span> };
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">void</span> Update()
+</span></span><span style="display:flex;"><span>   <span style="color:#fff;font-weight:bold">private</span> <span style="color:#fff;font-weight:bold">readonly</span> List&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; list = <span style="color:#fff;font-weight:bold">new</span> List&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; { <span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">3</span> };
+</span></span><span style="display:flex;"><span>   <span style="color:#fff;font-weight:bold">void</span> Update()
 </span></span><span style="display:flex;"><span>   {
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> element <span style="color:#66d9ef">in</span> list) { }
+</span></span><span style="display:flex;"><span>       <span style="color:#fff;font-weight:bold">foreach</span> (<span style="color:#fff;font-weight:bold">var</span> element <span style="color:#fff;font-weight:bold">in</span> list) { }
 </span></span><span style="display:flex;"><span>   }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>隨便掛在一個 GameObject 下面的執行結果，在 Unity 4.7.0f1</p>
@@ -171,22 +171,22 @@ https://forum.unity.com/threads/upgraded-c-compiler-on-5-3-5p8.417363/
 <a href="http://stackoverflow.com/questions/3168311/why-do-bcl-collections-use-struct-enumerators-not-classes/3168435#3168435">http://stackoverflow.com/questions/3168311/why-do-bcl-collections-use-struct-enumerators-not-classes/3168435#3168435</a><br>
 基本上是效能考量</p></blockquote>
 <p>以下是範例程式</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; list = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">int</span>&gt; { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span> };
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span>(<span style="color:#66d9ef">var</span> item <span style="color:#66d9ef">in</span> list)
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>List&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; list = <span style="color:#fff;font-weight:bold">new</span> List&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; { <span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">3</span> };
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">foreach</span>(<span style="color:#fff;font-weight:bold">var</span> item <span style="color:#fff;font-weight:bold">in</span> list)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    Debug.Log(item);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>ILSpy 反組譯的結果</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; list = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">int</span>&gt;();
-</span></span><span style="display:flex;"><span>list.Add(<span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>list.Add(<span style="color:#ae81ff">2</span>);
-</span></span><span style="display:flex;"><span>list.Add(<span style="color:#ae81ff">3</span>);
-</span></span><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; list2 = list;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (List&lt;<span style="color:#66d9ef">int</span>&gt;.Enumerator enumerator = list2.GetEnumerator())
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>List&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; list = <span style="color:#fff;font-weight:bold">new</span> List&lt;<span style="color:#fff;font-weight:bold">int</span>&gt;();
+</span></span><span style="display:flex;"><span>list.Add(<span style="color:#ff0;font-weight:bold">1</span>);
+</span></span><span style="display:flex;"><span>list.Add(<span style="color:#ff0;font-weight:bold">2</span>);
+</span></span><span style="display:flex;"><span>list.Add(<span style="color:#ff0;font-weight:bold">3</span>);
+</span></span><span style="display:flex;"><span>List&lt;<span style="color:#fff;font-weight:bold">int</span>&gt; list2 = list;
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">using</span> (List&lt;<span style="color:#fff;font-weight:bold">int</span>&gt;.Enumerator enumerator = list2.GetEnumerator())
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (enumerator.MoveNext())
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">while</span> (enumerator.MoveNext())
 </span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> current = enumerator.get_Current();
+</span></span><span style="display:flex;"><span>        <span style="color:#fff;font-weight:bold">int</span> current = enumerator.get_Current();
 </span></span><span style="display:flex;"><span>        Debug.Log(current);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
@@ -291,7 +291,7 @@ finally
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   
 

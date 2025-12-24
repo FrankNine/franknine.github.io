@@ -205,7 +205,7 @@ oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393
 size 12345
 (ending \n)
 </code></pre><p>現在 git 用戶端通常都會偵測 LFS 並在 Clone 的時候做好 LFS 的設定，不過如果 LFS 替換有問題可以手動執行：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs install
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs install
 </span></span><span style="display:flex;"><span>git lfs pull
 </span></span></code></pre></div><p>使用 LFS 可以降低 git 歷史的大小，因為 git 本身變成只儲存 Pointer File。這樣可以降低 Clone 在本機硬碟上的大小，並增進效率。降低 Clone 大小這件事對 Binary 檔案大的 3D 遊戲專案非常有感。但是缺點有：</p>
 <ul>
@@ -217,18 +217,18 @@ size 12345
 <p>要進行 Migration 首先要在本地 Track 所有的分支，因為 <code>lfs migrate</code> 只會作用在本地分支：<br>
 <a href="https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches">https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches</a></p>
 <p>然後執行（以改寫 <code>.png</code> 與 <code>.psd</code> 歷史成為 LFS 作示範）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs migrate import --everything --include<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*.png,*.psd&#34;</span>
-</span></span><span style="display:flex;"><span>git reflog expire --expire<span style="color:#f92672">=</span>now --all <span style="color:#f92672">&amp;&amp;</span> git gc --prune<span style="color:#f92672">=</span>now
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs migrate import --everything --include=<span style="color:#0ff;font-weight:bold">&#34;*.png,*.psd&#34;</span>
+</span></span><span style="display:flex;"><span>git reflog expire --expire=now --all &amp;&amp; git gc --prune=now
 </span></span><span style="display:flex;"><span>git remote set-url origin &lt;新 repo 位置&gt;
 </span></span><span style="display:flex;"><span>git push --all origin --force
 </span></span></code></pre></div><p>另外一種常見的狀況是修改了 <code>.gitattributes</code> 把新的附檔名納入 LFS 範圍，但是已經存在的檔案沒有置換成 Pointer File，這時候在 Clone 或是 Reset 的時候都會收到警告：</p>
 <pre tabindex="0"><code>Encountered 1 file(s) that should have been pointers, but weren&#39;t
 </code></pre><p>如果沒有要往回整理歷史只是要把目前檔案換成 Pointer File，可以用：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># from https://stackoverflow.com/a/51626808</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># from https://stackoverflow.com/a/51626808</span>
 </span></span><span style="display:flex;"><span>git rm --cached -r .
 </span></span><span style="display:flex;"><span>git reset --hard
 </span></span></code></pre></div><p>或是使用</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
 </span></span><span style="display:flex;"><span>git add --renormalize .
 </span></span></code></pre></div><p>然後把檔案變動 Commit / Push 即可。</p>
 <p>只要在 <code>.gitattributes</code> 加入</p>
@@ -476,7 +476,7 @@ JohnSu、Recca、Jonas 與各位朋友們。如果有想要補充討論的也歡
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   
 

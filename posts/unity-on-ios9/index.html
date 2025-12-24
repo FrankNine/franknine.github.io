@@ -147,43 +147,43 @@
 <p>我本來以為 Prime31 的作者會在新版本裡面加入修改 info.plist 的選項，不過他老兄很霸氣的說應該是 Facebook 的責任要自己把連線修成 HTTPS ，所以現在還是得自己加：</p>
 <p><a href="http://support.prime31.com/22777/social-networking-plugin-on-ios-9?show=22777#q22777">http://support.prime31.com/22777/social-networking-plugin-on-ios-9?show=22777#q22777</a></p>
 <p>以我之前的 <a href="../configure-xcode-project-with-postprocessbuild/">Xcode Postprocessing 教學</a> 的當作基底，可以用完全一樣的 PlistDocument 操作把這些設定加到 info.plist 。Code 大概像是：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>PlistDocument plist = _GetInfoPlistDocument (path);
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>PlistDocument plist = _GetInfoPlistDocument (path);
 </span></span><span style="display:flex;"><span>PlistElementDict root = plist.root;
-</span></span><span style="display:flex;"><span>PlistElementDict atsDict = root.CreateDict (<span style="color:#e6db74">&#34;NSAppTransportSecurity&#34;</span>);
-</span></span><span style="display:flex;"><span>PlistElementDict domainsDict = atsDict.CreateDict (<span style="color:#e6db74">&#34;NSExceptionDomains&#34;</span>);
-</span></span><span style="display:flex;"><span>PlistElementDict fbDict = domainsDict.CreateDict (<span style="color:#e6db74">&#34;facebook.com&#34;</span>);
-</span></span><span style="display:flex;"><span>fbDict.SetBoolean (<span style="color:#e6db74">&#34;NSIncludesSubdomains&#34;</span>, <span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>fbDict.SetBoolean (<span style="color:#e6db74">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span>, <span style="color:#66d9ef">false</span>);
-</span></span><span style="display:flex;"><span>PlistElementDict fbcdnDict = domainsDict.CreateDict (<span style="color:#e6db74">&#34;fbcdn.net&#34;</span>);
-</span></span><span style="display:flex;"><span>fbcdnDict.SetBoolean (<span style="color:#e6db74">&#34;NSIncludesSubdomains&#34;</span>, <span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>fbcdnDict.SetBoolean (<span style="color:#e6db74">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span>, <span style="color:#66d9ef">false</span>);
-</span></span><span style="display:flex;"><span>PlistElementDict akamaihdDict = domainsDict.CreateDict (<span style="color:#e6db74">&#34;akamaihd.net&#34;</span>);
-</span></span><span style="display:flex;"><span>akamaihdDict.SetBoolean (<span style="color:#e6db74">&#34;NSIncludesSubdomains&#34;</span>, <span style="color:#66d9ef">true</span>);
-</span></span><span style="display:flex;"><span>akamaihdDict.SetBoolean (<span style="color:#e6db74">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span>, <span style="color:#66d9ef">false</span>);
-</span></span><span style="display:flex;"><span>PlistElementArray schemesArray = root.CreateArray (<span style="color:#e6db74">&#34;LSApplicationQueriesSchemes&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// SDK v4.5 or older</span>
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20130214&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20130410&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20130702&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20131010&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20131219&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20140410&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20140116&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20150313&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi20150629&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbauth&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbauth2&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-api20140430&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// v4.6 or older</span>
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-platform-20150128&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-platform-20150218&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-platform-20150305&#34;</span>);
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// v4.6.0</span>
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbapi&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fb-messenger-api&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbauth2&#34;</span>);
-</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#e6db74">&#34;fbshareextension&#34;</span>);
+</span></span><span style="display:flex;"><span>PlistElementDict atsDict = root.CreateDict (<span style="color:#0ff;font-weight:bold">&#34;NSAppTransportSecurity&#34;</span>);
+</span></span><span style="display:flex;"><span>PlistElementDict domainsDict = atsDict.CreateDict (<span style="color:#0ff;font-weight:bold">&#34;NSExceptionDomains&#34;</span>);
+</span></span><span style="display:flex;"><span>PlistElementDict fbDict = domainsDict.CreateDict (<span style="color:#0ff;font-weight:bold">&#34;facebook.com&#34;</span>);
+</span></span><span style="display:flex;"><span>fbDict.SetBoolean (<span style="color:#0ff;font-weight:bold">&#34;NSIncludesSubdomains&#34;</span>, <span style="color:#fff;font-weight:bold">true</span>);
+</span></span><span style="display:flex;"><span>fbDict.SetBoolean (<span style="color:#0ff;font-weight:bold">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span>, <span style="color:#fff;font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>PlistElementDict fbcdnDict = domainsDict.CreateDict (<span style="color:#0ff;font-weight:bold">&#34;fbcdn.net&#34;</span>);
+</span></span><span style="display:flex;"><span>fbcdnDict.SetBoolean (<span style="color:#0ff;font-weight:bold">&#34;NSIncludesSubdomains&#34;</span>, <span style="color:#fff;font-weight:bold">true</span>);
+</span></span><span style="display:flex;"><span>fbcdnDict.SetBoolean (<span style="color:#0ff;font-weight:bold">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span>, <span style="color:#fff;font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>PlistElementDict akamaihdDict = domainsDict.CreateDict (<span style="color:#0ff;font-weight:bold">&#34;akamaihd.net&#34;</span>);
+</span></span><span style="display:flex;"><span>akamaihdDict.SetBoolean (<span style="color:#0ff;font-weight:bold">&#34;NSIncludesSubdomains&#34;</span>, <span style="color:#fff;font-weight:bold">true</span>);
+</span></span><span style="display:flex;"><span>akamaihdDict.SetBoolean (<span style="color:#0ff;font-weight:bold">&#34;NSThirdPartyExceptionRequiresForwardSecrecy&#34;</span>, <span style="color:#fff;font-weight:bold">false</span>);
+</span></span><span style="display:flex;"><span>PlistElementArray schemesArray = root.CreateArray (<span style="color:#0ff;font-weight:bold">&#34;LSApplicationQueriesSchemes&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#007f7f">// SDK v4.5 or older</span>
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi20130214&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi20130410&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi20130702&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi20131010&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi20131219&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi20140410&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi20140116&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi20150313&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi20150629&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbauth&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbauth2&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fb-messenger-api20140430&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#007f7f">// v4.6 or older</span>
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fb-messenger-platform-20150128&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fb-messenger-platform-20150218&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fb-messenger-platform-20150305&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#007f7f">// v4.6.0</span>
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbapi&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fb-messenger-api&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbauth2&#34;</span>);
+</span></span><span style="display:flex;"><span>schemesArray.AddString (<span style="color:#0ff;font-weight:bold">&#34;fbshareextension&#34;</span>);
 </span></span><span style="display:flex;"><span>File.WriteAllText (path, plist.WriteToString ());
 </span></span></code></pre></div><p>如果你沒有辦法列舉所有網站的網域，例如說你接的廣告是走 HTTP 然後每次來的網域都不一樣。Apple 是有提供把 HTTPS 檢查整個關掉的選項，但是就是後果自負：</p>
 <p><a href="http://stackoverflow.com/questions/30739473/nsurlsession-nsurlconnection-http-load-failed-on-ios-9">http://stackoverflow.com/questions/30739473/nsurlsession-nsurlconnection-http-load-failed-on-ios-9</a></p>
@@ -245,7 +245,7 @@
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   
 

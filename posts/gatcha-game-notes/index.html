@@ -266,7 +266,7 @@
 <p>JSON 使用、閱讀、編輯都方便，但是在手機上要 Parse 純文字 JSON 時間跟 GC 的消耗都不小。另外 Parse 純文字成別的資料型別在多國語系下有許多坑，會在後面多國語言詳述。如果團隊沒時間鑽研建議使用 <a href="https://docs.unity3d.com/Packages/com.unity.nuget.newtonsoft-json@3.0/manual/index.html">Json.NET</a> 處理 JSON，在開發編輯時使用 JSON，Production 時改用 Json.NET 的 <a href="https://www.newtonsoft.com/json/help/html/SerializeToBson.htm">BSON</a> 格式在小幅度修改 Serialization API 的前提下節約一些時間與 GC。如果真的有餘裕應該研究看看 <a href="https://github.com/neuecc/MessagePack-CSharp">MessagePack</a>、<a href="https://github.com/protocolbuffers/protobuf">protobuf</a> 之類的格式。</p>
 <h2 id="避免使用-www-或是-unitywebrequest-跟-server-溝通">避免使用 <a href="https://docs.unity3d.com/2023.2/Documentation/ScriptReference/WWW.html"><code>WWW</code></a> 或是 <a href="https://docs.unity3d.com/2023.2/Documentation/ScriptReference/Networking.UnityWebRequest.html"><code>UnityWebRequest</code></a> 跟 Server 溝通</h2>
 <p>現在用 <code>WWW</code> 跟 <code>UnityWebRequest</code> 基本上是同一件事。<code>WWW</code> decompile 出來也只是：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> WWW(<span style="color:#66d9ef">string</span> url)
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">public</span> WWW(<span style="color:#fff;font-weight:bold">string</span> url)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    _uwr = UnityWebRequest.Get(url);
 </span></span><span style="display:flex;"><span>    _uwr.SendWebRequest();
@@ -414,25 +414,25 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 <p>先前有提到資料數值盡量不要用文字儲存再 Parse，如果真的非做不可在多國語言下會有坑要注意。</p>
 <h4 id="浮點數的點不一定是-">浮點數的點不一定是 .</h4>
 <p>有些語言像是法文、德文、印尼文，浮點數的點是 <code>,</code> 不是 <code>.</code>，如果資料儲存成像是 <code>&quot;3.14&quot;</code> 在預設為這類語系下會 Parse 失敗，可以做以下實驗：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>NumberFormatInfo format = <span style="color:#66d9ef">new</span> CultureInfo( <span style="color:#e6db74">&#34;fr-FR&#34;</span>, <span style="color:#66d9ef">false</span> ).NumberFormat;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span>.Parse(<span style="color:#e6db74">&#34;3.14&#34;</span>, format);
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>NumberFormatInfo format = <span style="color:#fff;font-weight:bold">new</span> CultureInfo( <span style="color:#0ff;font-weight:bold">&#34;fr-FR&#34;</span>, <span style="color:#fff;font-weight:bold">false</span> ).NumberFormat;
+</span></span><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">float</span>.Parse(<span style="color:#0ff;font-weight:bold">&#34;3.14&#34;</span>, format);
 </span></span></code></pre></div><p>結果會是</p>
 <pre tabindex="0"><code>[System.FormatException: Input string was not in a correct format.]
    at System.Number.ParseSingle(String value, NumberStyles options, NumberFormatInfo numfmt)
    at System.Single.Parse(String s, IFormatProvider provider)
 </code></pre><p>或是可以看神魔之塔的 <a href="https://forum.gamer.com.tw/C.php?bsn=23805&amp;snA=682461">案例</a>。</p>
 <p>可以設定 AppDomain 或是 Thread 的 <code>Culture</code> 或是 <code>NumberDecimalSeparator</code> 來繞過：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// AppDomain</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#007f7f">// AppDomain</span>
 </span></span><span style="display:flex;"><span>CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
 </span></span><span style="display:flex;"><span>CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.InvariantCulture;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Thread</span>
+</span></span><span style="display:flex;"><span><span style="color:#007f7f">// Thread</span>
 </span></span><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// 設定小數點</span>
-</span></span><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator = <span style="color:#e6db74">&#34;.&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#007f7f">// 設定小數點</span>
+</span></span><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator = <span style="color:#0ff;font-weight:bold">&#34;.&#34;</span>;
 </span></span></code></pre></div><p>不過這些改動範圍都蠻廣的，或是浮點數轉換都要記得加 <code>System.Globalization.CultureInfo.InvariantCulture</code> 參數：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">float</span>.Parse(<span style="color:#e6db74">&#34;3.14&#34;</span>, System.Globalization.CultureInfo.InvariantCulture)
-</span></span><span style="display:flex;"><span>System.Convert.ToSingle(<span style="color:#ae81ff">3.14</span>, System.Globalization.CultureInfo.InvariantCulture);
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">float</span>.Parse(<span style="color:#0ff;font-weight:bold">&#34;3.14&#34;</span>, System.Globalization.CultureInfo.InvariantCulture)
+</span></span><span style="display:flex;"><span>System.Convert.ToSingle(<span style="color:#ff0;font-weight:bold">3.14</span>, System.Globalization.CultureInfo.InvariantCulture);
 </span></span></code></pre></div><p>建議還是治本不要從字串 Parse 出浮點數的設定。</p>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">REMINDER<br><br>When you parse a float, it takes into account the language on the computer you&#39;re using. <br><br>Some cultures use a period for decimal points, while some use commas. <br><br>More than once have I gotten game breaking bugs due to forgetting about this. <a href="https://t.co/hTvzcQvcpW">pic.twitter.com/hTvzcQvcpW</a></p>&mdash; Fear the Phantom (game in bio) (@Phantom_TheGame) <a href="https://twitter.com/Phantom_TheGame/status/1810984722698326304?ref_src=twsrc%5Etfw">July 10, 2024</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -445,21 +445,21 @@ Source Hash 即計算 AssetBundle Input 檔案的總和 Hash，Input 可能包�
 </ul>
 <h4 id="itolower-不一定是-i">&ldquo;I&rdquo;.ToLower() 不一定是 &ldquo;i&rdquo;</h4>
 <p>土耳其文有兩個小寫 i，當在做 <code>ToLower()</code> 時會是大家比較不熟悉、上面沒有點的 <a href="https://www.compart.com/en/unicode/U&#43;0131">ı (U+0131)</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture = <span style="color:#66d9ef">new</span> CultureInfo(<span style="color:#e6db74">&#34;tr-TR&#34;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture = <span style="color:#fff;font-weight:bold">new</span> CultureInfo(<span style="color:#0ff;font-weight:bold">&#34;tr-TR&#34;</span>);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;I&#34;</span>.ToLower());
-</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;I&#34;</span>.ToLowerInvariant());
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#0ff;font-weight:bold">&#34;I&#34;</span>.ToLower());
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#0ff;font-weight:bold">&#34;I&#34;</span>.ToLowerInvariant());
 </span></span></code></pre></div><p>結果</p>
 <pre tabindex="0"><code>ı
 i
 </code></pre><p>這問題可能會在拿 enum <code>ToString().ToLower()</code> 之後跟字串做比對踩中。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> UIType{
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">enum</span> UIType{
 </span></span><span style="display:flex;"><span>    CONFIG,
 </span></span><span style="display:flex;"><span>    ...
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture = <span style="color:#66d9ef">new</span> CultureInfo(<span style="color:#e6db74">&#34;tr-TR&#34;</span>);
-</span></span><span style="display:flex;"><span>Console.WriteLine(UIType.CONFIG.ToString().ToLower() == <span style="color:#e6db74">&#34;config&#34;</span>);
+</span></span><span style="display:flex;"><span>Thread.CurrentThread.CurrentCulture = <span style="color:#fff;font-weight:bold">new</span> CultureInfo(<span style="color:#0ff;font-weight:bold">&#34;tr-TR&#34;</span>);
+</span></span><span style="display:flex;"><span>Console.WriteLine(UIType.CONFIG.ToString().ToLower() == <span style="color:#0ff;font-weight:bold">&#34;config&#34;</span>);
 </span></span></code></pre></div><p>結果</p>
 <pre tabindex="0"><code>False
 </code></pre><p>也是不建議做類似操作，或者也只能記得使用 <a href="https://learn.microsoft.com/zh-tw/dotnet/api/system.string.tolowerinvariant"><code>ToLowerInvariant()</code></a>。</p>
@@ -471,20 +471,20 @@ i
 <h4 id="datetimetostring-crash"><code>DateTime.ToString()</code> Crash</h4>
 <p>在預設 Unity 環境下 <code>DateTime.ToString()</code> 有可能會 Crash，因為 <code>DateTime.ToString()</code> 需要當下語系的日曆類別，但是通常沒有明確使用的日曆類別會被建置過程 Strip 掉。這問題容易在泰文區遇到，因為泰文預設日曆是佛曆 <code>System.Globalization.ThaiBuddhistCalendar</code>。解決方法是參考 Xamarin
 的 <a href="https://github.com/xamarin/Xamarin.Forms/issues/4037">討論</a>，在不會被呼叫到的地方加入：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (Environment.CurrentDirectory == <span style="color:#e6db74">&#34;_never_POSSIBLE_&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">if</span> (Environment.CurrentDirectory == <span style="color:#0ff;font-weight:bold">&#34;_never_POSSIBLE_&#34;</span>)
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.ChineseLunisolarCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.HebrewCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.HijriCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.JapaneseCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.JapaneseLunisolarCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.KoreanCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.KoreanLunisolarCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.PersianCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.TaiwanCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.TaiwanLunisolarCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.ThaiBuddhistCalendar();
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> System.Globalization.UmAlQuraCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.ChineseLunisolarCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.HebrewCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.HijriCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.JapaneseCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.JapaneseLunisolarCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.KoreanCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.KoreanLunisolarCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.PersianCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.TaiwanCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.TaiwanLunisolarCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.ThaiBuddhistCalendar();
+</span></span><span style="display:flex;"><span>    <span style="color:#fff;font-weight:bold">new</span> System.Globalization.UmAlQuraCalendar();
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="文化忌諱">文化忌諱</h3>
 <h4 id="cjk-glyph-顯示">CJK Glyph 顯示</h4>
@@ -588,7 +588,7 @@ i
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   
 

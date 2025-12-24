@@ -156,10 +156,10 @@
 <p>如果要試著分析的話首先是到高通的網站申請免費帳號然後下載 Adreno GPU Profiler</p>
 <p><a href="https://developer.qualcomm.com/software/adreno-gpu-profiler">https://developer.qualcomm.com/software/adreno-gpu-profiler</a></p>
 <p>安裝工具之後檢查遊戲有沒有在 AndroidManifest 加入網路權限</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;uses-permission</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.permission.INTERNET&#34;</span><span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;uses-permission</span> <span style="color:#007f7f">android:name=</span><span style="color:#0ff;font-weight:bold">&#34;android.permission.INTERNET&#34;</span><span style="font-weight:bold">/&gt;</span>
 </span></span></code></pre></div><p>然後 <strong>不</strong> 需要 Development Build，Release build 也可以直接 Profile。</p>
 <p>把遊戲裝到機器上，從 ADB 介面下啟動指令：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>adb shell setprop debug.egl.profiler <span style="color:#ae81ff">1</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>adb shell setprop debug.egl.profiler <span style="color:#ff0;font-weight:bold">1</span>
 </span></span></code></pre></div><p>在手機上把遊戲先開起來，如果成功的話進到工具然後點左上角的 Connect 會看到像是下圖有可連線目標的狀態：</p>
 <p><img src="/images/android-gpu-profilers/adreno-connect.png" alt="Adreno Connect"></p>
 <p>如果連線成功的話按一下 Scrubber GL 會看到以下的介面</p>
@@ -173,7 +173,7 @@
 <p>首先也是到官方網站下載工具</p>
 <p><a href="https://software.intel.com/en-us/gpa">https://software.intel.com/en-us/gpa</a></p>
 <p>然後一樣也是需要網路的權限：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;uses-permission</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.permission.INTERNET&#34;</span><span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="font-weight:bold">&lt;uses-permission</span> <span style="color:#007f7f">android:name=</span><span style="color:#0ff;font-weight:bold">&#34;android.permission.INTERNET&#34;</span><span style="font-weight:bold">/&gt;</span>
 </span></span></code></pre></div><p>Intel Graphics Frame Analyzer 一樣是可以分析 Release build，不過需要有 <a href="https://developer.android.com/guide/topics/manifest/application-element.html">android:debuggable</a> flag。Unity 在建置 Release build 的時候會自動把 debuggable 拿掉，直接幫 Unity 專案裡的 AndroidManifest 加 flag 沒有用，所以變成要先匯出成 Android Studio 專案然後手動再編輯 AndroidManifest 然後 build。</p>
 <p>一開始分析對象會定在電腦模擬器上面，從最上面的選單切換到要做 Frame capture 的機器，然後按下 Add 新增 Frame capture。</p>
 <p><img src="/images/android-gpu-profilers/intel-add-frame.png" alt="Intel Add Frame"></p>
@@ -252,7 +252,7 @@
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   
 

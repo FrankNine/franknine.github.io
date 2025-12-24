@@ -141,17 +141,17 @@
 <p>再來要安裝 OSX 跟 macOS 上面第三方套件管理工具 Homebrew：
 <a href="https://brew.sh/zh-tw/">https://brew.sh/zh-tw/</a></p>
 <p>如果像我一樣是在 macOS 之前就安裝Homebrew 然後升級成 macOS 之後壞掉的，homebrew 有提供自我診斷指令：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew doctor
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew doctor
 </span></span></code></pre></div><p>升級作業系統上來最常卡到的是原來Homebrew 安裝在 /usr/local 底下，升級到 macOS 之後蘋果改掉了 /usr/local 的 owner ，可以參照底下這個 issue 把 owner 改回來然後執行 brew update ：
 <a href="https://github.com/Homebrew/brew/issues/385">https://github.com/Homebrew/brew/issues/385</a></p>
 <p>brew update 之後，新的 Homebrew 會把自己搬到 /usr/local/Homebrew ，迴避這個權限問題，記得升級完後把 /usr/local 改回 root:wheel</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chown -R root:wheel /usr/local
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chown -R root:wheel /usr/local
 </span></span></code></pre></div><p>再來是安裝 <a href="https://formulae.brew.sh/cask/">Homebrew Cask</a> 這個擴充套件</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew tap caskroom/cask
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew tap caskroom/cask
 </span></span></code></pre></div><p>然後使用 Cask 安裝 Wine 依賴的 Java 跟 <a href="https://www.xquartz.org/">XQuartz</a>（Mac 上面的 X11）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew cask install java xquartz
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew cask install java xquartz
 </span></span></code></pre></div><p>最後安裝 Wine，這邊會跑很久</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install wine
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install wine
 </span></span></code></pre></div><p>如果一切順利你的 macOS 上面就能跑 Wine 了！</p>
 <h4 id="解壓縮有日文檔名的-zip">解壓縮有日文檔名的 zip</h4>
 <p>因為 macOS 的 HFS+ 檔案系統的<a href="http://stackoverflow.com/a/6153713">檔名吃 UTF-8</a>，然後系統內建的解壓縮工具不會處理 Shift JIS 轉 UTF-8，所以跟 Windows 一樣會有解壓縮出來檔名爛掉的問題。我找到一個處理這個問題的 Python 腳本：</p>
@@ -159,24 +159,24 @@
 <p>不過他沒有處理目錄，所以我 clone 了一份然後用破爛 Python 技能加上了解壓縮目錄的功能：</p>
 <p><a href="https://github.com/FrankNine/FilenameEncodingUnzip">https://github.com/FrankNine/FilenameEncodingUnzip</a></p>
 <p>因為 macOS 有內建 Python interpreter，所以可以直接下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./unzip.py &lt;壓縮檔路徑&gt; &lt;Encoding&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./unzip.py &lt;壓縮檔路徑&gt; &lt;Encoding&gt;
 </span></span></code></pre></div><p>Encoding 預設 sjis，可以不輸入。執行後如果沒有問題會解出 UTF-8 encoding 的日文檔案目錄名稱。</p>
 <h4 id="以日文語系執行-wine">以日文語系執行 Wine</h4>
 <p>在 macOS 輸入 locale 會顯示目前的語系資料：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>LANG<span style="color:#f92672">=</span>
-</span></span><span style="display:flex;"><span>LC_COLLATE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;C&#34;</span>
-</span></span><span style="display:flex;"><span>LC_CTYPE<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>
-</span></span><span style="display:flex;"><span>LC_MESSAGES<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;C&#34;</span>
-</span></span><span style="display:flex;"><span>LC_MONETARY<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;C&#34;</span>
-</span></span><span style="display:flex;"><span>LC_NUMERIC<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;C&#34;</span>
-</span></span><span style="display:flex;"><span>LC_TIME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;C&#34;</span>
-</span></span><span style="display:flex;"><span>LC_ALL<span style="color:#f92672">=</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>LANG=
+</span></span><span style="display:flex;"><span>LC_COLLATE=<span style="color:#0ff;font-weight:bold">&#34;C&#34;</span>
+</span></span><span style="display:flex;"><span>LC_CTYPE=<span style="color:#0ff;font-weight:bold">&#34;UTF-8&#34;</span>
+</span></span><span style="display:flex;"><span>LC_MESSAGES=<span style="color:#0ff;font-weight:bold">&#34;C&#34;</span>
+</span></span><span style="display:flex;"><span>LC_MONETARY=<span style="color:#0ff;font-weight:bold">&#34;C&#34;</span>
+</span></span><span style="display:flex;"><span>LC_NUMERIC=<span style="color:#0ff;font-weight:bold">&#34;C&#34;</span>
+</span></span><span style="display:flex;"><span>LC_TIME=<span style="color:#0ff;font-weight:bold">&#34;C&#34;</span>
+</span></span><span style="display:flex;"><span>LC_ALL=
 </span></span></code></pre></div><p>這是英文 macOS 的預設配置，每一個項目都是可以獨立設定語系的，如果要切日文最直接的方法還是直接去設定 LC_ALL 壓過所有語系設定。</p>
 <p>不過其實沒有必要去改系統的語系設定，可以只要在 Wine 執行前設定 Wine 的就好了，命令如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>LC_ALL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ja_JP&#34;</span> wine &lt;執行檔路徑&gt;
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>LC_ALL=<span style="color:#0ff;font-weight:bold">&#34;ja_JP&#34;</span> wine &lt;執行檔路徑&gt;
 </span></span></code></pre></div><p>如果沒出事的話遊戲應該會以 sjis 執行，NScripter 跟 RPG Maker 確定可以，吉里吉里確定會爆炸，然後如果遊戲的素材原本是用日文命名的話，在開檔的時候也會炸。我猜測是因為素材已經被解壓縮成 UTF-8 但是程式內還是用 Shift JIS 字串找檔案，理論上開檔的動作如果攔截下來把檔名也做 Shift JIS 轉 UTF-8 應該檔案就會找得到，但實際上我不知道怎麼做。就有待高手補完了。</p>
 <p>P.S. 如果執行的是安裝檔，你會看到 Wine 模擬的 Windows 檔案系統，就別客氣直接 C 槽或是 Program Files 直接裝下去。在 macOS 上 Wine 創的 Windows 檔案系統在：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.wine/drive_c/
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>~/.wine/drive_c/
 </span></span></code></pre></div>
   </div>
 </article>
@@ -230,7 +230,7 @@
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   
 

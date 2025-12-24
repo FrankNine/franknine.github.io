@@ -205,7 +205,7 @@ oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393
 size 12345
 (ending \n)
 </code></pre><p>Nowadays, most Git clients are capable of detecting LFS and automatically setting up LFS configuration during cloning. However, if there are issues with LFS initialization, you can manually execute the following commands:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs install
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs install
 </span></span><span style="display:flex;"><span>git lfs pull
 </span></span></code></pre></div><p>Using LFS can reduce the size of Git history, as Git only stores Pointer Files. This can decrease the local disk space usage during cloning and improve efficiency, especially for large binary files in 3D game projects. However, there are some drawbacks:</p>
 <ul>
@@ -217,18 +217,18 @@ size 12345
 <p>To perform migration to LFS on existing repository, first, track all branches locally, as <code>lfs migrate</code> only applies to local branches:<br>
 <a href="https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches">https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches</a></p>
 <p>Then execute following commands (This is an example of rewriting history for <code>.png</code> and <code>.psd</code> files from binary blobs to LFS pointers)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs migrate import --everything --include<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;*.png,*.psd&#34;</span>
-</span></span><span style="display:flex;"><span>git reflog expire --expire<span style="color:#f92672">=</span>now --all <span style="color:#f92672">&amp;&amp;</span> git gc --prune<span style="color:#f92672">=</span>now
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs migrate import --everything --include=<span style="color:#0ff;font-weight:bold">&#34;*.png,*.psd&#34;</span>
+</span></span><span style="display:flex;"><span>git reflog expire --expire=now --all &amp;&amp; git gc --prune=now
 </span></span><span style="display:flex;"><span>git remote set-url origin &lt;New repository location&gt;
 </span></span><span style="display:flex;"><span>git push --all origin --force
 </span></span></code></pre></div><p>Another common situation is that you modify the <code>.gitattributes</code> file to include new file extensions into the LFS scope, but the existing files are not replaced with Pointer Files. In this case, you will receive a following warning during Clone or Reset:</p>
 <pre tabindex="0"><code>Encountered 1 file(s) that should have been pointers, but weren&#39;t
 </code></pre><p>If you don&rsquo;t want to rewrite whole history but just want to replace current files with Pointer Files, you can use:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># from https://stackoverflow.com/a/51626808</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># from https://stackoverflow.com/a/51626808</span>
 </span></span><span style="display:flex;"><span>git rm --cached -r .
 </span></span><span style="display:flex;"><span>git reset --hard
 </span></span></code></pre></div><p>Or</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
 </span></span><span style="display:flex;"><span>git add --renormalize .
 </span></span></code></pre></div><p>Then commit/push the changes to the repository.</p>
 <p>Just add the following to <code>.gitattributes</code>:</p>
@@ -460,7 +460,7 @@ git lfs unlock &lt;file path&gt;
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   
 

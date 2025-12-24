@@ -183,7 +183,7 @@ Material:
 <p>雖然檔案 GUID 跟 Local ID 是個穩定的識別系統，但 GUID 比對效率不高，在執行期我們需要更高效的識別系統。Unity 內部維持了一個將 GUID 跟 Local ID 組合翻譯成簡單整數編號的快取（在 Unity 內部這個快取叫做 PersistentManager，真正的翻譯發生在 Unity C++ 程式裡的 Remapper 類別裡，這個類別完全沒有 C# API），並保證這個整數編號在每一次執行 Unity 的過程中是獨一無二的。這些整數叫做 Instance ID，當有新 Object 向 Unity 的快取註冊時就會拿到簡單遞增產生的新編號。</p>
 <p>這個快取維護著特定 Instance ID、定義 Object 原始資料來源的檔案 GUID 與 Local ID 以及 Object 在記憶體中的實體 （如果有的話）三者之間的對應關係。這讓 UnityEngine.Object 間能可靠地維護彼此的參考。解析一個 Instance ID 的參考可以透過回傳該 Instance ID 所對應而已載入記憶體的 Object 來快速地完成。如果該 Object 還未載入，則可以透過解析檔案 GUID 與 Local ID 找到 Object 原始資料讓 Unity 及時地進行載入。</p>
 <p>在啟動時，Instance ID 的快取會被初始化，加入所有專案內建的 Object （即場景參考的 Object），還有所有在 <code>Resources/</code> 資料夾下的 Object。新的 Instance ID 快取項目會在執行期匯入新的 Asset （一個在執行期創造 Asset 的例子是用腳本創建 Texture2D Object，如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> myTexture = <span style="color:#66d9ef">new</span> Texture2D(<span style="color:#ae81ff">1024</span>, <span style="color:#ae81ff">768</span>)
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">var</span> myTexture = <span style="color:#fff;font-weight:bold">new</span> Texture2D(<span style="color:#ff0;font-weight:bold">1024</span>, <span style="color:#ff0;font-weight:bold">768</span>)
 </span></span></code></pre></div><p>或是有 Object 從 AssetBundle 載入時建立。Instance ID 快取項目只有在失效的時候才會移除。這會發生在提供特定的檔案 GUID 與 Local ID 的 AssetBundle 被卸載的時候發生。</p>
 <p>當卸載 AssetBundle 造成 Instance ID 失效時，Instance ID 與檔案 GUID 還有 Local ID 的對照會被刪除以節省記憶體。如果同一個 AssetBundle 再次被載入，AssetBundle 裡的 Object 會被指派到一個<strong>新的</strong> Instance ID。</p>
 <p>對於 AssetBundle 卸載更深的討論請參照：AssetBundle 使用模式下的管理載入的 Asset 章節。</p>
@@ -284,7 +284,7 @@ Material:
       <i class="iconfont icon-up"></i>
     </div>
   </div>
-  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
   
 
