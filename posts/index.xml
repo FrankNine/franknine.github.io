@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Northern Wind</description>
     <generator>Hugo</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 15 Aug 2025 19:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 08 May 2026 02:00:00 +0800</lastBuildDate>
     <atom:link href="https://www.chunfuchao.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity Hub service-config.json</title>
@@ -76,7 +76,7 @@
       <link>https://www.chunfuchao.com/posts/unity-git/</link>
       <pubDate>Sun, 10 May 2020 23:20:12 +0800</pubDate>
       <guid>https://www.chunfuchao.com/posts/unity-git/</guid>
-      <description>&lt;p&gt;用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder &lt;a href=&#34;https://gitlab.com/rayark/mimiron-lite&#34;&gt;mimiron-lite&lt;/a&gt; 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。&lt;/p&gt;</description>
+      <description>&lt;p&gt;2026 編輯：更新工具推薦與 GitHub 使用評價&lt;/p&gt;&#xA;&lt;p&gt;用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder &lt;a href=&#34;https://gitlab.com/rayark/mimiron-lite&#34;&gt;mimiron-lite&lt;/a&gt; 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Unity 和 Sign in with Apple</title>

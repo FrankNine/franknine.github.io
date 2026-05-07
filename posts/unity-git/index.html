@@ -16,7 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="2026 編輯：更新工具推薦與 GitHub 使用評價
+用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。
 " /><meta name="keywords" content="Unity, git" />
 
 
@@ -44,22 +45,25 @@
 <meta property="og:url" content="https://www.chunfuchao.com/posts/unity-git/">
   <meta property="og:site_name" content="Northern Wind">
   <meta property="og:title" content="Unity 和 git">
-  <meta property="og:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
+  <meta property="og:description" content="2026 編輯：更新工具推薦與 GitHub 使用評價
+用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
   <meta property="og:locale" content="zh_TW">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2020-05-10T23:20:12+08:00">
-    <meta property="article:modified_time" content="2020-05-10T23:20:12+08:00">
+    <meta property="article:modified_time" content="2026-05-08T02:00:00+08:00">
 
   <meta itemprop="name" content="Unity 和 git">
-  <meta itemprop="description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
+  <meta itemprop="description" content="2026 編輯：更新工具推薦與 GitHub 使用評價
+用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
   <meta itemprop="datePublished" content="2020-05-10T23:20:12+08:00">
-  <meta itemprop="dateModified" content="2020-05-10T23:20:12+08:00">
-  <meta itemprop="wordCount" content="9370">
+  <meta itemprop="dateModified" content="2026-05-08T02:00:00+08:00">
+  <meta itemprop="wordCount" content="9801">
   <meta itemprop="keywords" content="Unity,git">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Unity 和 git">
-  <meta name="twitter:description" content="用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
+  <meta name="twitter:description" content="2026 編輯：更新工具推薦與 GitHub 使用評價
+用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
 
 
 
@@ -134,13 +138,14 @@
         <div id="content" class="content">
           <article class="post">
   <div class="post-content">
-    <p>用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder <a href="https://gitlab.com/rayark/mimiron-lite">mimiron-lite</a> 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。</p>
+    <p>2026 編輯：更新工具推薦與 GitHub 使用評價</p>
+<p>用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder <a href="https://gitlab.com/rayark/mimiron-lite">mimiron-lite</a> 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。</p>
 <p>TL;DR 的話可以直接參考已經編輯好的 git 設定檔，現在最新的設定包含 Wwise 的 <code>.gitignore</code> 已經獨立更新到： <a href="https://github.com/FrankNine/RepoConfig">https://github.com/FrankNine/RepoConfig</a><br>
 這個 Repo Fork 自： <a href="https://github.com/rayark/repo-config">https://github.com/rayark/repo-config</a><br>
 公司將這個設定以 <a href="https://tldrlegal.com/license/mit-license">MIT 授權</a> 釋出。</p>
 <p>如果對 git 操作不熟悉的話，目前中文教學最推薦的還是 <a href="https://gitbook.tw/">為你自己學 Git</a> by <a href="https://twitter.com/eddiekao">高見龍</a>。除了線上版教的基本操作外，付費版內很難得有 git 資料結構（Commit、Tree、Blob）的介紹，對於更加熟悉 git 非常有幫助。</p>
 <h1 id="用戶端">用戶端</h1>
-<p>之前為了公司需要同時滿足技術人員與非技術背景人員操作 git 的需求 Survey 了很多 git 用戶端，目前選定的是需要付費的 <a href="https://git-fork.com/">Fork</a>。在這之前用的是最常見免費的 <a href="https://www.sourcetreeapp.com/">SourceTree</a>，不過登入上常常會出現 <a href="https://community.atlassian.com/t5/Sourcetree-questions/Git-Credential-Manager-for-Windows-Popups/qaq-p/579905">問題</a> 需要排解，還有有的時候檔案多的時候會變很慢，對圖片與 LFS 檔案也沒有預覽支援。另外有些程式同事會選用 Git for Windows 附帶的 <a href="http://gitextensions.github.io/">Git Extensions</a> 但是這個對美術使用上有些不友善，習慣用戶端有一個視窗的也可能會不習慣 Shell Extension。另一個免費的 Shell Extension 選擇是 <a href="https://tortoisegit.org/">TortoiseGit</a>，對美術素材支援到顯示 LFS 內的圖片，但是在 Blame、Rebase 之類比較複雜的操作比較不順手。<a href="https://desktop.github.com/">GitHub Desktop</a> 是功能太陽春，<a href="https://www.gitkraken.com/">GitKraken</a> 雖然有做很多美術相關的功能但是可能是因為 Electron 先天問題，在大 Repo 上還蠻喘的。<a href="https://www.syntevo.com/smartgit/">SmartGit</a> 則是功能雖多但是對美術素材支援算是沒有，而且年費不便宜。</p>
+<p>之前為了公司需要同時滿足技術人員與非技術背景人員操作 git 的需求 Survey 了很多 git 用戶端，目前選定的是需要付費（但可以持續免費試用）的 <a href="https://git-fork.com/">Fork</a>。在這之前用的是最常見免費的 <a href="https://www.sourcetreeapp.com/">SourceTree</a>，不過登入上常常會出現 <a href="https://community.atlassian.com/t5/Sourcetree-questions/Git-Credential-Manager-for-Windows-Popups/qaq-p/579905">問題</a> 需要排解，還有有的時候檔案多的時候會變很慢，對圖片與 LFS 檔案也沒有預覽支援。另外有些程式同事會選用 Git for Windows 附帶的 <a href="http://gitextensions.github.io/">Git Extensions</a> 但是這個對美術使用上有些不友善，習慣用戶端有一個視窗的也可能會不習慣 Shell Extension。另一個免費的 Shell Extension 選擇是 <a href="https://tortoisegit.org/">TortoiseGit</a>，對美術素材支援到顯示 LFS 內的圖片，但是在 Blame、Rebase 之類比較複雜的操作比較不順手。<a href="https://desktop.github.com/">GitHub Desktop</a> 是功能太陽春，<a href="https://www.gitkraken.com/">GitKraken</a> 雖然有做很多美術相關的功能但是可能是因為 Electron 先天問題，在大 Repo 上還蠻喘的。<a href="https://www.syntevo.com/smartgit/">SmartGit</a> 則是功能雖多但是對美術素材支援算是沒有，而且年費不便宜。</p>
 <figure class="center"><img src="/images/unity-git/fork.png"><figcaption>
       <h4>Fork</h4>
     </figcaption>
@@ -152,15 +157,23 @@
     </figcaption>
 </figure>
 
+<p>在 2020 寫完這篇文章後，2024 出現了新的 git 用戶端 <a href="https://sourcegit-scm.github.io/">SourceGit</a>。開發到現在功能已經和 Fork 並駕齊驅了，且又是開源軟體，是真正的不需使用費。除了功能齊全外還有 Fork 所沒有的 Linux Build。個人還沒有跳槽單純只是基於慣性，如果是新接觸的開發者建議 Fork 跟 SourceGit 都評估看看。</p>
+<figure class="center"><img src="/images/unity-git/sourcegit.png"><figcaption>
+      <h4>Fork</h4>
+    </figcaption>
+</figure>
+
 <h1 id="伺服器端">伺服器端</h1>
-<p>一般的 git Hosting 服務在 LFS 的容量與流量限制較多（<a href="https://help.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-git-large-file-storage">GitHub 的 LFS 條款</a>），對遊戲專案比較不友善。Riot 的《符文大地傳說》在 <a href="https://technology.riotgames.com/news/legends-runeterra-cicd-pipeline">分享文章</a> 中提到他們是使用 GitHub Enterprise，搭配使用 <a href="https://jfrog.com/artifactory/">Artifactory</a> 作為 LFS Server。使用 Hosting 服務代表 git 操作要走公司聯外網路，在素材大一些的專案以台灣網路狀態也不太實際。如果情況許可推薦用主機或是 NAS 架設 <a href="https://about.gitlab.com/install/">GitLab</a>。GitLab 可以滿足 git、<a href="https://docs.gitlab.com/ee/ci/introduction/">CI Runner</a>、<a href="https://about.gitlab.com/solutions/project-management/">專案管理</a> 與 <a href="https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html">Code Review</a> 等功能，雖然可能專案管理介面沒有像 Trello 或其他工具漂亮、順手。但是這幾個功能在 GitLab 裡可以相互 Reference，像是在 Issue 上面 Reference Merge Request 的進度或是特定 CI Pipeline 的建置結果，這種整合是難以取代的。只是走 Self-hosting IT 方面工就會比較多，備份方面也要注意。</p>
+<p>一般的 git Hosting 服務在 LFS 的容量與流量限制較多（<a href="https://docs.github.com/en/billing/concepts/product-billing/git-lfs">GitHub 的 LFS 條款</a>），對遊戲專案 <del>比較</del> 很不友善。Riot 的《符文大地傳說》在 <a href="https://technology.riotgames.com/news/legends-runeterra-cicd-pipeline">分享文章</a> 中提到他們是使用 GitHub Enterprise，搭配使用 <a href="https://jfrog.com/artifactory/">Artifactory</a> 作為 LFS Server。使用 Hosting 服務代表 git 操作要走公司聯外網路，在素材大一些的專案以台灣網路狀態也不太實際。如果情況許可推薦用主機或是 NAS 架設 <a href="https://about.gitlab.com/install/">GitLab</a>。GitLab 可以滿足 git、<a href="https://docs.gitlab.com/runner/">CI Runner</a>、<a href="https://about.gitlab.com/solutions/agile-delivery/">專案管理</a> 與 <a href="https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/">Code Review</a> 等功能，雖然可能專案管理介面沒有像 Trello 或其他工具漂亮、順手。但是這幾個功能在 GitLab 裡可以相互 Reference，像是在 Issue 上面 Reference Merge Request 的進度或是特定 CI Pipeline 的建置結果，這種整合是難以取代的。只是走 Self-hosting IT 方面工就會比較多，備份方面也要注意。</p>
 <figure class="center"><img src="/images/unity-git/group-issue-board.png" width="700"><figcaption>
       <h4>https://about.gitlab.com/stages-devops-lifecycle/issueboard/</h4>
     </figcaption>
 </figure>
 
+<p>後來經手過兩個 Clone 下來 Worktree 大約 500G 然後 Host 在 GitHub 的遊戲專案，真的覺得 GitHub 的 LFS 計費方式實在是太糟了。不只費用很高，容量與流量雙重限制，超過用量時會整個 git 操作卡住要管理員掏魔法小卡解救。加上現在 2026 GitHub 的穩定性非常糟。<a href="https://newsletter.pragmaticengineer.com/p/the-pulse-ai-load-breaks-github-why">沒有一個 9，還發生了汙染 git 歷史的 bug</a>。除非是真的沒有人力物力 Self-host 且確定遊戲專案容量會非常小，否則建議是儘量不要去用 GitHub。</p>
+<p>git 的 Server 端現在除了 GitLab 之外還有像是 <a href="https://forgejo.org/">Forgejo</a> 之類的選擇。Self-host 的 GitLab 沒有像 GitHub 那麼嚴重的問題，但是資源用量偏高。在現在零件昂貴的時代，有機會也會想試試不同的方案。</p>
 <h1 id="external-merger">External Merger</h1>
-<p>合併工具大家一般可能用內建的 <a href="http://kdiff3.sourceforge.net/">KDiff3</a>，不過我自己從以前第一份工作用 Perforce 的經驗就非常喜歡 Perforce 的合併工具。幸好 Perforce 的合併工具 <a href="https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge">P4Merge</a> 可以單獨安裝使用且不收費。大部分的 git 用戶端都可以設定要用哪個外部合併工具，也大多可以識別 P4Merge。程式合併挑選改動跟編輯合併結果相當好用，diff 的判讀也比其他工具好。再加上有非常強大的圖片 diff，可以標出有差異的像素在哪裡。要說明顯的缺點就是非英文字符不太支援，會有亂碼跟 UI 錯亂現象。</p>
+<p>合併工具大家一般可能用內建的 <a href="http://kdiff3.sourceforge.net/">KDiff3</a>，不過我自己從以前 <a href="../visual-concepts-1/">第一份工作</a> 用 Perforce 的經驗就非常喜歡 Perforce 的合併工具。幸好 Perforce 的合併工具 <a href="https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge">P4Merge</a> 可以單獨安裝使用且不收費。大部分的 git 用戶端都可以設定要用哪個外部合併工具，也大多可以識別 P4Merge。程式合併挑選改動跟編輯合併結果相當好用，diff 的判讀也比其他工具好。再加上有非常強大的圖片 diff，可以標出有差異的像素在哪裡。要說明顯的缺點就是非英文字符不太支援，會有亂碼跟 UI 錯亂現象。</p>
 <figure class="center"><img src="/images/unity-git/p4merge-pixel-diff.png"><figcaption>
       <h4>P4Merge image diff</h4>
     </figcaption>
@@ -196,9 +209,9 @@ git config --global feature.manyFiles true
 <p><code>.gitignore</code> 主要是忽略「應該留在電腦上，但是不應該共用出去的檔案」除了 Unity 的 <code>Temp</code> 與 <code>Library</code> 之外，主要是程式編輯器的設定。使用過後不應該保留的檔案，像是 Unity 產生的 Xcode 專案目錄或是 APK 我是習慣不加 <code>.gitignore</code>，讓它們被認定為是 Untracked File 方便本地或是 CI Runner 上以 <a href="https://git-scm.com/docs/git-clean"><code>git clean</code></a> 清除。一個小細節是如果 Pattern 以 <code>/</code> 開頭只會 Match Repo 根目錄下的檔案或目錄，像是 Unity 的 Library 我會寫成 <code>/Library/</code> 以免忽略到其他目錄裡面叫做 Library 的目錄。設定的範例可以參考：</p>
 <p><a href="https://github.com/FrankNine/RepoConfig/blob/master/.gitignore">https://github.com/FrankNine/RepoConfig/blob/master/.gitignore</a></p>
 <h2 id="gitattributes">.gitattributes</h2>
-<p><code>.gitattributes</code> 因為牽涉到 <a href="https://git-lfs.github.com/">LFS</a> 跟 <a href="https://help.github.com/en/github/using-git/configuring-git-to-handle-line-endings">CRLF</a> 所以就比較複雜了。</p>
+<p><code>.gitattributes</code> 因為牽涉到 <a href="https://git-lfs.github.com/">LFS</a> 跟 <a href="https://docs.github.com/en/get-started/git-basics/configuring-git-to-handle-line-endings">CRLF</a> 所以就比較複雜了。</p>
 <h3 id="lfs-large-file-storage">LFS (Large File Storage)</h3>
-<p>先說 LFS，基本上是把特定副檔名的檔案搬出 git 移動到 LFS Server，而原來的 git 路徑只留下 <a href="https://github.com/git-lfs/git-lfs/blob/master/docs/spec.md#the-pointer">Pointer File</a>，Pointer File 裡有 oid。當有需要時 LFS 會用 Pointer File 裡的 oid 到 LFS Server 查找、下載檔案並取代（<a href="https://git-scm.com/book/zh-tw/v2/Customizing-Git-Git-Attributes#rfilters_a">Smudge</a>）掉 Pointer File。</p>
+<p>先說 LFS，基本上是把特定副檔名的檔案搬出 git 移動到 LFS Server，而原來的 git 路徑只留下 <a href="https://github.com/git-lfs/git-lfs/blob/main/docs/spec.md#the-pointer">Pointer File</a>，Pointer File 裡有 oid。當有需要時 LFS 會用 Pointer File 裡的 oid 到 LFS Server 查找、下載檔案並取代（<a href="https://git-scm.com/book/zh-tw/v2/Customizing-Git-Git-Attributes#rfilters_a">Smudge</a>）掉 Pointer File。</p>
 <p>Pointer File 的內容範例如下，容量大約 130 bytes 左右。記得這個容量大小，如果看到檔案變成這個大小要想是不是 LFS 的替換沒有正常執行。</p>
 <pre tabindex="0"><code>version https://git-lfs.github.com/spec/v1
 oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393
@@ -210,8 +223,8 @@ size 12345
 </span></span></code></pre></div><p>使用 LFS 可以降低 git 歷史的大小，因為 git 本身變成只儲存 Pointer File。這樣可以降低 Clone 在本機硬碟上的大小，並增進效率。降低 Clone 大小這件事對 Binary 檔案大的 3D 遊戲專案非常有感。但是缺點有：</p>
 <ul>
 <li>git 操作變成要持續跟 LFS Server 溝通，喪失 git 完全分散式與可離線工作的優點。</li>
-<li>有時需要排除 LFS 製造的問題，最常見的是 Clone 或是 Fetch 的時候 LFS 沒有觸發替換 Pointer File 為真正的檔案內容。有些罕見有遇過的是 GitLab 的 LFS Server 弄丟檔案導致 Fetch 不下來。或是在開啟 LFS 又 Fork 的情況下，GitLab LFS Repo 可能需要 <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/271576">重新同步</a>。目前建議使用 GitLab LFS 跟 Fork 功能不要同時使用。</li>
-<li>有些功能可能在 LFS 環境下會不能使用，包含部分工具可能會無法 diff LFS 檔案，<a href="https://gitlab.com/gitlab-org/gitlab-runner/-/issues/4040">gitlab-runner exec 在有 LFS 的環境下還無法使用</a>。</li>
+<li>有時需要排除 LFS 製造的問題，最常見的是 Clone 或是 Fetch 的時候 LFS 沒有觸發替換 Pointer File 為真正的檔案內容。有些罕見有遇過的是 GitLab 的 LFS Server 弄丟檔案導致 Fetch 不下來。或是在開啟 LFS 又 Fork 的情況下，GitLab LFS Repo 可能需要 <a href="https://gitlab.com/gitlab-org/gitlab/-/work_items/271576">重新同步</a>。目前建議使用 GitLab LFS 跟 Fork 功能不要同時使用。</li>
+<li>有些功能可能在 LFS 環境下會不能使用，包含部分工具可能會無法 diff LFS 檔案，<a href="https://gitlab.com/gitlab-org/gitlab-runner/-/work_items/4040">gitlab-runner exec 在有 LFS 的環境下還無法使用</a>。</li>
 </ul>
 <p>以遊戲 Binary 檔案佔 Repo 大部分容量的情況下是建議遊戲專案使用 LFS 的，而且越早用越好，因為已經推進 git 歷史裡的 Binary 檔案會一直留在歷史裡，修改 <code>.gitattributes</code> 只會影響到後面增加的檔案。如果 Repo 已經大到受不了了，只能做 Migration 一途，但是變成所有人都要重新 Clone，是超大的工程。</p>
 <p>要進行 Migration 首先要在本地 Track 所有的分支，因為 <code>lfs migrate</code> 只會作用在本地分支：<br>
@@ -255,7 +268,7 @@ size 12345
 </li>
 <li>LF
 <ul>
-<li><a href="https://docs.unity3d.com/Manual/class-Tilemap.html">Tilemap</a> 設定檔</li>
+<li><a href="https://docs.unity3d.com/Manual/tilemaps/tiles-for-tilemaps/tile-asset-reference.html">Tilemap</a> 設定檔</li>
 </ul>
 </li>
 <li>Force Text 設定下還是 Binary 內容
@@ -307,11 +320,25 @@ charset = utf-8
 indent_style = space
 indent_size  = 4
 
+end_of_line = lf
 trim_trailing_whitespace = true
 </code></pre><p><code>.gitattributes</code> 可以控制行尾，但是程式碼還可能會有文字編碼、BOM、或是 Tab / Space 不一致的問題。而編碼與 Tab / Space 可以靠在專案內放置 <code>.editorconfig</code> 提示程式編輯工具如何處理來完成。目前 Visual Studio、MonoDevelop 與 Rider 都會自動偵測 <code>.editorconfig</code> 的設定，而 Visual Studio Code 與 Notepad++ 則是需要安裝 Plugin。</p>
-<p>更進一步可以把 Visual Studio 或是 ReSharper 的設定也放進 Repo，從使用工具讓行尾、Tab / Space 之類的統一提升到 Naming 或是 Coding Convention 的統一。不過因為公司還沒有統一導入 JetBrains 的編輯器，所以沒有這方面的實務經驗。</p>
-<h1 id="worktree">Worktree</h1>
-<p>如果是開發多平台遊戲的人可能會習慣 clone 同一個專案一次以上，然後把平台設定成不同，例如一個 Clone 平台設定成 Android 一個平台設定成 iOS。雖然 <a href="https://docs.unity3d.com/Manual/CacheServer.html">Cache Server</a> / <a href="https://docs.unity3d.com/Manual/UnityAccelerator.html">Accelerator</a> 或是 <a href="https://forum.unity.com/threads/what-is-asset-database-v2.680170/">AssetDatabase V2</a> 可以降低平台切換的成本，但是在硬碟上保留兩份專案還是最快最直觀的。缺點很直接是硬碟用量很大，其實可以 Clone 一次然後開一個以上的 <a href="https://git-scm.com/docs/git-worktree">Worktree</a>，這樣雖然還是有多個專案目錄，但是只會有一個 <code>.git</code> 資料夾，即電腦上只有一份 git 歷史。如果有容量的疑慮又電腦裝有容量大的傳統硬碟跟有限的 SSD，可以考慮把 git 歷史放在傳統硬碟，專案 Worktree 放在 SSD 上的安排。</p>
+<p>更進一步可以將 C# 的 <a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules">Naming Convention</a> 也寫入 <code>.editorconfig</code>，達到跨編輯器的 Naming Convention 同步。C# 完整的設定可以參考 <a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options">這裡</a>。</p>
+<pre tabindex="0"><code>Private filed 前綴 _ 的範例
+
+[*.cs]
+dotnet_naming_style.camel_case_prefix_underscore.capitalization = camel_case
+dotnet_naming_style.camel_case_prefix_underscore.required_prefix = _
+
+dotnet_naming_rule.private_members_with_underscore.style    = camel_case_prefix_underscore
+dotnet_naming_rule.private_members_with_underscore.symbols  = private_fields
+dotnet_naming_rule.private_members_with_underscore.severity = suggestion
+
+dotnet_naming_symbols.private_fields.applicable_kinds           = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+dotnet_naming_symbols.private_fields.required_modifiers         = readonly
+</code></pre><h1 id="worktree">Worktree</h1>
+<p>如果是開發多平台遊戲的人可能會習慣 clone 同一個專案一次以上，然後把平台設定成不同，例如一個 Clone 平台設定成 Android 一個平台設定成 iOS。雖然 <a href="https://docs.unity3d.com/2020.3/Documentation/Manual/CacheServer.html">Cache Server</a> / <a href="https://docs.unity3d.com/Manual/UnityAccelerator.html">Accelerator</a> 或是 <a href="https://discussions.unity.com/t/what-is-asset-database-v2/743732">AssetDatabase V2</a> 可以降低平台切換的成本，但是在硬碟上保留兩份專案還是最快最直觀的。缺點很直接是硬碟用量很大，其實可以 Clone 一次然後開一個以上的 <a href="https://git-scm.com/docs/git-worktree">Worktree</a>，這樣雖然還是有多個專案目錄，但是只會有一個 <code>.git</code> 資料夾，即電腦上只有一份 git 歷史。如果有容量的疑慮又電腦裝有容量大的傳統硬碟跟有限的 SSD，可以考慮把 git 歷史放在傳統硬碟，專案 Worktree 放在 SSD 上的安排。</p>
 <p>在 git 根目錄輸入：</p>
 <pre tabindex="0"><code>git worktree add ../project-ios
 </code></pre><p>即在上層目錄再開一個叫 <code>project-ios</code> 的 Worktree</p>
@@ -332,6 +359,7 @@ trim_trailing_whitespace = true
 <li><a href="https://pre-commit.com/">pre-commit</a></li>
 </ul>
 <p>如果有機會自己做的話會比較想用 Python 之類的語言實現，這樣邏輯會比較好懂。另外空目錄的 <code>.meta</code> 平常不會造成問題，因此我沒有特別急著要用 Hook 檢查（Commit 內缺少 <code>.meta</code> 則是宣導後蠻少發生的，不過當然如果有自動檢查總是好）。但是有個特別要注意的是 iOS 與 Mac 環境的 <code>.framework</code> 與 <code>.bundle</code> 資料夾，這些資料夾裡面裝的是 Plugin 而 Import Settings 放在目錄 <code>.meta</code> 裡，如果刪除時沒有正確清理目錄 <code>.meta</code> 則 Xcode 會試圖 Import 空的 Plugin 然後建置失敗。</p>
+<p>另外在 git 2.54 終於加入了把 hook commit 到 Repo 的功能，可以參考 <a href="https://github.blog/open-source/git/highlights-from-git-2-54/#h-config-based-hooks">Config-based hooks</a>。</p>
 <h1 id="rebase">Rebase</h1>
 <p>使用 git 到現在算是適應 Fork 後 Fetch Upstream、Push Origin、開 Merge Request 的流程（可以參考 <a href="https://gitbook.tw/chapters/github/syncing-a-fork.html">【狀況題】怎麼跟上當初 fork 專案的進度？</a>），甚至是加其他同事的 fork 當作 Remote。在我自己的 fork 上面還蠻習慣用 <a href="https://git-scm.com/docs/git-rebase">Rebase</a> （<a href="https://gitbook.tw/chapters/branch/merge-with-rebase.html">另一種合併方式（使用 rebase）</a>）或是 <a href="https://git-scm.com/docs/git-cherry-pick">Cherrypick</a> （<a href="https://gitbook.tw/chapters/faq/cherry-pick.html">【狀況題】如果你只想要某個分支的某幾個 Commit？</a>）改造歷史的，如果有人在我合併之前早一步合併到主要分支，我會把自己分支 Rebase 到別人的 Merge 後重開 Merge Request，然後開 <code>--no-ff</code> （<a href="https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---no-ff">no fast-forward</a>）弄出一串小耳多形狀的歷史（<a href="https://gitbook.tw/chapters/branch/merge-commit.html">[狀況題]為什麼我的分支都沒有「小耳朵」？</a>），方便以後回頭查找。另外有一種情況是可能某個 Feature 把 X 改成 Y，後來發現做錯了又從 Y 改成 Z。這樣的情況我會試著在發 Merge Request 之前把歷史改成 X -&gt; Z 而非 X -&gt; Y -&gt; Z 減少 Reviewer 的負擔。感覺這些操作可能可以加入 Code Review 標準，不過目前時程壓力狀況下還是只有我自己會要求自己，還沒有推廣的經驗。</p>
 <figure class="center"><img src="/images/unity-git/merge-rebase.png"><figcaption>
@@ -373,7 +401,7 @@ git checkout
 <ul>
 <li><a href="https://www.peterdavehello.org/2015/05/use-git-sparse-checkout-and-shallow-clone-pull-to-increase-work-efficient/">善用 Git 的 sparse checkout 跟 shallow clone/pull 來提高工作效率</a> by Peter Dave</li>
 </ul>
-<p>git 2.34 加入了更激進的 <a href="https://github.blog/2021-11-10-make-your-monorepo-feel-small-with-gits-sparse-index/">Sparse Index</a>，如果你是 Monorepo 式的專案可以連 index 都 sparse 取出。但我們目前沒有使用 Monorepo，個人也對 Monorepo 後再剔除東西回到好像非 Monorepo 的狀態的工作流程有點疑惑，就先不延伸討論。</p>
+<p>git 2.34 加入了更激進的 <a href="https://github.blog/open-source/git/make-your-monorepo-feel-small-with-gits-sparse-index/">Sparse Index</a>，如果你是 Monorepo 式的專案可以連 index 都 sparse 取出。但我們目前沒有使用 Monorepo，個人也對 Monorepo 後再剔除東西回到好像非 Monorepo 的狀態的工作流程有點疑惑，就先不延伸討論。</p>
 <h1 id="branching-model">Branching Model</h1>
 <p>先前流行過的 <a href="https://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a> （<a href="https://gitbook.tw/chapters/gitflow/why-need-git-flow.html">Git Flow 是什麼？為什麼需要這種東西？</a>）在使用過許久之後決定棄用，它帶來的好處沒有大過它的複雜度帶來的困擾（<a href="https://news.ycombinator.com/item?id=22496724">Hacker News 討論</a>），尤其是在不完全是技術背景的遊戲團隊裡更是執行困難。</p>
 <p>另外 Git Flow 沒有特別強調 Feature Branch 生命週期必須短或是必須頻繁地向主要分支合併。如果有長的 Feature Branch 就是沒有整合 （Integration）。<strong>開長的 Feature Branch 並不會帶給你獨立工作的環境，只是獨立工作的假象</strong>。它的真正效果是延遲支付整合的成本，但是到整合的時候就是連本帶利的吐出來。如果有遇過在 Sprint 或是 Milestone 快結束前好幾個人想 Merge 主幹分支互相衝突到死，還有硬是 Merge 後主幹分支上的程式穩定度大爆炸又沒有時間修的情境就知道我的意思。</p>
@@ -389,7 +417,7 @@ git lfs unlock &lt;檔案路徑&gt;
 <p>後來試了一下希望自動將檔案設定唯讀，然後在 LFS Lock 時才解除檔案唯讀的仿效 Perforce 的工作流程的自動化。實作到一半發現 <a href="https://forum.unity.com/threads/why-does-unity-unlock-a-read-only-file.35462/#post-230437">Unity Editor 本身就不會尊重系統上的唯讀 Flag</a>，因為 Unity 會隨便解除 Assets 目錄下檔案的唯讀，無法區分是我解鎖的還是 Unity 解鎖的。這樣只能放棄這個想法，也會讓我好奇 Perforce 要怎麼用在 Unity 上，還是無法做好整合？</p>
 <p>另外 <a href="https://github.com/git-lfs/git-lfs/issues/3637">Per-branch Lock</a> 跟 <a href="https://github.com/git-lfs/git-lfs/issues/2671#issuecomment-349458133">Auto Unlock</a> 這兩個使用者期望能實作的改進好像就放置了，感覺這幾個大問題解決前好像沒有繼續投資研究 LFS Lock 的必要。</p>
 <h1 id="vfs-for-git">VFS for Git</h1>
-<p><a href="https://vfsforgit.org/">VFS for Git</a> 是微軟為了使用 git 管理 Windows 這個歷史悠久又巨大的 Repo 而提出的方案。底層是依賴 <a href="https://docs.microsoft.com/zh-tw/windows/win32/projfs/projected-file-system">ProjFS</a> 虛擬檔案系統，使用起來會看到 <code>gvfs clone</code> 時檔案存在在硬碟上但是沒有內容，一嘗試打開讀檔的 Blocking 就會包含從 Server 下載這段。測試 <code>gvfs clone</code> 的時候真的如同微軟宣稱的非常高速，在一分鐘內結束。實際的內容在 Unity 專案開啟時才會自動下載 HEAD Worktree 的內容，因為是檔案系統層的介入，Unity 2020 以後不用任何修改就能使用。但是因為 Unity 每次開啟都會掃描整個 <code>/Assets/</code> 資料夾建立 AssetDatabase，等於最後還是把整個 <code>/Assets/</code> 都摸過一遍抓下來。如果有引擎是只碰編輯有需要的檔案的系統，才能完整享受要用才抓的好處吧。</p>
+<p><a href="https://github.com/microsoft/vfsforgit">VFS for Git</a> 是微軟為了使用 git 管理 Windows 這個歷史悠久又巨大的 Repo 而提出的方案。底層是依賴 <a href="https://docs.microsoft.com/zh-tw/windows/win32/projfs/projected-file-system">ProjFS</a> 虛擬檔案系統，使用起來會看到 <code>gvfs clone</code> 時檔案存在在硬碟上但是沒有內容，一嘗試打開讀檔的 Blocking 就會包含從 Server 下載這段。測試 <code>gvfs clone</code> 的時候真的如同微軟宣稱的非常高速，在一分鐘內結束。實際的內容在 Unity 專案開啟時才會自動下載 HEAD Worktree 的內容，因為是檔案系統層的介入，Unity 2020 以後不用任何修改就能使用。但是因為 Unity 每次開啟都會掃描整個 <code>/Assets/</code> 資料夾建立 AssetDatabase，等於最後還是把整個 <code>/Assets/</code> 都摸過一遍抓下來。如果有引擎是只碰編輯有需要的檔案的系統，才能完整享受要用才抓的好處吧。</p>
 <figure class="center"><img src="/images/unity-git/vfs-for-git-windows.png"><figcaption>
       <h4>即使微軟宣稱 Windows repo 很大</h4>
     </figcaption>
@@ -400,7 +428,7 @@ git lfs unlock &lt;檔案路徑&gt;
     </figcaption>
 </figure>
 
-<p>雖然看起來很厲害但是現階段應該還是不會考量導入，最主要就是支援的 git Server 太少了。只有 Azure Repos 支援，然後 Repo 又有 <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/limits?view=azure-devops#repository-size">250GB 大小限制</a>。有限制在還是會有點擔心。<a href="https://github.com/microsoft/VFSForGit/issues/1640#issuecomment-590880312">GitHub</a> 跟 <a href="https://gitlab.com/gitlab-org/gitlab-foss/-/issues/27895">GitLab</a> 看起來沒有積極想要支援的感覺。</p>
+<p>雖然看起來很厲害但是現階段應該還是不會考量導入，最主要就是支援的 git Server 太少了。只有 Azure Repos 支援，然後 Repo 又有 <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/limits?view=azure-devops#repository-size">250GB 大小限制</a>。有限制在還是會有點擔心。<a href="https://github.com/microsoft/VFSForGit/issues/1640#issuecomment-590880312">GitHub</a> 跟 <a href="https://gitlab.com/gitlab-org/gitlab-foss/-/work_items/27895">GitLab</a> 看起來沒有積極想要支援的感覺。</p>
 <p>如果還是有興趣的人想嘗試，導入時有幾個點要注意：</p>
 <ul>
 <li>只有 Azure Repos 支援。</li>
@@ -410,7 +438,7 @@ git lfs unlock &lt;檔案路徑&gt;
 </ul>
 <h1 id="single-source-of-truth">Single Source of Truth</h1>
 <p>因為我們曾經是用 Mercurial 來管理專案，所以在導入 git 時有一段時間是程式們改用 git 而美術們繼續用慣用的 Mercurial，用腳本定時複製同步兩邊的改動。結果追查改動難度變超高，要不斷找同步的時間點然後跳到另一邊繼續追查歷史。在急著要出 Hotfix 的時候特別歡樂。後來受不了強制所有成員都改用 git，也因為這樣所以才會有上面為非技術人員 Survey 用戶端的故事。</p>
-<p>這個經驗讓我覺得構成一個遊戲的資料應該放在同一個歷史，即同一個 Repo 下。所以也打消了 Survey 一些跨版本控制系統同步工具像是 <a href="https://www.perforce.com/perforce/r15.3/manuals/git-fusion/">Git Fusion</a> 或是 <a href="https://git-scm.com/docs/git-svn">git-svn</a> 的念頭。變成都用 git，然後儘量解決非技術人員的痛點。同時也漸漸少用 <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodule</a>，要同步 Submoudle 跟外面的 Repo 的歷史太容易出錯。共用的工具庫現在走回最傳統的上 Tag 上版號出安裝包讓各專案安裝，各專案把工具內容直接 Commit 進各自的 Repo。</p>
+<p>這個經驗讓我覺得構成一個遊戲的資料應該放在同一個歷史，即同一個 Repo 下。所以也打消了 Survey 一些跨版本控制系統同步工具像是 <a href="https://web.archive.org/web/20200922074409/https://www.perforce.com/perforce/r15.3/manuals/git-fusion/">Git Fusion</a> 或是 <a href="https://git-scm.com/docs/git-svn">git-svn</a> 的念頭。變成都用 git，然後儘量解決非技術人員的痛點。同時也漸漸少用 <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodule</a>，要同步 Submoudle 跟外面的 Repo 的歷史太容易出錯。共用的工具庫現在走回最傳統的上 Tag 上版號出安裝包讓各專案安裝，各專案把工具內容直接 Commit 進各自的 Repo。</p>
 <p>構成一個遊戲的資料應該放在同一個歷史的想法繼續推展下去，Server 的原始碼與企劃數值表也都該跟 Client 專案放同一個 Repo。當遊戲資料格式需要改動的時候，一個 Commit 包含 Server、Client、數值表三者的同步更新（Schema 使用類似 ProtoBuf 之類的跨語言定義），徹底解決 Server、Client 與數值資料 Schema 不同步造成的問題。但是苦於數值沒有現成好的編輯工具，企劃還是得在 Google Sheets 上編輯然後下載下來，所以這個想法還是一直處於我自己的空想階段。</p>
 <p>關於數值編輯工具的討論，可以參考：</p>
 <ul>
