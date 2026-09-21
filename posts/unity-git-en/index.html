@@ -25,7 +25,7 @@ I&rsquo;ve been using Git to version control Unity projects for a while now. Rec
 
 
 
-<meta name="generator" content="Hugo 0.148.2 with theme even" />
+<meta name="generator" content="Hugo 0.166.0 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/unity-git-en/" />
@@ -37,32 +37,32 @@ I&rsquo;ve been using Git to version control Unity projects for a while now. Rec
 
 
 
-<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
 <meta property="og:url" content="https://www.chunfuchao.com/posts/unity-git-en/">
-  <meta property="og:site_name" content="Northern Wind">
-  <meta property="og:title" content="Unity and Git">
-  <meta property="og:description" content="This is the translated version of my 2020 Unity 和 git post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you.
+	<meta property="og:site_name" content="Northern Wind">
+	<meta property="og:title" content="Unity and Git">
+	<meta property="og:description" content="This is the translated version of my 2020 Unity 和 git post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you.
 I’ve been using Git to version control Unity projects for a while now. Recently, my company open-sourced our Unity builder mimiron-lite, along with a new set of Git configuration files that are now being used as Git configuration standard of my company . I would like to share some insights regarding the thought process behind these configuration files and the experiences of using Git.">
-  <meta property="og:locale" content="zh_TW">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2023-04-23T16:00:00+08:00">
-    <meta property="article:modified_time" content="2023-04-23T16:00:00+08:00">
+	<meta property="og:locale" content="zh_TW">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2023-04-23T16:00:00+08:00">
+		<meta property="article:modified_time" content="2023-04-23T16:00:00+08:00">
 
-  <meta itemprop="name" content="Unity and Git">
-  <meta itemprop="description" content="This is the translated version of my 2020 Unity 和 git post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you.
+	<meta itemprop="name" content="Unity and Git">
+	<meta itemprop="description" content="This is the translated version of my 2020 Unity 和 git post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you.
 I’ve been using Git to version control Unity projects for a while now. Recently, my company open-sourced our Unity builder mimiron-lite, along with a new set of Git configuration files that are now being used as Git configuration standard of my company . I would like to share some insights regarding the thought process behind these configuration files and the experiences of using Git.">
-  <meta itemprop="datePublished" content="2023-04-23T16:00:00+08:00">
-  <meta itemprop="dateModified" content="2023-04-23T16:00:00+08:00">
-  <meta itemprop="wordCount" content="6097">
-  <meta itemprop="keywords" content="Unity,git">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Unity and Git">
-  <meta name="twitter:description" content="This is the translated version of my 2020 Unity 和 git post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you.
+	<meta itemprop="datePublished" content="2023-04-23T16:00:00+08:00">
+	<meta itemprop="dateModified" content="2023-04-23T16:00:00+08:00">
+	<meta itemprop="wordCount" content="6097">
+	<meta itemprop="keywords" content="Unity,git">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Unity and Git">
+	<meta name="twitter:description" content="This is the translated version of my 2020 Unity 和 git post with some minor updates and all the Chinese reference links removed. Sorry I am not a fluent English speaker. Please leave a comment if something seems wrong/out-dated. Thank you.
 I’ve been using Git to version control Unity projects for a while now. Recently, my company open-sourced our Unity builder mimiron-lite, along with a new set of Git configuration files that are now being used as Git configuration standard of my company . I would like to share some insights regarding the thought process behind these configuration files and the experiences of using Git.">
 
 
@@ -146,33 +146,33 @@ The company has released this configuration under the <a href="https://tldrlegal
 <h1 id="gui-client">GUI Client</h1>
 <p>Previously, in order to meet the needs of both technical and non-technical personnel for using Git, we conducted a survey of various Git clients. Currently, we have chosen the paid version of <a href="https://git-fork.com/">Fork</a>. Prior to that, we were using the most common free client, <a href="https://www.sourcetreeapp.com/">SourceTree</a>, but encountered <a href="https://community.atlassian.com/t5/Sourcetree-questions/Git-Credential-Manager-for-Windows-Popups/qaq-p/579905">issues</a> with login which happen way too often and require technical personnel to solve. As well as slowness when dealing with large files and lack of preview support for images and LFS files. Some colleagues also opted for <a href="http://gitextensions.github.io/">Git Extensions</a> bundled with <a href="https://gitforwindows.org/">Git for Windows</a>, but it&rsquo;s less user-friendly for artists, and those who are accustomed to clients with a separate window GUI may not be comfortable with just the Shell Extension. Another free option is <a href="https://tortoisegit.org/">TortoiseGit</a>, which has good support for artwork assets, including displaying images within LFS, but may not be as convenient for more complex Git commands like Blame and Rebase. <a href="https://desktop.github.com/">GitHub Desktop</a> is rudimentary. While <a href="https://www.gitkraken.com/">GitKraken</a> has many features for artwork-related tasks, it struggles with performance in large repositories due to being built on top of Electron. <a href="https://www.syntevo.com/smartgit/">SmartGit</a> has extensive features but lacks good support for artwork assets, and also has a relatively high annual fee.</p>
 <figure class="center"><img src="/images/unity-git/fork.png"><figcaption>
-      <h4>Fork</h4>
-    </figcaption>
+			<h4>Fork</h4>
+		</figcaption>
 </figure>
 
 <p>Currently, Fork provides native clients for Windows and Mac, and the speed is generally good. The payment model is currently an one-time purchase of a license key able to activate on up to three computers at <a href="https://git-fork.com/buy">$50 USD</a>, which is more affordable compared to subscription-based tools (although things might change in the future). The interface is clean and satisfies most development needs, with a well-designed built-in rebase and merge interface. A killer feature for game development is the built-in image preview and diff (although the Mac version only has side-by-side view and lacks swipe and onion skin options), and it also works smoothly with LFS configuration.</p>
 <figure class="center"><img src="/images/unity-git/swipe-image-diff.gif" width="400"><figcaption>
-      <h4>https://git-fork.com/blog/posts/forkwin-1.38/</h4>
-    </figcaption>
+			<h4>https://git-fork.com/blog/posts/forkwin-1.38/</h4>
+		</figcaption>
 </figure>
 
 <h1 id="server">Server</h1>
 <p>Most Git hosting cloud services have limitations on capacity or bandwidth for Git Large File Storage (LFS) (<a href="https://help.github.com/en/github/setting-up-and-managing-billing-and-payments-on-github/about-billing-for-git-large-file-storage">GitHub&rsquo;s LFS terms</a>), which is not ideal for game projects. Riot&rsquo;s &ldquo;Legends of Runeterra&rdquo; mentioned in their <a href="https://technology.riotgames.com/news/legends-runeterra-cicd-pipeline">shared article</a> that they use GitHub Enterprise with <a href="https://jfrog.com/artifactory/">Artifactory</a> as their LFS server. Using hosting services means Git operations have to go through the company&rsquo;s external network, which may not be practical for projects with very large assets, especially considering if the Internet conditions might not be good. If possible, it&rsquo;s recommended to set up a <a href="https://about.gitlab.com/install/">GitLab</a> instance on a dedicated server or NAS. GitLab provides Git, <a href="https://docs.gitlab.com/ee/ci/introduction/">CI Runner</a>, <a href="https://about.gitlab.com/solutions/project-management/">project management</a>, and <a href="https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html">code review</a> functionalities. Although the project management interface may not be as visually appealing or user-friendly as Trello or other tools. However, these functionalities in GitLab can reference each other, such as referencing the progress of merge requests or specific CI pipeline results in issues, which has an invaluable advantage. Just keep in mind that self-hosting requires more IT expertise and backup considerations.</p>
 <figure class="center"><img src="/images/unity-git/group-issue-board.png" width="700"><figcaption>
-      <h4>https://about.gitlab.com/stages-devops-lifecycle/issueboard/</h4>
-    </figcaption>
+			<h4>https://about.gitlab.com/stages-devops-lifecycle/issueboard/</h4>
+		</figcaption>
 </figure>
 
 <h1 id="external-merger">External Merger</h1>
 <p>As for merge tools, most people use the built-in <a href="http://kdiff3.sourceforge.net/">KDiff3</a> in Git. However, based on my experience with Perforce from my previous job, I really like the merge tool of Perforce. Fortunately, the merge tool of Perforce, <a href="https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge">P4Merge</a>, can be installed separately and used for free. Most Git clients allow you to configure which external merge tool to use, and many of them can recognize P4Merge. P4Merge is very user-friendly for cherry-picking changes during 3-way merging and editing merge results, and its diff interpretation is better than other tools. Additionally, it has a powerful image diff feature that can highlight the differing pixels. The only noticeable downside is that it does not properly support non-English characters, resulting in garbled text and UI issues even if the encoding is set to UTF-8.</p>
 <figure class="center"><img src="/images/unity-git/p4merge-pixel-diff.png"><figcaption>
-      <h4>P4Merge image diff</h4>
-    </figcaption>
+			<h4>P4Merge image diff</h4>
+		</figcaption>
 </figure>
 
 <figure class="center"><img src="/images/unity-git/p4merge-three-way-merge.gif" width="500"><figcaption>
-      <h4>P4Merge 3-way merge</h4>
-    </figcaption>
+			<h4>P4Merge 3-way merge</h4>
+		</figcaption>
 </figure>
 
 <h1 id="configuration">Configuration</h1>
@@ -205,7 +205,7 @@ oid sha256:4d7a214614ab2935c943f9e0ff69d22eadbb8f32b1258daaa5e2ca24d17e2393
 size 12345
 (ending \n)
 </code></pre><p>Nowadays, most Git clients are capable of detecting LFS and automatically setting up LFS configuration during cloning. However, if there are issues with LFS initialization, you can manually execute the following commands:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs install
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs install
 </span></span><span style="display:flex;"><span>git lfs pull
 </span></span></code></pre></div><p>Using LFS can reduce the size of Git history, as Git only stores Pointer Files. This can decrease the local disk space usage during cloning and improve efficiency, especially for large binary files in 3D game projects. However, there are some drawbacks:</p>
 <ul>
@@ -217,18 +217,18 @@ size 12345
 <p>To perform migration to LFS on existing repository, first, track all branches locally, as <code>lfs migrate</code> only applies to local branches:<br>
 <a href="https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches">https://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches</a></p>
 <p>Then execute following commands (This is an example of rewriting history for <code>.png</code> and <code>.psd</code> files from binary blobs to LFS pointers)</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs migrate import --everything --include=<span style="color:#0ff;font-weight:bold">&#34;*.png,*.psd&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git lfs migrate import --everything --include=<span style="color:#0ff;font-weight:bold">&#34;*.png,*.psd&#34;</span>
 </span></span><span style="display:flex;"><span>git reflog expire --expire=now --all &amp;&amp; git gc --prune=now
 </span></span><span style="display:flex;"><span>git remote set-url origin &lt;New repository location&gt;
 </span></span><span style="display:flex;"><span>git push --all origin --force
 </span></span></code></pre></div><p>Another common situation is that you modify the <code>.gitattributes</code> file to include new file extensions into the LFS scope, but the existing files are not replaced with Pointer Files. In this case, you will receive a following warning during Clone or Reset:</p>
 <pre tabindex="0"><code>Encountered 1 file(s) that should have been pointers, but weren&#39;t
 </code></pre><p>If you don&rsquo;t want to rewrite whole history but just want to replace current files with Pointer Files, you can use:</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># from https://stackoverflow.com/a/51626808</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># from https://stackoverflow.com/a/51626808</span>
 </span></span><span style="display:flex;"><span>git rm --cached -r .
 </span></span><span style="display:flex;"><span>git reset --hard
 </span></span></code></pre></div><p>Or</p>
-<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
+<div class="highlight"><pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># from https://github.com/git-lfs/git-lfs/issues/3421#issuecomment-610489798</span>
 </span></span><span style="display:flex;"><span>git add --renormalize .
 </span></span></code></pre></div><p>Then commit/push the changes to the repository.</p>
 <p>Just add the following to <code>.gitattributes</code>:</p>
@@ -275,13 +275,13 @@ size 12345
 <p><code>* binary</code></p>
 <p>This is because <a href="https://git-scm.com/docs/gitattributes#_using_macro_attributes">Binary</a> represents <code>-text -diff</code>, and we want to disable line ending conversion but keep text diff for <code>.scene</code>, <code>.prefab</code>, and <code>.meta</code> files. This allows us to observe changes in GameObjects, Components, or GUID changes in <code>.meta</code> files through diffs.</p>
 <figure class="center"><img src="/images/unity-git/prefab-diff.png"><figcaption>
-      <h4>In the case where Prefab is not added to LFS and does not have -diff, the diff in the Git client will be displayed like this. You can see that we changed the size of RectTransform to 200 x 200, but accidentally turned off the GameObject at the same time.</h4>
-    </figcaption>
+			<h4>In the case where Prefab is not added to LFS and does not have -diff, the diff in the Git client will be displayed like this. You can see that we changed the size of RectTransform to 200 x 200, but accidentally turned off the GameObject at the same time.</h4>
+		</figcaption>
 </figure>
 
 <figure class="center"><img src="/images/unity-git/meta-diff.png" width="600"><figcaption>
-      <h4>Seeing changes in GUID inside `.meta` files in changelist is very dangerous, as it indicates that Unity references may be lost.</h4>
-    </figcaption>
+			<h4>Seeing changes in GUID inside `.meta` files in changelist is very dangerous, as it indicates that Unity references may be lost.</h4>
+		</figcaption>
 </figure>
 
 <p>As for the issue of inconsistent line endings in <code>.meta</code> files, it was found through experimentation that Unity Editor saves them with LF line endings regardless of the OS, so it is hardcoded:</p>
@@ -331,8 +331,8 @@ trim_trailing_whitespace = true
 <h1 id="rebase">Rebase</h1>
 <p>I am used to the process of forked repository, fetch Upstream, push Origin, and open Merge Request, as well as add other colleagues&rsquo; forks as other remotes. I am also used to using <a href="https://git-scm.com/docs/git-rebase">Rebase</a> or <a href="https://git-scm.com/docs/git-cherry-pick">Cherrypick</a> to modify Git branch history. If someone merges to the main branch before I do, I will Rebase my own branch to the HEAD of main branch and then open a new Merge Request with <code>--no-ff</code> (<a href="https://git-scm.com/docs/git-merge#Documentation/git-merge.txt---no-ff">no fast-forward</a> to create a non-overlapping branch merge in the history, which makes it easy to trace in the future. Another situation is when a feature changes X to Y, but later it turns out that it was a mistake and it should be changed to Z instead. In such cases, I will try to modify the history to be X -&gt; Z before submitting the Merge Request, instead of X -&gt; Y -&gt; Z, to reduce the burden on reviewers. I feel that these operations could be included in the Code Review standards, but currently, I only do these operations myself due to time constraints and I don&rsquo;t have experience promoting to others.</p>
 <figure class="center"><img src="/images/unity-git/merge-rebase.png"><figcaption>
-      <h4>The difference in history between using Merge and Rebase followed by a merge with the `--no-ff` flag. Rebase is more understandable shown on the right side (history shown is for demonstration purposes only, actual work situations may be more complex).</h4>
-    </figcaption>
+			<h4>The difference in history between using Merge and Rebase followed by a merge with the `--no-ff` flag. Rebase is more understandable shown on the right side (history shown is for demonstration purposes only, actual work situations may be more complex).</h4>
+		</figcaption>
 </figure>
 
 <p>Reference:</p>
@@ -376,13 +376,13 @@ git lfs unlock &lt;file path&gt;
 <h1 id="vfs-for-git">VFS for Git</h1>
 <p><a href="https://vfsforgit.org/">VFS for Git</a> is a solution proposed by Microsoft for managing the large and old Windows repository using Git. It relies on the underlying <a href="https://docs.microsoft.com/zh-tw/windows/win32/projfs/projected-file-system">ProjFS</a> virtual file system. When using <code>gvfs clone</code>, you may see files exist on the disk but without content, and attempting to open and read the files will trigger blocking and ProjFS will start to download the content from the server. Testing <code>gvfs clone</code> was indeed very fast as Microsoft claimed, completing under one minute. The actual contents are automatically downloaded when opening the Unity project, as it intervenes at the file system level, and requires no modification for Unity 2020 and later versions to work. However, Unity Editor still scans the entire <code>/Assets/</code> folder to build the AssetDatabase every time it is executed, which means that the entire <code>/Assets/</code> folder is still processed and downloaded. To fully enjoy the benefits of only downloading files that are needed for editing, the engine needs to have a system that only touches files when they are needed.</p>
 <figure class="center"><img src="/images/unity-git/vfs-for-git-windows.png"><figcaption>
-      <h4>Even though Microsoft claims that the Windows repository is very large.</h4>
-    </figcaption>
+			<h4>Even though Microsoft claims that the Windows repository is very large.</h4>
+		</figcaption>
 </figure>
 
 <figure class="center"><img src="/images/unity-git/spider-man.png"><figcaption>
-      <h4>To be honest, compared to game repositories, it still doesn&#39;t feel very large.</h4>
-    </figcaption>
+			<h4>To be honest, compared to game repositories, it still doesn&#39;t feel very large.</h4>
+		</figcaption>
 </figure>
 
 <p>Although it looks impressive, it is still not feasible to consider adopting it at this stage. The main reason is that there are very few supported Git servers. Only Azure Repos is supported, and it has a <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/limits?view=azure-devops#repository-size">250GB size limit</a> which might make it impractical for larger projects. <a href="https://github.com/microsoft/VFSForGit/issues/1640#issuecomment-590880312">GitHub</a> and <a href="https://gitlab.com/gitlab-org/gitlab-foss/-/issues/27895">GitLab</a> do not seem to be actively interested in supporting it.</p>

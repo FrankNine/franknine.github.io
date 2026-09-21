@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://www.chunfuchao.com/zh/sitemap.xml</loc>
-    
-      <lastmod>2026-09-21T13:00:00+08:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://www.chunfuchao.com/en/sitemap.xml</loc>
-    
-  </sitemap>
-  
+	
+		<sitemap>
+			<loc>https://www.chunfuchao.com/en/sitemap.xml</loc>
+			
+		</sitemap>
+	
+		<sitemap>
+			<loc>https://www.chunfuchao.com/zh/sitemap.xml</loc>
+			
+				<lastmod>2026-09-21T13:00:00+08:00</lastmod>
+			
+		</sitemap>
+	
 </sitemapindex>

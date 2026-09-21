@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.148.2 with theme even" />
+<meta name="generator" content="Hugo 0.166.0 with theme even" />
 
 
 <link rel="canonical" href="https://www.chunfuchao.com/posts/unity-unit-testing-in-resharper-and-rider/" />
@@ -36,30 +36,30 @@
 
 
 
-<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
 
 <meta property="og:url" content="https://www.chunfuchao.com/posts/unity-unit-testing-in-resharper-and-rider/">
-  <meta property="og:site_name" content="Northern Wind">
-  <meta property="og:title" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
-  <meta property="og:description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：">
-  <meta property="og:locale" content="zh_TW">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2017-12-29T12:43:16+00:00">
-    <meta property="article:modified_time" content="2017-12-29T12:43:16+00:00">
+	<meta property="og:site_name" content="Northern Wind">
+	<meta property="og:title" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
+	<meta property="og:description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：">
+	<meta property="og:locale" content="zh_TW">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2017-12-29T12:43:16+00:00">
+		<meta property="article:modified_time" content="2017-12-29T12:43:16+00:00">
 
-  <meta itemprop="name" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
-  <meta itemprop="description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：">
-  <meta itemprop="datePublished" content="2017-12-29T12:43:16+00:00">
-  <meta itemprop="dateModified" content="2017-12-29T12:43:16+00:00">
-  <meta itemprop="wordCount" content="2025">
-  <meta itemprop="keywords" content="Unity,ReSharper,Rider,NUnit">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
-  <meta name="twitter:description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：">
+	<meta itemprop="name" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
+	<meta itemprop="description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：">
+	<meta itemprop="datePublished" content="2017-12-29T12:43:16+00:00">
+	<meta itemprop="dateModified" content="2017-12-29T12:43:16+00:00">
+	<meta itemprop="wordCount" content="2025">
+	<meta itemprop="keywords" content="Unity,ReSharper,Rider,NUnit">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="使用 ReSharper 或 Rider 在編輯器裡執行 Unity 元件測試">
+	<meta name="twitter:description" content="從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug 跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（Working Effectively with Legacy Code），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：">
 
 
 
@@ -136,7 +136,8 @@
   <div class="post-content">
     <p>從我畢業第一份工作開始，就一直對測試很有興趣。因為當初菜鳥剛進入大公司做的工作很多是找 bug  跟救火，每次有時間壓力又找不到問題所在的時候都很痛苦。一直覺得「應該有更好的做法」，然後想去找其他處理過的人最後的結論是什麼。後來找到的參考資料是（<a href="https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052">Working Effectively with Legacy Code</a>），雖然書的標題裡面沒有寫到測試兩個字，但是這本書在首章就開宗明義就說：</p>
 <blockquote>
-<p>To me, legacy code is simply code without tests</p></blockquote>
+<p>To me, legacy code is simply code without tests</p>
+</blockquote>
 <p>雖然我認同書中闡述的概念，但是因為前東家不只自製引擎，還<a href="../visual-concepts-1/">自製語言</a>，改造過的 make 沒有文件根本不知道要怎麼拿去編譯遊戲本體以外的程式。所以到離職前都還沒有成功寫過一個測試。</p>
 <p>回台灣之後就一直是在使用 Unity，一開始 Unity 是沒有測試這個概念的。到 Unity 4 末期才開始有 <a href="https://assetstore.unity.com/packages/tools/utilities/unity-test-tools-13802">Unity Test Tool</a> 以 Asset Store 獨立套件存在（現已下架），之後慢慢成為 Unity 5 的一部分。Unity 官方也有釋出一些文件倡導該怎麼使用：</p>
 <ul>
