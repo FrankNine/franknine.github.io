@@ -37,7 +37,7 @@
 
 
 
-<link href="/sass/main.min.df1ccfcc22945b5c375deb6d468d2c8a232cbd796fdcf1576cb53f557c1b746c.css" rel="stylesheet">
+<link href="/sass/main.min.6f7c9102be391eaa6b946c7c36ccfb90ef0e9200fa5886711630107ab122afab.css" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/twitter_center.css">
 
@@ -58,7 +58,7 @@
 用 git 管理 Unity 專案有好一陣子了，剛好最近公司的 Open-source Unity Builder mimiron-lite 發布新版。同時公開了新的作為公司內標準的 git 設定檔。想分享一些設定檔背後的思維還有 git 使用的經驗。">
   <meta itemprop="datePublished" content="2020-05-10T23:20:12+08:00">
   <meta itemprop="dateModified" content="2026-05-08T02:00:00+08:00">
-  <meta itemprop="wordCount" content="9801">
+  <meta itemprop="wordCount" content="9852">
   <meta itemprop="keywords" content="Unity,git">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Unity 和 git">
@@ -324,19 +324,22 @@ end_of_line = lf
 trim_trailing_whitespace = true
 </code></pre><p><code>.gitattributes</code> 可以控制行尾，但是程式碼還可能會有文字編碼、BOM、或是 Tab / Space 不一致的問題。而編碼與 Tab / Space 可以靠在專案內放置 <code>.editorconfig</code> 提示程式編輯工具如何處理來完成。目前 Visual Studio、MonoDevelop 與 Rider 都會自動偵測 <code>.editorconfig</code> 的設定，而 Visual Studio Code 與 Notepad++ 則是需要安裝 Plugin。</p>
 <p>更進一步可以將 C# 的 <a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/naming-rules">Naming Convention</a> 也寫入 <code>.editorconfig</code>，達到跨編輯器的 Naming Convention 同步。C# 完整的設定可以參考 <a href="https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options">這裡</a>。</p>
-<pre tabindex="0"><code>Private filed 前綴 _ 的範例
+<pre tabindex="0"><code># Private Field Naming Convention 設為 Camel Case 前綴 _ 的範例
 
 [*.cs]
+# 定義 camel_case_prefix_underscore 為 Camel Case 前綴 _
 dotnet_naming_style.camel_case_prefix_underscore.capitalization = camel_case
 dotnet_naming_style.camel_case_prefix_underscore.required_prefix = _
 
-dotnet_naming_rule.private_members_with_underscore.style    = camel_case_prefix_underscore
-dotnet_naming_rule.private_members_with_underscore.symbols  = private_fields
-dotnet_naming_rule.private_members_with_underscore.severity = suggestion
-
+# 定義 private_fields 為 private readonly field
 dotnet_naming_symbols.private_fields.applicable_kinds           = field
 dotnet_naming_symbols.private_fields.applicable_accessibilities = private
 dotnet_naming_symbols.private_fields.required_modifiers         = readonly
+
+# 將 camel_case_prefix_underscore 作用在 private_fields，使用 suggestion 等級
+dotnet_naming_rule.private_members_with_underscore.style    = camel_case_prefix_underscore
+dotnet_naming_rule.private_members_with_underscore.symbols  = private_fields
+dotnet_naming_rule.private_members_with_underscore.severity = suggestion
 </code></pre><h1 id="worktree">Worktree</h1>
 <p>如果是開發多平台遊戲的人可能會習慣 clone 同一個專案一次以上，然後把平台設定成不同，例如一個 Clone 平台設定成 Android 一個平台設定成 iOS。雖然 <a href="https://docs.unity3d.com/2020.3/Documentation/Manual/CacheServer.html">Cache Server</a> / <a href="https://docs.unity3d.com/Manual/UnityAccelerator.html">Accelerator</a> 或是 <a href="https://discussions.unity.com/t/what-is-asset-database-v2/743732">AssetDatabase V2</a> 可以降低平台切換的成本，但是在硬碟上保留兩份專案還是最快最直觀的。缺點很直接是硬碟用量很大，其實可以 Clone 一次然後開一個以上的 <a href="https://git-scm.com/docs/git-worktree">Worktree</a>，這樣雖然還是有多個專案目錄，但是只會有一個 <code>.git</code> 資料夾，即電腦上只有一份 git 歷史。如果有容量的疑慮又電腦裝有容量大的傳統硬碟跟有限的 SSD，可以考慮把 git 歷史放在傳統硬碟，專案 Worktree 放在 SSD 上的安排。</p>
 <p>在 git 根目錄輸入：</p>
