@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <title>21 正確的法向量座標變換</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/ytFBWodj8LA?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 11\/21 Correct Normal Transformation - Interactive 3D Graphics-ytFBWodj8LA.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>我在我 <a href="http://www.realtimerendering.com/resources/RTNews/html/rtnews1a.html#art4">網路上的第一篇文章</a> 寫過這個問題，當時是 1987。</p>
+<p>反矩陣和轉置矩陣屬於線性代數的範疇。如果你對這個主題有興趣,可以考慮修習 <a href="http://www.khanacademy.org/math/linear-algebra">可汗學院的課程</a>。若想找一本專門針對電腦圖學的書,我很推薦 Farin 和 Hansford 合著的 <a href="https://www.amazon.com/Practical-Linear-Algebra-Textbooks-Mathematics-dp-0367507846/dp/0367507846">《Practical Linear Algebra》</a>，這本書透過大量圖示逐步建立直覺。至於為什麼要使用反矩陣的轉置，想看詳細推導以及其他實用數學內容的話，可以參考 Lengyel 的 <a href="https://www.amazon.com/dp/1435458869">《Mathematics for 3D Game Programming and Computer Graphics》</a>。</p>
+<p>譯註：<a href="https://gamemath.com/">《3D Math Primer for Graphics and Game Development》</a> 也不錯，可以線上閱覽。</p>
+
+</div>

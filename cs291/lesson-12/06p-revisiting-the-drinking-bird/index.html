@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/OrbitAndPanControls.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/dat.gui.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/uclass_BeveledBlockGeometry.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body style="margin: 0; padding: 0; overflow: hidden">
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 喝水鳥：加入眼睛、鼻子和橫桿
+// 你的任務是修改 createDrinkingBird 函數 163 行左右的程式
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var cameraControls, effectController;
+var clock = new THREE.Clock();
+var gridX = true;
+var gridY = false;
+var gridZ = false;
+var axes = true;
+var ground = true;
+
+function createDrinkingBird() {
+	// 材質
+	var headMaterial = new THREE.MeshLambertMaterial( );
+	headMaterial.color.r = 104/255;
+	headMaterial.color.g = 1/255;
+	headMaterial.color.b = 5/255;
+
+	var hatMaterial = new THREE.MeshPhongMaterial( { shininess: 100 } );
+	hatMaterial.color.r = 24/255;
+	hatMaterial.color.g = 38/255;
+	hatMaterial.color.b = 77/255;
+	hatMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+
+	var bodyMaterial = new THREE.MeshPhongMaterial( { shininess: 100 } );
+	bodyMaterial.color.setRGB( 31/255, 86/255, 169/255 );
+	bodyMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+
+	var glassMaterial = new THREE.MeshPhongMaterial( { color: 0x0, specular: 0xFFFFFF, shininess: 100, opacity: 0.3, transparent: true } );
+
+	var legMaterial = new THREE.MeshPhongMaterial( { shininess: 4 } );
+	legMaterial.color.setHex( 0xAdA79b );
+	legMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+
+	var footMaterial = new THREE.MeshPhongMaterial( { color: 0x960f0b, shininess: 30 } );
+	footMaterial.specular.setRGB( 0.5, 0.5, 0.5 );
+
+	var sphere, cylinder, cube;
+
+	var bevelRadius = 1.9;	// TODO: 2.0 causes some geometry bug.
+
+	// 建模
+	// 基底
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 20&#43;64&#43;110, 4, 2*77&#43;12, bevelRadius ), footMaterial );
+	cube.position.x = -45;	// (20&#43;32) - half of width (20&#43;64&#43;110)/2
+	cube.position.y = 4/2;	// half of height
+	cube.position.z = 0;	// centered at origin
+	scene.add( cube );
+
+	// 腳掌
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 20&#43;64&#43;110, 52, 6, bevelRadius ), footMaterial );
+	cube.position.x = -45;	// (20&#43;32) - half of width (20&#43;64&#43;110)/2
+	cube.position.y = 52/2;	// half of height
+	cube.position.z = 77 &#43; 6/2;	// offset 77 &#43; half of depth 6/2
+	scene.add( cube );
+
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 20&#43;64&#43;110, 52, 6, bevelRadius ), footMaterial );
+	cube.position.x = -45;	// (20&#43;32) - half of width (20&#43;64&#43;110)/2
+	cube.position.y = 52/2;	// half of height
+	cube.position.z = -(77 &#43; 6/2);	// negative offset 77 &#43; half of depth 6/2
+	scene.add( cube );
+
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 64, 104, 6, bevelRadius ), footMaterial );
+	cube.position.x = 0;	// centered on origin along X
+	cube.position.y = 104/2;
+	cube.position.z = 77 &#43; 6/2;	// negative offset 77 &#43; half of depth 6/2
+	scene.add( cube );
+
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 64, 104, 6, bevelRadius ), footMaterial );
+	cube.position.x = 0;	// centered on origin along X
+	cube.position.y = 104/2;
+	cube.position.z = -(77 &#43; 6/2);	// negative offset 77 &#43; half of depth 6/2
+	scene.add( cube );
+
+	// 腳
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 60, 282&#43;4, 4, bevelRadius ), legMaterial );
+	cube.position.x = 0;	// centered on origin along X
+	cube.position.y = 104 &#43; 282/2 - 2;
+	cube.position.z = 77 &#43; 6/2;	// negative offset 77 &#43; half of depth 6/2
+	scene.add( cube );
+
+	cube = new THREE.Mesh(
+		new THREE.BeveledBlockGeometry( 60, 282&#43;4, 4, bevelRadius ), legMaterial );
+	cube.position.x = 0;	// centered on origin along X
+	cube.position.y = 104 &#43; 282/2 - 2;
+	cube.position.z = -(77 &#43; 6/2);	// negative offset 77 &#43; half of depth 6/2
+	scene.add( cube );
+
+	// 身體
+	sphere = new THREE.Mesh(
+		new THREE.SphereGeometry( 104/2, 32, 16, 0, Math.PI * 2, Math.PI/2, Math.PI ), bodyMaterial );
+	sphere.position.x = 0;
+	sphere.position.y = 160;
+	sphere.position.z = 0;
+	scene.add( sphere );
+
+	// 半球的上蓋
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 104/2, 104/2, 0, 32 ), bodyMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 12/2, 12/2, 390 - 100, 32 ), bodyMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160 &#43; 390/2 - 100;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	// 玻璃
+	sphere = new THREE.Mesh(
+		new THREE.SphereGeometry( 116/2, 32, 16 ), glassMaterial );
+	sphere.position.x = 0;
+	sphere.position.y = 160;
+	sphere.position.z = 0;
+	scene.add( sphere );
+
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 24/2, 24/2, 390, 32 ), glassMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160 &#43; 390/2;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	// 頭
+	sphere = new THREE.Mesh(
+		new THREE.SphereGeometry( 104/2, 32, 16 ), headMaterial );
+	sphere.position.x = 0;
+	sphere.position.y = 160 &#43; 390;
+	sphere.position.z = 0;
+	scene.add( sphere );
+
+	// 帽子
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 142/2, 142/2, 10, 32 ), hatMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160 &#43; 390 &#43; 40 &#43; 10/2;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 80/2, 80/2, 70, 32 ), hatMaterial );
+	cylinder.position.x = 0;
+	cylinder.position.y = 160 &#43; 390 &#43; 40 &#43; 10 &#43; 70/2;
+	cylinder.position.z = 0;
+	scene.add( cylinder );
+
+	var crossbarMaterial = new THREE.MeshPhongMaterial( { color: 0x808080, specular: 0xFFFFFF, shininess: 400 } );
+	var eyeMaterial = new THREE.MeshPhongMaterial( { color: 0x000000, specular: 0x303030, shininess: 4 } );
+
+	// 你的程式要寫在這裡
+	// 新增橫桿支架、鼻子和眼睛
+	// 橫桿：用 crossbarMaterial 材質和
+	//   THREE.CylinderGeometry( XX, XX, XX, 32 ) 產生模型
+	//   圓柱體應該半徑 5、長度 200 且在高度 360
+	//   轉 90 度到定位
+	// 鼻子： headMaterial 材質和
+	//   THREE.CylinderGeometry( XX, XX, XX, 32 ) 產生模型
+	//   圓錐體應該尖端半徑 6，底部半徑 14 且高 70
+	//   轉 90 度到定位且放在座標 (-70, 530)
+	// 眼睛： 使用 eyeMaterial 材質和
+	//   THREE.SphereGeometry( XX, 32, 16 ) 產生模型
+	//   球的半徑各為 10 且移動到 X=-48, Y=560
+	//   再左右旋轉 20 度形成一對
+}
+
+function fillScene() {
+	scene = new THREE.Scene();
+	scene.fog = new THREE.Fog( 0x808080, 2000, 4000 );
+
+	// 燈光
+	var ambientLight = new THREE.AmbientLight( 0x222222 );
+
+	var light = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light.position.set( 200, 400, 500 );
+
+	var light2 = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light2.position.set( -500, 250, -200 );
+
+	scene.add(ambientLight);
+	scene.add(light);
+	scene.add(light2);
+
+}
+
+function init() {
+	canvasWidth = window.innerWidth;
+	canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth/canvasHeight;
+
+	// RENDERER
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColorHex( 0xAAAAAA, 1.0 );
+
+	// 攝影機
+	camera = new THREE.PerspectiveCamera( 40, canvasRatio, 1, 10000 );
+	camera.position.set( -384, 758, -492 );
+
+	// 控制
+	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
+	cameraControls.target.set(0,475,0);
+
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+function drawHelpers() {
+	if (ground) {
+		Coordinates.drawGround({size:10000});
+	}
+	if (gridX) {
+		Coordinates.drawGrid({size:10000,scale:0.01});
+	}
+	if (gridY) {
+		Coordinates.drawGrid({size:10000,scale:0.01, orientation:&#34;y&#34;});
+	}
+	if (gridZ) {
+		Coordinates.drawGrid({size:10000,scale:0.01, orientation:&#34;z&#34;});
+	}
+	if (axes) {
+		Coordinates.drawAllAxes({axisLength:200,axisRadius:1,axisTess:50});
+	}
+}
+
+function animate() {
+	window.requestAnimationFrame(animate);
+	render();
+}
+
+function render() {
+	var delta = clock.getDelta();
+	cameraControls.update(delta);
+
+	if ( effectController.newGridX !== gridX || effectController.newGridY !== gridY || effectController.newGridZ !== gridZ || effectController.newGround !== ground || effectController.newAxes !== axes)
+	{
+		gridX = effectController.newGridX;
+		gridY = effectController.newGridY;
+		gridZ = effectController.newGridZ;
+		ground = effectController.newGround;
+		axes = effectController.newAxes;
+		fillScene();
+		createDrinkingBird();
+		drawHelpers();
+	}
+
+	renderer.render(scene, camera);
+}
+
+function setupGui() {
+	effectController = {
+		newGridX: gridX,
+		newGridY: gridY,
+		newGridZ: gridZ,
+		newGround: ground,
+		newAxes: axes
+	};
+
+	var gui = new dat.GUI();
+	var h = gui.addFolder(&#34;顯示格線&#34;);
+	h.add( effectController, &#34;newGridX&#34;).name(&#34;顯示 XZ 格線&#34;);
+	h.add( effectController, &#34;newGridY&#34; ).name(&#34;顯示 YZ 格線&#34;);
+	h.add( effectController, &#34;newGridZ&#34; ).name(&#34;顯示 XY 格線&#34;);
+	h.add( effectController, &#34;newGround&#34; ).name(&#34;顯示地面&#34;);
+	h.add( effectController, &#34;newAxes&#34; ).name(&#34;顯示軸線&#34;);
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		init();
+		fillScene();
+		createDrinkingBird();
+		drawHelpers();
+		setupGui();
+		addToDOM();
+		animate();
+	} catch(e) {
+		var errorReport = &#34;你的程式遇到不可復原的錯誤，無法繪製 Canvas。錯誤是：&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/OrbitAndPanControls.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/dat.gui.min.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body style="margin: 0; padding: 0; overflow: hidden">
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 創造圓柱：加入程式碼以創造兩點之間的圓柱體
+// 你的任務是修改 createCylinderFromEnds 函數
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var cameraControls, effectController;
+var clock = new THREE.Clock();
+var gridX = true;
+var gridY = false;
+var gridZ = false;
+var axes = true;
+var ground = true;
+
+/**
+* 回傳 THREE.Mesh 圓錐 (CylinderGeometry) 位置從 top 到 bottom
+* @param material - THREE.Material
+* @param radius - 膠囊圓柱的半徑
+* @param top, bottom - THREE.Vector3，圓錐的上下端位置
+* @param segmentsWidth - 繞橫切面一圈的細分數，類似 CylinderGeometry 裡的 radiusSegments
+* @param openEnded - 是否產生圓錐的蓋子，true 代表不產生
+*/
+function createCylinderFromEnds( material, radiusTop, radiusBottom, top, bottom, segmentsWidth, openEnded)
+{
+	// 預設
+	segmentsWidth = (segmentsWidth === undefined) ? 32 : segmentsWidth;
+	openEnded = (openEnded === undefined) ? false : openEnded;
+
+	// 暫代設定，請以適當的程式取代：
+	var length = 100;
+	var cylAxis = new THREE.Vector3(100,100,-100);
+	var center = new THREE.Vector3(-100,100,100);
+	////////////////////
+
+	var cylGeom = new THREE.CylinderGeometry( radiusTop, radiusBottom, length, segmentsWidth, 1, openEnded );
+	var cyl = new THREE.Mesh( cylGeom, material );
+
+	// 傳遞圓柱體本身，希望對齊的軸，與中心點目標位置
+	makeLengthAngleAxisTransform( cyl, cylAxis, center );
+
+	return cyl;
+}
+
+// 將圓柱變換到貼齊給定的軸，再移動中心點
+function makeLengthAngleAxisTransform( cyl, cylAxis, center )
+{
+	cyl.matrixAutoUpdate = false;
+
+	// 從左到右使用參考座標系：平移（T）、旋轉（R）；TR
+	// 所以平移先
+	cyl.matrix.makeTranslation( center.x, center.y, center.z );
+
+	// cylAxis 與向上向量外積以取得旋轉軸
+	var yAxis = new THREE.Vector3(0,1,0);
+	// 之後內積需要正規化，先在這裡做掉
+	// 我有點懶惰，應該要複製到另一個 Vector3
+	cylAxis.normalize();
+	var rotationAxis = new THREE.Vector3();
+	rotationAxis.crossVectors( cylAxis, yAxis );
+	if ( rotationAxis.length() &lt; 0.000001 )
+	{
+		// 特殊情況：如果 rotationAxis 長度趨近於零，使用 X 軸
+		// 角度則可以使用 0 或是 PI
+		// 可以這樣是因為我們知道外積其中一軸是 &#43;Y
+		rotationAxis.set( 1, 0, 0 );
+	}
+	rotationAxis.normalize();
+
+	// cylAxis 和向上向量內積取得旋轉角的餘弦
+	var theta = -Math.acos( cylAxis.dot( yAxis ) );
+
+	var rotMatrix = new THREE.Matrix4();
+	rotMatrix.makeRotationAxis( rotationAxis, theta );
+	cyl.matrix.multiply( rotMatrix );
+}
+
+function fillScene() {
+	scene = new THREE.Scene();
+	scene.fog = new THREE.Fog( 0x808080, 2000, 4000 );
+
+	// 燈光
+	var ambientLight = new THREE.AmbientLight( 0x222222 );
+
+	var light = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light.position.set( 200, 400, 500 );
+
+	var light2 = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light2.position.set( -500, 250, -200 );
+
+	scene.add(ambientLight);
+	scene.add(light);
+	scene.add(light2);
+
+	// 測試材質與物件
+	var redMaterial = new THREE.MeshLambertMaterial( { color: 0xFF0000 } );
+	var greenMaterial = new THREE.MeshLambertMaterial( { color: 0x00FF00 } );
+	var blueMaterial = new THREE.MeshLambertMaterial( { color: 0x0000FF } );
+	var grayMaterial = new THREE.MeshLambertMaterial( { color: 0x808080 } );
+
+	var yellowMaterial = new THREE.MeshLambertMaterial( { color: 0xFFFF00 } );
+	var cyanMaterial = new THREE.MeshLambertMaterial( { color: 0x00FFFF } );
+	var magentaMaterial = new THREE.MeshLambertMaterial( { color: 0xFF00FF } );
+
+	var radiusTop = 50;
+	var radiusBottom = 0;
+	var segmentsWidth = 32;
+	var openEnded = false;
+	var cylinder;
+
+	// 沿 Y 軸
+	cylinder = new createCylinderFromEnds( greenMaterial,
+		radiusTop, radiusBottom,
+		new THREE.Vector3( 0, 300, 0 ),
+		new THREE.Vector3( 0, 0, 0 ),
+		segmentsWidth, openEnded );
+	scene.add( cylinder );
+
+	// 沿 X 軸
+	cylinder = new createCylinderFromEnds( redMaterial,
+		radiusTop, radiusBottom,
+		new THREE.Vector3( 300, 0, 0 ),
+		new THREE.Vector3( 0, 0, 0 ),
+		segmentsWidth, openEnded );
+	scene.add( cylinder );
+
+	// 沿 Z 軸
+	cylinder = new createCylinderFromEnds( blueMaterial,
+		radiusTop, radiusBottom,
+		new THREE.Vector3( 0, 0, 300 ),
+		new THREE.Vector3( 0, 0, 0 ),
+		segmentsWidth, openEnded );
+	scene.add( cylinder );
+
+	// 沿 XYZ 軸
+	cylinder = new createCylinderFromEnds( grayMaterial,
+		radiusTop, radiusBottom,
+		new THREE.Vector3( 200, 200, 200 ),
+		new THREE.Vector3( 0, 0, 0 ),
+		segmentsWidth, openEnded );
+	scene.add( cylinder );
+
+	// 沿 -Y 軸，沿 XYZ 軸平移
+	cylinder = new createCylinderFromEnds( yellowMaterial,
+		radiusTop, radiusBottom,
+		new THREE.Vector3( 50, 100, -200 ),
+		new THREE.Vector3( 50, 300, -200 ),
+		segmentsWidth, openEnded );
+	scene.add( cylinder );
+
+	// 沿 X 軸，從上一個圓柱的 top 位置開始
+	cylinder = new createCylinderFromEnds( cyanMaterial,
+		radiusTop, radiusBottom,
+		new THREE.Vector3( 50, 300, -200 ),
+		new THREE.Vector3( 250, 300, -200 ),
+		segmentsWidth, openEnded );
+	scene.add( cylinder );
+
+	// 從上一個圓柱的 bottom 位置開始
+	cylinder = new createCylinderFromEnds( magentaMaterial,
+		radiusTop, radiusBottom,
+		new THREE.Vector3( 250, 300, -200 ),
+		new THREE.Vector3( -150, 100, 0 ),
+		segmentsWidth );	// try openEnded default to false
+	scene.add( cylinder );
+}
+
+function init() {
+	canvasWidth = window.innerWidth;
+	canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth/canvasHeight;
+
+	// RENDERER
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColorHex( 0xAAAAAA, 1.0 );
+
+	// 攝影機
+	camera = new THREE.PerspectiveCamera( 40, canvasRatio, 1, 10000 );
+	camera.position.set( -528, 513, 92 );
+
+	// 控制
+	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
+	cameraControls.target.set(0,200,0);
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+function drawHelpers() {
+	if (ground) {
+		Coordinates.drawGround({size:10000});
+	}
+	if (gridX) {
+		Coordinates.drawGrid({size:10000,scale:0.01});
+	}
+	if (gridY) {
+		Coordinates.drawGrid({size:10000,scale:0.01, orientation:&#34;y&#34;});
+	}
+	if (gridZ) {
+		Coordinates.drawGrid({size:10000,scale:0.01, orientation:&#34;z&#34;});
+	}
+	if (axes) {
+		Coordinates.drawAllAxes({axisLength:200,axisRadius:1,axisTess:50});
+	}
+}
+
+function animate() {
+	window.requestAnimationFrame(animate);
+	render();
+}
+
+function render() {
+	var delta = clock.getDelta();
+	cameraControls.update(delta);
+
+	if ( effectController.newGridX !== gridX || effectController.newGridY !== gridY || effectController.newGridZ !== gridZ || effectController.newGround !== ground || effectController.newAxes !== axes)
+	{
+		gridX = effectController.newGridX;
+		gridY = effectController.newGridY;
+		gridZ = effectController.newGridZ;
+		ground = effectController.newGround;
+		axes = effectController.newAxes;
+
+		fillScene();
+		drawHelpers();
+	}
+
+	renderer.render(scene, camera);
+}
+
+function setupGui() {
+	effectController = {
+
+		newGridX: gridX,
+		newGridY: gridY,
+		newGridZ: gridZ,
+		newGround: ground,
+		newAxes: axes
+	};
+
+	var gui = new dat.GUI();
+	var h = gui.addFolder(&#34;顯示格線&#34;);
+	h.add( effectController, &#34;newGridX&#34;).name(&#34;顯示 XZ 格線&#34;);
+	h.add( effectController, &#34;newGridY&#34; ).name(&#34;顯示 YZ 格線&#34;);
+	h.add( effectController, &#34;newGridZ&#34; ).name(&#34;顯示 XY 格線&#34;);
+	h.add( effectController, &#34;newGround&#34; ).name(&#34;顯示地面&#34;);
+	h.add( effectController, &#34;newAxes&#34; ).name(&#34;顯示軸線&#34;);
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		init();
+		fillScene();
+		drawHelpers();
+		setupGui()
+		addToDOM();
+		animate();
+	} catch(e) {
+		var errorReport = &#34;你的程式遇到不可復原的錯誤，無法繪製 Canvas。錯誤是：&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

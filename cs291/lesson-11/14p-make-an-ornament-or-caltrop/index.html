@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/OrbitAndPanControls.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/dat.gui.min.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body style="margin: 0; padding: 0; overflow: hidden">
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 裝飾物旋轉軸／旋轉角度作業：再加入三個圓柱
+////////////////////////////////////////////////////////////////////////////////
+/*global THREE, Coordinates, document, window, dat*/
+
+var camera, scene, renderer;
+var cameraControls, effectController;
+var clock = new THREE.Clock();
+var bCube = true;
+var gridX = false;
+var gridY = false;
+var gridZ = false;
+var axes = true;
+var ground = false;
+
+function fillScene() {
+	scene = new THREE.Scene();
+	scene.fog = new THREE.Fog( 0x808080, 2000, 4000 );
+
+	// LIGHTS
+	var ambientLight = new THREE.AmbientLight( 0x222222 );
+
+	var light = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light.position.set( 200, 400, 500 );
+
+	var light2 = new THREE.DirectionalLight( 0xFFFFFF, 1.0 );
+	light2.position.set( -500, 250, -200 );
+
+	scene.add(ambientLight);
+	scene.add(light);
+	scene.add(light2);
+
+	var cylinderMaterial = new THREE.MeshPhongMaterial( { color: 0xD1F5FD, specular: 0xD1F5FD, shininess: 100 } );
+
+	// 取得對角頂點，計算圓柱目標軸與長度
+	var maxCorner = new THREE.Vector3(  1, 1, 1 );
+	var minCorner = new THREE.Vector3( -1,-1,-1 );
+	// 你能連續向量操作：
+	var cylAxis = new THREE.Vector3().subVectors( maxCorner, minCorner );
+	var cylLength = cylAxis.length();
+
+	// 內積 cylAxis 與向上向量以取得夾角餘弦
+	cylAxis.normalize();
+	var theta = Math.acos( cylAxis.dot( new THREE.Vector3(0,1,0) ) );
+	// 或者直接 theta = Math.acos( cylAxis.y );
+
+	// 你的程式寫在這裡
+	var cylinder = new THREE.Mesh(
+		new THREE.CylinderGeometry( 0.2, 0.2, cylLength, 32 ), cylinderMaterial );
+	var rotationAxis = new THREE.Vector3(1,0,-1);
+	// makeRotationAxis wants its axis normalized
+	rotationAxis.normalize();
+	// don&#39;t use position, rotation, scale
+	cylinder.matrixAutoUpdate = false;
+	cylinder.matrix.makeRotationAxis( rotationAxis, theta );
+	scene.add( cylinder );
+
+}
+
+function drawHelpers() {
+	if (ground) {
+		Coordinates.drawGround({size:100});
+	}
+	if (gridX) {
+		Coordinates.drawGrid({size:100,scale:1});
+	}
+	if (gridY) {
+		Coordinates.drawGrid({size:100,scale:1, orientation:&#34;y&#34;});
+	}
+	if (gridZ) {
+		Coordinates.drawGrid({size:100,scale:1, orientation:&#34;z&#34;});
+	}
+	if (axes) {
+		Coordinates.drawAllAxes({axisLength:5,axisRadius:0.01,axisTess:50});
+	}
+
+	if (bCube) {
+		var cubeMaterial = new THREE.MeshLambertMaterial(
+			{ color: 0xFFFFFF, opacity: 0.7, transparent: true } );
+		var cube = new THREE.Mesh(
+			new THREE.CubeGeometry( 2, 2, 2 ), cubeMaterial );
+		scene.add( cube );
+	}
+}
+
+function init() {
+	var canvasWidth = window.innerWidth;
+	var canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth / canvasHeight;
+
+	// RENDERER
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColorHex( 0xAAAAAA, 1.0 );
+
+	var container = document.getElementById(&#39;container&#39;);
+	container.appendChild( renderer.domElement );
+
+	// 攝影機
+	camera = new THREE.PerspectiveCamera( 30, canvasRatio, 1, 10000 );
+
+	// 控制
+	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
+	camera.position.set( -7, 7, 2 );
+	cameraControls.target.set(0,0,0);
+
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+function animate() {
+	window.requestAnimationFrame(animate);
+	render();
+}
+
+function render() {
+	var delta = clock.getDelta();
+	cameraControls.update(delta);
+
+	if ( effectController.newCube !== bCube || effectController.newGridX !== gridX || effectController.newGridY !== gridY || effectController.newGridZ !== gridZ || effectController.newGround !== ground || effectController.newAxes !== axes)
+	{
+		bCube = effectController.newCube;
+		gridX = effectController.newGridX;
+		gridY = effectController.newGridY;
+		gridZ = effectController.newGridZ;
+		ground = effectController.newGround;
+		axes = effectController.newAxes;
+
+		fillScene();
+		drawHelpers();
+	}
+	renderer.render(scene, camera);
+}
+
+
+
+function setupGui() {
+
+	effectController = {
+
+		newCube: bCube,
+		newGridX: gridX,
+		newGridY: gridY,
+		newGridZ: gridZ,
+		newGround: ground,
+		newAxes: axes
+	};
+
+	var gui = new dat.GUI();
+	gui.add( effectController, &#34;newCube&#34;).name(&#34;顯示立方體&#34;);
+	gui.add( effectController, &#34;newGridX&#34;).name(&#34;顯示 XZ 格線&#34;);
+	gui.add( effectController, &#34;newGridY&#34; ).name(&#34;顯示 YZ 格線&#34;);
+	gui.add( effectController, &#34;newGridZ&#34; ).name(&#34;顯示 XY 格線&#34;);
+	gui.add( effectController, &#34;newGround&#34; ).name(&#34;顯示地面&#34;);
+	gui.add( effectController, &#34;newAxes&#34; ).name(&#34;顯示軸線&#34;);
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		init();
+		fillScene();
+		setupGui();
+		drawHelpers();
+		addToDOM();
+		animate();
+	} catch(e) {
+		var errorReport = &#34;Your program encountered an unrecoverable error, can not draw on canvas. Error was:&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

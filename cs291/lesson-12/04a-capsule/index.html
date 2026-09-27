@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+  <title>04A 膠囊（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/Y0Zi5zi64r4?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 12\/04A Capsule - Interactive 3D Graphics-Y0Zi5zi64r4.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>解答：將 createCapsule 函數的 sphGeom 替換為：</p>
+<pre tabindex="0"><code>var capsule = new THREE.Object3D();
+capsule.add( cyl );
+if ( !openTop || !openBottom ) {
+	// instance geometry
+	var sphGeom = new THREE.SphereGeometry( radius, segmentsWidth, segmentsWidth/2 );
+	if ( !openTop ) {
+		var sphTop = new THREE.Mesh( sphGeom, material );
+		sphTop.position.set( top.x, top.y, top.z );
+		capsule.add( sphTop );
+	}
+	if ( !openBottom ) {
+		var sphBottom = new THREE.Mesh( sphGeom, material );
+		sphBottom.position.set( bottom.x, bottom.y, bottom.z );
+		capsule.add( sphBottom );
+	}
+}
+return capsule;
+</code></pre>
+</div>

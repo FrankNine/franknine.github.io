@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <title>14A 製作裝飾品或是蒺藜（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/1xrGSRwa9zE?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 11\/14A Make an Ornament or Caltrop - Interactive 3D Graphics-1xrGSRwa9zE.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p><strong>解答：</strong> 在 fillScene() 裡 <code>var theta</code> 後，替換程式為：</p>
+<pre tabindex="0"><code>var cylinderGeo = new THREE.CylinderGeometry( 0.2, 0.2, cylLength, 32 );
+for ( var i = 0; i &lt; 4; i++ )
+{
+	var cylinder = new THREE.Mesh( cylinderGeo, cylinderMaterial );
+	var x = (i &lt; 2) ? -1 : 1;
+	var z = (i % 2) ? -1 : 1;
+	var rotationAxis = new THREE.Vector3(x,0,z);
+	rotationAxis.normalize();
+	cylinder.matrixAutoUpdate = false;
+	cylinder.matrix.makeRotationAxis( rotationAxis, theta );
+	scene.add( cylinder );
+}
+</code></pre>
+</div>

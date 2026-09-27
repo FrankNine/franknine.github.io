@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <title>14 製作裝飾品或是蒺藜</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/P2nWhfqAaK4?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 11\/14 Make an Ornament or Caltrop - Interactive 3D Graphics-P2nWhfqAaK4.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>你可以用旋轉矩陣與 Three.js 的 Object3D.setEulerFromRotationMatrix 設定物件的尤拉角旋轉角度。這樣做有個優點是先前的 position 跟 scale 參數能繼續使用。</p>
+<p>課程上線時的 Three.js 版本是這樣呼叫。現在 API 改變了，你應該用新的 <a href="https://threejs.org/docs/#api/en/math/Euler">Euler</a> 類。</p>
+<p>軸轉座標變換與它的變體們在 <a href="https://web.archive.org/web/20250702150737/https://www.gamedev.net/reference/articles/article1199.asp">這裡</a> 有更多討論。</p>
+
+</div>

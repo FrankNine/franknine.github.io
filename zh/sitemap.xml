@@ -335,11 +335,19 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/01-matrix-math/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/01-overview-of-the-lesson/</loc>
   </url>
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-10/01-extended-robot-arm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/01-transpose-of-a-translation/</loc>
   </url>
   
   <url>
@@ -387,6 +395,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/01a-transpose-of-a-translation/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-14/01a-omni-light/</loc>
   </url>
   
@@ -404,6 +416,14 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-06/02-sam-black/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/02-matrix-spotting/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/02a-matrix-spotting/</loc>
   </url>
   
   <url>
@@ -436,6 +456,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-10/02p-robot-hand/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/02-matrix-vector-multiplication/</loc>
   </url>
   
   <url>
@@ -483,6 +507,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/02a-matrix-vector-multiplication/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-02/02a-what-is-not-paintable/</loc>
   </url>
   
@@ -512,6 +540,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-04/03-point-or-vector/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/03-point-and-vector-coordinates/</loc>
   </url>
   
   <url>
@@ -555,6 +587,14 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/03-cylinder-positioning---interactive-3d-graphics-t4hm3oobf-0/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/03a-cylinder-positioning/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/03-demo-orthographic-projection/</loc>
   </url>
   
@@ -595,6 +635,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/03p-cylinder-positioning/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/04-directional-light-in-three.js/</loc>
   </url>
   
@@ -619,6 +663,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/04-the-fourth-coordinate/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/04-point-and-vector-sum/</loc>
   </url>
   
@@ -636,6 +684,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-02/04-rendering-costs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/04-capsule/</loc>
   </url>
   
   <url>
@@ -679,6 +731,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/04a-capsule/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-10/04a-scale-versus-translate/</loc>
   </url>
   
@@ -691,6 +747,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/04p-capsule/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/05-rgb-color-demo/</loc>
   </url>
   
@@ -700,6 +760,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-16/05-division-by-zero/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/05-identity-matrix/</loc>
   </url>
   
   <url>
@@ -716,6 +780,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/05-lookat/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/05-helices/</loc>
   </url>
   
   <url>
@@ -767,6 +835,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/05a-helices/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/05a-set-a-directional-light/</loc>
   </url>
   
@@ -792,6 +864,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-10/05a-make-a-flower/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/05p-helices/</loc>
   </url>
   
   <url>
@@ -839,6 +915,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/06-translation-matrix/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/06-setting-the-color/</loc>
   </url>
   
@@ -848,6 +928,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-04/06-the-sun-also-rises/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/06-revisiting-the-drinking-bird/</loc>
   </url>
   
   <url>
@@ -880,6 +964,14 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-04/06a-the-sun-also-rises/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/06a-revisiting-the-drinking-bird/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/06p-revisiting-the-drinking-bird/</loc>
   </url>
   
   <url>
@@ -919,11 +1011,19 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/07-where-to-rotate/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-08/07-shading-and-illumination-costs/</loc>
   </url>
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-06/07-minimum-requirements/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/07-make-a-translation-matrix/</loc>
   </url>
   
   <url>
@@ -935,7 +1035,15 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/07a-where-to-rotate/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-08/07a-shading-and-illumination-costs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/07a-make-a-translation-matrix/</loc>
   </url>
   
   <url>
@@ -956,6 +1064,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-04/08-interview---which-way-is-up/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/08-using-a-matrix/</loc>
   </url>
   
   <url>
@@ -1000,6 +1112,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/09-math-refresher/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/09-rotation-matrix/</loc>
   </url>
   
   <url>
@@ -1055,6 +1171,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/10-dot-product/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/10-perspective-camera/</loc>
   </url>
   
@@ -1083,6 +1203,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/11-axis-of-rotation/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/11-color-interpolation/</loc>
   </url>
   
@@ -1092,6 +1216,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/11-demo-euler-angles/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/11a-axis-of-rotation/</loc>
   </url>
   
   <url>
@@ -1112,6 +1240,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/12p-fov-slider/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/12-angle-of-rotation/</loc>
   </url>
   
   <url>
@@ -1148,6 +1280,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/13-perspective-matrix/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/13-cross-product/</loc>
   </url>
   
   <url>
@@ -1207,11 +1343,23 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/14-make-an-ornament-or-caltrop/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/14p-make-an-ornament-or-caltrop/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/14a-shadows-in-three.js/</loc>
   </url>
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/14a-eye-vs.-camera/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/14a-make-an-ornament-or-caltrop/</loc>
   </url>
   
   <url>
@@ -1224,6 +1372,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/15-view-frustum/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/15-rotation-times-rotation/</loc>
   </url>
   
   <url>
@@ -1263,6 +1415,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/16-world-matrix/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/16-normalizing-a-vector/</loc>
   </url>
   
@@ -1291,6 +1447,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/17-series-of-operations/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/17-field-of-view/</loc>
   </url>
   
@@ -1303,11 +1463,19 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/17a-series-of-operations/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/17a-vector-length/</loc>
   </url>
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/18-object3d/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/18-frames/</loc>
   </url>
   
   <url>
@@ -1371,6 +1539,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/19-scale-matrix-and-normal/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/19-true-field-of-view/</loc>
   </url>
   
@@ -1411,6 +1583,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/20-transpose-and-inverse/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/20a-how-many-computers/</loc>
   </url>
   
@@ -1439,6 +1615,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/21-correct-normal-transformation/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/21a-reasons-for-instancing/</loc>
   </url>
   
@@ -1452,6 +1632,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/22-robot-arm/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/22-mirroring/</loc>
   </url>
   
   <url>
@@ -1475,6 +1659,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/23-mirror-normal-transformation/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/23-demo-robot-arm/</loc>
   </url>
   
@@ -1495,6 +1683,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/23a-mirror-normal-transformation/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/23a-simple-materials/</loc>
   </url>
   
@@ -1508,6 +1700,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/24-near-and-far-clipping/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/24-matrix-zones/</loc>
   </url>
   
   <url>
@@ -1527,6 +1723,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/25-summary-of-the-lesson/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/25-which-are-global/</loc>
   </url>
   
@@ -1540,6 +1740,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/26-hemisphere-lights/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/26-congratulations/</loc>
   </url>
   
   <url>
@@ -1792,6 +1996,14 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-10/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-11/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-12/</loc>
   </url>
   
   <url>

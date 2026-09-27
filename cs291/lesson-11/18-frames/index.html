@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <title>18 參考座標</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/86yVvMcrEr8?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 11\/18 Frames - Interactive 3D Graphics-86yVvMcrEr8.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>我不是很滿意這節課，太複雜了。我在 <a href="http://www.realtimerendering.com/blog/two-ways-to-think-about-transforms/">這裡</a> 試著重製這節課。</p>
+<p>你也許會想要再試試 <a href="/cs291/lesson-09/11-demo-euler-angles/">尤拉角展示</a>，看看 X 軸旋轉如何影響其他兩個旋轉，因為它是最後發生的。改變 X 就改變了 Y 軸與 Z 軸旋轉的參考座標。</p>
+<p>這是個重要的議題，但是很難在影片裡涵蓋。更專注的書面參考座標解釋，可以參考這個 <a href="https://web.archive.org/web/20140412191035/http://forums.udacity.com/questions/100165007/move-robot-around">論壇文章</a>。</p>
+
+</div>

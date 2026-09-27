@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+  <title>24 矩陣區域</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/DDeDzOQFg0o?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 11\/24 Matrix Zones - Interactive 3D Graphics-DDeDzOQFg0o.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>我專注於了解矩陣中的內容，是因為幾十年來一直在盯著這些 4x4 陣列看。這是一項冷門的技能，但知道什麼是「合理的矩陣」能幫助你除錯。
+舉例來說，我最近在 Autodesk 的一些示範程式碼中看到這個矩陣：</p>
+<p>1 0 0 0</p>
+<p>0 1 1 0</p>
+<p>0 1 1 0</p>
+<p>0 0 0 1</p>
+<p>如果你習慣觀察矩陣，會很清楚看出這是一個有問題的矩陣：通常左上角的 3x3 部分，其各列與各欄應該有相同的「長度」，也就是相同的 sqrt(x<em>x + y</em>y + z*z)。但這個矩陣的長度分別是 1、sqrt(2)、sqrt(2)。知道這種情況不太可能發生，讓我找出並修正了一個縮放矩陣設定方式的錯誤：原作者是直接設定矩陣數值，而不是透過乘上一個縮放矩陣來完成。</p>
+<p>譯註：關於四元數可以參考 3Blue1Brown 與 Ben Eater 的 <a href="https://eater.net/quaternions">Visualizing quaternions</a> 系列教學。</p>
+
+</div>

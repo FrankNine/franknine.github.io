@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>22 鏡像</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/Dx24F6GFZTA?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 11\/22 Mirroring - Interactive 3D Graphics-Dx24F6GFZTA.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>影片裡應該是垂直軸為 Z 軸而非水平軸，感謝 takuya 指出問題。</p>
+
+</div>
