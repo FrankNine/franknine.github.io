@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>48 漫射環境貼圖展示</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/qhpqSsycz1k?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/48 Diffuse Mapping Example - Interactive 3D Graphics-qhpqSsycz1k.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>在這個 <a href="https://web.archive.org/web/20120117211421/http://codeflow.org/entries/2011/apr/18/advanced-webgl-part-3-irradiance-environment-map/">網站</a> 有更多漫射環境貼圖，或稱為輻照度貼圖的資料與展示。</p>
+<p>漫射環境貼圖有辦法擴充，使不同表面有不同變化，參考這篇 Gene Greger et al. 的奠基性 <a href="https://www.sci.utah.edu/~bigler/images/msthesis/The%20irradiance%20volume.pdf">論文</a>，還有 Far Cry 3 的 <a href="https://fileadmin.cs.lth.se/cs/Education/EDAN35/lectures/L10b-Nikolay_DRTV.pdf">實作</a>。更好的是這裡有 <a href="https://web.archive.org/web/20120929140827/http://codeflow.org/entries/2012/aug/25/webgl-deferred-irradiance-volumes/">展示</a>（譯註：文章還能存取，展示已失效）。</p>
+
+</div>

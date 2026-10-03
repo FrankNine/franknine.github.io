@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <title>33 粒子與看板</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/tfghiimtgyY?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/33 Particles and Billboards - Interactive 3D Graphics-tfghiimtgyY.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>影片中的示範幾乎都包含在 Three.js 的發行版本中。清單如下：</p>
+<ul>
+<li><a href="https://threejs.org/examples/#webgl_points_billboards">圓形剪影</a></li>
+<li><a href="https://threejs.org/examples/#webgl_video_kinect">Kinect</a></li>
+<li><a href="https://threejs.org/examples/#webgl_points_sprites">雪花</a></li>
+<li><a href="https://mrdoob.com/lab/javascript/webgl/clouds/">雲朵</a></li>
+<li><a href="https://threejs.org/examples/#webgl_lensflares">鏡頭光暈</a></li>
+</ul>
+<p><a href="http://potree.org/potree/examples/showcase/skatepark.html">滑板公園的場景</a> 來自 Markus Schütz 的 potree.org 網站。</p>
+<p>想看更多用粒子呈現真實場景的範例，可以試試 potree.org 的 <a href="https://github.com/potree/potree/#showcase">展示</a> ——等得越久，載入的粒子就越多。</p>
+<p>想看附有註解、示範如何建立和使用看板的程式碼，請參考 Lee Stemkoski 的 <a href="https://stemkoski.github.io/Three.js/#Sprites">程式碼</a>。</p>
+<p>鏡頭光暈的說明在 <a href="http://en.wikipedia.org/wiki/Lens_flare">這裡</a>，而在 GPU 上模擬它的一些方法在 <a href="https://john-chapman-graphics.blogspot.com/2013/02/pseudo-lens-flare.html">這裡</a>。</p>
+<p>譯註：新的類似技術可以參考 <a href="https://en.wikipedia.org/wiki/Gaussian_splatting">Gaussian splatting</a>，實作可參考 <a href="https://bfeldman.me/3dgs-weekend/">3D Gaussian Splatting in a Weekend</a>。</p>
+
+</div>

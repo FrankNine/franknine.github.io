@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>40 Ambient Occlusion</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/uPZ81UaQNGI?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/40 Ambient Occlusion - Interactive 3D Graphics-uPZ81UaQNGI.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>我用這個 <a href="https://threejs.org/examples/#webgpu_materials_lightmap">展示</a> 創造 Lightmap 的範例圖。<a href="https://en.wikipedia.org/wiki/Ambient_occlusion">Ambient occlusion</a> 在維基 上有些基本介紹，<a href="https://en.wikipedia.org/wiki/Screen_space_ambient_occlusion">Screen Space Ambient Occlusion</a>。想看 Ambient occlusion 和 Screen Space Ambient Occlusion 實際應用與其他特效，請參考 <a href="https://www.4gamer.net/games/032/G003263/20121201006/">Agni’s Philosophy 的演講</a>。可以使用翻譯工具翻譯日文的部分。</p>
+
+</div>

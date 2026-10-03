@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>13 什麼造成了不連續？</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/B4oi5LSglfA?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/13 What Causes Texture Discontinuities - Interactive 3D Graphics-B4oi5LSglfA.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>你可以在這篇 <a href="http://www.geekshavefeelings.com/x/wp-content/uploads/2010/03/Its-Really-Not-a-Rendering-Bug-You-see....pdf">文章</a> 讀到這個（與其他許多）問題的資料。這篇文章提到用增加網格密度或是改變內插方式可以解決問題。我自己也寫了篇 <a href="https://www.realtimerendering.com/blog/limits-of-triangles/">文章</a> 討論這個問題。</p>
+
+</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>30 Alpha 的意義</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/icxheAgi8rg?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/30 The Meaning of Alpha - Interactive 3D Graphics-icxheAgi8rg.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>要特別說明的是，Alpha 真正代表的是不透明度與覆蓋量的乘積。請注意，不要把 Alpha 只當成其中一種，因為它永遠是兩者的乘積。例如，如果你的貼圖是半透明的，Alpha 為 0.8，而某個像素有 0.3 被這個貼上貼圖的多邊形覆蓋（假設你能算出這個值），那麼把這兩個數相乘，就會得到最終的 Alpha 值 0.24。</p>
+
+</div>

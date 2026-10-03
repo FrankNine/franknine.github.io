@@ -331,6 +331,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/01-introduction/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-16/01-near-plane-of-zero/</loc>
   </url>
   
@@ -479,6 +483,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/02-how-texturing-works/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-14/02-swivel-light-control/</loc>
   </url>
   
@@ -575,6 +583,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/03-texture-uvs/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-14/03-swivel-and-tilt-light-control/</loc>
   </url>
   
@@ -636,6 +648,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-12/03p-cylinder-positioning/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/04-uvs-in-three.js/</loc>
   </url>
   
   <url>
@@ -815,6 +831,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/05-make-a-textured-square/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-10/05-make-a-flower/</loc>
   </url>
   
@@ -863,11 +883,19 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/05a-make-a-textured-square/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-10/05a-make-a-flower/</loc>
   </url>
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-12/05p-helices/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/05p-make-a-textured-square/</loc>
   </url>
   
   <url>
@@ -928,6 +956,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-04/06-the-sun-also-rises/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/06-texture-mapping/</loc>
   </url>
   
   <url>
@@ -1007,6 +1039,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/07-texel-coordinates/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/07-rotation/</loc>
   </url>
   
@@ -1032,6 +1068,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/07a-what-color-is-magenta/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/07a-texel-coordinates/</loc>
   </url>
   
   <url>
@@ -1064,6 +1104,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-04/08-interview---which-way-is-up/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/08-texel-coordinates-explained/</loc>
   </url>
   
   <url>
@@ -1115,6 +1159,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/09-modifying-uv-coordinates/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-11/09-rotation-matrix/</loc>
   </url>
   
@@ -1156,6 +1204,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/10p-spot-light-in-three.js/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/10-uv-coordinates-demo/</loc>
   </url>
   
   <url>
@@ -1203,6 +1255,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/11-texture-distortion/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-11/11-axis-of-rotation/</loc>
   </url>
   
@@ -1243,6 +1299,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/12-texture-distortion-demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-11/12-angle-of-rotation/</loc>
   </url>
   
@@ -1268,6 +1328,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/13-a-simple-lighting-model/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/13-what-causes-texture-discontinuities/</loc>
   </url>
   
   <url>
@@ -1299,6 +1363,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/13a-what-causes-texture-discontinuities/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/13a-scale-a-sphere/</loc>
   </url>
   
@@ -1316,6 +1384,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/14p-shadows-in-three.js/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/14-wrap-modes/</loc>
   </url>
   
   <url>
@@ -1360,6 +1432,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-11/14a-make-an-ornament-or-caltrop/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/15-wrap-modes-demo/</loc>
   </url>
   
   <url>
@@ -1419,6 +1495,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/16-texture-transform/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/16-normalizing-a-vector/</loc>
   </url>
   
@@ -1452,6 +1532,14 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/17-field-of-view/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/17-texture-magnification/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/18-texture-magnification-demo/</loc>
   </url>
   
   <url>
@@ -1539,6 +1627,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/19-smooth-to-sharp/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-11/19-scale-matrix-and-normal/</loc>
   </url>
   
@@ -1571,6 +1663,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/20-why-smooth-to-sharp/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/20-hierarchy-of-objects/</loc>
   </url>
   
@@ -1584,6 +1680,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-11/20-transpose-and-inverse/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/20a-why-smooth-to-sharp/</loc>
   </url>
   
   <url>
@@ -1604,6 +1704,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-09/21-instancing/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/21-minification/</loc>
   </url>
   
   <url>
@@ -1651,11 +1755,19 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/22-minification-demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/22-dolly-pan-orbit/</loc>
   </url>
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/23-ka-kd-and-hsl/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/23-mipmapping/</loc>
   </url>
   
   <url>
@@ -1695,6 +1807,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/24-mipmapping-demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/24-indirect-lighting/</loc>
   </url>
   
@@ -1708,6 +1824,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/24-a-jog-down-the-pipeline/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/25-mipmap-size-increase/</loc>
   </url>
   
   <url>
@@ -1731,6 +1851,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/25a-mipmap-size-increase/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/25a-baking/</loc>
   </url>
   
@@ -1740,6 +1864,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/26-hemisphere-lights/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/26-anisotropy/</loc>
   </url>
   
   <url>
@@ -1775,11 +1903,19 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/27-sampling-and-filtering/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/27-skylighting/</loc>
   </url>
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/28-gouraud-shading/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/28-anisotropy-demo/</loc>
   </url>
   
   <url>
@@ -1807,7 +1943,15 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/29-transparency-mapping/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/29-demo-three.js-fog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/30-the-meaning-of-alpha/</loc>
   </url>
   
   <url>
@@ -1831,6 +1975,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/31-premultiplied-alpha/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/31a-flawed-painting/</loc>
   </url>
   
@@ -1843,6 +1991,14 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/32-valid-unmultiplying/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/32a-valid-unmultiplying/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/33-the-over-operator/</loc>
   </url>
   
@@ -1851,11 +2007,19 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/33-particles-and-billboard/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/34-z-buffer-optimization/</loc>
   </url>
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/34-simple-transparency-demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/34-making-particles/</loc>
   </url>
   
   <url>
@@ -1871,6 +2035,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/35-making-particles-demo/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/35a-the-over-operator-quiz/</loc>
   </url>
   
@@ -1883,11 +2051,27 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/36-particle-grid/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/36a-particle-grid/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/36p-particle-grid/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/37-the-z-buffer-and-transparency/</loc>
   </url>
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/37-demo-rendering-mode-0/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/37-displacement-and-normal-mapping/</loc>
   </url>
   
   <url>
@@ -1899,7 +2083,19 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/38-where-does-displacement-happen/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/38a-solving-transparent-z-buffering/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/38a-where-does-displacement-happen/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/39-light-mapping/</loc>
   </url>
   
   <url>
@@ -1912,6 +2108,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/39a-solving-transparent-z-buffering/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/40-ambient-occlusion/</loc>
   </url>
   
   <url>
@@ -1935,7 +2135,15 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/41-time-to-explore/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/42-what-went-wrong/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/42-skybox/</loc>
   </url>
   
   <url>
@@ -1943,7 +2151,15 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/43-reflection-mapping/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/43-advanced-transparency-methods/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/44-reflection-equation/</loc>
   </url>
   
   <url>
@@ -1951,7 +2167,35 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/44a-reflection-equation/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/45-conclusion/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/45-refraction-mapping/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/46-glossy-reflection/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/47-diffuse-environment-mapping/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/48-diffuse-mapping-example/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/49-on-the-fly-cube-maps/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/50-conclusion/</loc>
   </url>
   
   <url>
@@ -2020,6 +2264,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-16/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-17/</loc>
   </url>
   
 </urlset>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Lesson 17 貼圖</title>
+  <link rel=stylesheet type="text/css" href="/css/lesson.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <h1 id="title">Lesson 17 貼圖</h1>
+    <div id="lesson">
+      <div id="lesson_list">
+        <ul>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/01-introduction/" class="archive-post-link" target="lesson_frame">
+              01 介紹
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/02-how-texturing-works/" class="archive-post-link" target="lesson_frame">
+              02 貼圖如何運作
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/03-texture-uvs/" class="archive-post-link" target="lesson_frame">
+              03 貼圖 UV
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/04-uvs-in-three.js/" class="archive-post-link" target="lesson_frame">
+              04 Three.js 的 UV
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/05-make-a-textured-square/" class="archive-post-link" target="lesson_frame">
+              05 做出一個貼上貼圖的正方形
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/05a-make-a-textured-square/" class="archive-post-link" target="lesson_frame">
+              05A 做出一個貼上貼圖的正方形（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/05p-make-a-textured-square/" class="archive-post-link" target="lesson_frame">
+              05P 做出一個貼上貼圖的正方形（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/06-texture-mapping/" class="archive-post-link" target="lesson_frame">
+              06 貼圖映射
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/07-texel-coordinates/" class="archive-post-link" target="lesson_frame">
+              07 貼圖像素座標
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/07a-texel-coordinates/" class="archive-post-link" target="lesson_frame">
+              07A 貼圖像素座標（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/08-texel-coordinates-explained/" class="archive-post-link" target="lesson_frame">
+              08 解釋貼圖像素座標
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/09-modifying-uv-coordinates/" class="archive-post-link" target="lesson_frame">
+              09 修改 UV 座標
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/10-uv-coordinates-demo/" class="archive-post-link" target="lesson_frame">
+              10 UV 座標展示（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/11-texture-distortion/" class="archive-post-link" target="lesson_frame">
+              11 貼圖變形
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/12-texture-distortion-demo/" class="archive-post-link" target="lesson_frame">
+              12 貼圖變形展示（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/13-what-causes-texture-discontinuities/" class="archive-post-link" target="lesson_frame">
+              13 什麼造成了不連續？
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/13a-what-causes-texture-discontinuities/" class="archive-post-link" target="lesson_frame">
+              13A 什麼造成了不連續？（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/14-wrap-modes/" class="archive-post-link" target="lesson_frame">
+              14 Wrap 模式
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/15-wrap-modes-demo/" class="archive-post-link" target="lesson_frame">
+              15 Wrap 模式展示（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/16-texture-transform/" class="archive-post-link" target="lesson_frame">
+              16 貼圖座標變換
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/17-texture-magnification/" class="archive-post-link" target="lesson_frame">
+              17 貼圖放大
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/18-texture-magnification-demo/" class="archive-post-link" target="lesson_frame">
+              17 貼圖放大展示（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/19-smooth-to-sharp/" class="archive-post-link" target="lesson_frame">
+              19 平滑到銳利
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/20-why-smooth-to-sharp/" class="archive-post-link" target="lesson_frame">
+              20 為什麼平滑到銳利？
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/20a-why-smooth-to-sharp/" class="archive-post-link" target="lesson_frame">
+              20A Why Smooth to Sharp
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/21-minification/" class="archive-post-link" target="lesson_frame">
+              21 縮小
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/22-minification-demo/" class="archive-post-link" target="lesson_frame">
+              22 縮小展示（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/23-mipmapping/" class="archive-post-link" target="lesson_frame">
+              23 Mipmapping
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/24-mipmapping-demo/" class="archive-post-link" target="lesson_frame">
+              24 Mipmapping 展示（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/25-mipmap-size-increase/" class="archive-post-link" target="lesson_frame">
+              25 Mipmap 造成的容量增加
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/25a-mipmap-size-increase/" class="archive-post-link" target="lesson_frame">
+              25A Mipmap 造成的容量增加（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/26-anisotropy/" class="archive-post-link" target="lesson_frame">
+              26 各向異性
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/27-sampling-and-filtering/" class="archive-post-link" target="lesson_frame">
+              27 取樣與過濾
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/28-anisotropy-demo/" class="archive-post-link" target="lesson_frame">
+              28 各向異性展示（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/29-transparency-mapping/" class="archive-post-link" target="lesson_frame">
+              29 透明映射
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/30-the-meaning-of-alpha/" class="archive-post-link" target="lesson_frame">
+              30 Alpha 的意義
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/31-premultiplied-alpha/" class="archive-post-link" target="lesson_frame">
+              31 預乘 Alpha
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/32-valid-unmultiplying/" class="archive-post-link" target="lesson_frame">
+              32 有效的反預乘
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/32a-valid-unmultiplying/" class="archive-post-link" target="lesson_frame">
+              32A 有效的反預乘（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/33-particles-and-billboard/" class="archive-post-link" target="lesson_frame">
+              33 粒子與看板
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/34-making-particles/" class="archive-post-link" target="lesson_frame">
+              34 製造粒子
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/35-making-particles-demo/" class="archive-post-link" target="lesson_frame">
+              35 製造粒子展示（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/36-particle-grid/" class="archive-post-link" target="lesson_frame">
+              36 粒子網格
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/36a-particle-grid/" class="archive-post-link" target="lesson_frame">
+              36A 粒子網格（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/36p-particle-grid/" class="archive-post-link" target="lesson_frame">
+              36P 粒子網格（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/37-displacement-and-normal-mapping/" class="archive-post-link" target="lesson_frame">
+              37 位移貼圖與法線貼圖
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/38-where-does-displacement-happen/" class="archive-post-link" target="lesson_frame">
+              38 位移在哪發生？
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/38a-where-does-displacement-happen/" class="archive-post-link" target="lesson_frame">
+              38A 位移在哪發生？（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/39-light-mapping/" class="archive-post-link" target="lesson_frame">
+              39 光照貼圖
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/40-ambient-occlusion/" class="archive-post-link" target="lesson_frame">
+              40 Ambient Occlusion
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/41-time-to-explore/" class="archive-post-link" target="lesson_frame">
+              41 探索時間
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/42-skybox/" class="archive-post-link" target="lesson_frame">
+              42 天空盒
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/43-reflection-mapping/" class="archive-post-link" target="lesson_frame">
+              43 反射貼圖
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/44-reflection-equation/" class="archive-post-link" target="lesson_frame">
+              44 反射方程式
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/44a-reflection-equation/" class="archive-post-link" target="lesson_frame">
+              44A 反射方程式（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/45-refraction-mapping/" class="archive-post-link" target="lesson_frame">
+              45 折射貼圖
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/46-glossy-reflection/" class="archive-post-link" target="lesson_frame">
+              46 有光澤的反射
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/47-diffuse-environment-mapping/" class="archive-post-link" target="lesson_frame">
+              47 漫射環境貼圖
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/48-diffuse-mapping-example/" class="archive-post-link" target="lesson_frame">
+              48 漫射環境貼圖展示
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/49-on-the-fly-cube-maps/" class="archive-post-link" target="lesson_frame">
+              49 即時 Cube Map
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-17/50-conclusion/" class="archive-post-link" target="lesson_frame">
+              50 結語
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      <iframe id="lesson_content" name="lesson_frame"></iframe>
+    </div>
+  </div>
+</body>

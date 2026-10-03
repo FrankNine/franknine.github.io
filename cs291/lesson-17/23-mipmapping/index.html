@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>23 Mipmapping</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/8OtOFN17jxM?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/23 Mipmapping - Interactive 3D Graphics-8OtOFN17jxM.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>你可以在這個 <a href="https://threejs.org/examples/#webgl_materials_texture_manualmipmap">展示</a> 中，看到不同過濾方式的效果，以及用到的是哪一層 Mipmap（以顏色標示）。也可以試試這個 <a href="https://threejs.org/examples/#webgl_materials_texture_filters">展示</a>，看看各種取樣與過濾設定的效果。</p>
+<p>譯註：本課程錄製時 WebGL 2.0 尚未發表，在新的 WebGL 2.0 環境非 2 次方的貼圖也能產生 Mipmap。</p>
+
+</div>

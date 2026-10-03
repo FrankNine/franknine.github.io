@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>16 貼圖座標變換</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/mVVlO4v77hM?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/16 Texture Transform - Interactive 3D Graphics-mVVlO4v77hM.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>如果你想要知道進階的顏色平鋪方式，參考 <a href="https://procworld.blogspot.com/2013/01/introduction-to-wang-tiles.html">王氏平鋪</a> 的說明。</p>
+<p>Minecraft 現在支援貼圖動畫，可以製造出 <a href="https://youtu.be/1tm8K3n_Tps">瘋狂的效果</a>。</p>
+
+</div>

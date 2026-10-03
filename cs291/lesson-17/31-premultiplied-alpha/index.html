@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+  <title>31 預乘 Alpha</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/9kGcEoASY7k?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/31 Premultiplied Alpha - Interactive 3D Graphics-9kGcEoASY7k.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>預乘 Alpha 有許多好處，其中一些在 Tom Forsyth 的這篇部落格 <a href="https://tomforsyth1000.github.io/blog.wiki.html#%5B%5BPremultiplied%20alpha%5D%5D">文章</a> 中有所討論。</p>
+<p>有不少免費軟體可以處理貼圖的 Alpha，包括 <a href="https://www.gimp.org/">GIMP</a> 和 <a href="https://paint.net/">Paint.NET</a>。在 Paint.NET 的網頁上點擊時要小心，那裡簡直是廣告地雷區。</p>
+<p>前面提到的方程式假設目標（也就是你要拿來混色的原始顏色）的 Alpha 為 1，也就是完全不透明。</p>
+<p>進階小課程：如果目標也是半透明的，你會使用同一類的混色方程式，只是目標也要乘上它自己的 Alpha：</p>
+<p>color = colorSP + (1 - alphaS) * colorDP</p>
+<p>這裡所有的顏色都已預乘 Alpha，包括結果在內。也就是說，「colorSP」 代表 「已預乘 Alpha 的來源顏色」。</p>
+<p>結果的 Alpha 也必須計算，因為它不一定是 1（如果目的地的 Alpha 本來就是 1，結果才會自然是 1）：</p>
+<p>alpha = alphaS + (1 - alphaS) * alphaD</p>
+<p>「alphaS」 代表 「來源 alpha」，其餘依此類推。請注意它和顏色方程式之間的對稱性。這個小小的延伸我在任何一本書裡都找不到（連我們自己的書也沒有），所以想在這裡補充。</p>
+<p>譯註：不使用預乘 Alpha 也會在特定情況造成混色錯誤，請參考 Inigo Quilez 的 <a href="https://iquilezles.org/articles/premultipliedalpha/">文章</a>。</p>
+
+</div>

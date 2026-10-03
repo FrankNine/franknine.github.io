@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <title>43 反射貼圖</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/Wgy48IYYHzw?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/43 Reflection Mapping - Interactive 3D Graphics-Wgy48IYYHzw.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Lee Stemkoski 有附有註解的 <a href="https://stemkoski.github.io/Three.js/#Reflection">反射教學</a>。</p>
+<p><a href="https://www.humus.name/index.php?page=Textures">Humus 的網站</a> 有許多免費的反射 Cube Map 與其他資源。</p>
+<p>影片裡的 <a href="https://threejs.org/examples/#webgl_materials_car">展示</a> 來自 Three.js。另一個車的 <a href="https://jeromeetienne.github.io/tquery/plugins/car/examples/">展示</a>，這個你能用方向鍵開車。還有一個展示在 <a href="https://carvisualizer.plus360degrees.com/threejs/">這裡</a>。</p>
+
+</div>

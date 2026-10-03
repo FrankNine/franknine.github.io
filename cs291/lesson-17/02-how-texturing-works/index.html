@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <title>02 貼圖如何運作</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/PlsCp3zHHt8?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/02 How Texturing Works - Interactive 3D Graphics-PlsCp3zHHt8.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>想進一步了解 WebGL 在貼圖方面的安全性問題及處理方式，請參考 <a href="https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/">這篇</a> 和 <a href="https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html">這篇</a> 文章。若要在瀏覽器上於本機執行貼圖示範，你需要設定一些權限，或 <a href="https://www.realtimerendering.com/blog/setting-up-a-windows-server-for-webgl/">架設本機伺服器</a>。</p>
+<p>這裡是 <a href="https://giantbomb.com/wiki/Objects/Crate">出現木箱的電玩清單</a>。另一個木箱截圖合集在 <a href="https://www.arminbwagner.com/crates_and_barrels/crates.html">這裡</a>。</p>
+<p>有不少地方可以下載免費貼圖，例如 <a href="https://www.humus.name/index.php?page=Textures">Humus 的網站</a>、<a href="https://opengameart.org/textures/all">OpenGameArt</a>、<a href="https://www.turbosquid.com/">TurboSquid</a>，以及 Autodesk 的 <a href="http://area.autodesk.com/downloads/index/textures">AREA 網站</a>。（譯註：Autodesk AREA 已於 2025 關閉）</p>
+
+</div>

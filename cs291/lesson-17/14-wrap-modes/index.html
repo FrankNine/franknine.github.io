@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>14 Wrap 模式</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/7g3UibBtG5Q?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/14 Wrap Modes - Interactive 3D Graphics-7g3UibBtG5Q.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Lee Stemkoski 的 <a href="https://stemkoski.github.io/Three.js/#Texture-Repeat">程式</a> 裡有個使用重複的展示。</p>
+<p>注意 Wrap 模式 在 WebGL 中只能用在邊長是二的指數（POT/Power of Two）的貼圖，請參考 <a href="https://wikis.khronos.org/webgl/WebGL_and_OpenGL_Differences#Non-Power_of_Two_Texture_Support">Wiki</a>。</p>
+
+</div>

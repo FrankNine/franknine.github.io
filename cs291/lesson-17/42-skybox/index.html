@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>42 天空盒</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/pRWw5nXmEGk?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/42 Skybox - Interactive 3D Graphics-pRWw5nXmEGk.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Lee Stemkoski 有附有註解的 <a href="https://stemkoski.github.io/Three.js/#Skybox">天空盒教學</a>，Three.js 也有天空盒的 <a href="https://threejs.org/examples/#webgl_materials_cubemap_refraction">程式</a>。</p>
+<p><a href="https://www.humus.name/index.php?page=Textures">Humus 的網站</a> 有許多免費的反射 Cube Map 與其他資源。</p>
+
+</div>

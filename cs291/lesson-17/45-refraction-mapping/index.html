@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>45 折射貼圖</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/96o_sFTjBB0?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 17\/45 Refraction Mapping - Interactive 3D Graphics-96o_sFTjBB0.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Three.js 提供數個折射的展示：: <a href="https://graphics.cs.wisc.edu/Courses/559-sp21-three/three.js/examples/webgl_materials_cubemap_balls_refraction.html">球體</a>、 <a href="https://graphics.cs.wisc.edu/Courses/559-sp21-three/three.js/examples/webgl_materials_cubemap_refraction.html">天使</a>，和 <a href="https://graphics.cs.wisc.edu/Courses/559-sp21-three/three.js/examples/webgl_materials_cubemap.html">頭像</a>。</p>
+<p>Lee Stemkoski 也照常提供了簡單的效果 <a href="https://stemkoski.github.io/Three.js/#refraction">展示</a>。</p>
+
+</div>
