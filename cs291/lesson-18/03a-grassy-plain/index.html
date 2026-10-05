@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+  <title>03A 草地（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/IcC06_zACq0?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 18\/03A Grassy Plain - Interactive 3D Graphics-IcC06_zACq0.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>解答：修改 fillScene() 的 solidGround：</p>
+<pre tabindex="0"><code>var texture = THREE.ImageUtils.loadTexture( &#39;/media/img/cs291/textures/grass512x512.jpg&#39; );
+texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+texture.repeat.set( 10, 10 );
+var solidGround = new THREE.Mesh( new THREE.PlaneGeometry( 10000, 10000, 100, 100 ), new THREE.MeshLambertMaterial( { map: texture } ) );
+solidGround.rotation.x = - Math.PI / 2;
+</code></pre>
+</div>

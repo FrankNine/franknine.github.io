@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>01 挑出一個字</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/o8iVwSMosBw?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 18\/01 Pick a Letter - Interactive 3D Graphics-o8iVwSMosBw.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>譯註：CS291 的原始程式在 <a href="https://github.com/udacity/cs291">udacity/cs291</a>，不過這裡有做一些處理不相容的修改。建議在這裡的網頁上操作。</p>
+
+</div>

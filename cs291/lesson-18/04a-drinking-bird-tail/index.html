@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+  <title>04A 喝水鳥尾巴（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/9_ZRNsSWf-0?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 18\/04A Drinking Bird Tail - Interactive 3D Graphics-9_ZRNsSWf-0.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>解答：取代 createTail() 裡創造尾巴的部分：</p>
+<pre tabindex="0"><code>var tailTexture = THREE.ImageUtils.loadTexture( &#39;/cs291/texture/feather.png&#39; );
+var tail = new THREE.Mesh(
+	new THREE.PlaneGeometry( 100, 100, 1, 1 ),
+	new THREE.MeshLambertMaterial(
+		{ map: tailTexture, side: THREE.DoubleSide, transparent: true } ) );
+</code></pre>
+</div>

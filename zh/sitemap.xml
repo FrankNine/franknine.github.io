@@ -367,6 +367,14 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/01-pick-a-letter/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/01p-pick-a-letter/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-02/01-frame-skipping/</loc>
   </url>
   
@@ -407,6 +415,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/01a-pick-a-letter/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-02/01a-frame-skipping/</loc>
   </url>
   
@@ -444,6 +456,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-05/02p-polygon-location/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/02-y-flipped-texture-coordinates/</loc>
   </url>
   
   <url>
@@ -507,6 +523,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/02a-y-flipped-texture-coordinates/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-16/02a-graphics-pipeline-coordinates/</loc>
   </url>
   
@@ -540,6 +560,14 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-07/03-rgb-color-definition/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/03-grassy-plain/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/03p-grassy-plain/</loc>
   </url>
   
   <url>
@@ -619,6 +647,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/03a-grassy-plain/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/03a-first-quiz/</loc>
   </url>
   
@@ -691,6 +723,14 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/04-drinking-bird-tail/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/04p-drinking-bird-tail/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-16/04-rear-view-camera/</loc>
   </url>
   
@@ -736,6 +776,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-14/04a-light-characteristics/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/04a-drinking-bird-tail/</loc>
   </url>
   
   <url>
@@ -792,6 +836,14 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-01/05-core-ideas/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/05-specular-mapping/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/05p-specular-mapping/</loc>
   </url>
   
   <url>
@@ -855,6 +907,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/05a-specular-mapping/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-12/05a-helices/</loc>
   </url>
   
@@ -900,6 +956,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-03/06-3d-printing-materials/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/06-bump-map-filtering/</loc>
   </url>
   
   <url>
@@ -967,6 +1027,10 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/06a-bump-map-filtering/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-15/06p-three.js-lookat/</loc>
   </url>
   
@@ -1019,6 +1083,14 @@
   </url>
   
   <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/07-reflection-mapping/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/07p-reflection-mapping/</loc>
+  </url>
+  
+  <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-13/07-ambient-lighting/</loc>
   </url>
   
@@ -1064,6 +1136,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-02/07a-first-programming-exercise/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/07a-reflection-mapping/</loc>
   </url>
   
   <url>
@@ -2268,6 +2344,10 @@
   
   <url>
     <loc>https://www.chunfuchao.com/cs291/lesson-17/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.chunfuchao.com/cs291/lesson-18/</loc>
   </url>
   
 </urlset>

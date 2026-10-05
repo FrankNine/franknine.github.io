@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>06 Bump Map 過濾</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/fJiJK9jtyZw?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 18\/06 Bump Map FIltering - Interactive 3D Graphics-fJiJK9jtyZw.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Mipmap 第 1 層法向量當初應該畫成向直上，因為它們是底下兩個法向量的平均。</p>
+
+</div>
