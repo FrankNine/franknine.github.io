@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>33 尤拉－龐加萊公式</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/3Qd01hN423w?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/33 Euler-Poincare Formula - Interactive 3D Graphics-3Qd01hN423w.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這個公式還能推出另一個有趣的結果：當網格的三角形越來越多（而且沒有增加洞），三角形與頂點的數量比會趨近 2 比 1。從「移除一個頂點會同時移除兩個三角形」這一點，就能看出其中的道理。</p>
+<p>不論三角形和頂點的形狀或連接方式如何，這個比例都成立。由此可以推得一個推論：隨著網格規模變大，交會於單一頂點的三角形平均數量通常會趨近 6 個。</p>
+
+</div>

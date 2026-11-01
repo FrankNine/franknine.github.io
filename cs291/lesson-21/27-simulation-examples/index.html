@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>27 模擬範例</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/oce92iZKR1o?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/27 Simulation Examples - Interactive 3D Graphics-oce92iZKR1o.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>本課中的影片是由 Jos Stam 和其他參與開發 Nucleus 動力學求解器的人員製作的。關於 Nucleus 背後的主要概念，可以參考這篇 <a href="https://web.archive.org/web/20120408195523/http://www.cgsociety.org/index.php/CGSFeatures/CGSFeatureSpecial/stam_on_mayas_ncloth">文章</a>。</p>
+<p>譯註：鳥類或魚類的群聚活動模擬通常使用 <a href="https://zh.wikipedia.org/zh-tw/Boids">Boids 算法</a>，人群之類更複雜的模擬是動畫方面專業的職位，稱為 <a href="https://en.wikipedia.org/wiki/Crowd_simulation">Crowd Simulation</a>。</p>
+
+</div>

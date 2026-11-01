@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>05A Fragment Shader 瓶頸（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/JjFJYk7wl-U?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/05A Fragment Shader Bottleneck - Interactive 3D Graphics-JjFJYk7wl-U.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>可以訪問這個 <a href="https://webglreport.com/">網頁</a> 看你的機器支援那些 WebGL 功能，WebGL 還有 <a href="https://registry.khronos.org/webgl/extensions/">擴充功能</a> 這些新提出而不一定所有機器都有的功能。</p>
+<p>譯註：所謂在 Fragment 改變 Z 深度常見的有 Alpha Clip、clip() 與 discard 這類捨棄 Fragment Shader 輸出的操作，或是直接修改深度，這些都會關閉 Early-Z。不過在新的 API 如果限制改變後的 Z 範圍一定是比柵格化輸出的自然深度還遠，還是可以開啟 Early-Z，稱為 <a href="https://therealmjp.github.io/posts/d3d11-features/">Conservative-Z</a>。更多的 Early-Z 資料，包含實測請參考 <a href="https://therealmjp.github.io/posts/to-earlyz-or-not-to-earlyz/">這裡</a>。</p>
+
+</div>

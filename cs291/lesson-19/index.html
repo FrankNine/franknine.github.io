@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Lesson 19 Shader</title>
+  <link rel=stylesheet type="text/css" href="/css/lesson.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <h1 id="title">Lesson 19 Shader</h1>
+    <div id="lesson">
+      <div id="lesson_list">
+        <ul>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/01-overview/" class="archive-post-link" target="lesson_frame">
+              01 概覽
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/02-programmable-shaders/" class="archive-post-link" target="lesson_frame">
+              02 可程式化 Shader
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/03-compute-chip-design-challenges/" class="archive-post-link" target="lesson_frame">
+              03 晶片設計的挑戰
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/04-vertex-and-fragment-shaders/" class="archive-post-link" target="lesson_frame">
+              04 Vertex 與 Fragment Shader
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/05-fragment-shader-bottleneck/" class="archive-post-link" target="lesson_frame">
+              05 Fragment Shader 瓶頸
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/05a-fragment-shader-bottleneck/" class="archive-post-link" target="lesson_frame">
+              05A Fragment Shader 瓶頸（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/06-shader-architecture/" class="archive-post-link" target="lesson_frame">
+              06 Shader 架構
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/07-shader-inputs/" class="archive-post-link" target="lesson_frame">
+              07 Shader 輸入
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/08-legal-inputs-and-outputs/" class="archive-post-link" target="lesson_frame">
+              08 合法的輸入與輸出
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/08a-legal-inputs-and-outputs/" class="archive-post-link" target="lesson_frame">
+              08A 合法的輸入與輸出（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/09-glsl-es/" class="archive-post-link" target="lesson_frame">
+              09 GLSL ES
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/10-vertex-shader-example/" class="archive-post-link" target="lesson_frame">
+              10 Vertex Shader 範例
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/11-fragment-shader-example/" class="archive-post-link" target="lesson_frame">
+              11 Fragment Shader 範例
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/12-cartoon-shading/" class="archive-post-link" target="lesson_frame">
+              12 卡通風格著色
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/13-two-tone-shading/" class="archive-post-link" target="lesson_frame">
+              13 雙色調著色
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/13p-two-tone-shading/" class="archive-post-link" target="lesson_frame">
+              13 雙色調著色（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/13a-two-tone-shading/" class="archive-post-link" target="lesson_frame">
+              13A 雙色調著色（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/14-non-photorealistic-rendering/" class="archive-post-link" target="lesson_frame">
+              14 非寫實算繪
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/15-npr-per-material/" class="archive-post-link" target="lesson_frame">
+              15 非寫實算繪與材質
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/15a-npr-per-material/" class="archive-post-link" target="lesson_frame">
+              15A 非寫實算繪與材質（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/16-vertex-shader-programming/" class="archive-post-link" target="lesson_frame">
+              16 Vertex Shader 程式設計
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/17-procedural-textures/" class="archive-post-link" target="lesson_frame">
+              17 程式貼圖
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/18-3d-procedural-texturing/" class="archive-post-link" target="lesson_frame">
+              18 3D 程式貼圖
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/18p-3d-procedural-texturing/" class="archive-post-link" target="lesson_frame">
+              18 3D 程式貼圖（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/18a-3d-procedural-texturing/" class="archive-post-link" target="lesson_frame">
+              18A 3D 程式貼圖
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/19-debugging-shaders/" class="archive-post-link" target="lesson_frame">
+              19 Shader 除錯
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/19p-debugging-shaders/" class="archive-post-link" target="lesson_frame">
+              19 Shader 除錯（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/19a-debugging-shaders/" class="archive-post-link" target="lesson_frame">
+              19A Shader 除錯（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/20-fresnel-reflectance/" class="archive-post-link" target="lesson_frame">
+              20 Fresnel 反射
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/21-demo-fresnel/" class="archive-post-link" target="lesson_frame">
+              21 展示：Fresnel
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/22-energy-balanced-materials/" class="archive-post-link" target="lesson_frame">
+              22 能量平衡材質
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/23-demo-energy-balanced-blinn-phong/" class="archive-post-link" target="lesson_frame">
+              23 展示：能量平衡的 Blinn-Phong
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/24-physically-based-materials/" class="archive-post-link" target="lesson_frame">
+              24 基於物理的材質
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/25-brdf/" class="archive-post-link" target="lesson_frame">
+              25 BRDF
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/26-anisotropic-material/" class="archive-post-link" target="lesson_frame">
+              26 各向異性材質
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/26p-anisotropic-material/" class="archive-post-link" target="lesson_frame">
+              26 各向異性材質（程式）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/26a-anisotropic-material/" class="archive-post-link" target="lesson_frame">
+              26A 各向異性材質（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/27-bsdf-and-bssrdf/" class="archive-post-link" target="lesson_frame">
+              27 BSDF 與 BSSRDF
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/28-monitor-response-and-perception/" class="archive-post-link" target="lesson_frame">
+              28 顯示器回應與感知
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/29-gamma-correction/" class="archive-post-link" target="lesson_frame">
+              29 伽瑪校正
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/30-demo-gamma-correction-demo/" class="archive-post-link" target="lesson_frame">
+              30 展示：伽瑪校正
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/31-texturing-and-postprocessing/" class="archive-post-link" target="lesson_frame">
+              31 貼圖與後處理
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/32-gamma-banding/" class="archive-post-link" target="lesson_frame">
+              32 伽瑪色帶
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/32a-gamma-banding/" class="archive-post-link" target="lesson_frame">
+              32A 伽瑪色帶（解答）
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/33-conclusion/" class="archive-post-link" target="lesson_frame">
+              33 結語
+            </a>
+          </li>
+          
+          <li>
+            <a href="https://www.chunfuchao.com/cs291/lesson-19/34-interview-biggest-surprise/" class="archive-post-link" target="lesson_frame">
+              34 訪談：最大的驚喜
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+      <iframe id="lesson_content" name="lesson_frame"></iframe>
+    </div>
+  </div>
+</body>

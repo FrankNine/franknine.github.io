@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+  <title>31 貼圖與後處理</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/4x1W0Co6-pc?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/31 Texturing and Postprocessing - Interactive 3D Graphics-4x1W0Co6-pc.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>影片程式有個錯誤：<code>vec3 lumaColor</code> 一行結尾少了 <code>;</code>。</p>
+<p>更深入的教學在 <a href="https://www.airtightinteractive.com/2013/02/intro-to-pixel-shaders-in-three-js/">這裡</a>，包含我們節錄的它的 <a href="https://www.airtightinteractive.com/demos/js/shaders/preview/">展示</a>。Lee Stemkoski 有相關註解過的程式在 <a href="https://stemkoski.github.io/Three.js/#Shader-Simple">這裡</a>、<a href="https://stemkoski.github.io/Three.js/#Shader-Explorer">這裡</a> 和算繪至貼圖在 <a href="https://stemkoski.github.io/Three.js/#Camera-Texture">這裡</a>。</p>
+<p>WebGL 影像處理另一個好的展示在 <a href="https://evanw.github.io/webgl-filter/">這裡</a>。影像處理能做出很多好的效果，像是 <a href="https://29a.ch/sandbox/2012/fluidwebgl/">這個</a>。</p>
+<p><a href="https://web.archive.org/web/20150518103209/http://tog.acm.org/resources/shaderx/">ShaderX2: Tips &amp; Tricks</a> 雖然很舊了，但是是免費下載，有許多有關 GPU 影像處理的章節。</p>
+<p>Luma 跟 Luminance 的差別在 <a href="https://user.engineering.uiowa.edu/~aip/misc/colorfaq.html">這裡</a> 有討論。</p>
+<p>譯註：新的 Three.js 內建的 GLSL Shader 在 <a href="https://github.com/mrdoob/three.js/tree/dev/src/renderers/shaders/ShaderChunk">/src/renderers/shaders/ShaderChunk/</a> 下。</p>
+<p>現在後處理需要覆蓋全畫面大多使用一個超越螢幕大小的三角形，在效能上會稍微有優勢，請參考：<a href="https://wallisc.github.io/rendering/2021/04/18/Fullscreen-Pass.html">Optimizing Triangles for a Full-screen Pass</a>。</p>
+<p>影片提到的模糊可以分兩次以節約效能是傳統的 2D N * N Guassian Blur，使用兩次後處理可以使 O(n^2) 的貼圖存取降到 O(n)。詳細請參考：<a href="https://www.intel.com/content/www/us/en/developer/articles/technical/an-investigation-of-fast-real-time-gpu-based-image-blur-algorithms.html">An Investigation Of Fast Real-Time GPU-based Image Blur Algorithms</a>。</p>
+<p>其他的模糊（Blur）演算法可以參考：<a href="https://blog.frost.kiwi/dual-kawase/">Video Game Blurs (and how the best one works)</a>。</p>
+
+</div>

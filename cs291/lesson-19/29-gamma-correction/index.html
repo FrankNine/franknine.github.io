@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <title>29 伽瑪校正</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/Bb9OqYDr_-8?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/29 Gamma Correction - Interactive 3D Graphics-Bb9OqYDr_-8.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Three.js 並不會在讀取貼圖時就正確校正貼圖顏色，而是在取樣未經校正的 Mipmap 層級時才校正。這導致使用到較高的 Mip 層級時，Mipmap 仍然會變暗。</p>
+<p>想快速以圖像方式了解伽瑪校正的效果，以及許多其他與基於物理的材質相關的內容，可以參考這份很值得一看的 <a href="http://www.thetenthplanet.de/archives/3684">投影片</a>。我最喜歡的伽瑪校正，出自免費又精彩的書<a href="https://developer.nvidia.com/gpugems/gpugems3/part-iv-image-effects/chapter-24-importance-being-linear">《GPU Gems 3》</a>。更多免費書籍請見我們的<a href="https://www.realtimerendering.com/index.html#books">線上書籍頁面</a>。其他不錯的文章在 <a href="https://filmicworlds.com/blog/linear-space-lighting-i-e-gamma/">這裡</a>和 <a href="https://filmicworlds.com/blog/">這裡</a>，此外還有許多，例如維基百科的 <a href="https://en.wikipedia.org/wiki/Gamma_correction">介紹</a>。</p>
+<p>顯示器回應與伽瑪校正還有更多細節，請參考這篇關於 sRGB 的 <a href="https://en.wikipedia.org/wiki/SRGB">文章</a>，了解業界的目標標準。更多關於 sRGB 以及相關顯示器與色彩問題的內容，請見我們的 <a href="https://www.realtimerendering.com/blog/?s=srgb">部落格</a>。WebGL 有一個已提案（但尚未實作）的 sRGB <a href="https://registry.khronos.org/webgl/extensions/EXT_sRGB/">擴充功能</a>。</p>
+<p>譯註：伽瑪校正與顏色偏移可以參考這則短影片：<a href="https://youtu.be/LKnqECcg6Gw">Computer Color is Broken</a>。</p>
+
+</div>

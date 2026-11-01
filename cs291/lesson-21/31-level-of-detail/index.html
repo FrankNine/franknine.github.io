@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <title>31 細節層次</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/TwaS5YuTTA0?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/31 Level of Detail - Interactive 3D Graphics-TwaS5YuTTA0.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>細節層次展示在 <a href="https://threejs.org/examples/#webgl_lod">這裡</a>。</p>
+<p>你可以開啟 Chrome 的 FPS 計數器做最佳化，方法在 <a href="https://beautifulpixels.blogspot.com/2013/03/chromes-fps-histogram.html">這裡</a>。</p>
+<p>細節層次與貼圖的層次在 <a href="https://www.lodbook.com/">Level of Detail for 3D Graphics</a> 和 <a href="https://virtualglobebook.com/">3D Engine Design for Virtual Globes</a> 兩本書中有討論。免費的相關資源有 SIGGRAPH 2012 <a href="https://web.archive.org/web/20151203094131/http://www.jurajobert.com/data/Virtual_Texturing_in_Software_and_Hardware_course_notes.pdf">Virtual Texturing in Software and Hardware</a> 課程講義。</p>
+<p><a href="https://mgarland.org/research/quadrics.html">Quadric Error Metrics</a> 是最常見的網格簡化演算法。<a href="https://www.meshlab.net/">MeshLab</a> 是開源免費的網格簡化與操作工具。</p>
+
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <title>33 結語</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/dph6qJzcK5I?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/33 Conclusion - Interactive 3D Graphics-dph6qJzcK5I.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>要繼續學習 Shader 程式設計，試試 <a href="https://github.com/stackgl/shader-school">Shader School</a>。注意看程式的輸出訊息視窗，以獲得任何任何編譯錯誤資訊。答案可以在 <a href="https://github.com/drewlustro/shader-school-answers">這裡</a> 找到。</p>
+<p><a href="https://www.shadertoy.com/">Shadertoy</a> 有許多具有啟發性的 Shader，站長 [Iñigo Quílez] 網站在 <a href="https://iquilezles.org/">這裡</a>。</p>
+<p>最新技術請參考 SIGGRAPH 的 <a href="https://advances.realtimerendering.com/">Advances in Real-Time Rendering in Games</a> 課程。或是親身參與 <a href="https://www.siggraph.org/">SIGGRAPH</a>，SIGGRAPH 歡迎志工。</p>
+<p>GPU 的內部構造與最佳化可以參考 SIGGRAPH 的 <a href="https://web.archive.org/web/20120807175840/http://bps12.idav.ucdavis.edu/">Beyond Programmable Shading</a> 課程，它有很多和 Shader 程式設計直接相關的材料。</p>
+
+</div>

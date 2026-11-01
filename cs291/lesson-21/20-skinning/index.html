@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>20 蒙皮</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/YXDzMZaAo0U?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/20 Skinning - Interactive 3D Graphics-YXDzMZaAo0U.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>《絕地要塞 2》的展示在 <a href="https://alteredqualia.com/three/examples/webgl_animation_skinning_tf2.html">這裡</a>。Three.js 內建的蒙皮展示有 <a href="https://threejs.org/examples/#webgl_animation_skinning_blending">這個</a> 和 <a href="https://threejs.org/examples/#webgl_loader_collada_skinning">這個</a>，還有這個簡單教學 <a href="https://graphics.cs.wisc.edu/Courses/559-sp21-three/three.js/examples/#webgl_skinning_simple">範例</a>。</p>
+
+</div>

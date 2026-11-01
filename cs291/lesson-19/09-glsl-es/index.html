@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>09 GLSL ES</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/pAUroRGPeqw?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/09 GLSL ES - Interactive 3D Graphics-pAUroRGPeqw.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這裡有一些 GLSL 資源：參考資源 <a href="https://web.archive.org/web/20150316124808/https://www.opengl.org/documentation/glsl/">網站</a>、<a href="https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language">語言描述</a>、<a href="https://registry.khronos.org/OpenGL-Refpages/gl4/index.php">使用手冊</a>、<a href="https://www.lighthouse3d.com/tutorials/glsl-12-tutorial/data-types-and-variables/">資料類別</a>、<a href="https://www.cs.cmu.edu/afs/cs/academic/class/15462-f10/www/lec_slides/glslref.pdf">快速參照表</a>，官方規格書在 <a href="https://learnwebgl.brown37.net/12_shader_language/documents/_GLSL_ES_Specification_1.0.17.pdf">這裡</a>。</p>
+<p>譯註：新的繪圖 API 如 <a href="https://vulkan.org/">Vulkan</a> 已經不傳遞 GLSL 字串，而是傳遞編譯成 <a href="https://www.khronos.org/spirv/">SPIR-V</a> 的二進位中介表示格式。詳細可以參考 <a href="https://vulkan-tutorial.com/Drawing_a_triangle/Graphics_pipeline_basics/Shader_modules">Vulkan Tutorial</a>。</p>
+
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <title>34 地形細節層次系統</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/8AmFyNAZumw?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/34 Terrain LOD System - Interactive 3D Graphics-8AmFyNAZumw.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這是那個地形範例的 <a href="https://www.zephyrosanemos.com/">網站</a>，非常有教育意義。展示本身在 <a href="https://www.zephyrosanemos.com/windstorm/current/live-demo.html">這裡</a>。</p>
+<p>這段 <a href="https://www.youtube.com/watch?v=qx40CRwwkS8&amp;t=943s">影片</a> 談到了 Three.js 中高效的 BufferGeometry 類別有哪些優點。</p>
+<p>還有另一種剔除方式，叫做遮擋剔除（Occlusion Culling）。以遮擋剔除為基礎的演算法會進行測試，快速判斷一個物體是否被場景中的其他物體完全遮住。免費的 GPU Gems <a href="https://developer.nvidia.com/gpugems/gpugems/contributors">系列書籍</a>中，有兩篇文章討論以 GPU 為基礎的遮擋剔除，分別在 <a href="https://developer.nvidia.com/gpugems/gpugems/part-v-performance-and-practicalities/chapter-29-efficient-occlusion-culling">這裡</a> 和 <a href="https://developer.nvidia.com/gpugems/gpugems2/part-i-geometric-complexity/chapter-6-hardware-occlusion-queries-made-useful">這裡</a>。另外還有許多其他的遮擋技術，例如這個用於球體的 <a href="https://web.archive.org/web/20130618060247/http://blogs.agi.com/insight3d/index.php/2009/03/25/horizon-culling-2/">技術</a>。</p>
+
+</div>

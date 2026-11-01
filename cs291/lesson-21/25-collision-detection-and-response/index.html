@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+  <title>25 碰撞偵測與反應</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/ROOoj9t6-NA?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/25 Collision Detection and Response - Interactive 3D Graphics-ROOoj9t6-NA.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Stefan Hedman 寫了一個有趣的小型碰撞偵測與約束求解 <a href="https://schteppe.github.io/cannon.js/">函式庫</a>，課程影片用的也是它。另外有 <a href="https://github.com/chandlerprall/Physijs">Physijs</a> 這個優秀的 Three.js 物理函式庫，帶有很好的展示。</p>
+<p>Lee Stemkoski 寫了一段程式碼，可以偵測一個方塊與其他方塊之間的 <a href="https://stemkoski.github.io/Three.js/#Collision-Detection">交集</a>。用方向鍵和 WASD 鍵就能移動方塊。</p>
+<p>這裡有一篇簡短的教學，介紹如何用光線投射做基本的角色 <a href="https://blog.webmaestro.fr/collisions-detection-three-js-raycasting/">碰撞偵測</a>。</p>
+<p>我維護了一張物體與物體之間的 <a href="https://www.realtimerendering.com/intersections.html">相交表</a>，裡面附有相關演算法和書籍的連結。</p>
+<p>譯註：這方面最知名的書籍依然是 <a href="https://realtimecollisiondetection.net/books/rtcd/">Real-Time Collision Detection</a>。</p>
+
+</div>

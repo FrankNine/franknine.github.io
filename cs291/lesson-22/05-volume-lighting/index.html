@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>05 體積光照</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/Khun1EKsq0o?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 22\/05 Volume Lighting - Interactive 3D Graphics-Khun1EKsq0o.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這張圖出自康乃爾大學電腦圖學計畫的 Greger 等人所發表的論文 <a href="https://www.sci.utah.edu/~bigler/images/msthesis/The%20irradiance%20volume.pdf">The Irradiance Volume</a>。這項技術已被用在許多遊戲引擎中，可以參考 <a href="https://cdn.fastly.steamstatic.com/apps/valve/2006/SIGGRAPH06_Course_ShadingInValvesSourceEngine.pdf">這裡</a>、<a href="https://web.archive.org/web/20130319033053/http://developer.amd.com/wordpress/media/2012/10/Tatarchuk_Irradiance_Volumes.pdf">這裡</a> 和 <a href="https://fileadmin.cs.lth.se/cs/Education/EDAN35/lectures/L10b-Nikolay_DRTV.pdf">這裡</a>。</p>
+
+</div>

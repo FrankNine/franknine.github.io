@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+  <title>05A 創造頂點法向量（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/jx1CSq-_Tbk?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 20\/05A Vertex Normal Creation - Interactive 3D Graphics-jx1CSq-_Tbk.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這是新的 Vertex Shader：</p>
+<pre tabindex="0"><code>void main() {
+	// 創造一個可修改的區域變數
+	vec3 newPosition = position;
+	// 將位置設定在一個球心在原點的球表面上
+	newPosition.z = sqrt(uSphereRadius2 - newPosition.x * newPosition.x - newPosition.y * newPosition.y);
+	// 設定法向量為相同（結果之後會被正規化）
+	vec3 newNormal = newPosition;
+	// 平移表面讓中心保持在視野範圍內
+	newPosition.z -= sqrt(uSphereRadius2);
+	gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
+	vNormal = normalize( normalMatrix * newNormal );
+	vec4 mvPosition = modelViewMatrix * vec4( newPosition, 1.0 );
+	vViewPosition = -mvPosition.xyz;
+}
+</code></pre>
+</div>

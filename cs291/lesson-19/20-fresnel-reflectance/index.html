@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <title>20 Fresnel 反射</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/rp1iKhbEbGE?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/20 Fresnel Reflectance - Interactive 3D Graphics-rp1iKhbEbGE.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>John Hable 的文章 <a href="https://filmicworlds.com/blog/everything-has-fresnel/">Everything has Fresnel</a> 以圖像化的方式，很好地介紹了 Fresnel 在真實世界材質中產生的效果。</p>
+<p>更多背景知識請參考維基百科的 Fresnel 方程式 <a href="https://en.wikipedia.org/wiki/Fresnel_equations">條目</a>。Sébastien Lagarde 有一篇更深入的 <a href="https://seblagarde.wordpress.com/2013/04/29/memo-on-fresnel-equations/">文章</a>，值得花時間一讀。我們的 <a href="https://www.amazon.com/Real-Time-Rendering-Fourth-Tomas-Akenine-M-C3-B6ller-dp-1138627003/dp/1138627003">書</a>也涵蓋了這個主題。</p>
+<p>Fresnel 項的 <a href="https://en.wikipedia.org/wiki/Schlick%27s_approximation">Schlick 近似</a> 由於計算快速，常用於互動式算繪。</p>
+<p>在接下來的 Fresnel 示範中，你會看到一個問題：在某些角度下，鏡面高光會直接消失。關於這個問題，可以在這篇 <a href="https://geekshavefeelings.com/posts/2010/mistakes-to-make-on-a-raytracer/files/Its-Really-Not-a-Rendering-Bug-You-see....pdf">文章</a> 中讀到更多說明，這篇文章我到目前為止已經推薦過很多次了。</p>
+
+</div>

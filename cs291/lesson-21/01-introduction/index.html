@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <title>01 簡介</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/zRkUP2FbMeI?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/01 Introduction - Interactive 3D Graphics-zRkUP2FbMeI.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>影片的展示來自 Max Ogden 與 James Halliday（譯註：Voxel.js，網路上沒有可執行的版本了），也請參考相關的 <a href="https://maxogden.com/">部落格</a>。還有 Daniel Hede 的 <a href="https://github.com/danfinlay/voxel-walk">展示</a>。</p>
+<p>如果你還沒看過 dat.GUI 的文件，它在 <a href="https://github.com/dataarts/dat.gui">這裡</a>。這是我們加滑桿的工具。</p>
+<p>Lee Stemkoski 的跟蹤相機 <a href="https://stemkoski.github.io/Three.js/#Chase-Camera">展示</a> 表現了如何讓攝影機跟隨移動物件，用 WASDQE 移動。另一個多攝影機 <a href="https://stemkoski.github.io/Three.js/#Multiple-Cameras">展示</a> 以數字 1 與 2 切換攝影機。</p>
+
+</div>

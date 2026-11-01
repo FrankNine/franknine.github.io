@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>03 模型變形</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/3BkQiSexjgk?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 20\/03 Model Deformation - Interactive 3D Graphics-3BkQiSexjgk.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>解答有兩部分：你要將位置設定在一個球心在原點的球表面上。然後另一個座標變換要平移表面，讓中心保持在視野範圍內。這就是我給的 ZPOS 公式所做的事情。</p>
+
+</div>

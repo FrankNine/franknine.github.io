@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>24 基於物理的材質</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/x7vC_VboNsg?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/24 Physically Based Materials - Interactive 3D Graphics-x7vC_VboNsg.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Jeff Russell 寫了一篇關於基於物理的材質不錯的 <a href="https://marmoset.co/posts/basic-theory-of-physically-based-rendering/">概論</a>has a good overview(<a href="http://www.marmoset.co/toolbag/learn/pbr-theory">http://www.marmoset.co/toolbag/learn/pbr-theory</a>) 裡面還有更多資源的連結。</p>
+<p>譯註：能量守恆要求主要不是在展現新的效果，而是工作流程上的統一。在能量不守恆的系統，跨越多場景的模型，例如主角。會很容易在一個場景調整好材質參數，結果在別的場景環境看起來太亮或太暗。</p>
+
+</div>

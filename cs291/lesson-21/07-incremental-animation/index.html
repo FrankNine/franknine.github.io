@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>07 增量動畫</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/16Pb9zGkbRU?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/07 Incremental Animation - Interactive 3D Graphics-16Pb9zGkbRU.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>增加新屬性也可能造成效能損失，參考這場 <a href="https://www.youtube.com/watch?v=UJPdhx5zTaw">演講</a>。</p>
+<p>課程上線後我才學到 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode"><code>&quot;use strict&quot;</code></a>，強烈建議你使用 <code>&quot;use strict&quot;</code> 來避免屬性的拼寫錯誤。</p>
+
+</div>

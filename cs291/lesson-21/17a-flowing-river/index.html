@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+  <title>17A 河流（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/-4kQ66nrkAg?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/17A Flowing River - Interactive 3D Graphics--4kQ66nrkAg.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>解答：在呼叫 <code>renderer.render()</code> 前修改：</p>
+<pre tabindex="0"><code>var time = clock.getElapsedTime();
+texture[effectController.mtlName].offset.set( 0, time );
+</code></pre><p>有波浪的版本：在呼叫 <code>renderer.render()</code> 前修改：</p>
+<pre tabindex="0"><code>// 加入一些擾動
+texture[effectController.mtlName].offset.set(
+	0.2*Math.sin(2*time), time );
+texture[effectController.mtlName].repeat.set( 
+	effectController.repeat, effectController.repeat/3 );
+</code></pre>
+</div>

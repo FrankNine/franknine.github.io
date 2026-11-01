@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>16 貼圖動畫</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/7vhBdCkAR5M?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/16 Texture Animation - Interactive 3D Graphics-7vhBdCkAR5M.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>Lee Stemkoski 的貼圖動畫教學程式在 <a href="https://stemkoski.github.io/Three.js/#Texture-Animation">這裡</a>，他的其他有註解的教學在 <a href="https://stemkoski.github.io/Three.js/index.html">這裡</a>。</p>
+<p>如果你不知道翻頁書是什麼，讀 <a href="http://en.wikipedia.org/wiki/Flip_book">這個</a>。</p>
+
+</div>

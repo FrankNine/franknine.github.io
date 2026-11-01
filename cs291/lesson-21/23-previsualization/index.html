@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>23 預視化</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/G45rU7S9HAs?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/23 Previsualization - Interactive 3D Graphics-G45rU7S9HAs.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>完整的訪問影片在 <a href="https://youtu.be/6vBx4Dm47iM">這裡</a>。更長的 Chris Edwards 的預視化訪談有三段在 <a href="https://youtu.be/5qkFibEY3ZM">這裡</a>、<a href="https://youtu.be/SmL3aOvXCG0">這裡</a> 和 <a href="https://youtu.be/WyyGJYHgygw">這裡</a>。</p>
+
+</div>

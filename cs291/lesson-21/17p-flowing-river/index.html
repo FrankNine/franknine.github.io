@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/OrbitAndPanControls.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/dat.gui.min.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body style="margin: 0; padding: 0; overflow: hidden">
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      
+        <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 貼圖動畫
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var cameraControls, effectController;
+var clock = new THREE.Clock();
+
+var uX = 1;
+var uY = 1;
+var uU = 1;
+var uV = 1;
+
+var texture = [];
+
+var material = [];
+var mtlName = &#39;grid&#39;;
+var wireMaterial;
+
+var wrapName = &#39;repeat&#39;;
+var wrapVal = THREE.RepeatWrapping;
+
+var gui;
+
+var showPoly = false;
+
+function fillScene() {
+	scene = new THREE.Scene();
+
+	// 背景格線與軸，格線單位 1，軸交叉在 (0, 0)
+	Coordinates.drawGrid({size:100,scale:1,orientation:&#34;z&#34;,offset:-0.01});
+	Coordinates.drawAxes({axisLength:2.1,axisOrientation:&#34;x&#34;,axisRadius:0.004,offset:-0.01});
+	Coordinates.drawAxes({axisLength:2.1,axisOrientation:&#34;y&#34;,axisRadius:0.004,offset:-0.01});
+
+	var myPolygon = new SquareGeometry();
+	var polygonObject = new THREE.Mesh( myPolygon, material[mtlName] );
+	scene.add(polygonObject);
+
+	if ( effectController.showPoly )
+	{
+		polygonObject = new THREE.Mesh( myPolygon, wireMaterial );
+		scene.add(polygonObject);
+	}
+}
+
+function setWrap() {
+	for (var name in texture)
+	{
+		if (texture.hasOwnProperty(name)) {
+			texture[name].wrapS = wrapVal; texture[name].wrapT = wrapVal;
+			// 如果你改變了 Wrap Mode，你要知會貼圖發生改變
+			texture[name].needsUpdate = true;
+		}
+	}
+}
+
+function SquareGeometry() {
+	var geo = new THREE.Geometry();
+
+	// 產生頂點
+	geo.vertices.push( new THREE.Vector3( 0.0, 0.0, 0.0 ) );
+	geo.vertices.push( new THREE.Vector3( uX, 0.0, 0.0 ) );
+	geo.vertices.push( new THREE.Vector3( uX, uY, 0.0 ) );
+	geo.vertices.push( new THREE.Vector3( 0.0, uY, 0.0 ) );
+
+	var uvs = [];
+	uvs.push( new THREE.Vector2( 0.0, 0.0 ) );
+	uvs.push( new THREE.Vector2( uU, 0.0 ) );
+	uvs.push( new THREE.Vector2( uU, uV ) );
+	uvs.push( new THREE.Vector2( 0.0, uV ) );
+
+	// 產生面
+	geo.faces.push( new THREE.Face3( 0, 1, 2 ) );
+	geo.faceVertexUvs[ 0 ].push( [ uvs[0], uvs[1], uvs[2] ] );
+	geo.faces.push( new THREE.Face3( 0, 2, 3 ) );
+	geo.faceVertexUvs[ 0 ].push( [ uvs[0], uvs[2], uvs[3] ] );
+
+	// 完成：回傳
+	return geo;
+}
+
+function init() {
+	canvasWidth = window.innerWidth;
+	canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth/canvasHeight;
+
+	// RENDERER
+	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColorHex( 0xFFFFFF, 1.0 );
+
+	// 攝影機：Y 上、X 右、Z 上
+	camera = new THREE.PerspectiveCamera( 1, canvasRatio, 10, 200 );
+	camera.position.set( 0.75, 0.5, 100 );
+
+	// 控制
+	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
+	cameraControls.target.set(0.75,0.5,0);
+
+	wireMaterial = new THREE.MeshBasicMaterial( { wireframe: true, color: 0x00FF00 } );
+
+	// 貼圖
+	texture.crate = THREE.ImageUtils.loadTexture( &#39;/cs291/texture/crate.gif&#39; );
+	texture.grid = THREE.ImageUtils.loadTexture( &#39;/cs291/texture/ash_uvgrid01.jpg&#39;);
+	//texture[&#39;maple&#39;] = THREE.ImageUtils.loadTexture( &#39;/cs291/texture/maple.png&#39; );
+	//texture[&#39;feather&#39;] = THREE.ImageUtils.loadTexture( &#39;/cs291/texture/feather.png&#39; );
+	texture.water = THREE.ImageUtils.loadTexture( &#39;/cs291/texture/water.jpg&#39; );
+	texture.concrete = THREE.ImageUtils.loadTexture( &#39;/cs291/texture/concrete.jpg&#39; );
+	texture.letterR = THREE.ImageUtils.loadTexture( &#39;/cs291/texture/r_border.png&#39; );
+
+	// 材質
+	for (var name in texture)
+	{
+		if (texture.hasOwnProperty(name)) {
+			material[name] = new THREE.MeshBasicMaterial( { map: texture[name], side:THREE.DoubleSide } );
+		}
+	}
+
+	setWrap();
+
+	fillScene();
+}
+
+function animate() {
+	window.requestAnimationFrame(animate);
+	render();
+}
+
+function render() {
+	var delta = clock.getDelta();
+	cameraControls.update(delta);
+
+	if ( effectController.reset )
+	{
+		resetGui();
+		// 遍歷所有控制
+		for (var i in gui.__controllers) {
+			if (gui.__controllers.hasOwnProperty(i)) {
+				gui.__controllers[i].updateDisplay();
+			}
+		}
+	}
+
+	var refill = false;
+	if ( wrapName !== effectController.wrap )
+	{
+		wrapName = effectController.wrap;
+		refill = true;
+
+		if ( effectController.wrap === &#39;repeat&#39; )
+		{
+			wrapVal = THREE.RepeatWrapping;
+		} else if ( effectController.wrap === &#39;mirrored repeat&#39; )
+		{
+			wrapVal = THREE.MirroredRepeatWrapping;
+		} else
+		{
+			wrapVal = THREE.ClampToEdgeWrapping;
+		}
+
+		setWrap();
+	}
+
+	if ( refill ||
+		showPoly !== effectController.showPoly ||
+		mtlName !== effectController.mtlName )
+	{
+		showPoly = effectController.showPoly;
+		mtlName = effectController.mtlName;
+		fillScene();
+	}
+
+	texture[effectController.mtlName].repeat.set(
+		effectController.repeat, effectController.repeat );
+
+	// 學生作業：
+	// 變換貼圖座標使貼圖以每秒幾張圖往下流動
+
+	renderer.render(scene, camera);
+}
+
+function resetGui() {
+	effectController = {
+
+		wrap: &#39;repeat&#39;,
+		repeat: 3,
+
+		showPoly: false,
+
+		mtlName: &#39;water&#39;,
+
+		reset: false
+	};
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+function setupGui() {
+	resetGui();
+
+	gui = new dat.GUI();
+	gui.add( effectController, &#34;wrap&#34;, [&#39;repeat&#39;, &#39;mirrored repeat&#39;, &#39;clamp to edge&#39;] ).name(&#34;Wrap Mode&#34;);
+	gui.add( effectController, &#34;repeat&#34;, 0.0, 10.0 ).name(&#34;貼圖重複&#34;);
+	gui.add( effectController, &#34;showPoly&#34; ).name(&#34;顯示多面體&#34;);
+	gui.add( effectController, &#34;mtlName&#34;, [&#39;crate&#39;,&#39;grid&#39;,&#39;water&#39;,&#39;concrete&#39;,&#39;letterR&#39;] ).name(&#34;貼圖影像&#34;);
+	gui.add( effectController, &#34;reset&#34; ).name(&#34;重置&#34;);
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		setupGui();
+		init();
+		fillScene();
+		addToDOM();
+		animate();
+	} catch(e) {
+		var errorReport = &#34;你的程式遇到不可復原的錯誤，無法繪製 Canvas。錯誤是：&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+      
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

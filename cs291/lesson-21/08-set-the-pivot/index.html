@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>08 設定旋轉軸心</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/yqxNe2XBwy0?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/08 Set the Pivot - Interactive 3D Graphics-yqxNe2XBwy0.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>提示：先想好你想要施加的座標變換順序：平移身體和頭使橫桿抵達原點，旋轉（已經包含在 render 方法），然後平移身體和頭到原來的位置。</p>
+<p>你可能會想要加入一個中間的物件包裹 <code>body</code> 與 <code>head</code>，同時是一開始程式的 bodyhead 的子物件。我的解答沒有用子物件所以我能只寫三行就完成，但是創造分別的物件來平移會比較清楚。</p>
+
+</div>

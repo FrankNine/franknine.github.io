@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <title>03A 模型變形（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/PnN8xpViyog?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 20\/03A Model Deformation - Interactive 3D Graphics-PnN8xpViyog.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這是新的 Vertex Shader：</p>
+<pre tabindex="0"><code>void main() { 
+	// 創造一個可修改的區域變數
+	vec3 newPosition = position;
+	// 將位置設定在一個球心在原點的球表面上
+	newPosition.z = sqrt(uSphereRadius2 - newPosition.x * newPosition.x - newPosition.y * newPosition.y);
+	// 平移表面讓中心保持在視野範圍內，可以跟上一步合併
+	newPosition.z -= sqrt(uSphereRadius2);
+	gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
+	vNormal = normalize( normalMatrix * normal );
+	vec4 mvPosition = modelViewMatrix * vec4( newPosition, 1.0 );
+	vViewPosition = -mvPosition.xyz;
+}
+</code></pre>
+</div>

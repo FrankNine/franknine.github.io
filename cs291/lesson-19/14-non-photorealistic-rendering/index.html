@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <title>14 非寫實算繪</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/c2C99pQlupg?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/14 Non-Photorealistic Rendering - Interactive 3D Graphics-c2C99pQlupg.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>譯註：現在模仿 2D 動畫風格的非寫實算繪算是顯學，資料非常的多。從 Guilty Gear 的 <a href="https://youtu.be/yhGjCzxJV3E">GuiltyGearXrd&rsquo;s Art Style : The X Factor Between 2D and 3D</a> 演講開始，再到米哈遊的 <a href="https://youtu.be/egHSE0dpWRw">
+From mobile to high-end PC: Achieving high quality anime style rendering on Unity</a>，之後百家爭鳴。</p>
+<p>另外一個受歡迎的非寫實風格是 <a href="https://zh.wikipedia.org/wiki/%E6%8A%96%E5%8B%95_%28%E6%95%B8%E4%BD%8D%E8%A8%8A%E8%99%9F%E8%99%95%E7%90%86%29">Dithering</a>，像是 <a href="https://store.steampowered.com/app/653530/Return_of_the_Obra_Dinn/">Return of the Obra Dinn</a> 的畫面風格，作者很好心地詳述 <a href="https://forums.tigsource.com/index.php?topic=40832.msg1363742#msg1363742">實作思路</a> 在 TIGSource 上。其他資料繁多，可以參考我的 <a href="https://github.com/FrankNine/franknine.github.io/wiki/Graphics#dithering">Wiki 整理</a>。</p>
+
+</div>

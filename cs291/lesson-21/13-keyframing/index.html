@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <title>13 關鍵影格</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/4gaG0_z_RcU?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/13 Keyframing - Interactive 3D Graphics-4gaG0_z_RcU.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這個 <a href="https://web.archive.org/web/20111007182210/http://learningthreejs.com/blog/2011/08/17/tweenjs-for-smooth-animation/">網站</a>對 tween.js 有很好的說明。關於從 Blender 匯出的更多資訊請看 <a href="https://web.archive.org/web/20120329111233/http://www.96methods.com/2012/02/three-js-very-basic-animation/">這裡</a>。這裡有另一個補間函式庫 Greensock 的 <a href="https://gsap.com/resources/">教學</a>。</p>
+<p>維基百科對關鍵影格的 <a href="https://en.wikipedia.org/wiki/Key_frame">概述</a>是個不錯的起點，不過內容主要著重在 2D。關於電腦圖學中內插的 <a href="https://en.wikipedia.org/wiki/Interpolation_%28computer_graphics%29">條目</a> 雖然很精簡，但也談到了一些基本概念。在 <a href="https://www.essentialmath.com/tutorial.htm">Essential Math for Games Programmers</a> 的課程講義中可以找到更多內容。</p>
+<p><a href="https://blackjk3.github.io/threefab/">ThreeFab</a> 可以讓你為場景製作動畫，課程中的檯燈動畫就是用它做的。它還是 alpha 版，而且看起來已經沒有在維護，但有一些有趣的功能。</p>
+<p>這個 <a href="https://graphics.cs.wisc.edu/Courses/559-sp21-three/three.js/examples/#webgl_loader_collada_kinematics">範例</a> 展示了一段用 three.js 製作的組裝動畫。</p>
+
+</div>

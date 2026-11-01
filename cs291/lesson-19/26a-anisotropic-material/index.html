@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+  <title>26A 各向異性材質（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/oWVV4mqqBSQ?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/26A Anisotropic Material - Interactive 3D Graphics-oWVV4mqqBSQ.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>解答：編輯 fragmentShader 變數，在 <code>vec3 normal = normalize( vNormal );</code> 之後替換為：</p>
+<pre tabindex="0"><code>for ( int i = 0; i &lt; 2; i++) {
+	vec3 offset = (i==0) ? vWorldPosition : -vWorldPosition;
+	offset.y = 0.0;
+	vec3 jiggledNormal = normalize( normal + uGroove * normalize( offset ) );
+
+	// 漫射：N * L。法向量必須正規化，因為經過內插計算
+	float diffuse = max( dot( jiggledNormal, lVector ), 0.0);
+
+	// 漫射貢獻減半，因為有兩個法向量
+	gl_FragColor.rgb += 0.5 * uKd * uMaterialColor * uDirLightColor * diffuse;
+
+	// 鏡面反射：N * H 的指數。H 是往光的向量加上往攝影機的向量正規化
+	vec3 viewPosition = normalize( vViewPosition );
+	vec3 pointHalfVector = normalize( lVector + viewPosition );
+	float pointDotNormalHalf = max( dot( jiggledNormal, pointHalfVector ), 0.0 );
+	float specular = uKs * pow( pointDotNormalHalf, shininess );
+	specular *= diffuse * (2.0 + shininess)/8.0;
+
+	// 這樣可能會切斷高光，但是比奇怪的閃爍好
+	if (diffuse &lt;= 0.0) { specular = 0.0; }
+
+	// 鏡面反射貢獻減半，因為有兩個法向量
+	gl_FragColor.rgb += 0.5 * uDirLightColor * uSpecularColor * specular;
+}
+</code></pre>
+</div>

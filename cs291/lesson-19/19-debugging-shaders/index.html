@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+  <title>19 Shader 除錯</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/7X9gUqf7Jms?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/19 Debugging Shaders - Interactive 3D Graphics-7X9gUqf7Jms.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>從這堂課錄製以來，很高興多了許多新的 WebGL 除錯工具可用。請參考我們的 <a href="https://www.realtimerendering.com/blog/webgl-debugging-and-profiling-tools/">部落格</a> 上寫的摘要。DirectX 11 API 的除錯因為有 Crytek 的 <a href="https://web.archive.org/web/20150510041303/http://cryengine.com/news/crytek-s-new-renderdoc-software-for-free">RenderDoc</a> 也有長足進步。</p>
+<p>這裡有一些 Chrome 的 Canvas inspection 除錯 WebGL <a href="https://web.archive.org/web/20130805191838/http://learningthreejs.com/blog/2013/04/05/debugging-with-chromes-canvas-inspection/">教學</a>。</p>
+<p>影像擷取我推薦需要付費的 <a href="https://www.faststone.org/FSCaptureDetail.htm">FastStone Capture</a>。</p>
+<p>譯註：現在 <a href="https://renderdoc.org/">RenderDoc</a> 成為開源專案和大家預設會用的繪圖 API 除錯工具。支援 DirectX、OpenGL、Vulkan 甚至是 Nintendo Switch 專用 NVN。各家繪圖晶片生產廠商也都有推出除錯工具，像是 NVIDIA <a href="https://developer.nvidia.com/nsight-systems">Nsight</a>、AMD <a href="https://gpuopen.com/news/introducing-radeon-developer-tool-suite/">Radeon™ Developer Tool Suite</a>、Intel <a href="https://www.intel.com/content/www/us/en/developer/tools/graphics-performance-analyzers/overview.html">Graphics Performance Analyzers</a>。手機 GPU 廠商、遊戲主機廠商也都有類似工具，如 <a href="https://learn.microsoft.com/zh-tw/windows/win32/direct3dtools/pix/articles/general/pix-overview">PIX</a>，就不一一列舉。</p>
+<p>EA 開源了 <a href="https://github.com/electronicarts/ShaderToHuman">ShaderToHuman</a> 專案，可以用 Shader 輸出字串等除錯資料到螢幕。概念與這堂課類似，但是更方便，值得研究。</p>
+
+</div>

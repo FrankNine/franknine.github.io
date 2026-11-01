@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <title>24 粒子系統</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/jsPfaQ7aMqk?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/24 Particle Systems - Interactive 3D Graphics-jsPfaQ7aMqk.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這裡有創造粒子動畫的 <a href="http://creativejs.com/tutorials/three-js-part-1-make-a-star-field/">教學</a>。</p>
+<p>創造並加上動畫的粒子系統程式可以看 Lee Stemkoski 的 <a href="https://stemkoski.github.io/Three.js/#Particles">教學</a>。</p>
+<p>這段課程使用的展示：</p>
+<ul>
+<li><a href="https://threejs.org/examples/#webgl_custom_attributes_points2">Varying size</a></li>
+<li><a href="https://threejs.org/examples/#webgl_points_dynamic">Particle people</a></li>
+<li>Firebolt 佚失</li>
+<li><a href="https://alteredqualia.com/three/examples/webgl_cubes.html">150K particles</a>，還有 <a href="https://alteredqualia.com/three/examples/webgl_cubes_indexed.html">500k particles</a> 版本。</li>
+</ul>
+<p>Jerome Etienne 有段粒子煙霧的短 <a href="http://jeromeetienne.github.io/tquery/www/live/editor/#U/../../../plugins/particles/examples/smokepuff.html">程式</a>。</p>
+<p>粒子系統的開創性論文 <a href="https://perso.lisn.upsaclay.fr/mbl/ENS/IG2/devoir2/files/docs/fuzzyParticles.pdf">Particle Systems A Technique for Modeling a Class of Fuzzy Objects</a> 依然值得閱讀，而且包含了《星艦迷航記2》的 <a href="https://youtu.be/GnziufszqSE?t=63">創世紀橋段</a>。</p>
+<p>參考這部 <a href="https://www.youtube.com/watch?v=-63AjgnaAAQ">影片</a> 看比較現代的粒子做法。</p>
+<p>譯註：粒子模擬流體的資料可以參考 <a href="https://en.wikipedia.org/wiki/Smoothed-particle_hydrodynamics">Smoothed-particle hydrodynamics</a>，Youtuber Sebastian Lague 有在 Unity 實作的 <a href="https://youtu.be/rSKMYc1CQHE">影片</a>。</p>
+
+</div>

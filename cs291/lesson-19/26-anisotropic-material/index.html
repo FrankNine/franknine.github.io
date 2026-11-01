@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>26 各向異性材質</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/l18dEnEfsDU?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 19\/26 Anisotropic Material - Interactive 3D Graphics-l18dEnEfsDU.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這裡的程式算是某種作弊，但存在有真的各向異性實作。你需要定義表面的方向與材質的面向，參考 <a href="https://web.archive.org/web/20150215143024/http://content.gpwiki.org/index.php/D3DBook:%28Lighting%29_Ward">這篇文章</a> 的傳統做法資料。</p>
+<p>在撰寫這個作業時我找到一個 Firefox 的 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=883659">Bug</a>，我提交給 Mozilla 而他們確認了是 Bug，最新的 Firefox 會修正這個 Bug。</p>
+
+</div>

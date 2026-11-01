@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+  <title>28 引導模擬</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/gcI97tJGo3U?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/28 Guided Simulation - Interactive 3D Graphics-gcI97tJGo3U.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>布料的最終算繪是由 Neil Hazzard 指導的 3ds Max 團隊完成的。</p>
+<p>針對布料模擬，這些 <a href="https://www.cs.cmu.edu/~baraff/sigcourse/">課程講義</a> 值得花時間一讀。</p>
+
+</div>

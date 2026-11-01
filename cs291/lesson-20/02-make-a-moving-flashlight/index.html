@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+  <title>02 製作一個會動的手電筒</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/GSyrC4U6-MI?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 20\/02 Make a Moving Flashlight - Interactive 3D Graphics-GSyrC4U6-MI.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>這裡有些 GLSL（OpenGL Shading Language）資源：OpenGL 參考 <a href="https://www.khronos.org/opengl/">網站</a>、<a href="https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language">語言描述</a>、<a href="https://registry.khronos.org/OpenGL-Refpages/gl4/index.php">使用手冊</a>、<a href="https://www.lighthouse3d.com/tutorials/glsl-tutorial/data-types/">資料類型</a>、與 <a href="https://www.cs.cmu.edu/afs/cs/academic/class/15462-f10/www/lec_slides/glslref.pdf">參考手冊</a>。</p>
+
+</div>

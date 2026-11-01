@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <title>04 點選</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/NGIEPVdfkbA?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/04 Picking - Interactive 3D Graphics-NGIEPVdfkbA.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>勘誤：我在大約 1:10 出現的圖畫出了錯誤。Normalized Device Coordinate 的左下角是 (-1, -1)，不是左上。相同地，(1, 1) 是右上，不是右下。</p>
+<p>注意：在這課我只有設定 mouseVector 的 X 與 Y 值，這是合法的 JavaScript，第三個值會預設到 0。事後回想，我覺得寫出 0 會比較清楚。</p>
+<p>參考 Three.js 的 <code>TrackballControls.js</code> 以了解觸控事件是如何處理的。</p>
+<p>有一種我沒有討論的作法是將每個物件都指定一個獨特的顏色後算繪，再在這張「ID 圖像」上查找該像素的顏色對應到哪個物件。</p>
+
+</div>

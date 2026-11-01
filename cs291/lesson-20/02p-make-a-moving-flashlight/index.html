@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="/codemirror/6.65.7/codemirror.min.css">
+  <script src="/codemirror/6.65.7/codemirror.min.js"></script>
+  <script src="/codemirror/6.65.7/mode/javascript/javascript.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "default"
+      });
+
+      var frame = document.getElementById("preview");
+      var doc = frame.contentDocument || frame.contentWindow.document;
+
+      editor.on("change", function (instance) {
+        var content = instance.getValue();
+        updatePreview(content);
+      });
+
+      editor.setSize(null, document.body.clientHeight)
+
+      function updatePreview(scriptContent) {
+        var fullHTML = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                \r\n\u003cscript src=\u0022\/js\/cs291\/lib\/three.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/jquery-1.8.3.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/Coordinates.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/OrbitAndPanControls.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/dat.gui.min.js\u0022\u003e\u003c\/script\u003e\r\n\u003cscript src=\u0022\/js\/cs291\/lib\/uclass_TeapotGeometry.js\u0022\u003e\u003c\/script\u003e\r\n
+                \x3Cscript>
+                    try {
+                            ${scriptContent}
+                        } catch (e) {
+                            console.error(e);
+                        }
+                <\/script>
+            </head>
+            <body style="margin: 0; padding: 0; overflow: hidden">
+                <div id="container"></div>
+            </body>
+            </html>
+        `;
+
+        doc.open();
+        try {
+          doc.write(fullHTML);
+        } catch (e) {
+          console.error(e);
+        }
+        doc.close();
+      }
+
+      updatePreview(editor.getValue());
+    });
+  </script>
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div style="display: flex; flex-direction: row; height: 100vh">
+    <form style="width:50%">
+      
+        <textarea id="editor">
+&#34;use strict&#34;; // 參考 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+////////////////////////////////////////////////////////////////////////////////
+// 移動手電筒－讓手電筒在 Fragment Shader 裡移動
+////////////////////////////////////////////////////////////////////////////////
+
+var camera, scene, renderer;
+var cameraControls;
+var effectController;
+var clock = new THREE.Clock();
+var tess = 7, newTess = tess;
+var ambientLight, light;
+var phongBalancedMaterial;
+var phongBalancedGroundMaterial;
+var flashlightOffset;
+
+var vertexShader = `
+	varying vec3 vNormal;
+	varying vec3 vViewPosition;
+
+	void main() {
+		gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+		vNormal = normalize( normalMatrix * normal );
+		vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+		vViewPosition = -mvPosition.xyz;
+	}
+`
+
+var fragmentShader = `
+	uniform vec3 uMaterialColor;
+	uniform vec3 uSpecularColor;
+
+	uniform vec3 uDirLightPos;
+	uniform vec3 uDirLightColor;
+
+	uniform vec3 uAmbientLightColor;
+
+	uniform float uKd;
+	uniform float uKs;
+	uniform float shininess;
+
+	uniform float uFlashRadius;
+	uniform vec2 uFlashOffset;
+
+	varying vec3 vNormal;
+	varying vec3 vViewPosition;
+
+	void main() {
+		// 環境光
+		gl_FragColor = vec4( uAmbientLightColor, 1.0 );
+
+		// 計算往光源的方向
+		vec4 lDirection = viewMatrix * vec4( uDirLightPos, 0.0 );
+		
+		// 正規化往光源的方向
+		vec3 lVector = normalize( lDirection.xyz );
+
+		// 手電筒：攝影機空間的 XY 座標在半徑內嗎？
+		// 學生作業：比較視角空間的位置和 uFlashOffset，看距離是否大於 uFlashRadius
+		if ( length( vViewPosition.xy ) &gt; uFlashRadius ) {
+			return;
+		}
+
+		vec3 normal = normalize( vNormal );
+		
+		// 漫射：N * L。法向量必須正規化，因為經過內插計算
+		float diffuse = max( dot( normal, lVector ), 0.0);
+
+		// 這樣可能會切斷高光，但是比奇怪的閃爍好
+		if (diffuse &lt;= 0.0) {
+			return;
+		}
+
+		gl_FragColor.rgb &#43;= uKd * uMaterialColor * uDirLightColor * diffuse;
+
+		// 鏡面反射：N * H 的指數。H 是往光的向量加上往攝影機的向量正規化
+		vec3 viewPosition = normalize( vViewPosition );
+		vec3 pointHalfVector = normalize( lVector &#43; viewPosition );
+		float pointDotNormalHalf = max( dot( normal, pointHalfVector ), 0.0 );
+		float specular = uKs * pow( pointDotNormalHalf, shininess );
+		specular *= diffuse*(2.0 &#43; shininess)/8.0;
+
+		gl_FragColor.rgb &#43;= uDirLightColor * uSpecularColor * specular;
+	}
+`
+
+function init() {
+	canvasWidth = window.innerWidth;
+	canvasHeight = window.innerHeight;
+	var canvasRatio = canvasWidth/canvasHeight;
+
+	// 光源
+	ambientLight = new THREE.AmbientLight(0x333333); // 0.2
+
+	light = new THREE.DirectionalLight(0xffffff, 1.0);
+	// 方向由 UI 操控
+
+	// RENDERER
+	renderer = new THREE.WebGLRenderer({ antialias: true });
+	renderer.setSize(canvasWidth, canvasHeight);
+	renderer.setClearColorHex(0xAAAAAA, 1.0);
+
+	renderer.gammaInput = true;
+	renderer.gammaOutput = true;
+
+	// 攝影機
+	camera = new THREE.PerspectiveCamera(45, canvasRatio, 0.01, 800);
+	camera.position.set( 4.3, 8.9, 10.6 );
+
+	// 控制
+	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
+	cameraControls.target.set(0, 0.5, 0);
+
+	// 材質
+	flashlightOffset = new THREE.Vector2();
+
+	var materialColor = new THREE.Color();
+	materialColor.setHSL(1.0, 0.8, 0.6);
+
+	phongBalancedMaterial = createShaderMaterial(&#34;phongBalanced&#34;, light, ambientLight);
+	phongBalancedMaterial.uniforms.uMaterialColor.value.copy(materialColor);
+	phongBalancedMaterial.side = THREE.DoubleSide;
+
+	phongBalancedGroundMaterial = createShaderMaterial(&#34;phongBalanced&#34;, light, ambientLight);
+	phongBalancedGroundMaterial.side = THREE.DoubleSide;
+	phongBalancedGroundMaterial.uniforms.shininess.value = 20;
+	phongBalancedGroundMaterial.uniforms.uKd.value = 0.5;
+	phongBalancedGroundMaterial.uniforms.uKs.value = 0.2;
+
+	materialColor.setRGB(0, 1, 1);
+	phongBalancedGroundMaterial.uniforms.uMaterialColor.value.copy(materialColor);
+	phongBalancedGroundMaterial.uniforms.uSpecularColor.value.copy(materialColor);
+}
+
+
+function fillScene() {
+	scene = new THREE.Scene();
+	scene.fog = new THREE.Fog(0x808080, 2000, 4000);
+
+	scene.add(camera);
+
+	scene.add(ambientLight);
+	scene.add(light);
+
+	var teapotSize = 1;
+	var teapot = new THREE.Mesh(
+		new THREE.TeapotGeometry(teapotSize, 20, true, true, true, true), 
+		phongBalancedMaterial);
+	teapot.position.y &#43;= teapotSize;
+
+	var solidGround = new THREE.Mesh(
+		new THREE.PlaneGeometry( 100, 100, 1,1 ),
+		phongBalancedGroundMaterial );
+	solidGround.rotation.x = - Math.PI / 2;
+	scene.add( solidGround );
+
+	scene.add(teapot);
+}
+
+
+function createShaderMaterial(id, light, ambientLight) {
+	var shaderTypes = {
+		&#39;phongBalanced&#39; : {
+			uniforms: {
+				&#34;uDirLightPos&#34;:	{ type: &#34;v3&#34;, value: new THREE.Vector3() },
+				&#34;uDirLightColor&#34;: { type: &#34;c&#34;, value: new THREE.Color( 0xffffff ) },
+				&#34;uAmbientLightColor&#34;: { type: &#34;c&#34;, value: new THREE.Color( 0x050505 ) },
+				&#34;uMaterialColor&#34;:  { type: &#34;c&#34;, value: new THREE.Color( 0xffffff ) },
+				&#34;uSpecularColor&#34;:  { type: &#34;c&#34;, value: new THREE.Color( 0xffffff ) },
+				uKd: {
+					type: &#34;f&#34;,
+					value: 0.7
+				},
+				uKs: {
+					type: &#34;f&#34;,
+					value: 0.3
+				},
+				shininess: {
+					type: &#34;f&#34;,
+					value: 100.0
+				},
+				uFlashRadius: {
+					type: &#34;f&#34;,
+					value: 1.0
+				},
+				&#34;uFlashOffset&#34;:	{ type: &#34;v2&#34;, value: new THREE.Vector2() }
+			}
+		}
+	};
+
+	var shader = shaderTypes[id];
+
+	var u = THREE.UniformsUtils.clone(shader.uniforms);
+
+	var vs = vertexShader;
+	var fs = fragmentShader;
+
+	var material = new THREE.ShaderMaterial({ uniforms: u, vertexShader: vs, fragmentShader: fs });
+	material.uniforms.uDirLightPos.value = light.position;
+	material.uniforms.uDirLightColor.value = light.color;
+	material.uniforms.uAmbientLightColor.value = ambientLight.color;
+	material.uniforms.uFlashOffset.value = flashlightOffset;
+
+	return material;
+}
+
+function setupGui() {
+	effectController = {
+		flashRadius: 2.0,
+		flashOffsetX: 1.7,
+		flashOffsetY: -0.3,
+
+		shininess: 20.0,
+		ka: 0.2,
+		kd: 0.4,
+		ks: 0.35,
+		metallic: false,
+
+		hue: 0.09,
+		saturation: 0.46,
+		lightness: 0.7,
+
+		lhue: 0.04,
+		lsaturation: 0.0,
+		llightness: 0.7
+	};
+
+	var h;
+
+	var gui = new dat.GUI();
+
+	// 材質（屬性）
+	h = gui.addFolder(&#34;手電筒控制&#34;);
+	h.add(effectController, &#34;flashRadius&#34;, 0.0, 10.0, 1.0).name(&#34;半徑&#34;);
+	h.add(effectController, &#34;flashOffsetX&#34;, -10.0, 10.0, 1.0).name(&#34;X 位移&#34;);
+	h.add(effectController, &#34;flashOffsetY&#34;, -10.0, 10.0, 1.0).name(&#34;Y 位移&#34;);
+
+	h = gui.addFolder(&#34;材質控制&#34;);
+	h.add(effectController, &#34;shininess&#34;, 1.0, 100.0, 1.0).name(&#34;閃亮程度&#34;);
+	h.add(effectController, &#34;ka&#34;, 0.0, 1.0, 0.025).name(&#34;環境光係數&#34;);
+	h.add(effectController, &#34;kd&#34;, 0.0, 1.0, 0.025).name(&#34;漫射係數&#34;);
+	h.add(effectController, &#34;ks&#34;, 0.0, 1.0, 0.025).name(&#34;閃亮程度係數&#34;);
+	h.add(effectController, &#34;metallic&#34;).name(&#34;金屬色澤&#34;);
+
+	// TODO: 加 tess 給鑲嵌
+
+	// 材質（顏色）
+	h = gui.addFolder(&#34;材質顏色&#34;);
+	h.add(effectController, &#34;hue&#34;, 0.0, 1.0, 0.025).name(&#34;色相&#34;);
+	h.add(effectController, &#34;saturation&#34;, 0.0, 1.0, 0.025).name(&#34;飽和度&#34;);
+	h.add(effectController, &#34;lightness&#34;, 0.0, 1.0, 0.025).name(&#34;明度&#34;);
+
+	// 光源（顏色）
+	h = gui.addFolder(&#34;光源顏色&#34;);
+	h.add(effectController, &#34;lhue&#34;, 0.0, 1.0, 0.025).name(&#34;色相&#34;);
+	h.add(effectController, &#34;lsaturation&#34;, 0.0, 1.0, 0.025).name(&#34;飽和度&#34;);
+	h.add(effectController, &#34;llightness&#34;, 0.0, 1.0, 0.025).name(&#34;明度&#34;);
+}
+
+function animate() {
+	requestAnimationFrame(animate);
+	render();
+}
+
+function render() {
+	var delta = clock.getDelta();
+
+	cameraControls.update(delta);
+
+	if (newTess !== tess ) {
+		tess = newTess;
+
+		fillScene();
+	}
+
+	flashlightOffset.set( -effectController.flashOffsetX, -effectController.flashOffsetY );
+
+	phongBalancedGroundMaterial.uniforms.uFlashRadius.value = 
+		effectController.flashRadius;
+
+	phongBalancedMaterial.uniforms.uFlashRadius.value = 
+		effectController.flashRadius;
+
+	phongBalancedMaterial.uniforms.shininess.value = effectController.shininess;
+	phongBalancedMaterial.uniforms.uKd.value = effectController.kd;
+	phongBalancedMaterial.uniforms.uKs.value = effectController.ks;
+
+	var materialColor = new THREE.Color();
+	materialColor.setHSL(effectController.hue, effectController.saturation, effectController.lightness);
+	phongBalancedMaterial.uniforms.uMaterialColor.value.copy(materialColor);
+
+	if (!effectController.metallic) {
+		materialColor.setRGB(1, 1, 1);
+	}
+	phongBalancedMaterial.uniforms.uSpecularColor.value.copy(materialColor);
+
+	// TODO: 環境光會被手電筒光源影響，應該修正
+	ambientLight.color.setHSL(effectController.hue, effectController.saturation, effectController.lightness * effectController.ka);
+
+	light.position.copy(camera.position);
+
+	light.color.setHSL(effectController.lhue, effectController.lsaturation, effectController.llightness);
+
+	renderer.render(scene, camera);
+}
+
+function addToDOM() {
+	var container = document.getElementById(&#39;container&#39;);
+	var canvas = container.getElementsByTagName(&#39;canvas&#39;);
+	if (canvas.length&gt;0) {
+		container.removeChild(canvas[0]);
+	}
+	container.appendChild( renderer.domElement );
+}
+
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+	try {
+		init();
+		fillScene();
+		setupGui();
+		addToDOM();
+		animate();
+	} catch(e) {
+		var errorReport = &#34;你的程式遇到不可復原的錯誤，無法繪製 Canvas。錯誤是：&lt;br/&gt;&lt;br/&gt;&#34;;
+		$(&#39;#container&#39;).append(errorReport&#43;e);
+	}
+})
+</textarea>
+      
+    </form>
+    <iframe id="preview" src="about:blank" style="flex-grow: 1"></iframe>
+  </div>
+</body>
+
+</html>

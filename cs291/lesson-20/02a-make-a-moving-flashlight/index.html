@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <title>02A 製作一個會動的手電筒（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/k33-EsGm7X4?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 20\/02A Make a Moving Flashlight - Interactive 3D Graphics-k33-EsGm7X4.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>以下是 Fragment Shader 要改的程式：</p>
+<pre tabindex="0"><code>// 手電筒：攝影機空間的 XY 夠靠近 uFlashOffset 嗎？
+if ( distance( vViewPosition.xy, uFlashOffset ) &gt; uFlashRadius ) {
+	return;
+</code></pre>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+  <title>26 模擬</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/TqslFvviX_E?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 21\/26 Simulation - Interactive 3D Graphics-TqslFvviX_E.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>課程展示的物理模擬是使用 <a href="https://www.glowscript.org/">GlowScript</a> 製做的。車輛展示是 Schteppe 的 <a href="https://schteppe.github.io/cannon.js/">物理函式庫</a> 做的。</p>
+<p>Physics-Based Animation <a href="https://www.physicsbasedanimation.com/">網站</a> 追蹤紀錄了許多這領域的研究。</p>
+<p>2012 年遊戲開發者大會上，有一系列內容廣泛的 <a href="http://www.essentialmath.com/tutorial.htm">簡報</a>，主題是互動速率下的物理模擬與碰撞偵測。</p>
+
+</div>
