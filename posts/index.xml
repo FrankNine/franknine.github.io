@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 21 Sep 2026 13:00:00 +0800</lastBuildDate>
+			<lastBuildDate>Mon, 02 Nov 2026 13:30:00 +0800</lastBuildDate>
 		
 			<atom:link href="https://www.chunfuchao.com/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CS291 Interactive 3D Graphics</title>
+				<link>https://www.chunfuchao.com/posts/cs291/</link>
+				<pubDate>Mon, 02 Nov 2026 13:30:00 +0800</pubDate>
+				<guid>https://www.chunfuchao.com/posts/cs291/</guid>
+				<description>&lt;p&gt;不知道在閱讀這個部落格的讀者有沒有注意到右上角的連結有個 CS291？&#xA;CS291 是 &lt;a href=&#34;https://twitter.com/pointinpolygon/status/297728247549022208&#34;&gt;2013 年 3 月&lt;/a&gt; 由 &lt;a href=&#34;https://twitter.com/pointinpolygon&#34;&gt;Eric Haines&lt;/a&gt; 在 &lt;a href=&#34;https://www.udacity.com/&#34;&gt;Udacity&lt;/a&gt; 開設的電腦圖學課程。&#xA;當初接觸到還是剛進入職場第一年的時候。&#xA;雖然在大學跟碩士班都有上過入門的電腦圖學課程，但是這是互動式圖學免不了要讀的 &lt;a href=&#34;https://www.realtimerendering.com/&#34;&gt;Real-Time Rendering&lt;/a&gt; 作者之一親授，而且在網路上免費。&#xA;當時覺得要是自己在大學初學圖學時有這樣的資源有多好，也想讓其他人讀到。&#xA;開始了翻譯字幕的工作。&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>富士山</title>
 				<link>https://www.chunfuchao.com/posts/mount-fuiji/</link>

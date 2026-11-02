@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>CS291 Interactive 3D Graphics - Northern Wind</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Chun-Fu Chao" /><meta name="description" content="不知道在閱讀這個部落格的讀者有沒有注意到右上角的連結有個 CS291？ CS291 是 2013 年 3 月 由 Eric Haines 在 Udacity 開設的電腦圖學課程。 當初接觸到還是剛進入職場第一年的時候。 雖然在大學跟碩士班都有上過入門的電腦圖學課程，但是這是互動式圖學免不了要讀的 Real-Time Rendering 作者之一親授，而且在網路上免費。 當時覺得要是自己在大學初學圖學時有這樣的資源有多好，也想讓其他人讀到。 開始了翻譯字幕的工作。
+" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.166.0 with theme even" />
+
+
+<link rel="canonical" href="https://www.chunfuchao.com/posts/cs291/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.e1e2a0bc37cfb7c7c75cf44bf0dddb9731bfd371c71d7c30dc1e5b6932f4ef5e.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/twitter_center.css">
+
+
+<meta property="og:url" content="https://www.chunfuchao.com/posts/cs291/">
+	<meta property="og:site_name" content="Northern Wind">
+	<meta property="og:title" content="CS291 Interactive 3D Graphics">
+	<meta property="og:description" content="不知道在閱讀這個部落格的讀者有沒有注意到右上角的連結有個 CS291？ CS291 是 2013 年 3 月 由 Eric Haines 在 Udacity 開設的電腦圖學課程。 當初接觸到還是剛進入職場第一年的時候。 雖然在大學跟碩士班都有上過入門的電腦圖學課程，但是這是互動式圖學免不了要讀的 Real-Time Rendering 作者之一親授，而且在網路上免費。 當時覺得要是自己在大學初學圖學時有這樣的資源有多好，也想讓其他人讀到。 開始了翻譯字幕的工作。">
+	<meta property="og:locale" content="zh_TW">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-11-02T13:30:00+08:00">
+		<meta property="article:modified_time" content="2026-11-02T13:30:00+08:00">
+
+	<meta itemprop="name" content="CS291 Interactive 3D Graphics">
+	<meta itemprop="description" content="不知道在閱讀這個部落格的讀者有沒有注意到右上角的連結有個 CS291？ CS291 是 2013 年 3 月 由 Eric Haines 在 Udacity 開設的電腦圖學課程。 當初接觸到還是剛進入職場第一年的時候。 雖然在大學跟碩士班都有上過入門的電腦圖學課程，但是這是互動式圖學免不了要讀的 Real-Time Rendering 作者之一親授，而且在網路上免費。 當時覺得要是自己在大學初學圖學時有這樣的資源有多好，也想讓其他人讀到。 開始了翻譯字幕的工作。">
+	<meta itemprop="datePublished" content="2026-11-02T13:30:00+08:00">
+	<meta itemprop="dateModified" content="2026-11-02T13:30:00+08:00">
+	<meta itemprop="wordCount" content="1295">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="CS291 Interactive 3D Graphics">
+	<meta name="twitter:description" content="不知道在閱讀這個部落格的讀者有沒有注意到右上角的連結有個 CS291？ CS291 是 2013 年 3 月 由 Eric Haines 在 Udacity 開設的電腦圖學課程。 當初接觸到還是剛進入職場第一年的時候。 雖然在大學跟碩士班都有上過入門的電腦圖學課程，但是這是互動式圖學免不了要讀的 Real-Time Rendering 作者之一親授，而且在網路上免費。 當時覺得要是自己在大學初學圖學時有這樣的資源有多好，也想讓其他人讀到。 開始了翻譯字幕的工作。">
+
+
+
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Northern Wind</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/cs291/">
+        <li class="mobile-menu-item">CS291</li>
+      </a><a href="https://github.com/FrankNine/franknine.github.io/wiki">
+        <li class="mobile-menu-item">Wiki</li>
+      </a><a href="/index.xml">
+        <li class="mobile-menu-item">RSS</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Northern Wind</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/cs291/">CS291</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/FrankNine/franknine.github.io/wiki">Wiki</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/index.xml">RSS</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>不知道在閱讀這個部落格的讀者有沒有注意到右上角的連結有個 CS291？
+CS291 是 <a href="https://twitter.com/pointinpolygon/status/297728247549022208">2013 年 3 月</a> 由 <a href="https://twitter.com/pointinpolygon">Eric Haines</a> 在 <a href="https://www.udacity.com/">Udacity</a> 開設的電腦圖學課程。
+當初接觸到還是剛進入職場第一年的時候。
+雖然在大學跟碩士班都有上過入門的電腦圖學課程，但是這是互動式圖學免不了要讀的 <a href="https://www.realtimerendering.com/">Real-Time Rendering</a> 作者之一親授，而且在網路上免費。
+當時覺得要是自己在大學初學圖學時有這樣的資源有多好，也想讓其他人讀到。
+開始了翻譯字幕的工作。</p>
+<p>十幾年前看了別人無償翻譯的 <a href="https://lucifer.tw/oldblogs/2007/11/08/%E8%AA%AA%E5%A5%BD%E4%BA%86%E9%80%99%E4%B8%80%E5%88%BB%E4%B8%8D%E6%8E%89%E7%9C%BC%E6%B7%9Arandy-pausch%E7%9A%84%E6%9C%80%E5%BE%8C%E4%B8%80%E5%A0%82%E8%AA%B2/">《最後一堂課》</a>（<a href="https://youtu.be/iWF7YGSjFtI">Youtube 影片備份連結</a>），受到影響決定出國留學。
+當初洗這個頭可能也是想能對陌生的人產生幫助吧。（《最後一堂課》 的譯者這麼長的時間變了很多就是）</p>
+<p>會特別寫一篇文章是因為這幾週在 Claude 的協助下終於把最後的部分翻譯完了，所有的影片跟互動式程式習題都上線了。
+11 章後半、12 章，還有 17 ~ 22 章是 Claude 翻譯我校對的，其他才是低背景的純手工。</p>
+<p>對，隔了十三年。</p>
+<p>從當初起心動念，Udacity 官方還開放 <a href="https://amara.org/">Amara</a> 到 YouTube Community Contributions（已死，Thanks, Google）到現在自己外掛字幕。
+原來的 Udacity 課程網站現在已經殘破不堪，課程維基跟無數連結都已經倒站了。
+雖然基礎圖學知識跟數學沒有什麼改變，但是也有些顯得過時的，像是 <a href="https://threejs.org/">Three.js</a> 的 API、產業現況、WebGL 版本等。
+自己心態十年來也從助人為樂，變成助人想受到歡迎，到鑽牛角尖怎麼做這麼多沒有收到迴響，到現在 40 歲了覺得很多事情都比較無所謂了。
+還是希望有人能因此受益，但是認知到堅持要完成可能還是為了自己比較多吧。</p>
+<p>最後有件很困擾的事情是台灣有很多名詞沒有標準翻譯，雖然整理了 <a href="https://docs.google.com/spreadsheets/d/1w9eNmYan376ESPapJf4lc00eqgE7qhiwhltf1hu_zmE">詞彙表</a>，但是翻譯還蠻殘缺的。
+由我制定或是全面對齊中國用語都感覺不太對，目前沒有什麼好的想法。</p>
+<hr>
+<p>心境除了上述十年來的緩慢變化，今年 AI 寫程式的進步帶來的感受更是像洗三溫暖刺激。
+或者說今年才開始用 AI 漸漸變多。（雖然還是只有買到 Claude Pro）</p>
+<p>看到身邊的人無論是用 Multi-agent 以天為單位的 Prototype 速度，或是讓沒有程式背景的人產出遊戲的完整度。
+剛理解到 AI 能取代人工到什麼程度的時候還蠻挫折的，有一陣子不想再碰程式。
+也會消極地想說要是 OpenAI 跟 Anthropic IPO 後暴斃有多好，就能回到以前樣子。
+不過當然是不可能回去，就算 Frontier Lab 倒了，野生的 Open-weights 也是覆水難收。</p>
+<p>一開始打擊還蠻大的，感覺自己有很大一部分的積累都被取代了。
+程式還需要人寫、人讀嗎？還有人會在意嗎？
+如果程式都不需要懂，那還要學電腦圖學嗎？</p>
+<p>一下子好像什麼都不用做，也沒有理由做的感覺還蠻嚇人的。</p>
+<p>轉折可能是在看到有些朋友用 AI 完成了長久以來難以實現的夢想，不管是老遊戲改造還是製作模擬器。
+還有最近跟著 RimWorld <a href="https://store.steampowered.com/news/app/294100/view/672882362547178633">替換掉 Unity 引擎</a> 順藤摸瓜認識到的 <a href="https://www.reddit.com/r/gamedev/comments/1x6d2dy/introducing_brutal_a_free_c_framework_that_helped/">BRUTAL Framework</a>。
+在 <a href="https://www.gamedeveloper.com/programming/rocketwerkz-ceo-predicts-frameworks-not-engines-will-be-future-of-game-development">專訪</a> 裡看到他們有了 LLM 後，繼續挑戰更難更 Brutal 的套裝引擎之下的層級。
+我想這也是一種答案：有了 AI 後還要靠著 AI 理解更多，去僭越以前到不了的領域。
+這才稍微有正面一點的想法，讓 Claude 幫忙完成了 CS291 這個沒有 AI 大概永遠不會結束的專案。</p>
+<p>雖然 CS291 只是入門中的入門，但希望能幫助到有心的初學者積累第一步。</p>
+<p>如果我以後還留在遊戲業界，還寫程式，希望能與還是喜歡遊戲、程式、圖學的你相見。</p>
+<p>如果我以後不做遊戲了，希望留下的這門翻譯能有所幫助到未來的人們前進神乎其技的領域。</p>
+<p>Good morning, and in case I don&rsquo;t see ya, good afternoon, good evening, and good night!</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="FrankNine/franknine.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/aaefiikmnnnr" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/FrankNine/" class="iconfont icon-github" title="github"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even"  rel="noopener noreferrer" target="_blank">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2010 - 
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Chun-Fu Chao</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
