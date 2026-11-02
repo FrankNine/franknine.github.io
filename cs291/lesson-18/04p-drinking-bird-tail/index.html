@@ -111,7 +111,6 @@ function fillScene() {
 	var bird = new THREE.Object3D();
 	createDrinkingBird( bird );
 	scene.add( bird );
-
 }
 
 function createSupport( bsupport ) {
@@ -127,53 +126,53 @@ function createSupport( bsupport ) {
 	// 基底
 	cube = new THREE.Mesh(
 		new THREE.BeveledBlockGeometry( 20&#43;64&#43;110, 4, 2*77&#43;12, bevelRadius ), footMaterial );
-	cube.position.x = -45;	// (20&#43;32) - half of width (20&#43;64&#43;110)/2
-	cube.position.y = 4/2;	// half of height
-	cube.position.z = 0;	// centered at origin
+	cube.position.x = -45;	// (20&#43;32) - 寬度的一半 (20&#43;64&#43;110)/2
+	cube.position.y = 4/2;	// 高的的一半
+	cube.position.z = 0;	// 中心在原點
 	bsupport.add( cube );
 
 	// 腳掌
 	cube = new THREE.Mesh(
 		new THREE.BeveledBlockGeometry( 20&#43;64&#43;110, 52, 6, bevelRadius ), footMaterial );
-	cube.position.x = -45;	// (20&#43;32) - half of width (20&#43;64&#43;110)/2
-	cube.position.y = 52/2;	// half of height
-	cube.position.z = 77 &#43; 6/2;	// offset 77 &#43; half of depth 6/2
+	cube.position.x = -45;	// (20&#43;32) - 寬度的一半 (20&#43;64&#43;110)/2
+	cube.position.y = 52/2;	// 高的的一半
+	cube.position.z = 77 &#43; 6/2;	// 偏移 77 &#43; 深度的一半 6/2
 	bsupport.add( cube );
 
 	cube = new THREE.Mesh(
 		new THREE.BeveledBlockGeometry( 20&#43;64&#43;110, 52, 6, bevelRadius ), footMaterial );
-	cube.position.x = -45;	// (20&#43;32) - half of width (20&#43;64&#43;110)/2
-	cube.position.y = 52/2;	// half of height
-	cube.position.z = -(77 &#43; 6/2);	// negative offset 77 &#43; half of depth 6/2
+	cube.position.x = -45;	// (20&#43;32) - 寬度的一半 (20&#43;64&#43;110)/2
+	cube.position.y = 52/2;	// 高的的一半
+	cube.position.z = -(77 &#43; 6/2);	// 負的偏移 77 &#43; 深度的一半 6/2
 	bsupport.add( cube );
 
 	cube = new THREE.Mesh(
 		new THREE.BeveledBlockGeometry( 64, 104, 6, bevelRadius ), footMaterial );
-	cube.position.x = 0;	// centered on origin along X
+	cube.position.x = 0;	// X 方向在原點
 	cube.position.y = 104/2;
-	cube.position.z = 77 &#43; 6/2;	// negative offset 77 &#43; half of depth 6/2
+	cube.position.z = 77 &#43; 6/2;	// 偏移 77 &#43; 深度的一半 6/2
 	bsupport.add( cube );
 
 	cube = new THREE.Mesh(
 		new THREE.BeveledBlockGeometry( 64, 104, 6, bevelRadius ), footMaterial );
-	cube.position.x = 0;	// centered on origin along X
+	cube.position.x = 0;	// X 方向在原點
 	cube.position.y = 104/2;
-	cube.position.z = -(77 &#43; 6/2);	// negative offset 77 &#43; half of depth 6/2
+	cube.position.z = -(77 &#43; 6/2);	// 負的偏移 77 &#43; 深度的一半 6/2
 	bsupport.add( cube );
 
 	// 腳
 	cube = new THREE.Mesh(
 		new THREE.BeveledBlockGeometry( 60, 282&#43;4, 4, bevelRadius ), legMaterial );
-	cube.position.x = 0;	// centered on origin along X
+	cube.position.x = 0;	// X 方向在原點
 	cube.position.y = 104 &#43; 282/2 - 2;
-	cube.position.z = 77 &#43; 6/2;	// negative offset 77 &#43; half of depth 6/2
+	cube.position.z = 77 &#43; 6/2;	// 偏移 77 &#43; 深度的一半 6/2
 	bsupport.add( cube );
 
 	cube = new THREE.Mesh(
 		new THREE.BeveledBlockGeometry( 60, 282&#43;4, 4, bevelRadius ), legMaterial );
-	cube.position.x = 0;	// centered on origin along X
+	cube.position.x = 0;	// X 方向在原點
 	cube.position.y = 104 &#43; 282/2 - 2;
-	cube.position.z = -(77 &#43; 6/2);	// negative offset 77 &#43; half of depth 6/2
+	cube.position.z = -(77 &#43; 6/2);	// 負的偏移 77 &#43; 深度的一半 6/2
 	bsupport.add( cube );
 }
 
@@ -350,7 +349,6 @@ function init() {
 	// 控制
 	cameraControls = new THREE.OrbitAndPanControls(camera, renderer.domElement);
 	cameraControls.target.set(0,270,0);
-
 }
 
 function addToDOM() {

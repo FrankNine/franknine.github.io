@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <title>07A 環繞光照（解答）</title>
+</head>
+
+<base target="_blank">
+<div class="lesson-content">
+  <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/6uwRoo5BPfk?cc_load_policy=0" frameborder="0" allowfullscreen="true">
+</iframe>
+<script src="/js/youtube.external.subtitle.min.js"></script>
+<script src="/js/subtitles.parser.min.js"></script>
+<script src="/js/loadsrt.js"></script>
+<script>
+  loadSRT('/cs291/srt/Lesson 20\/07A Wrap Lighting - Interactive 3D Graphics-6uwRoo5BPfk.srt', function(subtitles) {
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
+  });
+</script>
+<p>舊的程式放入註解，新的程式在下一行：</p>
+<pre tabindex="0"><code>// 環繞光照漫射
+//float diffuse = max( dot( normal, lVector ), 0.0 );
+float diffuse = max( (dot( normal, lVector ) + uWrap) / (1.0+uWrap), 0.0 );
+</code></pre>
+</div>

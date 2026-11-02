@@ -32,7 +32,7 @@
 
 9
 00:00:34,712 --> 00:00:40,320
-Phong 模型有許多項，包含自我遮擋（Self-Shadowing）和亮度的菲涅耳係數（Fresnel Coefficent）
+Phong 模型有許多項，包含自我遮擋（Self-Shadowing）和閃亮程度的 Fresnel 係數（Fresnel Coefficent）
 
 10
 00:00:40,345 --> 00:00:43,209

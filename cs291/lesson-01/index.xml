@@ -26,7 +26,7 @@
 				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/8fe9RaEEGQU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/01 Introduction - Interactive 3D Graphics-8fe9RaEEGQU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;第一個展示 - &lt;a href=&#34;http://threejs.org/examples/#webgl_materials_shaders_fresnel&#34;&gt;three.js WebGL materials demo&lt;/a&gt;，貼圖來自 &lt;a href=&#34;http://www.humus.name/index.php?page=Textures&#34;&gt;Humus&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;第二個展示 - &lt;a href=&#34;https://threejs.org/examples/#webgl_materials_bumpmap&#34;&gt;three.js WebGL materials bumpmap skin demo&lt;/a&gt; 模型來源 &lt;a href=&#34;http://graphics.cs.williams.edu/data/meshes.xml#14&#34;&gt;Lee Perry-Smith head&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;如果無法看見展示，請參照 &lt;a href=&#34;https://www.udacity.com/wiki/cs291/enabling-webgl&#34;&gt;WebGL Troubleshooting page&lt;/a&gt;。還是有問題？之後我們會談 WebGL 的設定&lt;/p&gt;</description>
 			</item>
 			<item>
-				<title>02 互動式 3D 繪圖</title>
+				<title>02 互動式 3D 算繪</title>
 				<link>https://www.chunfuchao.com/cs291/lesson-01/02-interactive-3d-rendering/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://www.chunfuchao.com/cs291/lesson-01/02-interactive-3d-rendering/</guid>
@@ -37,14 +37,14 @@
 				<link>https://www.chunfuchao.com/cs291/lesson-01/03-first-quiz/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://www.chunfuchao.com/cs291/lesson-01/03-first-quiz/</guid>
-				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/btYMDCoFjUU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/03 First Quiz - Interactive 3D Graphics-btYMDCoFjUU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;Angry Birds 使用 &lt;a href=&#34;http://en.wikipedia.org/wiki/2.5D&#34;&gt;2.5D 繪圖&lt;/a&gt;&lt;/p&gt;</description>
+				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/btYMDCoFjUU?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/03 First Quiz - Interactive 3D Graphics-btYMDCoFjUU.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
 			</item>
 			<item>
 				<title>03A 第一堂小考（解答）</title>
 				<link>https://www.chunfuchao.com/cs291/lesson-01/03a-first-quiz/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://www.chunfuchao.com/cs291/lesson-01/03a-first-quiz/</guid>
-				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/I_nMFLbYGFg?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/03A First Quiz - Interactive 3D Graphics-I_nMFLbYGFg.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
+				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/I_nMFLbYGFg?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/03A First Quiz - Interactive 3D Graphics-I_nMFLbYGFg.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;&#xA;&lt;p&gt;Angry Birds 使用 &lt;a href=&#34;http://en.wikipedia.org/wiki/2.5D&#34;&gt;2.5D 算繪&lt;/a&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>04 WebGL 設定</title>
@@ -68,7 +68,7 @@
 				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/NV9MgI0u5Us?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/06 Interactivity and FPS - Interactive 3D Graphics-NV9MgI0u5Us.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
 			</item>
 			<item>
-				<title>07 FPS 展示</title>
+				<title>07 FPS 展示（程式）</title>
 				<link>https://www.chunfuchao.com/cs291/lesson-01/07-fps-demo/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://www.chunfuchao.com/cs291/lesson-01/07-fps-demo/</guid>
@@ -180,7 +180,7 @@
 				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/wZbbRpNcY-Q?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/18A How Many Pixels - Interactive 3D Graphics-wZbbRpNcY-Q.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
 			</item>
 			<item>
-				<title>19 光與繪圖</title>
+				<title>19 光與算繪</title>
 				<link>https://www.chunfuchao.com/cs291/lesson-01/19-light-and-rendering/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://www.chunfuchao.com/cs291/lesson-01/19-light-and-rendering/</guid>
@@ -348,28 +348,28 @@
 				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;400&#34; src=&#34;https://www.youtube.com/embed/J9R8IvHlc-8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;/cs291/srt/Lesson 01\/36 Tricky Question - Interactive 3D Graphics-J9R8IvHlc-8.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
 			</item>
 			<item>
-				<title>37 繪圖模式 0</title>
+				<title>37 算繪模式 0（程式）</title>
 				<link>https://www.chunfuchao.com/cs291/lesson-01/37-demo-rendering-mode-0/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://www.chunfuchao.com/cs291/lesson-01/37-demo-rendering-mode-0/</guid>
 				<description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit1-render-mode-0.js&#34;&gt;&lt;/script&gt;</description>
 			</item>
 			<item>
-				<title>38 繪圖模式 1</title>
+				<title>38 算繪模式 1（程式）</title>
 				<link>https://www.chunfuchao.com/cs291/lesson-01/38-demo-rendering-mode-1/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://www.chunfuchao.com/cs291/lesson-01/38-demo-rendering-mode-1/</guid>
 				<description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit1-render-mode-1.js&#34;&gt;&lt;/script&gt;</description>
 			</item>
 			<item>
-				<title>39 繪圖模式 2</title>
+				<title>39 算繪模式 2（程式）</title>
 				<link>https://www.chunfuchao.com/cs291/lesson-01/39-demo-rendering-mode-2/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://www.chunfuchao.com/cs291/lesson-01/39-demo-rendering-mode-2/</guid>
 				<description>&lt;div id=&#34;container&#34;&gt;&lt;/div&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/three.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/stats.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/lib/OrbitAndPanControls.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/cs291/demo/unit1-render-mode-2.js&#34;&gt;&lt;/script&gt;</description>
 			</item>
 			<item>
-				<title>40 不同的繪圖方式</title>
+				<title>40 不同的算繪方式</title>
 				<link>https://www.chunfuchao.com/cs291/lesson-01/40-different-rendering-options/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://www.chunfuchao.com/cs291/lesson-01/40-different-rendering-options/</guid>

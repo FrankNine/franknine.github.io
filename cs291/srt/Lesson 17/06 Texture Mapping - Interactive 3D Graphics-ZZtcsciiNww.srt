@@ -52,5 +52,5 @@
 
 14
 00:00:50,671 --> 00:00:54,164
-這種貼圖稱為貼圖集（Texture atlas）或拼接貼圖（Mosaic）。
+這種貼圖稱為貼圖集（Texture atlas）或拼接貼圖（Mosaic）
 

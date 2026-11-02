@@ -268,10 +268,10 @@ function setupGui() {
 	h = gui.addFolder(&#34;材質控制&#34;);
 	h.add(effectController, &#34;shininess&#34;, 1.0, 100.0, 1.0).name(&#34;閃亮程度&#34;);
 	h.add(effectController, &#34;groove&#34;, 0.0, 2.0, 0.025).name(&#34;groove&#34;);
-	h.add(effectController, &#34;ka&#34;, 0.0, 1.0, 0.025).name(&#34;環境光比例&#34;);
-	h.add(effectController, &#34;kd&#34;, 0.0, 1.0, 0.025).name(&#34;漫射比例&#34;);
-	h.add(effectController, &#34;ks&#34;, 0.0, 1.0, 0.025).name(&#34;閃亮程度比例&#34;);
-	h.add(effectController, &#34;金屬&#34;);
+	h.add(effectController, &#34;ka&#34;, 0.0, 1.0, 0.025).name(&#34;環境光係數&#34;);
+	h.add(effectController, &#34;kd&#34;, 0.0, 1.0, 0.025).name(&#34;漫射係數&#34;);
+	h.add(effectController, &#34;ks&#34;, 0.0, 1.0, 0.025).name(&#34;閃亮程度係數&#34;);
+	h.add(effectController, &#34;metallic&#34;).name(&#34;金屬色澤&#34;);
 
 	// TODO: 加 tess 給鑲嵌
 

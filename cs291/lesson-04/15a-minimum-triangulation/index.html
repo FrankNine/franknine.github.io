@@ -16,5 +16,6 @@
     var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitles);
   });
 </script>
+<p>譯註：三角剖分其實對算繪效能有影響，因為 GPU 算繪是以 2X2 像素為單位呼叫，太細長沒有完整覆蓋 2X2 空間的三角形通常會被視為要改善的問題。最佳化工具像是 <a href="https://learn.microsoft.com/zh-tw/windows/win32/direct3dtools/pix/articles/general/pix-overview">PIX</a> 就有 Quad Efficiency 這個項目分析覆蓋率。</p>
 
 </div>
