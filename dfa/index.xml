@@ -53,5 +53,19 @@
 				<guid>https://www.chunfuchao.com/dfa/double-fine-adventure-ep06-that-bagel-filter-thing/</guid>
 				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;800&#34; src=&#34;https://www.youtube.com/embed/IBdEqT_cyz8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;\/dfa\/srt\/Double Fine Adventure EP06 That Bagel Filter Thing-IBdEqT_cyz8.zh-TW.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
 			</item>
+			<item>
+				<title>EP07 我們會處理好的</title>
+				<link>https://www.chunfuchao.com/dfa/double-fine-adventure-ep07-well-handle-it/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://www.chunfuchao.com/dfa/double-fine-adventure-ep07-well-handle-it/</guid>
+				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;800&#34; src=&#34;https://www.youtube.com/embed/NLYV3sPf5J8?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;\/dfa\/srt\/Double Fine Adventure EP07 We\u0027ll Handle It-NLYV3sPf5J8.zh-TW.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
+			</item>
+			<item>
+				<title>EP08 冒險遊戲還沒死透</title>
+				<link>https://www.chunfuchao.com/dfa/double-fine-adventure-ep08-adventure-games-are-not-dead/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://www.chunfuchao.com/dfa/double-fine-adventure-ep08-adventure-games-are-not-dead/</guid>
+				<description>&lt;iframe id=&#34;video&#34; width=&#34;100%&#34; height=&#34;800&#34; src=&#34;https://www.youtube.com/embed/i3SJ6rxTaJ0?cc_load_policy=0&#34; frameborder=&#34;0&#34; allowfullscreen=&#34;true&#34;&gt;&#xD;&#xA;&lt;/iframe&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/youtube.external.subtitle.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/subtitles.parser.min.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script src=&#34;https://www.chunfuchao.com/js/loadsrt.js&#34;&gt;&lt;/script&gt;&#xD;&#xA;&lt;script&gt;&#xD;&#xA;  loadSRT(&#39;\/dfa\/srt\/Double Fine Adventure EP08 Adventure Games Are Not Dead-i3SJ6rxTaJ0.zh-TW.srt&#39;, function(subtitles) {&#xD;&#xA;    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById(&#39;video&#39;), subtitles);&#xD;&#xA;  });&#xD;&#xA;&lt;/script&gt;</description>
+			</item>
 	</channel>
 </rss>
